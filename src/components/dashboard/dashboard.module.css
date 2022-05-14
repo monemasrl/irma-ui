@@ -1,0 +1,9 @@
+.dashboard{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 520px;
+    transform: scale(1);
+    position: relative;
+    top: 50px;
+    left: 61px;
+}
