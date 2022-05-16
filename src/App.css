@@ -20,5 +20,9 @@
 
 .App .wrapper-content{
   display: flex;
+  align-items: start;
+  justify-content: center;
+  align-items: center;
   font-family: 'Open Sans regular';
+  color: #4f4f4f;
 }

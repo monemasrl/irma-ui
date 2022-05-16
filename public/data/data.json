@@ -20,63 +20,273 @@
         },
         {
             "state": "ok",
-            "code": "aa234"
+            "code": "aa234",
+            "datiInterni": [
+                {
+                    "titolo": "dato 1",
+                    "dato": 123
+                },
+                {
+                    "titolo": "dato 2",
+                    "dato": 34
+                },
+                {
+                    "titolo": "dato 3",
+                    "dato": 367
+                }
+            ]
         },
         {
             "state": "alert",
-            "code": "aa345"
+            "code": "aa345",
+            "datiInterni": [
+                {
+                    "titolo": "dato 1",
+                    "dato": 123
+                },
+                {
+                    "titolo": "dato 2",
+                    "dato": 34
+                },
+                {
+                    "titolo": "dato 3",
+                    "dato": 367
+                }
+            ]
         },
         {
             "state": "ok",
-            "code": "aa456"
+            "code": "aa456",
+            "datiInterni": [
+                {
+                    "titolo": "dato 1",
+                    "dato": 123
+                },
+                {
+                    "titolo": "dato 2",
+                    "dato": 34
+                },
+                {
+                    "titolo": "dato 3",
+                    "dato": 367
+                }
+            ]
         },
         {
             "state": "rec",
-            "code": "aa567"
+            "code": "aa567",
+            "datiInterni": [
+                {
+                    "titolo": "dato 1",
+                    "dato": 123
+                },
+                {
+                    "titolo": "dato 2",
+                    "dato": 34
+                },
+                {
+                    "titolo": "dato 3",
+                    "dato": 367
+                }
+            ]
         },
         {
             "state": "rec",
-            "code": "aa678"
+            "code": "aa678",
+            "datiInterni": [
+                {
+                    "titolo": "dato 1",
+                    "dato": 123
+                },
+                {
+                    "titolo": "dato 2",
+                    "dato": 34
+                },
+                {
+                    "titolo": "dato 3",
+                    "dato": 367
+                }
+            ]
         },
         {
             "state": "ok",
-            "code": "aa891"
+            "code": "aa891",
+            "datiInterni": [
+                {
+                    "titolo": "dato 1",
+                    "dato": 123
+                },
+                {
+                    "titolo": "dato 2",
+                    "dato": 34
+                },
+                {
+                    "titolo": "dato 3",
+                    "dato": 367
+                }
+            ]
         },
         {
             "state": "rec",
-            "code": "aa912"
+            "code": "aa912",
+            "datiInterni": [
+                {
+                    "titolo": "dato 1",
+                    "dato": 123
+                },
+                {
+                    "titolo": "dato 2",
+                    "dato": 34
+                },
+                {
+                    "titolo": "dato 3",
+                    "dato": 367
+                }
+            ]
         },
         {
             "state": "ok",
-            "code": "aa923"
+            "code": "aa923",
+            "datiInterni": [
+                {
+                    "titolo": "dato 1",
+                    "dato": 123
+                },
+                {
+                    "titolo": "dato 2",
+                    "dato": 34
+                },
+                {
+                    "titolo": "dato 3",
+                    "dato": 367
+                }
+            ]
         },
         {
             "state": "off",
-            "code": "aa934"
+            "code": "aa934",
+            "datiInterni": [
+                {
+                    "titolo": "dato 1",
+                    "dato": 123
+                },
+                {
+                    "titolo": "dato 2",
+                    "dato": 34
+                },
+                {
+                    "titolo": "dato 3",
+                    "dato": 367
+                }
+            ]
         },
         {
             "state": "rec",
-            "code": "aa945"
+            "code": "aa945",
+            "datiInterni": [
+                {
+                    "titolo": "dato 1",
+                    "dato": 123
+                },
+                {
+                    "titolo": "dato 2",
+                    "dato": 34
+                },
+                {
+                    "titolo": "dato 3",
+                    "dato": 367
+                }
+            ]
         },
         {
             "state": "rec",
-            "code": "aa946"
+            "code": "aa946",
+            "datiInterni": [
+                {
+                    "titolo": "dato 1",
+                    "dato": 123
+                },
+                {
+                    "titolo": "dato 2",
+                    "dato": 34
+                },
+                {
+                    "titolo": "dato 3",
+                    "dato": 367
+                }
+            ]
         },
         {
             "state": "ok",
-            "code": "aa957"
+            "code": "aa957",
+            "datiInterni": [
+                {
+                    "titolo": "dato 1",
+                    "dato": 123
+                },
+                {
+                    "titolo": "dato 2",
+                    "dato": 34
+                },
+                {
+                    "titolo": "dato 3",
+                    "dato": 367
+                }
+            ]
         },
         {
             "state": "ok",
-            "code": "aa966"
+            "code": "aa966",
+            "datiInterni": [
+                {
+                    "titolo": "dato 1",
+                    "dato": 123
+                },
+                {
+                    "titolo": "dato 2",
+                    "dato": 34
+                },
+                {
+                    "titolo": "dato 3",
+                    "dato": 367
+                }
+            ]
         },
         {
             "state": "rec",
-            "code": "aa977"
+            "code": "aa977",
+            "datiInterni": [
+                {
+                    "titolo": "dato 1",
+                    "dato": 123
+                },
+                {
+                    "titolo": "dato 2",
+                    "dato": 34
+                },
+                {
+                    "titolo": "dato 3",
+                    "dato": 367
+                }
+            ]
         },
         {
             "state": "ok",
-            "code": "aa988"
+            "code": "aa988",
+            "datiInterni": [
+                {
+                    "titolo": "dato 1",
+                    "dato": 468
+                },
+                {
+                    "titolo": "dato 2",
+                    "dato": 34
+                },
+                {
+                    "titolo": "dato 3",
+                    "dato": 367
+                }
+            ]
         }
     ]
 }

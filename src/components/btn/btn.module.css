@@ -87,6 +87,7 @@
 
 .alert .codeName{
     color: white;
+    border-bottom: 4px solid transparent;
 }
 .codeName {
   font-size: 13px;
@@ -96,6 +97,13 @@
   margin-top: 24px;
   text-transform: uppercase;
   text-align:center;
+  border-bottom: 4px solid rgb(239, 239, 239);
+  display: inline-block;
+  transition: all ease-in-out 0.3s;
+}
+.btnOn .codeName{
+  border-bottom: 4px solid green;
+  display: inline-block;
 }
 .alertSymbol{
     top: -1px;
