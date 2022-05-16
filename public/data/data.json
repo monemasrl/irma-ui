@@ -1,69 +1,82 @@
-
-    {
-        "data": [
-            {
-                "state": "ok",
-                "code": "aa123"
-            },
-            {
-                "state": "ok",
-                "code": "aa234"
-            },
-            {
-                "state": "alert",
-                "code": "aa345"
-            },
-            {
-                "state": "ok",
-                "code": "aa456"
-            },
-            {
-                "state": "rec",
-                "code": "aa123"
-            },
-            {
-                "state": "rec",
-                "code": "aa234"
-            },
-            {
-                "state": "ok",
-                "code": "aa345"
-            },
-            {
-                "state": "rec",
-                "code": "aa456"
-            },
-            {
-                "state": "ok",
-                "code": "aa123"
-            },
-            {
-                "state": "off",
-                "code": "aa234"
-            },
-            {
-                "state": "rec",
-                "code": "aa345"
-            },
-            {
-                "state": "rec",
-                "code": "aa456"
-            },
-            {
-                "state": "ok",
-                "code": "aa123"
-            },
-            {
-                "state": "ok",
-                "code": "aa234"
-            },
-            {
-                "state": "rec",
-                "code": "aa345"
-            },
-            {
-                "state": "ok",
-                "code": "aa456"
-            }
-        ]
-    }
+{
+    "data": [
+        {
+            "state": "ok",
+            "code": "aa123",
+            "datiInterni": [
+                {
+                    "titolo": "dato 1",
+                    "dato": 123
+                },
+                {
+                    "titolo": "dato 2",
+                    "dato": 34
+                },
+                {
+                    "titolo": "dato 3",
+                    "dato": 367
+                }
+            ]
+        },
+        {
+            "state": "ok",
+            "code": "aa234"
+        },
+        {
+            "state": "alert",
+            "code": "aa345"
+        },
+        {
+            "state": "ok",
+            "code": "aa456"
+        },
+        {
+            "state": "rec",
+            "code": "aa567"
+        },
+        {
+            "state": "rec",
+            "code": "aa678"
+        },
+        {
+            "state": "ok",
+            "code": "aa891"
+        },
+        {
+            "state": "rec",
+            "code": "aa912"
+        },
+        {
+            "state": "ok",
+            "code": "aa923"
+        },
+        {
+            "state": "off",
+            "code": "aa934"
+        },
+        {
+            "state": "rec",
+            "code": "aa945"
+        },
+        {
+            "state": "rec",
+            "code": "aa946"
+        },
+        {
+            "state": "ok",
+            "code": "aa957"
+        },
+        {
+            "state": "ok",
+            "code": "aa966"
+        },
+        {
+            "state": "rec",
+            "code": "aa977"
+        },
+        {
+            "state": "ok",
+            "code": "aa988"
+        }
+    ]
+}

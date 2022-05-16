@@ -8,6 +8,7 @@
   margin: 0.5rem;
   cursor: pointer;
   outline: 0px solid white;
+  text-align: center;
   
 }
 .btnbox.btnOn{
@@ -89,11 +90,12 @@
 }
 .codeName {
   font-size: 13px;
-  font-weight: bold;
+  font-family:'Open Sans Bold';
   letter-spacing: -1px;
   color: gray;
   margin-top: 24px;
   text-transform: uppercase;
+  text-align:center;
 }
 .alertSymbol{
     top: -1px;

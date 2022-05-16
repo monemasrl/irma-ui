@@ -28,31 +28,36 @@ function Led({ state }) {
       </div>
     )
   } else if (state === 'alert') {
-    return ( 
-    <div className={style.led}>
-      <div className={style.circleAlert}></div>
-      <img className={`${style.led} ${style.alert}`} src={alertLed} alt="green led" />
-      <img className={style.alertSymbol} src={alertSymbol} alt="green led" />
-    </div>)
-  } 
+    return (
+      <div className={style.led}>
+        <div className={style.circleAlert}></div>
+        <img className={`${style.led} ${style.alert}`} src={alertLed} alt="green led" />
+        <img className={style.alertSymbol} src={alertSymbol} alt="green led" />
+      </div>)
+  }
 }
 
-function Btn({ state = 'ok', code = 'AA003', setBtnClick, index, active }) {
- 
+function Btn({ state = 'ok', code = 'AA003', setStakerClicked, index, stakerClicked }) {
+
+  function pulsanteCliccato() {
+    if (stakerClicked === index) {
+      return true
+    } else { return false }
+  }
   
   return (
-    <div  onClick={()=>setBtnClick((prevIndex)=>prevIndex===index ? false : index)} 
-          className={`
+    <div onClick={() => setStakerClicked((prevIndex) => prevIndex === index ? false : index)}
+      className={`
           ${style.btnbox} 
           ${(state === 'alert') && style.alert} 
-          ${active ? style.btnOn : ''}
+          ${pulsanteCliccato() ? style.btnOn : ''}
           `}>
-    <div className={style.innerBtnBox}>
-      <div className={style.ledOut}>
-        <Led state={state} />
+      <div className={style.innerBtnBox}>
+        <div className={style.ledOut}>
+          <Led state={state} />
+        </div>
+        <div className={style.codeName}>{code}</div>
       </div>
-      <div className={style.codeName}>{code}</div>
-    </div>
     </div>
   )
 }

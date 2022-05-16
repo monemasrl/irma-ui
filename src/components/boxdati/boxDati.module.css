@@ -1,0 +1,56 @@
+.boxDati {
+  border-radius: 20px;
+  background: linear-gradient(
+    180deg,
+    rgba(240, 240, 240) 10%,
+    rgb(247, 247, 247) 100%
+  );
+  position: relative;
+  margin-left: 20px;
+  padding: 20px;
+}
+.boxDati .titoletto {
+  font-family: "Open Sans Bold";
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  color: gray;
+}
+
+.codiceStaker {
+  font-size: 35px;
+  font-family: "Open Sans Semibold";
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.stato {
+  display: flex;
+  margin-top: 20px;
+  background-color: #ebebeb;
+  padding: 10px;
+  border-radius: 5px;
+}
+.stato img {
+  max-width: 20px;
+  margin-top: 3px;
+}
+.label {
+  font-family: "Open Sans Semibold";
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-size: 34px;
+  line-height: 1;
+  color: green;
+  margin-left: 5px;
+}
+
+.datoLabel {
+  text-transform: capitalize;
+  letter-spacing: -1px;
+  margin-left: 7px;
+  font-size: 14px;
+}
+.datiStato {
+  border-left: 2px dotted gray;
+  margin-left: 4px;
+}

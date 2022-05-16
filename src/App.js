@@ -1,9 +1,10 @@
 import './App.css';
-import BtnOk from './components/btn/btn';
 import {useState, useEffect} from 'react'
 import Dashboard from './components/dashboard/dashboard';
+import BoxDati from './components/boxdati/boxDati';
 function App() {
   const [data,setData]=useState([]);
+  const [stakerClicked, setStakerClicked] = useState(false);
 
   const getData=()=>{
     fetch('./data/data.json'
@@ -29,7 +30,10 @@ function App() {
 
   return (
     <div className="App">
-      <Dashboard data={data}/>
+      <div className='wrapper-content'>
+        <Dashboard data={data} stakerClicked = {stakerClicked} setStakerClicked={setStakerClicked}  />
+        <BoxDati dati = {data.data ? data.data[stakerClicked] : {}} />
+      </div>
     </div>
   );
 }

@@ -4,20 +4,20 @@ import Btn from '../btn/btn'
 import { useState } from 'react'
 
 
-function Dashboard({ data }) {
-    const [btnClick, setBtnClick] = useState(false)
+function Dashboard({ data, stakerClicked, setStakerClicked }) {
+
 
     return (
         <div className={style.dashboard}>
             {data.data && data.data.map((item, index) => {
 
                 return (
-                    <Btn
+                    <Btn key={item.code}
                         state={item.state}
                         code={item.code}
                         index={index}
-                        setBtnClick={setBtnClick}
-                        active={btnClick === index ? true : false}
+                        setStakerClicked={setStakerClicked}
+                        stakerClicked={stakerClicked}
                     />)
 
             })}
