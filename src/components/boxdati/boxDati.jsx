@@ -32,19 +32,19 @@ function BloccoNumerico({ datiNumerici, code, index }) {
 
   return (
     <>
-      <AnimatePresence>
-     {animate && <motion.div
+    
+    <motion.div
           key={code}
           className={style.bloccoDati}
-          initial={{ opacity: 0, top: 50 }}
+          initial={{ opacity: 0, top: 20 }}
           animate={{ opacity: 1, top: 0 }}
-          exit={{ opacity: 0, top: 50 }}
-          transition={{ duration: 2, delay: index * 0.1 }}
+          exit={{ opacity: 0, top: 20 }}
+          transition={{ duration: .5, delay: index * 0.1 }}
         >
           <div className={style.titoloInterno}>{datiNumerici.titolo}</div>
           <div className={style.datoInterno}>{datiNumerici.dato} <span>%</span></div>
-        </motion.div>}
-      </AnimatePresence>
+        </motion.div>
+        
 
     </>
   )
