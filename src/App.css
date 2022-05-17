@@ -25,9 +25,8 @@
 
 .App .wrapper-content{
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   justify-content: center;
-  align-items: start;
   font-family: 'Open Sans regular';
   color: #4f4f4f;
 }
