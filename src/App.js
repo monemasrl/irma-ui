@@ -35,10 +35,14 @@ function App() {
       <main>
         <Header />
         <div className='wrapper-content'>
-          <Dashboard data={data} stakerClicked = {stakerClicked} setStakerClicked={setStakerClicked}  />
+
+          <div>
+            <Dashboard data={data} stakerClicked = {stakerClicked} setStakerClicked={setStakerClicked}  />
+            <Footer />
+          </div>
           <BoxDati stakerClicked={stakerClicked} dati = {data.data ? data.data[stakerClicked] : {}} />
         </div>
-        <Footer />
+      
       </main>
     </div>
   );

@@ -18,8 +18,8 @@ function Dashboard({ data, stakerClicked, setStakerClicked }) {
                         setStakerClicked={setStakerClicked}
                         stakerClicked={stakerClicked}
                     />)
-            })}
 
+            })}
         </div>
     )
 }

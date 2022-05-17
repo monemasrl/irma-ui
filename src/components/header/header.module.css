@@ -1,8 +1,9 @@
 .header {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 1rem;
 }
 
 .logo {
-  max-width: 180px;
+  max-width: 150px;
 }

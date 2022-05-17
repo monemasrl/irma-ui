@@ -29,17 +29,17 @@
 .stato {
   display: flex;
   margin-top: 20px;
-
   padding: 23px 15px;
   border-bottom: 3px dotted #74b482;
   margin-bottom: 1rem;
+  background: #f8f8f8;
 }
 .stato img {
   width: 20px;
   margin-top: 3px;
 }
 .label {
-  font-family: "Open Sans Semibold";
+  font-family: "Open Sans Bold";
   text-transform: uppercase;
   letter-spacing: -1px;
   font-size: 50px;
@@ -52,9 +52,11 @@
     font-size: 1.1rem;
     display: inline-block;
     vertical-align: middle;
+    margin-right: 3px;
 }
+
 .ok .label {
-  color: green;
+  color: #4d9a4d;
 }
 .off .label {
   color: gray;
@@ -63,7 +65,7 @@
   color: #ff3130;
 }
 .rec .label {
-  color: green;
+  color: #4d9a4d;
 }
 
 
@@ -95,7 +97,7 @@
   line-height: 1;
 }
 .bloccoDati .datoInterno {
-  font-size: 40px;
+  font-size: 36px;
   line-height: 1;
   text-align: right;
 }
