@@ -1,11 +1,12 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import style from './boxDati.module.css'
+import { RiTerminalFill } from "react-icons/ri";
 
 
 import { motion } from "framer-motion"
 
-function StatoOk({ statoSensore }) {
+function StatoSensore({ statoSensore }) {
 
 const uiStatiSensore = {
   ok: 'sensore funzionante',
@@ -18,9 +19,9 @@ const uiStatiSensore = {
       <div className={style.iconastato}>
         <img src={`images/${statoSensore}-led.svg`}alt="icona ok" />
       </div>
-      <div className={style.datiStato}>
+      <div className={`${style.datiStato} ${style[statoSensore]}`}>
         <div className={style.label}>{statoSensore}</div>
-        <div className={style.datoLabel}>({uiStatiSensore[statoSensore]})</div>
+        <div className={style.datoLabel}><RiTerminalFill />{uiStatiSensore[statoSensore]}</div>
       </div>
     </div>
   )
@@ -67,7 +68,7 @@ function BoxDati({ dati, stakerClicked }) {
         </div>}
         <div className={style.subData}>
           {stakerClicked !== false &&
-            <StatoOk statoSensore={dati?.state} />
+            <StatoSensore statoSensore={dati?.state} />
           }
         </div>
         <div className={style.datiInterni}>

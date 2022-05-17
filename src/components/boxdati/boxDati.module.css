@@ -44,15 +44,31 @@
   letter-spacing: -1px;
   font-size: 50px;
   line-height: 1;
-  color: green;
+
   margin-left: 5px;
   position: relative;
-
+}
+.datoLabel svg{
+    font-size: 1.1rem;
+    display: inline-block;
+    vertical-align: middle;
+}
+.ok .label {
+  color: green;
+}
+.off .label {
+  color: gray;
+}
+.alert .label {
+  color: #ff3130;
+}
+.rec .label {
+  color: green;
 }
 
 
 .datoLabel {
-  font-family: 'Open Sans Bold';
+  font-family: "Open Sans Bold";
   text-transform: capitalize;
   letter-spacing: -1px;
   margin-left: 7px;

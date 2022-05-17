@@ -2,6 +2,8 @@ import './App.css';
 import {useState, useEffect} from 'react'
 import Dashboard from './components/dashboard/dashboard';
 import BoxDati from './components/boxdati/boxDati';
+import Header from './components/header/header';
+import Footer from './components/footer/footer';
 function App() {
   const [data,setData]=useState([]);
   const [stakerClicked, setStakerClicked] = useState(false);
@@ -30,10 +32,14 @@ function App() {
 
   return (
     <div className="App">
-      <div className='wrapper-content'>
-        <Dashboard data={data} stakerClicked = {stakerClicked} setStakerClicked={setStakerClicked}  />
-        <BoxDati stakerClicked={stakerClicked} dati = {data.data ? data.data[stakerClicked] : {}} />
-      </div>
+      <main>
+        <Header />
+        <div className='wrapper-content'>
+          <Dashboard data={data} stakerClicked = {stakerClicked} setStakerClicked={setStakerClicked}  />
+          <BoxDati stakerClicked={stakerClicked} dati = {data.data ? data.data[stakerClicked] : {}} />
+        </div>
+        <Footer />
+      </main>
     </div>
   );
 }

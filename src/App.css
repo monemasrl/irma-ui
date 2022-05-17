@@ -16,7 +16,12 @@
   src: url(./assets/fonts/OpenSans/OpenSans-ExtraBold.ttf) format('truetype');
 }
 
-
+.App{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 
 .App .wrapper-content{
   display: flex;
@@ -25,4 +30,7 @@
   align-items: center;
   font-family: 'Open Sans regular';
   color: #4f4f4f;
+}
+main{
+  max-width: 900px;
 }

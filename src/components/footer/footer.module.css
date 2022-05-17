@@ -1,0 +1,26 @@
+.legenda {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 420px;
+    padding: 5px 0 5px 10px;
+    border-radius: 8px;
+    background-color: rgb(242, 242, 242);
+  }
+  .legenda li{
+      flex-grow: 1;
+      max-width: 210px;
+      margin-bottom: 3px;
+  }
+  .legenda li img {
+    max-width: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 4px;
+  }
+  .legenda li span {
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
