@@ -1,9 +1,6 @@
 import React from 'react'
-import { useState, useEffect } from 'react'
 import style from './boxDati.module.css'
 import { RiTerminalFill } from "react-icons/ri";
-
-
 import { motion } from "framer-motion"
 
 function StatoSensore({ statoSensore }) {
@@ -28,16 +25,7 @@ const uiStatiSensore = {
 }
 
 function BloccoNumerico({ datiNumerici, code, index }) {
-  const [animate, setAnimate] = useState(true)
 
-  useEffect(() => {
-    setAnimate(false)
-
-    setTimeout(() => {
-      setAnimate(true)
-    }, 700)
-
-  }, [code])
 
   return (
     <>
