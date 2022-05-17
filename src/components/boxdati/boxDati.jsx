@@ -1,18 +1,26 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import style from './boxDati.module.css'
-import iconaOk from '../../assets/images/green-led.svg'
-import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion"
+
+
+import { motion } from "framer-motion"
 
 function StatoOk({ statoSensore }) {
+
+const uiStatiSensore = {
+  ok: 'sensore funzionante',
+  rec: 'in stato di rilevamento',
+  off: 'sensore non funzionante',
+  alert: 'rilevata anomalia'
+}
   return (
     <div className={`${style.stato}`}>
       <div className={style.iconastato}>
-        <img src={iconaOk} alt="icona ok" />
+        <img src={`images/${statoSensore}-led.svg`}alt="icona ok" />
       </div>
       <div className={style.datiStato}>
         <div className={style.label}>{statoSensore}</div>
-        <div className={style.datoLabel}>(sensore funzionante)</div>
+        <div className={style.datoLabel}>({uiStatiSensore[statoSensore]})</div>
       </div>
     </div>
   )

@@ -10,7 +10,6 @@ function Dashboard({ data, stakerClicked, setStakerClicked }) {
     return (
         <div className={style.dashboard}>
             {data.data && data.data.map((item, index) => {
-
                 return (
                     <Btn key={item.code}
                         state={item.state}
@@ -19,7 +18,6 @@ function Dashboard({ data, stakerClicked, setStakerClicked }) {
                         setStakerClicked={setStakerClicked}
                         stakerClicked={stakerClicked}
                     />)
-
             })}
 
         </div>
