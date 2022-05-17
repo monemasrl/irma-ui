@@ -32,7 +32,7 @@ function App() {
     <div className="App">
       <div className='wrapper-content'>
         <Dashboard data={data} stakerClicked = {stakerClicked} setStakerClicked={setStakerClicked}  />
-        <BoxDati dati = {data.data ? data.data[stakerClicked] : {}} />
+        <BoxDati stakerClicked={stakerClicked} dati = {data.data ? data.data[stakerClicked] : {}} />
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 import React from 'react'
 import style from './dashboard.module.css'
 import Btn from '../btn/btn'
-import { useState } from 'react'
+
 
 
 function Dashboard({ data, stakerClicked, setStakerClicked }) {
