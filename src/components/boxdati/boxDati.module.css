@@ -44,7 +44,7 @@
   letter-spacing: -1px;
   font-size: 50px;
   line-height: 1;
-
+  letter-spacing: -3px;
   margin-left: 5px;
   position: relative;
 }
@@ -85,7 +85,7 @@
   padding: 10px 10px;
   margin: 10px 0;
   background-color: #ebebeb;
-  border-left: 3px solid green;
+  border-left: 2px solid green;
   display: flex;
   justify-content: space-between;
   position: relative;
