@@ -1,9 +1,8 @@
 .dashboard{
     display: flex;
     flex-wrap: wrap;
-    max-width: 517px;
-    width: 100%;
     min-height: 500px;
+    width: 100%;
     position: relative;
     box-shadow: 0 0 3px #b4b4b4;
     border-radius: 30px;

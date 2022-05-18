@@ -2,7 +2,7 @@ import React from 'react'
 import style from './boxDati.module.css'
 import { RiTerminalFill } from "react-icons/ri";
 import { motion } from "framer-motion"
-
+import Loaderbox from '../loaders/loaderbox';
 function StatoSensore({ statoSensore }) {
 
   const uiStatiSensore = {
@@ -48,6 +48,7 @@ function BoxDati({ datiDefault, dati, stakerClicked }) {
 
   return (
     <div className={`${style.boxDati} ${style[dati?.state]}`}>
+     { !datiDefault ? <Loaderbox /> :
       <header>
         {stakerClicked !== false &&
           <div className={style.title}>
@@ -99,7 +100,7 @@ function BoxDati({ datiDefault, dati, stakerClicked }) {
             <img src="/images/alert-back.svg" alt="back alert" />
           </div>
         }
-      </header>
+      </header>}
     </div>
   )
 }

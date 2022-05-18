@@ -8,9 +8,10 @@
   position: relative;
   margin-left: 20px;
   padding: 20px;
-  min-width: 300px;
+  width: 300px;
   overflow: hidden;
   transition: all ease-in-out 0.5s;
+  min-height: 300px;
 }
 
 .boxDati.alert{

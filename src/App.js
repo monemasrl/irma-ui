@@ -4,6 +4,7 @@ import Dashboard from './components/dashboard/dashboard';
 import BoxDati from './components/boxdati/boxDati';
 import Header from './components/header/header';
 import Footer from './components/footer/footer';
+
 function App() {
   const [data, setData] = useState([]);
   const [stakerClicked, setStakerClicked] = useState(false);
@@ -64,7 +65,7 @@ function App() {
       <Header />
       <main>
         <div className='wrapper-content'>
-          <div>
+          <div className='wrapper-sx'>
             <Dashboard isAlert={isAlert()} data={data} stakerClicked={stakerClicked} setStakerClicked={setStakerClicked} />
             <Footer />
           </div>
