@@ -1,28 +1,32 @@
 @font-face {
   font-family: 'Open Sans Regular';
   src:url(./assets/fonts/OpenSans/OpenSans-Regular.ttf) format('truetype');
+  font-display: swap;
 }
-@font-face {
-  font-family: 'Open Sans Semibold';
-  src: url(./assets/fonts/OpenSans/OpenSans-SemiBold.ttf) format('truetype');
-}
+
 @font-face {
   font-family: 'Open Sans Bold';
   src: url(./assets/fonts/OpenSans/OpenSans-Bold.ttf) format('truetype');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Open Sans Extrabold';
   src: url(./assets/fonts/OpenSans/OpenSans-ExtraBold.ttf) format('truetype');
+  font-display: swap;
 }
 body{
   background: #d9d9d9;
 }
-.App{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#root{
   height: 100vh;
+}
+.App{
+ 
+}
+
+.App.alert{
+
 }
 
 .App .wrapper-content{
@@ -34,4 +38,29 @@ body{
 }
 main{
   max-width: 910px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  z-index: 0;
+  position: relative;
 }
+
+.back-alert {
+  position: absolute;
+  top: 35%;
+  z-index: -2;
+  animation:backalert 1s forwards;
+}
+
+.back-alert img{
+  width: 480px;
+}
+
+@keyframes backalert {
+  from{left: -1000px;}
+  to{left: -10px;}
+
+}
+

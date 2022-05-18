@@ -2,6 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     max-width: 517px;
+    width: 100%;
     min-height: 500px;
     position: relative;
     box-shadow: 0 0 3px #b4b4b4;
@@ -9,12 +10,12 @@
     padding: 1rem;
     background-color: #efefef;
     background:linear-gradient(180deg,rgba(239,239,239) 10%, rgb(247, 247, 247) 100%);
-    outline: 6px solid transparent;
+    
     transition: all ease-in-out .3s;
 
    
 }
-.dashboard.alert::before{
+/* .dashboard.alert::before{
 
     content: '';
     width: 100%;
@@ -26,8 +27,8 @@
     border-radius: 30px;
     animation:backalert 1s forwards , backalertcolor 1s infinite alternate;
 }
-
-@keyframes backalertcolor {
+ */
+/* @keyframes backalertcolor {
     from{background: #b41c1f;}
     to{background: #EE2E32}
     
@@ -39,4 +40,4 @@
     to{left: -29px;
         top: 24px;}
     
-}
+} */

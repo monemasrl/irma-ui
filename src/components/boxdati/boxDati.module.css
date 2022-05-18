@@ -17,8 +17,13 @@
   background: #ff3130;
   transition: all ease-in-out 0.5s;
 }
-
-
+.boxDati ul{
+  list-style: none;
+  padding: 0;
+}
+.boxDati ul li{
+  margin: 1rem 0;
+}
 .boxDati .titoletto {
   font-family: "Open Sans Bold";
   text-transform: uppercase;

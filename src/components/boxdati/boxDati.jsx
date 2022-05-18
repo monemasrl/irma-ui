@@ -44,8 +44,8 @@ function BloccoNumerico({ datiNumerici, code, index }) {
   )
 }
 
-function BoxDati({ dati, stakerClicked }) {
- 
+function BoxDati({ datiDefault, dati, stakerClicked }) {
+
   return (
     <div className={`${style.boxDati} ${style[dati?.state]}`}>
       <header>
@@ -54,6 +54,30 @@ function BoxDati({ dati, stakerClicked }) {
             <div className={style.titoletto}>Reach Staker</div>
             <div className={style.codiceStaker}>{dati?.code}</div>
           </div>}
+        {stakerClicked === false &&
+          <ul>
+            <li>
+              <div className={style.title}>
+                <div className={style.titoletto}>Reach Staker Totali</div>
+                <div className={style.codiceStaker}>{datiDefault?.numeroStaker}</div>
+              </div>
+            </li>
+            <li>
+              <div className={style.title}>
+                <div className={style.titoletto}>Ore operative totali</div>
+                <div className={style.codiceStaker}>{datiDefault?.oreOperativeTotali}</div>
+              </div>
+            </li>
+            <li>
+              <div className={style.title}>
+                <div className={style.titoletto}>Allerte</div>
+                <div className={style.codiceStaker}>{datiDefault?.allerteAttuali}</div>
+              </div>
+            </li>
+          </ul>
+
+
+        }
         <div className={style.subData}>
           {stakerClicked !== false &&
             <StatoSensore statoSensore={dati?.state} />

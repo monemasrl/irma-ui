@@ -1,7 +1,7 @@
 {
     "data": [
         {
-            "state": "ok",
+            "state": "off",
             "code": "aa123",
             "datiInterni": [
                 {
@@ -37,7 +37,7 @@
             ]
         },
         {
-            "state": "alert",
+            "state": "ok",
             "code": "aa345",
             "datiInterni": [
                 {
