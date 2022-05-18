@@ -4,7 +4,10 @@ import style from './header.module.css'
 function Header() {
     return (
         <header className={style.header}>
-            <img className={style.logo} src="/images/logo.svg" alt="logo" />
+            <div className={style.wrapperlogo}>
+                <img className={style.logo} src="/images/logo.svg" alt="logo" />
+            </div>
+
         </header>
     )
 }

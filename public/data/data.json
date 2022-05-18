@@ -91,7 +91,7 @@
             ]
         },
         {
-            "state": "rec",
+            "state": "ok",
             "code": "aa678",
             "datiInterni": [
                 {
@@ -289,7 +289,7 @@
             ]
         },        {
             "state": "ok",
-            "code": "aa456",
+            "code": "aa192",
             "datiInterni": [
                 {
                     "titolo": "dato 1",
@@ -307,7 +307,7 @@
         },
         {
             "state": "rec",
-            "code": "aa567",
+            "code": "aa193",
             "datiInterni": [
                 {
                     "titolo": "dato 1",

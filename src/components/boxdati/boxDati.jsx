@@ -5,16 +5,16 @@ import { motion } from "framer-motion"
 
 function StatoSensore({ statoSensore }) {
 
-const uiStatiSensore = {
-  ok: 'sensore funzionante',
-  rec: 'in stato di rilevamento',
-  off: 'sensore non funzionante',
-  alert: 'rilevata anomalia'
-}
+  const uiStatiSensore = {
+    ok: 'sensore funzionante',
+    rec: 'in stato di rilevamento',
+    off: 'sensore non funzionante',
+    alert: 'rilevata anomalia'
+  }
   return (
     <div className={`${style.stato}`}>
       <div className={style.iconastato}>
-        <img src={`images/${statoSensore}-led.svg`}alt="icona ok" />
+        <img src={`images/${statoSensore}-led.svg`} alt="icona ok" />
       </div>
       <div className={`${style.datiStato} ${style[statoSensore]}`}>
         <div className={style.label}>{statoSensore}</div>
@@ -45,29 +45,36 @@ function BloccoNumerico({ datiNumerici, code, index }) {
 }
 
 function BoxDati({ dati, stakerClicked }) {
-  console.log(stakerClicked);
+ 
   return (
-    <div className={`${style.boxDati}`}>
+    <div className={`${style.boxDati} ${style[dati?.state]}`}>
       <header>
-      { stakerClicked !== false  &&
-        <div className={style.title}>
-          <div className={style.titoletto}>Reach Staker</div>
-          <div className={style.codiceStaker}>{dati?.code}</div>
-        </div>}
+        {stakerClicked !== false &&
+          <div className={style.title}>
+            <div className={style.titoletto}>Reach Staker</div>
+            <div className={style.codiceStaker}>{dati?.code}</div>
+          </div>}
         <div className={style.subData}>
           {stakerClicked !== false &&
             <StatoSensore statoSensore={dati?.state} />
           }
         </div>
-        <div className={style.datiInterni}>
-          {dati?.datiInterni?.map((item, index) =>
 
-            <React.Fragment key={item.titolo}>
-              <BloccoNumerico datiNumerici={item} code={dati.code} index={index} />
-            </React.Fragment >
+        {dati?.state !== 'alert' &&
+          <div className={style.datiInterni}>
+            {dati?.datiInterni?.map((item, index) =>
+              <React.Fragment key={item.titolo}>
+                <BloccoNumerico datiNumerici={item} code={dati.code} index={index} />
+              </React.Fragment >
+            )}
+          </div>
+        }
 
-          )}
-        </div>
+        {dati?.state === 'alert' &&
+          <div className={style.wrapperAlert}>
+            <img src="/images/alert-back.svg" alt="back alert" />
+          </div>
+        }
       </header>
     </div>
   )

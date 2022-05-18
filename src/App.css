@@ -15,7 +15,9 @@
   font-family: 'Open Sans Extrabold';
   src: url(./assets/fonts/OpenSans/OpenSans-ExtraBold.ttf) format('truetype');
 }
-
+body{
+  background: #d9d9d9;
+}
 .App{
   display: flex;
   justify-content: center;
@@ -31,5 +33,5 @@
   color: #4f4f4f;
 }
 main{
-  max-width: 900px;
+  max-width: 910px;
 }

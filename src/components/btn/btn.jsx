@@ -37,7 +37,7 @@ function Led({ state }) {
   }
 }
 
-function Btn({ state = 'ok', code = 'AA003', setStakerClicked, index, stakerClicked }) {
+function Btn({ state, code , setStakerClicked, index, stakerClicked }) {
 
   function pulsanteCliccato() {
     if (stakerClicked === index) {
@@ -45,8 +45,13 @@ function Btn({ state = 'ok', code = 'AA003', setStakerClicked, index, stakerClic
     } else { return false }
   }
   
+  function settaStatiOnClick (){
+    setStakerClicked((prevIndex) => prevIndex === index ? false : index)
+  }
+
+
   return (
-    <div onClick={() => setStakerClicked((prevIndex) => prevIndex === index ? false : index)}
+    <div onClick={() =>settaStatiOnClick() }
       className={`
           ${style.btnbox} 
           ${(state === 'alert') && style.alert} 
