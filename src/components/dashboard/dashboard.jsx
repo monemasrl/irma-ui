@@ -8,7 +8,7 @@ import Btn from '../btn/btn';
 function Dashboard({ isAlert, data, stakerClicked, setStakerClicked }) {
 
     return (
-        <div className={`${style.dashboard} ${isAlert && style.alert}`}>
+        <div className={`${style.dashboard} ${isAlert ? style.alert :''}`}>
            
             {data?.data?.map((item, index) => {
                 return (<Btn key={item.code}

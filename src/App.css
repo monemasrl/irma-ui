@@ -32,10 +32,13 @@ body{
 .wrapper-sx{
   position: relative;
   width: 557px;
+  opacity: 1;
+  transition: all ease-in-out 0.5s;
 }
 .wrapper-sx.modalOpen{
   opacity: 0.6;
   pointer-events: none;
+  transform: scale(.95);
 }
 .loader {
   width: 100%;

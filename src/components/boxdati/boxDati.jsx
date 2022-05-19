@@ -5,26 +5,30 @@ import BoxStaker from './boxStaker';
 import BoxAlert from './boxAlert';
 import BoxConfirm from './modali/boxConfirm';
 import { ShareContext } from '../../context/context';
-import {useContext} from 'react'
+import { useContext } from 'react'
+import { AnimatePresence } from 'framer-motion'
 
 function BoxDati({ datiDefault, dati, stakerClicked }) {
-const share = useContext(ShareContext)
+  const share = useContext(ShareContext)
+  
   return (
-    <div className={`${style.boxDati} ${style[dati?.state]}`}>
-      
-  
-        {dati?.state === 'ok'  && <BoxStaker dati={dati && dati}/>}
+    <div className={`${style.boxDati} ${style[dati?.state]} ${share.confirm ? style.modalOpen : ''}`}>
 
-        {dati?.state === 'rec'  && <BoxStaker dati={dati && dati}/>}
 
-        {dati?.state === 'off'  && <BoxStaker dati={dati && dati}/>}
-         
-        {stakerClicked === false &&<BoxDefault datiDefault={datiDefault && datiDefault}  />}
-  
-        {dati?.state === 'alert' && <BoxAlert dati={dati && dati} setConfirm={share.setConfirm} />}
+      {dati?.state === 'ok' && <BoxStaker dati={dati && dati} />}
 
-        {share.confirm && <BoxConfirm confirm={share.confirmModal} setConfirm={share.setConfirmModal} /> }
-    
+      {dati?.state === 'rec' && <BoxStaker dati={dati && dati} />}
+
+      {dati?.state === 'off' && <BoxStaker dati={dati && dati} />}
+
+      {stakerClicked === false && <BoxDefault datiDefault={datiDefault && datiDefault} />}
+
+      {dati?.state === 'alert' && <BoxAlert dati={dati && dati} setConfirm={share.setConfirm} />}
+
+      <AnimatePresence>
+        {share.confirm && <BoxConfirm confirm={share.confirmModal} setConfirm={share.setConfirmModal} />}
+      </AnimatePresence>
+
     </div>
   )
 }
