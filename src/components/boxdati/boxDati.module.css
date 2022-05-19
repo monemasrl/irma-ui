@@ -8,7 +8,7 @@
   position: relative;
   margin-left: 20px;
   padding: 20px;
-  width: 300px;
+  width: 370px;
   overflow: hidden;
   transition: all ease-in-out 0.5s;
   min-height: 300px;
@@ -105,13 +105,13 @@
 
 .datoLabel {
   font-family: "Open Sans Bold";
-  text-transform: capitalize;
+  text-transform: uppercase;
   letter-spacing: -1px;
   margin-left: 7px;
-  font-size: 14px;
+  font-size: 15px;
 }
 .alert .datoLabel{
-font-size: 20px;
+font-size: 18px;
 text-transform: uppercase;
 }
 .datiStato {
@@ -147,13 +147,65 @@ text-transform: uppercase;
 
 .wrapperAlert img{
   margin-left: -21px;
-  width: 131%;
+  width: 428px;
+  height: 113px;
   position: relative;
   animation: alertbox 1s forwards;
 }
 
+.buttonStop{
+  margin: 1rem auto ;
+  display: block;
+  outline: none;
+  background-color: #ff5c5c;
+  padding: 20px;
+  width: 250px;
+  font-family: 'Open Sans Bold';
+  color: white;
+  text-transform: uppercase;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all ease-in-out .3s;
+  border: none;
+}
 
+.buttonStop:hover{
+  background-color: #CF2201;
+  color: #fff;
+ 
 
+}
+
+.boxconfirm{
+margin-top: 2rem;
+text-align:center
+}
+.boxconfirmText{
+  font-family: 'Open Sans Bold';
+  color:white;
+  text-transform: uppercase;
+
+}
+.boxconfirmbtn button{
+  margin: 1rem 10px ;
+  display: inline-block;
+  border: none;
+  outline: none;
+  background-color: #ff5c5c;
+  padding: 5px;
+  width: 100px;
+  height: 50px;
+  font-family: 'Open Sans Bold';
+  color: white;
+  text-transform: uppercase;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all ease-in-out .3s;
+}
+.boxconfirmbtn button:hover{
+  background-color: #CF2201;
+  color: #fff;
+}
 @keyframes alertbox {
   from{
     opacity: 0;

@@ -1,12 +1,17 @@
 import './App.css';
 import { useState, useEffect } from 'react'
-import Dashboard from './components/dashboard/dashboard';
-import BoxDati from './components/boxdati/boxDati';
 import Header from './components/header/header';
 import Footer from './components/footer/footer';
+import Loaderdash from './components/loaders/loaderdash';
+import Loaderbox from './components/loaders/loaderbox';
+import { lazy, Suspense } from 'react';
+const Dashboard = lazy(() => import('./components/dashboard/dashboard'))
+const BoxDati = lazy(() => import('./components/boxdati/boxDati'))
+
+
 
 function App() {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState(false);
   const [stakerClicked, setStakerClicked] = useState(false);
 
   const getData = () => {
@@ -20,7 +25,8 @@ function App() {
     )
       .then(function (response) {
 
-        return response.json();
+
+        return response.json()
       })
       .then(function (myJson) {
 
@@ -43,7 +49,7 @@ function App() {
 
   function datiDefault() {
 
-    if (data.data) {
+    if (data) {
       let ore = data.data.map((item) => item.datiInterni[0].dato)
       ore = ore.reduce((prev, item) => prev + item)
 
@@ -66,10 +72,14 @@ function App() {
       <main>
         <div className='wrapper-content'>
           <div className='wrapper-sx'>
-            <Dashboard isAlert={isAlert()} data={data} stakerClicked={stakerClicked} setStakerClicked={setStakerClicked} />
+            <Suspense fallback={<Loaderdash />}>
+              <Dashboard isAlert={isAlert()} data={data} stakerClicked={stakerClicked} setStakerClicked={setStakerClicked} />
+            </Suspense>
             <Footer />
           </div>
-          <BoxDati stakerClicked={stakerClicked} datiDefault={datiDefault()} dati={data.data ? data.data[stakerClicked] : {}} />
+          <Suspense fallback={<Loaderbox />}>
+            <BoxDati stakerClicked={stakerClicked} datiDefault={datiDefault()} dati={data.data ? data.data[stakerClicked] : {}} />
+          </Suspense>
         </div>
       </main>
       {isAlert() &&

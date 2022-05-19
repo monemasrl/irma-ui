@@ -1,106 +1,26 @@
 import React from 'react'
 import style from './boxDati.module.css'
-import { RiTerminalFill } from "react-icons/ri";
-import { motion } from "framer-motion"
-import Loaderbox from '../loaders/loaderbox';
-function StatoSensore({ statoSensore }) {
+import BoxDefault from './boxDefault';
+import BoxStaker from './boxStaker';
+import BoxAlert from './boxAlert';
 
-  const uiStatiSensore = {
-    ok: 'sensore funzionante',
-    rec: 'in stato di rilevamento',
-    off: 'sensore non funzionante',
-    alert: 'rilevata anomalia'
-  }
-  return (
-    <div className={`${style.stato}`}>
-      <div className={style.iconastato}>
-        <img src={`images/${statoSensore}-led.svg`} alt="icona ok" />
-      </div>
-      <div className={`${style.datiStato} ${style[statoSensore]}`}>
-        <div className={style.label}>{statoSensore}</div>
-        <div className={style.datoLabel}><RiTerminalFill />{uiStatiSensore[statoSensore]}</div>
-      </div>
-    </div>
-  )
-}
-
-function BloccoNumerico({ datiNumerici, code, index }) {
-
-
-  return (
-    <>
-      <motion.div
-        key={code}
-        className={style.bloccoDati}
-        initial={{ opacity: 0, top: 20 }}
-        animate={{ opacity: 1, top: 0 }}
-        exit={{ opacity: 0, top: 20 }}
-        transition={{ duration: .5, delay: index * 0.1 }}
-      >
-        <div className={style.titoloInterno}>{datiNumerici.titolo}</div>
-        <div className={style.datoInterno}>{datiNumerici.dato} <span>%</span></div>
-      </motion.div>
-    </>
-  )
-}
 
 function BoxDati({ datiDefault, dati, stakerClicked }) {
 
   return (
     <div className={`${style.boxDati} ${style[dati?.state]}`}>
-     { !datiDefault ? <Loaderbox /> :
-      <header>
-        {stakerClicked !== false &&
-          <div className={style.title}>
-            <div className={style.titoletto}>Reach Staker</div>
-            <div className={style.codiceStaker}>{dati?.code}</div>
-          </div>}
-        {stakerClicked === false &&
-          <ul>
-            <li>
-              <div className={style.title}>
-                <div className={style.titoletto}>Reach Staker Totali</div>
-                <div className={style.codiceStaker}>{datiDefault?.numeroStaker}</div>
-              </div>
-            </li>
-            <li>
-              <div className={style.title}>
-                <div className={style.titoletto}>Ore operative totali</div>
-                <div className={style.codiceStaker}>{datiDefault?.oreOperativeTotali}</div>
-              </div>
-            </li>
-            <li>
-              <div className={style.title}>
-                <div className={style.titoletto}>Allerte</div>
-                <div className={style.codiceStaker}>{datiDefault?.allerteAttuali}</div>
-              </div>
-            </li>
-          </ul>
+      
+  
+        {dati?.state === 'ok'  && <BoxStaker dati={dati && dati}/>}
 
-
-        }
-        <div className={style.subData}>
-          {stakerClicked !== false &&
-            <StatoSensore statoSensore={dati?.state} />
-          }
-        </div>
-
-        {dati?.state !== 'alert' &&
-          <div className={style.datiInterni}>
-            {dati?.datiInterni?.map((item, index) =>
-              <React.Fragment key={item.titolo}>
-                <BloccoNumerico datiNumerici={item} code={dati.code} index={index} />
-              </React.Fragment >
-            )}
-          </div>
-        }
-
-        {dati?.state === 'alert' &&
-          <div className={style.wrapperAlert}>
-            <img src="/images/alert-back.svg" alt="back alert" />
-          </div>
-        }
-      </header>}
+        {dati?.state === 'rec'  && <BoxStaker dati={dati && dati}/>}
+        
+        {dati?.state === 'off'  && <BoxStaker dati={dati && dati}/>}
+         
+        {stakerClicked === false &&<BoxDefault datiDefault={datiDefault && datiDefault}  />}
+  
+        {dati?.state === 'alert' && <BoxAlert dati={dati && dati} />}
+    
     </div>
   )
 }

@@ -6,13 +6,15 @@
 
 @font-face {
   font-family: 'Open Sans Bold';
-  src: url(./assets/fonts/OpenSans/OpenSans-Bold.ttf) format('truetype');
+  src: url(./assets/fonts/OpenSans/OpenSans-Bold.ttf) format('truetype'),
+       local(Arial);
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Open Sans Extrabold';
-  src: url(./assets/fonts/OpenSans/OpenSans-ExtraBold.ttf) format('truetype');
+  src: url(./assets/fonts/OpenSans/OpenSans-ExtraBold.ttf) format('truetype'),
+      local(Arial);
   font-display: swap;
 }
 div{
@@ -29,8 +31,7 @@ body{
 }
 .wrapper-sx{
   position: relative;
-  max-width: 557px;
-  width: 100%;
+  width: 557px;
 }
 .loader {
   width: 100%;
@@ -48,9 +49,10 @@ body{
   justify-content: center;
   font-family: 'Open Sans regular';
   color: #4f4f4f;
+  width: 100%;
 }
 main{
-  max-width: 910px;
+  max-width: 940px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
