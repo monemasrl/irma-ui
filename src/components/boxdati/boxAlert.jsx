@@ -1,14 +1,13 @@
 import React from 'react'
 import style from './boxDati.module.css'
 import { RiTerminalFill } from "react-icons/ri";
+import { ShareContext } from '../../context/context';
+import { useContext } from 'react';
+import { Button } from '../ui/ui';
 
 function StatoSensore({ statoSensore }) {
-    const uiStatiSensore = {
-        ok: 'sensore funzionante',
-        rec: 'in stato di rilevamento',
-        off: 'sensore non funzionante',
-        alert: 'rilevata anomalia'
-    }
+    const share = useContext(ShareContext)
+
     return (
         <div className={`${style.stato}`}>
             <div className={style.iconastato}>
@@ -16,12 +15,14 @@ function StatoSensore({ statoSensore }) {
             </div>
             <div className={`${style.datiStato} ${style[statoSensore]}`}>
                 <div className={style.label}>{statoSensore}</div>
-                <div className={style.datoLabel}><RiTerminalFill />{uiStatiSensore[statoSensore]}</div>
+                <div className={style.datoLabel}><RiTerminalFill />{share.uiStatiSensore[statoSensore]}</div>
             </div>
         </div>
     )
 }
 function BoxAlert({ dati }) {
+    const share = useContext(ShareContext)
+    console.log(share.confirm);
     return (
         <header>
             <div className={style.title}>
@@ -34,13 +35,15 @@ function BoxAlert({ dati }) {
             <div className={style.wrapperAlert}>
                 <img src="/images/alert-back.svg" alt="back alert" />
             </div>
-            <button className={style.buttonStop}>Stop Allarme</button>
+            <div className={style.buttonWrapper}>
+                <Button type="alert-big" onClick={() => share.setConfirm(dati?.state)}>Stop Allarme</Button>
+            </div>
 
             <div className={style.boxconfirm}>
                 <div className={style.boxconfirmText}>Confermi la segnalazione?</div>
                 <div className={style.boxconfirmbtn}>
-                    <button>si</button>
-                    <button>no</button>
+                    <Button type="alert">si</Button>
+                    <Button type="alert">no</Button>
                 </div>
             </div>
         </header>

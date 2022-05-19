@@ -1,0 +1,42 @@
+button {
+    margin: 1rem 10px;
+    display: inline-block;
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    height: 60px;
+    font-family: 'Open Sans Bold';
+    text-transform: uppercase;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all ease-in-out .3s;
+}
+
+/* ALERT BUTTONS */
+
+button.alert:hover, button.alert-big:hover {
+    background-color: #CF2201;
+    color: #fff;
+}
+
+button.alert, button.alert-big {
+    background-color: #ff5c5c;
+    color: white;
+}
+
+button.alert-big {
+    padding: 10px 30px;
+}
+
+
+/* CLOSE BUTTONS */
+
+.closeIcon{
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    padding: 0;
+    line-height: 5px;
+    border-radius: 50%;
+    
+}

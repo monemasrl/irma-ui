@@ -5,14 +5,16 @@ import Footer from './components/footer/footer';
 import Loaderdash from './components/loaders/loaderdash';
 import Loaderbox from './components/loaders/loaderbox';
 import { lazy, Suspense } from 'react';
+import { ShareContextProvider, ShareContext } from './context/context';
 const Dashboard = lazy(() => import('./components/dashboard/dashboard'))
 const BoxDati = lazy(() => import('./components/boxdati/boxDati'))
 
 
 
-function App() {
+function App(props) {
   const [data, setData] = useState(false);
   const [stakerClicked, setStakerClicked] = useState(false);
+
 
   const getData = () => {
     fetch('./data/data.json'
@@ -65,28 +67,35 @@ function App() {
     }
   }
 
-
   return (
-    <div className={`App ${isAlert() && 'alert'}`}>
-      <Header />
-      <main>
-        <div className='wrapper-content'>
-          <div className='wrapper-sx'>
-            <Suspense fallback={<Loaderdash />}>
-              <Dashboard isAlert={isAlert()} data={data} stakerClicked={stakerClicked} setStakerClicked={setStakerClicked} />
-            </Suspense>
-            <Footer />
-          </div>
-          <Suspense fallback={<Loaderbox />}>
-            <BoxDati stakerClicked={stakerClicked} datiDefault={datiDefault()} dati={data.data ? data.data[stakerClicked] : {}} />
-          </Suspense>
-        </div>
-      </main>
-      {isAlert() &&
-        <div className="back-alert">
-          <img src="/images/backalert.svg" alt="backalert" />
-        </div>}
-    </div>
+    <ShareContextProvider>
+      <div className={`App ${isAlert() && 'alert'}`}>
+        <Header />
+        <ShareContext.Consumer>
+          {(share) => (
+            <main>
+              <div className='wrapper-content'>
+                <div className={`wrapper-sx ${share.confirm ? 'modalOpen':''}`}>
+                  <Suspense fallback={<Loaderdash />}>              
+                  <Dashboard isAlert={isAlert()} data={data} stakerClicked={stakerClicked} setStakerClicked={setStakerClicked} />
+                  </Suspense>
+                  <Footer />
+                </div>
+                <Suspense fallback={<Loaderbox />}>
+                  <BoxDati stakerClicked={stakerClicked} datiDefault={datiDefault()} dati={data.data ? data.data[stakerClicked] : {}} />
+                </Suspense>
+              </div>
+            </main>
+            )}
+
+        </ShareContext.Consumer>
+        
+        {isAlert() &&
+          <div className="back-alert">
+            <img src="/images/backalert.svg" alt="backalert" />
+          </div>}
+      </div>
+    </ShareContextProvider>
   );
 }
 

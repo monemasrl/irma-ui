@@ -1,0 +1,35 @@
+.boxConfirm{
+    position: absolute;
+    background: #ff3130;
+    top: 0;
+    width: 100%;
+    left: 0;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.statoModaleTitolo {
+    font-family: "Open Sans Bold";
+    text-transform: uppercase;
+    letter-spacing: -1px;
+   text-align: center;
+    font-size: 30px;
+    color: white;
+  }
+
+  .testoConferma{
+      color: white;
+      font-size: 20px;
+      text-align: center;
+      
+  }
+  .wrapperCloseIcon{
+      position: absolute;
+      top: 0;
+      right: 0;
+
+  }
+

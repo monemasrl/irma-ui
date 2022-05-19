@@ -33,6 +33,10 @@ body{
   position: relative;
   width: 557px;
 }
+.wrapper-sx.modalOpen{
+  opacity: 0.6;
+  pointer-events: none;
+}
 .loader {
   width: 100%;
   height: 100%;

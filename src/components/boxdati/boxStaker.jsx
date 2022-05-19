@@ -46,7 +46,14 @@ function BloccoNumerico({ datiNumerici, code, index }) {
 
 function BoxStaker({ dati }) {
     return (
-        <header>
+     
+        <motion.header
+             key={dati?.code}
+             initial={{ opacity: 0, top: 20, position:'relative' }}
+             animate={{ opacity: 1, top: 0, position:'relative' }}
+             exit={{ opacity: 0, top:20 }}
+             transition={{ duration: .5 }}
+        >
             <div className={style.title}>
                 <div className={style.titoletto}>Reach Staker</div>
                 <div className={style.codiceStaker}>{dati?.code}</div>
@@ -61,7 +68,8 @@ function BoxStaker({ dati }) {
                     </React.Fragment >
                 )}
             </div>
-        </header>
+        </motion.header>
+       
     )
 }
 
