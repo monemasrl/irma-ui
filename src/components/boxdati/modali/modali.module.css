@@ -1,6 +1,6 @@
 .boxConfirm{
     position: absolute;
-    background: #ff3130;
+    background: transparent;
     top: 0;
     width: 100%;
     left: 0;
@@ -10,6 +10,19 @@
     justify-content: center;
     align-items: center;
 }
+.boxConfirm.alert{
+    /* proprietà inserita ma gestita da framer motion, per bug noto della libreria */
+    /* https://rick-moore.medium.com/solution-css-styles-are-removed-too-early-on-page-transitions-with-framer-motion-55d40e6652e */
+    background: #ff3130; 
+}
+
+.boxConfirm.alert .backConfirm{
+    position: absolute;
+    right: -50px;
+    width: 290px;
+    bottom: -90px;
+}
+
 
 .statoModaleTitolo {
     font-family: "Open Sans Bold";

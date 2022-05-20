@@ -10,7 +10,7 @@ import { AnimatePresence } from 'framer-motion'
 
 function BoxDati({ datiDefault, dati, stakerClicked }) {
   const share = useContext(ShareContext)
-  
+  console.log(share);
   return (
     <div className={`${style.boxDati} ${style[dati?.state]} ${share.confirm ? style.modalOpen : ''}`}>
 
@@ -23,11 +23,11 @@ function BoxDati({ datiDefault, dati, stakerClicked }) {
 
       {stakerClicked === false && <BoxDefault datiDefault={datiDefault && datiDefault} />}
 
-      {dati?.state === 'alert' && <BoxAlert dati={dati && dati} setConfirm={share.setConfirm} />}
+      {dati?.state === 'alert' && <BoxAlert dati={dati && dati}  />}
 
-      <AnimatePresence>
-        {share.confirm && <BoxConfirm confirm={share.confirmModal} setConfirm={share.setConfirmModal} />}
-      </AnimatePresence>
+      
+     <BoxConfirm  />
+      
 
     </div>
   )

@@ -17,6 +17,8 @@
       local(Arial);
   font-display: swap;
 }
+
+
 div{
   box-sizing: border-box;
 }
@@ -85,4 +87,5 @@ main{
   to{left: -10px;}
 
 }
+
 
