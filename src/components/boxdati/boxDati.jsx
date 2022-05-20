@@ -6,7 +6,7 @@ import BoxAlert from './boxAlert';
 import BoxConfirm from './modali/boxConfirm';
 import { ShareContext } from '../../context/context';
 import { useContext } from 'react'
-import { AnimatePresence } from 'framer-motion'
+
 
 function BoxDati({ datiDefault, dati, stakerClicked }) {
   const share = useContext(ShareContext)
