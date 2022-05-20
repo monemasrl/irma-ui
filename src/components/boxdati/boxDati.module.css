@@ -38,7 +38,7 @@
 
 .codiceStaker {
   font-size: 35px;
-  font-family: "Open Sans Semibold";
+  font-family: "Open Sans Bold";
   line-height: 1;
   text-transform: uppercase;
 }
@@ -136,7 +136,7 @@ text-transform: uppercase;
 }
 .bloccoDati .titoloInterno {
   text-transform: uppercase;
-  font-family: "Open Sans Semibold";
+  font-family: "Open Sans Bold";
   color: gray;
   line-height: 1;
 }
