@@ -2,9 +2,9 @@ import React from 'react'
 import style from './modali.module.css'
 import { ShareContext } from '../../../context/context'
 import { useContext } from 'react'
-import { Button, CloseIcon } from '../../ui/ui'
+import { CloseIcon } from '../../ui/ui'
 import { motion, AnimatePresence } from 'framer-motion'
-
+import { FormAlert } from '../../form/form'
 function BoxConfirm() {
     const share = useContext(ShareContext)
 
@@ -20,7 +20,7 @@ function BoxConfirm() {
                     exit={{ opacity: 0, top: 20, backgroundColor: '#ee2e32' }}
                     transition={{ duration: .5 }}
                 >
-                    <div>
+                    <div className={style.innerWrapper}>
                         <div className={style.wrapperCloseIcon} >
                             <CloseIcon onClick={() => share.setConfirm(false)} />
                         </div>
@@ -32,14 +32,17 @@ function BoxConfirm() {
                                 share.confirm
                         }
                         </div>
-                        {share.confirm === 'alert' && <div className={style.testoConferma}>
-                            Vuoi confermare lo stop?
-                            <Button type="alert">Conferma</Button>
-                        </div>}
-
-                        <img className={style.backConfirm} src="/images/back-confirm-alert.svg" alt="back confirm alert" />
+                        {share.confirm === 'alert' &&
+                            <>
+                                <div className={style.testoConferma}>
+                                    Confermi la segnalazione?
+                                </div>
+                                <FormAlert />
+                            </>
+                        }
 
                     </div>
+                    <img className={style.backConfirm} src="/images/back-confirm-alert.svg" alt="back confirm alert" />
                 </motion.div>
             }
         </AnimatePresence>

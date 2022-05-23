@@ -181,37 +181,9 @@ text-transform: uppercase;
 
 }
 
-.boxconfirm{
-margin-top: 2rem;
-text-align:center
-}
 
-.boxconfirmText{
-  font-family: 'Open Sans Bold';
-  color:white;
-  text-transform: uppercase;
 
-}
-.boxconfirmbtn button{
-  margin: 1rem 10px ;
-  display: inline-block;
-  border: none;
-  outline: none;
-  background-color: #ff5c5c;
-  padding: 5px;
-  width: 100px;
-  height: 50px;
-  font-family: 'Open Sans Bold';
-  color: white;
-  text-transform: uppercase;
-  font-size: 20px;
-  cursor: pointer;
-  transition: all ease-in-out .3s;
-}
-.boxconfirmbtn button:hover{
-  background-color: #CF2201;
-  color: #fff;
-}
+
 @keyframes alertbox {
   from{
     opacity: 0;

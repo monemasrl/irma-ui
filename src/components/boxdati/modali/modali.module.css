@@ -9,6 +9,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align:center
 }
 .boxConfirm.alert{
     /* proprietà inserita ma gestita da framer motion, per bug noto della libreria */
@@ -19,18 +20,22 @@
 .boxConfirm.alert .backConfirm{
     position: absolute;
     right: -50px;
-    width: 290px;
+    width: 240px;
     bottom: -90px;
+    z-index: 0;
 }
 
-
+.innerWrapper{
+    z-index: 1;
+}
 .statoModaleTitolo {
     font-family: "Open Sans Bold";
     text-transform: uppercase;
     letter-spacing: -1px;
-   text-align: center;
+    text-align: center;
     font-size: 30px;
     color: white;
+    margin: 1rem 0;
   }
 
   .testoConferma{
@@ -45,4 +50,7 @@
       right: 0;
 
   }
-
+  .boxconfirmbtn button{
+    width: 100px;
+    height: 50px;
+  }

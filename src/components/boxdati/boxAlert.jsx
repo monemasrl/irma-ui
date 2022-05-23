@@ -3,7 +3,7 @@ import style from './boxDati.module.css'
 import { RiTerminalFill } from "react-icons/ri";
 import { ShareContext } from '../../context/context';
 import { useContext } from 'react';
-import { Button } from '../ui/ui';
+
 
 function StatoSensore({ statoSensore }) {
     const share = useContext(ShareContext)
@@ -36,16 +36,10 @@ function BoxAlert({ dati }) {
                 <img src="/images/alert-back.svg" alt="back alert" />
             </div>
             <div className={style.buttonWrapper}>
-                <Button type="alert-big" onClick={() => share.setConfirm(dati?.state)}>Stop Allarme</Button>
+                <button className="alert" onClick={() => share.setConfirm(dati?.state)}>Gestisci Allerta</button>
             </div>
 
-            <div className={style.boxconfirm}>
-                <div className={style.boxconfirmText}>Confermi la segnalazione?</div>
-                <div className={style.boxconfirmbtn}>
-                    <Button type="alert">si</Button>
-                    <Button type="alert">no</Button>
-                </div>
-            </div>
+ 
         </header>
     )
 }

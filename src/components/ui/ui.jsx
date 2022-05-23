@@ -1,18 +1,13 @@
 import React from 'react'
-import style from './ui.module.css'
+import style from './ui.css'
 import { AiOutlineClose } from "react-icons/ai";
 
 
-function Button({type, onClick, children}) {
+
+function CloseIcon({ onClick }) {
   return (
-    <button className={`${style[type]}`} onClick={onClick}>{children}</button>
+    <button className="closeIcon" onClick={onClick}><AiOutlineClose /></button>
   )
 }
 
-function CloseIcon({ onClick}) {
-  return (
-    <button className={style.closeIcon} onClick={onClick}><AiOutlineClose/></button>
-  )
-}
-
-export {Button, CloseIcon}
+export { CloseIcon }
