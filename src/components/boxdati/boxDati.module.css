@@ -7,7 +7,7 @@
   );
   position: relative;
   margin-left: 20px;
-  padding: 20px;
+  padding: 20px 15px;
   width: 370px;
   overflow: hidden;
   transition: all ease-in-out 0.5s;
@@ -17,10 +17,26 @@
 .boxDati.modalOpen{
   transform: scale(1.1)
 }
+
+.boxDati.rec {
+  border-left:10px solid  #fabe74;
+}
+.boxDati.off {
+  border-left:10px solid  gray;
+}
+
+
+.boxDati.ok {
+  border-left:10px solid  green;
+}
+
 .boxDati.alert{
   background: #ff3130;
   transition: all ease-in-out 0.5s;
+  border-left:10px solid  #CE0303;
 }
+
+
 .boxDati ul{
   list-style: none;
   padding: 0;
@@ -54,7 +70,6 @@
   display: flex;
   margin-top: 20px;
   padding: 23px 15px;
-  border-bottom: 3px dotted #74b482;
   margin-bottom: 1rem;
   background: #f8f8f8;
 }
@@ -72,7 +87,7 @@
 }
 
 .stato img {
-  width: 20px;
+  width: 30px;
   margin-top: 3px;
 }
 .label {

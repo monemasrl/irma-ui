@@ -188,12 +188,13 @@
         transform: rotate(-52deg);
     }
 
-    50% {
-        transform: rotate(52deg);
+    20% {
+        transform: rotate(30deg);
     }
+    40%{transform: rotate(-32deg);}
 
     100% {
-        transform: rotate(-52deg);
+        transform: rotate(15deg);
     }
 }
 

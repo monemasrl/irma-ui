@@ -1,9 +1,17 @@
 import React from 'react'
 import style from './boxDati.module.css'
-
+import {motion} from 'framer-motion'
 function BoxDefault({ datiDefault }) {
+   
+          
     return (
-        <header>
+        <motion.header
+        key={datiDefault}
+        initial={{ opacity: 0, top: 20, position:'relative' }}
+        animate={{ opacity: 1, top: 0, position:'relative' }}
+        exit={{ opacity: 0, top:20 }}
+        transition={{ duration: .5 }}
+        >
             <ul>
                 <li>
                     <div className={style.title}>
@@ -24,7 +32,7 @@ function BoxDefault({ datiDefault }) {
                     </div>
                 </li>
             </ul>
-        </header>
+        </motion.header>
     )
 }
 
