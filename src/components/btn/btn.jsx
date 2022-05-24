@@ -8,7 +8,7 @@ import alertSymbol from '../../assets/images/alert-symbol.svg'
 
 
 function Led({ state }) {
-  
+
   if (state === 'ok') {
     return (
       <div className={`${style.led} ${style.ok} `}>
@@ -53,7 +53,7 @@ function Btn({ state, code, setStakerClicked, index, stakerClicked }) {
     <div onClick={() => settaStatiOnClick()}
       className={`
           ${style.btnbox} 
-          ${(state === 'alert') && style.alert} 
+          ${style[state]} 
           ${pulsanteCliccato() ? style.btnOn : ''}
           `}>
       <div className={style.innerBtnBox}>

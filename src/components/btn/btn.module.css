@@ -108,14 +108,18 @@
 
 .alert .codeName {
     color: white;
-    border-bottom: 4px solid transparent;
+
     border-bottom: 4px solid rgb(255, 209, 209);
 }
 
 .btnOn.alert .codeName {
     color: white;
-    border-bottom: 4px solid transparent;
-    border-bottom: 4px solid rgb(102, 7, 7);
+    border-bottom: 4px solid #e60000;
+}
+
+.btnOn.off .codeName {
+    
+    border-bottom: 4px solid #535353;
 }
 
 .codeName {

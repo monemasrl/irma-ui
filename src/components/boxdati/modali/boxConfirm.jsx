@@ -1,10 +1,12 @@
 import React from 'react'
+import '../../ui/ui.css'
 import style from './modali.module.css'
 import { ShareContext } from '../../../context/context'
 import { useContext } from 'react'
 import { CloseIcon } from '../../ui/ui'
 import { motion, AnimatePresence } from 'framer-motion'
 import { FormAlert } from '../../form/form'
+
 function BoxConfirm() {
     const share = useContext(ShareContext)
 
