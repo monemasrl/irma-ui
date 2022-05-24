@@ -13,7 +13,7 @@ function Dashboard({ isAlert, data, stakerClicked, setStakerClicked }) {
 
 
     useEffect(() => {
-        const newdati = [...data?.data]
+        const newdati = data && [...data?.data]
         if (data && listview) {
             console.log('test', newdati);
             const datiOrdinatiAlert = newdati.sort((a, b) => {
@@ -21,7 +21,7 @@ function Dashboard({ isAlert, data, stakerClicked, setStakerClicked }) {
                 return 0;
             })
             setDatiOrdinatiLista(datiOrdinatiAlert)
-        } else {
+        } else if (data) {
             setDatiOrdinatiLista(newdati)
         }
 
