@@ -7,7 +7,7 @@ function StatoSensore({ statoSensore }) {
 
     const uiStatiSensore = {
         ok: 'sensore funzionante',
-        rec: 'in stato di rilevamento',
+        rec: 'in stato di rilevamento...',
         off: 'sensore non funzionante',
         alert: 'rilevata anomalia'
     }
@@ -58,9 +58,9 @@ function BoxStaker({ dati }) {
                 <div className={style.titoletto}>Reach Staker</div>
                 <div className={style.codiceStaker}>{dati?.code}</div>
             </div>
-            <div className={style.subData}>
+            
                 <StatoSensore statoSensore={dati?.state} />
-            </div>
+            
             <div className={style.datiInterni}>
                 {dati?.datiInterni?.map((item, index) =>
                     <React.Fragment key={item.titolo}>

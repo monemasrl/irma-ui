@@ -10,7 +10,7 @@
   padding: 20px 15px;
   width: 370px;
   overflow: hidden;
-  transition: all ease-in-out 0.5s;
+  transition: background ease-in-out 0.5s;
   min-height: 300px;
 }
 
@@ -18,17 +18,17 @@
   transform: scale(1.1);
 }
 .boxDati {
-  border-left: 4px solid #ffffff;
+  border-left: 5px solid #e0e0e0;
 }
 .boxDati.rec {
-  border-left: 4px solid #fabe74;
+  border-left: 5px solid #fabe74;
 }
 .boxDati.off {
-  border-left: 4px solid gray;
+  border-left: 5px solid gray;
 }
 
 .boxDati.ok {
-  border-left: 4px solid green;
+  border-left: 5px solid green;
 }
 
 .boxDati.alert {
@@ -36,6 +36,7 @@
   transition: all ease-in-out 0.5s;
   border-left: 4px solid #ce0303;
 }
+
 
 .boxDati ul {
   list-style: none;
@@ -69,9 +70,10 @@
 .stato {
   display: flex;
   margin-top: 20px;
-  padding: 23px 15px;
   margin-bottom: 1rem;
-  background: #f8f8f8;
+  padding: 23px 15px;
+  background: #ededed;
+  border-radius: 5px;
 }
 .alert .stato {
   background: transparent;
@@ -80,7 +82,9 @@
   margin-top: 0px;
   padding-bottom: 0;
 }
-
+.rec .stato{
+  background-color:#ededed;
+}
 .alert .stato .label {
   color: white;
   font-size: 70px;
@@ -117,7 +121,7 @@
   color: #ff3130;
 }
 .rec .label {
-  color: #fabe74;
+  color: #e8a85a;
 }
 
 .datoLabel {
@@ -140,10 +144,10 @@
 .datiInterni {
 }
 .bloccoDati {
-  padding: 10px 10px;
+  padding: 15px 10px;
   margin: 10px 0;
   background-color: #ebebeb;
-  border-left: 2px solid green;
+ border-radius: 5px;
   display: flex;
   justify-content: space-between;
   position: relative;
@@ -190,6 +194,10 @@
 .buttonStop:hover {
   background-color: #cf2201;
   color: #fff;
+}
+.iconastato{
+
+
 }
 
 @keyframes alertbox {
