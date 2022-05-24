@@ -1,5 +1,4 @@
 import React from 'react'
-import style from './ui.css'
 import { AiOutlineClose } from "react-icons/ai";
 
 

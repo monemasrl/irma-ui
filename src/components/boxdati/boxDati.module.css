@@ -14,34 +14,34 @@
   min-height: 300px;
 }
 
-.boxDati.modalOpen{
-  transform: scale(1.1)
+.boxDati.modalOpen {
+  transform: scale(1.1);
 }
-
+.boxDati {
+  border-left: 4px solid #ffffff;
+}
 .boxDati.rec {
-  border-left:10px solid  #fabe74;
+  border-left: 4px solid #fabe74;
 }
 .boxDati.off {
-  border-left:10px solid  gray;
+  border-left: 4px solid gray;
 }
-
 
 .boxDati.ok {
-  border-left:10px solid  green;
+  border-left: 4px solid green;
 }
 
-.boxDati.alert{
+.boxDati.alert {
   background: #ff3130;
   transition: all ease-in-out 0.5s;
-  border-left:10px solid  #CE0303;
+  border-left: 4px solid #ce0303;
 }
 
-
-.boxDati ul{
+.boxDati ul {
   list-style: none;
   padding: 0;
 }
-.boxDati ul li{
+.boxDati ul li {
   margin: 1rem 0;
 }
 .boxDati .titoletto {
@@ -58,11 +58,11 @@
   line-height: 1;
   text-transform: uppercase;
 }
-.boxDati.alert .titoletto{
+.boxDati.alert .titoletto {
   color: white;
 }
 
-.boxDati.alert .codiceStaker{
+.boxDati.alert .codiceStaker {
   color: white;
 }
 
@@ -73,7 +73,7 @@
   margin-bottom: 1rem;
   background: #f8f8f8;
 }
-.alert .stato{
+.alert .stato {
   background: transparent;
   color: white;
   border-bottom: 3px dotted transparent;
@@ -81,7 +81,7 @@
   padding-bottom: 0;
 }
 
-.alert .stato .label{
+.alert .stato .label {
   color: white;
   font-size: 70px;
 }
@@ -100,11 +100,11 @@
   margin-left: 5px;
   position: relative;
 }
-.datoLabel svg{
-    font-size: 1.1rem;
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 3px;
+.datoLabel svg {
+  font-size: 1.1rem;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 3px;
 }
 
 .ok .label {
@@ -117,9 +117,8 @@
   color: #ff3130;
 }
 .rec .label {
-  color: #4d9a4d;
+  color: #fabe74;
 }
-
 
 .datoLabel {
   font-family: "Open Sans Bold";
@@ -128,11 +127,11 @@
   margin-left: 7px;
   font-size: 15px;
 }
-.alert .datoLabel{
-font-size: 18px;
-text-transform: uppercase;
+.alert .datoLabel {
+  font-size: 18px;
+  text-transform: uppercase;
 }
-.alert .buttonWrapper{
+.alert .buttonWrapper {
   text-align: center;
 }
 .datiStato {
@@ -165,8 +164,7 @@ text-transform: uppercase;
   margin-left: -7px;
 }
 
-
-.wrapperAlert img{
+.wrapperAlert img {
   margin-left: -21px;
   width: 428px;
   height: 113px;
@@ -174,37 +172,32 @@ text-transform: uppercase;
   animation: alertbox 1s forwards;
 }
 
-.buttonStop{
-  margin: 1rem auto ;
+.buttonStop {
+  margin: 1rem auto;
   display: block;
   outline: none;
   background-color: #ff5c5c;
   width: 250px;
-  font-family: 'Open Sans Bold';
+  font-family: "Open Sans Bold";
   color: white;
   text-transform: uppercase;
   font-size: 20px;
   cursor: pointer;
-  transition: all ease-in-out .3s;
+  transition: all ease-in-out 0.3s;
   border: none;
 }
 
-.buttonStop:hover{
-  background-color: #CF2201;
+.buttonStop:hover {
+  background-color: #cf2201;
   color: #fff;
- 
-
 }
 
-
-
-
 @keyframes alertbox {
-  from{
+  from {
     opacity: 0;
     left: -100%;
   }
-  to{
+  to {
     opacity: 1;
     left: 0;
   }
