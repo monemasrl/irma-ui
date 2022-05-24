@@ -6,26 +6,8 @@ import { IoApps, IoListOutline } from "react-icons/io5";
 
 
 
-function Dashboard({ isAlert, data, stakerClicked, setStakerClicked }) {
+function Dashboard({ isAlert, datiOrdinatiLista, stakerClicked, setStakerClicked, listview, setListView }) {
 
-    const [listview, setListView] = useState(false)
-    const [datiOrdinatiLista, setDatiOrdinatiLista] = useState('')
-
-
-    useEffect(() => {
-        const newdati = data && [...data?.data]
-        if (data && listview) {
-            console.log('test', newdati);
-            const datiOrdinatiAlert = newdati.sort((a, b) => {
-                if (a.state === 'alert') { return -1; }
-                return 0;
-            })
-            setDatiOrdinatiLista(datiOrdinatiAlert)
-        } else if (data) {
-            setDatiOrdinatiLista(newdati)
-        }
-
-    }, [data, listview])
 
 
 
@@ -36,7 +18,7 @@ function Dashboard({ isAlert, data, stakerClicked, setStakerClicked }) {
                     <span onClick={() => setListView(false)}><IoApps /></span> :
                     <span onClick={() => setListView(true)}><IoListOutline /></span>}
             </div>
-            {datiOrdinatiLista && datiOrdinatiLista.map((item, index,) => {
+            {datiOrdinatiLista && datiOrdinatiLista.map((item, index) => {
                 return (<Btn key={item.code}
                     state={item.state}
                     code={item.code}

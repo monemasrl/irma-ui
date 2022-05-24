@@ -15,6 +15,11 @@ function App(props) {
   const [data, setData] = useState(false);
   const [stakerClicked, setStakerClicked] = useState(false);
 
+  const [listview, setListView] = useState(false)
+  const [datiOrdinatiLista, setDatiOrdinatiLista] = useState('')
+
+
+
 
   const getData = () => {
     fetch('./data/data.json'
@@ -36,6 +41,20 @@ function App(props) {
       });
   }
 
+  useEffect(() => {
+    const newdati = data && [...data?.data]
+    if (data && listview) {
+        console.log('test', newdati);
+        const datiOrdinatiAlert = newdati.sort((a, b) => {
+            if (a.state === 'alert') { return -1; }
+            return 0;
+        })
+        setDatiOrdinatiLista(datiOrdinatiAlert)
+    } else if (data && !listview) {
+        setDatiOrdinatiLista(newdati)
+    }
+
+}, [data, listview])
 
   useEffect(() => {
     getData()
@@ -77,23 +96,23 @@ function App(props) {
               <div className='wrapper-content'>
                 <div className={`wrapper-sx ${share.confirm ? 'modalOpen':''}`}>
                   <Suspense fallback={<Loaderdash />}>              
-                  <Dashboard isAlert={isAlert()} data={data} stakerClicked={stakerClicked} setStakerClicked={setStakerClicked} />
+                  <Dashboard listview = {listview} setListView = {setListView} isAlert={isAlert()} datiOrdinatiLista={datiOrdinatiLista} stakerClicked={stakerClicked} setStakerClicked={setStakerClicked} />
                   </Suspense>
                   <Footer />
                 </div>
                 <Suspense fallback={<Loaderbox />}>
-                  <BoxDati stakerClicked={stakerClicked} datiDefault={datiDefault()} dati={data.data ? data.data[stakerClicked] : {}} />
+                  <BoxDati stakerClicked={stakerClicked} datiDefault={datiDefault()} dati={datiOrdinatiLista ? datiOrdinatiLista[stakerClicked] : {}} />
                 </Suspense>
               </div>
             </main>
             )}
-
         </ShareContext.Consumer>
         
         {isAlert() &&
           <div className="back-alert">
             <img src="/images/backalert.svg" alt="backalert" />
           </div>}
+          
       </div>
     </ShareContextProvider>
   );
