@@ -22,7 +22,6 @@ function StatoSensore({ statoSensore }) {
 }
 function BoxAlert({ dati }) {
     const share = useContext(ShareContext)
-    console.log(share.confirm);
     return (
         <header>
             <div className={style.title}>

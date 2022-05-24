@@ -10,7 +10,7 @@ import { useContext } from 'react'
 
 function BoxDati({ datiDefault, dati, stakerClicked }) {
   const share = useContext(ShareContext)
-  console.log(share);
+
   return (
     <div className={`${style.boxDati} ${style[dati?.state]} ${share.confirm ? style.modalOpen : ''}`}>
 
