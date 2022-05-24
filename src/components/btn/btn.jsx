@@ -36,7 +36,7 @@ function Led({ state }) {
   }
 }
 
-function Btn({ state, code, setStakerClicked, index, stakerClicked }) {
+function Btn({ state, code, setStakerClicked, index, stakerClicked, listview }) {
 
   function pulsanteCliccato() {
     if (stakerClicked === index) {
@@ -55,6 +55,7 @@ function Btn({ state, code, setStakerClicked, index, stakerClicked }) {
           ${style.btnbox} 
           ${style[state]} 
           ${pulsanteCliccato() ? style.btnOn : ''}
+          ${listview ? style['lista'] : ''}
           `}>
       <div className={style.innerBtnBox}>
         <div className={style.ledOut}>

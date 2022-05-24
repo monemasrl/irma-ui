@@ -9,10 +9,23 @@
     padding: 1rem;
     background-color: #efefef;
     background:linear-gradient(180deg,rgba(239,239,239) 10%, rgb(247, 247, 247) 100%);
-    
     transition: all ease-in-out .3s;
-
-   
+}
+.dashboard.lista{
+flex-direction: column;
+}
+.switcherList {
+    position: absolute;
+    top: -39px;
+    left: 30px;
+    background: #f1f0f0;
+    z-index: -1;
+    padding: 10px 10px 30px 10px;
+    font-size: 19px;
+    
+}
+.switcherList span{
+    cursor: pointer;
 }
 /* .dashboard.alert::before{
 
