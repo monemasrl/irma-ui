@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import style from './boxDati.module.css'
 import { RiTerminalFill } from "react-icons/ri";
 import { motion } from "framer-motion"
