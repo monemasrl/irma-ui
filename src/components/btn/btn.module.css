@@ -10,63 +10,71 @@
     outline: 2px solid transparent;
     text-align: center;
 }
-.lista.btnbox{
+
+.lista.btnbox {
     width: 100%;
     height: auto;
     display: flex;
     align-items: center;
     border-radius: 3px;
-    padding: 10px;
+    padding: 5px;
     background-color: transparent;
     box-shadow: 0px 0px 0px transparent;
     margin: 0;
-
-
 }
-.lista.btnbox.btnOn{
+
+.lista.btnbox.btnOn {
     background-color: transparent;
     box-shadow: 0px 0px 0px transparent;
     background-color: lightgray;
     outline: 2px solid transparent;
 }
 
-.lista.btnbox .ledOut{
+.lista.btnbox .ledOut {
     display: inline-block;
     margin-right: 1rem;
 }
-.lista.btnbox .ledOut::after{display: none;}
-.lista.btnbox .innerBtnBox{
+
+.lista.btnbox .ledOut::after {
+    display: none;
+}
+
+.lista.btnbox .innerBtnBox {
     display: flex;
 }
+
 .lista.btnbox.alert {
     background-color: #FF3131;
     outline: 3px solid transparent;
     box-shadow: 0px 0px 0px #dcdcdc, 0px 0px 0px #dcdcdc, inset 0px 0px 0px #b1aeae, inset 0px 0px 0px #e4e4e4;
-    animation:none;
+    animation: none;
     margin: 10px 0;
+    padding: 10px;
 }
 
-
-
-.lista .codeName{
+.lista .codeName {
     border-bottom: 0;
     font-size: 1rem;
 }
-.lista.btnbox.rec {
 
+.lista.btnbox.rec {
     box-shadow: 0px 0px 0px #dcdcdc, 0px 0px 0px #dcdcdc, inset 0px 0px 0px #b1aeae, inset 0px 0px 0px #e4e4e4;
 }
 
-
-
-.lista.btnbox.btnOn .codeName{
-border-bottom: 0;
+.lista.btnbox.alert .codeName {
+    color: white;
+    border-bottom: 4px solid transparent;
 }
+
+
+.lista.btnbox.btnOn .codeName {
+    border-bottom: 0;
+}
+
 .btnbox.btnOn {
     box-shadow: 0px 0px 0px #dcdcdc, 0px 0px 0px #dcdcdc, inset 1px -1px 4px #b1aeae, inset -1px 1px 4px #e4e4e4;
     outline: 2px solid white;
 }
-
 
 .btnbox.alert {
     background-color: #FF3131;
@@ -160,7 +168,6 @@ border-bottom: 0;
 
 .alert .codeName {
     color: white;
-
     border-bottom: 4px solid rgb(255, 209, 209);
 }
 
@@ -170,7 +177,6 @@ border-bottom: 0;
 }
 
 .btnOn.off .codeName {
-    
     border-bottom: 4px solid #535353;
 }
 
@@ -247,7 +253,10 @@ border-bottom: 0;
     20% {
         transform: rotate(30deg);
     }
-    40%{transform: rotate(-32deg);}
+
+    40% {
+        transform: rotate(-32deg);
+    }
 
     100% {
         transform: rotate(15deg);
