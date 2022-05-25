@@ -36,7 +36,10 @@ function Led({ state }) {
   }
 }
 
-function Btn({ state, code, setStakerClicked, index, stakerClicked, listview }) {
+
+
+
+function BtnStaker({ state, code, setStakerClicked, index, stakerClicked, listview }) {
 
   function pulsanteCliccato() {
     if (stakerClicked === index) {
@@ -67,4 +70,4 @@ function Btn({ state, code, setStakerClicked, index, stakerClicked, listview }) 
   )
 }
 
-export default Btn
+export default BtnStaker

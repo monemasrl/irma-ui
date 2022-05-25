@@ -1,212 +1,267 @@
 .boxDati {
-  border-radius: 20px;
-  background: linear-gradient(
-    180deg,
-    rgba(240, 240, 240) 10%,
-    rgb(247, 247, 247) 100%
-  );
-  position: relative;
-  margin-left: 20px;
-  padding: 20px 15px;
-  width: 370px;
-  overflow: hidden;
-  transition: background ease-in-out 0.5s;
-  min-height: 300px;
+    border-radius: 20px;
+    background: linear-gradient(180deg, rgba(240, 240, 240) 10%, rgb(247, 247, 247) 100%);
+    position: relative;
+    margin-left: 20px;
+    padding: 20px 15px;
+    width: 370px;
+    overflow: hidden;
+    transition: background ease-in-out 0.5s;
+    min-height: 300px;
 }
 
 .boxDati.modalOpen {
-  transform: scale(1.1);
+    transform: scale(1.1);
 }
+
 .boxDati {
-  border-left: 5px solid #e0e0e0;
+    border-left: 5px solid #e0e0e0;
 }
+
 .boxDati.rec {
-  border-left: 5px solid #fabe74;
+    border-left: 5px solid #fabe74;
 }
+
 .boxDati.off {
-  border-left: 5px solid gray;
+    border-left: 5px solid gray;
 }
 
 .boxDati.ok {
-  border-left: 5px solid green;
+    border-left: 5px solid green;
 }
 
 .boxDati.alert {
-  background: #ff3130;
-  transition: all ease-in-out 0.5s;
-  border-left: 4px solid #ce0303;
+    background: #ff3130;
+    transition: all ease-in-out 0.5s;
+    border-left: 4px solid #ce0303;
 }
-
 
 .boxDati ul {
-  list-style: none;
-  padding: 0;
+    list-style: none;
+    padding: 0;
 }
+
 .boxDati ul li {
-  margin: 1rem 0;
+    margin: 1rem 0;
 }
+
 .boxDati .titoletto {
-  font-family: "Open Sans Bold";
-  text-transform: uppercase;
-  letter-spacing: -1px;
-  line-height: 1;
-  color: gray;
+    font-family: "Open Sans Bold";
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    line-height: 1;
+    color: gray;
 }
 
 .codiceStaker {
-  font-size: 35px;
-  font-family: "Open Sans Bold";
-  line-height: 1;
-  text-transform: uppercase;
+    font-size: 35px;
+    font-family: "Open Sans Bold";
+    line-height: 1;
+    text-transform: uppercase;
 }
+
 .boxDati.alert .titoletto {
-  color: white;
+    color: white;
 }
 
 .boxDati.alert .codiceStaker {
-  color: white;
+    color: white;
 }
 
 .stato {
-  display: flex;
-  margin-top: 20px;
-  margin-bottom: 1rem;
-  padding: 23px 15px;
-  background: #ededed;
-  border-radius: 5px;
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 1rem;
+    padding: 23px 15px;
+    background: #ededed;
+    border-radius: 5px;
 }
+
 .alert .stato {
-  background: transparent;
-  color: white;
-  border-bottom: 3px dotted transparent;
-  margin-top: 0px;
-  padding-bottom: 0;
+    background: transparent;
+    color: white;
+    border-bottom: 3px dotted transparent;
+    margin-top: 0px;
+    padding-bottom: 0;
 }
-.rec .stato{
-  background-color:#ededed;
+
+.rec .stato {
+    background-color: #ededed;
 }
+
 .alert .stato .label {
-  color: white;
-  font-size: 70px;
+    color: white;
+    font-size: 70px;
 }
 
 .stato img {
-  width: 30px;
-  margin-top: 3px;
+    width: 30px;
+    margin-top: 3px;
 }
+
 .label {
-  font-family: "Open Sans Bold";
-  text-transform: uppercase;
-  letter-spacing: -1px;
-  font-size: 50px;
-  line-height: 1;
-  letter-spacing: -3px;
-  margin-left: 5px;
-  position: relative;
+    font-family: "Open Sans Bold";
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-size: 50px;
+    line-height: 1;
+    letter-spacing: -3px;
+    margin-left: 5px;
+    position: relative;
 }
+
 .datoLabel svg {
-  font-size: 1.1rem;
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 3px;
+    font-size: 1.1rem;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 3px;
 }
 
 .ok .label {
-  color: #4d9a4d;
+    color: #4d9a4d;
 }
+
 .off .label {
-  color: gray;
+    color: gray;
 }
+
 .alert .label {
-  color: #ff3130;
+    color: #ff3130;
 }
+
 .rec .label {
-  color: #e8a85a;
+    color: #e8a85a;
 }
 
 .datoLabel {
-  font-family: "Open Sans Bold";
-  text-transform: uppercase;
-  letter-spacing: -1px;
-  margin-left: 7px;
-  font-size: 15px;
+    font-family: "Open Sans Bold";
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    margin-left: 7px;
+    font-size: 15px;
 }
+
 .alert .datoLabel {
-  font-size: 18px;
-  text-transform: uppercase;
+    font-size: 18px;
+    text-transform: uppercase;
 }
+
 .alert .buttonWrapper {
-  text-align: center;
+    text-align: center;
 }
+
 .datiStato {
-  margin-left: 0px;
+    margin-left: 0px;
 }
-.datiInterni {
-}
+
+.datiInterni {}
+
 .bloccoDati {
-  padding: 15px 10px;
-  margin: 10px 0;
-  background-color: #ebebeb;
- border-radius: 5px;
-  display: flex;
-  justify-content: space-between;
-  position: relative;
+    padding: 15px 10px;
+    margin: 10px 0;
+    background-color: #ebebeb;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
 }
+
 .bloccoDati .titoloInterno {
-  text-transform: uppercase;
-  font-family: "Open Sans Bold";
-  color: gray;
-  line-height: 1;
+    text-transform: uppercase;
+    font-family: "Open Sans Bold";
+    color: gray;
+    line-height: 1;
 }
+
 .bloccoDati .datoInterno {
-  font-size: 36px;
-  line-height: 1;
-  text-align: right;
+    font-size: 36px;
+    line-height: 1;
+    text-align: right;
 }
+
 .bloccoDati .datoInterno span {
-  font-size: 30px;
-  margin-left: -7px;
+    font-size: 30px;
+    margin-left: -7px;
 }
 
 .wrapperAlert img {
-  margin-left: -21px;
-  width: 428px;
-  height: 113px;
-  position: relative;
-  animation: alertbox 1s forwards;
+    margin-left: -21px;
+    width: 428px;
+    height: 113px;
+    position: relative;
+    animation: alertbox 1s forwards;
 }
 
 .buttonStop {
-  margin: 1rem auto;
-  display: block;
-  outline: none;
-  background-color: #ff5c5c;
-  width: 250px;
-  font-family: "Open Sans Bold";
-  color: white;
-  text-transform: uppercase;
-  font-size: 20px;
-  cursor: pointer;
-  transition: all ease-in-out 0.3s;
-  border: none;
+    margin: 1rem auto;
+    display: block;
+    outline: none;
+    background-color: #ff5c5c;
+    width: 250px;
+    font-family: "Open Sans Bold";
+    color: white;
+    text-transform: uppercase;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all ease-in-out 0.3s;
+    border: none;
 }
 
 .buttonStop:hover {
-  background-color: #cf2201;
-  color: #fff;
+    background-color: #cf2201;
+    color: #fff;
 }
-.iconastato{
 
-
+.wrapperbutton {
+    text-align: center;
 }
+
+.wrapperbutton button {
+    background-color: #498555;
+    color: white;
+    font-size: 16px;
+}
+
+.iconastatoRec {
+    position: relative;
+}
+
+.lancia {
+    width: 3px;
+    height: 15px;
+    background-color: white;
+    position: absolute;
+    border-radius: 2px;
+    top: 3px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    box-shadow: 0px 0px 3px #8b8b8b;
+    transform-origin: 2px 14px;
+    transform: rotate(-52deg);
+    animation: lanciaInizio 2s alternate infinite ;
+}
+
+@keyframes lanciaInizio {
+    0% {
+        transform: rotate(-52deg);
+    }
+
+    100% {
+        transform: rotate(50deg);
+    }
+}
+
 
 @keyframes alertbox {
-  from {
-    opacity: 0;
-    left: -100%;
-  }
-  to {
-    opacity: 1;
-    left: 0;
-  }
+    from {
+        opacity: 0;
+        left: -100%;
+    }
+
+    to {
+        opacity: 1;
+        left: 0;
+    }
 }

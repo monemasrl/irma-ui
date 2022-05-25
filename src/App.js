@@ -69,7 +69,6 @@ function App(props) {
   }
 
   function datiDefault() {
-
     if (data) {
       let ore = data.data.map((item) => item.datiInterni[0].dato)
       ore = ore.reduce((prev, item) => prev + item)
@@ -81,7 +80,6 @@ function App(props) {
         oreOperativeTotali: ore,
         allerteAttuali: allerte
       }
-
       return dati
     }
   }
@@ -96,7 +94,7 @@ function App(props) {
               <div className='wrapper-content'>
                 <div className={`wrapper-sx ${share.confirm ? 'modalOpen':''}`}>
                   <Suspense fallback={<Loaderdash />}>              
-                  <Dashboard listview = {listview} setListView = {setListView} isAlert={isAlert()} datiOrdinatiLista={datiOrdinatiLista} stakerClicked={stakerClicked} setStakerClicked={setStakerClicked} />
+                  <Dashboard  listview = {listview} setListView = {setListView} isAlert={isAlert()} datiOrdinatiLista={datiOrdinatiLista} stakerClicked={stakerClicked} setStakerClicked={setStakerClicked} />
                   </Suspense>
                   <Footer />
                 </div>

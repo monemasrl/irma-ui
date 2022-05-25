@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import style from './boxDati.module.css'
 import { RiTerminalFill } from "react-icons/ri";
 import { motion } from "framer-motion"
@@ -14,7 +14,13 @@ function StatoSensore({ statoSensore }) {
     return (
         <div className={`${style.stato}`}>
             <div className={style.iconastato}>
-                <img src={`images/${statoSensore}-led.svg`} alt="icona ok" />
+                {statoSensore === 'rec' ?
+                    <div className={style.iconastatoRec}>
+                        <div className={style.lancia}></div>
+                        <img src={`images/${statoSensore}-led.svg`} alt="icona ok" />
+                    </div> :
+                    <img src={`images/${statoSensore}-led.svg`} alt="icona ok" />
+                }
             </div>
             <div className={`${style.datiStato} ${style[statoSensore]}`}>
                 <div className={style.label}>{statoSensore}</div>
@@ -43,24 +49,34 @@ function BloccoNumerico({ datiNumerici, code, index }) {
     )
 }
 
+function BtnStartRec() {
+
+    return <div className={style.wrapperbutton}>
+        <button>Inizia rilevamento</button>
+    </div>
+}
+
+/* COMPONENTE PRINCIPALE */
 
 function BoxStaker({ dati }) {
     return (
-     
+
         <motion.header
-             key={dati?.code}
-             initial={{ opacity: 0, top: 20, position:'relative' }}
-             animate={{ opacity: 1, top: 0, position:'relative' }}
-             exit={{ opacity: 0, top:20 }}
-             transition={{ duration: .5 }}
+            key={dati?.code}
+            initial={{ opacity: 0, top: 20, position: 'relative' }}
+            animate={{ opacity: 1, top: 0, position: 'relative' }}
+            exit={{ opacity: 0, top: 20 }}
+            transition={{ duration: .5 }}
         >
             <div className={style.title}>
                 <div className={style.titoletto}>Reach Staker</div>
                 <div className={style.codiceStaker}>{dati?.code}</div>
             </div>
-            
-                <StatoSensore statoSensore={dati?.state} />
-            
+
+            <StatoSensore statoSensore={dati?.state} />
+            {dati?.state === 'ok' &&
+                <BtnStartRec />
+            }
             <div className={style.datiInterni}>
                 {dati?.datiInterni?.map((item, index) =>
                     <React.Fragment key={item.titolo}>
@@ -69,7 +85,7 @@ function BoxStaker({ dati }) {
                 )}
             </div>
         </motion.header>
-       
+
     )
 }
 
