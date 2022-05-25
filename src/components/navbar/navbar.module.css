@@ -1,0 +1,92 @@
+.burger {
+    font-size: 1.5rem;
+    margin: 1rem;
+    cursor: pointer;
+}
+
+.burger .svg {
+    position: relative;
+    background-color: #cbcbcb;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 43px;
+}
+
+.drawer {
+    background-color: #c7c7c7;
+    position: absolute;
+    top: 0%;
+    right: 0;
+    height: 100vh;
+    position: fixed;
+    width: 400px;
+    z-index: 100;
+    padding: 0px 0px 25px 25px;
+    box-shadow: 1px 0px 7px #707070;
+}
+
+.drawer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.wrappericon {
+    text-align: right;
+    padding-right: 10px;
+}
+
+.drawer .datiutente {
+    padding: 0;
+    margin: 0rem 1rem 1rem 1rem;
+}
+
+.datiutente li {
+    font-size: 15px;
+    text-transform: capitalize;
+    margin: 5px 0;
+}
+
+.datiutente li span {
+    font-weight: bold;
+}
+
+.wrapperDatiUser {
+    display: flex;
+    margin-top: 2rem;
+    background: #c0c0c0;
+    padding: 18px 18px 0px 18px;
+}
+
+.wrapperDatiUser .avatar {
+    max-width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.wrapperDatiUser .avatar img {
+    display: block;
+    width: 100%;
+}
+
+.wrapperLink {
+    margin: 2rem 0;
+    padding-left: 1rem;
+}
+
+.datiLink li {
+    text-transform: capitalize;
+    margin: 5px 0;
+    font-size: 20px;
+}
+
+
+li.logout{
+    margin-top: 10px;
+    background-color: rgb(179, 179, 179);
+    display: inline-block;
+    padding: 10px;
+}

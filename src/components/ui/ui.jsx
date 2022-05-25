@@ -3,9 +3,9 @@ import { AiOutlineClose } from "react-icons/ai";
 
 
 
-function CloseIcon({ onClick }) {
+function CloseIcon({ onClick, size }) {
   return (
-    <button className="closeIcon" onClick={onClick}><AiOutlineClose /></button>
+    <button className="closeIcon" style={{height:size, width:size}} onClick={onClick}><AiOutlineClose /></button>
   )
 }
 
