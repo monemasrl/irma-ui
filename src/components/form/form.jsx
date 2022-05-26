@@ -1,5 +1,4 @@
 import React from 'react'
-import './form.css'
 import { ShareContext } from '../../context/context'
 import { useContext } from 'react'
 import { useForm } from "react-hook-form";

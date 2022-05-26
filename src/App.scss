@@ -1,0 +1,131 @@
+@import 'assets/scss/variabili';
+
+@include fontFace;
+
+div {
+    box-sizing: border-box;
+}
+
+body {
+    @include appBackground()
+}
+
+#root {
+    height: 100vh;
+}
+
+.App {}
+
+.wrapper-sx {
+    position: relative;
+    width: 557px;
+    opacity: 1;
+    transition: all ease-in-out 0.5s;
+}
+
+.wrapper-sx.modalOpen {
+    opacity: 0.6;
+    pointer-events: none;
+    transform: scale(0.95);
+}
+
+.loader {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader.dash {}
+
+.App .wrapper-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    font-family: 'Open Sans regular';
+    color: $gray;
+    width: 100%;
+}
+
+main {
+    max-width: 940px;
+    margin: 9rem auto 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+    position: relative;
+}
+
+.back-alert {
+    position: absolute;
+    top: 35%;
+    z-index: -2;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    animation: backalert 1s forwards;
+}
+
+.back-alert img {
+    width: 480px;
+}
+
+.back-default {
+    position: absolute;
+    top: 35%;
+    z-index: -2;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    animation: backdefault 1s forwards;
+}
+
+.back-default img {
+    width: 480px;
+}
+
+@keyframes backdefault {
+    from {
+        opacity: 0;
+        left: -100px;
+    }
+
+    to {
+        opacity: 0.5;
+        left: 0px;
+    }
+}
+
+@keyframes backalert {
+    from {
+        opacity: 0;
+        left: -100px;
+    }
+
+    to {
+        opacity: 1;
+        left: 0px;
+    }
+}
+
+@media screen and (max-width: 1640px) {
+    .back-default img {
+        width: 280px;
+    }
+
+    .back-alert img {
+        width: 280px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .back-default img {
+        display: none;
+    }
+
+    .back-alert img {
+        display: none;
+    }
+}

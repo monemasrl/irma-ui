@@ -1,0 +1,48 @@
+/* COLORI */
+
+$lightGray: gray;
+$gray: #4f4f4f;
+$green: #4d9a4d;
+$darkGreen: #498555;
+$red: #ff3130;
+$lightRed: #ff5c5c;
+$darkred: #ce0303;
+$yellow: #fabe74;
+$alertText: white;
+$navbarText: #cbcbcb;
+
+
+
+@mixin appBackground {
+    background: rgb(145, 145, 145);
+    background: radial-gradient(circle, rgb(172, 172, 172) 12%, rgb(189, 189, 189) 31%, rgb(221 221 221) 100%);
+}
+@mixin dashboardBackground {
+    box-shadow: 0px 0px 4px #dcdcdc, 0px 0px 0px #dcdcdc,inset 0px 0px 0px #d1d1d1, inset 0px 0px 0px #e4e4e4;
+}
+@mixin buttonOnShadow {
+    box-shadow: 0px 0px 0px #dcdcdc, 0px 0px 0px #dcdcdc, inset 1px -1px 4px #b1aeae, inset -1px 1px 4px #e4e4e4;
+}
+
+/* FONTS */
+
+
+@mixin fontFace {
+    @font-face {
+        font-family: 'Open Sans Regular';
+        src: url(../fonts/OpenSans/OpenSans-Regular.ttf) format("truetype");
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'Open Sans Bold';
+        src: url(../fonts/OpenSans/OpenSans-Bold.ttf) format("truetype"), local(Arial);
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'Open Sans Extrabold';
+        src: url(../fonts/OpenSans/OpenSans-ExtraBold.ttf) format("truetype"), local(Arial);
+        font-display: swap;
+    }
+}

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import style from './navbar.module.css'
+import style from './navbar.module.scss'
 import { FiUser } from 'react-icons/fi'
 import { CloseIcon } from '../ui/ui'
 import { motion, AnimatePresence } from 'framer-motion'

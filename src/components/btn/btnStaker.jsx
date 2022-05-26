@@ -1,5 +1,5 @@
 import React from 'react'
-import style from './btn.module.css'
+import style from './btn.module.scss'
 import greenLed from '../../assets/images/ok-led.svg'
 import recordingLed from '../../assets/images/rec-led.svg'
 import offLed from '../../assets/images/off-led.svg'

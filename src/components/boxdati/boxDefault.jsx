@@ -1,5 +1,5 @@
 import React from 'react'
-import style from './boxDati.module.css'
+import style from './boxDati.module.scss'
 import {motion} from 'framer-motion'
 function BoxDefault({ datiDefault }) {
    

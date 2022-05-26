@@ -1,5 +1,5 @@
 import React from 'react'
-import style from './boxDati.module.css'
+import style from './boxDati.module.scss'
 import BoxDefault from './boxDefault';
 import BoxStaker from './boxStaker';
 import BoxAlert from './boxAlert';

@@ -1,5 +1,5 @@
 
-import style from './dashboard.module.css'
+import style from './dashboard.module.scss'
 import BtnStaker from '../btn/btnStaker';
 import { IoApps, IoListOutline } from "react-icons/io5";
 

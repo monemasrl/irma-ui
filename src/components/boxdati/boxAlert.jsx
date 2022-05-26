@@ -1,5 +1,5 @@
 import React from 'react'
-import style from './boxDati.module.css'
+import style from './boxDati.module.scss'
 import { RiTerminalFill } from "react-icons/ri";
 import { ShareContext } from '../../context/context';
 import { useContext } from 'react';

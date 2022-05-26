@@ -1,3 +1,5 @@
+@import "../../assets/scss/_variabili";
+
 .boxDati {
     border-radius: 20px;
     background: linear-gradient(180deg, rgba(240, 240, 240) 10%, rgb(247, 247, 247) 100%);
@@ -8,49 +10,46 @@
     overflow: hidden;
     transition: background ease-in-out 0.5s;
     min-height: 300px;
-}
-
-.boxDati.modalOpen {
-    transform: scale(1.1);
-}
-
-.boxDati {
     border-left: 5px solid #e0e0e0;
-}
 
-.boxDati.rec {
-    border-left: 5px solid #fabe74;
-}
+    .titoletto {
+        font-family: "Open Sans Bold";
+        text-transform: uppercase;
+        letter-spacing: -1px;
+        line-height: 1;
+        color: $lightGray;
+    }
 
-.boxDati.off {
-    border-left: 5px solid gray;
-}
+    ul {
+        list-style: none;
+        padding: 0;
+    }
 
-.boxDati.ok {
-    border-left: 5px solid green;
-}
+    li {
+        margin: 1rem 0;
+    }
 
-.boxDati.alert {
-    background: #ff3130;
-    transition: all ease-in-out 0.5s;
-    border-left: 4px solid #ce0303;
-}
+    .modalOpen {
+        transform: scale(1.1);
+    }
 
-.boxDati ul {
-    list-style: none;
-    padding: 0;
-}
+    &.rec {
+        border-left: 5px solid $yellow;
+    }
 
-.boxDati ul li {
-    margin: 1rem 0;
-}
+    &.off {
+        border-left: 5px solid $lightGray;
+    }
 
-.boxDati .titoletto {
-    font-family: "Open Sans Bold";
-    text-transform: uppercase;
-    letter-spacing: -1px;
-    line-height: 1;
-    color: gray;
+    &.ok {
+        border-left: 5px solid $darkGreen;
+    }
+
+    &.alert {
+        background: $red;
+        transition: all ease-in-out 0.5s;
+        border-left: 4px solid $darkred;
+    }
 }
 
 .codiceStaker {
@@ -58,14 +57,7 @@
     font-family: "Open Sans Bold";
     line-height: 1;
     text-transform: uppercase;
-}
-
-.boxDati.alert .titoletto {
-    color: white;
-}
-
-.boxDati.alert .codiceStaker {
-    color: white;
+    color: $gray;
 }
 
 .stato {
@@ -75,29 +67,67 @@
     padding: 23px 15px;
     background: #ededed;
     border-radius: 5px;
+    color: $alertText;
+    img {
+        width: 30px;
+        margin-top: 3px;
+    }
 }
 
-.alert .stato {
-    background: transparent;
-    color: white;
-    border-bottom: 3px dotted transparent;
-    margin-top: 0px;
-    padding-bottom: 0;
+.alert {
+    .codiceStaker {
+        color: $alertText;
+    }
+
+    .titoletto {
+        color: $alertText;
+    }
+
+    .stato {
+        background: transparent;
+        border-bottom: 3px dotted transparent;
+        margin-top: 0px;
+        padding-bottom: 0;
+
+        .label {
+            font-size: 70px;
+        }
+    }
+    .datoLabel {
+        font-size: 18px;
+        text-transform: uppercase;
+        color: $alertText;
+    }
+    .buttonWrapper {
+        text-align: center;
+    }
 }
 
-.rec .stato {
-    background-color: #ededed;
+.rec {
+    .stato {
+        background-color: #ededed;
+    }
 }
 
-.alert .stato .label {
-    color: white;
-    font-size: 70px;
+.ok {
+    .label {
+        color: $green;
+    }
 }
 
-.stato img {
-    width: 30px;
-    margin-top: 3px;
+.off {
+    .label {
+        color: $lightGray;
+    }
 }
+
+.rec {
+    .label {
+        color: #e8a85a;
+    }
+}
+
+ 
 
 .label {
     font-family: "Open Sans Bold";
@@ -117,44 +147,19 @@
     margin-right: 3px;
 }
 
-.ok .label {
-    color: #4d9a4d;
-}
-
-.off .label {
-    color: gray;
-}
-
-.alert .label {
-    color: #ff3130;
-}
-
-.rec .label {
-    color: #e8a85a;
-}
-
 .datoLabel {
     font-family: "Open Sans Bold";
     text-transform: uppercase;
     letter-spacing: -1px;
     margin-left: 7px;
     font-size: 15px;
+    color: $gray;
 }
 
-.alert .datoLabel {
-    font-size: 18px;
-    text-transform: uppercase;
-}
-
-.alert .buttonWrapper {
-    text-align: center;
-}
 
 .datiStato {
     margin-left: 0px;
 }
-
-.datiInterni {}
 
 .bloccoDati {
     padding: 15px 10px;
@@ -164,25 +169,25 @@
     display: flex;
     justify-content: space-between;
     position: relative;
+    .titoloInterno {
+        text-transform: uppercase;
+        font-family: "Open Sans Bold";
+        color: $lightGray;
+        line-height: 1;
+    }
+    .datoInterno {
+        font-size: 36px;
+        line-height: 1;
+        text-align: right;
+    }
+    .datoInterno span {
+        font-size: 30px;
+        margin-left: -7px;
+    }
 }
 
-.bloccoDati .titoloInterno {
-    text-transform: uppercase;
-    font-family: "Open Sans Bold";
-    color: gray;
-    line-height: 1;
-}
 
-.bloccoDati .datoInterno {
-    font-size: 36px;
-    line-height: 1;
-    text-align: right;
-}
 
-.bloccoDati .datoInterno span {
-    font-size: 30px;
-    margin-left: -7px;
-}
 
 .wrapperAlert img {
     margin-left: -21px;
@@ -196,7 +201,7 @@
     margin: 1rem auto;
     display: block;
     outline: none;
-    background-color: #ff5c5c;
+    background-color: $lightRed;
     width: 250px;
     font-family: "Open Sans Bold";
     color: white;
@@ -208,19 +213,20 @@
 }
 
 .buttonStop:hover {
-    background-color: #cf2201;
+    background-color: $darkred;
     color: #fff;
 }
 
 .wrapperbutton {
     text-align: center;
+    button {
+        background-color: $darkGreen;
+        color: white;
+        font-size: 16px;
+    }
 }
 
-.wrapperbutton button {
-    background-color: #498555;
-    color: white;
-    font-size: 16px;
-}
+
 
 .iconastatoRec {
     position: relative;
@@ -240,7 +246,7 @@
     box-shadow: 0px 0px 3px #8b8b8b;
     transform-origin: 2px 14px;
     transform: rotate(-52deg);
-    animation: lanciaInizio 2s alternate infinite ;
+    animation: lanciaInizio 2s alternate infinite;
 }
 
 @keyframes lanciaInizio {
@@ -252,7 +258,6 @@
         transform: rotate(50deg);
     }
 }
-
 
 @keyframes alertbox {
     from {
