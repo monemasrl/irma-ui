@@ -106,10 +106,17 @@ function App(props) {
             )}
         </ShareContext.Consumer>
         
-        {isAlert() &&
+        {isAlert() ?
           <div className="back-alert">
             <img src="/images/backalert.svg" alt="backalert" />
-          </div>}
+            <img src="/images/back-default.svg" alt="backalert" />
+          </div> : 
+          <div className="back-default">
+          <img src="/images/back-default.svg" alt="backalert" />
+          <img src="/images/back-default.svg" alt="backalert" />
+        </div>
+        
+        }
           
       </div>
     </ShareContextProvider>
