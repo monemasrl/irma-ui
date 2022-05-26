@@ -106,3 +106,21 @@ main{
 }
 
 
+@media screen and (max-width: 1640px){
+  .back-default img{
+    width: 280px;
+  }
+  .back-alert img{
+    width: 280px;
+  }
+} 
+
+
+@media screen and (max-width: 1280px){
+  .back-default img{
+    display: none;
+  }
+  .back-alert img{
+   display: none;
+  }
+} 
