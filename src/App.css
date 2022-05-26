@@ -23,7 +23,8 @@ div{
   box-sizing: border-box;
 }
 body{
-  background: #d9d9d9;
+  background: rgb(145,145,145);
+  background: radial-gradient(circle, rgb(189, 189, 189) 12%, rgb(189, 189, 189) 31%, rgb(221 221 221) 100%);
 }
 #root{
   height: 100vh;
