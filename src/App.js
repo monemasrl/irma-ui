@@ -1,4 +1,3 @@
-import './App.scss';
 import { useState, useEffect } from 'react'
 import Header from './components/header/header';
 import Footer from './components/footer/footer';
@@ -6,19 +5,17 @@ import Loaderdash from './components/loaders/loaderdash';
 import Loaderbox from './components/loaders/loaderbox';
 import { lazy, Suspense } from 'react';
 import { ShareContextProvider, ShareContext } from './context/context';
+import './App.scss';
+
 const Dashboard = lazy(() => import('./components/dashboard/dashboard'))
 const BoxDati = lazy(() => import('./components/boxdati/boxDati'))
 
 
-
-function App(props) {
+function App() {
   const [data, setData] = useState(false);
   const [stakerClicked, setStakerClicked] = useState(false);
-
   const [listview, setListView] = useState(false)
   const [datiOrdinatiLista, setDatiOrdinatiLista] = useState('')
-
-
 
 
   const getData = () => {
