@@ -56,10 +56,10 @@ function BloccoNumerico({ datiNumerici, code, index }) {
 }
 
 function BtnStartRec() {
-    
-    const [statoInvioDati, setStatoInvioDati]=useState(false)
 
-    function iniziaLettura () {
+    const [statoInvioDati, setStatoInvioDati] = useState(false)
+
+    function iniziaLettura() {
 
         const dataPost = {
             statoStaker: 1
@@ -75,19 +75,21 @@ function BtnStartRec() {
             console.log('stato aggiornato');
             setStatoInvioDati(false)
         }).catch(error => {
-            
+
             console.error('ORRORE ED ERRORE, QUALCUNO MI AIUTI...', error);
         });
     }
 
-    return <div className={style.wrapperbutton}>
-        <button disabled={statoInvioDati} onClick={()=> iniziaLettura() }>
-            {!statoInvioDati ?
-           "Inizia rilevamento" :
-           "...rilevamento in corso"
-            }
+    return (
+        <div className={style.wrapperbutton}>
+            <button disabled={statoInvioDati} onClick={() => iniziaLettura()}>
+                {!statoInvioDati ?
+                    "Inizia rilevamento" :
+                    "...rilevamento in corso"
+                }
             </button>
-    </div>
+        </div>
+    )
 }
 
 /* COMPONENTE PRINCIPALE */
