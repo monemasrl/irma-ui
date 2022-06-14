@@ -59,6 +59,7 @@ function BtnStartRec() {
 
     const [statoInvioDati, setStatoInvioDati] = useState(false)
 
+    
     function iniziaLettura() {
 
         const dataPost = {
@@ -75,7 +76,6 @@ function BtnStartRec() {
             console.log('stato aggiornato');
             setStatoInvioDati(false)
         }).catch(error => {
-
             console.error('ORRORE ED ERRORE, QUALCUNO MI AIUTI...', error);
         });
     }
