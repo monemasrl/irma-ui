@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import style from './boxDati.module.scss'
 import { RiTerminalFill } from "react-icons/ri";
 import { motion } from "framer-motion"
+
+
 
 function StatoSensore({ statoSensore }) {
 
@@ -11,6 +13,10 @@ function StatoSensore({ statoSensore }) {
         off: 'sensore non funzionante',
         alert: 'rilevata anomalia'
     }
+
+
+
+
     return (
         <div className={`${style.stato}`}>
             <div className={style.iconastato}>
@@ -50,9 +56,37 @@ function BloccoNumerico({ datiNumerici, code, index }) {
 }
 
 function BtnStartRec() {
+    
+    const [statoInvioDati, setStatoInvioDati]=useState(false)
+
+    function iniziaLettura () {
+
+        const dataPost = {
+            statoStaker: 1
+        }
+
+        setStatoInvioDati(true)
+
+        fetch('http://localhost:5001', {
+            method: 'POST',
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(dataPost)
+        }).then(() => {
+            console.log('stato aggiornato');
+            setStatoInvioDati(false)
+        }).catch(error => {
+            
+            console.error('ORRORE ED ERRORE, QUALCUNO MI AIUTI...', error);
+        });
+    }
 
     return <div className={style.wrapperbutton}>
-        <button>Inizia rilevamento</button>
+        <button disabled={statoInvioDati} onClick={()=> iniziaLettura() }>
+            {!statoInvioDati ?
+           "Inizia rilevamento" :
+           "...rilevamento in corso"
+            }
+            </button>
     </div>
 }
 
