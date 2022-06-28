@@ -6,21 +6,44 @@ import Loaderbox from './components/loaders/loaderbox';
 import { lazy, Suspense } from 'react';
 import { ShareContextProvider, ShareContext } from './context/context';
 import './App.scss';
+import io from 'socket.io-client';
 
 const Dashboard = lazy(() => import('./components/dashboard/dashboard'))
 const BoxDati = lazy(() => import('./components/boxdati/boxDati'))
-
+const socket = io(`http://${window.location.hostname}:5000`);
 
 function App() {
   const [data, setData] = useState(false);
   const [stakerClicked, setStakerClicked] = useState(false);
   const [listview, setListView] = useState(false)
   const [datiOrdinatiLista, setDatiOrdinatiLista] = useState('')
+  const [isConnected, setIsConnected] = useState(socket.connected);
+  
+  
+  useEffect(() => {
+    socket.on('connect', () => {
+      setIsConnected(true);
+    });
 
+    socket.on('disconnect', () => {
+      setIsConnected(false);
+    });
+
+    socket.on('change', () => {
+      getData();
+    });
+
+    return () => {
+      socket.off('connect');
+      socket.off('disconnect');
+      socket.off('change');
+    };
+  }, []);
 
   const getData = () => {
-    fetch('./data/data.json'
+    fetch('http://127.0.0.1:5000/'
       , {
+        method :'GET',
         headers: {
           'Content-Type': 'application/json',
           'Accept': 'application/json'
@@ -37,6 +60,7 @@ function App() {
         setData(myJson)
       });
   }
+  
 
   useEffect(() => {
     const newdati = data && [...data?.data]
