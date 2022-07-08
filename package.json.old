@@ -15,7 +15,6 @@
     "react-loading-skeleton": "^3.1.0",
     "react-scripts": "5.0.1",
     "sass": "^1.52.1",
-    "socket.io-client": "^4.5.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -23,7 +22,9 @@
     "serve": "react-scripts serve",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {
     "extends": [
@@ -52,6 +53,18 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^6.3.12",
+    "@storybook/addon-essentials": "^6.3.12",
+    "@storybook/addon-interactions": "^6.3.12",
+    "@storybook/addon-links": "^6.3.12",
+    "@storybook/builder-webpack5": "^6.3.12",
+    "@storybook/manager-webpack5": "^6.3.12",
+    "@storybook/node-logger": "^6.3.12",
+    "@storybook/preset-create-react-app": "^4.1.0",
+    "@storybook/react": "^6.3.12",
+    "@storybook/testing-library": "^0.0.11",
+    "webpack": "^5.72.1"
   }
-
 }
