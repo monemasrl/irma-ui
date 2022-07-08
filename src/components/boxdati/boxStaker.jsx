@@ -55,7 +55,7 @@ function BloccoNumerico({ datiNumerici, code, index }) {
     )
 }
 
-function BtnStartRec(code, devEUI) {
+function BtnStartRec({ code, devEUI }) {
 
     const [statoInvioDati, setStatoInvioDati] = useState(false)
 
@@ -86,7 +86,7 @@ function BtnStartRec(code, devEUI) {
 
     return (
         <div className={style.wrapperbutton}>
-            <button disabled={statoInvioDati} onClick={() => iniziaLettura()}>
+            <button disabled={statoInvioDati} onClick={() => iniziaLettura(code, devEUI)}>
                 {!statoInvioDati ?
                     "Inizia rilevamento" :
                     "...rilevamento in corso"
