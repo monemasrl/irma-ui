@@ -49,28 +49,32 @@ function BloccoNumerico({ datiNumerici, code, index }) {
                 transition={{ duration: .5, delay: index * 0.1 }}
             >
                 <div className={style.titoloInterno}>{datiNumerici.titolo}</div>
-                <div className={style.datoInterno}>{datiNumerici.dato} <span>%</span></div>
+                <div className={style.datoInterno}>{datiNumerici.dato} </div>
             </motion.div>
         </>
     )
 }
 
-function BtnStartRec() {
+function BtnStartRec(code, devEUI) {
 
     const [statoInvioDati, setStatoInvioDati] = useState(false)
 
     
-    function iniziaLettura() {
+    function iniziaLettura(code, devEUI) {
 
         const dataPost = {
-            statoStaker: 1
+            statoStaker: 1,
+            app: {
+              code: code,
+              devEUI: devEUI
+            }
         }
 
         setStatoInvioDati(true)
 
         fetch('http://localhost:5001', {
             method: 'POST',
-            headers: { "Content-Type": "application/json" },
+            headers: { "Content-Type": "application/json", "Access-Control-Allow-Origin":"http://localhost:5001"},
             body: JSON.stringify(dataPost)
         }).then(() => {
             console.log('stato aggiornato');
@@ -111,7 +115,7 @@ function BoxStaker({ dati }) {
 
             <StatoSensore statoSensore={dati?.state} />
             {dati?.state === 'ok' &&
-                <BtnStartRec />
+                <BtnStartRec code={dati.code} devEUI={dati.devEUI}/>
             }
             <div className={style.datiInterni}>
                 {dati?.datiInterni?.map((item, index) =>
