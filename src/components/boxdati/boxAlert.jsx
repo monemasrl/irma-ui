@@ -26,7 +26,7 @@ function BoxAlert({ dati }) {
         <header>
             <div className={style.title}>
                 <div className={style.titoletto}>Reach Staker</div>
-                <div className={style.codiceStaker}>{dati?.code}</div>
+                <div className={style.codiceStaker}>{dati?.applicationID}</div>
             </div>
             <div className={style.subData}>
                 <StatoSensore statoSensore={dati?.state} />
