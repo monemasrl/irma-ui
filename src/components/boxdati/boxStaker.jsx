@@ -36,12 +36,12 @@ function StatoSensore({ statoSensore }) {
     )
 }
 
-function BloccoNumerico({ datiNumerici, code, index }) {
+function BloccoNumerico({ datiNumerici, applicationID, index }) {
 
     return (
         <>
             <motion.div
-                key={code}
+                key={applicationID}
                 className={style.bloccoDati}
                 initial={{ opacity: 0, top: 20 }}
                 animate={{ opacity: 1, top: 0 }}
@@ -55,19 +55,17 @@ function BloccoNumerico({ datiNumerici, code, index }) {
     )
 }
 
-function BtnStartRec({ code, devEUI }) {
+function BtnStartRec({ applicationID, devEUI }) {
 
     const [statoInvioDati, setStatoInvioDati] = useState(false)
 
     
-    function iniziaLettura(code, devEUI) {
+    function iniziaLettura(applicationID, devEUI) {
 
         const dataPost = {
             statoStaker: 1,
-            app: {
-              code: code,
-              devEUI: devEUI
-            }
+            applicationID: applicationID,
+            devEUI: devEUI
         }
 
         setStatoInvioDati(true)
@@ -86,7 +84,7 @@ function BtnStartRec({ code, devEUI }) {
 
     return (
         <div className={style.wrapperbutton}>
-            <button disabled={statoInvioDati} onClick={() => iniziaLettura(code, devEUI)}>
+            <button disabled={statoInvioDati} onClick={() => iniziaLettura(applicationID, devEUI)}>
                 {!statoInvioDati ?
                     "Inizia rilevamento" :
                     "...rilevamento in corso"
@@ -102,7 +100,7 @@ function BoxStaker({ dati }) {
     return (
 
         <motion.header
-            key={dati?.code}
+            key={dati?.applicationID}
             initial={{ opacity: 0, top: 20, position: 'relative' }}
             animate={{ opacity: 1, top: 0, position: 'relative' }}
             exit={{ opacity: 0, top: 20 }}
@@ -110,17 +108,17 @@ function BoxStaker({ dati }) {
         >
             <div className={style.title}>
                 <div className={style.titoletto}>Reach Staker</div>
-                <div className={style.codiceStaker}>{dati?.code}</div>
+                <div className={style.codiceStaker}>{dati?.applicationID}</div>
             </div>
 
             <StatoSensore statoSensore={dati?.state} />
             {dati?.state === 'ok' &&
-                <BtnStartRec code={dati.code} devEUI={dati.devEUI}/>
+                <BtnStartRec applicationID={dati.applicationID} devEUI={dati.devEUI}/>
             }
             <div className={style.datiInterni}>
                 {dati?.datiInterni?.map((item, index) =>
                     <React.Fragment key={item.titolo}>
-                        <BloccoNumerico datiNumerici={item} code={dati.code} index={index} />
+                        <BloccoNumerico datiNumerici={item} applicationID={dati.applicationID} index={index} />
                     </React.Fragment >
                 )}
             </div>
