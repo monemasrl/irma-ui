@@ -36,12 +36,12 @@ function StatoSensore({ statoSensore }) {
     )
 }
 
-function BloccoNumerico({ datiNumerici, applicationID, index }) {
+function BloccoNumerico({ datiNumerici, sensorId, index }) {
 
     return (
         <>
             <motion.div
-                key={applicationID}
+                key={sensorId}
                 className={style.bloccoDati}
                 initial={{ opacity: 0, top: 20 }}
                 animate={{ opacity: 1, top: 0 }}
@@ -100,7 +100,7 @@ function BoxStaker({ dati }) {
     return (
 
         <motion.header
-            key={dati?.applicationID}
+            key={dati?.sensorId}
             initial={{ opacity: 0, top: 20, position: 'relative' }}
             animate={{ opacity: 1, top: 0, position: 'relative' }}
             exit={{ opacity: 0, top: 20 }}
@@ -108,7 +108,7 @@ function BoxStaker({ dati }) {
         >
             <div className={style.title}>
                 <div className={style.titoletto}>Reach Staker</div>
-                <div className={style.codiceStaker}>{dati?.applicationID}</div>
+                <div className={style.codiceStaker}>{dati?.sensorId}</div>
             </div>
 
             <StatoSensore statoSensore={dati?.state} />
@@ -118,7 +118,7 @@ function BoxStaker({ dati }) {
             <div className={style.datiInterni}>
                 {dati?.datiInterni?.map((item, index) =>
                     <React.Fragment key={item.titolo}>
-                        <BloccoNumerico datiNumerici={item} applicationID={dati.applicationID} index={index} />
+                        <BloccoNumerico datiNumerici={item} sensorId={dati.sensorId} index={index} />
                     </React.Fragment >
                 )}
             </div>

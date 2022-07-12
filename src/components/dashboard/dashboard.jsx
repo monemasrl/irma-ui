@@ -24,9 +24,9 @@ function switchVisualizzaLista (switchList) {
                     <span onClick={() => switchVisualizzaLista(true)}><IoListOutline /></span>}
             </div>
             {datiOrdinatiLista && datiOrdinatiLista.map((item, index) => {
-                return (<BtnStaker key={item.applicationID}
+                return (<BtnStaker key={item.sensorId}
                     state={item.state}
-                    code={item.applicationID}
+                    code={item.sensorId}
                     index={index}
                     setStakerClicked={setStakerClicked}
                     stakerClicked={stakerClicked}
