@@ -70,9 +70,9 @@ function BtnStartRec({ applicationID, devEUI }) {
 
         setStatoInvioDati(true)
 
-        fetch('http://localhost:5001', {
+        fetch('http://localhost:5000/downlink', {
             method: 'POST',
-            headers: { "Content-Type": "application/json", "Access-Control-Allow-Origin":"http://localhost:5001"},
+            headers: { "Content-Type": "application/json", "Access-Control-Allow-Origin":"http://localhost:5000/downlink"},
             body: JSON.stringify(dataPost)
         }).then(() => {
             console.log('stato aggiornato');
