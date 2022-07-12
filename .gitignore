@@ -70,3 +70,5 @@ Thumbs.db
 *.mov
 *.wmv
 
+# Env variables
+.env

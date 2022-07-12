@@ -68,3 +68,14 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+# Variabili d'ambiente
+
+Devono essere inserite all'interno di un file denominato `.env` nella root del progetto
+
+Le opzioni disponibili sono:
+
+- REACT_APP_CHIRPSTACK_URL, default "http://localhost".
+- REACT_APP_CHIRPSTACK_PORT, default "8080".
+- REACT_APP_WEBSOCKET_URL, default "http://localhost".
+- REACT_APP_WEBSOCKET_PORT, default "5000".

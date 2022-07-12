@@ -3,7 +3,8 @@ import style from './boxDati.module.scss'
 import { RiTerminalFill } from "react-icons/ri";
 import { motion } from "framer-motion"
 
-
+const WEBSOCKET_URL = process.env.REACT_APP_WEBSOCKET_URL || "http://localhost"
+const WEBSOCKET_PORT = process.env.REACT_APP_WEBSOCKET_PORT || "5000"
 
 function StatoSensore({ statoSensore }) {
 
@@ -70,9 +71,9 @@ function BtnStartRec({ applicationID, devEUI }) {
 
         setStatoInvioDati(true)
 
-        fetch('http://localhost:5000/downlink', {
+        fetch(`${WEBSOCKET_URL}:${WEBSOCKET_PORT}}/downlink`, {
             method: 'POST',
-            headers: { "Content-Type": "application/json", "Access-Control-Allow-Origin":"http://localhost:5000/downlink"},
+            headers: { "Content-Type": "application/json", "Access-Control-Allow-Origin":`${WEBSOCKET_URL}:${WEBSOCKET_PORT}/downlink`},
             body: JSON.stringify(dataPost)
         }).then(() => {
             console.log('stato aggiornato');

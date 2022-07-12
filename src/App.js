@@ -7,10 +7,15 @@ import { lazy, Suspense } from 'react';
 import { ShareContextProvider, ShareContext } from './context/context';
 import './App.scss';
 import io from 'socket.io-client';
+import AuthService from './services/auth.service'
 
 const Dashboard = lazy(() => import('./components/dashboard/dashboard'))
 const BoxDati = lazy(() => import('./components/boxdati/boxDati'))
-const socket = io(`http://${window.location.hostname}:5000`);
+
+const WEBSOCKET_URL = process.env.REACT_APP_WEBSOCKET_URL || "http://localhost"
+const WEBSOCKET_PORT = process.env.REACT_APP_WEBSOCKET_PORT || "5000"
+
+const socket = io(`${WEBSOCKET_URL}:${WEBSOCKET_PORT}`);
 
 function App() {
   const [data, setData] = useState(false);
@@ -41,7 +46,7 @@ function App() {
   }, []);
 
   const getData = () => {
-    fetch('http://127.0.0.1:5000/'
+    fetch(`${WEBSOCKET_URL}:${WEBSOCKET_PORT}/`
       , {
         method :'GET',
         headers: {
