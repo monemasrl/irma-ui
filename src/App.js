@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import Header from './components/header/header';
 import Footer from './components/footer/footer';
 import Loaderdash from './components/loaders/loaderdash';
@@ -7,7 +8,6 @@ import { lazy, Suspense } from 'react';
 import { ShareContextProvider, ShareContext } from './context/context';
 import './App.scss';
 import io from 'socket.io-client';
-import AuthService from './services/auth.service'
 
 const Dashboard = lazy(() => import('./components/dashboard/dashboard'))
 const BoxDati = lazy(() => import('./components/boxdati/boxDati'))
@@ -23,6 +23,8 @@ function App() {
   const [listview, setListView] = useState(false)
   const [datiOrdinatiLista, setDatiOrdinatiLista] = useState('')
   const [isConnected, setIsConnected] = useState(socket.connected);
+  const [userData, setUserData] = useState(localStorage.getItem("jwt-token"));
+  const navigate = useNavigate();
   
   
   useEffect(() => {
@@ -44,6 +46,17 @@ function App() {
       socket.off('change');
     };
   }, []);
+
+  useEffect(() => {
+    if (!userData) {
+      navigate("/login");
+    }
+  }, [userData, navigate]);
+
+  const logout = () => {
+    localStorage.removeItem("jwt-token");
+    setUserData(null);
+  }
 
   const getData = () => {
     fetch(`${WEBSOCKET_URL}:${WEBSOCKET_PORT}/`
@@ -117,6 +130,7 @@ function App() {
         <ShareContext.Consumer>
           {(share) => (
             <main>
+              <button onClick={logout}>Logout</button>
               <div className='wrapper-content'>
                 <div className={`wrapper-sx ${share.confirm ? 'modalOpen':''}`}>
                   <Suspense fallback={<Loaderdash />}>              
