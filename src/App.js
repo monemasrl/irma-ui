@@ -135,11 +135,10 @@ function App() {
   return (
     <ShareContextProvider>
       <div className={`App ${isAlert() && 'alert'}`}>
-        <Header />
+        <Header logoutFunction={logout} />
         <ShareContext.Consumer>
           {(share) => (
             <main>
-              <button onClick={logout}>Logout</button>
               <div className='wrapper-content'>
                 <div className={`wrapper-sx ${share.confirm ? 'modalOpen':''}`}>
                   <Suspense fallback={<Loaderdash />}>              

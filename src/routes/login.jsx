@@ -45,10 +45,10 @@ export default function Login() {
       <div className='login-panel'>
         <h1 className='login-title'>Login Page!</h1>
         <div className='input-div'>
-          <label for='email'>Email</label>
-          <input id='email' onChange={handleEmailChange} />
-          <label for='password'>Password</label>
-          <input type='password' id='password' onChange={handlePasswordChange} />
+          <label>Email</label>
+          <input onChange={handleEmailChange} />
+          <label>Password</label>
+          <input type='password' onChange={handlePasswordChange} />
         </div>
         <button className='login-button' onClick={() => login(email, password)}>Login</button>
       </div>

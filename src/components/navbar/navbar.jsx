@@ -1,8 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import Select from 'react-select';
 import style from './navbar.module.scss'
 import { FiUser } from 'react-icons/fi'
 import { CloseIcon } from '../ui/ui'
 import { motion, AnimatePresence } from 'framer-motion'
+import ChirpStack from '../../services/chirpstack-api.service';
+import AuthService from '../../services/auth.service';
 
 const datiUser = {
     nome: 'carlo',
@@ -12,9 +15,44 @@ const datiUser = {
     tempoSessioneCorrente: 360,
 }
 
-function Navbar() {
+function Navbar({ logoutFunction }) {
 
     const [openMenu, setOpenMenu] = useState(false)
+    const [orgOptions, setOrgOptions] = useState([]);
+    const [selectedOrg, setSelectedOrg] = useState(-1);
+    const [appOptions, setAppOptions] = useState([]);
+    const [selectedApp, setSelectedApp] = useState(-1);
+
+    useEffect(() => {
+      ChirpStack.getOrganizationsList(AuthService.getUserData())
+        .then((list) => {
+          let options = list.map(({id, displayName}) => ({
+            value: id,
+            label: displayName
+          }));
+          setOrgOptions(options);
+        });
+    }, []);
+
+    useEffect(() => {
+      setSelectedOrg(orgOptions.length ? orgOptions[0].value : -1);
+    }, [orgOptions]);
+
+    useEffect(() => {
+      ChirpStack.getApplicationList(AuthService.getUserData(), selectedOrg)
+        .then((list) => {
+          let options = list.map(({id, name}) => ({
+            value: id,
+            label: name
+          }));
+          setAppOptions(options);
+        });
+    }, [selectedOrg]);
+
+    useEffect(() => {
+      setSelectedApp(appOptions.length ? appOptions[0].value : -1);
+    }, [appOptions]);
+
 
     return (
         <nav>
@@ -54,6 +92,17 @@ function Navbar() {
                             <li>Assistenza</li>
                         </ul>
                     </div>
+                    <button onClick={logoutFunction}>Logout</button>
+                    <Select
+                        options={orgOptions}
+                        defaultValue={orgOptions.length ? orgOptions[0] : {}}
+                        onChange={(option) => setSelectedOrg(option.value)}
+                    />
+                    <Select
+                        options={appOptions}
+                        defaultValue={appOptions.length ? appOptions[0] : {}}
+                        onChange={(option) => setSelectedApp(option.value)}
+                    />
                 </motion.div>}
             </AnimatePresence>
         </nav>

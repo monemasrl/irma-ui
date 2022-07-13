@@ -1,14 +1,7 @@
-import axios from 'axios';
-
-const CHIRPSTACK_URL = process.env.REACT_APP_CHIRPSTACK_URL || "http://localhost"
-const CHIRPSTACK_PORT = process.env.REACT_APP_CHIRPSTACK_PORT || "8080"
+import ChirpStack from './chirpstack-api.service';
 
 const login = (email, password) => {
-  return axios
-    .post(`${CHIRPSTACK_URL}:${CHIRPSTACK_PORT}/api/internal/login`, {
-      email: email,
-      password: password
-    })
+  return ChirpStack.getJWTToken(email, password)
     .then((response) => {
       localStorage.setItem("jwt-token", response.data?.jwt);
       return response.data?.jwt;
