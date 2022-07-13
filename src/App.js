@@ -18,6 +18,8 @@ const WEBSOCKET_PORT = process.env.REACT_APP_WEBSOCKET_PORT || "5000"
 
 const socket = io(`${WEBSOCKET_URL}:${WEBSOCKET_PORT}`);
 
+const sensor_paths = [283923423];
+
 function App() {
   const [data, setData] = useState(false);
   const [stakerClicked, setStakerClicked] = useState(false);
@@ -60,13 +62,19 @@ function App() {
   }
 
   const getData = () => {
+    const dataPost = {
+      paths: sensor_paths,
+    }
+
     fetch(`${WEBSOCKET_URL}:${WEBSOCKET_PORT}/`
       , {
-        method :'GET',
+        method :'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        }
+          'Accept': 'application/json',
+          "Access-Control-Allow-Origin":`${WEBSOCKET_URL}:${WEBSOCKET_PORT}/`
+        },
+        body: JSON.stringify(dataPost),
       }
     )
       .then(function (response) {
