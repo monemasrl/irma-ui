@@ -1,0 +1,91 @@
+.login-root {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.login-panel {
+  box-shadow: 0 0 3px #b4b4b4;
+  border-radius: 30px;
+  padding: 1rem;
+  background-color: #efefef;
+  background:linear-gradient(180deg,rgba(239,239,239) 10%, rgb(247, 247, 247) 100%);
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  min-height: 500px;
+  min-width: 500px;
+}
+
+.login-title {
+  margin-top: 0;
+  margin-inline: auto;
+  font-family: "Open Sans Bold";
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  line-height: 1;
+  color: gray;
+  text-align: center;
+  position: relative;
+  border-bottom: 3px solid gray;
+}
+
+.login-button {
+  box-shadow: 0 0 6px #b4b4b4;
+  position: relative;
+  margin-top: auto;
+  &:after {
+    content: "";
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 24px #b4b4b4;
+    transition: opacity 0.3s ease-in-out;
+  }
+  &:hover {
+    &:after {
+      opacity: 1;
+    }
+  }
+}
+
+.input-div {
+  display: flex;
+  flex-direction: column;
+  margin: 4em;
+}
+
+.input-div > label {
+  font-family: "Open Sans Bold";
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+
+.input-div > input {
+  margin-bottom: .5em;
+}
+
+.error-message {
+  top: 1em;
+  position: absolute;
+  font-family: "Open Sans Bold";
+  color: white;
+  background-color: red;
+  padding: .5em;
+  border: 2px solid white;
+  border-radius: .5em;
+  outline: 2px solid red;
+  transform: translateY(0);
+  transition: 0.3s ease-in-out;
+}
+
+.hidden {
+  transform: translateY(calc(-100% - 2px - 1em));
+}
+
