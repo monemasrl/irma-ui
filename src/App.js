@@ -8,6 +8,7 @@ import { lazy, Suspense } from 'react';
 import { ShareContextProvider, ShareContext } from './context/context';
 import './App.scss';
 import io from 'socket.io-client';
+import AuthService from './services/auth.service';
 
 const Dashboard = lazy(() => import('./components/dashboard/dashboard'))
 const BoxDati = lazy(() => import('./components/boxdati/boxDati'))
@@ -23,7 +24,7 @@ function App() {
   const [listview, setListView] = useState(false)
   const [datiOrdinatiLista, setDatiOrdinatiLista] = useState('')
   const [isConnected, setIsConnected] = useState(socket.connected);
-  const [userData, setUserData] = useState(localStorage.getItem("jwt-token"));
+  const [userData, setUserData] = useState(AuthService.getUserData());
   const navigate = useNavigate();
   
   
@@ -54,7 +55,7 @@ function App() {
   }, [userData, navigate]);
 
   const logout = () => {
-    localStorage.removeItem("jwt-token");
+    AuthService.logout();
     setUserData(null);
   }
 

@@ -1,29 +1,19 @@
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import axios from "axios"
-
-const CHIRPSTACK_URL = process.env.REACT_APP_CHIRPSTACK_URL || "http://localhost"
-const CHIRPSTACK_PORT = process.env.REACT_APP_CHIRPSTACK_PORT || "8080"
+import AuthService from '../services/auth.service';
 
 
 export default function Login() {
   const [errorMessage, setErrorMessage] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [userData, setUserData] = useState(localStorage.getItem("jwt-token"));
+  const [userData, setUserData] = useState(AuthService.getUserData());
   const navigate = useNavigate();
 
   const login = (email, password) => {
-    return axios
-      .post(`${CHIRPSTACK_URL}:${CHIRPSTACK_PORT}/api/internal/login`, {
-        email: email,
-        password: password
-      })
-      .then((response) => {
-        if (response.data.jwt) {
-          localStorage.setItem("jwt-token", response.data.jwt);
-          setUserData(response.data.jwt);
-        }
+    AuthService.login(email, password)
+      .then((token) => {
+        setUserData(token);
       })
       .catch((error) => {
         setErrorMessage(error.response.data.message);
