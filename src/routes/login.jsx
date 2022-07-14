@@ -1,8 +1,8 @@
-import { useNavigate } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useState, useContext } from 'react';
 import AuthService from '../services/auth.service';
 import './login.scss';
 import '../components/ui/ui.css';
+import { UserContext } from '../context/user-context';
 
 
 export default function Login() {
@@ -10,13 +10,13 @@ export default function Login() {
   const [isErrorHidden, setErrorHidden] = useState(true);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [userData, setUserData] = useState(AuthService.getUserData());
-  const navigate = useNavigate();
+
+  const userSharedData = useContext(UserContext);
 
   const login = (email, password) => {
     AuthService.login(email, password)
       .then((token) => {
-        setUserData(token);
+        userSharedData.setToken(token);
       })
       .catch((error) => {
         setErrorMessage(error.response.data.message);
@@ -32,12 +32,6 @@ export default function Login() {
   const handlePasswordChange = event => {
     setPassword(event.target.value);
   }
-
-  useEffect(() => {
-    if (userData) {
-      navigate("/");
-    }
-  }, [userData, navigate]);
 
   return (
     <div className='login-root'>

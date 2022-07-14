@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useContext } from 'react'
 import Select from 'react-select';
 import style from './navbar.module.scss'
 import { FiUser } from 'react-icons/fi'
 import { CloseIcon } from '../ui/ui'
 import { motion, AnimatePresence } from 'framer-motion'
-import ChirpStack from '../../services/chirpstack-api.service';
+import { UserContext } from '../../context/user-context';
 import AuthService from '../../services/auth.service';
 
 const datiUser = {
@@ -15,44 +15,16 @@ const datiUser = {
     tempoSessioneCorrente: 360,
 }
 
-function Navbar({ logoutFunction }) {
+function Navbar() {
 
     const [openMenu, setOpenMenu] = useState(false)
-    const [orgOptions, setOrgOptions] = useState([]);
-    const [selectedOrg, setSelectedOrg] = useState(-1);
-    const [appOptions, setAppOptions] = useState([]);
-    const [selectedApp, setSelectedApp] = useState(-1);
 
-    useEffect(() => {
-      ChirpStack.getOrganizationsList(AuthService.getUserData())
-        .then((list) => {
-          let options = list.map(({id, displayName}) => ({
-            value: id,
-            label: displayName
-          }));
-          setOrgOptions(options);
-        });
-    }, []);
+    const userSharedData = useContext(UserContext);
 
-    useEffect(() => {
-      setSelectedOrg(orgOptions.length ? orgOptions[0].value : -1);
-    }, [orgOptions]);
-
-    useEffect(() => {
-      ChirpStack.getApplicationList(AuthService.getUserData(), selectedOrg)
-        .then((list) => {
-          let options = list.map(({id, name}) => ({
-            value: id,
-            label: name
-          }));
-          setAppOptions(options);
-        });
-    }, [selectedOrg]);
-
-    useEffect(() => {
-      setSelectedApp(appOptions.length ? appOptions[0].value : -1);
-    }, [appOptions]);
-
+    const logout = () => {
+        AuthService.logout();
+        userSharedData.setToken(null);
+    }
 
     return (
         <nav>
@@ -92,16 +64,18 @@ function Navbar({ logoutFunction }) {
                             <li>Assistenza</li>
                         </ul>
                     </div>
-                    <button onClick={logoutFunction}>Logout</button>
+                    <button onClick={logout}>Logout</button>
                     <Select
-                        options={orgOptions}
-                        defaultValue={orgOptions.length ? orgOptions[0] : {}}
-                        onChange={(option) => setSelectedOrg(option.value)}
+                        options={userSharedData.orgOptions}
+                        defaultValue={userSharedData.orgOptions.length ? userSharedData.orgOptions[0] : {}}
+                        onChange={(option) => userSharedData.setSelectedOrgID(option.value)}
+                        isDisabled={userSharedData.orgOptions.length < 2}
                     />
                     <Select
-                        options={appOptions}
-                        defaultValue={appOptions.length ? appOptions[0] : {}}
-                        onChange={(option) => setSelectedApp(option.value)}
+                        options={userSharedData.appOptions}
+                        defaultValue={userSharedData.appOptions.length ? userSharedData.appOptions[0] : {}}
+                        onChange={(option) => userSharedData.setSelectedAppID(option.value)}
+                        isDisabled={userSharedData.appOptions.length < 2}
                     />
                 </motion.div>}
             </AnimatePresence>

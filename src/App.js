@@ -1,14 +1,14 @@
-import { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useState, useEffect, useContext } from 'react'
 import Header from './components/header/header';
 import Footer from './components/footer/footer';
 import Loaderdash from './components/loaders/loaderdash';
 import Loaderbox from './components/loaders/loaderbox';
 import { lazy, Suspense } from 'react';
 import { ShareContextProvider, ShareContext } from './context/context';
+import { UserContext } from './context/user-context';
 import './App.scss';
 import io from 'socket.io-client';
-import AuthService from './services/auth.service';
+import ChirpStack from './services/chirpstack-api.service';
 
 const Dashboard = lazy(() => import('./components/dashboard/dashboard'))
 const BoxDati = lazy(() => import('./components/boxdati/boxDati'))
@@ -18,17 +18,13 @@ const WEBSOCKET_PORT = process.env.REACT_APP_WEBSOCKET_PORT || "5000"
 
 const socket = io(`${WEBSOCKET_URL}:${WEBSOCKET_PORT}`);
 
-const sensor_paths = [283923423];
-
 function App() {
   const [data, setData] = useState(false);
   const [stakerClicked, setStakerClicked] = useState(false);
   const [listview, setListView] = useState(false)
   const [datiOrdinatiLista, setDatiOrdinatiLista] = useState('')
   const [isConnected, setIsConnected] = useState(socket.connected);
-  const [userData, setUserData] = useState(AuthService.getUserData());
-  const navigate = useNavigate();
-  
+  const userSharedData = useContext(UserContext);
   
   useEffect(() => {
     socket.on('connect', () => {
@@ -50,41 +46,40 @@ function App() {
     };
   }, []);
 
-  useEffect(() => {
-    if (!userData) {
-      navigate("/login");
-    }
-  }, [userData, navigate]);
 
-  const logout = () => {
-    AuthService.logout();
-    setUserData(null);
-  }
+  useEffect(() => getData(), [userSharedData.selectedAppID]);
+
 
   const getData = () => {
-    const dataPost = {
-      paths: sensor_paths,
-    }
+    if (userSharedData.selectedAppID === -1) return;
 
-    fetch(`${WEBSOCKET_URL}:${WEBSOCKET_PORT}/`
-      , {
-        method :'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json',
-          "Access-Control-Allow-Origin":`${WEBSOCKET_URL}:${WEBSOCKET_PORT}/`
-        },
-        body: JSON.stringify(dataPost),
-      }
-    )
-      .then(function (response) {
+    ChirpStack.getDeviceSensorPaths(userSharedData.token, userSharedData.selectedAppID)
+      .then((sensor_paths) => {
+        console.log('sensor_paths', sensor_paths);
+        const dataPost = {
+          paths: sensor_paths,
+        }
+
+        fetch(`${WEBSOCKET_URL}:${WEBSOCKET_PORT}/`
+          , {
+            method :'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json',
+              "Access-Control-Allow-Origin":`${WEBSOCKET_URL}:${WEBSOCKET_PORT}/`
+            },
+            body: JSON.stringify(dataPost),
+          }
+        )
+          .then(function (response) {
 
 
-        return response.json()
-      })
-      .then(function (myJson) {
+            return response.json()
+          })
+          .then(function (myJson) {
 
-        setData(myJson)
+            setData(myJson)
+          });
       });
   }
   
@@ -135,7 +130,7 @@ function App() {
   return (
     <ShareContextProvider>
       <div className={`App ${isAlert() && 'alert'}`}>
-        <Header logoutFunction={logout} />
+        <Header />
         <ShareContext.Consumer>
           {(share) => (
             <main>
