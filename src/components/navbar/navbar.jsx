@@ -54,7 +54,7 @@ function Navbar() {
                             <li><span>Qualifica:</span> {datiUser.qualifica}</li>
                             <li><span>User Tipo:</span> {datiUser.accesso}</li>
                             <li><span>Durata sessione:</span> {datiUser.tempoSessioneCorrente / 60} ore</li>
-                            <li className={style.logout}>Logout</li>
+                            <li className={style.logout} onClick={logout}>Logout</li>
                         </ul>
                     </div>
                     <div className={style.wrapperLink}>
@@ -64,7 +64,6 @@ function Navbar() {
                             <li>Assistenza</li>
                         </ul>
                     </div>
-                    <button onClick={logout}>Logout</button>
                     <Select
                         options={userSharedData.orgOptions}
                         defaultValue={userSharedData.orgOptions.length ? userSharedData.orgOptions[0] : {}}
