@@ -67,13 +67,13 @@ function Navbar() {
                     <Select
                         options={userSharedData.orgOptions}
                         defaultValue={userSharedData.orgOptions.length ? userSharedData.orgOptions[0] : {}}
-                        onChange={(option) => userSharedData.setSelectedOrgID(option.value)}
+                        onChange={(option) => userSharedData.setSelectedOrg(option)}
                         isDisabled={userSharedData.orgOptions.length < 2}
                     />
                     <Select
                         options={userSharedData.appOptions}
                         defaultValue={userSharedData.appOptions.length ? userSharedData.appOptions[0] : {}}
-                        onChange={(option) => userSharedData.setSelectedAppID(option.value)}
+                        onChange={(option) => userSharedData.setSelectedApp(option)}
                         isDisabled={userSharedData.appOptions.length < 2}
                     />
                 </motion.div>}

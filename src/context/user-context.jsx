@@ -7,8 +7,8 @@ const UserContext = createContext();
 
 function UserContextProvider({ children }) {
   const [token, setToken] = useState(AuthService.getUserData());
-  const [selectedOrgID, setSelectedOrgID] = useState(-1);
-  const [selectedAppID, setSelectedAppID] = useState(-1);
+  const [selectedOrg, setSelectedOrg] = useState({});
+  const [selectedApp, setSelectedApp] = useState({});
   const [orgOptions, setOrgOptions] = useState([]);
   const [appOptions, setAppOptions] = useState([]);
   const navigate = useNavigate();
@@ -26,13 +26,13 @@ function UserContextProvider({ children }) {
   
   useEffect(() => {
     if (!orgOptions.length) return;
-    setSelectedOrgID(orgOptions[0].value);
+    setSelectedOrg(orgOptions[0]);
   }, [orgOptions]);
 
   useEffect(() => {
-    if (selectedOrgID === -1) return;
+    if (selectedOrg === {}) return;
 
-    ChirpStack.getApplicationList(AuthService.getUserData(), selectedOrgID)
+    ChirpStack.getApplicationList(AuthService.getUserData(), selectedOrg.value)
       .then((list) => {
         let options = list.map(({id, name}) => ({
           value: id,
@@ -40,11 +40,11 @@ function UserContextProvider({ children }) {
         }));
         setAppOptions(options);
       });
-  }, [selectedOrgID, orgOptions]);
+  }, [selectedOrg, orgOptions]);
 
   useEffect(() => {
     if (!appOptions.length) return;
-    setSelectedAppID(appOptions[0].value);
+    setSelectedApp(appOptions[0]);
   }, [appOptions]);
 
   useEffect(() => {
@@ -59,10 +59,10 @@ function UserContextProvider({ children }) {
   const shareData = {
     token: token,
     setToken: setToken,
-    selectedOrgID: selectedOrgID,
-    setSelectedOrgID: setSelectedOrgID,
-    selectedAppID: selectedAppID,
-    setSelectedAppID: setSelectedAppID,
+    selectedOrg: selectedOrg,
+    setSelectedOrg: setSelectedOrg,
+    selectedApp: selectedApp,
+    setSelectedApp: setSelectedApp,
     orgOptions: orgOptions,
     setOrgOptions: setOrgOptions,
     appOptions: appOptions,
