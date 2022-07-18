@@ -71,7 +71,7 @@ function BtnStartRec({ applicationID, devEUI }) {
 
         setStatoInvioDati(true)
 
-        fetch(`${WEBSOCKET_URL}:${WEBSOCKET_PORT}}/downlink`, {
+        fetch(`${WEBSOCKET_URL}:${WEBSOCKET_PORT}/downlink`, {
             method: 'POST',
             headers: { "Content-Type": "application/json", "Access-Control-Allow-Origin":`${WEBSOCKET_URL}:${WEBSOCKET_PORT}/downlink`},
             body: JSON.stringify(dataPost)
