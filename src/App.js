@@ -17,7 +17,7 @@ const WEBSOCKET_URL = process.env.REACT_APP_WEBSOCKET_URL || "http://localhost"
 const WEBSOCKET_PORT = process.env.REACT_APP_WEBSOCKET_PORT || "5000"
 
 const socket = io(`${WEBSOCKET_URL}:${WEBSOCKET_PORT}`);
-
+console.log('WEBSOCKET_URL',WEBSOCKET_PORT );
 function App() {
   const [data, setData] = useState(false);
   const [stakerClicked, setStakerClicked] = useState(false);
@@ -88,6 +88,7 @@ function App() {
     const newdati = data && [...data?.data]
     if (data && listview) {
         console.log('test', newdati);
+        //Per portare in cima gli alert
         const datiOrdinatiAlert = newdati.sort((a, b) => {
             if (a.state === 'alert') { return -1; }
             return 0;
@@ -137,7 +138,7 @@ function App() {
               <div className='wrapper-content'>
                 <div className={`wrapper-sx ${share.confirm ? 'modalOpen':''}`}>
                   <Suspense fallback={<Loaderdash />}>              
-                  <Dashboard  listview = {listview} setListView = {setListView} isAlert={isAlert()} datiOrdinatiLista={datiOrdinatiLista} stakerClicked={stakerClicked} setStakerClicked={setStakerClicked} />
+                   <Dashboard  listview = {listview} setListView = {setListView} isAlert={isAlert()} datiOrdinatiLista={datiOrdinatiLista} stakerClicked={stakerClicked} setStakerClicked={setStakerClicked} />
                   </Suspense>
                   <Footer />
                 </div>

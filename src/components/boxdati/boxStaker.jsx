@@ -86,10 +86,7 @@ function BtnStartRec({ applicationID, devEUI }) {
     return (
         <div className={style.wrapperbutton}>
             <button disabled={statoInvioDati} onClick={() => iniziaLettura(applicationID, devEUI)}>
-                {!statoInvioDati ?
-                    "Inizia rilevamento" :
-                    "...rilevamento in corso"
-                }
+          Inizia Rilevamento
             </button>
         </div>
     )
