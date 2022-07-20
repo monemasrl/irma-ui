@@ -51,6 +51,7 @@ function BtnStaker({ state, code, setStakerClicked, index, stakerClicked, listvi
     setStakerClicked((prevIndex) => prevIndex === index ? false : index)
   }
 
+  const codeSubstring = code.slice(8)
 
   return (
     <div onClick={() => settaStatiOnClick()}
@@ -64,7 +65,7 @@ function BtnStaker({ state, code, setStakerClicked, index, stakerClicked, listvi
         <div className={style.ledOut}>
           <Led state={state} />
         </div>
-        <div className={style.codeName}>{code}</div>
+        <div className={style.codeName}>{codeSubstring}</div>
       </div>
     </div>
   )

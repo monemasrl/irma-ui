@@ -11,7 +11,7 @@ function Header() {
         <header className={style.header}>
             <div className={style.wrapperlogo}>
                 <img className={style.logo} src="/images/logo.svg" alt="logo" />
-                <div className={style.header_text}>{userSharedData.selectedOrg.label} / {userSharedData.selectedApp.label}</div>
+                {/* <div className={style.header_text}>{userSharedData.selectedApp.label}</div> */}
             </div>
             <Navbar />
         </header>

@@ -10,11 +10,16 @@
     cursor: pointer;
     outline: 2px solid transparent;
     text-align: center;
-
     @include dashboardBackground;
+&.rec{
+    /* background-color: #fabe74;
+    box-shadow: 0 0 5px #834e10 inset; */
+    outline: 4px solid #fabe74;
+}
 }
 
 .lista {
+
     &.btnbox {
         width: 100%;
         height: auto;
@@ -44,9 +49,12 @@
     &.btnOn {
         background-color: transparent;
         box-shadow: 0px 0px 0px transparent;
-        background-color: lightgray;
+        background-color: rgb(226, 224, 224);
         outline: 0px solid white;
+        &.rec{
 
+            outline: 4px solid #fabe74;
+        }
         .codeName {
             border-bottom: 0;
         }
