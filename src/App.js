@@ -46,7 +46,7 @@ function App() {
       socket.off('disconnect');
       socket.off('change');
     };
-  }, []);
+  }, []);// eslint-disable-line react-hooks/exhaustive-deps
 
 
   useEffect(() => getData(), [userSharedData.selectedAppID]); // eslint-disable-line react-hooks/exhaustive-deps
