@@ -1,0 +1,47 @@
+
+@use '../../assets/scss/variabili' as v;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: v.$backHeader;
+}
+.wrapperInnerHader {
+  .wrapperlogo {
+    background-color: rgb(246, 246, 246);
+    padding: 20px 10px 10px 10px;
+    margin-left: 40px;
+    margin-top: -27px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px #a5a5a5;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin-right: 2rem;
+  }
+  .logo {
+    width: 110px;
+  }
+  .header_text {
+    font-size: 1.8em;
+    font-family: "Open Sans Bold";
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    line-height: 1;
+    color: gray;
+  }
+
+  display: flex;
+  padding-top: 17px;
+  .org,
+  .app {
+    color: v.$gray;
+    font-size: 1rem;
+    font-family: "Open Sans Bold";
+    margin-bottom: 5px;
+    span {
+      font-family: "Open Sans Regular";
+    }
+  }
+}

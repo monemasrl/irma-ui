@@ -1,16 +1,16 @@
 import React from 'react'
 import style from './boxDati.module.scss'
-import {motion} from 'framer-motion'
+import { motion } from 'framer-motion'
 function BoxDefault({ datiDefault }) {
-   
-          
+
+
     return (
         <motion.header
-        key={datiDefault}
-        initial={{ opacity: 0, top: 20, position:'relative' }}
-        animate={{ opacity: 1, top: 0, position:'relative' }}
-        exit={{ opacity: 0, top:20 }}
-        transition={{ duration: .5 }}
+            key={datiDefault}
+            initial={{ opacity: 0, top: 20, position: 'relative' }}
+            animate={{ opacity: 1, top: 0, position: 'relative' }}
+            exit={{ opacity: 0, top: 20 }}
+            transition={{ duration: .5 }}
         >
             <ul>
                 <li>

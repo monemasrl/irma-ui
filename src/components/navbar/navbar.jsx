@@ -1,8 +1,6 @@
 import React, { useState, useContext } from 'react'
-import Select from 'react-select';
 import style from './navbar.module.scss'
 import { FiUser, FiSettings } from 'react-icons/fi'
-import { motion, AnimatePresence } from 'framer-motion'
 import { UserContext } from '../../context/user-context';
 import AuthService from '../../services/auth.service';
 import UserMenu from './userMenu';
