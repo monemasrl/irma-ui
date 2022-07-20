@@ -29,10 +29,12 @@ function App() {
   useEffect(() => {
     socket.on('connect', () => {
       setIsConnected(true);
+      console.log(isConnected);
     });
 
     socket.on('disconnect', () => {
       setIsConnected(false);
+      console.log(isConnected);
     });
 
     socket.on('change', () => {
@@ -47,7 +49,7 @@ function App() {
   }, []);
 
 
-  useEffect(() => getData(), [userSharedData.selectedAppID]);
+  useEffect(() => getData(), [userSharedData.selectedAppID]); // eslint-disable-line react-hooks/exhaustive-deps
 
 
   const getData = () => {
@@ -100,9 +102,6 @@ function App() {
 
 }, [data, listview])
 
-  useEffect(() => {
-    getData()
-  }, [])
 
   function isAlert() {
     // controlla se c'è un alert nell'array in entrata
