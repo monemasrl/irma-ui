@@ -5,7 +5,6 @@ import { UserContext } from '../../context/user-context';
 
 function Header() {
 
-    const userSharedData = useContext(UserContext);
 
     return (
         <header className={style.header}>
