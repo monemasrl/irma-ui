@@ -107,17 +107,17 @@ function BoxStaker({ dati }) {
         >
             <div className={style.title}>
                 <div className={style.titoletto}>Reach Staker</div>
-                <div className={style.codiceStaker}>{dati?.sensorId}</div>
+                <div className={style.codiceStaker}>{dati?.sensorName}</div>
             </div>
 
             <StatoSensore statoSensore={dati?.state} />
             {dati?.state === 'ok' &&
-                <BtnStartRec applicationID={dati.applicationID} devEUI={dati.devEUI}/>
+                <BtnStartRec applicationID={dati.applicationID} sensorID={dati.sensorID}/>
             }
             <div className={style.datiInterni}>
                 {dati?.datiInterni?.map((item, index) =>
                     <React.Fragment key={item.titolo}>
-                        <BloccoNumerico datiNumerici={item} sensorId={dati.sensorId} index={index} />
+                        <BloccoNumerico datiNumerici={item} sensorID={dati.sensorID} index={index} />
                     </React.Fragment >
                 )}
             </div>
