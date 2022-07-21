@@ -2,7 +2,6 @@ import { useState, useEffect, useContext } from 'react'
 import Header from './components/header/header';
 import Footer from './components/footer/footer';
 import Loaderdash from './components/loaders/loaderdash';
-import Loaderbox from './components/loaders/loaderbox';
 import { lazy, Suspense } from 'react';
 import { ShareContextProvider, ShareContext } from './context/context';
 import { UserContext } from './context/user-context';
@@ -141,9 +140,9 @@ function App() {
                   </Suspense>
                   <Footer />
                 </div>
-                <Suspense fallback={<Loaderbox />}>
+              
                   <BoxDati stakerClicked={stakerClicked} datiDefault={datiDefault()} dati={datiOrdinatiLista ? datiOrdinatiLista[stakerClicked] : {}} />
-                </Suspense>
+               
               </div>
             </main>
             )}
