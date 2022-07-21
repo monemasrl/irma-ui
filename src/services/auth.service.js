@@ -1,10 +1,10 @@
-import ChirpStack from './chirpstack-api.service';
+import Microservice from './microservice.service';
 
-const login = (email, password) => {
-  return ChirpStack.getJWTToken(email, password)
+const login = (username, password) => {
+  return Microservice.authenticate(username, password)
     .then((response) => {
-      localStorage.setItem("jwt-token", response.data?.jwt);
-      return response.data?.jwt;
+      localStorage.setItem("jwt-token", response.data?.access_token);
+      return response.data?.access_token;
     });
 }
 

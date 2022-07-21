@@ -1,6 +1,6 @@
 import React, { createContext, useState, useEffect } from "react";
 import AuthService from '../services/auth.service';
-import ChirpStack from "../services/chirpstack-api.service";
+import Microservice from "../services/microservice.service";
 import { useNavigate } from "react-router-dom";
 
 const UserContext = createContext();
@@ -14,11 +14,12 @@ function UserContextProvider({ children }) {
   const navigate = useNavigate();
 
   useEffect(() => {
-    ChirpStack.getOrganizationsList(AuthService.getUserData())
+    Microservice.getOrganizationsList(AuthService.getUserData())
       .then((list) => {
-        let options = list.map(({id, displayName}) => ({
-          value: id,
-          label: displayName
+        console.log('organizations', list)
+        let options = list.map(({_id, organizationName}) => ({
+          value: _id["$oid"],
+          label: organizationName
         }));
         setOrgOptions(options);
       });
@@ -30,13 +31,14 @@ function UserContextProvider({ children }) {
   }, [orgOptions]);
 
   useEffect(() => {
-    if (selectedOrg === {}) return;
+    if (selectedOrg?.value === undefined) return;
 
-    ChirpStack.getApplicationList(AuthService.getUserData(), selectedOrg.value)
+    Microservice.getApplicationList(AuthService.getUserData(), selectedOrg.value)
       .then((list) => {
-        let options = list.map(({id, name}) => ({
-          value: id,
-          label: name
+        console.log('applications', list)
+        let options = list.map(({_id, applicationName}) => ({
+          value: _id["$oid"],
+          label: applicationName
         }));
         setAppOptions(options);
       });

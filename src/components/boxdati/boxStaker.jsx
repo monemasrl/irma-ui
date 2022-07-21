@@ -37,12 +37,12 @@ function StatoSensore({ statoSensore }) {
     )
 }
 
-function BloccoNumerico({ datiNumerici, sensorId, index }) {
+function BloccoNumerico({ datiNumerici, sensorID, index }) {
 
     return (
         <>
             <motion.div
-                key={sensorId}
+                key={sensorID}
                 className={style.bloccoDati}
                 initial={{ opacity: 0, top: 20 }}
                 animate={{ opacity: 1, top: 0 }}
@@ -56,17 +56,18 @@ function BloccoNumerico({ datiNumerici, sensorId, index }) {
     )
 }
 
-function BtnStartRec({ applicationID, devEUI }) {
+function BtnStartRec({ applicationID, sensorID }) {
 
     const [statoInvioDati, setStatoInvioDati] = useState(false)
 
     
-    function iniziaLettura(applicationID, devEUI) {
+    function iniziaLettura(applicationID, sensorID) {
 
+      // TODO: edit payload
         const dataPost = {
             statoStaker: 1,
             applicationID: applicationID,
-            devEUI: devEUI
+            sensorID: sensorID
         }
 
         setStatoInvioDati(true)
@@ -85,7 +86,7 @@ function BtnStartRec({ applicationID, devEUI }) {
 
     return (
         <div className={style.wrapperbutton}>
-            <button disabled={statoInvioDati} onClick={() => iniziaLettura(applicationID, devEUI)}>
+            <button disabled={statoInvioDati} onClick={() => iniziaLettura(applicationID, sensorID)}>
           Inizia Rilevamento
             </button>
         </div>
@@ -98,7 +99,7 @@ function BoxStaker({ dati }) {
     return (
 
         <motion.header
-            key={dati?.sensorId}
+            key={dati?.sensorID}
             initial={{ opacity: 0, top: 20, position: 'relative' }}
             animate={{ opacity: 1, top: 0, position: 'relative' }}
             exit={{ opacity: 0, top: 20 }}

@@ -7,7 +7,7 @@ import { ShareContextProvider, ShareContext } from './context/context';
 import { UserContext } from './context/user-context';
 import './App.scss';
 import io from 'socket.io-client';
-import ChirpStack from './services/chirpstack-api.service';
+import Microservice from './services/microservice.service';
 
 const Dashboard = lazy(() => import('./components/dashboard/dashboard'))
 const BoxDati = lazy(() => import('./components/boxdati/boxDati'))
@@ -48,17 +48,20 @@ function App() {
   }, []);// eslint-disable-line react-hooks/exhaustive-deps
 
 
-  useEffect(() => getData(), [userSharedData.selectedAppID]); // eslint-disable-line react-hooks/exhaustive-deps
+  useEffect(() => getData(), [userSharedData.selectedApp]); // eslint-disable-line react-hooks/exhaustive-deps
 
 
   const getData = () => {
-    if (userSharedData.selectedAppID === -1) return;
+    if (userSharedData.selectedApp?.value === undefined) return;
 
-    ChirpStack.getDeviceSensorPaths(userSharedData.token, userSharedData.selectedAppID)
-      .then((sensor_paths) => {
-        console.log('sensor_paths', sensor_paths);
+    Microservice.getSensors(userSharedData.token, userSharedData.selectedApp.value)
+      .then((list) => {
+        console.log('sensors', list)
+
+        const sensorIDList = list.map(({sensorID}) => sensorID);
+
         const dataPost = {
-          paths: sensor_paths,
+          paths: sensorIDList,
         }
 
         fetch(`${WEBSOCKET_URL}:${WEBSOCKET_PORT}/`
