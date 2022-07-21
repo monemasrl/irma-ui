@@ -63,16 +63,13 @@ function BtnStartRec({ applicationID, sensorID }) {
     
     function iniziaLettura(applicationID, sensorID) {
 
-      // TODO: edit payload
         const dataPost = {
-            statoStaker: 1,
-            applicationID: applicationID,
-            sensorID: sensorID
+            command: 1
         }
 
         setStatoInvioDati(true)
 
-        fetch(`${WEBSOCKET_URL}:${WEBSOCKET_PORT}/downlink`, {
+        fetch(`${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/${applicationID}/${sensorID}/commands`, {
             method: 'POST',
             headers: { "Content-Type": "application/json", "Access-Control-Allow-Origin":`${WEBSOCKET_URL}:${WEBSOCKET_PORT}/downlink`},
             body: JSON.stringify(dataPost)

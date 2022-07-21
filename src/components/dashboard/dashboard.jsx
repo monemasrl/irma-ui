@@ -23,9 +23,9 @@ function Dashboard({ isAlert, datiOrdinatiLista, stakerClicked, setStakerClicked
             </div>
             {datiOrdinatiLista ? datiOrdinatiLista.map((item, index) => {
                 return (
-                    <BtnStaker key={item.sensorId}
+                    <BtnStaker key={item.sensorID}
                         state={item.state}
-                        code={item.sensorId}
+                        code={item.sensorName}
                         index={index}
                         setStakerClicked={setStakerClicked}
                         stakerClicked={stakerClicked}
