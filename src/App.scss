@@ -85,6 +85,13 @@ main {
 .back-default img {
     width: 400px;
 }
+.loader-generico {
+ width: 100%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+
+}
 
 @keyframes backdefault {
     from {

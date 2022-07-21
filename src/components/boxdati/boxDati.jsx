@@ -6,8 +6,8 @@ import BoxAlert from './boxAlert';
 import BoxConfirm from './modali/boxConfirm';
 import { ShareContext } from '../../context/context';
 import { useContext } from 'react'
-import { useAnimation, motion } from 'framer-motion'
-
+import { useAnimation, motion, AnimatePresence } from 'framer-motion'
+import Loader from '../loaders/loader';
 function BoxDati({ datiDefault, dati, stakerClicked }) {
 
   const animationControls = useAnimation();
@@ -17,18 +17,18 @@ function BoxDati({ datiDefault, dati, stakerClicked }) {
     if (typeof (stakerClicked) === 'number') {
       await animationControls.start({ opacity: 1 });
       animationControls.start({
-        scale:1,
+        scale: 1,
         x: -5,
         transition: {
           ease: "easeInOut",
           duration: .5,
-          
+
         }
       });
     } else {
       await animationControls.start({ opacity: 1 });
       animationControls.start({
-        scale:0.95,
+        scale: 0.95,
         x: -20,
         transition: {
           ease: "easeInOut",
@@ -43,27 +43,29 @@ function BoxDati({ datiDefault, dati, stakerClicked }) {
   useEffect(() => {
     sequence();
   }, [stakerClicked]);// eslint-disable-line react-hooks/exhaustive-deps
-
+  console.log('dati', dati);
 
   return (
-    <motion.div
-      animate={animationControls}
-      className={`${style.boxDati} ${style[dati?.state]} ${share.confirm ? style.modalOpen : ''}`}>
+    <AnimatePresence>
+      <motion.div
+        animate={animationControls}
+        className={`${style.boxDati} ${style[dati?.state]} ${share.confirm ? style.modalOpen : ''}`}>
+        {datiDefault ?
+          <>  {dati?.state === 'ok' && <BoxStaker dati={dati && dati} />}
 
-      {dati?.state === 'ok' && <BoxStaker dati={dati && dati} />}
+            {dati?.state === 'rec' && <BoxStaker dati={dati && dati} />}
 
-      {dati?.state === 'rec' && <BoxStaker dati={dati && dati} />}
+            {dati?.state === 'off' && <BoxStaker dati={dati && dati} />}
 
-      {dati?.state === 'off' && <BoxStaker dati={dati && dati} />}
+            {stakerClicked === false && <BoxDefault datiDefault={datiDefault && datiDefault} />}
 
-      {stakerClicked === false && <BoxDefault datiDefault={datiDefault && datiDefault} />}
+            {dati?.state === 'alert' && <BoxAlert dati={dati && dati} />}
 
-      {dati?.state === 'alert' && <BoxAlert dati={dati && dati} />}
+            <BoxConfirm /></>
+          : <Loader immagineLoader={"/images/cont.svg"} number={4} />}
 
-      <BoxConfirm />
-
-
-    </motion.div>
+      </motion.div>
+    </AnimatePresence>
   )
 }
 
