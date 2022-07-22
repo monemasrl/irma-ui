@@ -64,11 +64,58 @@ const getSensors = (token, appID) => {
     });
 }
 
+const sendCommand = (token, applicationID, sensorID, commandType) => {
+  return axios
+    .post(
+      `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/command`,
+      {
+        "command": commandType,
+        "applicationID": applicationID,
+        "sensorID": sensorID
+      },
+      {
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`,
+        },
+      })
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+}
+
+const sendConfirm = (token, alertID, confirmNote) => {
+  return axios
+    .post(
+      `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/confirm`,
+      {
+        "alertID": alertID,
+        "confirmNote": confirmNote
+      },
+      {
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`,
+        }
+      })
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+}
+
 const Microservice = {
   authenticate,
   getOrganizationsList,
   getApplicationList,
-  getSensors
+  getSensors,
+  sendCommand,
+  sendConfirm
 };
 
 export default Microservice;
