@@ -76,7 +76,7 @@ function App() {
           }
         )
           .then(function (response) {
-
+            console.log('readings', response);
 
             return response.json()
           })
