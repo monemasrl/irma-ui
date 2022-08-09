@@ -64,12 +64,14 @@ function BtnStartRec({ applicationID, sensorID }) {
     function iniziaLettura(applicationID, sensorID) {
 
         const dataPost = {
-            command: 1
+            command: 0,
+            sensorID: sensorID,
+            applicationID: applicationID,
         }
 
         setStatoInvioDati(true)
 
-        fetch(`${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/${applicationID}/${sensorID}/commands`, {
+        fetch(`${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/command`, {
             method: 'POST',
             headers: { "Content-Type": "application/json", "Access-Control-Allow-Origin":`${WEBSOCKET_URL}:${WEBSOCKET_PORT}/downlink`},
             body: JSON.stringify(dataPost)
