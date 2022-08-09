@@ -51,7 +51,7 @@ function BtnStaker({ state, code, setStakerClicked, index, stakerClicked, listvi
     setStakerClicked((prevIndex) => prevIndex === index ? false : index)
   }
 
-  const codeSubstring = code.slice(8)
+  const codeSubstring = code.slice(0, 8)
 
   return (
     <div onClick={() => settaStatiOnClick()}
