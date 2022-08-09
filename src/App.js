@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from 'react'
+import { useState, useEffect, useContext, useCallback } from 'react'
 import Header from './components/header/header';
 import Footer from './components/footer/footer';
 import Loaderdash from './components/loaders/loaderdash';
@@ -36,23 +36,17 @@ function App() {
       console.log(isConnected);
     });
 
-    socket.on('change', () => {
-      getData();
-    });
-
     return () => {
       socket.off('connect');
       socket.off('disconnect');
       socket.off('change');
     };
-  }, []);// eslint-disable-line react-hooks/exhaustive-deps
+  }, [isConnected]);
 
-
-  useEffect(() => getData(), [userSharedData.selectedApp]); // eslint-disable-line react-hooks/exhaustive-deps
-
-
-  const getData = () => {
+  const getData = useCallback(() => {
+    console.log("UserSharedData", userSharedData)
     if (userSharedData.selectedApp?.value === undefined) return;
+    console.log("[INFO] fetching data")
 
     Microservice.getSensors(userSharedData.token, userSharedData.selectedApp.value)
       .then((list) => {
@@ -85,7 +79,20 @@ function App() {
             setData(myJson)
           });
       });
-  }
+  }, [userSharedData]);
+
+  useEffect(() => {
+    socket.on('change', () => {
+      console.log("[SocketIO] Detected change")
+      getData();
+    });
+
+    return () => {
+      socket.off('change');
+    };
+  }, [getData]);
+
+  useEffect(() => getData(), [userSharedData.selectedApp, getData]);
   
 
   useEffect(() => {
