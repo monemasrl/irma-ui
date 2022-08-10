@@ -79,3 +79,6 @@ Le opzioni disponibili sono:
 - REACT_APP_CHIRPSTACK_PORT, default "8080".
 - REACT_APP_WEBSOCKET_URL, default "http://localhost".
 - REACT_APP_WEBSOCKET_PORT, default "5000".
+- REACT_APP_DISABLE_SOCKETIO, default `0`.
+- REACT_APP_MOCK_LOGIN, default `0`.
+- REACT_APP_MOCK_SENSORDATA, default `0`.
