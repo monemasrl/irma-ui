@@ -15,31 +15,34 @@ const BoxDati = lazy(() => import('./components/boxdati/boxDati'))
 const WEBSOCKET_URL = process.env.REACT_APP_WEBSOCKET_URL || "http://localhost"
 const WEBSOCKET_PORT = process.env.REACT_APP_WEBSOCKET_PORT || "5000"
 
-const socket = io(`${WEBSOCKET_URL}:${WEBSOCKET_PORT}`);
-console.log('WEBSOCKET_URL',WEBSOCKET_PORT );
+const DISABLE_SOCKETIO = process.env.REACT_APP_DISABLE_SOCKETIO || 0;
+
+const socket = !DISABLE_SOCKETIO ? io(`${WEBSOCKET_URL}:${WEBSOCKET_PORT}`) : undefined;
+
+console.log(WEBSOCKET_URL, WEBSOCKET_PORT, socket);
+
 function App() {
   const [data, setData] = useState(false);
   const [stakerClicked, setStakerClicked] = useState(false);
   const [listview, setListView] = useState(false)
   const [datiOrdinatiLista, setDatiOrdinatiLista] = useState('')
-  const [isConnected, setIsConnected] = useState(socket.connected);
+  const [isConnected, setIsConnected] = useState(socket?.connected);
   const userSharedData = useContext(UserContext);
   
   useEffect(() => {
-    socket.on('connect', () => {
+    socket?.on('connect', () => {
       setIsConnected(true);
       console.log(isConnected);
     });
 
-    socket.on('disconnect', () => {
+    socket?.on('disconnect', () => {
       setIsConnected(false);
       console.log(isConnected);
     });
 
     return () => {
-      socket.off('connect');
-      socket.off('disconnect');
-      socket.off('change');
+      socket?.off('connect');
+      socket?.off('disconnect');
     };
   }, [isConnected]);
 
@@ -82,13 +85,13 @@ function App() {
   }, [userSharedData]);
 
   useEffect(() => {
-    socket.on('change', () => {
+    socket?.on('change', () => {
       console.log("[SocketIO] Detected change")
       getData();
     });
 
     return () => {
-      socket.off('change');
+      socket?.off('change');
     };
   }, [getData]);
 
