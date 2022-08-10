@@ -16,15 +16,28 @@ function UserContextProvider({ children }) {
   const navigate = useNavigate();
 
   useEffect(() => {
-    Microservice.getOrganizationsList(AuthService.getUserData())
-      .then((list) => {
-        console.log('organizations', list)
-        let options = list.map(({_id, organizationName}) => ({
-          value: _id["$oid"],
-          label: organizationName
-        }));
-        setOrgOptions(options);
-      });
+    const func = async () => {
+
+      if (MOCK_SENSORDATA) {
+        const MockData = (await import('../mock/mock_data')).default;
+        setOrgOptions(MockData.orgOptions);
+        return;
+      }
+
+      const list = await
+        Microservice.getOrganizationsList(AuthService.getUserData());
+
+      console.log('organizations', list);
+
+      const options = list.map(({_id, organizationName}) => ({
+        value: _id["$oid"],
+        label: organizationName
+      }));
+
+      setOrgOptions(options);
+    };
+
+    func();
   }, []);
   
   useEffect(() => {
@@ -35,15 +48,28 @@ function UserContextProvider({ children }) {
   useEffect(() => {
     if (selectedOrg?.value === undefined) return;
 
-    Microservice.getApplicationList(AuthService.getUserData(), selectedOrg.value)
-      .then((list) => {
-        console.log('applications', list)
-        let options = list.map(({_id, applicationName}) => ({
+    const func = async () => {
+
+      if (MOCK_SENSORDATA) {
+        const MockData = (await import('../mock/mock_data')).default;
+        setAppOptions(MockData.appOptions[selectedOrg.value]);
+        return;
+      }
+
+      const list = await
+        Microservice.getApplicationList(AuthService.getUserData(), selectedOrg.value);
+
+        console.log('applications', list);
+
+        const options = list.map(({_id, applicationName}) => ({
           value: _id["$oid"],
           label: applicationName
         }));
+
         setAppOptions(options);
-      });
+    }
+
+    func();
   }, [selectedOrg, orgOptions]);
 
   useEffect(() => {
