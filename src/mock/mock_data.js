@@ -116,7 +116,9 @@ const sensorData = {
               "dato": 10
           },
       ],
-      "unconfirmedAlertIDs": []
+      "unconfirmedAlertIDs": [
+        "alertID_123"
+      ]
     },
   ],
   "app2-org1_value": [],

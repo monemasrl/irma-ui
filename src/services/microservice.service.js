@@ -90,7 +90,7 @@ const sendCommand = (token, applicationID, sensorID, commandType) => {
 const sendConfirm = (token, alertID, confirmNote) => {
   return axios
     .post(
-      `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/confirm`,
+      `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/alert/confirm`,
       {
         "alertID": alertID,
         "confirmNote": confirmNote

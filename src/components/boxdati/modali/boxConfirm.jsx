@@ -7,7 +7,7 @@ import { CloseIcon } from '../../ui/ui'
 import { motion, AnimatePresence } from 'framer-motion'
 import { FormAlert } from '../../form/form'
 
-function BoxConfirm() {
+function BoxConfirm({ alertID }) {
     const share = useContext(ShareContext)
 
     return (
@@ -39,7 +39,7 @@ function BoxConfirm() {
                                 <div className={style.testoConferma}>
                                     Confermi la segnalazione?
                                 </div>
-                                <FormAlert />
+                                <FormAlert alertID={alertID}/>
                             </>
                         }
 

@@ -7,7 +7,6 @@ const ShareContext = createContext();
 function ShareContextProvider({children}) {
 
     const [confirmModal, setConfirmModal] = useState(false) 
-    const [alertData, setAlertData] = useState({})
 
     const uiStatiSensore = {
         ok: 'sensore funzionante',
@@ -22,8 +21,6 @@ function ShareContextProvider({children}) {
         confirm: confirmModal,
         setConfirm: setConfirmModal,
         uiStatiSensore: uiStatiSensore,
-        alertData: alertData,
-        setAlertData: setAlertData
     }
 
     return (

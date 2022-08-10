@@ -1,18 +1,24 @@
 import React from 'react'
 import { ShareContext } from '../../context/context'
+import { UserContext } from '../../context/user-context';
 import { useContext } from 'react'
 import { useForm } from "react-hook-form";
+import Microservice from '../../services/microservice.service';
 
 
 
-function FormAlert() {
+function FormAlert({ alertID }) {
     const { register, handleSubmit, formState: { errors } } = useForm();
 
     const share = useContext(ShareContext)
+    const userSharedData = useContext(UserContext);
 
     function submitting(data) {
-        share.setAlertData(data)
         share.setConfirm(false)
+
+        console.log("Alert data", data, alertID);
+
+        Microservice.sendConfirm(userSharedData.token, alertID, data.noteAlert);
     }
 
     return (
