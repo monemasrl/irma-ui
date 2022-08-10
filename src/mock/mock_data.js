@@ -32,9 +32,102 @@ const appOptions = {
   ]
 }
 
+const sensorData = {
+  "app1-org1_value": [
+    {
+      "sensorID": "1",
+      "sensorName": "sensor1_a1o1",
+      "applicationID": "app1-org1_value",
+      "state": "off",
+      "datiInterni": [
+          {
+              "titolo": "Media Letture Totali",
+              "dato": 2
+          },
+          {
+              "titolo": "Media Letture Mensili",
+              "dato": 3.5
+          },
+          {
+              "titolo": "Letture eseguite nel mese",
+              "dato": 7
+          },
+      ],
+      "unconfirmedAlertIDs": []
+    },
+    {
+      "sensorID": "2",
+      "sensorName": "sensor2_a1o1",
+      "applicationID": "app1-org1_value",
+      "state": "ok",
+      "datiInterni": [
+          {
+              "titolo": "Media Letture Totali",
+              "dato": 4.6
+          },
+          {
+              "titolo": "Media Letture Mensili",
+              "dato": 1.5
+          },
+          {
+              "titolo": "Letture eseguite nel mese",
+              "dato": 10
+          },
+      ],
+      "unconfirmedAlertIDs": []
+    },
+    {
+      "sensorID": "3",
+      "sensorName": "sensor3_a1o1",
+      "applicationID": "app1-org1_value",
+      "state": "rec",
+      "datiInterni": [
+          {
+              "titolo": "Media Letture Totali",
+              "dato": 4.6
+          },
+          {
+              "titolo": "Media Letture Mensili",
+              "dato": 1.5
+          },
+          {
+              "titolo": "Letture eseguite nel mese",
+              "dato": 10
+          },
+      ],
+      "unconfirmedAlertIDs": []
+    },
+    {
+      "sensorID": "4",
+      "sensorName": "sensor4_a1o1",
+      "applicationID": "app1-org1_value",
+      "state": "alert",
+      "datiInterni": [
+          {
+              "titolo": "Media Letture Totali",
+              "dato": 4.6
+          },
+          {
+              "titolo": "Media Letture Mensili",
+              "dato": 1.5
+          },
+          {
+              "titolo": "Letture eseguite nel mese",
+              "dato": 10
+          },
+      ],
+      "unconfirmedAlertIDs": []
+    },
+  ],
+  "app2-org1_value": [],
+  "app1-org2_value": [],
+  "app2-org2_value": [],
+}
+
 const MockData = {
   orgOptions,
-  appOptions
+  appOptions,
+  sensorData
 };
 
 export default MockData;

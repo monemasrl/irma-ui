@@ -16,6 +16,7 @@ const WEBSOCKET_URL = process.env.REACT_APP_WEBSOCKET_URL || "http://localhost"
 const WEBSOCKET_PORT = process.env.REACT_APP_WEBSOCKET_PORT || "5000"
 
 const DISABLE_SOCKETIO = process.env.REACT_APP_DISABLE_SOCKETIO || 0;
+const MOCK_SENSORDATA = process.env.REACT_APP_MOCK_SENSORDATA || 0;
 
 const socket = !DISABLE_SOCKETIO ? io(`${WEBSOCKET_URL}:${WEBSOCKET_PORT}`) : undefined;
 
@@ -47,12 +48,27 @@ function App() {
   }, [isConnected]);
 
   const getData = useCallback(() => {
-    console.log("UserSharedData", userSharedData)
-    if (userSharedData.selectedApp?.value === undefined) return;
-    console.log("[INFO] fetching data")
 
-    Microservice.getSensors(userSharedData.token, userSharedData.selectedApp.value)
-      .then((list) => {
+    const func = async () => {
+
+      console.log("UserSharedData", userSharedData)
+      if (userSharedData.selectedApp?.value === undefined) return;
+      console.log("[INFO] fetching data")
+
+      if (MOCK_SENSORDATA) {
+        const MockData = (await import('./mock/mock_data')).default;
+        const data = MockData.sensorData[userSharedData.selectedApp.value];
+
+        setData({
+          data: data
+        });
+
+        return;
+      }
+
+      const list = await
+        Microservice.getSensors(userSharedData.token, userSharedData.selectedApp.value);
+
         console.log('sensors', list)
 
         const sensorIDList = list.map(({sensorID}) => sensorID);
@@ -61,27 +77,24 @@ function App() {
           paths: sensorIDList,
         }
 
-        fetch(`${WEBSOCKET_URL}:${WEBSOCKET_PORT}/`
-          , {
-            method :'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              'Accept': 'application/json',
-              "Access-Control-Allow-Origin":`${WEBSOCKET_URL}:${WEBSOCKET_PORT}/`
-            },
-            body: JSON.stringify(dataPost),
-          }
-        )
-          .then(function (response) {
-            console.log('readings', response);
+        const response = await fetch(`${WEBSOCKET_URL}:${WEBSOCKET_PORT}/`
+            , {
+              method :'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+                "Access-Control-Allow-Origin":`${WEBSOCKET_URL}:${WEBSOCKET_PORT}/`
+              },
+              body: JSON.stringify(dataPost),
+            }
+          );
 
-            return response.json()
-          })
-          .then(function (myJson) {
+        console.log('readings', response);
 
-            setData(myJson)
-          });
-      });
+        setData(response.json());
+    }
+
+    func();
   }, [userSharedData]);
 
   useEffect(() => {
