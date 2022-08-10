@@ -5,6 +5,8 @@ import { useNavigate } from "react-router-dom";
 
 const UserContext = createContext();
 
+const MOCK_SENSORDATA = process.env.REACT_APP_MOCK_SENSORDATA || 0;
+
 function UserContextProvider({ children }) {
   const [token, setToken] = useState(AuthService.getUserData());
   const [selectedOrg, setSelectedOrg] = useState({});
