@@ -57,41 +57,43 @@ function App() {
 
       if (MOCK_SENSORDATA) {
         const MockData = (await import('./mock/mock_data')).default;
-        const data = MockData.sensorData[userSharedData.selectedApp.value];
 
-        setData({
-          data: data
-        });
+        const data = {
+          data: MockData.sensorData[userSharedData.selectedApp.value]
+        }
 
+        setData(data.data.length ? data : false);
         return;
       }
 
       const list = await
         Microservice.getSensors(userSharedData.token, userSharedData.selectedApp.value);
 
-        console.log('sensors', list)
+      console.log('sensors', list)
 
-        const sensorIDList = list.map(({sensorID}) => sensorID);
+      const sensorIDList = list.map(({sensorID}) => sensorID);
 
-        const dataPost = {
-          paths: sensorIDList,
-        }
+      const dataPost = {
+        paths: sensorIDList,
+      }
 
-        const response = await fetch(`${WEBSOCKET_URL}:${WEBSOCKET_PORT}/`
-            , {
-              method :'POST',
-              headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json',
-                "Access-Control-Allow-Origin":`${WEBSOCKET_URL}:${WEBSOCKET_PORT}/`
-              },
-              body: JSON.stringify(dataPost),
-            }
-          );
+      const response = await fetch(`${WEBSOCKET_URL}:${WEBSOCKET_PORT}/`
+          , {
+            method :'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json',
+              "Access-Control-Allow-Origin":`${WEBSOCKET_URL}:${WEBSOCKET_PORT}/`
+            },
+            body: JSON.stringify(dataPost),
+          }
+        );
 
-        console.log('readings', response);
+      console.log('readings', response);
+      
+      const data = response.json();
 
-        setData(response.json());
+      setData(data?.data?.length ? data : false);
     }
 
     func();
@@ -123,6 +125,8 @@ function App() {
         setDatiOrdinatiLista(datiOrdinatiAlert)
     } else if (data && !listview) {
         setDatiOrdinatiLista(newdati)
+    } else {
+      setDatiOrdinatiLista(false);
     }
 
 }, [data, listview])
