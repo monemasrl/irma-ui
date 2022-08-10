@@ -144,6 +144,7 @@ function App() {
     if (data) {
       let ore = data.data.map((item) => item.datiInterni[0].dato)
       ore = ore.reduce((prev, item) => prev + item)
+      ore = Math.round((ore + Number.EPSILON) * 100) / 100
 
       let allerte = data.data.filter((item) => item.state === 'alert').length
 
