@@ -24,7 +24,7 @@ function OptionMenu({ userSharedData, setOpenSettings, openSettings }) {
                         <Select
                             name="org"
                             options={userSharedData.orgOptions}
-                            defaultValue={userSharedData.orgOptions.length ? userSharedData.orgOptions[0] : {}}
+                            value={userSharedData.selectedOrg}
                             onChange={(option) => userSharedData.setSelectedOrg(option)}
                             isDisabled={userSharedData.orgOptions.length < 2}
                         />
@@ -32,7 +32,7 @@ function OptionMenu({ userSharedData, setOpenSettings, openSettings }) {
                         <Select
                             name="app"
                             options={userSharedData.appOptions}
-                            defaultValue={userSharedData.appOptions.length ? userSharedData.appOptions[0] : {}}
+                            value={userSharedData.selectedApp}
                             onChange={(option) => userSharedData.setSelectedApp(option)}
                             isDisabled={userSharedData.appOptions.length < 2}
                         />
