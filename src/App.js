@@ -91,7 +91,7 @@ function App() {
 
       console.log('readings', response);
       
-      const data = response.json();
+      const data = await response.json();
 
       setData(data?.data?.length ? data : false);
     }
