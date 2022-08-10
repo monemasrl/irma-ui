@@ -1,11 +1,15 @@
 import Microservice from './microservice.service';
 
-const login = (username, password) => {
-  return Microservice.authenticate(username, password)
-    .then((response) => {
-      localStorage.setItem("jwt-token", response.data?.access_token);
-      return response.data?.access_token;
-    });
+const MOCK_LOGIN = process.env.REACT_APP_MOCK_LOGIN || 0;
+
+const login = async (username, password) => {
+  if (MOCK_LOGIN) {
+    return "1234foobar";
+  }
+
+  const response = Microservice.authenticate(username, password)
+  localStorage.setItem("jwt-token", response.data?.access_token);
+  return response.data?.access_token;
 }
 
 const logout = () => {
