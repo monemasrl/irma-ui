@@ -1,7 +1,9 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import style from './boxDati.module.scss'
 import { RiTerminalFill } from "react-icons/ri";
 import { motion } from "framer-motion"
+import Microservice from '../../services/microservice.service';
+import { UserContext } from '../../context/user-context';
 
 const WEBSOCKET_URL = process.env.REACT_APP_WEBSOCKET_URL || "http://localhost"
 const WEBSOCKET_PORT = process.env.REACT_APP_WEBSOCKET_PORT || "5000"
@@ -59,23 +61,16 @@ function BloccoNumerico({ datiNumerici, sensorID, index }) {
 function BtnStartRec({ applicationID, sensorID }) {
 
     const [statoInvioDati, setStatoInvioDati] = useState(false)
+    const userSharedData = useContext(UserContext);
 
     
     function iniziaLettura(applicationID, sensorID) {
 
-        const dataPost = {
-            command: 0,
-            sensorID: sensorID,
-            applicationID: applicationID,
-        }
-
         setStatoInvioDati(true)
 
-        fetch(`${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/command`, {
-            method: 'POST',
-            headers: { "Content-Type": "application/json", "Access-Control-Allow-Origin":`${WEBSOCKET_URL}:${WEBSOCKET_PORT}/downlink`},
-            body: JSON.stringify(dataPost)
-        }).then(() => {
+        Microservice.sendCommand(
+            userSharedData.token, applicationID, sensorID, 0
+        ).then(() => {
             console.log('stato aggiornato');
             setStatoInvioDati(false)
         }).catch(error => {
