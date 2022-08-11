@@ -53,7 +53,7 @@ const sensorData = {
               "dato": 7
           },
       ],
-      "unconfirmedAlertIDs": []
+      "unhandledAlertIDs": []
     },
     {
       "sensorID": "2",
@@ -74,7 +74,7 @@ const sensorData = {
               "dato": 10
           },
       ],
-      "unconfirmedAlertIDs": []
+      "unhandledAlertIDs": []
     },
     {
       "sensorID": "3",
@@ -95,7 +95,7 @@ const sensorData = {
               "dato": 10
           },
       ],
-      "unconfirmedAlertIDs": []
+      "unhandledAlertIDs": []
     },
     {
       "sensorID": "4",
@@ -116,7 +116,7 @@ const sensorData = {
               "dato": 10
           },
       ],
-      "unconfirmedAlertIDs": [
+      "unhandledAlertIDs": [
         "alertID_123"
       ]
     },

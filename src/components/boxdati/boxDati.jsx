@@ -61,8 +61,8 @@ function BoxDati({ datiDefault, dati, stakerClicked }) {
 
             {dati?.state === 'alert' && <BoxAlert dati={dati && dati} />}
 
-            <BoxConfirm alertID={ dati?.unconfirmedAlertIDs?.length
-              ? dati?.unconfirmedAlertIDs[0] : undefined }/></>
+            <BoxConfirm alertID={ dati?.unhandledAlertIDs?.length
+              ? dati?.unhandledAlertIDs[0] : undefined }/></>
           : <Loader immagineLoader={"/images/cont.svg"} number={4} />}
 
       </motion.div>
