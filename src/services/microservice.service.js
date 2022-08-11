@@ -64,8 +64,8 @@ const getSensors = (token, appID) => {
     });
 }
 
-const sendCommand = (token, applicationID, sensorID, commandType) => {
-  return axios
+const sendCommand = async (token, applicationID, sensorID, commandType) => {
+  const response = await axios
     .post(
       `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/command`,
       {
@@ -78,13 +78,10 @@ const sendCommand = (token, applicationID, sensorID, commandType) => {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${token}`,
         },
-      })
-      .then((response) => {
-        console.log(response);
-      })
-      .catch((error) => {
-        console.log(error);
       });
+
+  console.log(response);
+  return response;
 }
 
 const sendConfirm = (token, alertID, confirmNote) => {
