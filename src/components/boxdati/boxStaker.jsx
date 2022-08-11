@@ -5,9 +5,6 @@ import { motion } from "framer-motion"
 import Microservice from '../../services/microservice.service';
 import { UserContext } from '../../context/user-context';
 
-const WEBSOCKET_URL = process.env.REACT_APP_WEBSOCKET_URL || "http://localhost"
-const WEBSOCKET_PORT = process.env.REACT_APP_WEBSOCKET_PORT || "5000"
-
 function StatoSensore({ statoSensore }) {
 
     const uiStatiSensore = {
