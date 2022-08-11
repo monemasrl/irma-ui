@@ -18,7 +18,8 @@ function FormAlert({ alertID }) {
 
         console.log("Alert data", data, alertID);
 
-        Microservice.sendConfirm(userSharedData.token, alertID, data.noteAlert);
+        Microservice.handleAlert(
+            userSharedData.token, alertID, data.alertConfirm, data.noteAlert);
     }
 
     return (

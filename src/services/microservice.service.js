@@ -84,13 +84,14 @@ const sendCommand = async (token, applicationID, sensorID, commandType) => {
   return response;
 }
 
-const sendConfirm = (token, alertID, confirmNote) => {
+const handleAlert = (token, alertID, isConfirmed, handleNote) => {
   return axios
     .post(
-      `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/alert/confirm`,
+      `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/alert/handle`,
       {
         "alertID": alertID,
-        "confirmNote": confirmNote
+        "handleNote": handleNote,
+        "isConfirmed": isConfirmed
       },
       {
         headers: {
@@ -112,7 +113,7 @@ const Microservice = {
   getApplicationList,
   getSensors,
   sendCommand,
-  sendConfirm
+  handleAlert
 };
 
 export default Microservice;
