@@ -2,7 +2,6 @@ import React, { useState, useContext } from 'react'
 import style from './boxDati.module.scss'
 import { RiTerminalFill } from "react-icons/ri";
 import { motion } from "framer-motion"
-import Microservice from '../../services/microservice.service';
 import { UserContext } from '../../context/user-context';
 
 function StatoSensore({ statoSensore }) {
@@ -65,8 +64,8 @@ function BtnStartRec({ applicationID, sensorID }) {
 
         setStatoInvioDati(true)
 
-        Microservice.sendCommand(
-            userSharedData.token, applicationID, sensorID, 0
+        userSharedData.sendCommand(
+            applicationID, sensorID, 0
         ).then(() => {
             console.log('stato aggiornato');
             setStatoInvioDati(false)

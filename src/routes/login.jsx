@@ -1,5 +1,4 @@
 import { useState, useContext } from 'react';
-import AuthService from '../services/auth.service';
 import './login.scss';
 import '../components/ui/ui.css';
 import { UserContext } from '../context/user-context';
@@ -14,10 +13,7 @@ export default function Login() {
   const userSharedData = useContext(UserContext);
 
   const login = (email, password) => {
-    AuthService.login(email, password)
-      .then((token) => {
-        userSharedData.setToken(token);
-      })
+    userSharedData.login(email, password)
       .catch((error) => {
         setErrorMessage(error.response.data.message);
         setErrorHidden(false);

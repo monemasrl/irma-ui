@@ -3,89 +3,124 @@ import axios from 'axios';
 const WEBSOCKET_URL = process.env.REACT_APP_WEBSOCKET_URL || "http://localhost"
 const WEBSOCKET_PORT = process.env.REACT_APP_WEBSOCKET_PORT || "5000"
 
-const authenticate = (username, password) => {
-  return axios
-    .post(`${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/authenticate`, {
+const login = async (username, password) => {
+  const response = await axios
+    .post(`${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/login`, {
       username: username,
       password: password
     });
+
+  console.log("login", response);
+
+  return [response.data?.access_token, response.data?.refresh_token];
 }
 
-const getOrganizationsList = (token) => {
-  return axios
+const logout = async () => {
+  const response = await axios
+    .post(`${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/logout`);
+
+  console.log("logout", response);
+}
+
+const refresh = async (refreshToken) => {
+  const response = await axios
+    .post(`${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/refresh`,
+      {},
+      {
+        headers: {
+          'Authorization': `Bearer ${refreshToken}`,
+        },
+      });
+
+  console.log("refresh", response);
+
+  return response.data?.access_token;
+};
+
+const getOrganizationsList = async (token) => {
+  const response = await axios
     .get(`${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/organizations`,
       {
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token}`,
+          'Authorization': `Bearer ${token}`
         },
-      })
-    .then((response) => {
-      return response.data?.organizations;
-    })
-    .catch((error) => {
-      console.log(error);
-    });
-}
+      });
 
-const getApplicationList = (token, orgID) => {
-  return axios
+  console.log("Fetch orgs", response);
+  return response.data?.organizations;
+};
+
+const getApplicationsList = async (token, orgID) => {
+  const response = await axios
     .get(`${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/applications`,
       {
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token}`,
+          'Authorization': `Bearer ${token}`
         },
         params: {organizationID: orgID},
-      })
-    .then((response) => {
-      return response.data?.applications;
-    })
-    .catch((error) => {
-      console.log(error);
-    });
-}
+      });
 
-const getSensors = (token, appID) => {
-  return axios
+  console.log("Fetch apps", response);
+  return response.data?.applications;
+};
+
+const getSensors = async (token, appID) => {
+  const response = await axios
     .get(`${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/sensors`,
       {
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token}`,
+          'Authorization': `Bearer ${token}`
         },
         params: {applicationID: appID},
-      })
-    .then((response) => {
-      return response.data?.sensors;
-    })
-    .catch((error) => {
-      console.log(error);
-    });
+      });
+
+  console.log("getSensors", response);
+  return response.data?.sensors;
 }
 
-const sendCommand = async (token, applicationID, sensorID, commandType) => {
+const getReadings = async (token, sensorIDList) => {
+  const response = await axios
+    .post(`${WEBSOCKET_URL}:${WEBSOCKET_PORT}/`,
+      {
+        paths: sensorIDList
+      },
+      {
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+          'Authorization': `Bearer ${token}`
+        }
+      });
+
+  console.log("getReadings", response);
+  return response.data;
+}
+
+const sendCommand = async (token, appID, sensorID, commandType) => {
   const response = await axios
     .post(
       `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/command`,
       {
         "command": commandType,
-        "applicationID": applicationID,
+        "applicationID": appID,
         "sensorID": sensorID
       },
       {
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token}`,
-        },
+          'Authorization': `Bearer ${token}`
+        }
       });
 
-  console.log(response);
+  console.log("sendCommand", response);
   return response;
 }
 
-const handleAlert = (token, alertID, isConfirmed, handleNote) => {
-  return axios
+const handleAlert = async (token, alertID, isConfirmed, handleNote) => {
+  const response = await axios
     .post(
       `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/alert/handle`,
       {
@@ -96,22 +131,22 @@ const handleAlert = (token, alertID, isConfirmed, handleNote) => {
       {
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token}`,
-        }
-      })
-      .then((response) => {
-        console.log(response);
-      })
-      .catch((error) => {
-        console.log(error);
+          'Authorization': `Bearer ${token}`
+        },
       });
+
+  console.log("handleAlert", response);
+  return response;
 }
 
 const Microservice = {
-  authenticate,
+  login,
+  logout,
+  refresh,
   getOrganizationsList,
-  getApplicationList,
+  getApplicationsList,
   getSensors,
+  getReadings,
   sendCommand,
   handleAlert
 };

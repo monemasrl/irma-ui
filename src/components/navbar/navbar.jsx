@@ -2,7 +2,6 @@ import React, { useState, useContext } from 'react'
 import style from './navbar.module.scss'
 import { FiUser, FiSettings } from 'react-icons/fi'
 import { UserContext } from '../../context/user-context';
-import AuthService from '../../services/auth.service';
 import UserMenu from './userMenu';
 import OptionMenu from './optionMenu';
 
@@ -21,11 +20,6 @@ function Navbar() {
 
     const userSharedData = useContext(UserContext);
 
-    const logout = () => {
-        AuthService.logout();
-        userSharedData.setToken(null);
-    }
-
     return (
         <nav>
             <div className={style.burger}>
@@ -37,7 +31,7 @@ function Navbar() {
                 </div>
             </div>
         
-            <UserMenu logout={logout} openMenu={openMenu} setOpenMenu={setOpenMenu} datiUser={datiUser} />
+            <UserMenu logout={userSharedData.logout} openMenu={openMenu} setOpenMenu={setOpenMenu} datiUser={datiUser} />
             <OptionMenu openSettings={openSettings} setOpenSettings={setOpenSettings} userSharedData={userSharedData} />
          </nav>
     )

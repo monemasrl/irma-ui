@@ -7,7 +7,6 @@ import { ShareContextProvider, ShareContext } from './context/context';
 import { UserContext } from './context/user-context';
 import './App.scss';
 import io from 'socket.io-client';
-import Microservice from './services/microservice.service';
 
 const Dashboard = lazy(() => import('./components/dashboard/dashboard'))
 const BoxDati = lazy(() => import('./components/boxdati/boxDati'))
@@ -66,32 +65,13 @@ function App() {
         return;
       }
 
-      const list = await
-        Microservice.getSensors(userSharedData.token, userSharedData.selectedApp.value);
+      const list = await userSharedData.getSensors();
 
       console.log('sensors', list)
 
       const sensorIDList = list.map(({sensorID}) => sensorID);
 
-      const dataPost = {
-        paths: sensorIDList,
-      }
-
-      const response = await fetch(`${WEBSOCKET_URL}:${WEBSOCKET_PORT}/`
-          , {
-            method :'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              'Accept': 'application/json',
-              "Access-Control-Allow-Origin":`${WEBSOCKET_URL}:${WEBSOCKET_PORT}/`
-            },
-            body: JSON.stringify(dataPost),
-          }
-        );
-
-      console.log('readings', response);
-      
-      const data = await response.json();
+      const data = await userSharedData.getReadings(sensorIDList);
 
       setData(data?.data?.length ? data : false);
     }

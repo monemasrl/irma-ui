@@ -3,7 +3,6 @@ import { ShareContext } from '../../context/context'
 import { UserContext } from '../../context/user-context';
 import { useContext } from 'react'
 import { useForm } from "react-hook-form";
-import Microservice from '../../services/microservice.service';
 
 
 
@@ -18,8 +17,8 @@ function FormAlert({ alertID }) {
 
         console.log("Alert data", data, alertID);
 
-        Microservice.handleAlert(
-            userSharedData.token, alertID, !!+data.alertConfirm, data.noteAlert);
+        userSharedData.handleAlert(
+            alertID, !!+data.alertConfirm, data.noteAlert);
     }
 
     return (
