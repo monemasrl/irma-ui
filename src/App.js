@@ -50,7 +50,6 @@ function App() {
 
     const func = async () => {
 
-      console.log("UserSharedData", userSharedData)
       if (userSharedData.selectedApp?.value === undefined) return;
       console.log("[INFO] fetching data")
 
@@ -77,7 +76,7 @@ function App() {
     }
 
     func();
-  }, [userSharedData]);
+  }, [userSharedData.selectedApp?.value]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     socket?.on('change', () => {
@@ -90,7 +89,7 @@ function App() {
     };
   }, [getData]);
 
-  useEffect(() => getData(), [userSharedData.selectedApp, getData]);
+  useEffect(() => getData(), [userSharedData.selectedApp?.value, getData]);
   
 
   useEffect(() => {

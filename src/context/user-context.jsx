@@ -148,7 +148,7 @@ function UserContextProvider({ children }) {
   useEffect(() => {
     if (!orgOptions.length) return;
     setSelectedOrg(orgOptions[0]);
-  }, [orgOptions]);
+  }, [JSON.stringify(orgOptions)]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Fetch applications on selected organization change
   useEffect(() => {
@@ -183,13 +183,13 @@ function UserContextProvider({ children }) {
     }
 
     func();
-  }, [selectedOrg, orgOptions, accessToken, refreshIfUnauthorized]);
+  }, [selectedOrg.value, JSON.stringify(orgOptions), accessToken, refreshIfUnauthorized]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Change default application on applications change
   useEffect(() => {
     if (!appOptions.length) return;
     setSelectedApp(appOptions[0]);
-  }, [appOptions]);
+  }, [JSON.stringify(appOptions)]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Navigate the user on login and logout
   useEffect(() => {
