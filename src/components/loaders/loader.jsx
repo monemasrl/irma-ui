@@ -17,7 +17,8 @@ function Loader({immagineLoader, number}) {
         show: {
             opacity: 1, transition: {
                 duration: 0.5,
-                yoyo: Infinity,
+                repeat: Infinity,
+                reapeatType: 'reverse',
                 ease: "easeInOut",
             }
         },
