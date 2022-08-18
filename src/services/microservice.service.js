@@ -3,9 +3,9 @@ import axios from 'axios';
 const WEBSOCKET_URL = process.env.REACT_APP_WEBSOCKET_URL || "http://localhost"
 const WEBSOCKET_PORT = process.env.REACT_APP_WEBSOCKET_PORT || "5000"
 
-const login = async (username, password) => {
+const authenticate = async (username, password) => {
   const response = await axios
-    .post(`${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/login`, {
+    .post(`${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/authenticate`, {
       username: username,
       password: password
     });
@@ -13,14 +13,7 @@ const login = async (username, password) => {
   console.log("login", response);
 
   return [response.data?.access_token, response.data?.refresh_token];
-}
-
-const logout = async () => {
-  const response = await axios
-    .post(`${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/logout`);
-
-  console.log("logout", response);
-}
+};
 
 const refresh = async (refreshToken) => {
   const response = await axios
@@ -140,8 +133,7 @@ const handleAlert = async (token, alertID, isConfirmed, handleNote) => {
 }
 
 const Microservice = {
-  login,
-  logout,
+  authenticate,
   refresh,
   getOrganizationsList,
   getApplicationsList,

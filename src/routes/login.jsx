@@ -13,7 +13,7 @@ export default function Login() {
   const userSharedData = useContext(UserContext);
 
   const login = (email, password) => {
-    userSharedData.login(email, password)
+    userSharedData.authenticate(email, password)
       .catch((error) => {
         setErrorMessage(error.response.data.message);
         setErrorHidden(false);

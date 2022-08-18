@@ -20,14 +20,14 @@ function UserContextProvider({ children }) {
   const [appOptions, setAppOptions] = useState([]);
   const navigate = useNavigate();
 
-  const login = async (username, password) => {
+  const authenticate = async (username, password) => {
     if (MOCK_LOGIN) {
       setAccessToken("1234");
       setRefreshToken("1234");
       return;
     }
     
-    const [aToken, rToken] = await Microservice.login(username, password);
+    const [aToken, rToken] = await Microservice.authenticate(username, password);
 
     setAccessToken(aToken);
     setRefreshToken(rToken);
@@ -37,10 +37,6 @@ function UserContextProvider({ children }) {
   };
 
   const logout = () => {
-    if (!MOCK_LOGIN) {
-      Microservice.logout();
-    }
-
     setAccessToken(null);
     setRefreshToken(null);
 
@@ -208,7 +204,7 @@ function UserContextProvider({ children }) {
     setSelectedApp,
     orgOptions,
     appOptions,
-    login,
+    authenticate,
     logout,
     getSensors,
     getReadings,
