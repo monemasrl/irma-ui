@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { motion, AnimatePresence } from 'framer-motion';
 import style from './navbar.module.scss';
 import { CloseIcon } from '../ui/ui';
@@ -66,5 +67,11 @@ function UserMenu({ openMenu, datiUser, setOpenMenu, logout }) {
     </>
   );
 }
+UserMenu.propTypes = {
+  openMenu: PropTypes.bool.isRequired,
+  setOpenMenu: PropTypes.func.isRequired,
+  datiUser: PropTypes.object.isRequired,
+  logout: PropTypes.func.isRequired,
+};
 
 export default UserMenu;

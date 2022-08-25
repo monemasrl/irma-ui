@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { ShareContext } from '../../context/context';
 import { UserContext } from '../../context/user-context';
 import { useContext } from 'react';
@@ -78,5 +79,8 @@ function FormAlert({ alertID }) {
     </form>
   );
 }
+FormAlert.propTypes = {
+  alertID: PropTypes.string.isRequired,
+};
 
 export { FormAlert };

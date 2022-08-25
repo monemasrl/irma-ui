@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import '../../ui/ui.css';
 import style from './modali.module.css';
 import { ShareContext } from '../../../context/context';
@@ -53,5 +54,8 @@ function BoxConfirm({ alertID }) {
     </AnimatePresence>
   );
 }
+BoxConfirm.propTypes = {
+  alertID: PropTypes.string.isRequired,
+};
 
 export default BoxConfirm;

@@ -1,4 +1,5 @@
 import React, { createContext, useState } from 'react';
+import PropTypes from 'prop-types';
 
 const ShareContext = createContext();
 
@@ -22,5 +23,11 @@ function ShareContextProvider({ children }) {
     <ShareContext.Provider value={shareData}>{children}</ShareContext.Provider>
   );
 }
+ShareContextProvider.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
+};
 
 export { ShareContextProvider, ShareContext };
