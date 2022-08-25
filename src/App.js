@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext, useCallback } from 'react'
+import React, { useState, useEffect, useContext, useCallback } from 'react';
 import Header from './components/header/header';
 import Footer from './components/footer/footer';
 import Loaderdash from './components/loaders/loaderdash';
@@ -8,27 +8,29 @@ import { UserContext } from './context/user-context';
 import './App.scss';
 import io from 'socket.io-client';
 
-const Dashboard = lazy(() => import('./components/dashboard/dashboard'))
-const BoxDati = lazy(() => import('./components/boxdati/boxDati'))
+const Dashboard = lazy(() => import('./components/dashboard/dashboard'));
+const BoxDati = lazy(() => import('./components/boxdati/boxDati'));
 
-const WEBSOCKET_URL = process.env.REACT_APP_WEBSOCKET_URL || "http://localhost"
-const WEBSOCKET_PORT = process.env.REACT_APP_WEBSOCKET_PORT || "5000"
+const WEBSOCKET_URL = process.env.REACT_APP_WEBSOCKET_URL || 'http://localhost';
+const WEBSOCKET_PORT = process.env.REACT_APP_WEBSOCKET_PORT || '5000';
 
 const DISABLE_SOCKETIO = process.env.REACT_APP_DISABLE_SOCKETIO || 0;
 const MOCK_SENSORDATA = process.env.REACT_APP_MOCK_SENSORDATA || 0;
 
-const socket = !DISABLE_SOCKETIO ? io(`${WEBSOCKET_URL}:${WEBSOCKET_PORT}`) : undefined;
+const socket = !DISABLE_SOCKETIO
+  ? io(`${WEBSOCKET_URL}:${WEBSOCKET_PORT}`)
+  : undefined;
 
 console.log(WEBSOCKET_URL, WEBSOCKET_PORT, socket);
 
 function App() {
   const [data, setData] = useState(false);
   const [stakerClicked, setStakerClicked] = useState(false);
-  const [listview, setListView] = useState(false)
-  const [datiOrdinatiLista, setDatiOrdinatiLista] = useState('')
+  const [listview, setListView] = useState(false);
+  const [datiOrdinatiLista, setDatiOrdinatiLista] = useState('');
   const [isConnected, setIsConnected] = useState(socket?.connected);
   const userSharedData = useContext(UserContext);
-  
+
   useEffect(() => {
     socket?.on('connect', () => {
       setIsConnected(true);
@@ -47,18 +49,16 @@ function App() {
   }, [isConnected]);
 
   const getData = useCallback(() => {
-
     const func = async () => {
-
       if (userSharedData.selectedApp?.value === undefined) return;
-      console.log("[INFO] fetching data")
+      console.log('[INFO] fetching data');
 
       if (MOCK_SENSORDATA) {
         const MockData = (await import('./mock/mock_data')).default;
 
         const data = {
-          data: MockData.sensorData[userSharedData.selectedApp.value]
-        }
+          data: MockData.sensorData[userSharedData.selectedApp.value],
+        };
 
         setData(data.data.length ? data : false);
         return;
@@ -66,21 +66,21 @@ function App() {
 
       const list = await userSharedData.getSensors();
 
-      console.log('sensors', list)
+      console.log('sensors', list);
 
-      const sensorIDList = list.map(({sensorID}) => sensorID);
+      const sensorIDList = list.map(({ sensorID }) => sensorID);
 
       const data = await userSharedData.getReadings(sensorIDList);
 
       setData(data?.data?.length ? data : false);
-    }
+    };
 
     func();
   }, [userSharedData.selectedApp?.value]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     socket?.on('change', () => {
-      console.log("[SocketIO] Detected change")
+      console.log('[SocketIO] Detected change');
       getData();
     });
 
@@ -90,49 +90,50 @@ function App() {
   }, [getData]);
 
   useEffect(() => getData(), [userSharedData.selectedApp?.value, getData]);
-  
 
   useEffect(() => {
-    const newdati = data && [...data?.data]
+    const newdati = data && [...data.data];
     if (data && listview) {
-        console.log('test', newdati);
-        //Per portare in cima gli alert
-        const datiOrdinatiAlert = newdati.sort((a, b) => {
-            if (a.state === 'alert') { return -1; }
-            return 0;
-        })
-        setDatiOrdinatiLista(datiOrdinatiAlert)
+      console.log('test', newdati);
+      //Per portare in cima gli alert
+      const datiOrdinatiAlert = newdati.sort((a, _b) => {
+        if (a.state === 'alert') {
+          return -1;
+        }
+        return 0;
+      });
+      setDatiOrdinatiLista(datiOrdinatiAlert);
     } else if (data && !listview) {
-        setDatiOrdinatiLista(newdati)
+      setDatiOrdinatiLista(newdati);
     } else {
       setDatiOrdinatiLista(false);
     }
-
-}, [data, listview])
-
+  }, [data, listview]);
 
   function isAlert() {
     // controlla se c'è un alert nell'array in entrata
-    const alert = data?.data?.filter((item) => item.state === 'alert').length
+    const alert = data?.data?.filter((item) => item.state === 'alert').length;
     if (alert >= 1) {
-      return true
-    } else { return false }
+      return true;
+    } else {
+      return false;
+    }
   }
 
   function datiDefault() {
     if (data) {
-      let ore = data.data.map((item) => item.datiInterni[0].dato)
-      ore = ore.reduce((prev, item) => prev + item)
-      ore = Math.round((ore + Number.EPSILON) * 100) / 100
+      let ore = data.data.map((item) => item.datiInterni[0].dato);
+      ore = ore.reduce((prev, item) => prev + item);
+      ore = Math.round((ore + Number.EPSILON) * 100) / 100;
 
-      let allerte = data.data.filter((item) => item.state === 'alert').length
+      let allerte = data.data.filter((item) => item.state === 'alert').length;
 
       const dati = {
         numeroStaker: data.data.length,
         oreOperativeTotali: ore,
-        allerteAttuali: allerte
-      }
-      return dati
+        allerteAttuali: allerte,
+      };
+      return dati;
     }
   }
 
@@ -143,33 +144,58 @@ function App() {
         <ShareContext.Consumer>
           {(share) => (
             <main>
-              <div className='wrapper-content'>
-                <div className={`wrapper-sx ${share.confirm ? 'modalOpen':''}`}>
-                  <Suspense fallback={<Loaderdash />}>              
-                   <Dashboard  listview = {listview} setListView = {setListView} isAlert={isAlert()} datiOrdinatiLista={datiOrdinatiLista} stakerClicked={stakerClicked} setStakerClicked={setStakerClicked} />
+              <div className="wrapper-content">
+                <div
+                  className={`wrapper-sx ${share.confirm ? 'modalOpen' : ''}`}
+                >
+                  <Suspense fallback={<Loaderdash />}>
+                    <Dashboard
+                      listview={listview}
+                      setListView={setListView}
+                      isAlert={isAlert()}
+                      datiOrdinatiLista={datiOrdinatiLista}
+                      stakerClicked={stakerClicked}
+                      setStakerClicked={setStakerClicked}
+                    />
                   </Suspense>
                   <Footer />
                 </div>
-              
-                  <BoxDati stakerClicked={stakerClicked} datiDefault={datiDefault()} dati={datiOrdinatiLista ? datiOrdinatiLista[stakerClicked] : {}} />
-               
+
+                <BoxDati
+                  stakerClicked={stakerClicked}
+                  datiDefault={datiDefault()}
+                  dati={
+                    datiOrdinatiLista ? datiOrdinatiLista[stakerClicked] : {}
+                  }
+                />
               </div>
             </main>
-            )}
+          )}
         </ShareContext.Consumer>
-        
-        {isAlert() ?
+
+        {isAlert() ? (
           <div className="back-alert">
-            <img src="/images/backalert.svg" alt="backalert" />
-            <img src="/images/back-default.svg" alt="backalert" />
-          </div> : 
+            <img
+              src="/images/backalert.svg"
+              alt="backalert"
+            />
+            <img
+              src="/images/back-default.svg"
+              alt="backalert"
+            />
+          </div>
+        ) : (
           <div className="back-default">
-          <img src="/images/back-default.svg" alt="backalert" />
-          <img src="/images/back-default.svg" alt="backalert" />
-        </div>
-        
-        }
-          
+            <img
+              src="/images/back-default.svg"
+              alt="backalert"
+            />
+            <img
+              src="/images/back-default.svg"
+              alt="backalert"
+            />
+          </div>
+        )}
       </div>
     </ShareContextProvider>
   );
