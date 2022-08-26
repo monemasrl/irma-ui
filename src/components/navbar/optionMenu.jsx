@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Select from 'react-select';
 import { CloseIcon } from '../ui/ui';
 import style from './navbar.module.scss';
@@ -47,10 +46,5 @@ function OptionMenu({ userSharedData, setOpenSettings, openSettings }) {
     </>
   );
 }
-OptionMenu.propTypes = {
-  userSharedData: PropTypes.object.isRequired,
-  openSettings: PropTypes.bool.isRequired,
-  setOpenSettings: PropTypes.func.isRequired,
-};
 
 export default OptionMenu;

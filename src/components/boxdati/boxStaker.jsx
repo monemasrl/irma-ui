@@ -1,5 +1,4 @@
 import React, { useState, useContext } from 'react';
-import PropTypes from 'prop-types';
 import style from './boxDati.module.scss';
 import { RiTerminalFill } from 'react-icons/ri';
 import { motion } from 'framer-motion';
@@ -41,9 +40,6 @@ function StatoSensore({ statoSensore }) {
     </div>
   );
 }
-StatoSensore.propTypes = {
-  statoSensore: PropTypes.string.isRequired,
-};
 
 function BloccoNumerico({ datiNumerici, sensorID, index }) {
   return (
@@ -62,11 +58,6 @@ function BloccoNumerico({ datiNumerici, sensorID, index }) {
     </>
   );
 }
-BloccoNumerico.propTypes = {
-  datiNumerici: PropTypes.object.isRequired,
-  sensorID: PropTypes.string.isRequired,
-  index: PropTypes.number.isRequired,
-};
 
 function BtnStartRec({ applicationID, sensorID }) {
   const [statoInvioDati, setStatoInvioDati] = useState(false);
@@ -97,10 +88,6 @@ function BtnStartRec({ applicationID, sensorID }) {
     </div>
   );
 }
-BtnStartRec.propTypes = {
-  applicationID: PropTypes.string.isRequired,
-  sensorID: PropTypes.string.isRequired,
-};
 
 /* COMPONENTE PRINCIPALE */
 
@@ -139,8 +126,5 @@ function BoxStaker({ dati }) {
     </motion.header>
   );
 }
-BoxStaker.propTypes = {
-  dati: PropTypes.object.isRequired,
-};
 
 export default BoxStaker;

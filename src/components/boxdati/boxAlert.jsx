@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import style from './boxDati.module.scss';
 import { RiTerminalFill } from 'react-icons/ri';
 import { ShareContext } from '../../context/context';
@@ -26,9 +25,6 @@ function StatoSensore({ statoSensore }) {
     </div>
   );
 }
-StatoSensore.propTypes = {
-  statoSensore: PropTypes.string.isRequired,
-};
 
 function BoxAlert({ dati }) {
   const share = useContext(ShareContext);
@@ -58,8 +54,5 @@ function BoxAlert({ dati }) {
     </header>
   );
 }
-BoxAlert.propTypes = {
-  dati: PropTypes.object.isRequired,
-};
 
 export default BoxAlert;

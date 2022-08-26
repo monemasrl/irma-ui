@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import PropTypes from 'prop-types';
 import style from './boxDati.module.scss';
 import BoxDefault from './boxDefault';
 import BoxStaker from './boxStaker';
@@ -81,10 +80,5 @@ function BoxDati({ datiDefault, dati, stakerClicked }) {
     </AnimatePresence>
   );
 }
-BoxDati.propTypes = {
-  datiDefault: PropTypes.object.isRequired,
-  dati: PropTypes.object.isRequired,
-  stakerClicked: PropTypes.bool.isRequired,
-};
 
 export default BoxDati;

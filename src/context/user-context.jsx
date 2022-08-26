@@ -1,5 +1,4 @@
 import React, { createContext, useState, useEffect, useCallback } from 'react';
-import PropTypes from 'prop-types';
 import Microservice from '../services/microservice.service';
 import { useNavigate } from 'react-router-dom';
 
@@ -222,11 +221,5 @@ function UserContextProvider({ children }) {
     <UserContext.Provider value={shareData}>{children}</UserContext.Provider>
   );
 }
-UserContextProvider.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]),
-};
 
 export { UserContextProvider, UserContext };

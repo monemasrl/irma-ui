@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
 
 function Loader({ immagineLoader, number }) {
@@ -54,9 +53,5 @@ function Loader({ immagineLoader, number }) {
     </motion.div>
   );
 }
-Loader.propTypes = {
-  immagineLoader: PropTypes.string.isRequired,
-  number: PropTypes.number.isRequired,
-};
 
 export default Loader;

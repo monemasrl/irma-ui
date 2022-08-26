@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { AiOutlineClose } from 'react-icons/ai';
 
 function CloseIcon({ onClick, size }) {
@@ -13,9 +12,5 @@ function CloseIcon({ onClick, size }) {
     </button>
   );
 }
-CloseIcon.propTypes = {
-  onClick: PropTypes.func.isRequired,
-  size: PropTypes.number.isRequired,
-};
 
 export { CloseIcon };

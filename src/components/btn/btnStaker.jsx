@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import style from './btn.module.scss';
 import greenLed from '../../assets/images/ok-led.svg';
 import recordingLed from '../../assets/images/rec-led.svg';
@@ -56,9 +55,6 @@ function Led({ state }) {
     );
   }
 }
-Led.propTypes = {
-  state: PropTypes.string.isRequired,
-};
 
 function BtnStaker({
   state,
@@ -101,13 +97,5 @@ function BtnStaker({
     </div>
   );
 }
-BtnStaker.propTypes = {
-  state: PropTypes.string.isRequired,
-  code: PropTypes.string.isRequired,
-  setStakerClicked: PropTypes.func.isRequired,
-  index: PropTypes.number.isRequired,
-  stakerClicked: PropTypes.number.isRequired,
-  listview: PropTypes.bool.isRequired,
-};
 
 export default BtnStaker;

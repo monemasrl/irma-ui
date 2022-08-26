@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import style from './dashboard.module.scss';
 import BtnStaker from '../btn/btnStaker';
 import { IoApps, IoListOutline } from 'react-icons/io5';
@@ -60,13 +59,5 @@ function Dashboard({
     </div>
   );
 }
-Dashboard.propTypes = {
-  isAlert: PropTypes.bool.isRequired,
-  datiOrdinatiLista: PropTypes.array.isRequired,
-  stakerClicked: PropTypes.bool.isRequired,
-  setStakerClicked: PropTypes.func.isRequired,
-  listview: PropTypes.bool.isRequired,
-  setListView: PropTypes.func.isRequired,
-};
 
 export default Dashboard;

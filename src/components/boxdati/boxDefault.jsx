@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import style from './boxDati.module.scss';
 import { motion } from 'framer-motion';
 
@@ -41,8 +40,5 @@ function BoxDefault({ datiDefault }) {
     </motion.header>
   );
 }
-BoxDefault.propTypes = {
-  datiDefault: PropTypes.object.isRequired,
-};
 
 export default BoxDefault;
