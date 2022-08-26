@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { MouseEventHandler } from 'react';
 import { AiOutlineClose } from 'react-icons/ai';
 
-function CloseIcon({ onClick, size }) {
+type Props = {
+  onClick: MouseEventHandler;
+  size: number;
+};
+
+function CloseIcon({ onClick, size }: Props) {
   return (
     <button
       className="closeIcon"
