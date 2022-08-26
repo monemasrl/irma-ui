@@ -1,5 +1,5 @@
 const CommandType = {
-    START_REC: 0,
+  START_REC: 0,
 };
 
 export default CommandType;

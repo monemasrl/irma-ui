@@ -1,6 +1,6 @@
-import React, { createContext, useState, useEffect, useCallback } from "react";
+import React, { createContext, useState, useEffect, useCallback } from 'react';
 import Microservice from '../services/microservice.service';
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 const UserContext = createContext();
 
@@ -8,11 +8,13 @@ const MOCK_SENSORDATA = process.env.REACT_APP_MOCK_SENSORDATA || 0;
 const MOCK_LOGIN = process.env.REACT_APP_MOCK_LOGIN || 0;
 
 function UserContextProvider({ children }) {
-  const [accessToken, setAccessToken] =
-    useState(localStorage.getItem("access_token"));
+  const [accessToken, setAccessToken] = useState(
+    localStorage.getItem('access_token')
+  );
 
-  const [refreshToken, setRefreshToken] =
-    useState(localStorage.getItem("refresh_token"));
+  const [refreshToken, setRefreshToken] = useState(
+    localStorage.getItem('refresh_token')
+  );
 
   const [selectedOrg, setSelectedOrg] = useState({});
   const [selectedApp, setSelectedApp] = useState({});
@@ -22,42 +24,47 @@ function UserContextProvider({ children }) {
 
   const authenticate = async (username, password) => {
     if (MOCK_LOGIN) {
-      setAccessToken("1234");
-      setRefreshToken("1234");
+      setAccessToken('1234');
+      setRefreshToken('1234');
       return;
     }
-    
-    const [aToken, rToken] = await Microservice.authenticate(username, password);
+
+    const [aToken, rToken] = await Microservice.authenticate(
+      username,
+      password
+    );
 
     setAccessToken(aToken);
     setRefreshToken(rToken);
 
-    localStorage.setItem("access_token", aToken);
-    localStorage.setItem("refresh_token", rToken);
+    localStorage.setItem('access_token', aToken);
+    localStorage.setItem('refresh_token', rToken);
   };
 
   const logout = () => {
     setAccessToken(null);
     setRefreshToken(null);
 
-    localStorage.removeItem("access_token");
-    localStorage.removeItem("refresh_token");
+    localStorage.removeItem('access_token');
+    localStorage.removeItem('refresh_token');
   };
 
-  const refreshIfUnauthorized = useCallback(async (error) => {
-    if (error.response?.status !== 401) return;
+  const refreshIfUnauthorized = useCallback(
+    async (error) => {
+      if (error.response?.status !== 401) return;
 
-    try {
-      const aToken = await Microservice.refresh(refreshToken);
-      setAccessToken(aToken);
-      localStorage.setItem("access_token", aToken);
-    } 
-    catch (error) {
-      if (error.response?.status === 401) {
-        logout();
+      try {
+        const aToken = await Microservice.refresh(refreshToken);
+        setAccessToken(aToken);
+        localStorage.setItem('access_token', aToken);
+      } catch (error) {
+        if (error.response?.status === 401) {
+          logout();
+        }
       }
-    }
-  }, [refreshToken]);
+    },
+    [refreshToken]
+  );
 
   const getSensors = async () => {
     if (!selectedApp?.value) return [];
@@ -66,22 +73,19 @@ function UserContextProvider({ children }) {
 
     try {
       list = Microservice.getSensors(accessToken, selectedApp.value);
-    }
-    catch (error) {
+    } catch (error) {
       refreshIfUnauthorized(error);
     }
-    
+
     return list;
   };
 
   const getReadings = async (sensorIDList) => {
-
     let readings = [];
 
     try {
       readings = await Microservice.getReadings(accessToken, sensorIDList);
-    }
-    catch (error) {
+    } catch (error) {
       refreshIfUnauthorized(error);
     }
 
@@ -91,8 +95,7 @@ function UserContextProvider({ children }) {
   const sendCommand = async (appID, sensorID, commandType) => {
     try {
       Microservice.sendCommand(accessToken, appID, sensorID, commandType);
-    }
-    catch (error) {
+    } catch (error) {
       refreshIfUnauthorized(error);
     }
   };
@@ -100,8 +103,7 @@ function UserContextProvider({ children }) {
   const handleAlert = async (alertID, isConfirmed, handleNote) => {
     try {
       Microservice.handleAlert(accessToken, alertID, isConfirmed, handleNote);
-    }
-    catch (error) {
+    } catch (error) {
       refreshIfUnauthorized(error);
     }
   };
@@ -111,7 +113,6 @@ function UserContextProvider({ children }) {
     if (!accessToken) return;
 
     const func = async () => {
-
       if (MOCK_SENSORDATA) {
         const MockData = (await import('../mock/mock_data')).default;
         setOrgOptions(MockData.orgOptions);
@@ -119,19 +120,18 @@ function UserContextProvider({ children }) {
       }
 
       let list = [];
-      
+
       try {
         list = await Microservice.getOrganizationsList(accessToken);
-      }
-      catch (error) {
+      } catch (error) {
         refreshIfUnauthorized(error);
       }
 
       console.log('organizations', list);
 
-      const options = list.map(({_id, organizationName}) => ({
-        value: _id["$oid"],
-        label: organizationName
+      const options = list.map(({ _id, organizationName }) => ({
+        value: _id['$oid'],
+        label: organizationName,
       }));
 
       setOrgOptions(options);
@@ -139,7 +139,7 @@ function UserContextProvider({ children }) {
 
     func();
   }, [accessToken, refreshIfUnauthorized]);
-  
+
   // Change default organization on organizations change
   useEffect(() => {
     if (!orgOptions.length) return;
@@ -152,34 +152,40 @@ function UserContextProvider({ children }) {
     if (!accessToken) return;
 
     const func = async () => {
-
       if (MOCK_SENSORDATA) {
         const MockData = (await import('../mock/mock_data')).default;
         setAppOptions(MockData.appOptions[selectedOrg.value]);
         return;
       }
-      
+
       let list = [];
 
       try {
-        list = await Microservice.getApplicationsList(accessToken, selectedOrg.value)
-      }
-      catch (error) {
+        list = await Microservice.getApplicationsList(
+          accessToken,
+          selectedOrg.value
+        );
+      } catch (error) {
         refreshIfUnauthorized(error);
       }
 
       console.log('applications', list);
 
-      const options = list.map(({_id, applicationName}) => ({
-        value: _id["$oid"],
-        label: applicationName
+      const options = list.map(({ _id, applicationName }) => ({
+        value: _id['$oid'],
+        label: applicationName,
       }));
 
       setAppOptions(options);
-    }
+    };
 
     func();
-  }, [selectedOrg.value, JSON.stringify(orgOptions), accessToken, refreshIfUnauthorized]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [
+    selectedOrg.value,
+    JSON.stringify(orgOptions),
+    accessToken,
+    refreshIfUnauthorized,
+  ]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Change default application on applications change
   useEffect(() => {
@@ -190,10 +196,9 @@ function UserContextProvider({ children }) {
   // Navigate the user on login and logout
   useEffect(() => {
     if (!accessToken) {
-      navigate("/login");
-    }
-    else {
-      navigate("/");
+      navigate('/login');
+    } else {
+      navigate('/');
     }
   }, [accessToken, navigate]);
 
@@ -209,14 +214,12 @@ function UserContextProvider({ children }) {
     getSensors,
     getReadings,
     sendCommand,
-    handleAlert
-  }
+    handleAlert,
+  };
 
   return (
-    <UserContext.Provider value={shareData}>
-      {children}
-    </UserContext.Provider>
-  )
+    <UserContext.Provider value={shareData}>{children}</UserContext.Provider>
+  );
 }
 
-export { UserContextProvider, UserContext }
+export { UserContextProvider, UserContext };
