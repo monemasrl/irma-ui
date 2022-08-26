@@ -25,5 +25,6 @@ module.exports = {
         argsIgnorePattern: '^_',
       },
     ],
+    'react/prop-types': 'warn',
   },
 };
