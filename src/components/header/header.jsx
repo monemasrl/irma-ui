@@ -18,10 +18,10 @@ function Header() {
         </div>
         <div className={style.header_text}>
           <div className={style.org}>
-            <span>Organizzazione:</span> {userSharedData.selectedOrg.label}
+            <span>Organizzazione:</span> {userSharedData.selectedOrg?.label}
           </div>
           <div className={style.app}>
-            <span>Applicazione:</span> {userSharedData.selectedApp.label}
+            <span>Applicazione:</span> {userSharedData.selectedApp?.label}
           </div>
         </div>
       </div>

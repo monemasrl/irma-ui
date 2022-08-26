@@ -1,7 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-function Loader({ immagineLoader, number }) {
+type Props = {
+  immagineLoader: string;
+  number: number;
+};
+
+function Loader({ immagineLoader, number }: Props) {
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -25,7 +30,7 @@ function Loader({ immagineLoader, number }) {
     },
   };
 
-  function createLoaderItem(immagine, number) {
+  function createLoaderItem(immagine: string, number: number) {
     const itemNumber = new Array(number).fill(undefined);
     const y = itemNumber.map((item, index) => {
       return (

@@ -5,7 +5,15 @@ import { UserContext } from '../../context/user-context';
 import UserMenu from './userMenu';
 import OptionMenu from './optionMenu';
 
-const datiUser = {
+export interface IDatiUser {
+  nome: string;
+  cognome: string;
+  qualifica: string;
+  accesso: string;
+  tempoSessioneCorrente: number;
+}
+
+const datiUser: IDatiUser = {
   nome: 'carlo',
   cognome: 'martello',
   qualifica: 'Re',

@@ -7,7 +7,8 @@ import Login from './routes/login';
 import { UserContextProvider } from './context/user-context';
 import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+// TODO: fix warning
+const root = ReactDOM.createRoot(document.getElementById('root')!);
 root.render(
   <React.StrictMode>
     <BrowserRouter>

@@ -1,13 +1,60 @@
-import React, { createContext, useState, useEffect, useCallback } from 'react';
-import Microservice from '../services/microservice.service';
+import React, {
+  createContext,
+  useState,
+  useEffect,
+  useCallback,
+  ReactNode,
+} from 'react';
+import Microservice, {
+  Application,
+  Organization,
+  Sensor,
+} from '../services/microservice.service';
 import { useNavigate } from 'react-router-dom';
-
-const UserContext = createContext();
+import { AxiosError } from 'axios';
+import CommandType from '../utils/commandType';
+import { AppOption } from '../mock/mock_data';
 
 const MOCK_SENSORDATA = process.env.REACT_APP_MOCK_SENSORDATA || 0;
 const MOCK_LOGIN = process.env.REACT_APP_MOCK_LOGIN || 0;
 
-function UserContextProvider({ children }) {
+interface IEntry {
+  label: string;
+  value: string;
+}
+
+export interface IUserContext {
+  selectedOrg?: IEntry;
+  setSelectedOrg: (entry: IEntry) => void;
+  selectedApp?: IEntry;
+  setSelectedApp: (entry: IEntry) => void;
+  orgOptions: IEntry[];
+  appOptions: IEntry[];
+  authenticate: (email: string, password: string) => Promise<void>;
+  logout: () => void;
+  getSensors: () => Promise<Sensor[]>;
+  // TODO: risolvere quando si converte App.js in App.tsx
+  getReadings: (sensorIDList: string[]) => Promise<any[]>;
+  sendCommand: (
+    appID: string,
+    sensorID: string,
+    commandType: CommandType
+  ) => Promise<void>;
+  handleAlert: (
+    alertID: string,
+    isConfirmed: boolean,
+    handleNote: string
+  ) => Promise<void>;
+}
+
+// TODO: fix default value
+const UserContext = createContext<IUserContext>(undefined!);
+
+type Props = {
+  children: ReactNode;
+};
+
+function UserContextProvider({ children }: Props) {
   const [accessToken, setAccessToken] = useState(
     localStorage.getItem('access_token')
   );
@@ -16,13 +63,13 @@ function UserContextProvider({ children }) {
     localStorage.getItem('refresh_token')
   );
 
-  const [selectedOrg, setSelectedOrg] = useState({});
-  const [selectedApp, setSelectedApp] = useState({});
-  const [orgOptions, setOrgOptions] = useState([]);
-  const [appOptions, setAppOptions] = useState([]);
+  const [selectedOrg, setSelectedOrg] = useState<IEntry | undefined>(undefined);
+  const [selectedApp, setSelectedApp] = useState<IEntry | undefined>(undefined);
+  const [orgOptions, setOrgOptions] = useState<IEntry[]>([]);
+  const [appOptions, setAppOptions] = useState<IEntry[]>([]);
   const navigate = useNavigate();
 
-  const authenticate = async (username, password) => {
+  const authenticate = async (username: string, password: string) => {
     if (MOCK_LOGIN) {
       setAccessToken('1234');
       setRefreshToken('1234');
@@ -50,29 +97,41 @@ function UserContextProvider({ children }) {
   };
 
   const refreshIfUnauthorized = useCallback(
-    async (error) => {
+    async (error: unknown) => {
+      if (!(error instanceof AxiosError)) {
+        console.log(error);
+        return;
+      }
+
       if (error.response?.status !== 401) return;
 
       try {
+        if (!refreshToken) {
+          logout();
+          return;
+        }
+
         const aToken = await Microservice.refresh(refreshToken);
         setAccessToken(aToken);
         localStorage.setItem('access_token', aToken);
       } catch (error) {
-        if (error.response?.status === 401) {
+        if (error instanceof AxiosError && error.response?.status === 401) {
           logout();
+          return;
         }
+        console.log(error);
       }
     },
     [refreshToken]
   );
 
   const getSensors = async () => {
-    if (!selectedApp?.value) return [];
+    if (!selectedApp || !accessToken) return [];
 
-    let list = [];
+    let list: Sensor[] = [];
 
     try {
-      list = Microservice.getSensors(accessToken, selectedApp.value);
+      list = await Microservice.getSensors(accessToken, selectedApp.value);
     } catch (error) {
       refreshIfUnauthorized(error);
     }
@@ -80,7 +139,9 @@ function UserContextProvider({ children }) {
     return list;
   };
 
-  const getReadings = async (sensorIDList) => {
+  const getReadings = async (sensorIDList: string[]) => {
+    if (!accessToken) return;
+
     let readings = [];
 
     try {
@@ -92,7 +153,13 @@ function UserContextProvider({ children }) {
     return readings;
   };
 
-  const sendCommand = async (appID, sensorID, commandType) => {
+  const sendCommand = async (
+    appID: string,
+    sensorID: string,
+    commandType: CommandType
+  ) => {
+    if (!accessToken) return;
+
     try {
       Microservice.sendCommand(accessToken, appID, sensorID, commandType);
     } catch (error) {
@@ -100,7 +167,13 @@ function UserContextProvider({ children }) {
     }
   };
 
-  const handleAlert = async (alertID, isConfirmed, handleNote) => {
+  const handleAlert = async (
+    alertID: string,
+    isConfirmed: boolean,
+    handleNote: string
+  ) => {
+    if (!accessToken) return;
+
     try {
       Microservice.handleAlert(accessToken, alertID, isConfirmed, handleNote);
     } catch (error) {
@@ -114,12 +187,12 @@ function UserContextProvider({ children }) {
 
     const func = async () => {
       if (MOCK_SENSORDATA) {
-        const MockData = (await import('../mock/mock_data')).default;
+        const MockData = (await import('../mock/mock_data.json')).default;
         setOrgOptions(MockData.orgOptions);
         return;
       }
 
-      let list = [];
+      let list: Organization[] = [];
 
       try {
         list = await Microservice.getOrganizationsList(accessToken);
@@ -129,7 +202,7 @@ function UserContextProvider({ children }) {
 
       console.log('organizations', list);
 
-      const options = list.map(({ _id, organizationName }) => ({
+      const options: IEntry[] = list.map(({ _id, organizationName }) => ({
         value: _id['$oid'],
         label: organizationName,
       }));
@@ -148,17 +221,16 @@ function UserContextProvider({ children }) {
 
   // Fetch applications on selected organization change
   useEffect(() => {
-    if (selectedOrg?.value === undefined) return;
-    if (!accessToken) return;
+    if (!selectedOrg || !accessToken) return;
 
     const func = async () => {
       if (MOCK_SENSORDATA) {
-        const MockData = (await import('../mock/mock_data')).default;
-        setAppOptions(MockData.appOptions[selectedOrg.value]);
+        const MockData = (await import('../mock/mock_data.json')).default;
+        setAppOptions(MockData['appOptions'][selectedOrg.value as AppOption]);
         return;
       }
 
-      let list = [];
+      let list: Application[] = [];
 
       try {
         list = await Microservice.getApplicationsList(
@@ -171,7 +243,7 @@ function UserContextProvider({ children }) {
 
       console.log('applications', list);
 
-      const options = list.map(({ _id, applicationName }) => ({
+      const options: IEntry[] = list.map(({ _id, applicationName }) => ({
         value: _id['$oid'],
         label: applicationName,
       }));
@@ -181,7 +253,7 @@ function UserContextProvider({ children }) {
 
     func();
   }, [
-    selectedOrg.value,
+    selectedOrg?.value,
     JSON.stringify(orgOptions),
     accessToken,
     refreshIfUnauthorized,
@@ -202,7 +274,7 @@ function UserContextProvider({ children }) {
     }
   }, [accessToken, navigate]);
 
-  const shareData = {
+  const userShareData: IUserContext = {
     selectedOrg,
     setSelectedOrg,
     selectedApp,
@@ -218,7 +290,9 @@ function UserContextProvider({ children }) {
   };
 
   return (
-    <UserContext.Provider value={shareData}>{children}</UserContext.Provider>
+    <UserContext.Provider value={userShareData}>
+      {children}
+    </UserContext.Provider>
   );
 }
 

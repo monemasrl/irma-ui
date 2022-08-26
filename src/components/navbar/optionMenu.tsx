@@ -3,8 +3,15 @@ import Select from 'react-select';
 import { CloseIcon } from '../ui/ui';
 import style from './navbar.module.scss';
 import { motion, AnimatePresence } from 'framer-motion';
+import { IUserContext } from '../../context/user-context';
 
-function OptionMenu({ userSharedData, setOpenSettings, openSettings }) {
+type Props = {
+  userSharedData: IUserContext;
+  openSettings: boolean;
+  setOpenSettings: (a: boolean) => void;
+};
+
+function OptionMenu({ userSharedData, setOpenSettings, openSettings }: Props) {
   return (
     <>
       <AnimatePresence>
@@ -16,11 +23,11 @@ function OptionMenu({ userSharedData, setOpenSettings, openSettings }) {
             exit={{ opacity: 0, right: -200 }}
             transition={{ duration: 0.5 }}
           >
-            <div
-              className={style.wrappericon}
-              onClick={() => setOpenSettings(false)}
-            >
-              <CloseIcon size={40} />
+            <div className={style.wrappericon}>
+              <CloseIcon
+                size={40}
+                onClick={() => setOpenSettings(false)}
+              />
             </div>
             <div className={style.wrapperInnerOptions}>
               <label htmlFor="org">{"Seleziona l'organizzazione"}</label>
@@ -28,7 +35,10 @@ function OptionMenu({ userSharedData, setOpenSettings, openSettings }) {
                 name="org"
                 options={userSharedData.orgOptions}
                 value={userSharedData.selectedOrg}
-                onChange={(option) => userSharedData.setSelectedOrg(option)}
+                onChange={(option) => {
+                  if (!option) return;
+                  userSharedData.setSelectedOrg(option);
+                }}
                 isDisabled={userSharedData.orgOptions.length < 2}
               />
               <label htmlFor="app">{"Seleziona l'applicazione"}</label>
@@ -36,7 +46,10 @@ function OptionMenu({ userSharedData, setOpenSettings, openSettings }) {
                 name="app"
                 options={userSharedData.appOptions}
                 value={userSharedData.selectedApp}
-                onChange={(option) => userSharedData.setSelectedApp(option)}
+                onChange={(option) => {
+                  if (!option) return;
+                  userSharedData.setSelectedApp(option);
+                }}
                 isDisabled={userSharedData.appOptions.length < 2}
               />
             </div>

@@ -2,8 +2,16 @@ import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import style from './navbar.module.scss';
 import { CloseIcon } from '../ui/ui';
+import { IDatiUser } from './navbar';
 
-function UserMenu({ openMenu, datiUser, setOpenMenu, logout }) {
+type Props = {
+  datiUser: IDatiUser;
+  openMenu: boolean;
+  setOpenMenu: (a: boolean) => void;
+  logout: () => void;
+};
+
+function UserMenu({ openMenu, datiUser, setOpenMenu, logout }: Props) {
   return (
     <>
       <AnimatePresence>
@@ -15,11 +23,11 @@ function UserMenu({ openMenu, datiUser, setOpenMenu, logout }) {
             exit={{ opacity: 0, right: -200 }}
             transition={{ duration: 0.5 }}
           >
-            <div
-              className={style.wrappericon}
-              onClick={() => setOpenMenu(false)}
-            >
-              <CloseIcon size={40} />
+            <div className={style.wrappericon}>
+              <CloseIcon
+                size={40}
+                onClick={() => setOpenMenu(false)}
+              />
             </div>
             <div className={style.wrapperDatiUser}>
               <div className={style.avatar}>
