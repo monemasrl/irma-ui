@@ -1,22 +1,32 @@
-import React from 'react';
+import React, { FC } from 'react';
 import style from './dashboard.module.scss';
 import BtnStaker from '../btn/btnStaker';
 import { IoApps, IoListOutline } from 'react-icons/io5';
 import Loader from '../loaders/loader';
+import { Reading } from '../../services/microservice.service';
 
-function Dashboard({
+type Props = {
+  isAlert: boolean;
+  datiOrdinatiLista: Reading[];
+  stakerClicked: number;
+  setStakerClicked: (a: number) => void;
+  listview: boolean;
+  setListView: (a: boolean) => void;
+};
+
+const Dashboard: FC<Props> = ({
   isAlert,
   datiOrdinatiLista,
   stakerClicked,
   setStakerClicked,
   listview,
   setListView,
-}) {
+}) => {
   const immagineLoader = '/images/cont.svg';
 
-  function switchVisualizzaLista(switchList) {
+  function switchVisualizzaLista(switchList: boolean) {
     setListView(switchList);
-    setStakerClicked(false);
+    setStakerClicked(-1);
   }
 
   return (
@@ -58,6 +68,6 @@ function Dashboard({
       )}
     </div>
   );
-}
+};
 
 export default Dashboard;
