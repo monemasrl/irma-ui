@@ -8,12 +8,13 @@ import React, {
 import Microservice, {
   Application,
   Organization,
+  Reading,
   Sensor,
 } from '../services/microservice.service';
 import { useNavigate } from 'react-router-dom';
 import { AxiosError } from 'axios';
 import CommandType from '../utils/commandType';
-import { AppOption } from '../mock/mock_data';
+import { OrgOption } from '../mock/mock_data';
 
 const MOCK_SENSORDATA = process.env.REACT_APP_MOCK_SENSORDATA || 0;
 const MOCK_LOGIN = process.env.REACT_APP_MOCK_LOGIN || 0;
@@ -33,8 +34,7 @@ export interface IUserContext {
   authenticate: (email: string, password: string) => Promise<void>;
   logout: () => void;
   getSensors: () => Promise<Sensor[]>;
-  // TODO: risolvere quando si converte App.js in App.tsx
-  getReadings: (sensorIDList: string[]) => Promise<any[]>;
+  getReadings: (sensorIDList: string[]) => Promise<Reading[]>;
   sendCommand: (
     appID: string,
     sensorID: string,
@@ -140,9 +140,9 @@ function UserContextProvider({ children }: Props) {
   };
 
   const getReadings = async (sensorIDList: string[]) => {
-    if (!accessToken) return;
+    if (!accessToken) return [];
 
-    let readings = [];
+    let readings: Reading[] = [];
 
     try {
       readings = await Microservice.getReadings(accessToken, sensorIDList);
@@ -226,7 +226,7 @@ function UserContextProvider({ children }: Props) {
     const func = async () => {
       if (MOCK_SENSORDATA) {
         const MockData = (await import('../mock/mock_data.json')).default;
-        setAppOptions(MockData['appOptions'][selectedOrg.value as AppOption]);
+        setAppOptions(MockData['appOptions'][selectedOrg.value as OrgOption]);
         return;
       }
 

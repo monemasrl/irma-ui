@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext, useCallback } from 'react';
+import React, { useState, useEffect, useContext, useCallback, FC } from 'react';
 import Header from './components/header/header';
 import Footer from './components/footer/footer';
 import Loaderdash from './components/loaders/loaderdash';
@@ -7,6 +7,8 @@ import { ShareContextProvider, ShareContext } from './context/context';
 import { UserContext } from './context/user-context';
 import './App.scss';
 import io from 'socket.io-client';
+import { Reading } from './services/microservice.service';
+import { AppOption } from './mock/mock_data';
 
 const Dashboard = lazy(() => import('./components/dashboard/dashboard'));
 const BoxDati = lazy(() => import('./components/boxdati/boxDati'));
@@ -23,11 +25,12 @@ const socket = !DISABLE_SOCKETIO
 
 console.log(WEBSOCKET_URL, WEBSOCKET_PORT, socket);
 
-function App() {
-  const [data, setData] = useState(false);
-  const [stakerClicked, setStakerClicked] = useState(false);
+const App: FC = () => {
+  const [data, setData] = useState<Reading[]>([]);
+  const [datiOrdinatiLista, setDatiOrdinatiLista] = useState<Reading[]>([]);
+
+  const [stakerClicked, setStakerClicked] = useState(-1);
   const [listview, setListView] = useState(false);
-  const [datiOrdinatiLista, setDatiOrdinatiLista] = useState('');
   const [isConnected, setIsConnected] = useState(socket?.connected);
   const userSharedData = useContext(UserContext);
 
@@ -54,13 +57,12 @@ function App() {
       console.log('[INFO] fetching data');
 
       if (MOCK_SENSORDATA) {
-        const MockData = (await import('./mock/mock_data')).default;
+        const MockData = (await import('./mock/mock_data.json')).default;
 
-        const data = {
-          data: MockData.sensorData[userSharedData.selectedApp.value],
-        };
+        const readings =
+          MockData['sensorData'][userSharedData.selectedApp.value as AppOption];
 
-        setData(data.data.length ? data : false);
+        setData(readings as Reading[]);
         return;
       }
 
@@ -70,9 +72,9 @@ function App() {
 
       const sensorIDList = list.map(({ sensorID }) => sensorID);
 
-      const data = await userSharedData.getReadings(sensorIDList);
+      const readings = await userSharedData.getReadings(sensorIDList);
 
-      setData(data?.data?.length ? data : false);
+      setData(readings);
     };
 
     func();
@@ -92,7 +94,7 @@ function App() {
   useEffect(() => getData(), [userSharedData.selectedApp?.value, getData]);
 
   useEffect(() => {
-    const newdati = data && [...data.data];
+    const newdati = data;
     if (data && listview) {
       console.log('test', newdati);
       //Per portare in cima gli alert
@@ -106,13 +108,13 @@ function App() {
     } else if (data && !listview) {
       setDatiOrdinatiLista(newdati);
     } else {
-      setDatiOrdinatiLista(false);
+      setDatiOrdinatiLista([]);
     }
   }, [data, listview]);
 
   function isAlert() {
     // controlla se c'è un alert nell'array in entrata
-    const alert = data?.data?.filter((item) => item.state === 'alert').length;
+    const alert = data.filter((item) => item.state === 'alert').length;
     if (alert >= 1) {
       return true;
     } else {
@@ -122,14 +124,15 @@ function App() {
 
   function datiDefault() {
     if (data) {
-      let ore = data.data.map((item) => item.datiInterni[0].dato);
-      ore = ore.reduce((prev, item) => prev + item);
+      let ore = data
+        .map((item) => item.datiInterni[0].dato)
+        .reduce((prev, item) => prev + item);
       ore = Math.round((ore + Number.EPSILON) * 100) / 100;
 
-      let allerte = data.data.filter((item) => item.state === 'alert').length;
+      const allerte = data.filter((item) => item.state === 'alert').length;
 
       const dati = {
-        numeroStaker: data.data.length,
+        numeroStaker: data.length,
         oreOperativeTotali: ore,
         allerteAttuali: allerte,
       };
@@ -199,6 +202,6 @@ function App() {
       </div>
     </ShareContextProvider>
   );
-}
+};
 
 export default App;

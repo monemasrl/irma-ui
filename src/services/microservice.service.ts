@@ -1,5 +1,6 @@
 import axios from 'axios';
 import CommandType from '../utils/commandType';
+import SensorState from '../utils/sensorState';
 
 const WEBSOCKET_URL = process.env.REACT_APP_WEBSOCKET_URL || 'http://localhost';
 const WEBSOCKET_PORT = process.env.REACT_APP_WEBSOCKET_PORT || '5000';
@@ -116,7 +117,7 @@ export interface Sensor {
   organization: {
     $oid: string;
   };
-  sensorID: number;
+  sensorID: string;
   sensorName: string;
   state: number;
 }
@@ -141,8 +142,25 @@ const getSensors = async (token: string, appID: string) => {
   return response.data.sensors;
 };
 
+export interface Reading {
+  sensorID: string;
+  sensorName: string;
+  applicationID: string;
+  state: SensorState;
+  datiInterni: [
+    { titolo: string; dato: number },
+    { titolo: string; dato: number },
+    { titolo: string; dato: number }
+  ];
+  unhandledAlertIDs: string[];
+}
+
+interface ReadingsResponse {
+  readings: Reading[];
+}
+
 const getReadings = async (token: string, sensorIDList: string[]) => {
-  const response = await axios.post(
+  const response = await axios.post<ReadingsResponse>(
     `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/`,
     {
       paths: sensorIDList,
@@ -157,7 +175,7 @@ const getReadings = async (token: string, sensorIDList: string[]) => {
   );
 
   console.log('getReadings', response);
-  return response.data;
+  return response.data.readings;
 };
 
 const sendCommand = async (
