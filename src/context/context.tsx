@@ -1,12 +1,13 @@
 import React, { createContext, ReactNode, useState } from 'react';
+import SensorState from '../utils/sensorState';
 
 interface IUiStatiSensore {
   [key: string]: string;
 }
 
 interface IShareData {
-  confirm: boolean;
-  setConfirm: (a: boolean) => void;
+  confirmState?: SensorState;
+  setConfirmState: (a: SensorState | undefined) => void;
   uiStatiSensore: IUiStatiSensore;
 }
 
@@ -18,7 +19,9 @@ type Props = {
 };
 
 function ShareContextProvider({ children }: Props) {
-  const [confirmModal, setConfirmModal] = useState(false);
+  const [confirmModal, setConfirmModal] = useState<SensorState | undefined>(
+    undefined
+  );
 
   const uiStatiSensore: IUiStatiSensore = {
     ok: 'sensore funzionante',
@@ -28,8 +31,8 @@ function ShareContextProvider({ children }: Props) {
   };
 
   const shareData: IShareData = {
-    confirm: confirmModal,
-    setConfirm: setConfirmModal,
+    confirmState: confirmModal,
+    setConfirmState: setConfirmModal,
     uiStatiSensore: uiStatiSensore,
   };
 
