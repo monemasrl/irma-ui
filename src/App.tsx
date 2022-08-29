@@ -25,9 +25,15 @@ const socket = !DISABLE_SOCKETIO
 
 console.log(WEBSOCKET_URL, WEBSOCKET_PORT, socket);
 
+export type StakerDefaultData = {
+  numeroStaker: number;
+  oreOperativeTotali: number;
+  allerteAttuali: number;
+};
+
 const App: FC = () => {
-  const [data, setData] = useState<Reading[]>([]);
-  const [datiOrdinatiLista, setDatiOrdinatiLista] = useState<Reading[]>([]);
+  const [readings, setReadings] = useState<Reading[]>([]);
+  const [readingsOrdinate, setReadingsOrdinate] = useState<Reading[]>([]);
 
   const [stakerClicked, setStakerClicked] = useState(-1);
   const [listview, setListView] = useState(false);
@@ -62,7 +68,7 @@ const App: FC = () => {
         const readings =
           MockData['sensorData'][userSharedData.selectedApp.value as AppOption];
 
-        setData(readings as Reading[]);
+        setReadings(readings as Reading[]);
         return;
       }
 
@@ -74,7 +80,7 @@ const App: FC = () => {
 
       const readings = await userSharedData.getReadings(sensorIDList);
 
-      setData(readings);
+      setReadings(readings);
     };
 
     func();
@@ -94,8 +100,8 @@ const App: FC = () => {
   useEffect(() => getData(), [userSharedData.selectedApp?.value, getData]);
 
   useEffect(() => {
-    const newdati = data;
-    if (data && listview) {
+    const newdati = readings;
+    if (readings && listview) {
       console.log('test', newdati);
       //Per portare in cima gli alert
       const datiOrdinatiAlert = newdati.sort((a, _b) => {
@@ -104,17 +110,17 @@ const App: FC = () => {
         }
         return 0;
       });
-      setDatiOrdinatiLista(datiOrdinatiAlert);
-    } else if (data && !listview) {
-      setDatiOrdinatiLista(newdati);
+      setReadingsOrdinate(datiOrdinatiAlert);
+    } else if (readings && !listview) {
+      setReadingsOrdinate(newdati);
     } else {
-      setDatiOrdinatiLista([]);
+      setReadingsOrdinate([]);
     }
-  }, [data, listview]);
+  }, [readings, listview]);
 
   function isAlert() {
     // controlla se c'è un alert nell'array in entrata
-    const alert = data.filter((item) => item.state === 'alert').length;
+    const alert = readings.filter((item) => item.state === 'alert').length;
     if (alert >= 1) {
       return true;
     } else {
@@ -123,16 +129,16 @@ const App: FC = () => {
   }
 
   function datiDefault() {
-    if (data) {
-      let ore = data
+    if (readings) {
+      let ore = readings
         .map((item) => item.datiInterni[0].dato)
         .reduce((prev, item) => prev + item);
       ore = Math.round((ore + Number.EPSILON) * 100) / 100;
 
-      const allerte = data.filter((item) => item.state === 'alert').length;
+      const allerte = readings.filter((item) => item.state === 'alert').length;
 
-      const dati = {
-        numeroStaker: data.length,
+      const dati: StakerDefaultData = {
+        numeroStaker: readings.length,
         oreOperativeTotali: ore,
         allerteAttuali: allerte,
       };
@@ -149,14 +155,16 @@ const App: FC = () => {
             <main>
               <div className="wrapper-content">
                 <div
-                  className={`wrapper-sx ${share.confirm ? 'modalOpen' : ''}`}
+                  className={`wrapper-sx ${
+                    share.confirmState ? 'modalOpen' : ''
+                  }`}
                 >
                   <Suspense fallback={<Loaderdash />}>
                     <Dashboard
                       listview={listview}
                       setListView={setListView}
                       isAlert={isAlert()}
-                      datiOrdinatiLista={datiOrdinatiLista}
+                      datiOrdinatiLista={readingsOrdinate}
                       stakerClicked={stakerClicked}
                       setStakerClicked={setStakerClicked}
                     />
@@ -168,7 +176,9 @@ const App: FC = () => {
                   stakerClicked={stakerClicked}
                   datiDefault={datiDefault()}
                   dati={
-                    datiOrdinatiLista ? datiOrdinatiLista[stakerClicked] : {}
+                    stakerClicked !== -1
+                      ? readingsOrdinate[stakerClicked]
+                      : undefined
                   }
                 />
               </div>
