@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { FC } from 'react';
 import style from './boxDati.module.scss';
 import { RiTerminalFill } from 'react-icons/ri';
 import { ShareContext } from '../../context/context';
 import { useContext } from 'react';
+import SensorState from '../../utils/sensorState';
+import { Reading } from '../../services/microservice.service';
 
-function StatoSensore({ statoSensore }) {
+type StatoSensoreProps = {
+  statoSensore: SensorState;
+};
+
+const StatoSensore: FC<StatoSensoreProps> = ({ statoSensore }) => {
   const share = useContext(ShareContext);
 
   return (
@@ -24,18 +30,22 @@ function StatoSensore({ statoSensore }) {
       </div>
     </div>
   );
-}
+};
 
-function BoxAlert({ dati }) {
+type BoxAlertProps = {
+  dati: Reading;
+};
+
+const BoxAlert: FC<BoxAlertProps> = ({ dati }) => {
   const share = useContext(ShareContext);
   return (
     <header>
       <div className={style.title}>
         <div className={style.titoletto}>Reach Staker</div>
-        <div className={style.codiceStaker}>{dati?.sensorName}</div>
+        <div className={style.codiceStaker}>{dati.sensorName}</div>
       </div>
       <div className={style.subData}>
-        <StatoSensore statoSensore={dati?.state} />
+        <StatoSensore statoSensore={dati.state} />
       </div>
       <div className={style.wrapperAlert}>
         <img
@@ -46,13 +56,13 @@ function BoxAlert({ dati }) {
       <div className={style.buttonWrapper}>
         <button
           className="alert"
-          onClick={() => share.setConfirm(dati?.state)}
+          onClick={() => share.setConfirmState(dati.state)}
         >
           Gestisci Allerta
         </button>
       </div>
     </header>
   );
-}
+};
 
 export default BoxAlert;
