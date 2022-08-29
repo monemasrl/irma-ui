@@ -3,14 +3,14 @@ import { AiOutlineClose } from 'react-icons/ai';
 
 type Props = {
   onClick: MouseEventHandler;
-  size: number;
+  size?: number;
 };
 
 function CloseIcon({ onClick, size }: Props) {
   return (
     <button
       className="closeIcon"
-      style={{ height: size, width: size }}
+      style={size ? { height: size, width: size } : {}}
       onClick={onClick}
     >
       <AiOutlineClose />
