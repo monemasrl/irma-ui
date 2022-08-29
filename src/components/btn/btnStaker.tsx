@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { FC } from 'react';
 import style from './btn.module.scss';
 import greenLed from '../../assets/images/ok-led.svg';
 import recordingLed from '../../assets/images/rec-led.svg';
 import offLed from '../../assets/images/off-led.svg';
 import alertLed from '../../assets/images/alert-led.svg';
 import alertSymbol from '../../assets/images/alert-symbol.svg';
+import SensorState from '../../utils/sensorState';
 
-function Led({ state }) {
+type LedProps = {
+  state: SensorState;
+};
+
+const Led: FC<LedProps> = ({ state }) => {
   if (state === 'ok') {
     return (
       <div className={`${style.led} ${style.ok} `}>
@@ -54,16 +59,27 @@ function Led({ state }) {
       </div>
     );
   }
-}
+  return <></>;
+};
 
-function BtnStaker({
+// TODO: remove any
+type BtnStakerProps = {
+  state: SensorState;
+  code: string;
+  setStakerClicked: (a: any) => void;
+  index: number;
+  stakerClicked: any;
+  listview: boolean;
+};
+
+const BtnStaker: FC<BtnStakerProps> = ({
   state,
   code,
   setStakerClicked,
   index,
   stakerClicked,
   listview,
-}) {
+}) => {
   function pulsanteCliccato() {
     if (stakerClicked === index) {
       return true;
@@ -72,8 +88,9 @@ function BtnStaker({
     }
   }
 
+  // TODO: remove any
   function settaStatiOnClick() {
-    setStakerClicked((prevIndex) => (prevIndex === index ? false : index));
+    setStakerClicked((prevIndex: any) => (prevIndex === index ? false : index));
   }
 
   const codeSubstring = code.slice(0, 8);
@@ -96,6 +113,6 @@ function BtnStaker({
       </div>
     </div>
   );
-}
+};
 
 export default BtnStaker;
