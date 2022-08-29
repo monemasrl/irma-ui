@@ -1,10 +1,10 @@
-import React, { useContext } from 'react';
+import React, { useContext, FC } from 'react';
 import style from './header.module.scss';
 import Navbar from '../navbar/navbar';
-import { UserContext } from '../../context/user-context';
+import { IUserContext, UserContext } from '../../context/user-context';
 
-function Header() {
-  const userSharedData = useContext(UserContext);
+const Header: FC = () => {
+  const userSharedData = useContext<IUserContext>(UserContext);
 
   return (
     <header className={style.header}>
@@ -28,6 +28,6 @@ function Header() {
       <Navbar />
     </header>
   );
-}
+};
 
 export default Header;
