@@ -25,7 +25,7 @@ function FormAlert({ alertID }: Props) {
   const userSharedData = useContext(UserContext);
 
   const submitting: SubmitHandler<FormValues> = (data) => {
-    share.setConfirm(false);
+    share.setConfirmState(undefined);
 
     console.log('Alert data', data, alertID);
 
