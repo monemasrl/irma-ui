@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { FC, useEffect } from 'react';
 import style from './boxDati.module.scss';
 import BoxDefault from './boxDefault';
 import BoxStaker from './boxStaker';
@@ -8,13 +8,21 @@ import { ShareContext } from '../../context/context';
 import { useContext } from 'react';
 import { useAnimation, motion, AnimatePresence } from 'framer-motion';
 import Loader from '../loaders/loader';
+import { Reading } from '../../services/microservice.service';
+import { StakerDefaultData } from '../../App';
 
-function BoxDati({ datiDefault, dati, stakerClicked }) {
+type Props = {
+  dati?: Reading;
+  datiDefault?: StakerDefaultData;
+  stakerClicked: number;
+};
+
+const BoxDati: FC<Props> = ({ datiDefault, dati, stakerClicked }) => {
   const animationControls = useAnimation();
 
   async function sequence() {
     console.log('stakerClicked', stakerClicked);
-    if (typeof stakerClicked === 'number') {
+    if (stakerClicked !== -1) {
       await animationControls.start({ opacity: 1 });
       animationControls.start({
         scale: 1,
@@ -48,27 +56,21 @@ function BoxDati({ datiDefault, dati, stakerClicked }) {
     <AnimatePresence>
       <motion.div
         animate={animationControls}
-        className={`${style.boxDati} ${style[dati?.state]} ${
-          share.confirm ? style.modalOpen : ''
+        className={`${style.boxDati} ${dati ? style[dati.state] : ''} ${
+          share.confirmState ? style.modalOpen : ''
         }`}
       >
         {datiDefault ? (
           <>
             {' '}
-            {dati?.state === 'ok' && <BoxStaker dati={dati && dati} />}
-            {dati?.state === 'rec' && <BoxStaker dati={dati && dati} />}
-            {dati?.state === 'off' && <BoxStaker dati={dati && dati} />}
-            {stakerClicked === false && (
-              <BoxDefault datiDefault={datiDefault && datiDefault} />
+            {dati?.state === 'ok' && <BoxStaker dati={dati} />}
+            {dati?.state === 'rec' && <BoxStaker dati={dati} />}
+            {dati?.state === 'off' && <BoxStaker dati={dati} />}
+            {stakerClicked === -1 && <BoxDefault datiDefault={datiDefault} />}
+            {dati?.state === 'alert' && <BoxAlert dati={dati} />}
+            {dati?.unhandledAlertIDs.length && (
+              <BoxConfirm alertID={dati.unhandledAlertIDs[0]} />
             )}
-            {dati?.state === 'alert' && <BoxAlert dati={dati && dati} />}
-            <BoxConfirm
-              alertID={
-                dati?.unhandledAlertIDs?.length
-                  ? dati?.unhandledAlertIDs[0]
-                  : undefined
-              }
-            />
           </>
         ) : (
           <Loader
@@ -79,6 +81,6 @@ function BoxDati({ datiDefault, dati, stakerClicked }) {
       </motion.div>
     </AnimatePresence>
   );
-}
+};
 
 export default BoxDati;
