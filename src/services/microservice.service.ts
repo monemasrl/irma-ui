@@ -1,10 +1,21 @@
 import axios from 'axios';
+import CommandType from '../utils/commandType';
+import SensorState from '../utils/sensorState';
 
 const WEBSOCKET_URL = process.env.REACT_APP_WEBSOCKET_URL || 'http://localhost';
 const WEBSOCKET_PORT = process.env.REACT_APP_WEBSOCKET_PORT || '5000';
 
-const authenticate = async (username, password) => {
-  const response = await axios.post(
+export interface BackendError {
+  message: string;
+}
+
+interface AuthResponse {
+  access_token: string;
+  refresh_token: string;
+}
+
+const authenticate = async (username: string, password: string) => {
+  const response = await axios.post<AuthResponse>(
     `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/authenticate`,
     {
       username: username,
@@ -14,11 +25,15 @@ const authenticate = async (username, password) => {
 
   console.log('login', response);
 
-  return [response.data?.access_token, response.data?.refresh_token];
+  return [response.data.access_token, response.data.refresh_token];
 };
 
-const refresh = async (refreshToken) => {
-  const response = await axios.post(
+interface RefreshResponse {
+  access_token: string;
+}
+
+const refresh = async (refreshToken: string) => {
+  const response = await axios.post<RefreshResponse>(
     `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/refresh`,
     {},
     {
@@ -30,11 +45,22 @@ const refresh = async (refreshToken) => {
 
   console.log('refresh', response);
 
-  return response.data?.access_token;
+  return response.data.access_token;
 };
 
-const getOrganizationsList = async (token) => {
-  const response = await axios.get(
+export interface Organization {
+  _id: {
+    $oid: string;
+  };
+  organizationName: string;
+}
+
+interface OrgsListResponse {
+  organizations: Organization[];
+}
+
+const getOrganizationsList = async (token: string) => {
+  const response = await axios.get<OrgsListResponse>(
     `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/organizations`,
     {
       headers: {
@@ -45,11 +71,25 @@ const getOrganizationsList = async (token) => {
   );
 
   console.log('Fetch orgs', response);
-  return response.data?.organizations;
+  return response.data.organizations;
 };
 
-const getApplicationsList = async (token, orgID) => {
-  const response = await axios.get(
+export interface Application {
+  _id: {
+    $oid: string;
+  };
+  applicationName: string;
+  organization: {
+    $oid: string;
+  };
+}
+
+interface AppsListResponse {
+  applications: Application[];
+}
+
+const getApplicationsList = async (token: string, orgID: string) => {
+  const response = await axios.get<AppsListResponse>(
     `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/applications`,
     {
       headers: {
@@ -64,8 +104,30 @@ const getApplicationsList = async (token, orgID) => {
   return response.data?.applications;
 };
 
-const getSensors = async (token, appID) => {
-  const response = await axios.get(
+export interface Sensor {
+  _id: {
+    $oid: string;
+  };
+  application: {
+    $oid: string;
+  };
+  lastSeenAt: {
+    $date: string;
+  };
+  organization: {
+    $oid: string;
+  };
+  sensorID: string;
+  sensorName: string;
+  state: number;
+}
+
+interface SensorsResponse {
+  sensors: Sensor[];
+}
+
+const getSensors = async (token: string, appID: string) => {
+  const response = await axios.get<SensorsResponse>(
     `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/sensors`,
     {
       headers: {
@@ -77,14 +139,31 @@ const getSensors = async (token, appID) => {
   );
 
   console.log('getSensors', response);
-  return response.data?.sensors;
+  return response.data.sensors;
 };
 
-const getReadings = async (token, sensorIDList) => {
-  const response = await axios.post(
+export interface Reading {
+  sensorID: string;
+  sensorName: string;
+  applicationID: string;
+  state: SensorState;
+  datiInterni: [
+    { titolo: string; dato: number },
+    { titolo: string; dato: number },
+    { titolo: string; dato: number }
+  ];
+  unhandledAlertIDs: string[];
+}
+
+interface ReadingsResponse {
+  readings: Reading[];
+}
+
+const getReadings = async (token: string, sensorIDList: string[]) => {
+  const response = await axios.post<ReadingsResponse>(
     `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/`,
     {
-      paths: sensorIDList,
+      IDs: sensorIDList,
     },
     {
       headers: {
@@ -96,10 +175,15 @@ const getReadings = async (token, sensorIDList) => {
   );
 
   console.log('getReadings', response);
-  return response.data;
+  return response.data.readings;
 };
 
-const sendCommand = async (token, appID, sensorID, commandType) => {
+const sendCommand = async (
+  token: string,
+  appID: string,
+  sensorID: string,
+  commandType: CommandType
+) => {
   const response = await axios.post(
     `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/command`,
     {
@@ -119,7 +203,12 @@ const sendCommand = async (token, appID, sensorID, commandType) => {
   return response;
 };
 
-const handleAlert = async (token, alertID, isConfirmed, handleNote) => {
+const handleAlert = async (
+  token: string,
+  alertID: string,
+  isConfirmed: boolean,
+  handleNote: string
+) => {
   const response = await axios.post(
     `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/alert/handle`,
     {

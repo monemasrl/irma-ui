@@ -1,7 +1,7 @@
 import React from 'react';
-import ContentLoader from 'react-content-loader';
+import ContentLoader, { IContentLoaderProps } from 'react-content-loader';
 
-function Loaderdash(props) {
+function Loaderdash(props: IContentLoaderProps) {
   return (
     <div className="loader dash">
       <ContentLoader

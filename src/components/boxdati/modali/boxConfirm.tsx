@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import '../../ui/ui.css';
 import style from './modali.module.css';
 import { ShareContext } from '../../../context/context';
@@ -7,15 +7,19 @@ import { CloseIcon } from '../../ui/ui';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FormAlert } from '../../form/form';
 
-function BoxConfirm({ alertID }) {
+type Props = {
+  alertID: string;
+};
+
+const BoxConfirm: FC<Props> = ({ alertID }) => {
   const share = useContext(ShareContext);
 
   return (
     <AnimatePresence>
-      {share.confirm && (
+      {share.confirmState && (
         <motion.div
-          key={share.confirm}
-          className={`${style.boxConfirm} ${style[share.confirm]}`}
+          key={share.confirmState}
+          className={`${style.boxConfirm} ${style[share.confirmState]}`}
           initial={{ opacity: 0, top: 20, backgroundColor: '#ee2e32' }}
           animate={{ opacity: 1, top: 0, backgroundColor: '#ee2e32' }}
           exit={{ opacity: 0, top: 20, backgroundColor: '#ee2e32' }}
@@ -23,18 +27,18 @@ function BoxConfirm({ alertID }) {
         >
           <div className={style.innerWrapper}>
             <div className={style.wrapperCloseIcon}>
-              <CloseIcon onClick={() => share.setConfirm(false)} />
+              <CloseIcon onClick={() => share.setConfirmState(undefined)} />
             </div>
 
             <div className={style.statoModaleTitolo}>
               {
                 // Se esiste una corrispondenza tra uiStatosensore e confrim, stampa, altrimenti stampa confirm
-                share.uiStatiSensore[share.confirm]
-                  ? share.uiStatiSensore[share.confirm]
-                  : share.confirm
+                share.uiStatiSensore[share.confirmState]
+                  ? share.uiStatiSensore[share.confirmState]
+                  : share.confirmState
               }
             </div>
-            {share.confirm === 'alert' && (
+            {share.confirmState === 'alert' && (
               <>
                 <div className={style.testoConferma}>
                   Confermi la segnalazione?
@@ -52,6 +56,6 @@ function BoxConfirm({ alertID }) {
       )}
     </AnimatePresence>
   );
-}
+};
 
 export default BoxConfirm;

@@ -2,25 +2,35 @@ import React from 'react';
 import { ShareContext } from '../../context/context';
 import { UserContext } from '../../context/user-context';
 import { useContext } from 'react';
-import { useForm } from 'react-hook-form';
+import { SubmitHandler, useForm } from 'react-hook-form';
 
-function FormAlert({ alertID }) {
+type Props = {
+  alertID: string;
+};
+
+// TODO: rivedere tipo alertConfirm
+type FormValues = {
+  alertConfirm: string;
+  noteAlert: string;
+};
+
+function FormAlert({ alertID }: Props) {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm();
+  } = useForm<FormValues>();
 
   const share = useContext(ShareContext);
   const userSharedData = useContext(UserContext);
 
-  function submitting(data) {
-    share.setConfirm(false);
+  const submitting: SubmitHandler<FormValues> = (data) => {
+    share.setConfirmState(undefined);
 
     console.log('Alert data', data, alertID);
 
     userSharedData.handleAlert(alertID, !!+data.alertConfirm, data.noteAlert);
-  }
+  };
 
   return (
     <form
@@ -61,8 +71,8 @@ function FormAlert({ alertID }) {
         <textarea
           {...register('noteAlert', { required: true })}
           name="noteAlert"
-          rows="4"
-          cols="30"
+          rows={4}
+          cols={30}
           id="note-alert"
         />
 

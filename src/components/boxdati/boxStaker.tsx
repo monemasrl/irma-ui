@@ -1,10 +1,16 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, FC } from 'react';
 import style from './boxDati.module.scss';
 import { RiTerminalFill } from 'react-icons/ri';
 import { motion } from 'framer-motion';
 import { UserContext } from '../../context/user-context';
+import SensorState from '../../utils/sensorState';
+import { Reading } from '../../services/microservice.service';
 
-function StatoSensore({ statoSensore }) {
+type StatoSensoreProps = {
+  statoSensore: SensorState;
+};
+
+const StatoSensore: FC<StatoSensoreProps> = ({ statoSensore }) => {
   const uiStatiSensore = {
     ok: 'sensore funzionante',
     rec: 'in stato di rilevamento...',
@@ -39,9 +45,22 @@ function StatoSensore({ statoSensore }) {
       </div>
     </div>
   );
-}
+};
 
-function BloccoNumerico({ datiNumerici, sensorID, index }) {
+type BloccoNumericoProps = {
+  datiNumerici: {
+    titolo: string;
+    dato: number;
+  };
+  sensorID: string;
+  index: number;
+};
+
+const BloccoNumerico: FC<BloccoNumericoProps> = ({
+  datiNumerici,
+  sensorID,
+  index,
+}) => {
   return (
     <>
       <motion.div
@@ -57,13 +76,18 @@ function BloccoNumerico({ datiNumerici, sensorID, index }) {
       </motion.div>
     </>
   );
-}
+};
 
-function BtnStartRec({ applicationID, sensorID }) {
+type BtnStartRecProps = {
+  applicationID: string;
+  sensorID: string;
+};
+
+const BtnStartRec: FC<BtnStartRecProps> = ({ applicationID, sensorID }) => {
   const [statoInvioDati, setStatoInvioDati] = useState(false);
   const userSharedData = useContext(UserContext);
 
-  function iniziaLettura(applicationID, sensorID) {
+  function iniziaLettura(applicationID: string, sensorID: string) {
     setStatoInvioDati(true);
 
     userSharedData
@@ -87,14 +111,18 @@ function BtnStartRec({ applicationID, sensorID }) {
       </button>
     </div>
   );
-}
+};
 
 /* COMPONENTE PRINCIPALE */
 
-function BoxStaker({ dati }) {
+type BoxStakerProps = {
+  dati: Reading;
+};
+
+const BoxStaker: FC<BoxStakerProps> = ({ dati }) => {
   return (
     <motion.header
-      key={dati?.sensorID}
+      key={dati.sensorID}
       initial={{ opacity: 0, top: 20, position: 'relative' }}
       animate={{ opacity: 1, top: 0, position: 'relative' }}
       exit={{ opacity: 0, top: 20 }}
@@ -102,21 +130,21 @@ function BoxStaker({ dati }) {
     >
       <div className={style.title}>
         <div className={style.titoletto}>Reach Staker</div>
-        <div className={style.codiceStaker}>{dati?.sensorName}</div>
+        <div className={style.codiceStaker}>{dati.sensorName}</div>
       </div>
 
-      <StatoSensore statoSensore={dati?.state} />
-      {dati?.state === 'ok' && (
+      <StatoSensore statoSensore={dati.state} />
+      {dati.state === 'ok' && (
         <BtnStartRec
           applicationID={dati.applicationID}
           sensorID={dati.sensorID}
         />
       )}
       <div className={style.datiInterni}>
-        {dati?.datiInterni?.map((item, index) => (
-          <React.Fragment key={item.titolo}>
+        {dati.datiInterni.map((dato, index) => (
+          <React.Fragment key={dato.titolo}>
             <BloccoNumerico
-              datiNumerici={item}
+              datiNumerici={dato}
               sensorID={dati.sensorID}
               index={index}
             />
@@ -125,6 +153,6 @@ function BoxStaker({ dati }) {
       </div>
     </motion.header>
   );
-}
+};
 
 export default BoxStaker;
