@@ -8,8 +8,8 @@ import { ShareContext } from '../../context/context';
 import { useContext } from 'react';
 import { useAnimation, motion, AnimatePresence } from 'framer-motion';
 import Loader from '../loaders/loader';
-import { Reading } from '../../services/microservice.service';
-import { StakerDefaultData } from '../../App';
+import Reading from '../../typings/reading';
+import StakerDefaultData from '../../typings/defaultData';
 
 type Props = {
   dati?: Reading;

@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import style from './boxDati.module.scss';
 import { motion } from 'framer-motion';
-import { StakerDefaultData } from '../../App';
+import StakerDefaultData from '../../typings/defaultData';
 
 type Props = {
   datiDefault?: StakerDefaultData;

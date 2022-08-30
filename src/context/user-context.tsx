@@ -7,16 +7,15 @@ import React, {
   Dispatch,
   SetStateAction,
 } from 'react';
-import Microservice, {
-  Application,
-  Organization,
-  Reading,
-  Sensor,
-} from '../services/microservice.service';
+import Microservice from '../services/microservice.service';
 import { useNavigate } from 'react-router-dom';
 import { AxiosError } from 'axios';
-import CommandType from '../utils/commandType';
+import CommandType from '../typings/command';
 import { OrgOption } from '../mock/mock_data';
+import Organization from '../typings/organization';
+import Application from '../typings/application';
+import Sensor from '../typings/sensor';
+import Reading from '../typings/reading';
 
 const MOCK_SENSORDATA = process.env.REACT_APP_MOCK_SENSORDATA || 0;
 const MOCK_LOGIN = process.env.REACT_APP_MOCK_LOGIN || 0;

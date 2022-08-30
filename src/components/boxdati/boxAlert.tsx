@@ -3,8 +3,8 @@ import style from './boxDati.module.scss';
 import { RiTerminalFill } from 'react-icons/ri';
 import { ShareContext } from '../../context/context';
 import { useContext } from 'react';
-import SensorState from '../../utils/sensorState';
-import { Reading } from '../../services/microservice.service';
+import { SensorState } from '../../typings/sensor';
+import Reading from '../../typings/reading';
 
 type StatoSensoreProps = {
   statoSensore: SensorState;

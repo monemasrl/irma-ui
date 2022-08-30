@@ -1,6 +1,9 @@
 import axios from 'axios';
-import CommandType from '../utils/commandType';
-import SensorState from '../utils/sensorState';
+import Application from '../typings/application';
+import CommandType from '../typings/command';
+import Organization from '../typings/organization';
+import Reading from '../typings/reading';
+import Sensor from '../typings/sensor';
 
 const WEBSOCKET_URL = process.env.REACT_APP_WEBSOCKET_URL || 'http://localhost';
 const WEBSOCKET_PORT = process.env.REACT_APP_WEBSOCKET_PORT || '5000';
@@ -48,13 +51,6 @@ const refresh = async (refreshToken: string) => {
   return response.data.access_token;
 };
 
-export interface Organization {
-  _id: {
-    $oid: string;
-  };
-  organizationName: string;
-}
-
 interface OrgsListResponse {
   organizations: Organization[];
 }
@@ -73,16 +69,6 @@ const getOrganizationsList = async (token: string) => {
   console.log('Fetch orgs', response);
   return response.data.organizations;
 };
-
-export interface Application {
-  _id: {
-    $oid: string;
-  };
-  applicationName: string;
-  organization: {
-    $oid: string;
-  };
-}
 
 interface AppsListResponse {
   applications: Application[];
@@ -104,24 +90,6 @@ const getApplicationsList = async (token: string, orgID: string) => {
   return response.data?.applications;
 };
 
-export interface Sensor {
-  _id: {
-    $oid: string;
-  };
-  application: {
-    $oid: string;
-  };
-  lastSeenAt: {
-    $date: string;
-  };
-  organization: {
-    $oid: string;
-  };
-  sensorID: string;
-  sensorName: string;
-  state: number;
-}
-
 interface SensorsResponse {
   sensors: Sensor[];
 }
@@ -141,19 +109,6 @@ const getSensors = async (token: string, appID: string) => {
   console.log('getSensors', response);
   return response.data.sensors;
 };
-
-export interface Reading {
-  sensorID: string;
-  sensorName: string;
-  applicationID: string;
-  state: SensorState;
-  datiInterni: [
-    { titolo: string; dato: number },
-    { titolo: string; dato: number },
-    { titolo: string; dato: number }
-  ];
-  unhandledAlertIDs: string[];
-}
 
 interface ReadingsResponse {
   readings: Reading[];

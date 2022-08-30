@@ -5,7 +5,7 @@ import recordingLed from '../../assets/images/rec-led.svg';
 import offLed from '../../assets/images/off-led.svg';
 import alertLed from '../../assets/images/alert-led.svg';
 import alertSymbol from '../../assets/images/alert-symbol.svg';
-import SensorState from '../../utils/sensorState';
+import { SensorState } from '../../typings/sensor';
 
 type LedProps = {
   state: SensorState;

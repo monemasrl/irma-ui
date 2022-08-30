@@ -5,7 +5,7 @@ import React, {
   SetStateAction,
   useState,
 } from 'react';
-import SensorState from '../utils/sensorState';
+import { SensorState } from '../typings/sensor';
 
 interface IUiStatiSensore {
   [key: string]: string;

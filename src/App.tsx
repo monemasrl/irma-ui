@@ -7,8 +7,9 @@ import { ShareContextProvider, ShareContext } from './context/context';
 import { UserContext } from './context/user-context';
 import './App.scss';
 import io from 'socket.io-client';
-import { Reading } from './services/microservice.service';
 import { AppOption } from './mock/mock_data';
+import Reading from './typings/reading';
+import StakerDefaultData from './typings/defaultData';
 
 const Dashboard = lazy(() => import('./components/dashboard/dashboard'));
 const BoxDati = lazy(() => import('./components/boxdati/boxDati'));
@@ -24,12 +25,6 @@ const socket = !DISABLE_SOCKETIO
   : undefined;
 
 console.log(WEBSOCKET_URL, WEBSOCKET_PORT, socket);
-
-export type StakerDefaultData = {
-  numeroStaker: number;
-  oreOperativeTotali: number;
-  allerteAttuali: number;
-};
 
 const App: FC = () => {
   const [readings, setReadings] = useState<Reading[]>([]);

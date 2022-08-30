@@ -3,7 +3,7 @@ import style from './dashboard.module.scss';
 import BtnStaker from '../btn/btnStaker';
 import { IoApps, IoListOutline } from 'react-icons/io5';
 import Loader from '../loaders/loader';
-import { Reading } from '../../services/microservice.service';
+import Reading from '../../typings/reading';
 
 type Props = {
   isAlert: boolean;
