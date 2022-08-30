@@ -4,6 +4,8 @@ import React, {
   useEffect,
   useCallback,
   ReactNode,
+  Dispatch,
+  SetStateAction,
 } from 'react';
 import Microservice, {
   Application,
@@ -26,9 +28,9 @@ interface IEntry {
 
 export interface IUserContext {
   selectedOrg?: IEntry;
-  setSelectedOrg: (entry: IEntry) => void;
+  setSelectedOrg: Dispatch<SetStateAction<IEntry | undefined>>;
   selectedApp?: IEntry;
-  setSelectedApp: (entry: IEntry) => void;
+  setSelectedApp: Dispatch<SetStateAction<IEntry | undefined>>;
   orgOptions: IEntry[];
   appOptions: IEntry[];
   authenticate: (email: string, password: string) => Promise<void>;

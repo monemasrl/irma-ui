@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Dispatch, SetStateAction } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import style from './navbar.module.scss';
 import { CloseIcon } from '../ui/ui';
@@ -7,7 +7,7 @@ import { IDatiUser } from './navbar';
 type Props = {
   datiUser: IDatiUser;
   openMenu: boolean;
-  setOpenMenu: (a: boolean) => void;
+  setOpenMenu: Dispatch<SetStateAction<boolean>>;
   logout: () => void;
 };
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Dispatch, SetStateAction } from 'react';
 import Select from 'react-select';
 import { CloseIcon } from '../ui/ui';
 import style from './navbar.module.scss';
@@ -8,7 +8,7 @@ import { IUserContext } from '../../context/user-context';
 type Props = {
   userSharedData: IUserContext;
   openSettings: boolean;
-  setOpenSettings: (a: boolean) => void;
+  setOpenSettings: Dispatch<SetStateAction<boolean>>;
 };
 
 function OptionMenu({ userSharedData, setOpenSettings, openSettings }: Props) {

@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { Dispatch, FC, SetStateAction } from 'react';
 import style from './dashboard.module.scss';
 import BtnStaker from '../btn/btnStaker';
 import { IoApps, IoListOutline } from 'react-icons/io5';
@@ -9,9 +9,9 @@ type Props = {
   isAlert: boolean;
   datiOrdinatiLista: Reading[];
   stakerClicked: number;
-  setStakerClicked: (a: number) => void;
+  setStakerClicked: Dispatch<SetStateAction<number>>;
   listview: boolean;
-  setListView: (a: boolean) => void;
+  setListView: Dispatch<SetStateAction<boolean>>;
 };
 
 const Dashboard: FC<Props> = ({

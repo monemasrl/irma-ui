@@ -1,4 +1,10 @@
-import React, { createContext, ReactNode, useState } from 'react';
+import React, {
+  createContext,
+  Dispatch,
+  ReactNode,
+  SetStateAction,
+  useState,
+} from 'react';
 import SensorState from '../utils/sensorState';
 
 interface IUiStatiSensore {
@@ -7,7 +13,7 @@ interface IUiStatiSensore {
 
 interface IShareData {
   confirmState?: SensorState;
-  setConfirmState: (a: SensorState | undefined) => void;
+  setConfirmState: Dispatch<SetStateAction<SensorState | undefined>>;
   uiStatiSensore: IUiStatiSensore;
 }
 
