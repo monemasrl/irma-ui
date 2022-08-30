@@ -17,7 +17,6 @@ interface IShareData {
   uiStatiSensore: IUiStatiSensore;
 }
 
-// TODO: fix default value
 const ShareContext = createContext<IShareData>({} as IShareData);
 
 type Props = {

@@ -163,7 +163,7 @@ const getReadings = async (token: string, sensorIDList: string[]) => {
   const response = await axios.post<ReadingsResponse>(
     `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/`,
     {
-      paths: sensorIDList,
+      IDs: sensorIDList,
     },
     {
       headers: {
