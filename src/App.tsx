@@ -101,7 +101,7 @@ const App: FC = () => {
 
   useEffect(() => {
     const newdati = readings;
-    if (readings && listview) {
+    if (readings.length && listview) {
       console.log('test', newdati);
       //Per portare in cima gli alert
       const datiOrdinatiAlert = newdati.sort((a, _b) => {
@@ -111,7 +111,7 @@ const App: FC = () => {
         return 0;
       });
       setReadingsOrdinate(datiOrdinatiAlert);
-    } else if (readings && !listview) {
+    } else if (readings.length && !listview) {
       setReadingsOrdinate(newdati);
     } else {
       setReadingsOrdinate([]);
@@ -129,7 +129,7 @@ const App: FC = () => {
   }
 
   function datiDefault() {
-    if (readings) {
+    if (readings.length) {
       let ore = readings
         .map((item) => item.datiInterni[0].dato)
         .reduce((prev, item) => prev + item);
