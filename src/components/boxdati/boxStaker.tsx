@@ -15,7 +15,9 @@ const StatoSensore: FC<StatoSensoreProps> = ({ statoSensore }) => {
     ok: 'sensore funzionante',
     rec: 'in stato di rilevamento...',
     off: 'sensore non funzionante',
-    alert: 'rilevata anomalia',
+    'alert-ready': 'rilevata anomalia',
+    // TODO: messaggio
+    'alert-running': 'messaggio',
   };
 
   return (

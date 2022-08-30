@@ -42,7 +42,7 @@ const Led: FC<LedProps> = ({ state }) => {
         />
       </div>
     );
-  } else if (state === 'alert') {
+  } else if (state === 'alert-ready' || state === 'alert-running') {
     return (
       <div className={style.led}>
         <div className={style.circleAlert}></div>

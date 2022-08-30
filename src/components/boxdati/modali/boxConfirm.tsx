@@ -38,7 +38,8 @@ const BoxConfirm: FC<Props> = ({ alertID }) => {
                   : share.confirmState
               }
             </div>
-            {share.confirmState === 'alert' && (
+            {(share.confirmState === 'alert-ready' ||
+              share.confirmState === 'alert-running') && (
               <>
                 <div className={style.testoConferma}>
                   Confermi la segnalazione?
