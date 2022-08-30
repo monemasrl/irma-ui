@@ -18,7 +18,7 @@ interface IShareData {
 }
 
 // TODO: fix default value
-const ShareContext = createContext<IShareData>(undefined!);
+const ShareContext = createContext<IShareData>({} as IShareData);
 
 type Props = {
   children: ReactNode;

@@ -50,7 +50,7 @@ export interface IUserContext {
 }
 
 // TODO: fix default value
-const UserContext = createContext<IUserContext>(undefined!);
+const UserContext = createContext<IUserContext>({} as IUserContext);
 
 type Props = {
   children: ReactNode;
