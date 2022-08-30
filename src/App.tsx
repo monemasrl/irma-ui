@@ -144,6 +144,7 @@ const App: FC = () => {
       };
       return dati;
     }
+    return undefined;
   }
 
   return (

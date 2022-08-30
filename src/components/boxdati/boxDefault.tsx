@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { StakerDefaultData } from '../../App';
 
 type Props = {
-  datiDefault: StakerDefaultData;
+  datiDefault?: StakerDefaultData;
 };
 
 const BoxDefault: FC<Props> = ({ datiDefault }) => {
@@ -16,30 +16,36 @@ const BoxDefault: FC<Props> = ({ datiDefault }) => {
       exit={{ opacity: 0, top: 20 }}
       transition={{ duration: 0.5 }}
     >
-      <ul>
-        <li>
-          <div className={style.title}>
-            <div className={style.titoletto}>Reach Staker Totali</div>
-            <div className={style.codiceStaker}>{datiDefault.numeroStaker}</div>
-          </div>
-        </li>
-        <li>
-          <div className={style.title}>
-            <div className={style.titoletto}>Ore operative totali</div>
-            <div className={style.codiceStaker}>
-              {datiDefault.oreOperativeTotali}
+      {datiDefault ? (
+        <ul>
+          <li>
+            <div className={style.title}>
+              <div className={style.titoletto}>Reach Staker Totali</div>
+              <div className={style.codiceStaker}>
+                {datiDefault.numeroStaker}
+              </div>
             </div>
-          </div>
-        </li>
-        <li>
-          <div className={style.title}>
-            <div className={style.titoletto}>Allerte</div>
-            <div className={style.codiceStaker}>
-              {datiDefault.allerteAttuali}
+          </li>
+          <li>
+            <div className={style.title}>
+              <div className={style.titoletto}>Ore operative totali</div>
+              <div className={style.codiceStaker}>
+                {datiDefault.oreOperativeTotali}
+              </div>
             </div>
-          </div>
-        </li>
-      </ul>
+          </li>
+          <li>
+            <div className={style.title}>
+              <div className={style.titoletto}>Allerte</div>
+              <div className={style.codiceStaker}>
+                {datiDefault.allerteAttuali}
+              </div>
+            </div>
+          </li>
+        </ul>
+      ) : (
+        <h2>Dati non presenti</h2>
+      )}
     </motion.header>
   );
 };
