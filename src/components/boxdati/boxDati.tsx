@@ -68,7 +68,7 @@ const BoxDati: FC<Props> = ({ datiDefault, dati, stakerClicked }) => {
             {dati?.state === 'off' && <BoxStaker dati={dati} />}
             {stakerClicked === -1 && <BoxDefault datiDefault={datiDefault} />}
             {dati?.state === 'alert' && <BoxAlert dati={dati} />}
-            {dati?.unhandledAlertIDs.length && (
+            {dati?.state === 'alert' && dati?.unhandledAlertIDs.length && (
               <BoxConfirm alertID={dati.unhandledAlertIDs[0]} />
             )}
           </>
