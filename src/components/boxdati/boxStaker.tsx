@@ -4,6 +4,7 @@ import { RiTerminalFill } from 'react-icons/ri';
 import { motion } from 'framer-motion';
 import { UserContext } from '../../context/user-context';
 import SensorState from '../../utils/sensorState';
+import { Reading } from '../../services/microservice.service';
 
 type StatoSensoreProps = {
   statoSensore: SensorState;
@@ -46,9 +47,11 @@ const StatoSensore: FC<StatoSensoreProps> = ({ statoSensore }) => {
   );
 };
 
-// TODO: remove 'any'
 type BloccoNumericoProps = {
-  datiNumerici: any;
+  datiNumerici: {
+    titolo: string;
+    dato: number;
+  };
   sensorID: string;
   index: number;
 };
@@ -112,15 +115,14 @@ const BtnStartRec: FC<BtnStartRecProps> = ({ applicationID, sensorID }) => {
 
 /* COMPONENTE PRINCIPALE */
 
-// TODO: remove any
 type BoxStakerProps = {
-  dati: any;
+  dati: Reading;
 };
 
 const BoxStaker: FC<BoxStakerProps> = ({ dati }) => {
   return (
     <motion.header
-      key={dati?.sensorID}
+      key={dati.sensorID}
       initial={{ opacity: 0, top: 20, position: 'relative' }}
       animate={{ opacity: 1, top: 0, position: 'relative' }}
       exit={{ opacity: 0, top: 20 }}
@@ -128,22 +130,21 @@ const BoxStaker: FC<BoxStakerProps> = ({ dati }) => {
     >
       <div className={style.title}>
         <div className={style.titoletto}>Reach Staker</div>
-        <div className={style.codiceStaker}>{dati?.sensorName}</div>
+        <div className={style.codiceStaker}>{dati.sensorName}</div>
       </div>
 
-      <StatoSensore statoSensore={dati?.state} />
-      {dati?.state === 'ok' && (
+      <StatoSensore statoSensore={dati.state} />
+      {dati.state === 'ok' && (
         <BtnStartRec
           applicationID={dati.applicationID}
           sensorID={dati.sensorID}
         />
       )}
       <div className={style.datiInterni}>
-        {dati?.datiInterni?.map((item: any, index: any) => (
-          // TODO: remove any
-          <React.Fragment key={item.titolo}>
+        {dati.datiInterni.map((dato, index) => (
+          <React.Fragment key={dato.titolo}>
             <BloccoNumerico
-              datiNumerici={item}
+              datiNumerici={dato}
               sensorID={dati.sensorID}
               index={index}
             />

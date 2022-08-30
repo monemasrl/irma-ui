@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { Dispatch, FC, SetStateAction } from 'react';
 import style from './btn.module.scss';
 import greenLed from '../../assets/images/ok-led.svg';
 import recordingLed from '../../assets/images/rec-led.svg';
@@ -62,13 +62,12 @@ const Led: FC<LedProps> = ({ state }) => {
   return <></>;
 };
 
-// TODO: remove any
 type BtnStakerProps = {
   state: SensorState;
   code: string;
-  setStakerClicked: (a: any) => void;
+  setStakerClicked: Dispatch<SetStateAction<number>>;
   index: number;
-  stakerClicked: any;
+  stakerClicked: number;
   listview: boolean;
 };
 
@@ -88,9 +87,8 @@ const BtnStaker: FC<BtnStakerProps> = ({
     }
   }
 
-  // TODO: remove any
   function settaStatiOnClick() {
-    setStakerClicked((prevIndex: any) => (prevIndex === index ? false : index));
+    setStakerClicked((prevIndex: number) => (prevIndex === index ? -1 : index));
   }
 
   const codeSubstring = code.slice(0, 8);
