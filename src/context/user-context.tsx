@@ -49,7 +49,6 @@ export interface IUserContext {
   ) => Promise<void>;
 }
 
-// TODO: fix default value
 const UserContext = createContext<IUserContext>({} as IUserContext);
 
 type Props = {
@@ -117,7 +116,7 @@ function UserContextProvider({ children }: Props) {
         setAccessToken(aToken);
         localStorage.setItem('access_token', aToken);
       } catch (error) {
-        if (error instanceof AxiosError && error.response?.status === 401) {
+        if (error instanceof AxiosError) {
           logout();
           return;
         }
