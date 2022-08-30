@@ -129,22 +129,21 @@ const App: FC = () => {
   }
 
   function datiDefault() {
-    if (readings.length) {
-      let ore = readings
-        .map((item) => item.datiInterni[0].dato)
-        .reduce((prev, item) => prev + item);
-      ore = Math.round((ore + Number.EPSILON) * 100) / 100;
+    if (!readings.length) return undefined;
 
-      const allerte = readings.filter((item) => item.state === 'alert').length;
+    let ore = readings
+      .map((item) => item.datiInterni[0].dato)
+      .reduce((prev, item) => prev + item);
+    ore = Math.round((ore + Number.EPSILON) * 100) / 100;
 
-      const dati: StakerDefaultData = {
-        numeroStaker: readings.length,
-        oreOperativeTotali: ore,
-        allerteAttuali: allerte,
-      };
-      return dati;
-    }
-    return undefined;
+    const allerte = readings.filter((item) => item.state === 'alert').length;
+
+    const dati: StakerDefaultData = {
+      numeroStaker: readings.length,
+      oreOperativeTotali: ore,
+      allerteAttuali: allerte,
+    };
+    return dati;
   }
 
   return (
