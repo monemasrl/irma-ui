@@ -49,12 +49,12 @@ const Led: FC<LedProps> = ({ state }) => {
         <img
           className={`${style.led} ${style.alert}`}
           src={alertLed}
-          alt="green led"
+          alt="red led"
         />
         <img
           className={style.alertSymbol}
           src={alertSymbol}
-          alt="green led"
+          alt="red led"
         />
       </div>
     );

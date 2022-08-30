@@ -17,7 +17,8 @@
     background: #ff3130; 
 }
 
-.boxConfirm.alert .backConfirm{
+.boxConfirm.alert-ready .backConfirm,
+.boxConfirm.alert-running .backConfirm{
     position: absolute;
     right: -50px;
     width: 240px;
