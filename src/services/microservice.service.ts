@@ -19,7 +19,7 @@ interface AuthResponse {
 
 const authenticate = async (username: string, password: string) => {
   const response = await axios.post<AuthResponse>(
-    `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/authenticate`,
+    `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/jwt/authenticate`,
     {
       username: username,
       password: password,
@@ -37,7 +37,7 @@ interface RefreshResponse {
 
 const refresh = async (refreshToken: string) => {
   const response = await axios.post<RefreshResponse>(
-    `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/refresh`,
+    `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/jwt/refresh`,
     {},
     {
       headers: {
@@ -57,7 +57,7 @@ interface OrgsListResponse {
 
 const getOrganizationsList = async (token: string) => {
   const response = await axios.get<OrgsListResponse>(
-    `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/organizations`,
+    `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/organizations/`,
     {
       headers: {
         'Content-Type': 'application/json',
@@ -76,7 +76,7 @@ interface AppsListResponse {
 
 const getApplicationsList = async (token: string, orgID: string) => {
   const response = await axios.get<AppsListResponse>(
-    `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/applications`,
+    `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/applications/`,
     {
       headers: {
         'Content-Type': 'application/json',
@@ -96,7 +96,7 @@ interface SensorsResponse {
 
 const getSensors = async (token: string, appID: string) => {
   const response = await axios.get<SensorsResponse>(
-    `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/sensors`,
+    `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/sensors/`,
     {
       headers: {
         'Content-Type': 'application/json',
@@ -116,7 +116,7 @@ interface ReadingsResponse {
 
 const getReadings = async (token: string, sensorIDList: string[]) => {
   const response = await axios.post<ReadingsResponse>(
-    `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/`,
+    `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/payload/`,
     {
       IDs: sensorIDList,
     },
@@ -140,7 +140,7 @@ const sendCommand = async (
   commandType: CommandType
 ) => {
   const response = await axios.post(
-    `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/command`,
+    `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/payload/command`,
     {
       command: commandType,
       applicationID: appID,
