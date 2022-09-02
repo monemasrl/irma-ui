@@ -102,7 +102,28 @@
         "sensorID": "4",
         "sensorName": "sensor4_a1o1",
         "applicationID": "app1-org1_value",
-        "state": "alert",
+        "state": "alert-ready",
+        "datiInterni": [
+          {
+            "titolo": "Media Letture Totali",
+            "dato": 4.6
+          },
+          {
+            "titolo": "Media Letture Mensili",
+            "dato": 1.5
+          },
+          {
+            "titolo": "Letture eseguite nel mese",
+            "dato": 10
+          }
+        ],
+        "unhandledAlertIDs": ["alertID_123"]
+      },
+      {
+        "sensorID": "5",
+        "sensorName": "sensor4_a1o1",
+        "applicationID": "app1-org1_value",
+        "state": "alert-running",
         "datiInterni": [
           {
             "titolo": "Media Letture Totali",

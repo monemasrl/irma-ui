@@ -1,4 +1,9 @@
-export type SensorState = 'ok' | 'rec' | 'off' | 'alert';
+export type SensorState =
+  | 'ok'
+  | 'rec'
+  | 'off'
+  | 'alert-ready'
+  | 'alert-running';
 
 type Sensor = {
   _id: {

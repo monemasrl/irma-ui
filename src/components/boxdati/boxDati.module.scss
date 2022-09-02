@@ -48,7 +48,7 @@
         border-left: 5px solid $darkGreen;
     }
 
-    &.alert {
+    &.alert-running, &.alert-ready {
         background: $red;
         transition: all ease-in-out 0.5s;
         border-left: 4px solid $darkred;
@@ -77,7 +77,7 @@
     }
 }
 
-.alert {
+.alert-running, .alert-ready {
     .codiceStaker {
         color: $alertText;
     }
@@ -94,6 +94,9 @@
 
         .label {
             font-size: 70px;
+            .running{
+                font-size: 1rem;
+            }
         }
     }
     .datoLabel {

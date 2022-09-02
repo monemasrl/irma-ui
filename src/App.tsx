@@ -100,7 +100,7 @@ const App: FC = () => {
       console.log('test', newdati);
       //Per portare in cima gli alert
       const datiOrdinatiAlert = newdati.sort((a, _b) => {
-        if (a.state === 'alert') {
+        if (a.state === 'alert-ready' || a.state === 'alert-running') {
           return -1;
         }
         return 0;
@@ -115,7 +115,9 @@ const App: FC = () => {
 
   function isAlert() {
     // controlla se c'è un alert nell'array in entrata
-    const alert = readings.filter((item) => item.state === 'alert').length;
+    const alert = readings.filter(
+      (item) => item.state === 'alert-ready' || item.state === 'alert-running'
+    ).length;
     if (alert >= 1) {
       return true;
     } else {
@@ -131,7 +133,9 @@ const App: FC = () => {
       .reduce((prev, item) => prev + item);
     ore = Math.round((ore + Number.EPSILON) * 100) / 100;
 
-    const allerte = readings.filter((item) => item.state === 'alert').length;
+    const allerte = readings.filter(
+      (item) => item.state === 'alert-ready' || item.state === 'alert-running'
+    ).length;
 
     const dati: StakerDefaultData = {
       numeroStaker: readings.length,

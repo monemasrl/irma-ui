@@ -67,10 +67,13 @@ const BoxDati: FC<Props> = ({ datiDefault, dati, stakerClicked }) => {
             {dati?.state === 'rec' && <BoxStaker dati={dati} />}
             {dati?.state === 'off' && <BoxStaker dati={dati} />}
             {stakerClicked === -1 && <BoxDefault datiDefault={datiDefault} />}
-            {dati?.state === 'alert' && <BoxAlert dati={dati} />}
-            {dati?.state === 'alert' && dati?.unhandledAlertIDs.length && (
-              <BoxConfirm alertID={dati.unhandledAlertIDs[0]} />
-            )}
+            {(dati?.state === 'alert-ready' ||
+              dati?.state === 'alert-running') && <BoxAlert dati={dati} />}
+            {(dati?.state === 'alert-ready' ||
+              dati?.state === 'alert-running') &&
+              dati?.unhandledAlertIDs.length && (
+                <BoxConfirm alertID={dati.unhandledAlertIDs[0]} />
+              )}
           </>
         ) : (
           <Loader

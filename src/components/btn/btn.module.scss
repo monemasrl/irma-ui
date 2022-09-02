@@ -59,7 +59,7 @@
             border-bottom: 0;
         }
     }
-    &.alert {
+    &.alert-ready, &.alert-running {
         background-color: $red;
         outline: 3px solid transparent;
         animation: none;
@@ -80,7 +80,7 @@
 
 .btnOn {
     box-shadow: 0 0 0 #dcdcdc, 0 0 0 #dcdcdc, inset 1px -1px 4px #b1aeae, inset -1px 1px 4px #e4e4e4;
-    outline: 2px solid #fff;
+    
     
     .innerBtnBox {
         transform: scale(0.93);
@@ -88,7 +88,7 @@
 }
 
 
-.alert {
+.alert-ready, .alert-running {
     background-color: $red;
     animation: alertbtnbox 0.5s infinite alternate;
 
@@ -117,7 +117,7 @@
     margin: 5px auto 0 auto;
     position: relative;
 
-    &.alert {
+    &.alert-ready, &.alert-running {
         background-color: $red;
         border: 2px solid #f5f5f5;
     }
@@ -151,7 +151,7 @@
         
     }
 
-    &.alert {
+    &.alert-ready, &.alert-running {
         top: -3px;
         left: -2px;
         width: 53px;
@@ -192,7 +192,7 @@
         border-bottom: 4px solid $darkGreen;
         display: inline-block;
     }
-    &.alert .codeName {
+    &.alert-ready .codeName, &.alert-running .codeName {
         color: white;
         border-bottom: 4px solid $darkred;
     }
