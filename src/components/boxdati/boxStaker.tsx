@@ -3,11 +3,11 @@ import style from './boxDati.module.scss';
 import { RiTerminalFill } from 'react-icons/ri';
 import { motion } from 'framer-motion';
 import { UserContext } from '../../context/user-context';
-import { SensorState } from '../../typings/sensor';
+import { NodeState } from '../../typings/node';
 import Reading from '../../typings/reading';
 
 type StatoSensoreProps = {
-  statoSensore: SensorState;
+  statoSensore: NodeState;
 };
 
 const StatoSensore: FC<StatoSensoreProps> = ({ statoSensore }) => {

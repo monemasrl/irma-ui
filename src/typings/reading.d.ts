@@ -1,16 +1,14 @@
-import { SensorState } from './sensor';
-
 type Reading = {
-  sensorID: string;
-  sensorName: string;
-  applicationID: string;
-  state: SensorState;
-  datiInterni: [
-    { titolo: string; dato: number },
-    { titolo: string; dato: number },
-    { titolo: string; dato: number }
-  ];
-  unhandledAlertIDs: string[];
+  nodeID: number;
+  canID: string;
+  sensorNumber: string;
+  readingID: number;
+  sessionID: number;
+  dangerLevel: number;
+  window1_count: number;
+  window2_count: number;
+  window3_count: number;
+  pubishedAt: string;
 };
 
 export default Reading;

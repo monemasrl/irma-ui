@@ -9,6 +9,7 @@ import './App.scss';
 import io from 'socket.io-client';
 import { AppOption } from './mock/mock_data';
 import Reading from './typings/reading';
+import Node from './typings/node';
 import StakerDefaultData from './typings/defaultData';
 
 const Dashboard = lazy(() => import('./components/dashboard/dashboard'));
@@ -27,8 +28,9 @@ const socket = !DISABLE_SOCKETIO
 console.log(WEBSOCKET_URL, WEBSOCKET_PORT, socket);
 
 const App: FC = () => {
+  const [nodes, setNodes] = useState<Node[]>([]);
+  const [nodiOrdinati, setNodiOrdinati] = useState<Node[]>([]);
   const [readings, setReadings] = useState<Reading[]>([]);
-  const [readingsOrdinate, setReadingsOrdinate] = useState<Reading[]>([]);
 
   const [stakerClicked, setStakerClicked] = useState(-1);
   const [listview, setListView] = useState(false);
@@ -67,13 +69,13 @@ const App: FC = () => {
         return;
       }
 
-      const list = await userSharedData.getSensors();
+      const nodes = await userSharedData.getNodes();
+      setNodes(nodes);
+      console.log('nodes', nodes);
 
-      console.log('sensors', list);
+      const nodeIDList = nodes.map(({ nodeID }) => nodeID);
 
-      const sensorIDList = list.map(({ sensorID }) => sensorID);
-
-      const readings = await userSharedData.getReadings(sensorIDList);
+      const readings = await userSharedData.getReadings(nodeIDList);
 
       setReadings(readings);
     };
@@ -95,55 +97,48 @@ const App: FC = () => {
   useEffect(() => getData(), [userSharedData.selectedApp?.value, getData]);
 
   useEffect(() => {
-    const newdati = readings;
-    if (readings.length && listview) {
-      console.log('test', newdati);
+    if (nodes.length && listview) {
+      console.log('test', nodes);
       //Per portare in cima gli alert
-      const datiOrdinatiAlert = newdati.sort((a, _b) => {
+      const nodiOrdinatiAlert = nodes.sort((a, _b) => {
         if (a.state === 'alert-ready' || a.state === 'alert-running') {
           return -1;
         }
         return 0;
       });
-      setReadingsOrdinate(datiOrdinatiAlert);
-    } else if (readings.length && !listview) {
-      setReadingsOrdinate(newdati);
+      setNodiOrdinati(nodiOrdinatiAlert);
+    } else if (nodes.length && !listview) {
+      setNodiOrdinati(nodes);
     } else {
-      setReadingsOrdinate([]);
+      setNodiOrdinati([]);
     }
-  }, [readings, listview]);
+  }, [nodes, listview]);
 
   function isAlert() {
     // controlla se c'è un alert nell'array in entrata
-    const alert = readings.filter(
+    return nodes.some(
       (item) => item.state === 'alert-ready' || item.state === 'alert-running'
-    ).length;
-    if (alert >= 1) {
-      return true;
-    } else {
-      return false;
-    }
+    );
   }
 
   function datiDefault() {
-    if (!readings.length) return undefined;
+    if (!nodes.length) return undefined;
 
-    let ore = readings
-      .map((item) => item.datiInterni[0].dato)
-      .reduce((prev, item) => prev + item);
-    ore = Math.round((ore + Number.EPSILON) * 100) / 100;
-
-    const allerte = readings.filter(
+    const allerte = nodes.filter(
       (item) => item.state === 'alert-ready' || item.state === 'alert-running'
     ).length;
 
     const dati: StakerDefaultData = {
-      numeroStaker: readings.length,
-      oreOperativeTotali: ore,
+      numeroStaker: nodes.length,
       allerteAttuali: allerte,
     };
     return dati;
   }
+
+  const getNodeReadings = (node: Node) => {
+    const list = readings.filter((r) => r.nodeID === node.nodeID);
+    return list;
+  };
 
   return (
     <ShareContextProvider>
@@ -163,7 +158,7 @@ const App: FC = () => {
                       listview={listview}
                       setListView={setListView}
                       isAlert={isAlert()}
-                      datiOrdinatiLista={readingsOrdinate}
+                      nodiOrdinati={nodiOrdinati}
                       stakerClicked={stakerClicked}
                       setStakerClicked={setStakerClicked}
                     />
@@ -176,7 +171,12 @@ const App: FC = () => {
                   datiDefault={datiDefault()}
                   dati={
                     stakerClicked !== -1
-                      ? readingsOrdinate[stakerClicked]
+                      ? getNodeReadings(nodiOrdinati[stakerClicked])
+                      : undefined
+                  }
+                  node={
+                    stakerClicked !== -1
+                      ? nodiOrdinati[stakerClicked]
                       : undefined
                   }
                 />

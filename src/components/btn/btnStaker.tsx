@@ -5,10 +5,10 @@ import recordingLed from '../../assets/images/rec-led.svg';
 import offLed from '../../assets/images/off-led.svg';
 import alertLed from '../../assets/images/alert-led.svg';
 import alertSymbol from '../../assets/images/alert-symbol.svg';
-import { SensorState } from '../../typings/sensor';
+import { NodeState } from '../../typings/node';
 
 type LedProps = {
-  state: SensorState;
+  state: NodeState;
 };
 
 const Led: FC<LedProps> = ({ state }) => {
@@ -63,7 +63,7 @@ const Led: FC<LedProps> = ({ state }) => {
 };
 
 type BtnStakerProps = {
-  state: SensorState;
+  state: NodeState;
   code: string;
   setStakerClicked: Dispatch<SetStateAction<number>>;
   index: number;

@@ -10,14 +10,16 @@ import { useAnimation, motion, AnimatePresence } from 'framer-motion';
 import Loader from '../loaders/loader';
 import Reading from '../../typings/reading';
 import StakerDefaultData from '../../typings/defaultData';
+import Node from '../../typings/node';
 
 type Props = {
-  dati?: Reading;
+  dati?: Reading[];
   datiDefault?: StakerDefaultData;
+  node?: Node;
   stakerClicked: number;
 };
 
-const BoxDati: FC<Props> = ({ datiDefault, dati, stakerClicked }) => {
+const BoxDati: FC<Props> = ({ datiDefault, dati, stakerClicked, node }) => {
   const animationControls = useAnimation();
 
   async function sequence() {
@@ -56,22 +58,22 @@ const BoxDati: FC<Props> = ({ datiDefault, dati, stakerClicked }) => {
     <AnimatePresence>
       <motion.div
         animate={animationControls}
-        className={`${style.boxDati} ${dati ? style[dati.state] : ''} ${
+        className={`${style.boxDati} ${node ? style[node.state] : ''} ${
           share.confirmState ? style.modalOpen : ''
         }`}
       >
         {datiDefault ? (
           <>
             {' '}
-            {dati?.state === 'ok' && <BoxStaker dati={dati} />}
-            {dati?.state === 'rec' && <BoxStaker dati={dati} />}
-            {dati?.state === 'off' && <BoxStaker dati={dati} />}
+            {node?.state === 'ok' && <BoxStaker dati={dati} />}
+            {node?.state === 'rec' && <BoxStaker dati={dati} />}
+            {node?.state === 'off' && <BoxStaker dati={dati} />}
             {stakerClicked === -1 && <BoxDefault datiDefault={datiDefault} />}
-            {(dati?.state === 'alert-ready' ||
-              dati?.state === 'alert-running') && <BoxAlert dati={dati} />}
-            {(dati?.state === 'alert-ready' ||
-              dati?.state === 'alert-running') &&
-              dati?.unhandledAlertIDs.length && (
+            {(node?.state === 'alert-ready' ||
+              node?.state === 'alert-running') && <BoxAlert dati={dati} />}
+            {(node?.state === 'alert-ready' ||
+              node?.state === 'alert-running') &&
+              node?.unhandledAlertIDs.length && (
                 <BoxConfirm alertID={dati.unhandledAlertIDs[0]} />
               )}
           </>

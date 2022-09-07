@@ -3,7 +3,7 @@ import Application from '../typings/application';
 import CommandType from '../typings/command';
 import Organization from '../typings/organization';
 import Reading from '../typings/reading';
-import Sensor from '../typings/sensor';
+import Node from '../typings/node';
 
 const WEBSOCKET_URL = process.env.REACT_APP_WEBSOCKET_URL || 'http://localhost';
 const WEBSOCKET_PORT = process.env.REACT_APP_WEBSOCKET_PORT || '5000';
@@ -90,13 +90,13 @@ const getApplicationsList = async (token: string, orgID: string) => {
   return response.data?.applications;
 };
 
-interface SensorsResponse {
-  sensors: Sensor[];
+interface NodesResponse {
+  nodes: Node[];
 }
 
-const getSensors = async (token: string, appID: string) => {
-  const response = await axios.get<SensorsResponse>(
-    `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/sensors/`,
+const getNodes = async (token: string, appID: string) => {
+  const response = await axios.get<NodesResponse>(
+    `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/nodes/`,
     {
       headers: {
         'Content-Type': 'application/json',
@@ -106,19 +106,19 @@ const getSensors = async (token: string, appID: string) => {
     }
   );
 
-  console.log('getSensors', response);
-  return response.data.sensors;
+  console.log('getNodes', response);
+  return response.data.nodes;
 };
 
 interface ReadingsResponse {
   readings: Reading[];
 }
 
-const getReadings = async (token: string, sensorIDList: string[]) => {
+const getReadings = async (token: string, nodeIDList: number[]) => {
   const response = await axios.post<ReadingsResponse>(
     `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/payload/`,
     {
-      IDs: sensorIDList,
+      IDs: nodeIDList,
     },
     {
       headers: {
@@ -188,7 +188,7 @@ const Microservice = {
   refresh,
   getOrganizationsList,
   getApplicationsList,
-  getSensors,
+  getNodes,
   getReadings,
   sendCommand,
   handleAlert,

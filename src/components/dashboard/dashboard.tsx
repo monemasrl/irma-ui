@@ -3,11 +3,11 @@ import style from './dashboard.module.scss';
 import BtnStaker from '../btn/btnStaker';
 import { IoApps, IoListOutline } from 'react-icons/io5';
 import Loader from '../loaders/loader';
-import Reading from '../../typings/reading';
+import Node from '../../typings/node';
 
 type Props = {
   isAlert: boolean;
-  datiOrdinatiLista: Reading[];
+  nodiOrdinati: Node[];
   stakerClicked: number;
   setStakerClicked: Dispatch<SetStateAction<number>>;
   listview: boolean;
@@ -16,7 +16,7 @@ type Props = {
 
 const Dashboard: FC<Props> = ({
   isAlert,
-  datiOrdinatiLista,
+  nodiOrdinati,
   stakerClicked,
   setStakerClicked,
   listview,
@@ -46,13 +46,13 @@ const Dashboard: FC<Props> = ({
           </span>
         )}
       </div>
-      {datiOrdinatiLista ? (
-        datiOrdinatiLista.map((item, index) => {
+      {nodiOrdinati.length ? (
+        nodiOrdinati.map((item, index) => {
           return (
             <BtnStaker
-              key={item.sensorID}
+              key={item.nodeID}
               state={item.state}
-              code={item.sensorName}
+              code={item.nodeName}
               index={index}
               setStakerClicked={setStakerClicked}
               stakerClicked={stakerClicked}

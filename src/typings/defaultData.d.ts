@@ -1,6 +1,5 @@
 type StakerDefaultData = {
   numeroStaker: number;
-  oreOperativeTotali: number;
   allerteAttuali: number;
 };
 

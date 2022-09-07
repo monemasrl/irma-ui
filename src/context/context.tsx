@@ -5,15 +5,15 @@ import React, {
   SetStateAction,
   useState,
 } from 'react';
-import { SensorState } from '../typings/sensor';
+import { NodeState } from '../typings/node';
 
 interface IUiStatiSensore {
   [key: string]: string;
 }
 
 interface IShareData {
-  confirmState?: SensorState;
-  setConfirmState: Dispatch<SetStateAction<SensorState | undefined>>;
+  confirmState?: NodeState;
+  setConfirmState: Dispatch<SetStateAction<NodeState | undefined>>;
   uiStatiSensore: IUiStatiSensore;
 }
 
@@ -24,7 +24,7 @@ type Props = {
 };
 
 function ShareContextProvider({ children }: Props) {
-  const [confirmModal, setConfirmModal] = useState<SensorState | undefined>(
+  const [confirmModal, setConfirmModal] = useState<NodeState | undefined>(
     undefined
   );
 

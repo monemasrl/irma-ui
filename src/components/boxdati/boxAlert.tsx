@@ -3,12 +3,12 @@ import style from './boxDati.module.scss';
 import { RiTerminalFill } from 'react-icons/ri';
 import { ShareContext } from '../../context/context';
 import { useContext } from 'react';
-import { SensorState } from '../../typings/sensor';
+import { NodeState } from '../../typings/node';
 import Reading from '../../typings/reading';
 import AlertRunning from './specials/alertRunning';
 
 type StatoSensoreProps = {
-  statoSensore: SensorState;
+  statoSensore: NodeState;
 };
 
 const StatoSensore: FC<StatoSensoreProps> = ({ statoSensore }) => {

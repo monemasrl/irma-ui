@@ -14,7 +14,7 @@ import CommandType from '../typings/command';
 import { OrgOption } from '../mock/mock_data';
 import Organization from '../typings/organization';
 import Application from '../typings/application';
-import Sensor from '../typings/sensor';
+import Node from '../typings/node';
 import Reading from '../typings/reading';
 
 const MOCK_SENSORDATA = process.env.REACT_APP_MOCK_SENSORDATA || 0;
@@ -34,8 +34,8 @@ export interface IUserContext {
   appOptions: IEntry[];
   authenticate: (email: string, password: string) => Promise<void>;
   logout: () => void;
-  getSensors: () => Promise<Sensor[]>;
-  getReadings: (sensorIDList: string[]) => Promise<Reading[]>;
+  getNodes: () => Promise<Node[]>;
+  getReadings: (nodeIDList: number[]) => Promise<Reading[]>;
   sendCommand: (
     appID: string,
     sensorID: string,
@@ -125,13 +125,13 @@ function UserContextProvider({ children }: Props) {
     [refreshToken]
   );
 
-  const getSensors = async () => {
+  const getNodes = async () => {
     if (!selectedApp || !accessToken) return [];
 
-    let list: Sensor[] = [];
+    let list: Node[] = [];
 
     try {
-      list = await Microservice.getSensors(accessToken, selectedApp.value);
+      list = await Microservice.getNodes(accessToken, selectedApp.value);
     } catch (error) {
       refreshIfUnauthorized(error);
     }
@@ -139,13 +139,13 @@ function UserContextProvider({ children }: Props) {
     return list;
   };
 
-  const getReadings = async (sensorIDList: string[]) => {
+  const getReadings = async (nodeIDList: number[]) => {
     if (!accessToken) return [];
 
     let readings: Reading[] = [];
 
     try {
-      readings = await Microservice.getReadings(accessToken, sensorIDList);
+      readings = await Microservice.getReadings(accessToken, nodeIDList);
     } catch (error) {
       refreshIfUnauthorized(error);
     }
@@ -283,7 +283,7 @@ function UserContextProvider({ children }: Props) {
     appOptions,
     authenticate,
     logout,
-    getSensors,
+    getNodes,
     getReadings,
     sendCommand,
     handleAlert,
