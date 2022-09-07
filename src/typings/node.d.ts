@@ -5,6 +5,7 @@ type Node = {
   nodeName: string;
   applicationID: string;
   state: NodeState;
+  unhandledAlertIDs: string[];
 };
 
 export default Node;
