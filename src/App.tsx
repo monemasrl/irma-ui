@@ -29,11 +29,9 @@ console.log(WEBSOCKET_URL, WEBSOCKET_PORT, socket);
 
 const App: FC = () => {
   const [nodes, setNodes] = useState<Node[]>([]);
-  const [nodiOrdinati, setNodiOrdinati] = useState<Node[]>([]);
   const [readings, setReadings] = useState<Reading[]>([]);
 
   const [stakerClicked, setStakerClicked] = useState(-1);
-  const [listview, setListView] = useState(false);
   const [isConnected, setIsConnected] = useState(socket?.connected);
   const userSharedData = useContext(UserContext);
 
@@ -101,24 +99,6 @@ const App: FC = () => {
 
   useEffect(() => getData(), [userSharedData.selectedApp?.value, getData]);
 
-  useEffect(() => {
-    if (nodes.length && listview) {
-      console.log('test', nodes);
-      //Per portare in cima gli alert
-      const nodiOrdinatiAlert = nodes.sort((a, _b) => {
-        if (a.state === 'alert-ready' || a.state === 'alert-running') {
-          return -1;
-        }
-        return 0;
-      });
-      setNodiOrdinati(nodiOrdinatiAlert);
-    } else if (nodes.length && !listview) {
-      setNodiOrdinati(nodes);
-    } else {
-      setNodiOrdinati([]);
-    }
-  }, [nodes, listview]);
-
   function isAlert() {
     // controlla se c'è un alert nell'array in entrata
     return nodes.some(
@@ -160,10 +140,8 @@ const App: FC = () => {
                 >
                   <Suspense fallback={<Loaderdash />}>
                     <Dashboard
-                      listview={listview}
-                      setListView={setListView}
                       isAlert={isAlert()}
-                      nodiOrdinati={nodiOrdinati}
+                      nodes={nodes}
                       stakerClicked={stakerClicked}
                       setStakerClicked={setStakerClicked}
                     />
@@ -176,14 +154,10 @@ const App: FC = () => {
                   datiDefault={datiDefault()}
                   dati={
                     stakerClicked !== -1
-                      ? getNodeReadings(nodiOrdinati[stakerClicked])
+                      ? getNodeReadings(nodes[stakerClicked])
                       : undefined
                   }
-                  node={
-                    stakerClicked !== -1
-                      ? nodiOrdinati[stakerClicked]
-                      : undefined
-                  }
+                  node={stakerClicked !== -1 ? nodes[stakerClicked] : undefined}
                 />
               </div>
             </main>

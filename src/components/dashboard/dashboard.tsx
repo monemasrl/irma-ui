@@ -1,4 +1,4 @@
-import React, { Dispatch, FC, SetStateAction } from 'react';
+import React, { Dispatch, FC, SetStateAction, useState } from 'react';
 import style from './dashboard.module.scss';
 import BtnStaker from '../btn/btnStaker';
 import { IoApps, IoListOutline } from 'react-icons/io5';
@@ -7,27 +7,49 @@ import Node from '../../typings/node';
 
 type Props = {
   isAlert: boolean;
-  nodiOrdinati: Node[];
+  nodes: Node[];
   stakerClicked: number;
   setStakerClicked: Dispatch<SetStateAction<number>>;
-  listview: boolean;
-  setListView: Dispatch<SetStateAction<boolean>>;
 };
 
 const Dashboard: FC<Props> = ({
   isAlert,
-  nodiOrdinati,
+  nodes,
   stakerClicked,
   setStakerClicked,
-  listview,
-  setListView,
 }) => {
+  const [listview, setListView] = useState(false);
+
   const immagineLoader = '/images/cont.svg';
 
   function switchVisualizzaLista(switchList: boolean) {
     setListView(switchList);
     setStakerClicked(-1);
   }
+
+  const nodiOrdinati = (nodes: Node[], listview: boolean) => {
+    if (!nodes.length) return [];
+
+    if (listview) {
+      // Per portare in cima gli alert in modalita lista
+      console.log('test', nodes);
+      const nodiOrdinatiAlert = nodes.sort((a, _b) => {
+        if (a.state === 'alert-ready' || a.state === 'alert-running') {
+          return -1;
+        }
+        return 0;
+      });
+      return nodiOrdinatiAlert;
+    }
+
+    // Per ordinare i dati per ID quando non in lista
+    const nodiOrdinatiID = nodes.sort((a, b) => {
+      if (a.nodeID < b.nodeID) return -1;
+      if (a.nodeID > b.nodeID) return 1;
+      return 0;
+    });
+    return nodiOrdinatiID;
+  };
 
   return (
     <div
@@ -46,8 +68,8 @@ const Dashboard: FC<Props> = ({
           </span>
         )}
       </div>
-      {nodiOrdinati.length ? (
-        nodiOrdinati.map((item, index) => {
+      {nodes.length ? (
+        nodiOrdinati(nodes, listview).map((item, index) => {
           return (
             <BtnStaker
               key={item.nodeID}
