@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { UserContext } from '../../context/user-context';
 import { NodeState } from '../../typings/node';
 import Reading from '../../typings/reading';
+import Node from '../../typings/node';
 
 type StatoSensoreProps = {
   statoSensore: NodeState;
@@ -58,6 +59,7 @@ type BloccoNumericoProps = {
   index: number;
 };
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const BloccoNumerico: FC<BloccoNumericoProps> = ({
   datiNumerici,
   sensorID,
@@ -82,18 +84,18 @@ const BloccoNumerico: FC<BloccoNumericoProps> = ({
 
 type BtnStartRecProps = {
   applicationID: string;
-  sensorID: string;
+  nodeID: number;
 };
 
-const BtnStartRec: FC<BtnStartRecProps> = ({ applicationID, sensorID }) => {
+const BtnStartRec: FC<BtnStartRecProps> = ({ applicationID, nodeID }) => {
   const [statoInvioDati, setStatoInvioDati] = useState(false);
   const userSharedData = useContext(UserContext);
 
-  function iniziaLettura(applicationID: string, sensorID: string) {
+  function iniziaLettura(applicationID: string, nodeID: number) {
     setStatoInvioDati(true);
 
     userSharedData
-      .sendCommand(applicationID, sensorID, 0)
+      .sendCommand(applicationID, nodeID, 0)
       .then(() => {
         console.log('stato aggiornato');
         setStatoInvioDati(false);
@@ -107,7 +109,7 @@ const BtnStartRec: FC<BtnStartRecProps> = ({ applicationID, sensorID }) => {
     <div className={style.wrapperbutton}>
       <button
         disabled={statoInvioDati}
-        onClick={() => iniziaLettura(applicationID, sensorID)}
+        onClick={() => iniziaLettura(applicationID, nodeID)}
       >
         Inizia Rilevamento
       </button>
@@ -118,13 +120,16 @@ const BtnStartRec: FC<BtnStartRecProps> = ({ applicationID, sensorID }) => {
 /* COMPONENTE PRINCIPALE */
 
 type BoxStakerProps = {
-  dati: Reading;
+  node: Node;
+  letture: Reading[];
 };
 
-const BoxStaker: FC<BoxStakerProps> = ({ dati }) => {
+const BoxStaker: FC<BoxStakerProps> = ({ node, letture }) => {
+  console.log('letture', letture);
+
   return (
     <motion.header
-      key={dati.sensorID}
+      key={node.nodeID}
       initial={{ opacity: 0, top: 20, position: 'relative' }}
       animate={{ opacity: 1, top: 0, position: 'relative' }}
       exit={{ opacity: 0, top: 20 }}
@@ -132,17 +137,17 @@ const BoxStaker: FC<BoxStakerProps> = ({ dati }) => {
     >
       <div className={style.title}>
         <div className={style.titoletto}>Reach Staker</div>
-        <div className={style.codiceStaker}>{dati.sensorName}</div>
+        <div className={style.codiceStaker}>{node.nodeName}</div>
       </div>
 
-      <StatoSensore statoSensore={dati.state} />
-      {dati.state === 'ok' && (
+      <StatoSensore statoSensore={node.state} />
+      {node.state === 'ok' && (
         <BtnStartRec
-          applicationID={dati.applicationID}
-          sensorID={dati.sensorID}
+          applicationID={node.applicationID}
+          nodeID={node.nodeID}
         />
       )}
-      <div className={style.datiInterni}>
+      {/* <div className={style.datiInterni}>
         {dati.datiInterni.map((dato, index) => (
           <React.Fragment key={dato.titolo}>
             <BloccoNumerico
@@ -152,7 +157,7 @@ const BoxStaker: FC<BoxStakerProps> = ({ dati }) => {
             />
           </React.Fragment>
         ))}
-      </div>
+      </div> */}
     </motion.header>
   );
 };

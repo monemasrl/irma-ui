@@ -19,7 +19,7 @@ const WEBSOCKET_URL = process.env.REACT_APP_WEBSOCKET_URL || 'http://localhost';
 const WEBSOCKET_PORT = process.env.REACT_APP_WEBSOCKET_PORT || '5000';
 
 const DISABLE_SOCKETIO = process.env.REACT_APP_DISABLE_SOCKETIO || 0;
-const MOCK_SENSORDATA = process.env.REACT_APP_MOCK_SENSORDATA || 0;
+const MOCK_DATA = process.env.REACT_APP_MOCK_DATA || 0;
 
 const socket = !DISABLE_SOCKETIO
   ? io(`${WEBSOCKET_URL}:${WEBSOCKET_PORT}`)
@@ -59,8 +59,8 @@ const App: FC = () => {
       if (userSharedData.selectedApp?.value === undefined) return;
       console.log('[INFO] fetching data');
 
-      if (MOCK_SENSORDATA) {
         const MockData = (await import('./mock/mock_data.json')).default;
+      if (MOCK_DATA) {
 
         const readings =
           MockData['sensorData'][userSharedData.selectedApp.value as AppOption];

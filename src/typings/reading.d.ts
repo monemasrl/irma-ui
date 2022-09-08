@@ -8,7 +8,7 @@ type Reading = {
   window1_count: number;
   window2_count: number;
   window3_count: number;
-  pubishedAt: string;
+  publishedAt: string;
 };
 
 export default Reading;

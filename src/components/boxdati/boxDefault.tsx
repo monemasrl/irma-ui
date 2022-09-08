@@ -26,14 +26,14 @@ const BoxDefault: FC<Props> = ({ datiDefault }) => {
               </div>
             </div>
           </li>
-          <li>
+          {/* <li>
             <div className={style.title}>
               <div className={style.titoletto}>Ore operative totali</div>
               <div className={style.codiceStaker}>
                 {datiDefault.oreOperativeTotali}
               </div>
             </div>
-          </li>
+          </li> */}
           <li>
             <div className={style.title}>
               <div className={style.titoletto}>Allerte</div>

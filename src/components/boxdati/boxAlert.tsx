@@ -6,6 +6,7 @@ import { useContext } from 'react';
 import { NodeState } from '../../typings/node';
 import Reading from '../../typings/reading';
 import AlertRunning from './specials/alertRunning';
+import Node from '../../typings/node';
 
 type StatoSensoreProps = {
   statoSensore: NodeState;
@@ -39,24 +40,26 @@ const StatoSensore: FC<StatoSensoreProps> = ({ statoSensore }) => {
 };
 
 type BoxAlertProps = {
-  dati: Reading;
+  node: Node;
+  letture: Reading[];
 };
 
-const BoxAlert: FC<BoxAlertProps> = ({ dati }) => {
+const BoxAlert: FC<BoxAlertProps> = ({ node, letture }) => {
   const share = useContext(ShareContext);
-  console.log('dati', dati);
+  console.log('node', node);
+  console.log('letture', letture);
 
   return (
     <header>
       <div className={style.title}>
         <div className={style.titoletto}>Reach Staker</div>
-        <div className={style.codiceStaker}>{dati.sensorName}</div>
+        <div className={style.codiceStaker}>{node.nodeName}</div>
       </div>
       <div className={style.subData}>
-        <StatoSensore statoSensore={dati.state} />
+        <StatoSensore statoSensore={node.state} />
       </div>
       <div className={style.wrapperAlert}>
-        {dati.state === 'alert-ready' ? (
+        {node.state === 'alert-ready' ? (
           <img
             src="/images/alert-back.svg"
             alt="back alert"
@@ -66,10 +69,10 @@ const BoxAlert: FC<BoxAlertProps> = ({ dati }) => {
         )}
       </div>
       <div className={style.buttonWrapper}>
-        {dati.state === 'alert-ready' && (
+        {node.state === 'alert-ready' && (
           <button
             className="alert"
-            onClick={() => share.setConfirmState(dati.state)}
+            onClick={() => share.setConfirmState(node.state)}
           >
             Gestisci Allerta
           </button>

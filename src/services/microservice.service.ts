@@ -136,7 +136,7 @@ const getReadings = async (token: string, nodeIDList: number[]) => {
 const sendCommand = async (
   token: string,
   appID: string,
-  sensorID: string,
+  nodeID: number,
   commandType: CommandType
 ) => {
   const response = await axios.post(
@@ -144,7 +144,7 @@ const sendCommand = async (
     {
       command: commandType,
       applicationID: appID,
-      sensorID: sensorID,
+      nodeID: nodeID,
     },
     {
       headers: {

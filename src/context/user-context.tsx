@@ -17,7 +17,7 @@ import Application from '../typings/application';
 import Node from '../typings/node';
 import Reading from '../typings/reading';
 
-const MOCK_SENSORDATA = process.env.REACT_APP_MOCK_SENSORDATA || 0;
+const MOCK_DATA = process.env.REACT_APP_MOCK_DATA || 0;
 const MOCK_LOGIN = process.env.REACT_APP_MOCK_LOGIN || 0;
 
 interface IEntry {
@@ -38,7 +38,7 @@ export interface IUserContext {
   getReadings: (nodeIDList: number[]) => Promise<Reading[]>;
   sendCommand: (
     appID: string,
-    sensorID: string,
+    nodeID: number,
     commandType: CommandType
   ) => Promise<void>;
   handleAlert: (
@@ -155,13 +155,13 @@ function UserContextProvider({ children }: Props) {
 
   const sendCommand = async (
     appID: string,
-    sensorID: string,
+    nodeID: number,
     commandType: CommandType
   ) => {
     if (!accessToken) return;
 
     try {
-      Microservice.sendCommand(accessToken, appID, sensorID, commandType);
+      Microservice.sendCommand(accessToken, appID, nodeID, commandType);
     } catch (error) {
       refreshIfUnauthorized(error);
     }
@@ -186,9 +186,9 @@ function UserContextProvider({ children }: Props) {
     if (!accessToken) return;
 
     const func = async () => {
-      if (MOCK_SENSORDATA) {
         const MockData = (await import('../mock/mock_data.json')).default;
         setOrgOptions(MockData.orgOptions);
+      if (MOCK_DATA) {
         return;
       }
 
@@ -224,9 +224,9 @@ function UserContextProvider({ children }: Props) {
     if (!selectedOrg || !accessToken) return;
 
     const func = async () => {
-      if (MOCK_SENSORDATA) {
         const MockData = (await import('../mock/mock_data.json')).default;
         setAppOptions(MockData['appOptions'][selectedOrg.value as OrgOption]);
+      if (MOCK_DATA) {
         return;
       }
 

@@ -65,12 +65,33 @@ const BoxDati: FC<Props> = ({ datiDefault, dati, stakerClicked, node }) => {
         {datiDefault ? (
           <>
             {' '}
-            {node?.state === 'ok' && <BoxStaker dati={dati} />}
-            {node?.state === 'rec' && <BoxStaker dati={dati} />}
-            {node?.state === 'off' && <BoxStaker dati={dati} />}
+            {dati && node?.state === 'ok' && (
+              <BoxStaker
+                node={node}
+                letture={dati}
+              />
+            )}
+            {dati && node?.state === 'rec' && (
+              <BoxStaker
+                node={node}
+                letture={dati}
+              />
+            )}
+            {dati && node?.state === 'off' && (
+              <BoxStaker
+                node={node}
+                letture={dati}
+              />
+            )}
             {stakerClicked === -1 && <BoxDefault datiDefault={datiDefault} />}
-            {(node?.state === 'alert-ready' ||
-              node?.state === 'alert-running') && <BoxAlert dati={dati} />}
+            {dati &&
+              (node?.state === 'alert-ready' ||
+                node?.state === 'alert-running') && (
+                <BoxAlert
+                  node={node}
+                  letture={dati}
+                />
+              )}
             {(node?.state === 'alert-ready' ||
               node?.state === 'alert-running') &&
               node?.unhandledAlertIDs.length && (
