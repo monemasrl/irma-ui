@@ -81,4 +81,4 @@ Le opzioni disponibili sono:
 - REACT_APP_WEBSOCKET_PORT, default "5000".
 - REACT_APP_DISABLE_SOCKETIO, default `0`.
 - REACT_APP_MOCK_LOGIN, default `0`.
-- REACT_APP_MOCK_SENSORDATA, default `0`.
+- REACT_APP_MOCK_DATA, default `0`.
