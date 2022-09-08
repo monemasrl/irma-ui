@@ -59,11 +59,16 @@ const App: FC = () => {
       if (userSharedData.selectedApp?.value === undefined) return;
       console.log('[INFO] fetching data');
 
-        const MockData = (await import('./mock/mock_data.json')).default;
       if (MOCK_DATA) {
+        const MockNodes = (await import('./mock/mock_nodes.json')).default;
+        const MockReadings = (await import('./mock/mock_readings.json'))
+          .default;
 
-        const readings =
-          MockData['sensorData'][userSharedData.selectedApp.value as AppOption];
+        const nodes = MockNodes[userSharedData.selectedApp.value as AppOption];
+
+        setNodes(nodes as Node[]);
+
+        const readings = MockReadings;
 
         setReadings(readings as Reading[]);
         return;

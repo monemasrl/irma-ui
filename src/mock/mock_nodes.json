@@ -1,0 +1,42 @@
+{
+  "app1-org1_value": [
+    {
+      "nodeID": 1,
+      "nodeName": "sensor1_a1o1",
+      "applicationID": "app1-org1_value",
+      "state": "off",
+      "unhandledAlertIDs": []
+    },
+    {
+      "nodeID": 2,
+      "nodeName": "sensor2_a1o1",
+      "applicationID": "app1-org1_value",
+      "state": "ok",
+      "unhandledAlertIDs": []
+    },
+    {
+      "nodeID": 3,
+      "nodeName": "sensor3_a1o1",
+      "applicationID": "app1-org1_value",
+      "state": "rec",
+      "unhandledAlertIDs": []
+    },
+    {
+      "nodeID": 4,
+      "nodeName": "sensor4_a1o1",
+      "applicationID": "app1-org1_value",
+      "state": "alert-ready",
+      "unhandledAlertIDs": ["alertID_123"]
+    },
+    {
+      "nodeID": 5,
+      "nodeName": "sensor4_a1o1",
+      "applicationID": "app1-org1_value",
+      "state": "alert-running",
+      "unhandledAlertIDs": ["alertID_123"]
+    }
+  ],
+  "app2-org1_value": [],
+  "app1-org2_value": [],
+  "app2-org2_value": []
+}

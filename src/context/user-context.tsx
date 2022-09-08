@@ -186,9 +186,9 @@ function UserContextProvider({ children }: Props) {
     if (!accessToken) return;
 
     const func = async () => {
-        const MockData = (await import('../mock/mock_data.json')).default;
-        setOrgOptions(MockData.orgOptions);
       if (MOCK_DATA) {
+        const MockOrgs = (await import('../mock/mock_orgs.json')).default;
+        setOrgOptions(MockOrgs);
         return;
       }
 
@@ -224,9 +224,9 @@ function UserContextProvider({ children }: Props) {
     if (!selectedOrg || !accessToken) return;
 
     const func = async () => {
-        const MockData = (await import('../mock/mock_data.json')).default;
-        setAppOptions(MockData['appOptions'][selectedOrg.value as OrgOption]);
       if (MOCK_DATA) {
+        const MockApps = (await import('../mock/mock_apps.json')).default;
+        setAppOptions(MockApps[selectedOrg.value as OrgOption]);
         return;
       }
 
