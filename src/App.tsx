@@ -11,9 +11,10 @@ import { AppOption } from './mock/mock_data';
 import Reading from './typings/reading';
 import Node from './typings/node';
 import StakerDefaultData from './typings/defaultData';
+import BoxDati from './components/boxdati/boxDati';
+import BoxDatiDefault from './components/boxdati/boxDatiDefault';
 
 const Dashboard = lazy(() => import('./components/dashboard/dashboard'));
-const BoxDati = lazy(() => import('./components/boxdati/boxDati'));
 
 const WEBSOCKET_URL = process.env.REACT_APP_WEBSOCKET_URL || 'http://localhost';
 const WEBSOCKET_PORT = process.env.REACT_APP_WEBSOCKET_PORT || '5000';
@@ -64,13 +65,14 @@ const App: FC = () => {
         const MockReadings = (await import('./mock/mock_readings.json'))
           .default;
 
-        const nodes = MockNodes[userSharedData.selectedApp.value as AppOption];
+        const nodesMock =
+          MockNodes[userSharedData.selectedApp.value as AppOption];
 
-        setNodes(nodes as Node[]);
+        setNodes(nodesMock as Node[]);
 
-        const readings = MockReadings;
+        const readingsMock = MockReadings;
 
-        setReadings(readings as Reading[]);
+        setReadings(readingsMock as Reading[]);
         return;
       }
 
@@ -173,7 +175,6 @@ const App: FC = () => {
 
                 <BoxDati
                   stakerClicked={stakerClicked}
-                  datiDefault={datiDefault()}
                   dati={
                     stakerClicked !== -1
                       ? getNodeReadings(nodiOrdinati[stakerClicked])
@@ -184,6 +185,11 @@ const App: FC = () => {
                       ? nodiOrdinati[stakerClicked]
                       : undefined
                   }
+                />
+
+                <BoxDatiDefault
+                  stakerClicked={stakerClicked}
+                  datiDefault={datiDefault()}
                 />
               </div>
             </main>

@@ -6,6 +6,7 @@ import { UserContext } from '../../context/user-context';
 import { NodeState } from '../../typings/node';
 import Reading from '../../typings/reading';
 import Node from '../../typings/node';
+import Rilevatore from './specials/rilevatore';
 
 type StatoSensoreProps = {
   statoSensore: NodeState;
@@ -147,6 +148,9 @@ const BoxStaker: FC<BoxStakerProps> = ({ node, letture }) => {
           nodeID={node.nodeID}
         />
       )}
+
+      <Rilevatore Letture={letture} />
+
       {/* <div className={style.datiInterni}>
         {dati.datiInterni.map((dato, index) => (
           <React.Fragment key={dato.titolo}>
