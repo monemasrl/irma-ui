@@ -16,6 +16,7 @@ import Organization from '../typings/organization';
 import Application from '../typings/application';
 import Node from '../typings/node';
 import Reading from '../typings/reading';
+import { AppOption } from '../mock/mock_data';
 
 const MOCK_DATA = process.env.REACT_APP_MOCK_DATA || 0;
 const MOCK_LOGIN = process.env.REACT_APP_MOCK_LOGIN || 0;
@@ -128,6 +129,13 @@ function UserContextProvider({ children }: Props) {
   const getNodes = async () => {
     if (!selectedApp || !accessToken) return [];
 
+    if (MOCK_DATA) {
+      const MockNodes = (await import('../mock/mock_nodes.json')).default;
+      const nodesMock = MockNodes[selectedApp.value as AppOption];
+
+      return nodesMock as Node[];
+    }
+
     let list: Node[] = [];
 
     try {
@@ -141,6 +149,12 @@ function UserContextProvider({ children }: Props) {
 
   const getReadings = async (nodeIDList: number[]) => {
     if (!accessToken) return [];
+
+    if (MOCK_DATA) {
+      const MockReadings = (await import('../mock/mock_readings.json')).default;
+
+      return MockReadings as Reading[];
+    }
 
     let readings: Reading[] = [];
 
