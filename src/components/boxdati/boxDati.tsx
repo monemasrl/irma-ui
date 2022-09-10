@@ -21,8 +21,6 @@ type Props = {
 const BoxDati: FC<Props> = ({ dati, stakerClicked, node }) => {
   const share = useContext(ShareContext);
 
-  console.log('dati', dati);
-
   const variants = {
     initial: { opacity: 0, y: -100 },
     animate: { opacity: 1, y: 0 },

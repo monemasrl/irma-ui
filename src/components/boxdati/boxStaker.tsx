@@ -6,7 +6,7 @@ import { UserContext } from '../../context/user-context';
 import { NodeState } from '../../typings/node';
 import Reading from '../../typings/reading';
 import Node from '../../typings/node';
-import Rilevatore from './specials/rilevatore';
+import Nodo from './specials/nodo';
 
 type StatoSensoreProps = {
   statoSensore: NodeState;
@@ -149,7 +149,7 @@ const BoxStaker: FC<BoxStakerProps> = ({ node, letture }) => {
         />
       )}
 
-      <Rilevatore Letture={letture} />
+      <Nodo Letture={letture} />
 
       {/* <div className={style.datiInterni}>
         {dati.datiInterni.map((dato, index) => (

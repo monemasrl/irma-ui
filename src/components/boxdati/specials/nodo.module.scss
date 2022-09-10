@@ -1,0 +1,32 @@
+@import '../../../assets/scss/_variabili';
+
+.wrapperRilevatore {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 320px;
+  flex-shrink: 0;
+}
+
+.boxRilevatore {
+  width: 150px;
+  background-color: white;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.idRilevatore {
+  font-size: 1.4rem;
+  margin-right: 10px;
+}
+.sensore {
+  display: flex;
+}
+.wrapperSensori {
+}
+.sensore {
+}
+.wrapperBarra {
+}
