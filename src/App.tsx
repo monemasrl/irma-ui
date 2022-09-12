@@ -30,7 +30,7 @@ const App: FC = () => {
   const [nodes, setNodes] = useState<Node[]>([]);
   const [readings, setReadings] = useState<Reading[]>([]);
 
-  const [stakerClicked, setStakerClicked] = useState(-1);
+  const [stakerClicked, setStakerClicked] = useState<number>(-1);
   const [isConnected, setIsConnected] = useState(socket?.connected);
   const userSharedData = useContext(UserContext);
 
@@ -129,6 +129,7 @@ const App: FC = () => {
 
                 <BoxDati
                   stakerClicked={stakerClicked}
+                  setStakerClicked={setStakerClicked}
                   dati={
                     stakerClicked !== -1
                       ? getNodeReadings(nodes[stakerClicked])

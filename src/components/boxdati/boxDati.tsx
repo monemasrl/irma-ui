@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, SetStateAction, Dispatch } from 'react';
 import style from './boxDati.module.scss';
 import BoxStaker from './boxStaker';
 import BoxAlert from './boxAlert';
@@ -16,9 +16,15 @@ type Props = {
   datiDefault?: StakerDefaultData;
   node?: Node;
   stakerClicked: number;
+  setStakerClicked: Dispatch<SetStateAction<number>>;
 };
 
-const BoxDati: FC<Props> = ({ dati, stakerClicked, node }) => {
+const BoxDati: FC<Props> = ({
+  dati,
+  stakerClicked,
+  setStakerClicked,
+  node,
+}) => {
   const share = useContext(ShareContext);
 
   const variants = {
@@ -46,18 +52,21 @@ const BoxDati: FC<Props> = ({ dati, stakerClicked, node }) => {
                 <BoxStaker
                   node={node}
                   letture={dati}
+                  setStakerClicked={setStakerClicked}
                 />
               )}
               {dati && node?.state === 'rec' && (
                 <BoxStaker
                   node={node}
                   letture={dati}
+                  setStakerClicked={setStakerClicked}
                 />
               )}
               {dati && node?.state === 'off' && (
                 <BoxStaker
                   node={node}
                   letture={dati}
+                  setStakerClicked={setStakerClicked}
                 />
               )}
               {dati &&

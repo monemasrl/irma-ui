@@ -6,7 +6,7 @@ type Props = {
   dato: Sensore[];
 };
 const BarraChart: FC<Props> = ({ dato }) => {
-  const [completed, setCompleted] = useState(0);
+  const [completed, setCompleted] = useState(10);
   const dangerLevel = dato[dato.length - 1].dangerLevel;
 
   useEffect(() => {
@@ -29,7 +29,7 @@ const BarraChart: FC<Props> = ({ dato }) => {
         <div className={style.fillerStyles}>
           <span
             className={`${style.labelStyles} ${style[colorBar(completed)]}`}
-            style={{ width: `${completed * 10}%` }}
+            style={{ width: `${completed > 0 ? completed * 10 : 10}%` }}
           >{`${completed}`}</span>
         </div>
       </div>

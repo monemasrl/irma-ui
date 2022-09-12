@@ -3065,7 +3065,7 @@
     "sensorNumber": "2",
     "readingID": 3,
     "sessionID": 1,
-    "dangerLevel": 3,
+    "dangerLevel": 0,
     "window1_count": 152,
     "window2_count": 88,
     "window3_count": 40,

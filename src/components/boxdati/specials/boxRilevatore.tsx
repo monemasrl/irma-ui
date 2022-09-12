@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, Dispatch, SetStateAction } from 'react';
 import { Rilevatore } from '../../../typings/ui';
 import BarraChart from './barraChart';
 import style from './nodo.module.scss';
@@ -6,9 +6,14 @@ import style from './nodo.module.scss';
 type Props = {
   key: number;
   rilevatore: Rilevatore;
+  setDataSingoloSensore: Dispatch<SetStateAction<number>>;
 };
 
-const BoxRilevatore: FC<Props> = ({ key, rilevatore }) => {
+const BoxRilevatore: FC<Props> = ({
+  key,
+  rilevatore,
+  setDataSingoloSensore,
+}) => {
   console.log('rilevatore', rilevatore.sensore1);
 
   function alertColor(level: number) {
@@ -29,6 +34,7 @@ const BoxRilevatore: FC<Props> = ({ key, rilevatore }) => {
         ]
       }`}
       key={key}
+      onClick={() => setDataSingoloSensore(rilevatore.id)}
     >
       <div className={style.idRilevatore}>{rilevatore.id}</div>
       <div className={style.wrapperSensori}>

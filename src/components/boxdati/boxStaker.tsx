@@ -1,4 +1,10 @@
-import React, { useState, useContext, FC } from 'react';
+import React, {
+  useState,
+  useContext,
+  FC,
+  Dispatch,
+  SetStateAction,
+} from 'react';
 import style from './boxDati.module.scss';
 import { RiTerminalFill } from 'react-icons/ri';
 import { motion } from 'framer-motion';
@@ -123,34 +129,43 @@ const BtnStartRec: FC<BtnStartRecProps> = ({ applicationID, nodeID }) => {
 type BoxStakerProps = {
   node: Node;
   letture: Reading[];
+  setStakerClicked: Dispatch<SetStateAction<number>>;
 };
 
-const BoxStaker: FC<BoxStakerProps> = ({ node, letture }) => {
+const BoxStaker: FC<BoxStakerProps> = ({ node, letture, setStakerClicked }) => {
   console.log('letture', letture);
+  const [dataSingoloSensore, setDataSingoloSensore] = useState<number>(1);
+  console.log('datasingolosensore', dataSingoloSensore);
 
   return (
     <>
-      <motion.header
-        key={node.nodeID}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 0.5 }}
-      >
-        <div className={style.title}>
-          <div className={style.titoletto}>Reach Staker</div>
-          <div className={style.codiceStaker}>{node.nodeName}</div>
-        </div>
+      <section className={style.layoutSensori}>
+        <motion.header
+          key={node.nodeID}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <div className={style.title}>
+            <div className={style.titoletto}>Reach Staker</div>
+            <div className={style.codiceStaker}>{node.nodeName}</div>
+          </div>
 
-        <StatoSensore statoSensore={node.state} />
-        {node.state === 'ok' && (
-          <BtnStartRec
-            applicationID={node.applicationID}
-            nodeID={node.nodeID}
-          />
-        )}
-
-        {/* <div className={style.datiInterni}>
+          <StatoSensore statoSensore={node.state} />
+          {node.state === 'ok' && (
+            <BtnStartRec
+              applicationID={node.applicationID}
+              nodeID={node.nodeID}
+            />
+          )}
+          {letture.length !== 0 && (
+            <Nodo
+              setDataSingoloSensore={setDataSingoloSensore}
+              Letture={letture}
+            />
+          )}
+          {/* <div className={style.datiInterni}>
         {dati.datiInterni.map((dato, index) => (
           <React.Fragment key={dato.titolo}>
             <BloccoNumerico
@@ -161,10 +176,17 @@ const BoxStaker: FC<BoxStakerProps> = ({ node, letture }) => {
           </React.Fragment>
         ))}
       </div> */}
-      </motion.header>
-      <motion.section className={style.sensoriLayout}>
-        {letture.length !== 0 && <Nodo Letture={letture} />}
-      </motion.section>
+        </motion.header>
+      </section>
+      <section className={style.layoutGraph}>
+        {dataSingoloSensore}
+        <button
+          className={style.backToDash}
+          onClick={() => setStakerClicked(-1)}
+        >
+          back
+        </button>
+      </section>
     </>
   );
 };

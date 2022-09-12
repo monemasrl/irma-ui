@@ -1,285 +1,291 @@
-@import "../../assets/scss/_variabili";
+@import '../../assets/scss/_variabili';
 
 .boxDati {
-    border-radius: 20px;
-    background: linear-gradient(180deg, rgba(240, 240, 240) 10%, rgb(247, 247, 247) 100%);
-    position: relative;
-    margin-left: 20px;
-    padding: 20px 15px;
-    width: 370px;
-    overflow: hidden;
-    transition: background ease-in-out 0.5s;
-    min-height: 300px;
-    border-left: 5px solid #e0e0e0;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-&.stakerDati{
+  border-radius: 20px;
+  background: linear-gradient(
+    180deg,
+    rgba(240, 240, 240) 10%,
+    rgb(247, 247, 247) 100%
+  );
+  position: relative;
+  margin-left: 20px;
+  padding: 20px 15px;
+  width: 370px;
+  overflow: hidden;
+  transition: background ease-in-out 0.5s;
+  min-height: 300px;
+  border-left: 5px solid #e0e0e0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  &.stakerDati {
     position: absolute;
     z-index: 100;
     width: 100%;
     height: 100%;
-    margin-left:0px;
-}
-    .titoletto {
-        font-family: "Open Sans Bold";
-        text-transform: uppercase;
-        letter-spacing: -1px;
-        line-height: 1;
-        color: $lightGray;
-    }
+    margin-left: 0px;
+  }
+  .titoletto {
+    font-family: 'Open Sans Bold';
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    line-height: 1;
+    color: $lightGray;
+  }
 
-    ul {
-        list-style: none;
-        padding: 0;
-    }
+  ul {
+    list-style: none;
+    padding: 0;
+  }
 
-    li {
-        margin: 1rem 0;
-    }
+  li {
+    margin: 1rem 0;
+  }
 
-    .modalOpen {
-        transform: scale(1.1);
-    }
+  .modalOpen {
+    transform: scale(1.1);
+  }
 
-    &.rec {
-        border-left: 5px solid $yellow;
-    }
+  &.rec {
+    border-left: 5px solid $yellow;
+  }
 
-    &.off {
-        border-left: 5px solid $lightGray;
-    }
+  &.off {
+    border-left: 5px solid $lightGray;
+  }
 
-    &.ok {
-        border-left: 5px solid $darkGreen;
-    }
+  &.ok {
+    border-left: 5px solid $darkGreen;
+  }
 
-    &.alert-running, &.alert-ready {
-        background: $red;
-        transition: all ease-in-out 0.5s;
-        border-left: 4px solid $darkred;
-    }
+  &.alert-running,
+  &.alert-ready {
+    background: $red;
+    transition: all ease-in-out 0.5s;
+    border-left: 4px solid $darkred;
+  }
 }
 
 .codiceStaker {
-    font-size: 35px;
-    font-family: "Open Sans Bold";
-    line-height: 1;
-    text-transform: uppercase;
-    color: $gray;
+  font-size: 35px;
+  font-family: 'Open Sans Bold';
+  line-height: 1;
+  text-transform: uppercase;
+  color: $gray;
 }
 
 .stato {
-    display: flex;
-    margin-top: 20px;
-    margin-bottom: 1rem;
-    padding: 23px 15px;
-    background: #ededed;
-    border-radius: 5px;
-    color: $alertText;
-    img {
-        width: 30px;
-        margin-top: 3px;
-    }
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 1rem;
+  padding: 23px 15px;
+  background: #ededed;
+  border-radius: 5px;
+  color: $alertText;
+  img {
+    width: 30px;
+    margin-top: 3px;
+  }
 }
 
-.alert-running, .alert-ready {
-    .codiceStaker {
-        color: $alertText;
-    }
+.alert-running,
+.alert-ready {
+  .codiceStaker {
+    color: $alertText;
+  }
 
-    .titoletto {
-        color: $alertText;
-    }
+  .titoletto {
+    color: $alertText;
+  }
 
-    .stato {
-        background: transparent;
-        border-bottom: 3px dotted transparent;
-        margin-top: 0px;
-        padding-bottom: 0;
+  .stato {
+    background: transparent;
+    border-bottom: 3px dotted transparent;
+    margin-top: 0px;
+    padding-bottom: 0;
 
-        .label {
-            font-size: 70px;
-            .running{
-                font-size: 1rem;
-            }
-        }
+    .label {
+      font-size: 70px;
+      .running {
+        font-size: 1rem;
+      }
     }
-    .datoLabel {
-        font-size: 18px;
-        text-transform: uppercase;
-        color: $alertText;
-    }
-    .buttonWrapper {
-        text-align: center;
-    }
+  }
+  .datoLabel {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: $alertText;
+  }
+  .buttonWrapper {
+    text-align: center;
+  }
 }
 
 .rec {
-    .stato {
-        background-color: #ededed;
-    }
+  .stato {
+    background-color: #ededed;
+  }
 }
 
 .ok {
-    .label {
-        color: $green;
-    }
+  .label {
+    color: $green;
+  }
 }
 
 .off {
-    .label {
-        color: $lightGray;
-    }
+  .label {
+    color: $lightGray;
+  }
 }
 
 .rec {
-    .label {
-        color: #e8a85a;
-    }
+  .label {
+    color: #e8a85a;
+  }
 }
 
- 
-
 .label {
-    font-family: "Open Sans Bold";
-    text-transform: uppercase;
-    letter-spacing: -1px;
-    font-size: 50px;
-    line-height: 1;
-    letter-spacing: -3px;
-    margin-left: 5px;
-    position: relative;
+  font-family: 'Open Sans Bold';
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-size: 50px;
+  line-height: 1;
+  letter-spacing: -3px;
+  margin-left: 5px;
+  position: relative;
 }
 
 .datoLabel svg {
-    font-size: 1.1rem;
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 3px;
+  font-size: 1.1rem;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 3px;
 }
 
 .datoLabel {
-    font-family: "Open Sans Bold";
-    text-transform: uppercase;
-    letter-spacing: -1px;
-    margin-left: 7px;
-    font-size: 15px;
-    color: $gray;
+  font-family: 'Open Sans Bold';
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  margin-left: 7px;
+  font-size: 15px;
+  color: $gray;
 }
 
-
 .datiStato {
-    margin-left: 0px;
+  margin-left: 0px;
 }
 
 .bloccoDati {
-    padding: 15px 10px;
-    margin: 10px 0;
-    background-color: #ebebeb;
-    border-radius: 5px;
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    .titoloInterno {
-        text-transform: uppercase;
-        font-family: "Open Sans Bold";
-        color: $lightGray;
-        line-height: 1;
-        font-size: 0.9rem;
-    }
-    .datoInterno {
-        font-size: 36px;
-        line-height: 1;
-        text-align: right;
-    }
-    .datoInterno span {
-        font-size: 30px;
-        margin-left: -7px;
-    }
+  padding: 15px 10px;
+  margin: 10px 0;
+  background-color: #ebebeb;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  .titoloInterno {
+    text-transform: uppercase;
+    font-family: 'Open Sans Bold';
+    color: $lightGray;
+    line-height: 1;
+    font-size: 0.9rem;
+  }
+  .datoInterno {
+    font-size: 36px;
+    line-height: 1;
+    text-align: right;
+  }
+  .datoInterno span {
+    font-size: 30px;
+    margin-left: -7px;
+  }
 }
 
-
-
-
 .wrapperAlert img {
-    margin-left: -21px;
-    width: 428px;
-    height: 113px;
-    position: relative;
-    animation: alertbox 1s forwards;
+  margin-left: -21px;
+  width: 428px;
+  height: 113px;
+  position: relative;
+  animation: alertbox 1s forwards;
 }
 
 .buttonStop {
-    margin: 1rem auto;
-    display: block;
-    outline: none;
-    background-color: $lightRed;
-    width: 250px;
-    font-family: "Open Sans Bold";
-    color: white;
-    text-transform: uppercase;
-    font-size: 20px;
-    cursor: pointer;
-    transition: all ease-in-out 0.3s;
-    border: none;
+  margin: 1rem auto;
+  display: block;
+  outline: none;
+  background-color: $lightRed;
+  width: 250px;
+  font-family: 'Open Sans Bold';
+  color: white;
+  text-transform: uppercase;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all ease-in-out 0.3s;
+  border: none;
 }
 
 .buttonStop:hover {
-    background-color: $darkred;
-    color: #fff;
+  background-color: $darkred;
+  color: #fff;
 }
 
 .wrapperbutton {
-    text-align: center;
-    button {
-        background-color: $darkGreen;
-        color: white;
-        font-size: 16px;
-    }
+  text-align: center;
+  button {
+    background-color: $darkGreen;
+    color: white;
+    font-size: 16px;
+  }
 }
 
-
-
 .iconastatoRec {
-    position: relative;
+  position: relative;
 }
 
 .lancia {
-    width: 3px;
-    height: 15px;
-    background-color: white;
-    position: absolute;
-    border-radius: 2px;
-    top: 3px;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-    box-shadow: 0px 0px 3px #8b8b8b;
-    transform-origin: 2px 14px;
-    transform: rotate(-52deg);
-    animation: lanciaInizio 2s alternate infinite;
+  width: 3px;
+  height: 15px;
+  background-color: white;
+  position: absolute;
+  border-radius: 2px;
+  top: 3px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  box-shadow: 0px 0px 3px #8b8b8b;
+  transform-origin: 2px 14px;
+  transform: rotate(-52deg);
+  animation: lanciaInizio 2s alternate infinite;
+}
+.backToDash {
+  position: relative;
+  background-color: $backHeader;
+}
+.layoutSensori {
+}
+.layoutGraph {
 }
 
 @keyframes lanciaInizio {
-    0% {
-        transform: rotate(-52deg);
-    }
+  0% {
+    transform: rotate(-52deg);
+  }
 
-    100% {
-        transform: rotate(50deg);
-    }
+  100% {
+    transform: rotate(50deg);
+  }
 }
 
 @keyframes alertbox {
-    from {
-        opacity: 0;
-        left: -100%;
-    }
+  from {
+    opacity: 0;
+    left: -100%;
+  }
 
-    to {
-        opacity: 1;
-        left: 0;
-    }
+  to {
+    opacity: 1;
+    left: 0;
+  }
 }
