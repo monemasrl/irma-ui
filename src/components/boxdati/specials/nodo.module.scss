@@ -1,5 +1,11 @@
 @import '../../../assets/scss/_variabili';
-
+.sezioneSensori {
+  h3 {
+    text-transform: uppercase;
+    margin: 0 0 0 5px;
+    font-size: 1rem;
+  }
+}
 .wrapperRilevatore {
   display: flex;
   flex-wrap: wrap;
@@ -15,18 +21,72 @@
   padding: 10px;
   display: flex;
   align-items: center;
+  &.alert {
+    background-color: $darkred;
+    color: white;
+  }
 }
-
+.idSensore {
+  font-weight: bold;
+  margin-right: 3px;
+  padding-right: 3px;
+  border-right: 1px dotted #cfcfcf;
+  height: 26px;
+  font-size: 13px;
+  line-height: 24px;
+}
 .idRilevatore {
-  font-size: 1.4rem;
-  margin-right: 10px;
+  font-size: 2rem;
+  margin-right: 15px;
+  font-weight: bold;
 }
 .sensore {
   display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  &:nth-child(2) {
+    margin-top: 5px;
+  }
 }
 .wrapperSensori {
+  width: 100%;
+  padding: 2px;
 }
-.sensore {
-}
+
 .wrapperBarra {
+  width: 76%;
+
+  .containerStyles {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+  }
+
+  .fillerStyles {
+    border-radius: inherit;
+    text-align: left;
+  }
+
+  .labelStyles {
+    &.green {
+      background-color: $green;
+    }
+    &.red {
+      background-color: $red;
+    }
+    &.yellow {
+      background-color: $yellow;
+    }
+
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 10px;
+    background-color: white;
+    width: 0;
+    transition: width 1s ease-in-out, background-color 1s ease-in-out;
+    text-align: right;
+    display: block;
+    margin-right: 5px;
+    padding: 1px 5px;
+  }
 }

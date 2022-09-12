@@ -149,7 +149,7 @@ const BoxStaker: FC<BoxStakerProps> = ({ node, letture }) => {
         />
       )}
 
-      <Nodo Letture={letture} />
+      {letture.length !== 0 && <Nodo Letture={letture} />}
 
       {/* <div className={style.datiInterni}>
         {dati.datiInterni.map((dato, index) => (

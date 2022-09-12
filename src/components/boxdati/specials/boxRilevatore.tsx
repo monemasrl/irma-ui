@@ -11,9 +11,23 @@ type Props = {
 const BoxRilevatore: FC<Props> = ({ key, rilevatore }) => {
   console.log('rilevatore', rilevatore.sensore1);
 
+  function alertColor(level: number) {
+    if (level > 6) {
+      return 'alert';
+    }
+    return '';
+  }
+
   return (
     <div
-      className={style.boxRilevatore}
+      className={`${style.boxRilevatore} 
+      ${
+        style[
+          alertColor(
+            rilevatore.sensore1[rilevatore.sensore1.length - 1].dangerLevel
+          )
+        ]
+      }`}
       key={key}
     >
       <div className={style.idRilevatore}>{rilevatore.id}</div>

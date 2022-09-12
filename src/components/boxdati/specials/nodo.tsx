@@ -42,15 +42,18 @@ const Nodo: FC<Props> = (Props) => {
   console.log(datiLettureUI[0].id);
 
   return (
-    <div className={style.wrapperRilevatore}>
-      {datiLettureUI.map((item) => {
-        return (
-          <BoxRilevatore
-            key={item.id}
-            rilevatore={item}
-          />
-        );
-      })}
+    <div className={style.sezioneSensori}>
+      <h3>Sensori</h3>
+      <div className={style.wrapperRilevatore}>
+        {datiLettureUI.map((item) => {
+          return (
+            <BoxRilevatore
+              key={item.id}
+              rilevatore={item}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 };
