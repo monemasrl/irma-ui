@@ -9,16 +9,16 @@
 .wrapperRilevatore {
   display: flex;
   flex-wrap: wrap;
-  max-width: 320px;
+  max-width: 340px;
   flex-shrink: 0;
 }
 
 .boxRilevatore {
-  width: 150px;
+  width: 136px;
   background-color: white;
   border-radius: 5px;
-  margin: 5px;
-  padding: 5px 10px;
+  margin: 8px;
+  padding: 2px 3px;
   display: flex;
   align-items: center;
   &.alert {
@@ -34,21 +34,22 @@
   margin-right: 3px;
   padding-right: 3px;
   border-right: 1px dotted #cfcfcf;
-  height: 26px;
+  height: 23px;
   font-size: 13px;
   line-height: 24px;
 }
 .idRilevatore {
   font-size: 1.8rem;
-  margin-right: 15px;
+  margin-right: 10px;
   font-weight: bold;
-  background: #f0f8ffaf;
+  background: rgba(240, 248, 255, 0.6862745098);
   border-radius: 50%;
   height: 30px;
   width: 44px;
   line-height: 20px;
   text-align: center;
   padding: 4px;
+  margin-left: 5px;
 }
 .sensore {
   display: flex;
