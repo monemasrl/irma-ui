@@ -129,29 +129,28 @@ const BoxStaker: FC<BoxStakerProps> = ({ node, letture }) => {
   console.log('letture', letture);
 
   return (
-    <motion.header
-      key={node.nodeID}
-      initial={{ opacity: 0, top: 20, position: 'relative' }}
-      animate={{ opacity: 1, top: 0, position: 'relative' }}
-      exit={{ opacity: 0, top: 20 }}
-      transition={{ duration: 0.5 }}
-    >
-      <div className={style.title}>
-        <div className={style.titoletto}>Reach Staker</div>
-        <div className={style.codiceStaker}>{node.nodeName}</div>
-      </div>
+    <>
+      <motion.header
+        key={node.nodeID}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        <div className={style.title}>
+          <div className={style.titoletto}>Reach Staker</div>
+          <div className={style.codiceStaker}>{node.nodeName}</div>
+        </div>
 
-      <StatoSensore statoSensore={node.state} />
-      {node.state === 'ok' && (
-        <BtnStartRec
-          applicationID={node.applicationID}
-          nodeID={node.nodeID}
-        />
-      )}
+        <StatoSensore statoSensore={node.state} />
+        {node.state === 'ok' && (
+          <BtnStartRec
+            applicationID={node.applicationID}
+            nodeID={node.nodeID}
+          />
+        )}
 
-      {letture.length !== 0 && <Nodo Letture={letture} />}
-
-      {/* <div className={style.datiInterni}>
+        {/* <div className={style.datiInterni}>
         {dati.datiInterni.map((dato, index) => (
           <React.Fragment key={dato.titolo}>
             <BloccoNumerico
@@ -162,7 +161,11 @@ const BoxStaker: FC<BoxStakerProps> = ({ node, letture }) => {
           </React.Fragment>
         ))}
       </div> */}
-    </motion.header>
+      </motion.header>
+      <motion.section className={style.sensoriLayout}>
+        {letture.length !== 0 && <Nodo Letture={letture} />}
+      </motion.section>
+    </>
   );
 };
 
