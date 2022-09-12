@@ -1,18 +1,24 @@
 import React, { FC, Dispatch, SetStateAction } from 'react';
-import Reading from '../../../typings/reading';
-import { datiLetture } from '../../utility';
+import { TotalReading, WindowReading } from '../../../typings/reading';
+import { datiLetture } from '../../../utils/datiLetture';
+
 import BoxRilevatore from './boxRilevatore';
 import style from './nodo.module.scss';
 
 interface Props {
-  Letture: Reading[];
+  totalReadings: TotalReading[];
+  windowReadings: WindowReading[];
   setDataSingoloSensore: Dispatch<SetStateAction<number>>;
 }
 
-const Nodo: FC<Props> = (Props) => {
-  console.log('letture', Props.Letture);
-
-  const datiLettureUI = datiLetture(Props.Letture);
+const Nodo: FC<Props> = ({
+  totalReadings,
+  windowReadings,
+  setDataSingoloSensore,
+}) => {
+  console.log('letture', totalReadings, windowReadings);
+  const datiLettureUI = datiLetture(totalReadings, windowReadings);
+  console.log(datiLettureUI[0].id);
 
   return (
     <div className={style.sezioneSensori}>
@@ -23,7 +29,7 @@ const Nodo: FC<Props> = (Props) => {
             <BoxRilevatore
               key={item.id}
               rilevatore={item}
-              setDataSingoloSensore={Props.setDataSingoloSensore}
+              setDataSingoloSensore={setDataSingoloSensore}
             />
           );
         })}

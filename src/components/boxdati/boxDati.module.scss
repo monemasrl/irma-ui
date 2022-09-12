@@ -25,6 +25,12 @@
     height: 100%;
     margin-left: 0px;
   }
+  header {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+  }
   .titoletto {
     font-family: 'Open Sans Bold';
     text-transform: uppercase;
@@ -73,14 +79,14 @@
   text-transform: uppercase;
   color: $gray;
 }
-
-.stato {
-  display: flex;
-  margin-top: 20px;
-  margin-bottom: 1rem;
-  padding: 23px 15px;
+.wrapperStatoSensore {
   background: #ededed;
   border-radius: 5px;
+}
+.stato {
+  display: flex;
+  padding: 15px 15px;
+
   color: $alertText;
   img {
     width: 30px;
@@ -232,6 +238,7 @@
 
 .wrapperbutton {
   text-align: center;
+  border-top: 1px dotted gray;
   button {
     background-color: $darkGreen;
     color: white;

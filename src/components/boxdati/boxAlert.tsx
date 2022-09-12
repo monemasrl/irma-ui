@@ -4,7 +4,7 @@ import { RiTerminalFill } from 'react-icons/ri';
 import { ShareContext } from '../../context/context';
 import { useContext } from 'react';
 import { NodeState } from '../../typings/node';
-import Reading from '../../typings/reading';
+import { TotalReading, WindowReading } from '../../typings/reading';
 import AlertRunning from './specials/alertRunning';
 import Node from '../../typings/node';
 
@@ -41,13 +41,18 @@ const StatoSensore: FC<StatoSensoreProps> = ({ statoSensore }) => {
 
 type BoxAlertProps = {
   node: Node;
-  letture: Reading[];
+  totalReadings: TotalReading[];
+  windowReadings: WindowReading[];
 };
 
-const BoxAlert: FC<BoxAlertProps> = ({ node, letture }) => {
+const BoxAlert: FC<BoxAlertProps> = ({
+  node,
+  totalReadings,
+  windowReadings,
+}) => {
   const share = useContext(ShareContext);
   console.log('node', node);
-  console.log('letture', letture);
+  console.log('readings', totalReadings, windowReadings);
 
   return (
     <header>

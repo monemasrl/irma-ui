@@ -15,7 +15,7 @@ import { OrgOption } from '../mock/mock_data';
 import Organization from '../typings/organization';
 import Application from '../typings/application';
 import Node from '../typings/node';
-import Reading from '../typings/reading';
+import { TotalReading, WindowReading } from '../typings/reading';
 import { AppOption } from '../mock/mock_data';
 
 const MOCK_DATA = process.env.REACT_APP_MOCK_DATA || 0;
@@ -36,7 +36,8 @@ export interface IUserContext {
   authenticate: (email: string, password: string) => Promise<void>;
   logout: () => void;
   getNodes: () => Promise<Node[]>;
-  getReadings: (nodeIDList: number[]) => Promise<Reading[]>;
+  getTotalReadings: (nodeIDList: number[]) => Promise<TotalReading[]>;
+  getWindowReadings: (nodeIDList: number[]) => Promise<WindowReading[]>;
   sendCommand: (
     appID: string,
     nodeID: number,
@@ -147,19 +148,41 @@ function UserContextProvider({ children }: Props) {
     return list;
   };
 
-  const getReadings = async (nodeIDList: number[]) => {
+  const getTotalReadings = async (nodeIDList: number[]) => {
     if (!accessToken) return [];
 
     if (MOCK_DATA) {
-      const MockReadings = (await import('../mock/mock_readings.json')).default;
+      const MockReadings = (await import('../mock/mock_total_readings.json'))
+        .default;
 
-      return MockReadings as Reading[];
+      return MockReadings as TotalReading[];
     }
 
-    let readings: Reading[] = [];
+    let readings: TotalReading[] = [];
 
     try {
-      readings = await Microservice.getReadings(accessToken, nodeIDList);
+      readings = await Microservice.getTotalReadings(accessToken, nodeIDList);
+    } catch (error) {
+      refreshIfUnauthorized(error);
+    }
+
+    return readings;
+  };
+
+  const getWindowReadings = async (nodeIDList: number[]) => {
+    if (!accessToken) return [];
+
+    if (MOCK_DATA) {
+      const MockReadings = (await import('../mock/mock_window_readings.json'))
+        .default;
+
+      return MockReadings as WindowReading[];
+    }
+
+    let readings: WindowReading[] = [];
+
+    try {
+      readings = await Microservice.getWindowReadings(accessToken, nodeIDList);
     } catch (error) {
       refreshIfUnauthorized(error);
     }
@@ -298,7 +321,8 @@ function UserContextProvider({ children }: Props) {
     authenticate,
     logout,
     getNodes,
-    getReadings,
+    getTotalReadings,
+    getWindowReadings,
     sendCommand,
     handleAlert,
   };

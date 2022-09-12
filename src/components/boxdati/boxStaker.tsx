@@ -10,7 +10,7 @@ import { RiTerminalFill } from 'react-icons/ri';
 import { motion } from 'framer-motion';
 import { UserContext } from '../../context/user-context';
 import { NodeState } from '../../typings/node';
-import Reading from '../../typings/reading';
+import { WindowReading, TotalReading } from '../../typings/reading';
 import Node from '../../typings/node';
 import Nodo from './specials/nodo';
 
@@ -128,14 +128,20 @@ const BtnStartRec: FC<BtnStartRecProps> = ({ applicationID, nodeID }) => {
 
 type BoxStakerProps = {
   node: Node;
-  letture: Reading[];
   setStakerClicked: Dispatch<SetStateAction<number>>;
+  totalReadings: TotalReading[];
+  windowReadings: WindowReading[];
 };
 
-const BoxStaker: FC<BoxStakerProps> = ({ node, letture, setStakerClicked }) => {
-  console.log('letture', letture);
+const BoxStaker: FC<BoxStakerProps> = ({
+  node,
+  totalReadings,
+  windowReadings,
+  setStakerClicked,
+}) => {
   const [dataSingoloSensore, setDataSingoloSensore] = useState<number>(1);
   console.log('datasingolosensore', dataSingoloSensore);
+  console.log('readings', totalReadings, windowReadings);
 
   return (
     <>
@@ -152,17 +158,20 @@ const BoxStaker: FC<BoxStakerProps> = ({ node, letture, setStakerClicked }) => {
             <div className={style.codiceStaker}>{node.nodeName}</div>
           </div>
 
-          <StatoSensore statoSensore={node.state} />
-          {node.state === 'ok' && (
-            <BtnStartRec
-              applicationID={node.applicationID}
-              nodeID={node.nodeID}
-            />
-          )}
-          {letture.length !== 0 && (
+          <div className={style.wrapperStatoSensore}>
+            <StatoSensore statoSensore={node.state} />
+            {node.state === 'ok' && (
+              <BtnStartRec
+                applicationID={node.applicationID}
+                nodeID={node.nodeID}
+              />
+            )}
+          </div>
+          {totalReadings.length && windowReadings.length && (
             <Nodo
               setDataSingoloSensore={setDataSingoloSensore}
-              Letture={letture}
+              totalReadings={totalReadings}
+              windowReadings={windowReadings}
             />
           )}
           {/* <div className={style.datiInterni}>

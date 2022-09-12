@@ -1,10 +1,6 @@
 import React, { FC } from 'react';
-import Reading from '../../../typings/reading';
 
-type Props = {
-  dati?: Reading[];
-};
-const Graph: FC<Props> = () => {
+const Graph: FC = () => {
   return <div>Graph</div>;
 };
 
