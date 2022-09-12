@@ -7,7 +7,7 @@ import { ShareContextProvider, ShareContext } from './context/context';
 import { UserContext } from './context/user-context';
 import './App.scss';
 import io from 'socket.io-client';
-import Reading from './typings/reading';
+import { TotalReading, WindowReading } from './typings/reading';
 import Node from './typings/node';
 import StakerDefaultData from './typings/defaultData';
 import BoxDati from './components/boxdati/boxDati';
@@ -28,7 +28,8 @@ console.log(WEBSOCKET_URL, WEBSOCKET_PORT, socket);
 
 const App: FC = () => {
   const [nodes, setNodes] = useState<Node[]>([]);
-  const [readings, setReadings] = useState<Reading[]>([]);
+  const [totalReadings, setTotalReadings] = useState<TotalReading[]>([]);
+  const [windowReadings, setWindowReadings] = useState<WindowReading[]>([]);
 
   const [stakerClicked, setStakerClicked] = useState(-1);
   const [isConnected, setIsConnected] = useState(socket?.connected);
@@ -60,8 +61,10 @@ const App: FC = () => {
       setNodes(nodes);
 
       const nodeIDList = nodes.map(({ nodeID }) => nodeID);
-      const readings = await userSharedData.getReadings(nodeIDList);
-      setReadings(readings);
+      const totReads = await userSharedData.getTotalReadings(nodeIDList);
+      setTotalReadings(totReads);
+      const winReads = await userSharedData.getWindowReadings(nodeIDList);
+      setWindowReadings(winReads);
     };
 
     func();
@@ -100,8 +103,11 @@ const App: FC = () => {
     return dati;
   };
 
-  const getNodeReadings = (node: Node) =>
-    readings.filter((r) => r.nodeID === node.nodeID);
+  const getNodeTotalReadings = (node: Node) =>
+    totalReadings.filter((r) => r.nodeID === node.nodeID);
+
+  const getNodeWindowReadings = (node: Node) =>
+    windowReadings.filter((r) => r.nodeID === node.nodeID);
 
   return (
     <ShareContextProvider>
@@ -129,18 +135,20 @@ const App: FC = () => {
 
                 <BoxDati
                   stakerClicked={stakerClicked}
-                  dati={
+                  totalReadings={
                     stakerClicked !== -1
-                      ? getNodeReadings(nodes[stakerClicked])
+                      ? getNodeTotalReadings(nodes[stakerClicked])
+                      : undefined
+                  }
+                  windowReadings={
+                    stakerClicked !== -1
+                      ? getNodeWindowReadings(nodes[stakerClicked])
                       : undefined
                   }
                   node={stakerClicked !== -1 ? nodes[stakerClicked] : undefined}
                 />
 
-                <BoxDatiDefault
-                  stakerClicked={stakerClicked}
-                  datiDefault={datiDefault()}
-                />
+                <BoxDatiDefault datiDefault={datiDefault()} />
               </div>
             </main>
           )}

@@ -5,34 +5,28 @@
     "sensorNumber": "1",
     "readingID": 0,
     "sessionID": 0,
+    "dangerLevel": 5,
+    "totalCount": 9413981,
+    "publishedAt": "2022-01-01T08:00:01"
+  },
+  {
+    "nodeID": 2,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 0,
+    "dangerLevel": 1,
+    "totalCount": 3438683,
+    "publishedAt": "2022-01-01T08:00:01"
+  },
+  {
+    "nodeID": 2,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 0,
     "dangerLevel": 8,
-    "window1_count": 53,
-    "window2_count": 254,
-    "window3_count": 80,
-    "publishedAt": "2022-01-01T08:00:01"
-  },
-  {
-    "nodeID": 2,
-    "canID": "1",
-    "sensorNumber": "2",
-    "readingID": 0,
-    "sessionID": 0,
-    "dangerLevel": 10,
-    "window1_count": 76,
-    "window2_count": 238,
-    "window3_count": 39,
-    "publishedAt": "2022-01-01T08:00:01"
-  },
-  {
-    "nodeID": 2,
-    "canID": "2",
-    "sensorNumber": "1",
-    "readingID": 0,
-    "sessionID": 0,
-    "dangerLevel": 7,
-    "window1_count": 103,
-    "window2_count": 105,
-    "window3_count": 74,
+    "totalCount": 6303153,
     "publishedAt": "2022-01-01T08:00:02"
   },
   {
@@ -41,10 +35,8 @@
     "sensorNumber": "2",
     "readingID": 0,
     "sessionID": 0,
-    "dangerLevel": 9,
-    "window1_count": 216,
-    "window2_count": 223,
-    "window3_count": 140,
+    "dangerLevel": 3,
+    "totalCount": 1087063,
     "publishedAt": "2022-01-01T08:00:02"
   },
   {
@@ -53,46 +45,38 @@
     "sensorNumber": "1",
     "readingID": 0,
     "sessionID": 0,
-    "dangerLevel": 0,
-    "window1_count": 15,
-    "window2_count": 201,
-    "window3_count": 168,
+    "dangerLevel": 8,
+    "totalCount": 815969,
     "publishedAt": "2022-01-01T08:00:03"
   },
   {
     "nodeID": 2,
     "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 0,
+    "dangerLevel": 0,
+    "totalCount": 4655825,
+    "publishedAt": "2022-01-01T08:00:03"
+  },
+  {
+    "nodeID": 2,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 0,
+    "dangerLevel": 0,
+    "totalCount": 9559883,
+    "publishedAt": "2022-01-01T08:00:04"
+  },
+  {
+    "nodeID": 2,
+    "canID": "4",
     "sensorNumber": "2",
     "readingID": 0,
     "sessionID": 0,
     "dangerLevel": 9,
-    "window1_count": 194,
-    "window2_count": 203,
-    "window3_count": 40,
-    "publishedAt": "2022-01-01T08:00:03"
-  },
-  {
-    "nodeID": 2,
-    "canID": "4",
-    "sensorNumber": "1",
-    "readingID": 0,
-    "sessionID": 0,
-    "dangerLevel": 4,
-    "window1_count": 69,
-    "window2_count": 202,
-    "window3_count": 229,
-    "publishedAt": "2022-01-01T08:00:04"
-  },
-  {
-    "nodeID": 2,
-    "canID": "4",
-    "sensorNumber": "2",
-    "readingID": 0,
-    "sessionID": 0,
-    "dangerLevel": 2,
-    "window1_count": 12,
-    "window2_count": 167,
-    "window3_count": 250,
+    "totalCount": 6820113,
     "publishedAt": "2022-01-01T08:00:04"
   },
   {
@@ -101,10 +85,8 @@
     "sensorNumber": "1",
     "readingID": 1,
     "sessionID": 0,
-    "dangerLevel": 6,
-    "window1_count": 185,
-    "window2_count": 43,
-    "window3_count": 17,
+    "dangerLevel": 5,
+    "totalCount": 3892642,
     "publishedAt": "2022-01-01T08:00:11"
   },
   {
@@ -113,10 +95,8 @@
     "sensorNumber": "2",
     "readingID": 1,
     "sessionID": 0,
-    "dangerLevel": 0,
-    "window1_count": 5,
-    "window2_count": 75,
-    "window3_count": 94,
+    "dangerLevel": 3,
+    "totalCount": 6446954,
     "publishedAt": "2022-01-01T08:00:11"
   },
   {
@@ -125,10 +105,8 @@
     "sensorNumber": "1",
     "readingID": 1,
     "sessionID": 0,
-    "dangerLevel": 0,
-    "window1_count": 210,
-    "window2_count": 255,
-    "window3_count": 21,
+    "dangerLevel": 1,
+    "totalCount": 1523649,
     "publishedAt": "2022-01-01T08:00:12"
   },
   {
@@ -137,10 +115,8 @@
     "sensorNumber": "2",
     "readingID": 1,
     "sessionID": 0,
-    "dangerLevel": 10,
-    "window1_count": 43,
-    "window2_count": 255,
-    "window3_count": 118,
+    "dangerLevel": 1,
+    "totalCount": 6124542,
     "publishedAt": "2022-01-01T08:00:12"
   },
   {
@@ -149,10 +125,8 @@
     "sensorNumber": "1",
     "readingID": 1,
     "sessionID": 0,
-    "dangerLevel": 10,
-    "window1_count": 162,
-    "window2_count": 3,
-    "window3_count": 54,
+    "dangerLevel": 1,
+    "totalCount": 1570327,
     "publishedAt": "2022-01-01T08:00:13"
   },
   {
@@ -161,10 +135,8 @@
     "sensorNumber": "2",
     "readingID": 1,
     "sessionID": 0,
-    "dangerLevel": 7,
-    "window1_count": 9,
-    "window2_count": 89,
-    "window3_count": 146,
+    "dangerLevel": 0,
+    "totalCount": 7387567,
     "publishedAt": "2022-01-01T08:00:13"
   },
   {
@@ -174,9 +146,7 @@
     "readingID": 1,
     "sessionID": 0,
     "dangerLevel": 4,
-    "window1_count": 17,
-    "window2_count": 109,
-    "window3_count": 230,
+    "totalCount": 9597220,
     "publishedAt": "2022-01-01T08:00:14"
   },
   {
@@ -185,10 +155,8 @@
     "sensorNumber": "2",
     "readingID": 1,
     "sessionID": 0,
-    "dangerLevel": 0,
-    "window1_count": 177,
-    "window2_count": 52,
-    "window3_count": 255,
+    "dangerLevel": 5,
+    "totalCount": 1649568,
     "publishedAt": "2022-01-01T08:00:14"
   },
   {
@@ -197,10 +165,8 @@
     "sensorNumber": "1",
     "readingID": 2,
     "sessionID": 0,
-    "dangerLevel": 6,
-    "window1_count": 159,
-    "window2_count": 27,
-    "window3_count": 34,
+    "dangerLevel": 1,
+    "totalCount": 3757446,
     "publishedAt": "2022-01-01T08:00:21"
   },
   {
@@ -209,10 +175,8 @@
     "sensorNumber": "2",
     "readingID": 2,
     "sessionID": 0,
-    "dangerLevel": 4,
-    "window1_count": 162,
-    "window2_count": 204,
-    "window3_count": 93,
+    "dangerLevel": 7,
+    "totalCount": 708260,
     "publishedAt": "2022-01-01T08:00:21"
   },
   {
@@ -221,10 +185,8 @@
     "sensorNumber": "1",
     "readingID": 2,
     "sessionID": 0,
-    "dangerLevel": 3,
-    "window1_count": 115,
-    "window2_count": 107,
-    "window3_count": 219,
+    "dangerLevel": 8,
+    "totalCount": 5375884,
     "publishedAt": "2022-01-01T08:00:22"
   },
   {
@@ -233,10 +195,8 @@
     "sensorNumber": "2",
     "readingID": 2,
     "sessionID": 0,
-    "dangerLevel": 5,
-    "window1_count": 169,
-    "window2_count": 224,
-    "window3_count": 131,
+    "dangerLevel": 6,
+    "totalCount": 3954488,
     "publishedAt": "2022-01-01T08:00:22"
   },
   {
@@ -245,10 +205,8 @@
     "sensorNumber": "1",
     "readingID": 2,
     "sessionID": 0,
-    "dangerLevel": 4,
-    "window1_count": 178,
-    "window2_count": 111,
-    "window3_count": 32,
+    "dangerLevel": 9,
+    "totalCount": 6677026,
     "publishedAt": "2022-01-01T08:00:23"
   },
   {
@@ -257,10 +215,8 @@
     "sensorNumber": "2",
     "readingID": 2,
     "sessionID": 0,
-    "dangerLevel": 6,
-    "window1_count": 199,
-    "window2_count": 129,
-    "window3_count": 232,
+    "dangerLevel": 4,
+    "totalCount": 2050861,
     "publishedAt": "2022-01-01T08:00:23"
   },
   {
@@ -269,10 +225,8 @@
     "sensorNumber": "1",
     "readingID": 2,
     "sessionID": 0,
-    "dangerLevel": 6,
-    "window1_count": 129,
-    "window2_count": 159,
-    "window3_count": 158,
+    "dangerLevel": 4,
+    "totalCount": 55684,
     "publishedAt": "2022-01-01T08:00:24"
   },
   {
@@ -281,10 +235,8 @@
     "sensorNumber": "2",
     "readingID": 2,
     "sessionID": 0,
-    "dangerLevel": 5,
-    "window1_count": 101,
-    "window2_count": 106,
-    "window3_count": 148,
+    "dangerLevel": 9,
+    "totalCount": 8657244,
     "publishedAt": "2022-01-01T08:00:24"
   },
   {
@@ -293,10 +245,8 @@
     "sensorNumber": "1",
     "readingID": 3,
     "sessionID": 0,
-    "dangerLevel": 7,
-    "window1_count": 175,
-    "window2_count": 215,
-    "window3_count": 119,
+    "dangerLevel": 2,
+    "totalCount": 6024202,
     "publishedAt": "2022-01-01T08:00:31"
   },
   {
@@ -305,10 +255,8 @@
     "sensorNumber": "2",
     "readingID": 3,
     "sessionID": 0,
-    "dangerLevel": 1,
-    "window1_count": 164,
-    "window2_count": 176,
-    "window3_count": 67,
+    "dangerLevel": 6,
+    "totalCount": 7609894,
     "publishedAt": "2022-01-01T08:00:31"
   },
   {
@@ -318,9 +266,7 @@
     "readingID": 3,
     "sessionID": 0,
     "dangerLevel": 0,
-    "window1_count": 46,
-    "window2_count": 205,
-    "window3_count": 64,
+    "totalCount": 6310694,
     "publishedAt": "2022-01-01T08:00:32"
   },
   {
@@ -329,10 +275,8 @@
     "sensorNumber": "2",
     "readingID": 3,
     "sessionID": 0,
-    "dangerLevel": 9,
-    "window1_count": 165,
-    "window2_count": 127,
-    "window3_count": 136,
+    "dangerLevel": 4,
+    "totalCount": 6368264,
     "publishedAt": "2022-01-01T08:00:32"
   },
   {
@@ -341,10 +285,8 @@
     "sensorNumber": "1",
     "readingID": 3,
     "sessionID": 0,
-    "dangerLevel": 9,
-    "window1_count": 162,
-    "window2_count": 126,
-    "window3_count": 203,
+    "dangerLevel": 3,
+    "totalCount": 4688205,
     "publishedAt": "2022-01-01T08:00:33"
   },
   {
@@ -353,10 +295,8 @@
     "sensorNumber": "2",
     "readingID": 3,
     "sessionID": 0,
-    "dangerLevel": 1,
-    "window1_count": 78,
-    "window2_count": 226,
-    "window3_count": 227,
+    "dangerLevel": 8,
+    "totalCount": 7336486,
     "publishedAt": "2022-01-01T08:00:33"
   },
   {
@@ -365,10 +305,8 @@
     "sensorNumber": "1",
     "readingID": 3,
     "sessionID": 0,
-    "dangerLevel": 4,
-    "window1_count": 195,
-    "window2_count": 131,
-    "window3_count": 104,
+    "dangerLevel": 5,
+    "totalCount": 29211,
     "publishedAt": "2022-01-01T08:00:34"
   },
   {
@@ -378,9 +316,7 @@
     "readingID": 3,
     "sessionID": 0,
     "dangerLevel": 2,
-    "window1_count": 40,
-    "window2_count": 240,
-    "window3_count": 105,
+    "totalCount": 9333884,
     "publishedAt": "2022-01-01T08:00:34"
   },
   {
@@ -389,10 +325,8 @@
     "sensorNumber": "1",
     "readingID": 0,
     "sessionID": 1,
-    "dangerLevel": 5,
-    "window1_count": 236,
-    "window2_count": 195,
-    "window3_count": 39,
+    "dangerLevel": 3,
+    "totalCount": 8984744,
     "publishedAt": "2022-01-01T08:05:01"
   },
   {
@@ -402,9 +336,7 @@
     "readingID": 0,
     "sessionID": 1,
     "dangerLevel": 8,
-    "window1_count": 106,
-    "window2_count": 77,
-    "window3_count": 50,
+    "totalCount": 9328479,
     "publishedAt": "2022-01-01T08:05:01"
   },
   {
@@ -413,10 +345,8 @@
     "sensorNumber": "1",
     "readingID": 0,
     "sessionID": 1,
-    "dangerLevel": 7,
-    "window1_count": 63,
-    "window2_count": 104,
-    "window3_count": 238,
+    "dangerLevel": 0,
+    "totalCount": 2091335,
     "publishedAt": "2022-01-01T08:05:02"
   },
   {
@@ -425,10 +355,8 @@
     "sensorNumber": "2",
     "readingID": 0,
     "sessionID": 1,
-    "dangerLevel": 7,
-    "window1_count": 13,
-    "window2_count": 217,
-    "window3_count": 217,
+    "dangerLevel": 2,
+    "totalCount": 9452217,
     "publishedAt": "2022-01-01T08:05:02"
   },
   {
@@ -437,10 +365,8 @@
     "sensorNumber": "1",
     "readingID": 0,
     "sessionID": 1,
-    "dangerLevel": 9,
-    "window1_count": 38,
-    "window2_count": 58,
-    "window3_count": 13,
+    "dangerLevel": 7,
+    "totalCount": 4909866,
     "publishedAt": "2022-01-01T08:05:03"
   },
   {
@@ -450,9 +376,7 @@
     "readingID": 0,
     "sessionID": 1,
     "dangerLevel": 3,
-    "window1_count": 111,
-    "window2_count": 204,
-    "window3_count": 111,
+    "totalCount": 9470414,
     "publishedAt": "2022-01-01T08:05:03"
   },
   {
@@ -461,10 +385,8 @@
     "sensorNumber": "1",
     "readingID": 0,
     "sessionID": 1,
-    "dangerLevel": 5,
-    "window1_count": 191,
-    "window2_count": 243,
-    "window3_count": 51,
+    "dangerLevel": 8,
+    "totalCount": 7404822,
     "publishedAt": "2022-01-01T08:05:04"
   },
   {
@@ -473,10 +395,8 @@
     "sensorNumber": "2",
     "readingID": 0,
     "sessionID": 1,
-    "dangerLevel": 0,
-    "window1_count": 69,
-    "window2_count": 25,
-    "window3_count": 12,
+    "dangerLevel": 9,
+    "totalCount": 5718135,
     "publishedAt": "2022-01-01T08:05:04"
   },
   {
@@ -485,10 +405,8 @@
     "sensorNumber": "1",
     "readingID": 1,
     "sessionID": 1,
-    "dangerLevel": 5,
-    "window1_count": 193,
-    "window2_count": 199,
-    "window3_count": 23,
+    "dangerLevel": 8,
+    "totalCount": 7239359,
     "publishedAt": "2022-01-01T08:05:11"
   },
   {
@@ -497,10 +415,8 @@
     "sensorNumber": "2",
     "readingID": 1,
     "sessionID": 1,
-    "dangerLevel": 5,
-    "window1_count": 222,
-    "window2_count": 98,
-    "window3_count": 38,
+    "dangerLevel": 1,
+    "totalCount": 1460872,
     "publishedAt": "2022-01-01T08:05:11"
   },
   {
@@ -509,10 +425,8 @@
     "sensorNumber": "1",
     "readingID": 1,
     "sessionID": 1,
-    "dangerLevel": 3,
-    "window1_count": 22,
-    "window2_count": 37,
-    "window3_count": 247,
+    "dangerLevel": 8,
+    "totalCount": 6381976,
     "publishedAt": "2022-01-01T08:05:12"
   },
   {
@@ -521,10 +435,8 @@
     "sensorNumber": "2",
     "readingID": 1,
     "sessionID": 1,
-    "dangerLevel": 5,
-    "window1_count": 238,
-    "window2_count": 108,
-    "window3_count": 189,
+    "dangerLevel": 2,
+    "totalCount": 761814,
     "publishedAt": "2022-01-01T08:05:12"
   },
   {
@@ -533,10 +445,8 @@
     "sensorNumber": "1",
     "readingID": 1,
     "sessionID": 1,
-    "dangerLevel": 10,
-    "window1_count": 219,
-    "window2_count": 3,
-    "window3_count": 149,
+    "dangerLevel": 4,
+    "totalCount": 6561449,
     "publishedAt": "2022-01-01T08:05:13"
   },
   {
@@ -546,9 +456,7 @@
     "readingID": 1,
     "sessionID": 1,
     "dangerLevel": 6,
-    "window1_count": 168,
-    "window2_count": 237,
-    "window3_count": 18,
+    "totalCount": 5088793,
     "publishedAt": "2022-01-01T08:05:13"
   },
   {
@@ -557,10 +465,8 @@
     "sensorNumber": "1",
     "readingID": 1,
     "sessionID": 1,
-    "dangerLevel": 0,
-    "window1_count": 33,
-    "window2_count": 197,
-    "window3_count": 42,
+    "dangerLevel": 6,
+    "totalCount": 1266923,
     "publishedAt": "2022-01-01T08:05:14"
   },
   {
@@ -569,10 +475,8 @@
     "sensorNumber": "2",
     "readingID": 1,
     "sessionID": 1,
-    "dangerLevel": 9,
-    "window1_count": 174,
-    "window2_count": 194,
-    "window3_count": 245,
+    "dangerLevel": 2,
+    "totalCount": 2645505,
     "publishedAt": "2022-01-01T08:05:14"
   },
   {
@@ -581,10 +485,8 @@
     "sensorNumber": "1",
     "readingID": 2,
     "sessionID": 1,
-    "dangerLevel": 2,
-    "window1_count": 173,
-    "window2_count": 59,
-    "window3_count": 112,
+    "dangerLevel": 1,
+    "totalCount": 749750,
     "publishedAt": "2022-01-01T08:05:21"
   },
   {
@@ -593,154 +495,128 @@
     "sensorNumber": "2",
     "readingID": 2,
     "sessionID": 1,
-    "dangerLevel": 0,
-    "window1_count": 191,
-    "window2_count": 1,
-    "window3_count": 77,
+    "dangerLevel": 3,
+    "totalCount": 411895,
     "publishedAt": "2022-01-01T08:05:21"
   },
   {
     "nodeID": 2,
     "canID": "2",
     "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 1,
+    "dangerLevel": 5,
+    "totalCount": 7098544,
+    "publishedAt": "2022-01-01T08:05:22"
+  },
+  {
+    "nodeID": 2,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 1,
+    "dangerLevel": 5,
+    "totalCount": 4467245,
+    "publishedAt": "2022-01-01T08:05:22"
+  },
+  {
+    "nodeID": 2,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 1,
+    "dangerLevel": 1,
+    "totalCount": 3406840,
+    "publishedAt": "2022-01-01T08:05:23"
+  },
+  {
+    "nodeID": 2,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 1,
+    "dangerLevel": 3,
+    "totalCount": 8102562,
+    "publishedAt": "2022-01-01T08:05:23"
+  },
+  {
+    "nodeID": 2,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 1,
+    "dangerLevel": 2,
+    "totalCount": 7410926,
+    "publishedAt": "2022-01-01T08:05:24"
+  },
+  {
+    "nodeID": 2,
+    "canID": "4",
+    "sensorNumber": "2",
     "readingID": 2,
     "sessionID": 1,
     "dangerLevel": 7,
-    "window1_count": 123,
-    "window2_count": 166,
-    "window3_count": 187,
-    "publishedAt": "2022-01-01T08:05:22"
+    "totalCount": 9035927,
+    "publishedAt": "2022-01-01T08:05:24"
+  },
+  {
+    "nodeID": 2,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 1,
+    "dangerLevel": 5,
+    "totalCount": 206345,
+    "publishedAt": "2022-01-01T08:05:31"
+  },
+  {
+    "nodeID": 2,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 1,
+    "dangerLevel": 1,
+    "totalCount": 2294340,
+    "publishedAt": "2022-01-01T08:05:31"
+  },
+  {
+    "nodeID": 2,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 1,
+    "dangerLevel": 4,
+    "totalCount": 9828185,
+    "publishedAt": "2022-01-01T08:05:32"
   },
   {
     "nodeID": 2,
     "canID": "2",
     "sensorNumber": "2",
-    "readingID": 2,
+    "readingID": 3,
     "sessionID": 1,
-    "dangerLevel": 2,
-    "window1_count": 97,
-    "window2_count": 107,
-    "window3_count": 223,
-    "publishedAt": "2022-01-01T08:05:22"
+    "dangerLevel": 7,
+    "totalCount": 1989854,
+    "publishedAt": "2022-01-01T08:05:32"
   },
   {
     "nodeID": 2,
     "canID": "3",
     "sensorNumber": "1",
-    "readingID": 2,
+    "readingID": 3,
     "sessionID": 1,
     "dangerLevel": 0,
-    "window1_count": 57,
-    "window2_count": 15,
-    "window3_count": 119,
-    "publishedAt": "2022-01-01T08:05:23"
+    "totalCount": 3234868,
+    "publishedAt": "2022-01-01T08:05:33"
   },
   {
     "nodeID": 2,
     "canID": "3",
     "sensorNumber": "2",
-    "readingID": 2,
-    "sessionID": 1,
-    "dangerLevel": 10,
-    "window1_count": 63,
-    "window2_count": 57,
-    "window3_count": 128,
-    "publishedAt": "2022-01-01T08:05:23"
-  },
-  {
-    "nodeID": 2,
-    "canID": "4",
-    "sensorNumber": "1",
-    "readingID": 2,
-    "sessionID": 1,
-    "dangerLevel": 6,
-    "window1_count": 203,
-    "window2_count": 208,
-    "window3_count": 248,
-    "publishedAt": "2022-01-01T08:05:24"
-  },
-  {
-    "nodeID": 2,
-    "canID": "4",
-    "sensorNumber": "2",
-    "readingID": 2,
-    "sessionID": 1,
-    "dangerLevel": 5,
-    "window1_count": 160,
-    "window2_count": 160,
-    "window3_count": 132,
-    "publishedAt": "2022-01-01T08:05:24"
-  },
-  {
-    "nodeID": 2,
-    "canID": "1",
-    "sensorNumber": "1",
-    "readingID": 3,
-    "sessionID": 1,
-    "dangerLevel": 5,
-    "window1_count": 13,
-    "window2_count": 57,
-    "window3_count": 53,
-    "publishedAt": "2022-01-01T08:05:31"
-  },
-  {
-    "nodeID": 2,
-    "canID": "1",
-    "sensorNumber": "2",
-    "readingID": 3,
-    "sessionID": 1,
-    "dangerLevel": 2,
-    "window1_count": 246,
-    "window2_count": 160,
-    "window3_count": 24,
-    "publishedAt": "2022-01-01T08:05:31"
-  },
-  {
-    "nodeID": 2,
-    "canID": "2",
-    "sensorNumber": "1",
-    "readingID": 3,
-    "sessionID": 1,
-    "dangerLevel": 6,
-    "window1_count": 86,
-    "window2_count": 241,
-    "window3_count": 159,
-    "publishedAt": "2022-01-01T08:05:32"
-  },
-  {
-    "nodeID": 2,
-    "canID": "2",
-    "sensorNumber": "2",
-    "readingID": 3,
-    "sessionID": 1,
-    "dangerLevel": 6,
-    "window1_count": 106,
-    "window2_count": 217,
-    "window3_count": 138,
-    "publishedAt": "2022-01-01T08:05:32"
-  },
-  {
-    "nodeID": 2,
-    "canID": "3",
-    "sensorNumber": "1",
     "readingID": 3,
     "sessionID": 1,
     "dangerLevel": 3,
-    "window1_count": 234,
-    "window2_count": 69,
-    "window3_count": 216,
-    "publishedAt": "2022-01-01T08:05:33"
-  },
-  {
-    "nodeID": 2,
-    "canID": "3",
-    "sensorNumber": "2",
-    "readingID": 3,
-    "sessionID": 1,
-    "dangerLevel": 10,
-    "window1_count": 191,
-    "window2_count": 61,
-    "window3_count": 10,
+    "totalCount": 6070268,
     "publishedAt": "2022-01-01T08:05:33"
   },
   {
@@ -749,10 +625,8 @@
     "sensorNumber": "1",
     "readingID": 3,
     "sessionID": 1,
-    "dangerLevel": 10,
-    "window1_count": 13,
-    "window2_count": 146,
-    "window3_count": 199,
+    "dangerLevel": 6,
+    "totalCount": 1138851,
     "publishedAt": "2022-01-01T08:05:34"
   },
   {
@@ -761,10 +635,8 @@
     "sensorNumber": "2",
     "readingID": 3,
     "sessionID": 1,
-    "dangerLevel": 7,
-    "window1_count": 129,
-    "window2_count": 14,
-    "window3_count": 64,
+    "dangerLevel": 4,
+    "totalCount": 89396,
     "publishedAt": "2022-01-01T08:05:34"
   },
   {
@@ -773,10 +645,8 @@
     "sensorNumber": "1",
     "readingID": 0,
     "sessionID": 0,
-    "dangerLevel": 7,
-    "window1_count": 158,
-    "window2_count": 150,
-    "window3_count": 244,
+    "dangerLevel": 8,
+    "totalCount": 644386,
     "publishedAt": "2022-01-01T08:00:01"
   },
   {
@@ -785,10 +655,8 @@
     "sensorNumber": "2",
     "readingID": 0,
     "sessionID": 0,
-    "dangerLevel": 7,
-    "window1_count": 79,
-    "window2_count": 233,
-    "window3_count": 108,
+    "dangerLevel": 5,
+    "totalCount": 7653915,
     "publishedAt": "2022-01-01T08:00:01"
   },
   {
@@ -797,10 +665,8 @@
     "sensorNumber": "1",
     "readingID": 0,
     "sessionID": 0,
-    "dangerLevel": 5,
-    "window1_count": 187,
-    "window2_count": 156,
-    "window3_count": 174,
+    "dangerLevel": 6,
+    "totalCount": 7416537,
     "publishedAt": "2022-01-01T08:00:02"
   },
   {
@@ -809,10 +675,8 @@
     "sensorNumber": "2",
     "readingID": 0,
     "sessionID": 0,
-    "dangerLevel": 4,
-    "window1_count": 207,
-    "window2_count": 119,
-    "window3_count": 205,
+    "dangerLevel": 2,
+    "totalCount": 4214367,
     "publishedAt": "2022-01-01T08:00:02"
   },
   {
@@ -822,9 +686,7 @@
     "readingID": 0,
     "sessionID": 0,
     "dangerLevel": 5,
-    "window1_count": 156,
-    "window2_count": 206,
-    "window3_count": 133,
+    "totalCount": 9493929,
     "publishedAt": "2022-01-01T08:00:03"
   },
   {
@@ -833,10 +695,8 @@
     "sensorNumber": "2",
     "readingID": 0,
     "sessionID": 0,
-    "dangerLevel": 8,
-    "window1_count": 148,
-    "window2_count": 227,
-    "window3_count": 74,
+    "dangerLevel": 2,
+    "totalCount": 4692684,
     "publishedAt": "2022-01-01T08:00:03"
   },
   {
@@ -845,10 +705,8 @@
     "sensorNumber": "1",
     "readingID": 0,
     "sessionID": 0,
-    "dangerLevel": 8,
-    "window1_count": 253,
-    "window2_count": 41,
-    "window3_count": 64,
+    "dangerLevel": 7,
+    "totalCount": 3519078,
     "publishedAt": "2022-01-01T08:00:04"
   },
   {
@@ -857,10 +715,8 @@
     "sensorNumber": "2",
     "readingID": 0,
     "sessionID": 0,
-    "dangerLevel": 4,
-    "window1_count": 133,
-    "window2_count": 219,
-    "window3_count": 19,
+    "dangerLevel": 6,
+    "totalCount": 603914,
     "publishedAt": "2022-01-01T08:00:04"
   },
   {
@@ -869,10 +725,8 @@
     "sensorNumber": "1",
     "readingID": 1,
     "sessionID": 0,
-    "dangerLevel": 0,
-    "window1_count": 92,
-    "window2_count": 241,
-    "window3_count": 66,
+    "dangerLevel": 6,
+    "totalCount": 7416731,
     "publishedAt": "2022-01-01T08:00:11"
   },
   {
@@ -881,10 +735,8 @@
     "sensorNumber": "2",
     "readingID": 1,
     "sessionID": 0,
-    "dangerLevel": 1,
-    "window1_count": 101,
-    "window2_count": 7,
-    "window3_count": 12,
+    "dangerLevel": 9,
+    "totalCount": 2933220,
     "publishedAt": "2022-01-01T08:00:11"
   },
   {
@@ -893,10 +745,8 @@
     "sensorNumber": "1",
     "readingID": 1,
     "sessionID": 0,
-    "dangerLevel": 3,
-    "window1_count": 85,
-    "window2_count": 19,
-    "window3_count": 200,
+    "dangerLevel": 9,
+    "totalCount": 7479238,
     "publishedAt": "2022-01-01T08:00:12"
   },
   {
@@ -905,10 +755,8 @@
     "sensorNumber": "2",
     "readingID": 1,
     "sessionID": 0,
-    "dangerLevel": 5,
-    "window1_count": 250,
-    "window2_count": 217,
-    "window3_count": 67,
+    "dangerLevel": 8,
+    "totalCount": 6659250,
     "publishedAt": "2022-01-01T08:00:12"
   },
   {
@@ -917,10 +765,8 @@
     "sensorNumber": "1",
     "readingID": 1,
     "sessionID": 0,
-    "dangerLevel": 4,
-    "window1_count": 2,
-    "window2_count": 159,
-    "window3_count": 171,
+    "dangerLevel": 6,
+    "totalCount": 2278524,
     "publishedAt": "2022-01-01T08:00:13"
   },
   {
@@ -929,10 +775,8 @@
     "sensorNumber": "2",
     "readingID": 1,
     "sessionID": 0,
-    "dangerLevel": 3,
-    "window1_count": 153,
-    "window2_count": 129,
-    "window3_count": 71,
+    "dangerLevel": 6,
+    "totalCount": 9054378,
     "publishedAt": "2022-01-01T08:00:13"
   },
   {
@@ -941,10 +785,8 @@
     "sensorNumber": "1",
     "readingID": 1,
     "sessionID": 0,
-    "dangerLevel": 10,
-    "window1_count": 131,
-    "window2_count": 90,
-    "window3_count": 129,
+    "dangerLevel": 4,
+    "totalCount": 5403694,
     "publishedAt": "2022-01-01T08:00:14"
   },
   {
@@ -953,10 +795,8 @@
     "sensorNumber": "2",
     "readingID": 1,
     "sessionID": 0,
-    "dangerLevel": 2,
-    "window1_count": 149,
-    "window2_count": 53,
-    "window3_count": 131,
+    "dangerLevel": 8,
+    "totalCount": 1193551,
     "publishedAt": "2022-01-01T08:00:14"
   },
   {
@@ -965,10 +805,8 @@
     "sensorNumber": "1",
     "readingID": 2,
     "sessionID": 0,
-    "dangerLevel": 8,
-    "window1_count": 117,
-    "window2_count": 186,
-    "window3_count": 119,
+    "dangerLevel": 1,
+    "totalCount": 8159541,
     "publishedAt": "2022-01-01T08:00:21"
   },
   {
@@ -978,9 +816,7 @@
     "readingID": 2,
     "sessionID": 0,
     "dangerLevel": 2,
-    "window1_count": 62,
-    "window2_count": 208,
-    "window3_count": 185,
+    "totalCount": 3455167,
     "publishedAt": "2022-01-01T08:00:21"
   },
   {
@@ -990,9 +826,7 @@
     "readingID": 2,
     "sessionID": 0,
     "dangerLevel": 0,
-    "window1_count": 59,
-    "window2_count": 123,
-    "window3_count": 118,
+    "totalCount": 7862538,
     "publishedAt": "2022-01-01T08:00:22"
   },
   {
@@ -1001,10 +835,8 @@
     "sensorNumber": "2",
     "readingID": 2,
     "sessionID": 0,
-    "dangerLevel": 4,
-    "window1_count": 35,
-    "window2_count": 99,
-    "window3_count": 98,
+    "dangerLevel": 7,
+    "totalCount": 9801022,
     "publishedAt": "2022-01-01T08:00:22"
   },
   {
@@ -1013,10 +845,8 @@
     "sensorNumber": "1",
     "readingID": 2,
     "sessionID": 0,
-    "dangerLevel": 5,
-    "window1_count": 66,
-    "window2_count": 48,
-    "window3_count": 5,
+    "dangerLevel": 0,
+    "totalCount": 8471842,
     "publishedAt": "2022-01-01T08:00:23"
   },
   {
@@ -1025,10 +855,8 @@
     "sensorNumber": "2",
     "readingID": 2,
     "sessionID": 0,
-    "dangerLevel": 8,
-    "window1_count": 70,
-    "window2_count": 36,
-    "window3_count": 149,
+    "dangerLevel": 4,
+    "totalCount": 4284953,
     "publishedAt": "2022-01-01T08:00:23"
   },
   {
@@ -1037,10 +865,8 @@
     "sensorNumber": "1",
     "readingID": 2,
     "sessionID": 0,
-    "dangerLevel": 1,
-    "window1_count": 227,
-    "window2_count": 195,
-    "window3_count": 3,
+    "dangerLevel": 2,
+    "totalCount": 2578262,
     "publishedAt": "2022-01-01T08:00:24"
   },
   {
@@ -1049,10 +875,8 @@
     "sensorNumber": "2",
     "readingID": 2,
     "sessionID": 0,
-    "dangerLevel": 9,
-    "window1_count": 198,
-    "window2_count": 32,
-    "window3_count": 151,
+    "dangerLevel": 1,
+    "totalCount": 5953326,
     "publishedAt": "2022-01-01T08:00:24"
   },
   {
@@ -1061,286 +885,238 @@
     "sensorNumber": "1",
     "readingID": 3,
     "sessionID": 0,
-    "dangerLevel": 6,
-    "window1_count": 49,
-    "window2_count": 6,
-    "window3_count": 216,
+    "dangerLevel": 4,
+    "totalCount": 2933092,
     "publishedAt": "2022-01-01T08:00:31"
   },
   {
     "nodeID": 3,
     "canID": "1",
-    "sensorNumber": "2",
-    "readingID": 3,
-    "sessionID": 0,
-    "dangerLevel": 0,
-    "window1_count": 194,
-    "window2_count": 92,
-    "window3_count": 158,
-    "publishedAt": "2022-01-01T08:00:31"
-  },
-  {
-    "nodeID": 3,
-    "canID": "2",
-    "sensorNumber": "1",
-    "readingID": 3,
-    "sessionID": 0,
-    "dangerLevel": 7,
-    "window1_count": 83,
-    "window2_count": 145,
-    "window3_count": 162,
-    "publishedAt": "2022-01-01T08:00:32"
-  },
-  {
-    "nodeID": 3,
-    "canID": "2",
     "sensorNumber": "2",
     "readingID": 3,
     "sessionID": 0,
     "dangerLevel": 2,
-    "window1_count": 215,
-    "window2_count": 97,
-    "window3_count": 18,
+    "totalCount": 6194666,
+    "publishedAt": "2022-01-01T08:00:31"
+  },
+  {
+    "nodeID": 3,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 0,
+    "dangerLevel": 5,
+    "totalCount": 6088555,
     "publishedAt": "2022-01-01T08:00:32"
   },
   {
     "nodeID": 3,
-    "canID": "3",
-    "sensorNumber": "1",
-    "readingID": 3,
-    "sessionID": 0,
-    "dangerLevel": 8,
-    "window1_count": 208,
-    "window2_count": 0,
-    "window3_count": 10,
-    "publishedAt": "2022-01-01T08:00:33"
-  },
-  {
-    "nodeID": 3,
-    "canID": "3",
+    "canID": "2",
     "sensorNumber": "2",
     "readingID": 3,
     "sessionID": 0,
-    "dangerLevel": 4,
-    "window1_count": 97,
-    "window2_count": 164,
-    "window3_count": 29,
-    "publishedAt": "2022-01-01T08:00:33"
-  },
-  {
-    "nodeID": 3,
-    "canID": "4",
-    "sensorNumber": "1",
-    "readingID": 3,
-    "sessionID": 0,
-    "dangerLevel": 4,
-    "window1_count": 251,
-    "window2_count": 155,
-    "window3_count": 13,
-    "publishedAt": "2022-01-01T08:00:34"
-  },
-  {
-    "nodeID": 3,
-    "canID": "4",
-    "sensorNumber": "2",
-    "readingID": 3,
-    "sessionID": 0,
-    "dangerLevel": 8,
-    "window1_count": 132,
-    "window2_count": 39,
-    "window3_count": 101,
-    "publishedAt": "2022-01-01T08:00:34"
-  },
-  {
-    "nodeID": 3,
-    "canID": "1",
-    "sensorNumber": "1",
-    "readingID": 0,
-    "sessionID": 1,
     "dangerLevel": 1,
-    "window1_count": 23,
-    "window2_count": 233,
-    "window3_count": 173,
-    "publishedAt": "2022-01-01T08:05:01"
+    "totalCount": 4444967,
+    "publishedAt": "2022-01-01T08:00:32"
   },
   {
     "nodeID": 3,
-    "canID": "1",
-    "sensorNumber": "2",
-    "readingID": 0,
-    "sessionID": 1,
-    "dangerLevel": 5,
-    "window1_count": 80,
-    "window2_count": 139,
-    "window3_count": 6,
-    "publishedAt": "2022-01-01T08:05:01"
-  },
-  {
-    "nodeID": 3,
-    "canID": "2",
+    "canID": "3",
     "sensorNumber": "1",
-    "readingID": 0,
-    "sessionID": 1,
+    "readingID": 3,
+    "sessionID": 0,
     "dangerLevel": 2,
-    "window1_count": 37,
-    "window2_count": 113,
-    "window3_count": 11,
-    "publishedAt": "2022-01-01T08:05:02"
+    "totalCount": 8767362,
+    "publishedAt": "2022-01-01T08:00:33"
   },
   {
     "nodeID": 3,
-    "canID": "2",
+    "canID": "3",
     "sensorNumber": "2",
-    "readingID": 0,
-    "sessionID": 1,
+    "readingID": 3,
+    "sessionID": 0,
     "dangerLevel": 2,
-    "window1_count": 37,
-    "window2_count": 51,
-    "window3_count": 226,
-    "publishedAt": "2022-01-01T08:05:02"
-  },
-  {
-    "nodeID": 3,
-    "canID": "3",
-    "sensorNumber": "1",
-    "readingID": 0,
-    "sessionID": 1,
-    "dangerLevel": 5,
-    "window1_count": 90,
-    "window2_count": 33,
-    "window3_count": 227,
-    "publishedAt": "2022-01-01T08:05:03"
-  },
-  {
-    "nodeID": 3,
-    "canID": "3",
-    "sensorNumber": "2",
-    "readingID": 0,
-    "sessionID": 1,
-    "dangerLevel": 0,
-    "window1_count": 14,
-    "window2_count": 132,
-    "window3_count": 251,
-    "publishedAt": "2022-01-01T08:05:03"
+    "totalCount": 1054703,
+    "publishedAt": "2022-01-01T08:00:33"
   },
   {
     "nodeID": 3,
     "canID": "4",
     "sensorNumber": "1",
-    "readingID": 0,
-    "sessionID": 1,
-    "dangerLevel": 8,
-    "window1_count": 174,
-    "window2_count": 82,
-    "window3_count": 215,
-    "publishedAt": "2022-01-01T08:05:04"
+    "readingID": 3,
+    "sessionID": 0,
+    "dangerLevel": 1,
+    "totalCount": 5037532,
+    "publishedAt": "2022-01-01T08:00:34"
   },
   {
     "nodeID": 3,
     "canID": "4",
     "sensorNumber": "2",
-    "readingID": 0,
-    "sessionID": 1,
-    "dangerLevel": 5,
-    "window1_count": 75,
-    "window2_count": 216,
-    "window3_count": 159,
-    "publishedAt": "2022-01-01T08:05:04"
-  },
-  {
-    "nodeID": 3,
-    "canID": "1",
-    "sensorNumber": "1",
-    "readingID": 1,
-    "sessionID": 1,
-    "dangerLevel": 4,
-    "window1_count": 224,
-    "window2_count": 234,
-    "window3_count": 114,
-    "publishedAt": "2022-01-01T08:05:11"
-  },
-  {
-    "nodeID": 3,
-    "canID": "1",
-    "sensorNumber": "2",
-    "readingID": 1,
-    "sessionID": 1,
-    "dangerLevel": 6,
-    "window1_count": 196,
-    "window2_count": 16,
-    "window3_count": 127,
-    "publishedAt": "2022-01-01T08:05:11"
-  },
-  {
-    "nodeID": 3,
-    "canID": "2",
-    "sensorNumber": "1",
-    "readingID": 1,
-    "sessionID": 1,
-    "dangerLevel": 9,
-    "window1_count": 211,
-    "window2_count": 106,
-    "window3_count": 52,
-    "publishedAt": "2022-01-01T08:05:12"
-  },
-  {
-    "nodeID": 3,
-    "canID": "2",
-    "sensorNumber": "2",
-    "readingID": 1,
-    "sessionID": 1,
-    "dangerLevel": 6,
-    "window1_count": 35,
-    "window2_count": 16,
-    "window3_count": 57,
-    "publishedAt": "2022-01-01T08:05:12"
-  },
-  {
-    "nodeID": 3,
-    "canID": "3",
-    "sensorNumber": "1",
-    "readingID": 1,
-    "sessionID": 1,
-    "dangerLevel": 8,
-    "window1_count": 182,
-    "window2_count": 59,
-    "window3_count": 199,
-    "publishedAt": "2022-01-01T08:05:13"
-  },
-  {
-    "nodeID": 3,
-    "canID": "3",
-    "sensorNumber": "2",
-    "readingID": 1,
-    "sessionID": 1,
-    "dangerLevel": 7,
-    "window1_count": 55,
-    "window2_count": 38,
-    "window3_count": 213,
-    "publishedAt": "2022-01-01T08:05:13"
-  },
-  {
-    "nodeID": 3,
-    "canID": "4",
-    "sensorNumber": "1",
-    "readingID": 1,
-    "sessionID": 1,
-    "dangerLevel": 0,
-    "window1_count": 87,
-    "window2_count": 252,
-    "window3_count": 249,
-    "publishedAt": "2022-01-01T08:05:14"
-  },
-  {
-    "nodeID": 3,
-    "canID": "4",
-    "sensorNumber": "2",
-    "readingID": 1,
-    "sessionID": 1,
+    "readingID": 3,
+    "sessionID": 0,
     "dangerLevel": 3,
-    "window1_count": 181,
-    "window2_count": 2,
-    "window3_count": 165,
+    "totalCount": 3444655,
+    "publishedAt": "2022-01-01T08:00:34"
+  },
+  {
+    "nodeID": 3,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 1,
+    "dangerLevel": 8,
+    "totalCount": 3889143,
+    "publishedAt": "2022-01-01T08:05:01"
+  },
+  {
+    "nodeID": 3,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 1,
+    "dangerLevel": 8,
+    "totalCount": 4268678,
+    "publishedAt": "2022-01-01T08:05:01"
+  },
+  {
+    "nodeID": 3,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 1,
+    "dangerLevel": 9,
+    "totalCount": 5217657,
+    "publishedAt": "2022-01-01T08:05:02"
+  },
+  {
+    "nodeID": 3,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 1,
+    "dangerLevel": 0,
+    "totalCount": 9377525,
+    "publishedAt": "2022-01-01T08:05:02"
+  },
+  {
+    "nodeID": 3,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 1,
+    "dangerLevel": 6,
+    "totalCount": 5455911,
+    "publishedAt": "2022-01-01T08:05:03"
+  },
+  {
+    "nodeID": 3,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 1,
+    "dangerLevel": 5,
+    "totalCount": 6965465,
+    "publishedAt": "2022-01-01T08:05:03"
+  },
+  {
+    "nodeID": 3,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 1,
+    "dangerLevel": 0,
+    "totalCount": 4737777,
+    "publishedAt": "2022-01-01T08:05:04"
+  },
+  {
+    "nodeID": 3,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 1,
+    "dangerLevel": 4,
+    "totalCount": 5808354,
+    "publishedAt": "2022-01-01T08:05:04"
+  },
+  {
+    "nodeID": 3,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 1,
+    "dangerLevel": 5,
+    "totalCount": 4961845,
+    "publishedAt": "2022-01-01T08:05:11"
+  },
+  {
+    "nodeID": 3,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 1,
+    "dangerLevel": 8,
+    "totalCount": 407146,
+    "publishedAt": "2022-01-01T08:05:11"
+  },
+  {
+    "nodeID": 3,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 1,
+    "dangerLevel": 0,
+    "totalCount": 583063,
+    "publishedAt": "2022-01-01T08:05:12"
+  },
+  {
+    "nodeID": 3,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 1,
+    "dangerLevel": 4,
+    "totalCount": 1259628,
+    "publishedAt": "2022-01-01T08:05:12"
+  },
+  {
+    "nodeID": 3,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 1,
+    "dangerLevel": 5,
+    "totalCount": 8118891,
+    "publishedAt": "2022-01-01T08:05:13"
+  },
+  {
+    "nodeID": 3,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 1,
+    "dangerLevel": 0,
+    "totalCount": 329675,
+    "publishedAt": "2022-01-01T08:05:13"
+  },
+  {
+    "nodeID": 3,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 1,
+    "dangerLevel": 4,
+    "totalCount": 8918386,
+    "publishedAt": "2022-01-01T08:05:14"
+  },
+  {
+    "nodeID": 3,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 1,
+    "dangerLevel": 8,
+    "totalCount": 4099790,
     "publishedAt": "2022-01-01T08:05:14"
   },
   {
@@ -1350,9 +1126,7 @@
     "readingID": 2,
     "sessionID": 1,
     "dangerLevel": 7,
-    "window1_count": 119,
-    "window2_count": 136,
-    "window3_count": 194,
+    "totalCount": 9322707,
     "publishedAt": "2022-01-01T08:05:21"
   },
   {
@@ -1361,10 +1135,8 @@
     "sensorNumber": "2",
     "readingID": 2,
     "sessionID": 1,
-    "dangerLevel": 10,
-    "window1_count": 62,
-    "window2_count": 131,
-    "window3_count": 147,
+    "dangerLevel": 1,
+    "totalCount": 3557884,
     "publishedAt": "2022-01-01T08:05:21"
   },
   {
@@ -1373,34 +1145,28 @@
     "sensorNumber": "1",
     "readingID": 2,
     "sessionID": 1,
-    "dangerLevel": 10,
-    "window1_count": 117,
-    "window2_count": 115,
-    "window3_count": 56,
+    "dangerLevel": 0,
+    "totalCount": 2347898,
     "publishedAt": "2022-01-01T08:05:22"
   },
   {
     "nodeID": 3,
     "canID": "2",
     "sensorNumber": "2",
-    "readingID": 2,
-    "sessionID": 1,
-    "dangerLevel": 8,
-    "window1_count": 9,
-    "window2_count": 201,
-    "window3_count": 141,
-    "publishedAt": "2022-01-01T08:05:22"
-  },
-  {
-    "nodeID": 3,
-    "canID": "3",
-    "sensorNumber": "1",
     "readingID": 2,
     "sessionID": 1,
     "dangerLevel": 9,
-    "window1_count": 225,
-    "window2_count": 183,
-    "window3_count": 76,
+    "totalCount": 6801510,
+    "publishedAt": "2022-01-01T08:05:22"
+  },
+  {
+    "nodeID": 3,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 1,
+    "dangerLevel": 6,
+    "totalCount": 5882118,
     "publishedAt": "2022-01-01T08:05:23"
   },
   {
@@ -1409,10 +1175,8 @@
     "sensorNumber": "2",
     "readingID": 2,
     "sessionID": 1,
-    "dangerLevel": 10,
-    "window1_count": 206,
-    "window2_count": 32,
-    "window3_count": 139,
+    "dangerLevel": 6,
+    "totalCount": 3306344,
     "publishedAt": "2022-01-01T08:05:23"
   },
   {
@@ -1421,10 +1185,8 @@
     "sensorNumber": "1",
     "readingID": 2,
     "sessionID": 1,
-    "dangerLevel": 0,
-    "window1_count": 174,
-    "window2_count": 131,
-    "window3_count": 171,
+    "dangerLevel": 6,
+    "totalCount": 5556314,
     "publishedAt": "2022-01-01T08:05:24"
   },
   {
@@ -1433,10 +1195,8 @@
     "sensorNumber": "2",
     "readingID": 2,
     "sessionID": 1,
-    "dangerLevel": 10,
-    "window1_count": 151,
-    "window2_count": 79,
-    "window3_count": 103,
+    "dangerLevel": 4,
+    "totalCount": 4995759,
     "publishedAt": "2022-01-01T08:05:24"
   },
   {
@@ -1445,10 +1205,8 @@
     "sensorNumber": "1",
     "readingID": 3,
     "sessionID": 1,
-    "dangerLevel": 4,
-    "window1_count": 215,
-    "window2_count": 10,
-    "window3_count": 250,
+    "dangerLevel": 8,
+    "totalCount": 4129190,
     "publishedAt": "2022-01-01T08:05:31"
   },
   {
@@ -1457,10 +1215,8 @@
     "sensorNumber": "2",
     "readingID": 3,
     "sessionID": 1,
-    "dangerLevel": 4,
-    "window1_count": 220,
-    "window2_count": 191,
-    "window3_count": 237,
+    "dangerLevel": 7,
+    "totalCount": 252796,
     "publishedAt": "2022-01-01T08:05:31"
   },
   {
@@ -1469,10 +1225,8 @@
     "sensorNumber": "1",
     "readingID": 3,
     "sessionID": 1,
-    "dangerLevel": 0,
-    "window1_count": 235,
-    "window2_count": 146,
-    "window3_count": 111,
+    "dangerLevel": 6,
+    "totalCount": 3780589,
     "publishedAt": "2022-01-01T08:05:32"
   },
   {
@@ -1481,10 +1235,8 @@
     "sensorNumber": "2",
     "readingID": 3,
     "sessionID": 1,
-    "dangerLevel": 5,
-    "window1_count": 93,
-    "window2_count": 76,
-    "window3_count": 58,
+    "dangerLevel": 6,
+    "totalCount": 2487018,
     "publishedAt": "2022-01-01T08:05:32"
   },
   {
@@ -1493,34 +1245,28 @@
     "sensorNumber": "1",
     "readingID": 3,
     "sessionID": 1,
-    "dangerLevel": 10,
-    "window1_count": 36,
-    "window2_count": 69,
-    "window3_count": 173,
+    "dangerLevel": 6,
+    "totalCount": 4234237,
     "publishedAt": "2022-01-01T08:05:33"
   },
   {
     "nodeID": 3,
     "canID": "3",
     "sensorNumber": "2",
-    "readingID": 3,
-    "sessionID": 1,
-    "dangerLevel": 0,
-    "window1_count": 242,
-    "window2_count": 218,
-    "window3_count": 174,
-    "publishedAt": "2022-01-01T08:05:33"
-  },
-  {
-    "nodeID": 3,
-    "canID": "4",
-    "sensorNumber": "1",
     "readingID": 3,
     "sessionID": 1,
     "dangerLevel": 1,
-    "window1_count": 126,
-    "window2_count": 194,
-    "window3_count": 2,
+    "totalCount": 3161027,
+    "publishedAt": "2022-01-01T08:05:33"
+  },
+  {
+    "nodeID": 3,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 1,
+    "dangerLevel": 8,
+    "totalCount": 6616780,
     "publishedAt": "2022-01-01T08:05:34"
   },
   {
@@ -1529,10 +1275,8 @@
     "sensorNumber": "2",
     "readingID": 3,
     "sessionID": 1,
-    "dangerLevel": 1,
-    "window1_count": 29,
-    "window2_count": 195,
-    "window3_count": 213,
+    "dangerLevel": 7,
+    "totalCount": 6237848,
     "publishedAt": "2022-01-01T08:05:34"
   },
   {
@@ -1541,10 +1285,8 @@
     "sensorNumber": "1",
     "readingID": 0,
     "sessionID": 0,
-    "dangerLevel": 8,
-    "window1_count": 105,
-    "window2_count": 183,
-    "window3_count": 170,
+    "dangerLevel": 9,
+    "totalCount": 543259,
     "publishedAt": "2022-01-01T08:00:01"
   },
   {
@@ -1553,10 +1295,8 @@
     "sensorNumber": "2",
     "readingID": 0,
     "sessionID": 0,
-    "dangerLevel": 0,
-    "window1_count": 207,
-    "window2_count": 68,
-    "window3_count": 25,
+    "dangerLevel": 7,
+    "totalCount": 1539694,
     "publishedAt": "2022-01-01T08:00:01"
   },
   {
@@ -1565,10 +1305,8 @@
     "sensorNumber": "1",
     "readingID": 0,
     "sessionID": 0,
-    "dangerLevel": 10,
-    "window1_count": 10,
-    "window2_count": 218,
-    "window3_count": 223,
+    "dangerLevel": 2,
+    "totalCount": 8149477,
     "publishedAt": "2022-01-01T08:00:02"
   },
   {
@@ -1577,10 +1315,8 @@
     "sensorNumber": "2",
     "readingID": 0,
     "sessionID": 0,
-    "dangerLevel": 2,
-    "window1_count": 137,
-    "window2_count": 146,
-    "window3_count": 250,
+    "dangerLevel": 1,
+    "totalCount": 4055971,
     "publishedAt": "2022-01-01T08:00:02"
   },
   {
@@ -1589,34 +1325,28 @@
     "sensorNumber": "1",
     "readingID": 0,
     "sessionID": 0,
-    "dangerLevel": 8,
-    "window1_count": 153,
-    "window2_count": 193,
-    "window3_count": 253,
+    "dangerLevel": 9,
+    "totalCount": 9555358,
     "publishedAt": "2022-01-01T08:00:03"
   },
   {
     "nodeID": 4,
     "canID": "3",
     "sensorNumber": "2",
-    "readingID": 0,
-    "sessionID": 0,
-    "dangerLevel": 3,
-    "window1_count": 195,
-    "window2_count": 58,
-    "window3_count": 215,
-    "publishedAt": "2022-01-01T08:00:03"
-  },
-  {
-    "nodeID": 4,
-    "canID": "4",
-    "sensorNumber": "1",
     "readingID": 0,
     "sessionID": 0,
     "dangerLevel": 5,
-    "window1_count": 177,
-    "window2_count": 36,
-    "window3_count": 61,
+    "totalCount": 3813905,
+    "publishedAt": "2022-01-01T08:00:03"
+  },
+  {
+    "nodeID": 4,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 0,
+    "dangerLevel": 9,
+    "totalCount": 2718539,
     "publishedAt": "2022-01-01T08:00:04"
   },
   {
@@ -1625,10 +1355,8 @@
     "sensorNumber": "2",
     "readingID": 0,
     "sessionID": 0,
-    "dangerLevel": 7,
-    "window1_count": 188,
-    "window2_count": 110,
-    "window3_count": 219,
+    "dangerLevel": 9,
+    "totalCount": 6666440,
     "publishedAt": "2022-01-01T08:00:04"
   },
   {
@@ -1637,10 +1365,8 @@
     "sensorNumber": "1",
     "readingID": 1,
     "sessionID": 0,
-    "dangerLevel": 1,
-    "window1_count": 99,
-    "window2_count": 210,
-    "window3_count": 163,
+    "dangerLevel": 4,
+    "totalCount": 7841688,
     "publishedAt": "2022-01-01T08:00:11"
   },
   {
@@ -1649,10 +1375,8 @@
     "sensorNumber": "2",
     "readingID": 1,
     "sessionID": 0,
-    "dangerLevel": 6,
-    "window1_count": 206,
-    "window2_count": 101,
-    "window3_count": 246,
+    "dangerLevel": 8,
+    "totalCount": 5240175,
     "publishedAt": "2022-01-01T08:00:11"
   },
   {
@@ -1661,10 +1385,8 @@
     "sensorNumber": "1",
     "readingID": 1,
     "sessionID": 0,
-    "dangerLevel": 2,
-    "window1_count": 9,
-    "window2_count": 101,
-    "window3_count": 97,
+    "dangerLevel": 0,
+    "totalCount": 8752509,
     "publishedAt": "2022-01-01T08:00:12"
   },
   {
@@ -1673,10 +1395,8 @@
     "sensorNumber": "2",
     "readingID": 1,
     "sessionID": 0,
-    "dangerLevel": 10,
-    "window1_count": 128,
-    "window2_count": 46,
-    "window3_count": 42,
+    "dangerLevel": 6,
+    "totalCount": 1776755,
     "publishedAt": "2022-01-01T08:00:12"
   },
   {
@@ -1686,9 +1406,7 @@
     "readingID": 1,
     "sessionID": 0,
     "dangerLevel": 0,
-    "window1_count": 239,
-    "window2_count": 7,
-    "window3_count": 81,
+    "totalCount": 2228919,
     "publishedAt": "2022-01-01T08:00:13"
   },
   {
@@ -1697,10 +1415,8 @@
     "sensorNumber": "2",
     "readingID": 1,
     "sessionID": 0,
-    "dangerLevel": 10,
-    "window1_count": 191,
-    "window2_count": 165,
-    "window3_count": 159,
+    "dangerLevel": 3,
+    "totalCount": 7879030,
     "publishedAt": "2022-01-01T08:00:13"
   },
   {
@@ -1710,9 +1426,7 @@
     "readingID": 1,
     "sessionID": 0,
     "dangerLevel": 9,
-    "window1_count": 184,
-    "window2_count": 152,
-    "window3_count": 6,
+    "totalCount": 3860720,
     "publishedAt": "2022-01-01T08:00:14"
   },
   {
@@ -1721,10 +1435,8 @@
     "sensorNumber": "2",
     "readingID": 1,
     "sessionID": 0,
-    "dangerLevel": 8,
-    "window1_count": 153,
-    "window2_count": 220,
-    "window3_count": 102,
+    "dangerLevel": 1,
+    "totalCount": 6964686,
     "publishedAt": "2022-01-01T08:00:14"
   },
   {
@@ -1733,10 +1445,8 @@
     "sensorNumber": "1",
     "readingID": 2,
     "sessionID": 0,
-    "dangerLevel": 3,
-    "window1_count": 71,
-    "window2_count": 234,
-    "window3_count": 179,
+    "dangerLevel": 1,
+    "totalCount": 726608,
     "publishedAt": "2022-01-01T08:00:21"
   },
   {
@@ -1745,10 +1455,8 @@
     "sensorNumber": "2",
     "readingID": 2,
     "sessionID": 0,
-    "dangerLevel": 5,
-    "window1_count": 2,
-    "window2_count": 111,
-    "window3_count": 98,
+    "dangerLevel": 3,
+    "totalCount": 6135862,
     "publishedAt": "2022-01-01T08:00:21"
   },
   {
@@ -1757,10 +1465,8 @@
     "sensorNumber": "1",
     "readingID": 2,
     "sessionID": 0,
-    "dangerLevel": 9,
-    "window1_count": 101,
-    "window2_count": 165,
-    "window3_count": 63,
+    "dangerLevel": 1,
+    "totalCount": 2180201,
     "publishedAt": "2022-01-01T08:00:22"
   },
   {
@@ -1770,9 +1476,7 @@
     "readingID": 2,
     "sessionID": 0,
     "dangerLevel": 8,
-    "window1_count": 148,
-    "window2_count": 63,
-    "window3_count": 159,
+    "totalCount": 2251149,
     "publishedAt": "2022-01-01T08:00:22"
   },
   {
@@ -1781,10 +1485,8 @@
     "sensorNumber": "1",
     "readingID": 2,
     "sessionID": 0,
-    "dangerLevel": 10,
-    "window1_count": 162,
-    "window2_count": 131,
-    "window3_count": 169,
+    "dangerLevel": 2,
+    "totalCount": 2684094,
     "publishedAt": "2022-01-01T08:00:23"
   },
   {
@@ -1793,10 +1495,8 @@
     "sensorNumber": "2",
     "readingID": 2,
     "sessionID": 0,
-    "dangerLevel": 7,
-    "window1_count": 76,
-    "window2_count": 40,
-    "window3_count": 192,
+    "dangerLevel": 2,
+    "totalCount": 4088892,
     "publishedAt": "2022-01-01T08:00:23"
   },
   {
@@ -1805,10 +1505,8 @@
     "sensorNumber": "1",
     "readingID": 2,
     "sessionID": 0,
-    "dangerLevel": 9,
-    "window1_count": 112,
-    "window2_count": 149,
-    "window3_count": 69,
+    "dangerLevel": 6,
+    "totalCount": 9969631,
     "publishedAt": "2022-01-01T08:00:24"
   },
   {
@@ -1817,10 +1515,8 @@
     "sensorNumber": "2",
     "readingID": 2,
     "sessionID": 0,
-    "dangerLevel": 0,
-    "window1_count": 134,
-    "window2_count": 100,
-    "window3_count": 169,
+    "dangerLevel": 8,
+    "totalCount": 7198357,
     "publishedAt": "2022-01-01T08:00:24"
   },
   {
@@ -1829,10 +1525,8 @@
     "sensorNumber": "1",
     "readingID": 3,
     "sessionID": 0,
-    "dangerLevel": 1,
-    "window1_count": 73,
-    "window2_count": 197,
-    "window3_count": 127,
+    "dangerLevel": 9,
+    "totalCount": 5878661,
     "publishedAt": "2022-01-01T08:00:31"
   },
   {
@@ -1841,58 +1535,48 @@
     "sensorNumber": "2",
     "readingID": 3,
     "sessionID": 0,
-    "dangerLevel": 6,
-    "window1_count": 80,
-    "window2_count": 52,
-    "window3_count": 208,
+    "dangerLevel": 0,
+    "totalCount": 9307108,
     "publishedAt": "2022-01-01T08:00:31"
   },
   {
     "nodeID": 4,
     "canID": "2",
     "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 0,
+    "dangerLevel": 9,
+    "totalCount": 3227138,
+    "publishedAt": "2022-01-01T08:00:32"
+  },
+  {
+    "nodeID": 4,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 0,
+    "dangerLevel": 4,
+    "totalCount": 7469651,
+    "publishedAt": "2022-01-01T08:00:32"
+  },
+  {
+    "nodeID": 4,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 0,
+    "dangerLevel": 2,
+    "totalCount": 2180649,
+    "publishedAt": "2022-01-01T08:00:33"
+  },
+  {
+    "nodeID": 4,
+    "canID": "3",
+    "sensorNumber": "2",
     "readingID": 3,
     "sessionID": 0,
     "dangerLevel": 3,
-    "window1_count": 59,
-    "window2_count": 204,
-    "window3_count": 217,
-    "publishedAt": "2022-01-01T08:00:32"
-  },
-  {
-    "nodeID": 4,
-    "canID": "2",
-    "sensorNumber": "2",
-    "readingID": 3,
-    "sessionID": 0,
-    "dangerLevel": 6,
-    "window1_count": 110,
-    "window2_count": 237,
-    "window3_count": 40,
-    "publishedAt": "2022-01-01T08:00:32"
-  },
-  {
-    "nodeID": 4,
-    "canID": "3",
-    "sensorNumber": "1",
-    "readingID": 3,
-    "sessionID": 0,
-    "dangerLevel": 0,
-    "window1_count": 89,
-    "window2_count": 1,
-    "window3_count": 171,
-    "publishedAt": "2022-01-01T08:00:33"
-  },
-  {
-    "nodeID": 4,
-    "canID": "3",
-    "sensorNumber": "2",
-    "readingID": 3,
-    "sessionID": 0,
-    "dangerLevel": 1,
-    "window1_count": 182,
-    "window2_count": 141,
-    "window3_count": 189,
+    "totalCount": 9657444,
     "publishedAt": "2022-01-01T08:00:33"
   },
   {
@@ -1901,10 +1585,8 @@
     "sensorNumber": "1",
     "readingID": 3,
     "sessionID": 0,
-    "dangerLevel": 7,
-    "window1_count": 128,
-    "window2_count": 181,
-    "window3_count": 184,
+    "dangerLevel": 2,
+    "totalCount": 1020179,
     "publishedAt": "2022-01-01T08:00:34"
   },
   {
@@ -1913,10 +1595,8 @@
     "sensorNumber": "2",
     "readingID": 3,
     "sessionID": 0,
-    "dangerLevel": 5,
-    "window1_count": 147,
-    "window2_count": 97,
-    "window3_count": 149,
+    "dangerLevel": 3,
+    "totalCount": 2513800,
     "publishedAt": "2022-01-01T08:00:34"
   },
   {
@@ -1925,10 +1605,8 @@
     "sensorNumber": "1",
     "readingID": 0,
     "sessionID": 1,
-    "dangerLevel": 6,
-    "window1_count": 236,
-    "window2_count": 4,
-    "window3_count": 51,
+    "dangerLevel": 0,
+    "totalCount": 2385660,
     "publishedAt": "2022-01-01T08:05:01"
   },
   {
@@ -1937,10 +1615,8 @@
     "sensorNumber": "2",
     "readingID": 0,
     "sessionID": 1,
-    "dangerLevel": 0,
-    "window1_count": 221,
-    "window2_count": 88,
-    "window3_count": 234,
+    "dangerLevel": 9,
+    "totalCount": 9021008,
     "publishedAt": "2022-01-01T08:05:01"
   },
   {
@@ -1950,9 +1626,7 @@
     "readingID": 0,
     "sessionID": 1,
     "dangerLevel": 9,
-    "window1_count": 244,
-    "window2_count": 239,
-    "window3_count": 41,
+    "totalCount": 5110734,
     "publishedAt": "2022-01-01T08:05:02"
   },
   {
@@ -1961,10 +1635,8 @@
     "sensorNumber": "2",
     "readingID": 0,
     "sessionID": 1,
-    "dangerLevel": 9,
-    "window1_count": 219,
-    "window2_count": 133,
-    "window3_count": 52,
+    "dangerLevel": 4,
+    "totalCount": 4600488,
     "publishedAt": "2022-01-01T08:05:02"
   },
   {
@@ -1973,10 +1645,8 @@
     "sensorNumber": "1",
     "readingID": 0,
     "sessionID": 1,
-    "dangerLevel": 7,
-    "window1_count": 241,
-    "window2_count": 90,
-    "window3_count": 52,
+    "dangerLevel": 2,
+    "totalCount": 9529793,
     "publishedAt": "2022-01-01T08:05:03"
   },
   {
@@ -1985,10 +1655,8 @@
     "sensorNumber": "2",
     "readingID": 0,
     "sessionID": 1,
-    "dangerLevel": 3,
-    "window1_count": 15,
-    "window2_count": 229,
-    "window3_count": 14,
+    "dangerLevel": 4,
+    "totalCount": 2070806,
     "publishedAt": "2022-01-01T08:05:03"
   },
   {
@@ -1997,10 +1665,8 @@
     "sensorNumber": "1",
     "readingID": 0,
     "sessionID": 1,
-    "dangerLevel": 0,
-    "window1_count": 245,
-    "window2_count": 122,
-    "window3_count": 111,
+    "dangerLevel": 5,
+    "totalCount": 4192587,
     "publishedAt": "2022-01-01T08:05:04"
   },
   {
@@ -2009,10 +1675,8 @@
     "sensorNumber": "2",
     "readingID": 0,
     "sessionID": 1,
-    "dangerLevel": 3,
-    "window1_count": 94,
-    "window2_count": 136,
-    "window3_count": 73,
+    "dangerLevel": 8,
+    "totalCount": 1496084,
     "publishedAt": "2022-01-01T08:05:04"
   },
   {
@@ -2021,10 +1685,8 @@
     "sensorNumber": "1",
     "readingID": 1,
     "sessionID": 1,
-    "dangerLevel": 5,
-    "window1_count": 109,
-    "window2_count": 87,
-    "window3_count": 71,
+    "dangerLevel": 4,
+    "totalCount": 3717240,
     "publishedAt": "2022-01-01T08:05:11"
   },
   {
@@ -2034,9 +1696,7 @@
     "readingID": 1,
     "sessionID": 1,
     "dangerLevel": 8,
-    "window1_count": 132,
-    "window2_count": 127,
-    "window3_count": 149,
+    "totalCount": 8898163,
     "publishedAt": "2022-01-01T08:05:11"
   },
   {
@@ -2045,10 +1705,8 @@
     "sensorNumber": "1",
     "readingID": 1,
     "sessionID": 1,
-    "dangerLevel": 7,
-    "window1_count": 148,
-    "window2_count": 6,
-    "window3_count": 122,
+    "dangerLevel": 1,
+    "totalCount": 1307160,
     "publishedAt": "2022-01-01T08:05:12"
   },
   {
@@ -2056,215 +1714,179 @@
     "canID": "2",
     "sensorNumber": "2",
     "readingID": 1,
+    "sessionID": 1,
+    "dangerLevel": 2,
+    "totalCount": 1953964,
+    "publishedAt": "2022-01-01T08:05:12"
+  },
+  {
+    "nodeID": 4,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 1,
+    "dangerLevel": 1,
+    "totalCount": 3504768,
+    "publishedAt": "2022-01-01T08:05:13"
+  },
+  {
+    "nodeID": 4,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 1,
+    "dangerLevel": 1,
+    "totalCount": 6962817,
+    "publishedAt": "2022-01-01T08:05:13"
+  },
+  {
+    "nodeID": 4,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 1,
+    "dangerLevel": 1,
+    "totalCount": 4546931,
+    "publishedAt": "2022-01-01T08:05:14"
+  },
+  {
+    "nodeID": 4,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 1,
+    "dangerLevel": 4,
+    "totalCount": 6739954,
+    "publishedAt": "2022-01-01T08:05:14"
+  },
+  {
+    "nodeID": 4,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 1,
+    "dangerLevel": 6,
+    "totalCount": 2468876,
+    "publishedAt": "2022-01-01T08:05:21"
+  },
+  {
+    "nodeID": 4,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 1,
+    "dangerLevel": 9,
+    "totalCount": 123566,
+    "publishedAt": "2022-01-01T08:05:21"
+  },
+  {
+    "nodeID": 4,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 1,
+    "dangerLevel": 6,
+    "totalCount": 3139796,
+    "publishedAt": "2022-01-01T08:05:22"
+  },
+  {
+    "nodeID": 4,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 1,
+    "dangerLevel": 8,
+    "totalCount": 7199584,
+    "publishedAt": "2022-01-01T08:05:22"
+  },
+  {
+    "nodeID": 4,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 1,
+    "dangerLevel": 0,
+    "totalCount": 8188387,
+    "publishedAt": "2022-01-01T08:05:23"
+  },
+  {
+    "nodeID": 4,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 1,
+    "dangerLevel": 9,
+    "totalCount": 4521686,
+    "publishedAt": "2022-01-01T08:05:23"
+  },
+  {
+    "nodeID": 4,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 1,
+    "dangerLevel": 8,
+    "totalCount": 6116611,
+    "publishedAt": "2022-01-01T08:05:24"
+  },
+  {
+    "nodeID": 4,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 1,
+    "dangerLevel": 6,
+    "totalCount": 9897527,
+    "publishedAt": "2022-01-01T08:05:24"
+  },
+  {
+    "nodeID": 4,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 1,
+    "dangerLevel": 4,
+    "totalCount": 7950450,
+    "publishedAt": "2022-01-01T08:05:31"
+  },
+  {
+    "nodeID": 4,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 1,
+    "dangerLevel": 9,
+    "totalCount": 86585,
+    "publishedAt": "2022-01-01T08:05:31"
+  },
+  {
+    "nodeID": 4,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 1,
+    "dangerLevel": 2,
+    "totalCount": 2325098,
+    "publishedAt": "2022-01-01T08:05:32"
+  },
+  {
+    "nodeID": 4,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 1,
+    "dangerLevel": 0,
+    "totalCount": 8025298,
+    "publishedAt": "2022-01-01T08:05:32"
+  },
+  {
+    "nodeID": 4,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 3,
     "sessionID": 1,
     "dangerLevel": 3,
-    "window1_count": 133,
-    "window2_count": 225,
-    "window3_count": 116,
-    "publishedAt": "2022-01-01T08:05:12"
-  },
-  {
-    "nodeID": 4,
-    "canID": "3",
-    "sensorNumber": "1",
-    "readingID": 1,
-    "sessionID": 1,
-    "dangerLevel": 6,
-    "window1_count": 44,
-    "window2_count": 13,
-    "window3_count": 172,
-    "publishedAt": "2022-01-01T08:05:13"
-  },
-  {
-    "nodeID": 4,
-    "canID": "3",
-    "sensorNumber": "2",
-    "readingID": 1,
-    "sessionID": 1,
-    "dangerLevel": 8,
-    "window1_count": 108,
-    "window2_count": 135,
-    "window3_count": 36,
-    "publishedAt": "2022-01-01T08:05:13"
-  },
-  {
-    "nodeID": 4,
-    "canID": "4",
-    "sensorNumber": "1",
-    "readingID": 1,
-    "sessionID": 1,
-    "dangerLevel": 8,
-    "window1_count": 64,
-    "window2_count": 63,
-    "window3_count": 190,
-    "publishedAt": "2022-01-01T08:05:14"
-  },
-  {
-    "nodeID": 4,
-    "canID": "4",
-    "sensorNumber": "2",
-    "readingID": 1,
-    "sessionID": 1,
-    "dangerLevel": 4,
-    "window1_count": 90,
-    "window2_count": 83,
-    "window3_count": 119,
-    "publishedAt": "2022-01-01T08:05:14"
-  },
-  {
-    "nodeID": 4,
-    "canID": "1",
-    "sensorNumber": "1",
-    "readingID": 2,
-    "sessionID": 1,
-    "dangerLevel": 7,
-    "window1_count": 156,
-    "window2_count": 57,
-    "window3_count": 206,
-    "publishedAt": "2022-01-01T08:05:21"
-  },
-  {
-    "nodeID": 4,
-    "canID": "1",
-    "sensorNumber": "2",
-    "readingID": 2,
-    "sessionID": 1,
-    "dangerLevel": 1,
-    "window1_count": 223,
-    "window2_count": 204,
-    "window3_count": 43,
-    "publishedAt": "2022-01-01T08:05:21"
-  },
-  {
-    "nodeID": 4,
-    "canID": "2",
-    "sensorNumber": "1",
-    "readingID": 2,
-    "sessionID": 1,
-    "dangerLevel": 9,
-    "window1_count": 205,
-    "window2_count": 127,
-    "window3_count": 103,
-    "publishedAt": "2022-01-01T08:05:22"
-  },
-  {
-    "nodeID": 4,
-    "canID": "2",
-    "sensorNumber": "2",
-    "readingID": 2,
-    "sessionID": 1,
-    "dangerLevel": 6,
-    "window1_count": 0,
-    "window2_count": 195,
-    "window3_count": 249,
-    "publishedAt": "2022-01-01T08:05:22"
-  },
-  {
-    "nodeID": 4,
-    "canID": "3",
-    "sensorNumber": "1",
-    "readingID": 2,
-    "sessionID": 1,
-    "dangerLevel": 0,
-    "window1_count": 225,
-    "window2_count": 97,
-    "window3_count": 93,
-    "publishedAt": "2022-01-01T08:05:23"
-  },
-  {
-    "nodeID": 4,
-    "canID": "3",
-    "sensorNumber": "2",
-    "readingID": 2,
-    "sessionID": 1,
-    "dangerLevel": 1,
-    "window1_count": 251,
-    "window2_count": 118,
-    "window3_count": 47,
-    "publishedAt": "2022-01-01T08:05:23"
-  },
-  {
-    "nodeID": 4,
-    "canID": "4",
-    "sensorNumber": "1",
-    "readingID": 2,
-    "sessionID": 1,
-    "dangerLevel": 8,
-    "window1_count": 14,
-    "window2_count": 201,
-    "window3_count": 163,
-    "publishedAt": "2022-01-01T08:05:24"
-  },
-  {
-    "nodeID": 4,
-    "canID": "4",
-    "sensorNumber": "2",
-    "readingID": 2,
-    "sessionID": 1,
-    "dangerLevel": 0,
-    "window1_count": 114,
-    "window2_count": 3,
-    "window3_count": 54,
-    "publishedAt": "2022-01-01T08:05:24"
-  },
-  {
-    "nodeID": 4,
-    "canID": "1",
-    "sensorNumber": "1",
-    "readingID": 3,
-    "sessionID": 1,
-    "dangerLevel": 4,
-    "window1_count": 24,
-    "window2_count": 126,
-    "window3_count": 230,
-    "publishedAt": "2022-01-01T08:05:31"
-  },
-  {
-    "nodeID": 4,
-    "canID": "1",
-    "sensorNumber": "2",
-    "readingID": 3,
-    "sessionID": 1,
-    "dangerLevel": 7,
-    "window1_count": 108,
-    "window2_count": 232,
-    "window3_count": 157,
-    "publishedAt": "2022-01-01T08:05:31"
-  },
-  {
-    "nodeID": 4,
-    "canID": "2",
-    "sensorNumber": "1",
-    "readingID": 3,
-    "sessionID": 1,
-    "dangerLevel": 9,
-    "window1_count": 252,
-    "window2_count": 89,
-    "window3_count": 226,
-    "publishedAt": "2022-01-01T08:05:32"
-  },
-  {
-    "nodeID": 4,
-    "canID": "2",
-    "sensorNumber": "2",
-    "readingID": 3,
-    "sessionID": 1,
-    "dangerLevel": 5,
-    "window1_count": 59,
-    "window2_count": 230,
-    "window3_count": 153,
-    "publishedAt": "2022-01-01T08:05:32"
-  },
-  {
-    "nodeID": 4,
-    "canID": "3",
-    "sensorNumber": "1",
-    "readingID": 3,
-    "sessionID": 1,
-    "dangerLevel": 6,
-    "window1_count": 113,
-    "window2_count": 137,
-    "window3_count": 237,
+    "totalCount": 8343744,
     "publishedAt": "2022-01-01T08:05:33"
   },
   {
@@ -2273,10 +1895,8 @@
     "sensorNumber": "2",
     "readingID": 3,
     "sessionID": 1,
-    "dangerLevel": 5,
-    "window1_count": 120,
-    "window2_count": 164,
-    "window3_count": 185,
+    "dangerLevel": 8,
+    "totalCount": 5769173,
     "publishedAt": "2022-01-01T08:05:33"
   },
   {
@@ -2286,9 +1906,7 @@
     "readingID": 3,
     "sessionID": 1,
     "dangerLevel": 4,
-    "window1_count": 148,
-    "window2_count": 182,
-    "window3_count": 9,
+    "totalCount": 6986289,
     "publishedAt": "2022-01-01T08:05:34"
   },
   {
@@ -2297,10 +1915,8 @@
     "sensorNumber": "2",
     "readingID": 3,
     "sessionID": 1,
-    "dangerLevel": 3,
-    "window1_count": 180,
-    "window2_count": 117,
-    "window3_count": 31,
+    "dangerLevel": 9,
+    "totalCount": 9795692,
     "publishedAt": "2022-01-01T08:05:34"
   },
   {
@@ -2309,10 +1925,8 @@
     "sensorNumber": "1",
     "readingID": 0,
     "sessionID": 0,
-    "dangerLevel": 2,
-    "window1_count": 100,
-    "window2_count": 161,
-    "window3_count": 141,
+    "dangerLevel": 8,
+    "totalCount": 9059036,
     "publishedAt": "2022-01-01T08:00:01"
   },
   {
@@ -2321,10 +1935,8 @@
     "sensorNumber": "2",
     "readingID": 0,
     "sessionID": 0,
-    "dangerLevel": 2,
-    "window1_count": 239,
-    "window2_count": 93,
-    "window3_count": 92,
+    "dangerLevel": 4,
+    "totalCount": 9930028,
     "publishedAt": "2022-01-01T08:00:01"
   },
   {
@@ -2333,10 +1945,8 @@
     "sensorNumber": "1",
     "readingID": 0,
     "sessionID": 0,
-    "dangerLevel": 6,
-    "window1_count": 139,
-    "window2_count": 6,
-    "window3_count": 181,
+    "dangerLevel": 8,
+    "totalCount": 8321635,
     "publishedAt": "2022-01-01T08:00:02"
   },
   {
@@ -2345,10 +1955,8 @@
     "sensorNumber": "2",
     "readingID": 0,
     "sessionID": 0,
-    "dangerLevel": 3,
-    "window1_count": 63,
-    "window2_count": 36,
-    "window3_count": 145,
+    "dangerLevel": 2,
+    "totalCount": 5227900,
     "publishedAt": "2022-01-01T08:00:02"
   },
   {
@@ -2357,10 +1965,8 @@
     "sensorNumber": "1",
     "readingID": 0,
     "sessionID": 0,
-    "dangerLevel": 7,
-    "window1_count": 56,
-    "window2_count": 107,
-    "window3_count": 181,
+    "dangerLevel": 2,
+    "totalCount": 2066023,
     "publishedAt": "2022-01-01T08:00:03"
   },
   {
@@ -2369,10 +1975,8 @@
     "sensorNumber": "2",
     "readingID": 0,
     "sessionID": 0,
-    "dangerLevel": 4,
-    "window1_count": 241,
-    "window2_count": 189,
-    "window3_count": 148,
+    "dangerLevel": 2,
+    "totalCount": 9890275,
     "publishedAt": "2022-01-01T08:00:03"
   },
   {
@@ -2381,10 +1985,8 @@
     "sensorNumber": "1",
     "readingID": 0,
     "sessionID": 0,
-    "dangerLevel": 9,
-    "window1_count": 141,
-    "window2_count": 187,
-    "window3_count": 72,
+    "dangerLevel": 3,
+    "totalCount": 1399141,
     "publishedAt": "2022-01-01T08:00:04"
   },
   {
@@ -2393,10 +1995,8 @@
     "sensorNumber": "2",
     "readingID": 0,
     "sessionID": 0,
-    "dangerLevel": 9,
-    "window1_count": 209,
-    "window2_count": 193,
-    "window3_count": 188,
+    "dangerLevel": 3,
+    "totalCount": 2410928,
     "publishedAt": "2022-01-01T08:00:04"
   },
   {
@@ -2405,10 +2005,8 @@
     "sensorNumber": "1",
     "readingID": 1,
     "sessionID": 0,
-    "dangerLevel": 9,
-    "window1_count": 54,
-    "window2_count": 103,
-    "window3_count": 114,
+    "dangerLevel": 8,
+    "totalCount": 8952992,
     "publishedAt": "2022-01-01T08:00:11"
   },
   {
@@ -2418,9 +2016,7 @@
     "readingID": 1,
     "sessionID": 0,
     "dangerLevel": 2,
-    "window1_count": 31,
-    "window2_count": 81,
-    "window3_count": 74,
+    "totalCount": 500693,
     "publishedAt": "2022-01-01T08:00:11"
   },
   {
@@ -2429,10 +2025,8 @@
     "sensorNumber": "1",
     "readingID": 1,
     "sessionID": 0,
-    "dangerLevel": 6,
-    "window1_count": 106,
-    "window2_count": 155,
-    "window3_count": 105,
+    "dangerLevel": 0,
+    "totalCount": 6075808,
     "publishedAt": "2022-01-01T08:00:12"
   },
   {
@@ -2440,71 +2034,59 @@
     "canID": "2",
     "sensorNumber": "2",
     "readingID": 1,
-    "sessionID": 0,
-    "dangerLevel": 0,
-    "window1_count": 10,
-    "window2_count": 22,
-    "window3_count": 24,
-    "publishedAt": "2022-01-01T08:00:12"
-  },
-  {
-    "nodeID": 5,
-    "canID": "3",
-    "sensorNumber": "1",
-    "readingID": 1,
-    "sessionID": 0,
-    "dangerLevel": 10,
-    "window1_count": 245,
-    "window2_count": 183,
-    "window3_count": 192,
-    "publishedAt": "2022-01-01T08:00:13"
-  },
-  {
-    "nodeID": 5,
-    "canID": "3",
-    "sensorNumber": "2",
-    "readingID": 1,
-    "sessionID": 0,
-    "dangerLevel": 3,
-    "window1_count": 78,
-    "window2_count": 192,
-    "window3_count": 61,
-    "publishedAt": "2022-01-01T08:00:13"
-  },
-  {
-    "nodeID": 5,
-    "canID": "4",
-    "sensorNumber": "1",
-    "readingID": 1,
-    "sessionID": 0,
-    "dangerLevel": 10,
-    "window1_count": 247,
-    "window2_count": 22,
-    "window3_count": 231,
-    "publishedAt": "2022-01-01T08:00:14"
-  },
-  {
-    "nodeID": 5,
-    "canID": "4",
-    "sensorNumber": "2",
-    "readingID": 1,
-    "sessionID": 0,
-    "dangerLevel": 5,
-    "window1_count": 179,
-    "window2_count": 8,
-    "window3_count": 74,
-    "publishedAt": "2022-01-01T08:00:14"
-  },
-  {
-    "nodeID": 5,
-    "canID": "1",
-    "sensorNumber": "1",
-    "readingID": 2,
     "sessionID": 0,
     "dangerLevel": 2,
-    "window1_count": 165,
-    "window2_count": 107,
-    "window3_count": 58,
+    "totalCount": 4760530,
+    "publishedAt": "2022-01-01T08:00:12"
+  },
+  {
+    "nodeID": 5,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 0,
+    "dangerLevel": 6,
+    "totalCount": 341501,
+    "publishedAt": "2022-01-01T08:00:13"
+  },
+  {
+    "nodeID": 5,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 0,
+    "dangerLevel": 6,
+    "totalCount": 2012366,
+    "publishedAt": "2022-01-01T08:00:13"
+  },
+  {
+    "nodeID": 5,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 0,
+    "dangerLevel": 2,
+    "totalCount": 3512672,
+    "publishedAt": "2022-01-01T08:00:14"
+  },
+  {
+    "nodeID": 5,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 0,
+    "dangerLevel": 0,
+    "totalCount": 1408133,
+    "publishedAt": "2022-01-01T08:00:14"
+  },
+  {
+    "nodeID": 5,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 0,
+    "dangerLevel": 7,
+    "totalCount": 542829,
     "publishedAt": "2022-01-01T08:00:21"
   },
   {
@@ -2513,10 +2095,8 @@
     "sensorNumber": "2",
     "readingID": 2,
     "sessionID": 0,
-    "dangerLevel": 5,
-    "window1_count": 152,
-    "window2_count": 192,
-    "window3_count": 93,
+    "dangerLevel": 1,
+    "totalCount": 231912,
     "publishedAt": "2022-01-01T08:00:21"
   },
   {
@@ -2526,9 +2106,7 @@
     "readingID": 2,
     "sessionID": 0,
     "dangerLevel": 0,
-    "window1_count": 42,
-    "window2_count": 99,
-    "window3_count": 228,
+    "totalCount": 5038240,
     "publishedAt": "2022-01-01T08:00:22"
   },
   {
@@ -2537,10 +2115,8 @@
     "sensorNumber": "2",
     "readingID": 2,
     "sessionID": 0,
-    "dangerLevel": 1,
-    "window1_count": 28,
-    "window2_count": 141,
-    "window3_count": 80,
+    "dangerLevel": 4,
+    "totalCount": 109545,
     "publishedAt": "2022-01-01T08:00:22"
   },
   {
@@ -2548,59 +2124,49 @@
     "canID": "3",
     "sensorNumber": "1",
     "readingID": 2,
-    "sessionID": 0,
-    "dangerLevel": 1,
-    "window1_count": 15,
-    "window2_count": 186,
-    "window3_count": 168,
-    "publishedAt": "2022-01-01T08:00:23"
-  },
-  {
-    "nodeID": 5,
-    "canID": "3",
-    "sensorNumber": "2",
-    "readingID": 2,
-    "sessionID": 0,
-    "dangerLevel": 5,
-    "window1_count": 108,
-    "window2_count": 5,
-    "window3_count": 23,
-    "publishedAt": "2022-01-01T08:00:23"
-  },
-  {
-    "nodeID": 5,
-    "canID": "4",
-    "sensorNumber": "1",
-    "readingID": 2,
-    "sessionID": 0,
-    "dangerLevel": 5,
-    "window1_count": 80,
-    "window2_count": 207,
-    "window3_count": 151,
-    "publishedAt": "2022-01-01T08:00:24"
-  },
-  {
-    "nodeID": 5,
-    "canID": "4",
-    "sensorNumber": "2",
-    "readingID": 2,
-    "sessionID": 0,
-    "dangerLevel": 3,
-    "window1_count": 73,
-    "window2_count": 30,
-    "window3_count": 165,
-    "publishedAt": "2022-01-01T08:00:24"
-  },
-  {
-    "nodeID": 5,
-    "canID": "1",
-    "sensorNumber": "1",
-    "readingID": 3,
     "sessionID": 0,
     "dangerLevel": 9,
-    "window1_count": 169,
-    "window2_count": 167,
-    "window3_count": 213,
+    "totalCount": 1853223,
+    "publishedAt": "2022-01-01T08:00:23"
+  },
+  {
+    "nodeID": 5,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 0,
+    "dangerLevel": 8,
+    "totalCount": 9608360,
+    "publishedAt": "2022-01-01T08:00:23"
+  },
+  {
+    "nodeID": 5,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 0,
+    "dangerLevel": 8,
+    "totalCount": 3653920,
+    "publishedAt": "2022-01-01T08:00:24"
+  },
+  {
+    "nodeID": 5,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 0,
+    "dangerLevel": 8,
+    "totalCount": 600531,
+    "publishedAt": "2022-01-01T08:00:24"
+  },
+  {
+    "nodeID": 5,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 0,
+    "dangerLevel": 1,
+    "totalCount": 4444095,
     "publishedAt": "2022-01-01T08:00:31"
   },
   {
@@ -2609,10 +2175,8 @@
     "sensorNumber": "2",
     "readingID": 3,
     "sessionID": 0,
-    "dangerLevel": 0,
-    "window1_count": 211,
-    "window2_count": 35,
-    "window3_count": 254,
+    "dangerLevel": 3,
+    "totalCount": 4175556,
     "publishedAt": "2022-01-01T08:00:31"
   },
   {
@@ -2621,10 +2185,8 @@
     "sensorNumber": "1",
     "readingID": 3,
     "sessionID": 0,
-    "dangerLevel": 2,
-    "window1_count": 36,
-    "window2_count": 136,
-    "window3_count": 72,
+    "dangerLevel": 4,
+    "totalCount": 4418262,
     "publishedAt": "2022-01-01T08:00:32"
   },
   {
@@ -2633,58 +2195,48 @@
     "sensorNumber": "2",
     "readingID": 3,
     "sessionID": 0,
-    "dangerLevel": 1,
-    "window1_count": 184,
-    "window2_count": 108,
-    "window3_count": 239,
+    "dangerLevel": 0,
+    "totalCount": 6041537,
     "publishedAt": "2022-01-01T08:00:32"
   },
   {
     "nodeID": 5,
     "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 0,
+    "dangerLevel": 5,
+    "totalCount": 5686063,
+    "publishedAt": "2022-01-01T08:00:33"
+  },
+  {
+    "nodeID": 5,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 0,
+    "dangerLevel": 1,
+    "totalCount": 3442448,
+    "publishedAt": "2022-01-01T08:00:33"
+  },
+  {
+    "nodeID": 5,
+    "canID": "4",
     "sensorNumber": "1",
     "readingID": 3,
     "sessionID": 0,
     "dangerLevel": 8,
-    "window1_count": 71,
-    "window2_count": 113,
-    "window3_count": 195,
-    "publishedAt": "2022-01-01T08:00:33"
-  },
-  {
-    "nodeID": 5,
-    "canID": "3",
-    "sensorNumber": "2",
-    "readingID": 3,
-    "sessionID": 0,
-    "dangerLevel": 2,
-    "window1_count": 238,
-    "window2_count": 8,
-    "window3_count": 198,
-    "publishedAt": "2022-01-01T08:00:33"
+    "totalCount": 9550205,
+    "publishedAt": "2022-01-01T08:00:34"
   },
   {
     "nodeID": 5,
     "canID": "4",
-    "sensorNumber": "1",
+    "sensorNumber": "2",
     "readingID": 3,
     "sessionID": 0,
     "dangerLevel": 7,
-    "window1_count": 185,
-    "window2_count": 193,
-    "window3_count": 100,
-    "publishedAt": "2022-01-01T08:00:34"
-  },
-  {
-    "nodeID": 5,
-    "canID": "4",
-    "sensorNumber": "2",
-    "readingID": 3,
-    "sessionID": 0,
-    "dangerLevel": 3,
-    "window1_count": 176,
-    "window2_count": 166,
-    "window3_count": 196,
+    "totalCount": 4629251,
     "publishedAt": "2022-01-01T08:00:34"
   },
   {
@@ -2693,10 +2245,8 @@
     "sensorNumber": "1",
     "readingID": 0,
     "sessionID": 1,
-    "dangerLevel": 3,
-    "window1_count": 67,
-    "window2_count": 166,
-    "window3_count": 162,
+    "dangerLevel": 6,
+    "totalCount": 3165621,
     "publishedAt": "2022-01-01T08:05:01"
   },
   {
@@ -2705,10 +2255,8 @@
     "sensorNumber": "2",
     "readingID": 0,
     "sessionID": 1,
-    "dangerLevel": 1,
-    "window1_count": 55,
-    "window2_count": 112,
-    "window3_count": 105,
+    "dangerLevel": 2,
+    "totalCount": 6112523,
     "publishedAt": "2022-01-01T08:05:01"
   },
   {
@@ -2717,10 +2265,8 @@
     "sensorNumber": "1",
     "readingID": 0,
     "sessionID": 1,
-    "dangerLevel": 2,
-    "window1_count": 173,
-    "window2_count": 171,
-    "window3_count": 83,
+    "dangerLevel": 1,
+    "totalCount": 282567,
     "publishedAt": "2022-01-01T08:05:02"
   },
   {
@@ -2729,10 +2275,8 @@
     "sensorNumber": "2",
     "readingID": 0,
     "sessionID": 1,
-    "dangerLevel": 1,
-    "window1_count": 142,
-    "window2_count": 196,
-    "window3_count": 81,
+    "dangerLevel": 0,
+    "totalCount": 8573130,
     "publishedAt": "2022-01-01T08:05:02"
   },
   {
@@ -2741,10 +2285,8 @@
     "sensorNumber": "1",
     "readingID": 0,
     "sessionID": 1,
-    "dangerLevel": 1,
-    "window1_count": 160,
-    "window2_count": 157,
-    "window3_count": 195,
+    "dangerLevel": 4,
+    "totalCount": 3893184,
     "publishedAt": "2022-01-01T08:05:03"
   },
   {
@@ -2753,10 +2295,8 @@
     "sensorNumber": "2",
     "readingID": 0,
     "sessionID": 1,
-    "dangerLevel": 2,
-    "window1_count": 218,
-    "window2_count": 218,
-    "window3_count": 245,
+    "dangerLevel": 7,
+    "totalCount": 5335943,
     "publishedAt": "2022-01-01T08:05:03"
   },
   {
@@ -2765,10 +2305,8 @@
     "sensorNumber": "1",
     "readingID": 0,
     "sessionID": 1,
-    "dangerLevel": 9,
-    "window1_count": 22,
-    "window2_count": 222,
-    "window3_count": 215,
+    "dangerLevel": 5,
+    "totalCount": 5299942,
     "publishedAt": "2022-01-01T08:05:04"
   },
   {
@@ -2777,70 +2315,58 @@
     "sensorNumber": "2",
     "readingID": 0,
     "sessionID": 1,
-    "dangerLevel": 9,
-    "window1_count": 27,
-    "window2_count": 97,
-    "window3_count": 202,
+    "dangerLevel": 2,
+    "totalCount": 961031,
     "publishedAt": "2022-01-01T08:05:04"
   },
   {
     "nodeID": 5,
     "canID": "1",
-    "sensorNumber": "1",
-    "readingID": 1,
-    "sessionID": 1,
-    "dangerLevel": 2,
-    "window1_count": 200,
-    "window2_count": 248,
-    "window3_count": 107,
-    "publishedAt": "2022-01-01T08:05:11"
-  },
-  {
-    "nodeID": 5,
-    "canID": "1",
-    "sensorNumber": "2",
-    "readingID": 1,
-    "sessionID": 1,
-    "dangerLevel": 5,
-    "window1_count": 215,
-    "window2_count": 245,
-    "window3_count": 67,
-    "publishedAt": "2022-01-01T08:05:11"
-  },
-  {
-    "nodeID": 5,
-    "canID": "2",
-    "sensorNumber": "1",
-    "readingID": 1,
-    "sessionID": 1,
-    "dangerLevel": 2,
-    "window1_count": 194,
-    "window2_count": 122,
-    "window3_count": 132,
-    "publishedAt": "2022-01-01T08:05:12"
-  },
-  {
-    "nodeID": 5,
-    "canID": "2",
-    "sensorNumber": "2",
-    "readingID": 1,
-    "sessionID": 1,
-    "dangerLevel": 5,
-    "window1_count": 245,
-    "window2_count": 113,
-    "window3_count": 212,
-    "publishedAt": "2022-01-01T08:05:12"
-  },
-  {
-    "nodeID": 5,
-    "canID": "3",
     "sensorNumber": "1",
     "readingID": 1,
     "sessionID": 1,
     "dangerLevel": 0,
-    "window1_count": 245,
-    "window2_count": 85,
-    "window3_count": 164,
+    "totalCount": 9171460,
+    "publishedAt": "2022-01-01T08:05:11"
+  },
+  {
+    "nodeID": 5,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 1,
+    "dangerLevel": 4,
+    "totalCount": 7701905,
+    "publishedAt": "2022-01-01T08:05:11"
+  },
+  {
+    "nodeID": 5,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 1,
+    "dangerLevel": 6,
+    "totalCount": 2622050,
+    "publishedAt": "2022-01-01T08:05:12"
+  },
+  {
+    "nodeID": 5,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 1,
+    "dangerLevel": 8,
+    "totalCount": 1072579,
+    "publishedAt": "2022-01-01T08:05:12"
+  },
+  {
+    "nodeID": 5,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 1,
+    "dangerLevel": 1,
+    "totalCount": 424610,
     "publishedAt": "2022-01-01T08:05:13"
   },
   {
@@ -2849,10 +2375,8 @@
     "sensorNumber": "2",
     "readingID": 1,
     "sessionID": 1,
-    "dangerLevel": 8,
-    "window1_count": 44,
-    "window2_count": 29,
-    "window3_count": 116,
+    "dangerLevel": 3,
+    "totalCount": 5006740,
     "publishedAt": "2022-01-01T08:05:13"
   },
   {
@@ -2861,10 +2385,8 @@
     "sensorNumber": "1",
     "readingID": 1,
     "sessionID": 1,
-    "dangerLevel": 9,
-    "window1_count": 51,
-    "window2_count": 120,
-    "window3_count": 243,
+    "dangerLevel": 5,
+    "totalCount": 5606686,
     "publishedAt": "2022-01-01T08:05:14"
   },
   {
@@ -2873,10 +2395,8 @@
     "sensorNumber": "2",
     "readingID": 1,
     "sessionID": 1,
-    "dangerLevel": 3,
-    "window1_count": 63,
-    "window2_count": 219,
-    "window3_count": 85,
+    "dangerLevel": 7,
+    "totalCount": 5451340,
     "publishedAt": "2022-01-01T08:05:14"
   },
   {
@@ -2885,10 +2405,8 @@
     "sensorNumber": "1",
     "readingID": 2,
     "sessionID": 1,
-    "dangerLevel": 0,
-    "window1_count": 49,
-    "window2_count": 185,
-    "window3_count": 119,
+    "dangerLevel": 2,
+    "totalCount": 9936871,
     "publishedAt": "2022-01-01T08:05:21"
   },
   {
@@ -2897,10 +2415,8 @@
     "sensorNumber": "2",
     "readingID": 2,
     "sessionID": 1,
-    "dangerLevel": 5,
-    "window1_count": 44,
-    "window2_count": 23,
-    "window3_count": 228,
+    "dangerLevel": 1,
+    "totalCount": 8276097,
     "publishedAt": "2022-01-01T08:05:21"
   },
   {
@@ -2910,9 +2426,7 @@
     "readingID": 2,
     "sessionID": 1,
     "dangerLevel": 4,
-    "window1_count": 119,
-    "window2_count": 87,
-    "window3_count": 10,
+    "totalCount": 4307129,
     "publishedAt": "2022-01-01T08:05:22"
   },
   {
@@ -2921,10 +2435,8 @@
     "sensorNumber": "2",
     "readingID": 2,
     "sessionID": 1,
-    "dangerLevel": 1,
-    "window1_count": 222,
-    "window2_count": 89,
-    "window3_count": 152,
+    "dangerLevel": 5,
+    "totalCount": 8808710,
     "publishedAt": "2022-01-01T08:05:22"
   },
   {
@@ -2932,95 +2444,79 @@
     "canID": "3",
     "sensorNumber": "1",
     "readingID": 2,
+    "sessionID": 1,
+    "dangerLevel": 4,
+    "totalCount": 6363256,
+    "publishedAt": "2022-01-01T08:05:23"
+  },
+  {
+    "nodeID": 5,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 1,
+    "dangerLevel": 8,
+    "totalCount": 8082254,
+    "publishedAt": "2022-01-01T08:05:23"
+  },
+  {
+    "nodeID": 5,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 1,
+    "dangerLevel": 5,
+    "totalCount": 6741483,
+    "publishedAt": "2022-01-01T08:05:24"
+  },
+  {
+    "nodeID": 5,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 1,
+    "dangerLevel": 8,
+    "totalCount": 356602,
+    "publishedAt": "2022-01-01T08:05:24"
+  },
+  {
+    "nodeID": 5,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 1,
+    "dangerLevel": 1,
+    "totalCount": 583236,
+    "publishedAt": "2022-01-01T08:05:31"
+  },
+  {
+    "nodeID": 5,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 3,
     "sessionID": 1,
     "dangerLevel": 6,
-    "window1_count": 143,
-    "window2_count": 67,
-    "window3_count": 198,
-    "publishedAt": "2022-01-01T08:05:23"
+    "totalCount": 711028,
+    "publishedAt": "2022-01-01T08:05:31"
   },
   {
     "nodeID": 5,
-    "canID": "3",
-    "sensorNumber": "2",
-    "readingID": 2,
-    "sessionID": 1,
-    "dangerLevel": 2,
-    "window1_count": 199,
-    "window2_count": 129,
-    "window3_count": 193,
-    "publishedAt": "2022-01-01T08:05:23"
-  },
-  {
-    "nodeID": 5,
-    "canID": "4",
+    "canID": "2",
     "sensorNumber": "1",
-    "readingID": 2,
+    "readingID": 3,
     "sessionID": 1,
-    "dangerLevel": 0,
-    "window1_count": 140,
-    "window2_count": 41,
-    "window3_count": 0,
-    "publishedAt": "2022-01-01T08:05:24"
+    "dangerLevel": 6,
+    "totalCount": 1362168,
+    "publishedAt": "2022-01-01T08:05:32"
   },
   {
     "nodeID": 5,
-    "canID": "4",
+    "canID": "2",
     "sensorNumber": "2",
-    "readingID": 2,
+    "readingID": 3,
     "sessionID": 1,
     "dangerLevel": 9,
-    "window1_count": 10,
-    "window2_count": 220,
-    "window3_count": 70,
-    "publishedAt": "2022-01-01T08:05:24"
-  },
-  {
-    "nodeID": 5,
-    "canID": "1",
-    "sensorNumber": "1",
-    "readingID": 3,
-    "sessionID": 1,
-    "dangerLevel": 0,
-    "window1_count": 141,
-    "window2_count": 231,
-    "window3_count": 206,
-    "publishedAt": "2022-01-01T08:05:31"
-  },
-  {
-    "nodeID": 5,
-    "canID": "1",
-    "sensorNumber": "2",
-    "readingID": 3,
-    "sessionID": 1,
-    "dangerLevel": 1,
-    "window1_count": 99,
-    "window2_count": 62,
-    "window3_count": 148,
-    "publishedAt": "2022-01-01T08:05:31"
-  },
-  {
-    "nodeID": 5,
-    "canID": "2",
-    "sensorNumber": "1",
-    "readingID": 3,
-    "sessionID": 1,
-    "dangerLevel": 3,
-    "window1_count": 249,
-    "window2_count": 64,
-    "window3_count": 250,
-    "publishedAt": "2022-01-01T08:05:32"
-  },
-  {
-    "nodeID": 5,
-    "canID": "2",
-    "sensorNumber": "2",
-    "readingID": 3,
-    "sessionID": 1,
-    "dangerLevel": 3,
-    "window1_count": 24,
-    "window2_count": 8,
-    "window3_count": 207,
+    "totalCount": 6706012,
     "publishedAt": "2022-01-01T08:05:32"
   },
   {
@@ -3029,10 +2525,8 @@
     "sensorNumber": "1",
     "readingID": 3,
     "sessionID": 1,
-    "dangerLevel": 2,
-    "window1_count": 164,
-    "window2_count": 75,
-    "window3_count": 208,
+    "dangerLevel": 7,
+    "totalCount": 9049027,
     "publishedAt": "2022-01-01T08:05:33"
   },
   {
@@ -3041,10 +2535,8 @@
     "sensorNumber": "2",
     "readingID": 3,
     "sessionID": 1,
-    "dangerLevel": 5,
-    "window1_count": 194,
-    "window2_count": 88,
-    "window3_count": 107,
+    "dangerLevel": 9,
+    "totalCount": 2036355,
     "publishedAt": "2022-01-01T08:05:33"
   },
   {
@@ -3053,10 +2545,8 @@
     "sensorNumber": "1",
     "readingID": 3,
     "sessionID": 1,
-    "dangerLevel": 5,
-    "window1_count": 135,
-    "window2_count": 222,
-    "window3_count": 3,
+    "dangerLevel": 6,
+    "totalCount": 9034076,
     "publishedAt": "2022-01-01T08:05:34"
   },
   {
@@ -3065,10 +2555,8 @@
     "sensorNumber": "2",
     "readingID": 3,
     "sessionID": 1,
-    "dangerLevel": 3,
-    "window1_count": 152,
-    "window2_count": 88,
-    "window3_count": 40,
+    "dangerLevel": 0,
+    "totalCount": 9010799,
     "publishedAt": "2022-01-01T08:05:34"
   }
 ]

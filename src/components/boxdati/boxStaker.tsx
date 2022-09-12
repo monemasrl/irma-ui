@@ -4,7 +4,7 @@ import { RiTerminalFill } from 'react-icons/ri';
 import { motion } from 'framer-motion';
 import { UserContext } from '../../context/user-context';
 import { NodeState } from '../../typings/node';
-import Reading from '../../typings/reading';
+import { WindowReading, TotalReading } from '../../typings/reading';
 import Node from '../../typings/node';
 import Nodo from './specials/nodo';
 
@@ -122,11 +122,16 @@ const BtnStartRec: FC<BtnStartRecProps> = ({ applicationID, nodeID }) => {
 
 type BoxStakerProps = {
   node: Node;
-  letture: Reading[];
+  totalReadings: TotalReading[];
+  windowReadings: WindowReading[];
 };
 
-const BoxStaker: FC<BoxStakerProps> = ({ node, letture }) => {
-  console.log('letture', letture);
+const BoxStaker: FC<BoxStakerProps> = ({
+  node,
+  totalReadings,
+  windowReadings,
+}) => {
+  console.log('readings', totalReadings, windowReadings);
 
   return (
     <>
@@ -163,7 +168,12 @@ const BoxStaker: FC<BoxStakerProps> = ({ node, letture }) => {
       </div> */}
       </motion.header>
       <motion.section className={style.sensoriLayout}>
-        {letture.length !== 0 && <Nodo Letture={letture} />}
+        {totalReadings.length && windowReadings.length && (
+          <Nodo
+            totalReadings={totalReadings}
+            windowReadings={windowReadings}
+          />
+        )}
       </motion.section>
     </>
   );

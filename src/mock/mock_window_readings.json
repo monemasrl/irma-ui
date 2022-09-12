@@ -1,0 +1,7682 @@
+[
+  {
+    "nodeID": 2,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 6471473,
+    "publishedAt": "2022-01-01T08:00:03"
+  },
+  {
+    "nodeID": 2,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 1841004,
+    "publishedAt": "2022-01-01T08:00:04"
+  },
+  {
+    "nodeID": 2,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 9938534,
+    "publishedAt": "2022-01-01T08:00:05"
+  },
+  {
+    "nodeID": 2,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 2150155,
+    "publishedAt": "2022-01-01T08:00:03"
+  },
+  {
+    "nodeID": 2,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 7213507,
+    "publishedAt": "2022-01-01T08:00:04"
+  },
+  {
+    "nodeID": 2,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 672778,
+    "publishedAt": "2022-01-01T08:00:05"
+  },
+  {
+    "nodeID": 2,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 283065,
+    "publishedAt": "2022-01-01T08:00:05"
+  },
+  {
+    "nodeID": 2,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 4287927,
+    "publishedAt": "2022-01-01T08:00:06"
+  },
+  {
+    "nodeID": 2,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 8395318,
+    "publishedAt": "2022-01-01T08:00:07"
+  },
+  {
+    "nodeID": 2,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 7342894,
+    "publishedAt": "2022-01-01T08:00:05"
+  },
+  {
+    "nodeID": 2,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 1936010,
+    "publishedAt": "2022-01-01T08:00:06"
+  },
+  {
+    "nodeID": 2,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 4791715,
+    "publishedAt": "2022-01-01T08:00:07"
+  },
+  {
+    "nodeID": 2,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 3383782,
+    "publishedAt": "2022-01-01T08:00:07"
+  },
+  {
+    "nodeID": 2,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 5693574,
+    "publishedAt": "2022-01-01T08:00:08"
+  },
+  {
+    "nodeID": 2,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 7272042,
+    "publishedAt": "2022-01-01T08:00:09"
+  },
+  {
+    "nodeID": 2,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 7173378,
+    "publishedAt": "2022-01-01T08:00:07"
+  },
+  {
+    "nodeID": 2,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 8710346,
+    "publishedAt": "2022-01-01T08:00:08"
+  },
+  {
+    "nodeID": 2,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 5052253,
+    "publishedAt": "2022-01-01T08:00:09"
+  },
+  {
+    "nodeID": 2,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 8465300,
+    "publishedAt": "2022-01-01T08:00:09"
+  },
+  {
+    "nodeID": 2,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 4489695,
+    "publishedAt": "2022-01-01T08:00:10"
+  },
+  {
+    "nodeID": 2,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 7024338,
+    "publishedAt": "2022-01-01T08:00:11"
+  },
+  {
+    "nodeID": 2,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 637002,
+    "publishedAt": "2022-01-01T08:00:09"
+  },
+  {
+    "nodeID": 2,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 8254460,
+    "publishedAt": "2022-01-01T08:00:10"
+  },
+  {
+    "nodeID": 2,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 7500106,
+    "publishedAt": "2022-01-01T08:00:11"
+  },
+  {
+    "nodeID": 2,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 8730854,
+    "publishedAt": "2022-01-01T08:00:13"
+  },
+  {
+    "nodeID": 2,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 663764,
+    "publishedAt": "2022-01-01T08:00:14"
+  },
+  {
+    "nodeID": 2,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 6421685,
+    "publishedAt": "2022-01-01T08:00:15"
+  },
+  {
+    "nodeID": 2,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 9896176,
+    "publishedAt": "2022-01-01T08:00:13"
+  },
+  {
+    "nodeID": 2,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 4335623,
+    "publishedAt": "2022-01-01T08:00:14"
+  },
+  {
+    "nodeID": 2,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 9668355,
+    "publishedAt": "2022-01-01T08:00:15"
+  },
+  {
+    "nodeID": 2,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 8331485,
+    "publishedAt": "2022-01-01T08:00:15"
+  },
+  {
+    "nodeID": 2,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 7580310,
+    "publishedAt": "2022-01-01T08:00:16"
+  },
+  {
+    "nodeID": 2,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 3966667,
+    "publishedAt": "2022-01-01T08:00:17"
+  },
+  {
+    "nodeID": 2,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 8318425,
+    "publishedAt": "2022-01-01T08:00:15"
+  },
+  {
+    "nodeID": 2,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 9889265,
+    "publishedAt": "2022-01-01T08:00:16"
+  },
+  {
+    "nodeID": 2,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 7471452,
+    "publishedAt": "2022-01-01T08:00:17"
+  },
+  {
+    "nodeID": 2,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 7346915,
+    "publishedAt": "2022-01-01T08:00:17"
+  },
+  {
+    "nodeID": 2,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 6573687,
+    "publishedAt": "2022-01-01T08:00:18"
+  },
+  {
+    "nodeID": 2,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 9116038,
+    "publishedAt": "2022-01-01T08:00:19"
+  },
+  {
+    "nodeID": 2,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 3631792,
+    "publishedAt": "2022-01-01T08:00:17"
+  },
+  {
+    "nodeID": 2,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 9443137,
+    "publishedAt": "2022-01-01T08:00:18"
+  },
+  {
+    "nodeID": 2,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 2970641,
+    "publishedAt": "2022-01-01T08:00:19"
+  },
+  {
+    "nodeID": 2,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 7974000,
+    "publishedAt": "2022-01-01T08:00:19"
+  },
+  {
+    "nodeID": 2,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 8771082,
+    "publishedAt": "2022-01-01T08:00:20"
+  },
+  {
+    "nodeID": 2,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 5965164,
+    "publishedAt": "2022-01-01T08:00:21"
+  },
+  {
+    "nodeID": 2,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 6120571,
+    "publishedAt": "2022-01-01T08:00:19"
+  },
+  {
+    "nodeID": 2,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 9365158,
+    "publishedAt": "2022-01-01T08:00:20"
+  },
+  {
+    "nodeID": 2,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 4448230,
+    "publishedAt": "2022-01-01T08:00:21"
+  },
+  {
+    "nodeID": 2,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 1284053,
+    "publishedAt": "2022-01-01T08:00:23"
+  },
+  {
+    "nodeID": 2,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 8913214,
+    "publishedAt": "2022-01-01T08:00:24"
+  },
+  {
+    "nodeID": 2,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 356520,
+    "publishedAt": "2022-01-01T08:00:25"
+  },
+  {
+    "nodeID": 2,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 4416682,
+    "publishedAt": "2022-01-01T08:00:23"
+  },
+  {
+    "nodeID": 2,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 9088476,
+    "publishedAt": "2022-01-01T08:00:24"
+  },
+  {
+    "nodeID": 2,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 8337673,
+    "publishedAt": "2022-01-01T08:00:25"
+  },
+  {
+    "nodeID": 2,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 1200698,
+    "publishedAt": "2022-01-01T08:00:25"
+  },
+  {
+    "nodeID": 2,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 3664511,
+    "publishedAt": "2022-01-01T08:00:26"
+  },
+  {
+    "nodeID": 2,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 9925909,
+    "publishedAt": "2022-01-01T08:00:27"
+  },
+  {
+    "nodeID": 2,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 2584530,
+    "publishedAt": "2022-01-01T08:00:25"
+  },
+  {
+    "nodeID": 2,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 1396124,
+    "publishedAt": "2022-01-01T08:00:26"
+  },
+  {
+    "nodeID": 2,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 8508032,
+    "publishedAt": "2022-01-01T08:00:27"
+  },
+  {
+    "nodeID": 2,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 7372154,
+    "publishedAt": "2022-01-01T08:00:27"
+  },
+  {
+    "nodeID": 2,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 523612,
+    "publishedAt": "2022-01-01T08:00:28"
+  },
+  {
+    "nodeID": 2,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 4209805,
+    "publishedAt": "2022-01-01T08:00:29"
+  },
+  {
+    "nodeID": 2,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 6615399,
+    "publishedAt": "2022-01-01T08:00:27"
+  },
+  {
+    "nodeID": 2,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 8667187,
+    "publishedAt": "2022-01-01T08:00:28"
+  },
+  {
+    "nodeID": 2,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 240300,
+    "publishedAt": "2022-01-01T08:00:29"
+  },
+  {
+    "nodeID": 2,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 1582549,
+    "publishedAt": "2022-01-01T08:00:29"
+  },
+  {
+    "nodeID": 2,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 865831,
+    "publishedAt": "2022-01-01T08:00:30"
+  },
+  {
+    "nodeID": 2,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 6795221,
+    "publishedAt": "2022-01-01T08:00:31"
+  },
+  {
+    "nodeID": 2,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 4842689,
+    "publishedAt": "2022-01-01T08:00:29"
+  },
+  {
+    "nodeID": 2,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 4743964,
+    "publishedAt": "2022-01-01T08:00:30"
+  },
+  {
+    "nodeID": 2,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 539383,
+    "publishedAt": "2022-01-01T08:00:31"
+  },
+  {
+    "nodeID": 2,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 4662330,
+    "publishedAt": "2022-01-01T08:00:33"
+  },
+  {
+    "nodeID": 2,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 9030608,
+    "publishedAt": "2022-01-01T08:00:34"
+  },
+  {
+    "nodeID": 2,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 8771540,
+    "publishedAt": "2022-01-01T08:00:35"
+  },
+  {
+    "nodeID": 2,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 3803440,
+    "publishedAt": "2022-01-01T08:00:33"
+  },
+  {
+    "nodeID": 2,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 7266618,
+    "publishedAt": "2022-01-01T08:00:34"
+  },
+  {
+    "nodeID": 2,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 4862965,
+    "publishedAt": "2022-01-01T08:00:35"
+  },
+  {
+    "nodeID": 2,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 9858685,
+    "publishedAt": "2022-01-01T08:00:35"
+  },
+  {
+    "nodeID": 2,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 3941800,
+    "publishedAt": "2022-01-01T08:00:36"
+  },
+  {
+    "nodeID": 2,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 8512213,
+    "publishedAt": "2022-01-01T08:00:37"
+  },
+  {
+    "nodeID": 2,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 414665,
+    "publishedAt": "2022-01-01T08:00:35"
+  },
+  {
+    "nodeID": 2,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 6876529,
+    "publishedAt": "2022-01-01T08:00:36"
+  },
+  {
+    "nodeID": 2,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 5421506,
+    "publishedAt": "2022-01-01T08:00:37"
+  },
+  {
+    "nodeID": 2,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 9812754,
+    "publishedAt": "2022-01-01T08:00:37"
+  },
+  {
+    "nodeID": 2,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 918938,
+    "publishedAt": "2022-01-01T08:00:38"
+  },
+  {
+    "nodeID": 2,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 3027970,
+    "publishedAt": "2022-01-01T08:00:39"
+  },
+  {
+    "nodeID": 2,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 2951499,
+    "publishedAt": "2022-01-01T08:00:37"
+  },
+  {
+    "nodeID": 2,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 158649,
+    "publishedAt": "2022-01-01T08:00:38"
+  },
+  {
+    "nodeID": 2,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 8506773,
+    "publishedAt": "2022-01-01T08:00:39"
+  },
+  {
+    "nodeID": 2,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 1715684,
+    "publishedAt": "2022-01-01T08:00:39"
+  },
+  {
+    "nodeID": 2,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 9094493,
+    "publishedAt": "2022-01-01T08:00:40"
+  },
+  {
+    "nodeID": 2,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 9811102,
+    "publishedAt": "2022-01-01T08:00:41"
+  },
+  {
+    "nodeID": 2,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 7416933,
+    "publishedAt": "2022-01-01T08:00:39"
+  },
+  {
+    "nodeID": 2,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 2901335,
+    "publishedAt": "2022-01-01T08:00:40"
+  },
+  {
+    "nodeID": 2,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 3107888,
+    "publishedAt": "2022-01-01T08:00:41"
+  },
+  {
+    "nodeID": 2,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 7577045,
+    "publishedAt": "2022-01-01T08:05:03"
+  },
+  {
+    "nodeID": 2,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 8669659,
+    "publishedAt": "2022-01-01T08:05:04"
+  },
+  {
+    "nodeID": 2,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 2973695,
+    "publishedAt": "2022-01-01T08:05:05"
+  },
+  {
+    "nodeID": 2,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 8586380,
+    "publishedAt": "2022-01-01T08:05:03"
+  },
+  {
+    "nodeID": 2,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 8587560,
+    "publishedAt": "2022-01-01T08:05:04"
+  },
+  {
+    "nodeID": 2,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 4316790,
+    "publishedAt": "2022-01-01T08:05:05"
+  },
+  {
+    "nodeID": 2,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 3613521,
+    "publishedAt": "2022-01-01T08:05:05"
+  },
+  {
+    "nodeID": 2,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 2770014,
+    "publishedAt": "2022-01-01T08:05:06"
+  },
+  {
+    "nodeID": 2,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 7590250,
+    "publishedAt": "2022-01-01T08:05:07"
+  },
+  {
+    "nodeID": 2,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 3370091,
+    "publishedAt": "2022-01-01T08:05:05"
+  },
+  {
+    "nodeID": 2,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 7546658,
+    "publishedAt": "2022-01-01T08:05:06"
+  },
+  {
+    "nodeID": 2,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 7240744,
+    "publishedAt": "2022-01-01T08:05:07"
+  },
+  {
+    "nodeID": 2,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 1124698,
+    "publishedAt": "2022-01-01T08:05:07"
+  },
+  {
+    "nodeID": 2,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 8222378,
+    "publishedAt": "2022-01-01T08:05:08"
+  },
+  {
+    "nodeID": 2,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 3792662,
+    "publishedAt": "2022-01-01T08:05:09"
+  },
+  {
+    "nodeID": 2,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 5863933,
+    "publishedAt": "2022-01-01T08:05:07"
+  },
+  {
+    "nodeID": 2,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 4318179,
+    "publishedAt": "2022-01-01T08:05:08"
+  },
+  {
+    "nodeID": 2,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 7069982,
+    "publishedAt": "2022-01-01T08:05:09"
+  },
+  {
+    "nodeID": 2,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 7756656,
+    "publishedAt": "2022-01-01T08:05:09"
+  },
+  {
+    "nodeID": 2,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 3229436,
+    "publishedAt": "2022-01-01T08:05:10"
+  },
+  {
+    "nodeID": 2,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 5241765,
+    "publishedAt": "2022-01-01T08:05:11"
+  },
+  {
+    "nodeID": 2,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 1993114,
+    "publishedAt": "2022-01-01T08:05:09"
+  },
+  {
+    "nodeID": 2,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 1390631,
+    "publishedAt": "2022-01-01T08:05:10"
+  },
+  {
+    "nodeID": 2,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 9902242,
+    "publishedAt": "2022-01-01T08:05:11"
+  },
+  {
+    "nodeID": 2,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 3229540,
+    "publishedAt": "2022-01-01T08:05:13"
+  },
+  {
+    "nodeID": 2,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 8144747,
+    "publishedAt": "2022-01-01T08:05:14"
+  },
+  {
+    "nodeID": 2,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 7047811,
+    "publishedAt": "2022-01-01T08:05:15"
+  },
+  {
+    "nodeID": 2,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 5922547,
+    "publishedAt": "2022-01-01T08:05:13"
+  },
+  {
+    "nodeID": 2,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 4455626,
+    "publishedAt": "2022-01-01T08:05:14"
+  },
+  {
+    "nodeID": 2,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 8635640,
+    "publishedAt": "2022-01-01T08:05:15"
+  },
+  {
+    "nodeID": 2,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 4196557,
+    "publishedAt": "2022-01-01T08:05:15"
+  },
+  {
+    "nodeID": 2,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 9468920,
+    "publishedAt": "2022-01-01T08:05:16"
+  },
+  {
+    "nodeID": 2,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 3440084,
+    "publishedAt": "2022-01-01T08:05:17"
+  },
+  {
+    "nodeID": 2,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 8005325,
+    "publishedAt": "2022-01-01T08:05:15"
+  },
+  {
+    "nodeID": 2,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 6588825,
+    "publishedAt": "2022-01-01T08:05:16"
+  },
+  {
+    "nodeID": 2,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 887389,
+    "publishedAt": "2022-01-01T08:05:17"
+  },
+  {
+    "nodeID": 2,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 4554928,
+    "publishedAt": "2022-01-01T08:05:17"
+  },
+  {
+    "nodeID": 2,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 3597475,
+    "publishedAt": "2022-01-01T08:05:18"
+  },
+  {
+    "nodeID": 2,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 637912,
+    "publishedAt": "2022-01-01T08:05:19"
+  },
+  {
+    "nodeID": 2,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 9517123,
+    "publishedAt": "2022-01-01T08:05:17"
+  },
+  {
+    "nodeID": 2,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 841522,
+    "publishedAt": "2022-01-01T08:05:18"
+  },
+  {
+    "nodeID": 2,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 9387918,
+    "publishedAt": "2022-01-01T08:05:19"
+  },
+  {
+    "nodeID": 2,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 8180682,
+    "publishedAt": "2022-01-01T08:05:19"
+  },
+  {
+    "nodeID": 2,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 5306470,
+    "publishedAt": "2022-01-01T08:05:20"
+  },
+  {
+    "nodeID": 2,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 4555835,
+    "publishedAt": "2022-01-01T08:05:21"
+  },
+  {
+    "nodeID": 2,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 8439849,
+    "publishedAt": "2022-01-01T08:05:19"
+  },
+  {
+    "nodeID": 2,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 9961916,
+    "publishedAt": "2022-01-01T08:05:20"
+  },
+  {
+    "nodeID": 2,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 9942985,
+    "publishedAt": "2022-01-01T08:05:21"
+  },
+  {
+    "nodeID": 2,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 6755257,
+    "publishedAt": "2022-01-01T08:05:23"
+  },
+  {
+    "nodeID": 2,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 2579746,
+    "publishedAt": "2022-01-01T08:05:24"
+  },
+  {
+    "nodeID": 2,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 6170559,
+    "publishedAt": "2022-01-01T08:05:25"
+  },
+  {
+    "nodeID": 2,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 1816672,
+    "publishedAt": "2022-01-01T08:05:23"
+  },
+  {
+    "nodeID": 2,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 6518801,
+    "publishedAt": "2022-01-01T08:05:24"
+  },
+  {
+    "nodeID": 2,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 7836756,
+    "publishedAt": "2022-01-01T08:05:25"
+  },
+  {
+    "nodeID": 2,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 7183421,
+    "publishedAt": "2022-01-01T08:05:25"
+  },
+  {
+    "nodeID": 2,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 7626115,
+    "publishedAt": "2022-01-01T08:05:26"
+  },
+  {
+    "nodeID": 2,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 427480,
+    "publishedAt": "2022-01-01T08:05:27"
+  },
+  {
+    "nodeID": 2,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 2490119,
+    "publishedAt": "2022-01-01T08:05:25"
+  },
+  {
+    "nodeID": 2,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 2523857,
+    "publishedAt": "2022-01-01T08:05:26"
+  },
+  {
+    "nodeID": 2,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 2945903,
+    "publishedAt": "2022-01-01T08:05:27"
+  },
+  {
+    "nodeID": 2,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 5569961,
+    "publishedAt": "2022-01-01T08:05:27"
+  },
+  {
+    "nodeID": 2,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 9420779,
+    "publishedAt": "2022-01-01T08:05:28"
+  },
+  {
+    "nodeID": 2,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 4683090,
+    "publishedAt": "2022-01-01T08:05:29"
+  },
+  {
+    "nodeID": 2,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 2188721,
+    "publishedAt": "2022-01-01T08:05:27"
+  },
+  {
+    "nodeID": 2,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 7788651,
+    "publishedAt": "2022-01-01T08:05:28"
+  },
+  {
+    "nodeID": 2,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 2003138,
+    "publishedAt": "2022-01-01T08:05:29"
+  },
+  {
+    "nodeID": 2,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 2571749,
+    "publishedAt": "2022-01-01T08:05:29"
+  },
+  {
+    "nodeID": 2,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 2250913,
+    "publishedAt": "2022-01-01T08:05:30"
+  },
+  {
+    "nodeID": 2,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 3079082,
+    "publishedAt": "2022-01-01T08:05:31"
+  },
+  {
+    "nodeID": 2,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 8620697,
+    "publishedAt": "2022-01-01T08:05:29"
+  },
+  {
+    "nodeID": 2,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 4955199,
+    "publishedAt": "2022-01-01T08:05:30"
+  },
+  {
+    "nodeID": 2,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 441883,
+    "publishedAt": "2022-01-01T08:05:31"
+  },
+  {
+    "nodeID": 2,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 8300298,
+    "publishedAt": "2022-01-01T08:05:33"
+  },
+  {
+    "nodeID": 2,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 4879854,
+    "publishedAt": "2022-01-01T08:05:34"
+  },
+  {
+    "nodeID": 2,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 6615387,
+    "publishedAt": "2022-01-01T08:05:35"
+  },
+  {
+    "nodeID": 2,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 4690839,
+    "publishedAt": "2022-01-01T08:05:33"
+  },
+  {
+    "nodeID": 2,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 2460504,
+    "publishedAt": "2022-01-01T08:05:34"
+  },
+  {
+    "nodeID": 2,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 2824976,
+    "publishedAt": "2022-01-01T08:05:35"
+  },
+  {
+    "nodeID": 2,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 9231119,
+    "publishedAt": "2022-01-01T08:05:35"
+  },
+  {
+    "nodeID": 2,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 3029330,
+    "publishedAt": "2022-01-01T08:05:36"
+  },
+  {
+    "nodeID": 2,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 4966193,
+    "publishedAt": "2022-01-01T08:05:37"
+  },
+  {
+    "nodeID": 2,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 8432338,
+    "publishedAt": "2022-01-01T08:05:35"
+  },
+  {
+    "nodeID": 2,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 9378264,
+    "publishedAt": "2022-01-01T08:05:36"
+  },
+  {
+    "nodeID": 2,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 7396082,
+    "publishedAt": "2022-01-01T08:05:37"
+  },
+  {
+    "nodeID": 2,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 2427378,
+    "publishedAt": "2022-01-01T08:05:37"
+  },
+  {
+    "nodeID": 2,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 2842282,
+    "publishedAt": "2022-01-01T08:05:38"
+  },
+  {
+    "nodeID": 2,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 3567235,
+    "publishedAt": "2022-01-01T08:05:39"
+  },
+  {
+    "nodeID": 2,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 9825643,
+    "publishedAt": "2022-01-01T08:05:37"
+  },
+  {
+    "nodeID": 2,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 6329626,
+    "publishedAt": "2022-01-01T08:05:38"
+  },
+  {
+    "nodeID": 2,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 925069,
+    "publishedAt": "2022-01-01T08:05:39"
+  },
+  {
+    "nodeID": 2,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 8193907,
+    "publishedAt": "2022-01-01T08:05:39"
+  },
+  {
+    "nodeID": 2,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 5557940,
+    "publishedAt": "2022-01-01T08:05:40"
+  },
+  {
+    "nodeID": 2,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 3168855,
+    "publishedAt": "2022-01-01T08:05:41"
+  },
+  {
+    "nodeID": 2,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 5142359,
+    "publishedAt": "2022-01-01T08:05:39"
+  },
+  {
+    "nodeID": 2,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 5699476,
+    "publishedAt": "2022-01-01T08:05:40"
+  },
+  {
+    "nodeID": 2,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 5432055,
+    "publishedAt": "2022-01-01T08:05:41"
+  },
+  {
+    "nodeID": 3,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 1096020,
+    "publishedAt": "2022-01-01T08:00:03"
+  },
+  {
+    "nodeID": 3,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 801837,
+    "publishedAt": "2022-01-01T08:00:04"
+  },
+  {
+    "nodeID": 3,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 4147489,
+    "publishedAt": "2022-01-01T08:00:05"
+  },
+  {
+    "nodeID": 3,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 6950980,
+    "publishedAt": "2022-01-01T08:00:03"
+  },
+  {
+    "nodeID": 3,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 9563248,
+    "publishedAt": "2022-01-01T08:00:04"
+  },
+  {
+    "nodeID": 3,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 6512284,
+    "publishedAt": "2022-01-01T08:00:05"
+  },
+  {
+    "nodeID": 3,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 130159,
+    "publishedAt": "2022-01-01T08:00:05"
+  },
+  {
+    "nodeID": 3,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 6077317,
+    "publishedAt": "2022-01-01T08:00:06"
+  },
+  {
+    "nodeID": 3,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 285088,
+    "publishedAt": "2022-01-01T08:00:07"
+  },
+  {
+    "nodeID": 3,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 1132150,
+    "publishedAt": "2022-01-01T08:00:05"
+  },
+  {
+    "nodeID": 3,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 701376,
+    "publishedAt": "2022-01-01T08:00:06"
+  },
+  {
+    "nodeID": 3,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 8352228,
+    "publishedAt": "2022-01-01T08:00:07"
+  },
+  {
+    "nodeID": 3,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 3253651,
+    "publishedAt": "2022-01-01T08:00:07"
+  },
+  {
+    "nodeID": 3,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 3653236,
+    "publishedAt": "2022-01-01T08:00:08"
+  },
+  {
+    "nodeID": 3,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 6708820,
+    "publishedAt": "2022-01-01T08:00:09"
+  },
+  {
+    "nodeID": 3,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 3722103,
+    "publishedAt": "2022-01-01T08:00:07"
+  },
+  {
+    "nodeID": 3,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 5018944,
+    "publishedAt": "2022-01-01T08:00:08"
+  },
+  {
+    "nodeID": 3,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 1241026,
+    "publishedAt": "2022-01-01T08:00:09"
+  },
+  {
+    "nodeID": 3,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 7259512,
+    "publishedAt": "2022-01-01T08:00:09"
+  },
+  {
+    "nodeID": 3,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 6398839,
+    "publishedAt": "2022-01-01T08:00:10"
+  },
+  {
+    "nodeID": 3,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 9718184,
+    "publishedAt": "2022-01-01T08:00:11"
+  },
+  {
+    "nodeID": 3,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 5726047,
+    "publishedAt": "2022-01-01T08:00:09"
+  },
+  {
+    "nodeID": 3,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 7250417,
+    "publishedAt": "2022-01-01T08:00:10"
+  },
+  {
+    "nodeID": 3,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 9932242,
+    "publishedAt": "2022-01-01T08:00:11"
+  },
+  {
+    "nodeID": 3,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 6605405,
+    "publishedAt": "2022-01-01T08:00:13"
+  },
+  {
+    "nodeID": 3,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 1799986,
+    "publishedAt": "2022-01-01T08:00:14"
+  },
+  {
+    "nodeID": 3,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 9364634,
+    "publishedAt": "2022-01-01T08:00:15"
+  },
+  {
+    "nodeID": 3,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 55520,
+    "publishedAt": "2022-01-01T08:00:13"
+  },
+  {
+    "nodeID": 3,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 9846167,
+    "publishedAt": "2022-01-01T08:00:14"
+  },
+  {
+    "nodeID": 3,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 5827870,
+    "publishedAt": "2022-01-01T08:00:15"
+  },
+  {
+    "nodeID": 3,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 1893114,
+    "publishedAt": "2022-01-01T08:00:15"
+  },
+  {
+    "nodeID": 3,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 3055211,
+    "publishedAt": "2022-01-01T08:00:16"
+  },
+  {
+    "nodeID": 3,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 7151345,
+    "publishedAt": "2022-01-01T08:00:17"
+  },
+  {
+    "nodeID": 3,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 1618843,
+    "publishedAt": "2022-01-01T08:00:15"
+  },
+  {
+    "nodeID": 3,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 969219,
+    "publishedAt": "2022-01-01T08:00:16"
+  },
+  {
+    "nodeID": 3,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 6951293,
+    "publishedAt": "2022-01-01T08:00:17"
+  },
+  {
+    "nodeID": 3,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 6761026,
+    "publishedAt": "2022-01-01T08:00:17"
+  },
+  {
+    "nodeID": 3,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 7682467,
+    "publishedAt": "2022-01-01T08:00:18"
+  },
+  {
+    "nodeID": 3,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 570836,
+    "publishedAt": "2022-01-01T08:00:19"
+  },
+  {
+    "nodeID": 3,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 7972820,
+    "publishedAt": "2022-01-01T08:00:17"
+  },
+  {
+    "nodeID": 3,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 6762592,
+    "publishedAt": "2022-01-01T08:00:18"
+  },
+  {
+    "nodeID": 3,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 2119724,
+    "publishedAt": "2022-01-01T08:00:19"
+  },
+  {
+    "nodeID": 3,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 899872,
+    "publishedAt": "2022-01-01T08:00:19"
+  },
+  {
+    "nodeID": 3,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 1652561,
+    "publishedAt": "2022-01-01T08:00:20"
+  },
+  {
+    "nodeID": 3,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 7194442,
+    "publishedAt": "2022-01-01T08:00:21"
+  },
+  {
+    "nodeID": 3,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 9447577,
+    "publishedAt": "2022-01-01T08:00:19"
+  },
+  {
+    "nodeID": 3,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 2796139,
+    "publishedAt": "2022-01-01T08:00:20"
+  },
+  {
+    "nodeID": 3,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 2675956,
+    "publishedAt": "2022-01-01T08:00:21"
+  },
+  {
+    "nodeID": 3,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 3375820,
+    "publishedAt": "2022-01-01T08:00:23"
+  },
+  {
+    "nodeID": 3,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 4559487,
+    "publishedAt": "2022-01-01T08:00:24"
+  },
+  {
+    "nodeID": 3,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 4630697,
+    "publishedAt": "2022-01-01T08:00:25"
+  },
+  {
+    "nodeID": 3,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 1075689,
+    "publishedAt": "2022-01-01T08:00:23"
+  },
+  {
+    "nodeID": 3,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 7872867,
+    "publishedAt": "2022-01-01T08:00:24"
+  },
+  {
+    "nodeID": 3,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 4646557,
+    "publishedAt": "2022-01-01T08:00:25"
+  },
+  {
+    "nodeID": 3,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 5695436,
+    "publishedAt": "2022-01-01T08:00:25"
+  },
+  {
+    "nodeID": 3,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 5522993,
+    "publishedAt": "2022-01-01T08:00:26"
+  },
+  {
+    "nodeID": 3,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 8275539,
+    "publishedAt": "2022-01-01T08:00:27"
+  },
+  {
+    "nodeID": 3,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 2729938,
+    "publishedAt": "2022-01-01T08:00:25"
+  },
+  {
+    "nodeID": 3,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 323896,
+    "publishedAt": "2022-01-01T08:00:26"
+  },
+  {
+    "nodeID": 3,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 6707474,
+    "publishedAt": "2022-01-01T08:00:27"
+  },
+  {
+    "nodeID": 3,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 7243052,
+    "publishedAt": "2022-01-01T08:00:27"
+  },
+  {
+    "nodeID": 3,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 813948,
+    "publishedAt": "2022-01-01T08:00:28"
+  },
+  {
+    "nodeID": 3,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 4001888,
+    "publishedAt": "2022-01-01T08:00:29"
+  },
+  {
+    "nodeID": 3,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 2041213,
+    "publishedAt": "2022-01-01T08:00:27"
+  },
+  {
+    "nodeID": 3,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 7203325,
+    "publishedAt": "2022-01-01T08:00:28"
+  },
+  {
+    "nodeID": 3,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 7645333,
+    "publishedAt": "2022-01-01T08:00:29"
+  },
+  {
+    "nodeID": 3,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 373279,
+    "publishedAt": "2022-01-01T08:00:29"
+  },
+  {
+    "nodeID": 3,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 9354716,
+    "publishedAt": "2022-01-01T08:00:30"
+  },
+  {
+    "nodeID": 3,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 2346107,
+    "publishedAt": "2022-01-01T08:00:31"
+  },
+  {
+    "nodeID": 3,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 2409070,
+    "publishedAt": "2022-01-01T08:00:29"
+  },
+  {
+    "nodeID": 3,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 2498637,
+    "publishedAt": "2022-01-01T08:00:30"
+  },
+  {
+    "nodeID": 3,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 4339252,
+    "publishedAt": "2022-01-01T08:00:31"
+  },
+  {
+    "nodeID": 3,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 6815748,
+    "publishedAt": "2022-01-01T08:00:33"
+  },
+  {
+    "nodeID": 3,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 1044795,
+    "publishedAt": "2022-01-01T08:00:34"
+  },
+  {
+    "nodeID": 3,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 779945,
+    "publishedAt": "2022-01-01T08:00:35"
+  },
+  {
+    "nodeID": 3,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 973546,
+    "publishedAt": "2022-01-01T08:00:33"
+  },
+  {
+    "nodeID": 3,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 2594748,
+    "publishedAt": "2022-01-01T08:00:34"
+  },
+  {
+    "nodeID": 3,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 245437,
+    "publishedAt": "2022-01-01T08:00:35"
+  },
+  {
+    "nodeID": 3,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 4554824,
+    "publishedAt": "2022-01-01T08:00:35"
+  },
+  {
+    "nodeID": 3,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 9565134,
+    "publishedAt": "2022-01-01T08:00:36"
+  },
+  {
+    "nodeID": 3,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 7117229,
+    "publishedAt": "2022-01-01T08:00:37"
+  },
+  {
+    "nodeID": 3,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 4727472,
+    "publishedAt": "2022-01-01T08:00:35"
+  },
+  {
+    "nodeID": 3,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 7011142,
+    "publishedAt": "2022-01-01T08:00:36"
+  },
+  {
+    "nodeID": 3,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 2836848,
+    "publishedAt": "2022-01-01T08:00:37"
+  },
+  {
+    "nodeID": 3,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 528698,
+    "publishedAt": "2022-01-01T08:00:37"
+  },
+  {
+    "nodeID": 3,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 8334828,
+    "publishedAt": "2022-01-01T08:00:38"
+  },
+  {
+    "nodeID": 3,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 9451936,
+    "publishedAt": "2022-01-01T08:00:39"
+  },
+  {
+    "nodeID": 3,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 4334867,
+    "publishedAt": "2022-01-01T08:00:37"
+  },
+  {
+    "nodeID": 3,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 142971,
+    "publishedAt": "2022-01-01T08:00:38"
+  },
+  {
+    "nodeID": 3,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 6441980,
+    "publishedAt": "2022-01-01T08:00:39"
+  },
+  {
+    "nodeID": 3,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 6516410,
+    "publishedAt": "2022-01-01T08:00:39"
+  },
+  {
+    "nodeID": 3,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 8734068,
+    "publishedAt": "2022-01-01T08:00:40"
+  },
+  {
+    "nodeID": 3,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 1597055,
+    "publishedAt": "2022-01-01T08:00:41"
+  },
+  {
+    "nodeID": 3,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 2817421,
+    "publishedAt": "2022-01-01T08:00:39"
+  },
+  {
+    "nodeID": 3,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 2428177,
+    "publishedAt": "2022-01-01T08:00:40"
+  },
+  {
+    "nodeID": 3,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 5413299,
+    "publishedAt": "2022-01-01T08:00:41"
+  },
+  {
+    "nodeID": 3,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 6250237,
+    "publishedAt": "2022-01-01T08:05:03"
+  },
+  {
+    "nodeID": 3,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 2554315,
+    "publishedAt": "2022-01-01T08:05:04"
+  },
+  {
+    "nodeID": 3,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 4637412,
+    "publishedAt": "2022-01-01T08:05:05"
+  },
+  {
+    "nodeID": 3,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 6306449,
+    "publishedAt": "2022-01-01T08:05:03"
+  },
+  {
+    "nodeID": 3,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 3644129,
+    "publishedAt": "2022-01-01T08:05:04"
+  },
+  {
+    "nodeID": 3,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 7984733,
+    "publishedAt": "2022-01-01T08:05:05"
+  },
+  {
+    "nodeID": 3,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 3788903,
+    "publishedAt": "2022-01-01T08:05:05"
+  },
+  {
+    "nodeID": 3,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 3128216,
+    "publishedAt": "2022-01-01T08:05:06"
+  },
+  {
+    "nodeID": 3,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 3267856,
+    "publishedAt": "2022-01-01T08:05:07"
+  },
+  {
+    "nodeID": 3,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 3034072,
+    "publishedAt": "2022-01-01T08:05:05"
+  },
+  {
+    "nodeID": 3,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 3552195,
+    "publishedAt": "2022-01-01T08:05:06"
+  },
+  {
+    "nodeID": 3,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 2464723,
+    "publishedAt": "2022-01-01T08:05:07"
+  },
+  {
+    "nodeID": 3,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 270352,
+    "publishedAt": "2022-01-01T08:05:07"
+  },
+  {
+    "nodeID": 3,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 3340692,
+    "publishedAt": "2022-01-01T08:05:08"
+  },
+  {
+    "nodeID": 3,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 3294840,
+    "publishedAt": "2022-01-01T08:05:09"
+  },
+  {
+    "nodeID": 3,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 8570138,
+    "publishedAt": "2022-01-01T08:05:07"
+  },
+  {
+    "nodeID": 3,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 3901486,
+    "publishedAt": "2022-01-01T08:05:08"
+  },
+  {
+    "nodeID": 3,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 3052339,
+    "publishedAt": "2022-01-01T08:05:09"
+  },
+  {
+    "nodeID": 3,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 4980711,
+    "publishedAt": "2022-01-01T08:05:09"
+  },
+  {
+    "nodeID": 3,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 6696981,
+    "publishedAt": "2022-01-01T08:05:10"
+  },
+  {
+    "nodeID": 3,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 6357194,
+    "publishedAt": "2022-01-01T08:05:11"
+  },
+  {
+    "nodeID": 3,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 7440505,
+    "publishedAt": "2022-01-01T08:05:09"
+  },
+  {
+    "nodeID": 3,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 2588846,
+    "publishedAt": "2022-01-01T08:05:10"
+  },
+  {
+    "nodeID": 3,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 2857321,
+    "publishedAt": "2022-01-01T08:05:11"
+  },
+  {
+    "nodeID": 3,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 9808233,
+    "publishedAt": "2022-01-01T08:05:13"
+  },
+  {
+    "nodeID": 3,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 5764918,
+    "publishedAt": "2022-01-01T08:05:14"
+  },
+  {
+    "nodeID": 3,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 3895709,
+    "publishedAt": "2022-01-01T08:05:15"
+  },
+  {
+    "nodeID": 3,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 6736949,
+    "publishedAt": "2022-01-01T08:05:13"
+  },
+  {
+    "nodeID": 3,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 8809616,
+    "publishedAt": "2022-01-01T08:05:14"
+  },
+  {
+    "nodeID": 3,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 8063251,
+    "publishedAt": "2022-01-01T08:05:15"
+  },
+  {
+    "nodeID": 3,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 405926,
+    "publishedAt": "2022-01-01T08:05:15"
+  },
+  {
+    "nodeID": 3,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 2582070,
+    "publishedAt": "2022-01-01T08:05:16"
+  },
+  {
+    "nodeID": 3,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 3381248,
+    "publishedAt": "2022-01-01T08:05:17"
+  },
+  {
+    "nodeID": 3,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 9633742,
+    "publishedAt": "2022-01-01T08:05:15"
+  },
+  {
+    "nodeID": 3,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 1536601,
+    "publishedAt": "2022-01-01T08:05:16"
+  },
+  {
+    "nodeID": 3,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 5697390,
+    "publishedAt": "2022-01-01T08:05:17"
+  },
+  {
+    "nodeID": 3,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 301765,
+    "publishedAt": "2022-01-01T08:05:17"
+  },
+  {
+    "nodeID": 3,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 2998128,
+    "publishedAt": "2022-01-01T08:05:18"
+  },
+  {
+    "nodeID": 3,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 1746464,
+    "publishedAt": "2022-01-01T08:05:19"
+  },
+  {
+    "nodeID": 3,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 546167,
+    "publishedAt": "2022-01-01T08:05:17"
+  },
+  {
+    "nodeID": 3,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 5844179,
+    "publishedAt": "2022-01-01T08:05:18"
+  },
+  {
+    "nodeID": 3,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 7034573,
+    "publishedAt": "2022-01-01T08:05:19"
+  },
+  {
+    "nodeID": 3,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 5052405,
+    "publishedAt": "2022-01-01T08:05:19"
+  },
+  {
+    "nodeID": 3,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 1581996,
+    "publishedAt": "2022-01-01T08:05:20"
+  },
+  {
+    "nodeID": 3,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 9048585,
+    "publishedAt": "2022-01-01T08:05:21"
+  },
+  {
+    "nodeID": 3,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 7005663,
+    "publishedAt": "2022-01-01T08:05:19"
+  },
+  {
+    "nodeID": 3,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 3306312,
+    "publishedAt": "2022-01-01T08:05:20"
+  },
+  {
+    "nodeID": 3,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 4824175,
+    "publishedAt": "2022-01-01T08:05:21"
+  },
+  {
+    "nodeID": 3,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 4478036,
+    "publishedAt": "2022-01-01T08:05:23"
+  },
+  {
+    "nodeID": 3,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 5554683,
+    "publishedAt": "2022-01-01T08:05:24"
+  },
+  {
+    "nodeID": 3,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 8890413,
+    "publishedAt": "2022-01-01T08:05:25"
+  },
+  {
+    "nodeID": 3,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 4868095,
+    "publishedAt": "2022-01-01T08:05:23"
+  },
+  {
+    "nodeID": 3,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 9986338,
+    "publishedAt": "2022-01-01T08:05:24"
+  },
+  {
+    "nodeID": 3,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 5819294,
+    "publishedAt": "2022-01-01T08:05:25"
+  },
+  {
+    "nodeID": 3,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 221824,
+    "publishedAt": "2022-01-01T08:05:25"
+  },
+  {
+    "nodeID": 3,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 6639995,
+    "publishedAt": "2022-01-01T08:05:26"
+  },
+  {
+    "nodeID": 3,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 3211221,
+    "publishedAt": "2022-01-01T08:05:27"
+  },
+  {
+    "nodeID": 3,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 3536737,
+    "publishedAt": "2022-01-01T08:05:25"
+  },
+  {
+    "nodeID": 3,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 9345846,
+    "publishedAt": "2022-01-01T08:05:26"
+  },
+  {
+    "nodeID": 3,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 599126,
+    "publishedAt": "2022-01-01T08:05:27"
+  },
+  {
+    "nodeID": 3,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 5243791,
+    "publishedAt": "2022-01-01T08:05:27"
+  },
+  {
+    "nodeID": 3,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 3558898,
+    "publishedAt": "2022-01-01T08:05:28"
+  },
+  {
+    "nodeID": 3,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 8000663,
+    "publishedAt": "2022-01-01T08:05:29"
+  },
+  {
+    "nodeID": 3,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 8945092,
+    "publishedAt": "2022-01-01T08:05:27"
+  },
+  {
+    "nodeID": 3,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 6859257,
+    "publishedAt": "2022-01-01T08:05:28"
+  },
+  {
+    "nodeID": 3,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 5153718,
+    "publishedAt": "2022-01-01T08:05:29"
+  },
+  {
+    "nodeID": 3,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 8197868,
+    "publishedAt": "2022-01-01T08:05:29"
+  },
+  {
+    "nodeID": 3,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 2118574,
+    "publishedAt": "2022-01-01T08:05:30"
+  },
+  {
+    "nodeID": 3,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 7185002,
+    "publishedAt": "2022-01-01T08:05:31"
+  },
+  {
+    "nodeID": 3,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 7572711,
+    "publishedAt": "2022-01-01T08:05:29"
+  },
+  {
+    "nodeID": 3,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 744044,
+    "publishedAt": "2022-01-01T08:05:30"
+  },
+  {
+    "nodeID": 3,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 7648952,
+    "publishedAt": "2022-01-01T08:05:31"
+  },
+  {
+    "nodeID": 3,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 7274470,
+    "publishedAt": "2022-01-01T08:05:33"
+  },
+  {
+    "nodeID": 3,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 3558444,
+    "publishedAt": "2022-01-01T08:05:34"
+  },
+  {
+    "nodeID": 3,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 4800659,
+    "publishedAt": "2022-01-01T08:05:35"
+  },
+  {
+    "nodeID": 3,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 2304337,
+    "publishedAt": "2022-01-01T08:05:33"
+  },
+  {
+    "nodeID": 3,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 5845191,
+    "publishedAt": "2022-01-01T08:05:34"
+  },
+  {
+    "nodeID": 3,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 5037878,
+    "publishedAt": "2022-01-01T08:05:35"
+  },
+  {
+    "nodeID": 3,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 9759742,
+    "publishedAt": "2022-01-01T08:05:35"
+  },
+  {
+    "nodeID": 3,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 2423070,
+    "publishedAt": "2022-01-01T08:05:36"
+  },
+  {
+    "nodeID": 3,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 5070058,
+    "publishedAt": "2022-01-01T08:05:37"
+  },
+  {
+    "nodeID": 3,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 7860317,
+    "publishedAt": "2022-01-01T08:05:35"
+  },
+  {
+    "nodeID": 3,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 4969405,
+    "publishedAt": "2022-01-01T08:05:36"
+  },
+  {
+    "nodeID": 3,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 3223537,
+    "publishedAt": "2022-01-01T08:05:37"
+  },
+  {
+    "nodeID": 3,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 1730301,
+    "publishedAt": "2022-01-01T08:05:37"
+  },
+  {
+    "nodeID": 3,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 5510479,
+    "publishedAt": "2022-01-01T08:05:38"
+  },
+  {
+    "nodeID": 3,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 8651923,
+    "publishedAt": "2022-01-01T08:05:39"
+  },
+  {
+    "nodeID": 3,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 1163829,
+    "publishedAt": "2022-01-01T08:05:37"
+  },
+  {
+    "nodeID": 3,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 2169781,
+    "publishedAt": "2022-01-01T08:05:38"
+  },
+  {
+    "nodeID": 3,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 7690893,
+    "publishedAt": "2022-01-01T08:05:39"
+  },
+  {
+    "nodeID": 3,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 4577994,
+    "publishedAt": "2022-01-01T08:05:39"
+  },
+  {
+    "nodeID": 3,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 8495325,
+    "publishedAt": "2022-01-01T08:05:40"
+  },
+  {
+    "nodeID": 3,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 1092905,
+    "publishedAt": "2022-01-01T08:05:41"
+  },
+  {
+    "nodeID": 3,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 7838892,
+    "publishedAt": "2022-01-01T08:05:39"
+  },
+  {
+    "nodeID": 3,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 8095513,
+    "publishedAt": "2022-01-01T08:05:40"
+  },
+  {
+    "nodeID": 3,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 9349890,
+    "publishedAt": "2022-01-01T08:05:41"
+  },
+  {
+    "nodeID": 4,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 7796949,
+    "publishedAt": "2022-01-01T08:00:03"
+  },
+  {
+    "nodeID": 4,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 1926881,
+    "publishedAt": "2022-01-01T08:00:04"
+  },
+  {
+    "nodeID": 4,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 2487030,
+    "publishedAt": "2022-01-01T08:00:05"
+  },
+  {
+    "nodeID": 4,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 5105487,
+    "publishedAt": "2022-01-01T08:00:03"
+  },
+  {
+    "nodeID": 4,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 3763764,
+    "publishedAt": "2022-01-01T08:00:04"
+  },
+  {
+    "nodeID": 4,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 5410461,
+    "publishedAt": "2022-01-01T08:00:05"
+  },
+  {
+    "nodeID": 4,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 2627137,
+    "publishedAt": "2022-01-01T08:00:05"
+  },
+  {
+    "nodeID": 4,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 8195613,
+    "publishedAt": "2022-01-01T08:00:06"
+  },
+  {
+    "nodeID": 4,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 3232393,
+    "publishedAt": "2022-01-01T08:00:07"
+  },
+  {
+    "nodeID": 4,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 8057756,
+    "publishedAt": "2022-01-01T08:00:05"
+  },
+  {
+    "nodeID": 4,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 4484502,
+    "publishedAt": "2022-01-01T08:00:06"
+  },
+  {
+    "nodeID": 4,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 1554615,
+    "publishedAt": "2022-01-01T08:00:07"
+  },
+  {
+    "nodeID": 4,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 3257832,
+    "publishedAt": "2022-01-01T08:00:07"
+  },
+  {
+    "nodeID": 4,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 9983171,
+    "publishedAt": "2022-01-01T08:00:08"
+  },
+  {
+    "nodeID": 4,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 5684312,
+    "publishedAt": "2022-01-01T08:00:09"
+  },
+  {
+    "nodeID": 4,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 5542419,
+    "publishedAt": "2022-01-01T08:00:07"
+  },
+  {
+    "nodeID": 4,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 8753994,
+    "publishedAt": "2022-01-01T08:00:08"
+  },
+  {
+    "nodeID": 4,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 524677,
+    "publishedAt": "2022-01-01T08:00:09"
+  },
+  {
+    "nodeID": 4,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 6384626,
+    "publishedAt": "2022-01-01T08:00:09"
+  },
+  {
+    "nodeID": 4,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 661911,
+    "publishedAt": "2022-01-01T08:00:10"
+  },
+  {
+    "nodeID": 4,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 2570162,
+    "publishedAt": "2022-01-01T08:00:11"
+  },
+  {
+    "nodeID": 4,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 2511700,
+    "publishedAt": "2022-01-01T08:00:09"
+  },
+  {
+    "nodeID": 4,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 2225736,
+    "publishedAt": "2022-01-01T08:00:10"
+  },
+  {
+    "nodeID": 4,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 2791415,
+    "publishedAt": "2022-01-01T08:00:11"
+  },
+  {
+    "nodeID": 4,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 2670456,
+    "publishedAt": "2022-01-01T08:00:13"
+  },
+  {
+    "nodeID": 4,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 1468415,
+    "publishedAt": "2022-01-01T08:00:14"
+  },
+  {
+    "nodeID": 4,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 350514,
+    "publishedAt": "2022-01-01T08:00:15"
+  },
+  {
+    "nodeID": 4,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 1654217,
+    "publishedAt": "2022-01-01T08:00:13"
+  },
+  {
+    "nodeID": 4,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 5172288,
+    "publishedAt": "2022-01-01T08:00:14"
+  },
+  {
+    "nodeID": 4,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 5222215,
+    "publishedAt": "2022-01-01T08:00:15"
+  },
+  {
+    "nodeID": 4,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 114806,
+    "publishedAt": "2022-01-01T08:00:15"
+  },
+  {
+    "nodeID": 4,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 1645725,
+    "publishedAt": "2022-01-01T08:00:16"
+  },
+  {
+    "nodeID": 4,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 8296720,
+    "publishedAt": "2022-01-01T08:00:17"
+  },
+  {
+    "nodeID": 4,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 5602115,
+    "publishedAt": "2022-01-01T08:00:15"
+  },
+  {
+    "nodeID": 4,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 2391861,
+    "publishedAt": "2022-01-01T08:00:16"
+  },
+  {
+    "nodeID": 4,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 200212,
+    "publishedAt": "2022-01-01T08:00:17"
+  },
+  {
+    "nodeID": 4,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 8002173,
+    "publishedAt": "2022-01-01T08:00:17"
+  },
+  {
+    "nodeID": 4,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 7401791,
+    "publishedAt": "2022-01-01T08:00:18"
+  },
+  {
+    "nodeID": 4,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 984644,
+    "publishedAt": "2022-01-01T08:00:19"
+  },
+  {
+    "nodeID": 4,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 1746253,
+    "publishedAt": "2022-01-01T08:00:17"
+  },
+  {
+    "nodeID": 4,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 9251707,
+    "publishedAt": "2022-01-01T08:00:18"
+  },
+  {
+    "nodeID": 4,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 4402298,
+    "publishedAt": "2022-01-01T08:00:19"
+  },
+  {
+    "nodeID": 4,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 3329571,
+    "publishedAt": "2022-01-01T08:00:19"
+  },
+  {
+    "nodeID": 4,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 3113017,
+    "publishedAt": "2022-01-01T08:00:20"
+  },
+  {
+    "nodeID": 4,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 3145541,
+    "publishedAt": "2022-01-01T08:00:21"
+  },
+  {
+    "nodeID": 4,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 2325301,
+    "publishedAt": "2022-01-01T08:00:19"
+  },
+  {
+    "nodeID": 4,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 1427128,
+    "publishedAt": "2022-01-01T08:00:20"
+  },
+  {
+    "nodeID": 4,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 564039,
+    "publishedAt": "2022-01-01T08:00:21"
+  },
+  {
+    "nodeID": 4,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 1985524,
+    "publishedAt": "2022-01-01T08:00:23"
+  },
+  {
+    "nodeID": 4,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 7256607,
+    "publishedAt": "2022-01-01T08:00:24"
+  },
+  {
+    "nodeID": 4,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 2018716,
+    "publishedAt": "2022-01-01T08:00:25"
+  },
+  {
+    "nodeID": 4,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 982125,
+    "publishedAt": "2022-01-01T08:00:23"
+  },
+  {
+    "nodeID": 4,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 4632313,
+    "publishedAt": "2022-01-01T08:00:24"
+  },
+  {
+    "nodeID": 4,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 4754034,
+    "publishedAt": "2022-01-01T08:00:25"
+  },
+  {
+    "nodeID": 4,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 7462604,
+    "publishedAt": "2022-01-01T08:00:25"
+  },
+  {
+    "nodeID": 4,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 8278988,
+    "publishedAt": "2022-01-01T08:00:26"
+  },
+  {
+    "nodeID": 4,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 8444935,
+    "publishedAt": "2022-01-01T08:00:27"
+  },
+  {
+    "nodeID": 4,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 8552322,
+    "publishedAt": "2022-01-01T08:00:25"
+  },
+  {
+    "nodeID": 4,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 558734,
+    "publishedAt": "2022-01-01T08:00:26"
+  },
+  {
+    "nodeID": 4,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 9697743,
+    "publishedAt": "2022-01-01T08:00:27"
+  },
+  {
+    "nodeID": 4,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 5989712,
+    "publishedAt": "2022-01-01T08:00:27"
+  },
+  {
+    "nodeID": 4,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 7804998,
+    "publishedAt": "2022-01-01T08:00:28"
+  },
+  {
+    "nodeID": 4,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 9028024,
+    "publishedAt": "2022-01-01T08:00:29"
+  },
+  {
+    "nodeID": 4,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 1205443,
+    "publishedAt": "2022-01-01T08:00:27"
+  },
+  {
+    "nodeID": 4,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 7201778,
+    "publishedAt": "2022-01-01T08:00:28"
+  },
+  {
+    "nodeID": 4,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 8530403,
+    "publishedAt": "2022-01-01T08:00:29"
+  },
+  {
+    "nodeID": 4,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 204262,
+    "publishedAt": "2022-01-01T08:00:29"
+  },
+  {
+    "nodeID": 4,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 599817,
+    "publishedAt": "2022-01-01T08:00:30"
+  },
+  {
+    "nodeID": 4,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 5581841,
+    "publishedAt": "2022-01-01T08:00:31"
+  },
+  {
+    "nodeID": 4,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 3958127,
+    "publishedAt": "2022-01-01T08:00:29"
+  },
+  {
+    "nodeID": 4,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 4977858,
+    "publishedAt": "2022-01-01T08:00:30"
+  },
+  {
+    "nodeID": 4,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 1880199,
+    "publishedAt": "2022-01-01T08:00:31"
+  },
+  {
+    "nodeID": 4,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 4946147,
+    "publishedAt": "2022-01-01T08:00:33"
+  },
+  {
+    "nodeID": 4,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 8532322,
+    "publishedAt": "2022-01-01T08:00:34"
+  },
+  {
+    "nodeID": 4,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 1860201,
+    "publishedAt": "2022-01-01T08:00:35"
+  },
+  {
+    "nodeID": 4,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 3941280,
+    "publishedAt": "2022-01-01T08:00:33"
+  },
+  {
+    "nodeID": 4,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 6660162,
+    "publishedAt": "2022-01-01T08:00:34"
+  },
+  {
+    "nodeID": 4,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 9562250,
+    "publishedAt": "2022-01-01T08:00:35"
+  },
+  {
+    "nodeID": 4,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 9866626,
+    "publishedAt": "2022-01-01T08:00:35"
+  },
+  {
+    "nodeID": 4,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 4173774,
+    "publishedAt": "2022-01-01T08:00:36"
+  },
+  {
+    "nodeID": 4,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 7850220,
+    "publishedAt": "2022-01-01T08:00:37"
+  },
+  {
+    "nodeID": 4,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 9335813,
+    "publishedAt": "2022-01-01T08:00:35"
+  },
+  {
+    "nodeID": 4,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 4547915,
+    "publishedAt": "2022-01-01T08:00:36"
+  },
+  {
+    "nodeID": 4,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 4404256,
+    "publishedAt": "2022-01-01T08:00:37"
+  },
+  {
+    "nodeID": 4,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 5426774,
+    "publishedAt": "2022-01-01T08:00:37"
+  },
+  {
+    "nodeID": 4,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 2766573,
+    "publishedAt": "2022-01-01T08:00:38"
+  },
+  {
+    "nodeID": 4,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 5052169,
+    "publishedAt": "2022-01-01T08:00:39"
+  },
+  {
+    "nodeID": 4,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 7362162,
+    "publishedAt": "2022-01-01T08:00:37"
+  },
+  {
+    "nodeID": 4,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 1959786,
+    "publishedAt": "2022-01-01T08:00:38"
+  },
+  {
+    "nodeID": 4,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 7334626,
+    "publishedAt": "2022-01-01T08:00:39"
+  },
+  {
+    "nodeID": 4,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 8939075,
+    "publishedAt": "2022-01-01T08:00:39"
+  },
+  {
+    "nodeID": 4,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 6386423,
+    "publishedAt": "2022-01-01T08:00:40"
+  },
+  {
+    "nodeID": 4,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 6680957,
+    "publishedAt": "2022-01-01T08:00:41"
+  },
+  {
+    "nodeID": 4,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 2693311,
+    "publishedAt": "2022-01-01T08:00:39"
+  },
+  {
+    "nodeID": 4,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 5630651,
+    "publishedAt": "2022-01-01T08:00:40"
+  },
+  {
+    "nodeID": 4,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 8500977,
+    "publishedAt": "2022-01-01T08:00:41"
+  },
+  {
+    "nodeID": 4,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 9831357,
+    "publishedAt": "2022-01-01T08:05:03"
+  },
+  {
+    "nodeID": 4,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 9547205,
+    "publishedAt": "2022-01-01T08:05:04"
+  },
+  {
+    "nodeID": 4,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 4564156,
+    "publishedAt": "2022-01-01T08:05:05"
+  },
+  {
+    "nodeID": 4,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 2619198,
+    "publishedAt": "2022-01-01T08:05:03"
+  },
+  {
+    "nodeID": 4,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 4978698,
+    "publishedAt": "2022-01-01T08:05:04"
+  },
+  {
+    "nodeID": 4,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 2583712,
+    "publishedAt": "2022-01-01T08:05:05"
+  },
+  {
+    "nodeID": 4,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 4937128,
+    "publishedAt": "2022-01-01T08:05:05"
+  },
+  {
+    "nodeID": 4,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 1275377,
+    "publishedAt": "2022-01-01T08:05:06"
+  },
+  {
+    "nodeID": 4,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 1044829,
+    "publishedAt": "2022-01-01T08:05:07"
+  },
+  {
+    "nodeID": 4,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 3589914,
+    "publishedAt": "2022-01-01T08:05:05"
+  },
+  {
+    "nodeID": 4,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 8509646,
+    "publishedAt": "2022-01-01T08:05:06"
+  },
+  {
+    "nodeID": 4,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 349875,
+    "publishedAt": "2022-01-01T08:05:07"
+  },
+  {
+    "nodeID": 4,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 8915765,
+    "publishedAt": "2022-01-01T08:05:07"
+  },
+  {
+    "nodeID": 4,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 655878,
+    "publishedAt": "2022-01-01T08:05:08"
+  },
+  {
+    "nodeID": 4,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 3596228,
+    "publishedAt": "2022-01-01T08:05:09"
+  },
+  {
+    "nodeID": 4,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 7366439,
+    "publishedAt": "2022-01-01T08:05:07"
+  },
+  {
+    "nodeID": 4,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 6747419,
+    "publishedAt": "2022-01-01T08:05:08"
+  },
+  {
+    "nodeID": 4,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 4831414,
+    "publishedAt": "2022-01-01T08:05:09"
+  },
+  {
+    "nodeID": 4,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 7323137,
+    "publishedAt": "2022-01-01T08:05:09"
+  },
+  {
+    "nodeID": 4,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 8260807,
+    "publishedAt": "2022-01-01T08:05:10"
+  },
+  {
+    "nodeID": 4,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 4421987,
+    "publishedAt": "2022-01-01T08:05:11"
+  },
+  {
+    "nodeID": 4,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 3313795,
+    "publishedAt": "2022-01-01T08:05:09"
+  },
+  {
+    "nodeID": 4,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 7580886,
+    "publishedAt": "2022-01-01T08:05:10"
+  },
+  {
+    "nodeID": 4,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 6033379,
+    "publishedAt": "2022-01-01T08:05:11"
+  },
+  {
+    "nodeID": 4,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 6524562,
+    "publishedAt": "2022-01-01T08:05:13"
+  },
+  {
+    "nodeID": 4,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 9820182,
+    "publishedAt": "2022-01-01T08:05:14"
+  },
+  {
+    "nodeID": 4,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 8272763,
+    "publishedAt": "2022-01-01T08:05:15"
+  },
+  {
+    "nodeID": 4,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 1118223,
+    "publishedAt": "2022-01-01T08:05:13"
+  },
+  {
+    "nodeID": 4,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 7903970,
+    "publishedAt": "2022-01-01T08:05:14"
+  },
+  {
+    "nodeID": 4,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 7739458,
+    "publishedAt": "2022-01-01T08:05:15"
+  },
+  {
+    "nodeID": 4,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 442156,
+    "publishedAt": "2022-01-01T08:05:15"
+  },
+  {
+    "nodeID": 4,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 6827067,
+    "publishedAt": "2022-01-01T08:05:16"
+  },
+  {
+    "nodeID": 4,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 898630,
+    "publishedAt": "2022-01-01T08:05:17"
+  },
+  {
+    "nodeID": 4,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 3007363,
+    "publishedAt": "2022-01-01T08:05:15"
+  },
+  {
+    "nodeID": 4,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 3305299,
+    "publishedAt": "2022-01-01T08:05:16"
+  },
+  {
+    "nodeID": 4,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 1298146,
+    "publishedAt": "2022-01-01T08:05:17"
+  },
+  {
+    "nodeID": 4,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 7708718,
+    "publishedAt": "2022-01-01T08:05:17"
+  },
+  {
+    "nodeID": 4,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 648639,
+    "publishedAt": "2022-01-01T08:05:18"
+  },
+  {
+    "nodeID": 4,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 1057953,
+    "publishedAt": "2022-01-01T08:05:19"
+  },
+  {
+    "nodeID": 4,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 730052,
+    "publishedAt": "2022-01-01T08:05:17"
+  },
+  {
+    "nodeID": 4,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 1562598,
+    "publishedAt": "2022-01-01T08:05:18"
+  },
+  {
+    "nodeID": 4,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 4143066,
+    "publishedAt": "2022-01-01T08:05:19"
+  },
+  {
+    "nodeID": 4,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 874973,
+    "publishedAt": "2022-01-01T08:05:19"
+  },
+  {
+    "nodeID": 4,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 3930102,
+    "publishedAt": "2022-01-01T08:05:20"
+  },
+  {
+    "nodeID": 4,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 8642834,
+    "publishedAt": "2022-01-01T08:05:21"
+  },
+  {
+    "nodeID": 4,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 7740177,
+    "publishedAt": "2022-01-01T08:05:19"
+  },
+  {
+    "nodeID": 4,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 2191985,
+    "publishedAt": "2022-01-01T08:05:20"
+  },
+  {
+    "nodeID": 4,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 5913066,
+    "publishedAt": "2022-01-01T08:05:21"
+  },
+  {
+    "nodeID": 4,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 7280983,
+    "publishedAt": "2022-01-01T08:05:23"
+  },
+  {
+    "nodeID": 4,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 7577335,
+    "publishedAt": "2022-01-01T08:05:24"
+  },
+  {
+    "nodeID": 4,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 8235688,
+    "publishedAt": "2022-01-01T08:05:25"
+  },
+  {
+    "nodeID": 4,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 2783365,
+    "publishedAt": "2022-01-01T08:05:23"
+  },
+  {
+    "nodeID": 4,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 4604691,
+    "publishedAt": "2022-01-01T08:05:24"
+  },
+  {
+    "nodeID": 4,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 8660840,
+    "publishedAt": "2022-01-01T08:05:25"
+  },
+  {
+    "nodeID": 4,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 3358347,
+    "publishedAt": "2022-01-01T08:05:25"
+  },
+  {
+    "nodeID": 4,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 3026850,
+    "publishedAt": "2022-01-01T08:05:26"
+  },
+  {
+    "nodeID": 4,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 1321220,
+    "publishedAt": "2022-01-01T08:05:27"
+  },
+  {
+    "nodeID": 4,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 1260178,
+    "publishedAt": "2022-01-01T08:05:25"
+  },
+  {
+    "nodeID": 4,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 7668854,
+    "publishedAt": "2022-01-01T08:05:26"
+  },
+  {
+    "nodeID": 4,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 287900,
+    "publishedAt": "2022-01-01T08:05:27"
+  },
+  {
+    "nodeID": 4,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 9235010,
+    "publishedAt": "2022-01-01T08:05:27"
+  },
+  {
+    "nodeID": 4,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 9702147,
+    "publishedAt": "2022-01-01T08:05:28"
+  },
+  {
+    "nodeID": 4,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 6858106,
+    "publishedAt": "2022-01-01T08:05:29"
+  },
+  {
+    "nodeID": 4,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 3572141,
+    "publishedAt": "2022-01-01T08:05:27"
+  },
+  {
+    "nodeID": 4,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 1111956,
+    "publishedAt": "2022-01-01T08:05:28"
+  },
+  {
+    "nodeID": 4,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 5014814,
+    "publishedAt": "2022-01-01T08:05:29"
+  },
+  {
+    "nodeID": 4,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 2454719,
+    "publishedAt": "2022-01-01T08:05:29"
+  },
+  {
+    "nodeID": 4,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 5741119,
+    "publishedAt": "2022-01-01T08:05:30"
+  },
+  {
+    "nodeID": 4,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 3404830,
+    "publishedAt": "2022-01-01T08:05:31"
+  },
+  {
+    "nodeID": 4,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 2788343,
+    "publishedAt": "2022-01-01T08:05:29"
+  },
+  {
+    "nodeID": 4,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 6510872,
+    "publishedAt": "2022-01-01T08:05:30"
+  },
+  {
+    "nodeID": 4,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 7294388,
+    "publishedAt": "2022-01-01T08:05:31"
+  },
+  {
+    "nodeID": 4,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 5186446,
+    "publishedAt": "2022-01-01T08:05:33"
+  },
+  {
+    "nodeID": 4,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 6213953,
+    "publishedAt": "2022-01-01T08:05:34"
+  },
+  {
+    "nodeID": 4,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 5581082,
+    "publishedAt": "2022-01-01T08:05:35"
+  },
+  {
+    "nodeID": 4,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 7034308,
+    "publishedAt": "2022-01-01T08:05:33"
+  },
+  {
+    "nodeID": 4,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 7086256,
+    "publishedAt": "2022-01-01T08:05:34"
+  },
+  {
+    "nodeID": 4,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 1634156,
+    "publishedAt": "2022-01-01T08:05:35"
+  },
+  {
+    "nodeID": 4,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 5410816,
+    "publishedAt": "2022-01-01T08:05:35"
+  },
+  {
+    "nodeID": 4,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 8998103,
+    "publishedAt": "2022-01-01T08:05:36"
+  },
+  {
+    "nodeID": 4,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 8413214,
+    "publishedAt": "2022-01-01T08:05:37"
+  },
+  {
+    "nodeID": 4,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 5406756,
+    "publishedAt": "2022-01-01T08:05:35"
+  },
+  {
+    "nodeID": 4,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 9213274,
+    "publishedAt": "2022-01-01T08:05:36"
+  },
+  {
+    "nodeID": 4,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 2385830,
+    "publishedAt": "2022-01-01T08:05:37"
+  },
+  {
+    "nodeID": 4,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 7237522,
+    "publishedAt": "2022-01-01T08:05:37"
+  },
+  {
+    "nodeID": 4,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 1798020,
+    "publishedAt": "2022-01-01T08:05:38"
+  },
+  {
+    "nodeID": 4,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 2190314,
+    "publishedAt": "2022-01-01T08:05:39"
+  },
+  {
+    "nodeID": 4,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 6655452,
+    "publishedAt": "2022-01-01T08:05:37"
+  },
+  {
+    "nodeID": 4,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 1932948,
+    "publishedAt": "2022-01-01T08:05:38"
+  },
+  {
+    "nodeID": 4,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 3692444,
+    "publishedAt": "2022-01-01T08:05:39"
+  },
+  {
+    "nodeID": 4,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 718786,
+    "publishedAt": "2022-01-01T08:05:39"
+  },
+  {
+    "nodeID": 4,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 4782737,
+    "publishedAt": "2022-01-01T08:05:40"
+  },
+  {
+    "nodeID": 4,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 6852591,
+    "publishedAt": "2022-01-01T08:05:41"
+  },
+  {
+    "nodeID": 4,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 6502228,
+    "publishedAt": "2022-01-01T08:05:39"
+  },
+  {
+    "nodeID": 4,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 5942780,
+    "publishedAt": "2022-01-01T08:05:40"
+  },
+  {
+    "nodeID": 4,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 2699669,
+    "publishedAt": "2022-01-01T08:05:41"
+  },
+  {
+    "nodeID": 5,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 9888723,
+    "publishedAt": "2022-01-01T08:00:03"
+  },
+  {
+    "nodeID": 5,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 5410225,
+    "publishedAt": "2022-01-01T08:00:04"
+  },
+  {
+    "nodeID": 5,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 5018819,
+    "publishedAt": "2022-01-01T08:00:05"
+  },
+  {
+    "nodeID": 5,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 1260955,
+    "publishedAt": "2022-01-01T08:00:03"
+  },
+  {
+    "nodeID": 5,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 8242928,
+    "publishedAt": "2022-01-01T08:00:04"
+  },
+  {
+    "nodeID": 5,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 439855,
+    "publishedAt": "2022-01-01T08:00:05"
+  },
+  {
+    "nodeID": 5,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 7829874,
+    "publishedAt": "2022-01-01T08:00:05"
+  },
+  {
+    "nodeID": 5,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 8638284,
+    "publishedAt": "2022-01-01T08:00:06"
+  },
+  {
+    "nodeID": 5,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 3220240,
+    "publishedAt": "2022-01-01T08:00:07"
+  },
+  {
+    "nodeID": 5,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 8758001,
+    "publishedAt": "2022-01-01T08:00:05"
+  },
+  {
+    "nodeID": 5,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 5735379,
+    "publishedAt": "2022-01-01T08:00:06"
+  },
+  {
+    "nodeID": 5,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 9660384,
+    "publishedAt": "2022-01-01T08:00:07"
+  },
+  {
+    "nodeID": 5,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 4602126,
+    "publishedAt": "2022-01-01T08:00:07"
+  },
+  {
+    "nodeID": 5,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 9755184,
+    "publishedAt": "2022-01-01T08:00:08"
+  },
+  {
+    "nodeID": 5,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 4866353,
+    "publishedAt": "2022-01-01T08:00:09"
+  },
+  {
+    "nodeID": 5,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 5891995,
+    "publishedAt": "2022-01-01T08:00:07"
+  },
+  {
+    "nodeID": 5,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 1703896,
+    "publishedAt": "2022-01-01T08:00:08"
+  },
+  {
+    "nodeID": 5,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 2511768,
+    "publishedAt": "2022-01-01T08:00:09"
+  },
+  {
+    "nodeID": 5,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 9475181,
+    "publishedAt": "2022-01-01T08:00:09"
+  },
+  {
+    "nodeID": 5,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 3415079,
+    "publishedAt": "2022-01-01T08:00:10"
+  },
+  {
+    "nodeID": 5,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 6042655,
+    "publishedAt": "2022-01-01T08:00:11"
+  },
+  {
+    "nodeID": 5,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 2600702,
+    "publishedAt": "2022-01-01T08:00:09"
+  },
+  {
+    "nodeID": 5,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 9444296,
+    "publishedAt": "2022-01-01T08:00:10"
+  },
+  {
+    "nodeID": 5,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 4399020,
+    "publishedAt": "2022-01-01T08:00:11"
+  },
+  {
+    "nodeID": 5,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 7547321,
+    "publishedAt": "2022-01-01T08:00:13"
+  },
+  {
+    "nodeID": 5,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 2156304,
+    "publishedAt": "2022-01-01T08:00:14"
+  },
+  {
+    "nodeID": 5,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 2942721,
+    "publishedAt": "2022-01-01T08:00:15"
+  },
+  {
+    "nodeID": 5,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 4702080,
+    "publishedAt": "2022-01-01T08:00:13"
+  },
+  {
+    "nodeID": 5,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 1601455,
+    "publishedAt": "2022-01-01T08:00:14"
+  },
+  {
+    "nodeID": 5,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 5482585,
+    "publishedAt": "2022-01-01T08:00:15"
+  },
+  {
+    "nodeID": 5,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 2081318,
+    "publishedAt": "2022-01-01T08:00:15"
+  },
+  {
+    "nodeID": 5,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 9703396,
+    "publishedAt": "2022-01-01T08:00:16"
+  },
+  {
+    "nodeID": 5,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 4343401,
+    "publishedAt": "2022-01-01T08:00:17"
+  },
+  {
+    "nodeID": 5,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 2209067,
+    "publishedAt": "2022-01-01T08:00:15"
+  },
+  {
+    "nodeID": 5,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 4304586,
+    "publishedAt": "2022-01-01T08:00:16"
+  },
+  {
+    "nodeID": 5,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 4754252,
+    "publishedAt": "2022-01-01T08:00:17"
+  },
+  {
+    "nodeID": 5,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 5132818,
+    "publishedAt": "2022-01-01T08:00:17"
+  },
+  {
+    "nodeID": 5,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 1168288,
+    "publishedAt": "2022-01-01T08:00:18"
+  },
+  {
+    "nodeID": 5,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 6418774,
+    "publishedAt": "2022-01-01T08:00:19"
+  },
+  {
+    "nodeID": 5,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 8909415,
+    "publishedAt": "2022-01-01T08:00:17"
+  },
+  {
+    "nodeID": 5,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 4733323,
+    "publishedAt": "2022-01-01T08:00:18"
+  },
+  {
+    "nodeID": 5,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 1029416,
+    "publishedAt": "2022-01-01T08:00:19"
+  },
+  {
+    "nodeID": 5,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 676722,
+    "publishedAt": "2022-01-01T08:00:19"
+  },
+  {
+    "nodeID": 5,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 2815827,
+    "publishedAt": "2022-01-01T08:00:20"
+  },
+  {
+    "nodeID": 5,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 5994179,
+    "publishedAt": "2022-01-01T08:00:21"
+  },
+  {
+    "nodeID": 5,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 2351430,
+    "publishedAt": "2022-01-01T08:00:19"
+  },
+  {
+    "nodeID": 5,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 2673347,
+    "publishedAt": "2022-01-01T08:00:20"
+  },
+  {
+    "nodeID": 5,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 4128713,
+    "publishedAt": "2022-01-01T08:00:21"
+  },
+  {
+    "nodeID": 5,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 3211823,
+    "publishedAt": "2022-01-01T08:00:23"
+  },
+  {
+    "nodeID": 5,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 8131780,
+    "publishedAt": "2022-01-01T08:00:24"
+  },
+  {
+    "nodeID": 5,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 245931,
+    "publishedAt": "2022-01-01T08:00:25"
+  },
+  {
+    "nodeID": 5,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 3676495,
+    "publishedAt": "2022-01-01T08:00:23"
+  },
+  {
+    "nodeID": 5,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 6816542,
+    "publishedAt": "2022-01-01T08:00:24"
+  },
+  {
+    "nodeID": 5,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 2742043,
+    "publishedAt": "2022-01-01T08:00:25"
+  },
+  {
+    "nodeID": 5,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 469841,
+    "publishedAt": "2022-01-01T08:00:25"
+  },
+  {
+    "nodeID": 5,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 7582247,
+    "publishedAt": "2022-01-01T08:00:26"
+  },
+  {
+    "nodeID": 5,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 4582039,
+    "publishedAt": "2022-01-01T08:00:27"
+  },
+  {
+    "nodeID": 5,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 2020132,
+    "publishedAt": "2022-01-01T08:00:25"
+  },
+  {
+    "nodeID": 5,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 9388557,
+    "publishedAt": "2022-01-01T08:00:26"
+  },
+  {
+    "nodeID": 5,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 1994671,
+    "publishedAt": "2022-01-01T08:00:27"
+  },
+  {
+    "nodeID": 5,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 7445379,
+    "publishedAt": "2022-01-01T08:00:27"
+  },
+  {
+    "nodeID": 5,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 296267,
+    "publishedAt": "2022-01-01T08:00:28"
+  },
+  {
+    "nodeID": 5,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 5209974,
+    "publishedAt": "2022-01-01T08:00:29"
+  },
+  {
+    "nodeID": 5,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 3526092,
+    "publishedAt": "2022-01-01T08:00:27"
+  },
+  {
+    "nodeID": 5,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 4034345,
+    "publishedAt": "2022-01-01T08:00:28"
+  },
+  {
+    "nodeID": 5,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 6145392,
+    "publishedAt": "2022-01-01T08:00:29"
+  },
+  {
+    "nodeID": 5,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 4786168,
+    "publishedAt": "2022-01-01T08:00:29"
+  },
+  {
+    "nodeID": 5,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 8763102,
+    "publishedAt": "2022-01-01T08:00:30"
+  },
+  {
+    "nodeID": 5,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 9703772,
+    "publishedAt": "2022-01-01T08:00:31"
+  },
+  {
+    "nodeID": 5,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 9605213,
+    "publishedAt": "2022-01-01T08:00:29"
+  },
+  {
+    "nodeID": 5,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 7474394,
+    "publishedAt": "2022-01-01T08:00:30"
+  },
+  {
+    "nodeID": 5,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 2284455,
+    "publishedAt": "2022-01-01T08:00:31"
+  },
+  {
+    "nodeID": 5,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 8128360,
+    "publishedAt": "2022-01-01T08:00:33"
+  },
+  {
+    "nodeID": 5,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 5343566,
+    "publishedAt": "2022-01-01T08:00:34"
+  },
+  {
+    "nodeID": 5,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 5195547,
+    "publishedAt": "2022-01-01T08:00:35"
+  },
+  {
+    "nodeID": 5,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 7125847,
+    "publishedAt": "2022-01-01T08:00:33"
+  },
+  {
+    "nodeID": 5,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 2628774,
+    "publishedAt": "2022-01-01T08:00:34"
+  },
+  {
+    "nodeID": 5,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 9857651,
+    "publishedAt": "2022-01-01T08:00:35"
+  },
+  {
+    "nodeID": 5,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 1469697,
+    "publishedAt": "2022-01-01T08:00:35"
+  },
+  {
+    "nodeID": 5,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 4763718,
+    "publishedAt": "2022-01-01T08:00:36"
+  },
+  {
+    "nodeID": 5,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 6008623,
+    "publishedAt": "2022-01-01T08:00:37"
+  },
+  {
+    "nodeID": 5,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 8374880,
+    "publishedAt": "2022-01-01T08:00:35"
+  },
+  {
+    "nodeID": 5,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 6409647,
+    "publishedAt": "2022-01-01T08:00:36"
+  },
+  {
+    "nodeID": 5,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 185432,
+    "publishedAt": "2022-01-01T08:00:37"
+  },
+  {
+    "nodeID": 5,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 8399493,
+    "publishedAt": "2022-01-01T08:00:37"
+  },
+  {
+    "nodeID": 5,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 5587879,
+    "publishedAt": "2022-01-01T08:00:38"
+  },
+  {
+    "nodeID": 5,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 8121580,
+    "publishedAt": "2022-01-01T08:00:39"
+  },
+  {
+    "nodeID": 5,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 7628621,
+    "publishedAt": "2022-01-01T08:00:37"
+  },
+  {
+    "nodeID": 5,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 8345241,
+    "publishedAt": "2022-01-01T08:00:38"
+  },
+  {
+    "nodeID": 5,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 1603509,
+    "publishedAt": "2022-01-01T08:00:39"
+  },
+  {
+    "nodeID": 5,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 2689987,
+    "publishedAt": "2022-01-01T08:00:39"
+  },
+  {
+    "nodeID": 5,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 9945431,
+    "publishedAt": "2022-01-01T08:00:40"
+  },
+  {
+    "nodeID": 5,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 8984921,
+    "publishedAt": "2022-01-01T08:00:41"
+  },
+  {
+    "nodeID": 5,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 1,
+    "count": 1212406,
+    "publishedAt": "2022-01-01T08:00:39"
+  },
+  {
+    "nodeID": 5,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 2,
+    "count": 7606493,
+    "publishedAt": "2022-01-01T08:00:40"
+  },
+  {
+    "nodeID": 5,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 0,
+    "windowNumber": 3,
+    "count": 3717217,
+    "publishedAt": "2022-01-01T08:00:41"
+  },
+  {
+    "nodeID": 5,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 6790425,
+    "publishedAt": "2022-01-01T08:05:03"
+  },
+  {
+    "nodeID": 5,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 2092680,
+    "publishedAt": "2022-01-01T08:05:04"
+  },
+  {
+    "nodeID": 5,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 8802933,
+    "publishedAt": "2022-01-01T08:05:05"
+  },
+  {
+    "nodeID": 5,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 5495183,
+    "publishedAt": "2022-01-01T08:05:03"
+  },
+  {
+    "nodeID": 5,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 6767197,
+    "publishedAt": "2022-01-01T08:05:04"
+  },
+  {
+    "nodeID": 5,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 9013354,
+    "publishedAt": "2022-01-01T08:05:05"
+  },
+  {
+    "nodeID": 5,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 5167856,
+    "publishedAt": "2022-01-01T08:05:05"
+  },
+  {
+    "nodeID": 5,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 8710287,
+    "publishedAt": "2022-01-01T08:05:06"
+  },
+  {
+    "nodeID": 5,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 718687,
+    "publishedAt": "2022-01-01T08:05:07"
+  },
+  {
+    "nodeID": 5,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 5955392,
+    "publishedAt": "2022-01-01T08:05:05"
+  },
+  {
+    "nodeID": 5,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 7979982,
+    "publishedAt": "2022-01-01T08:05:06"
+  },
+  {
+    "nodeID": 5,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 196771,
+    "publishedAt": "2022-01-01T08:05:07"
+  },
+  {
+    "nodeID": 5,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 5169721,
+    "publishedAt": "2022-01-01T08:05:07"
+  },
+  {
+    "nodeID": 5,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 5617139,
+    "publishedAt": "2022-01-01T08:05:08"
+  },
+  {
+    "nodeID": 5,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 7454077,
+    "publishedAt": "2022-01-01T08:05:09"
+  },
+  {
+    "nodeID": 5,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 9805234,
+    "publishedAt": "2022-01-01T08:05:07"
+  },
+  {
+    "nodeID": 5,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 8479289,
+    "publishedAt": "2022-01-01T08:05:08"
+  },
+  {
+    "nodeID": 5,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 9351081,
+    "publishedAt": "2022-01-01T08:05:09"
+  },
+  {
+    "nodeID": 5,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 7767562,
+    "publishedAt": "2022-01-01T08:05:09"
+  },
+  {
+    "nodeID": 5,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 9297183,
+    "publishedAt": "2022-01-01T08:05:10"
+  },
+  {
+    "nodeID": 5,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 3312025,
+    "publishedAt": "2022-01-01T08:05:11"
+  },
+  {
+    "nodeID": 5,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 1674641,
+    "publishedAt": "2022-01-01T08:05:09"
+  },
+  {
+    "nodeID": 5,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 3546578,
+    "publishedAt": "2022-01-01T08:05:10"
+  },
+  {
+    "nodeID": 5,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 0,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 8001174,
+    "publishedAt": "2022-01-01T08:05:11"
+  },
+  {
+    "nodeID": 5,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 2916002,
+    "publishedAt": "2022-01-01T08:05:13"
+  },
+  {
+    "nodeID": 5,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 5097314,
+    "publishedAt": "2022-01-01T08:05:14"
+  },
+  {
+    "nodeID": 5,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 2780626,
+    "publishedAt": "2022-01-01T08:05:15"
+  },
+  {
+    "nodeID": 5,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 2539638,
+    "publishedAt": "2022-01-01T08:05:13"
+  },
+  {
+    "nodeID": 5,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 1147361,
+    "publishedAt": "2022-01-01T08:05:14"
+  },
+  {
+    "nodeID": 5,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 3241024,
+    "publishedAt": "2022-01-01T08:05:15"
+  },
+  {
+    "nodeID": 5,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 4653118,
+    "publishedAt": "2022-01-01T08:05:15"
+  },
+  {
+    "nodeID": 5,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 9325823,
+    "publishedAt": "2022-01-01T08:05:16"
+  },
+  {
+    "nodeID": 5,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 345665,
+    "publishedAt": "2022-01-01T08:05:17"
+  },
+  {
+    "nodeID": 5,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 6036432,
+    "publishedAt": "2022-01-01T08:05:15"
+  },
+  {
+    "nodeID": 5,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 9460561,
+    "publishedAt": "2022-01-01T08:05:16"
+  },
+  {
+    "nodeID": 5,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 208523,
+    "publishedAt": "2022-01-01T08:05:17"
+  },
+  {
+    "nodeID": 5,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 289698,
+    "publishedAt": "2022-01-01T08:05:17"
+  },
+  {
+    "nodeID": 5,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 1041722,
+    "publishedAt": "2022-01-01T08:05:18"
+  },
+  {
+    "nodeID": 5,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 3133366,
+    "publishedAt": "2022-01-01T08:05:19"
+  },
+  {
+    "nodeID": 5,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 8300088,
+    "publishedAt": "2022-01-01T08:05:17"
+  },
+  {
+    "nodeID": 5,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 5798716,
+    "publishedAt": "2022-01-01T08:05:18"
+  },
+  {
+    "nodeID": 5,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 8954928,
+    "publishedAt": "2022-01-01T08:05:19"
+  },
+  {
+    "nodeID": 5,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 5263066,
+    "publishedAt": "2022-01-01T08:05:19"
+  },
+  {
+    "nodeID": 5,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 752634,
+    "publishedAt": "2022-01-01T08:05:20"
+  },
+  {
+    "nodeID": 5,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 9699020,
+    "publishedAt": "2022-01-01T08:05:21"
+  },
+  {
+    "nodeID": 5,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 8018712,
+    "publishedAt": "2022-01-01T08:05:19"
+  },
+  {
+    "nodeID": 5,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 9170268,
+    "publishedAt": "2022-01-01T08:05:20"
+  },
+  {
+    "nodeID": 5,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 1,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 5846858,
+    "publishedAt": "2022-01-01T08:05:21"
+  },
+  {
+    "nodeID": 5,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 470356,
+    "publishedAt": "2022-01-01T08:05:23"
+  },
+  {
+    "nodeID": 5,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 1432649,
+    "publishedAt": "2022-01-01T08:05:24"
+  },
+  {
+    "nodeID": 5,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 1082835,
+    "publishedAt": "2022-01-01T08:05:25"
+  },
+  {
+    "nodeID": 5,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 930157,
+    "publishedAt": "2022-01-01T08:05:23"
+  },
+  {
+    "nodeID": 5,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 2577009,
+    "publishedAt": "2022-01-01T08:05:24"
+  },
+  {
+    "nodeID": 5,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 3314488,
+    "publishedAt": "2022-01-01T08:05:25"
+  },
+  {
+    "nodeID": 5,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 2773572,
+    "publishedAt": "2022-01-01T08:05:25"
+  },
+  {
+    "nodeID": 5,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 4799194,
+    "publishedAt": "2022-01-01T08:05:26"
+  },
+  {
+    "nodeID": 5,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 1997197,
+    "publishedAt": "2022-01-01T08:05:27"
+  },
+  {
+    "nodeID": 5,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 731735,
+    "publishedAt": "2022-01-01T08:05:25"
+  },
+  {
+    "nodeID": 5,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 530596,
+    "publishedAt": "2022-01-01T08:05:26"
+  },
+  {
+    "nodeID": 5,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 5335372,
+    "publishedAt": "2022-01-01T08:05:27"
+  },
+  {
+    "nodeID": 5,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 1144435,
+    "publishedAt": "2022-01-01T08:05:27"
+  },
+  {
+    "nodeID": 5,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 4102344,
+    "publishedAt": "2022-01-01T08:05:28"
+  },
+  {
+    "nodeID": 5,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 5784652,
+    "publishedAt": "2022-01-01T08:05:29"
+  },
+  {
+    "nodeID": 5,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 7551666,
+    "publishedAt": "2022-01-01T08:05:27"
+  },
+  {
+    "nodeID": 5,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 7248359,
+    "publishedAt": "2022-01-01T08:05:28"
+  },
+  {
+    "nodeID": 5,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 4221205,
+    "publishedAt": "2022-01-01T08:05:29"
+  },
+  {
+    "nodeID": 5,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 7235958,
+    "publishedAt": "2022-01-01T08:05:29"
+  },
+  {
+    "nodeID": 5,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 2437136,
+    "publishedAt": "2022-01-01T08:05:30"
+  },
+  {
+    "nodeID": 5,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 188142,
+    "publishedAt": "2022-01-01T08:05:31"
+  },
+  {
+    "nodeID": 5,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 1205975,
+    "publishedAt": "2022-01-01T08:05:29"
+  },
+  {
+    "nodeID": 5,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 4530256,
+    "publishedAt": "2022-01-01T08:05:30"
+  },
+  {
+    "nodeID": 5,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 2,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 8599371,
+    "publishedAt": "2022-01-01T08:05:31"
+  },
+  {
+    "nodeID": 5,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 394198,
+    "publishedAt": "2022-01-01T08:05:33"
+  },
+  {
+    "nodeID": 5,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 2648658,
+    "publishedAt": "2022-01-01T08:05:34"
+  },
+  {
+    "nodeID": 5,
+    "canID": "1",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 9488241,
+    "publishedAt": "2022-01-01T08:05:35"
+  },
+  {
+    "nodeID": 5,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 3346037,
+    "publishedAt": "2022-01-01T08:05:33"
+  },
+  {
+    "nodeID": 5,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 7795344,
+    "publishedAt": "2022-01-01T08:05:34"
+  },
+  {
+    "nodeID": 5,
+    "canID": "1",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 3670436,
+    "publishedAt": "2022-01-01T08:05:35"
+  },
+  {
+    "nodeID": 5,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 4317175,
+    "publishedAt": "2022-01-01T08:05:35"
+  },
+  {
+    "nodeID": 5,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 3419618,
+    "publishedAt": "2022-01-01T08:05:36"
+  },
+  {
+    "nodeID": 5,
+    "canID": "2",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 2163346,
+    "publishedAt": "2022-01-01T08:05:37"
+  },
+  {
+    "nodeID": 5,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 9793725,
+    "publishedAt": "2022-01-01T08:05:35"
+  },
+  {
+    "nodeID": 5,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 9180498,
+    "publishedAt": "2022-01-01T08:05:36"
+  },
+  {
+    "nodeID": 5,
+    "canID": "2",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 4211241,
+    "publishedAt": "2022-01-01T08:05:37"
+  },
+  {
+    "nodeID": 5,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 5336647,
+    "publishedAt": "2022-01-01T08:05:37"
+  },
+  {
+    "nodeID": 5,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 3829559,
+    "publishedAt": "2022-01-01T08:05:38"
+  },
+  {
+    "nodeID": 5,
+    "canID": "3",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 5780647,
+    "publishedAt": "2022-01-01T08:05:39"
+  },
+  {
+    "nodeID": 5,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 9414630,
+    "publishedAt": "2022-01-01T08:05:37"
+  },
+  {
+    "nodeID": 5,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 374002,
+    "publishedAt": "2022-01-01T08:05:38"
+  },
+  {
+    "nodeID": 5,
+    "canID": "3",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 9162552,
+    "publishedAt": "2022-01-01T08:05:39"
+  },
+  {
+    "nodeID": 5,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 4398596,
+    "publishedAt": "2022-01-01T08:05:39"
+  },
+  {
+    "nodeID": 5,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 1903249,
+    "publishedAt": "2022-01-01T08:05:40"
+  },
+  {
+    "nodeID": 5,
+    "canID": "4",
+    "sensorNumber": "1",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 3166936,
+    "publishedAt": "2022-01-01T08:05:41"
+  },
+  {
+    "nodeID": 5,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 1,
+    "count": 6055885,
+    "publishedAt": "2022-01-01T08:05:39"
+  },
+  {
+    "nodeID": 5,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 2,
+    "count": 9909590,
+    "publishedAt": "2022-01-01T08:05:40"
+  },
+  {
+    "nodeID": 5,
+    "canID": "4",
+    "sensorNumber": "2",
+    "readingID": 3,
+    "sessionID": 1,
+    "windowNumber": 3,
+    "count": 2522959,
+    "publishedAt": "2022-01-01T08:05:41"
+  }
+]

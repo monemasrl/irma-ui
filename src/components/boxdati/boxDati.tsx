@@ -7,18 +7,24 @@ import { ShareContext } from '../../context/context';
 import { useContext } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Loader from '../loaders/loader';
-import Reading from '../../typings/reading';
+import { TotalReading, WindowReading } from '../../typings/reading';
 import StakerDefaultData from '../../typings/defaultData';
 import Node from '../../typings/node';
 
 type Props = {
-  dati?: Reading[];
+  totalReadings?: TotalReading[];
+  windowReadings?: WindowReading[];
   datiDefault?: StakerDefaultData;
   node?: Node;
   stakerClicked: number;
 };
 
-const BoxDati: FC<Props> = ({ dati, stakerClicked, node }) => {
+const BoxDati: FC<Props> = ({
+  totalReadings,
+  windowReadings,
+  stakerClicked,
+  node,
+}) => {
   const share = useContext(ShareContext);
 
   const variants = {
@@ -39,35 +45,38 @@ const BoxDati: FC<Props> = ({ dati, stakerClicked, node }) => {
             node ? style[node.state] : ''
           } ${share.confirmState ? style.modalOpen : ''}`}
         >
-          {dati ? (
+          {totalReadings && windowReadings ? (
             <>
               {' '}
-              {dati && node?.state === 'ok' && (
+              {node?.state === 'ok' && (
                 <BoxStaker
                   node={node}
-                  letture={dati}
+                  totalReadings={totalReadings}
+                  windowReadings={windowReadings}
                 />
               )}
-              {dati && node?.state === 'rec' && (
+              {node?.state === 'rec' && (
                 <BoxStaker
                   node={node}
-                  letture={dati}
+                  totalReadings={totalReadings}
+                  windowReadings={windowReadings}
                 />
               )}
-              {dati && node?.state === 'off' && (
+              {node?.state === 'off' && (
                 <BoxStaker
                   node={node}
-                  letture={dati}
+                  totalReadings={totalReadings}
+                  windowReadings={windowReadings}
                 />
               )}
-              {dati &&
-                (node?.state === 'alert-ready' ||
-                  node?.state === 'alert-running') && (
-                  <BoxAlert
-                    node={node}
-                    letture={dati}
-                  />
-                )}
+              {(node?.state === 'alert-ready' ||
+                node?.state === 'alert-running') && (
+                <BoxAlert
+                  node={node}
+                  totalReadings={totalReadings}
+                  windowReadings={windowReadings}
+                />
+              )}
               {(node?.state === 'alert-ready' ||
                 node?.state === 'alert-running') &&
                 node?.unhandledAlertIDs.length && (

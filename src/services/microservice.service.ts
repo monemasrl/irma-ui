@@ -2,7 +2,7 @@ import axios from 'axios';
 import Application from '../typings/application';
 import CommandType from '../typings/command';
 import Organization from '../typings/organization';
-import Reading from '../typings/reading';
+import { TotalReading, WindowReading } from '../typings/reading';
 import Node from '../typings/node';
 
 const WEBSOCKET_URL = process.env.REACT_APP_WEBSOCKET_URL || 'http://localhost';
@@ -110,13 +110,13 @@ const getNodes = async (token: string, appID: string) => {
   return response.data.nodes;
 };
 
-interface ReadingsResponse {
-  readings: Reading[];
+interface TotalReadingsResponse {
+  readings: TotalReading[];
 }
 
-const getReadings = async (token: string, nodeIDList: number[]) => {
-  const response = await axios.post<ReadingsResponse>(
-    `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/payload/`,
+const getTotalReadings = async (token: string, nodeIDList: number[]) => {
+  const response = await axios.post<TotalReadingsResponse>(
+    `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/payload/total`,
     {
       IDs: nodeIDList,
     },
@@ -129,7 +129,30 @@ const getReadings = async (token: string, nodeIDList: number[]) => {
     }
   );
 
-  console.log('getReadings', response);
+  console.log('getTotalReadings', response);
+  return response.data.readings;
+};
+
+interface WindowReadingsResponse {
+  readings: WindowReading[];
+}
+
+const getWindowReadings = async (token: string, nodeIDList: number[]) => {
+  const response = await axios.post<WindowReadingsResponse>(
+    `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/payload/windows`,
+    {
+      IDs: nodeIDList,
+    },
+    {
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+        Authorization: `Bearer ${token}`,
+      },
+    }
+  );
+
+  console.log('getTotalReadings', response);
   return response.data.readings;
 };
 
@@ -189,7 +212,8 @@ const Microservice = {
   getOrganizationsList,
   getApplicationsList,
   getNodes,
-  getReadings,
+  getTotalReadings,
+  getWindowReadings,
   sendCommand,
   handleAlert,
 };

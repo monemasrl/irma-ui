@@ -1,14 +1,21 @@
-type Reading = {
+export type TotalReading = {
   nodeID: number;
   canID: string;
   sensorNumber: string;
   readingID: number;
   sessionID: number;
   dangerLevel: number;
-  window1_count: number;
-  window2_count: number;
-  window3_count: number;
+  totalCount: number;
   publishedAt: string;
 };
 
-export default Reading;
+export type WindowReading = {
+  nodeID: number;
+  canID: string;
+  sensorNumber: string;
+  readingID: number;
+  sessionID: number;
+  windowNumber: number;
+  count: number;
+  publishedAt: string;
+};
