@@ -53,15 +53,15 @@
   }
 
   &.rec {
-    border-left: 5px solid $yellow;
+    border-left: 13px solid $yellow;
   }
 
   &.off {
-    border-left: 5px solid $lightGray;
+    border-left: 13px solid $lightGray;
   }
 
   &.ok {
-    border-left: 5px solid $darkGreen;
+    border-left: 13px solid $darkGreen;
   }
 
   &.alert-running,
@@ -273,6 +273,8 @@
 .layoutSensori {
 }
 .layoutGraph {
+  flex: 1;
+  margin: 10px;
 }
 
 @keyframes lanciaInizio {

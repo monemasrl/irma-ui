@@ -13,6 +13,8 @@ import { NodeState } from '../../typings/node';
 import { WindowReading, TotalReading } from '../../typings/reading';
 import Node from '../../typings/node';
 import Nodo from './specials/nodo';
+import WrapperGraph from './specials/graphs/wrapperGraph';
+import { datiLetture } from '../../utils/datiLetture';
 
 type StatoSensoreProps = {
   statoSensore: NodeState;
@@ -140,9 +142,7 @@ const BoxStaker: FC<BoxStakerProps> = ({
   setStakerClicked,
 }) => {
   const [dataSingoloSensore, setDataSingoloSensore] = useState<number>(1);
-  console.log('datasingolosensore', dataSingoloSensore);
-  console.log('readings', totalReadings, windowReadings);
-
+  const datiLettureUI = datiLetture(totalReadings, windowReadings);
   return (
     <>
       <section className={style.layoutSensori}>
@@ -169,9 +169,9 @@ const BoxStaker: FC<BoxStakerProps> = ({
           </div>
           {totalReadings.length && windowReadings.length && (
             <Nodo
+              dataSingoloSensore={dataSingoloSensore}
               setDataSingoloSensore={setDataSingoloSensore}
-              totalReadings={totalReadings}
-              windowReadings={windowReadings}
+              datiLettureUI={datiLettureUI}
             />
           )}
           {/* <div className={style.datiInterni}>
@@ -188,13 +188,16 @@ const BoxStaker: FC<BoxStakerProps> = ({
         </motion.header>
       </section>
       <section className={style.layoutGraph}>
-        {dataSingoloSensore}
         <button
           className={style.backToDash}
           onClick={() => setStakerClicked(-1)}
         >
           back
         </button>
+        <WrapperGraph
+          dataSingoloSensore={dataSingoloSensore}
+          datiLettureUI={datiLettureUI}
+        />
       </section>
     </>
   );
