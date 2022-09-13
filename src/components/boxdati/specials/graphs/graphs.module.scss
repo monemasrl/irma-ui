@@ -10,10 +10,11 @@
       li {
         font-size: 2rem;
         margin: 10px;
-        background-color: $navbarButtons;
-        padding: 5px;
-        border-radius: 5px;
+        padding: 5px 5px 0px 5px;
         cursor: pointer;
+        &.active {
+          border-bottom: 1px solid;
+        }
         span {
           font-size: 1rem;
         }
@@ -29,13 +30,11 @@
   }
   .storicoSensore {
     position: absolute;
-    bottom: 35px;
     padding: 20px;
     background-color: $navbarButtons;
     width: 95%;
     height: 450px;
     z-index: 100;
-    transform: translateY(50px);
 
     ul {
       margin: 0;

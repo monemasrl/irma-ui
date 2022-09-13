@@ -7,6 +7,7 @@ import {
   CartesianGrid,
   XAxis,
   YAxis,
+  Legend,
   Tooltip,
 } from 'recharts';
 type Props = {
@@ -46,6 +47,7 @@ const Graph: FC<Props> = ({ datiSensore, sensore }) => {
         />
         <XAxis dataKey="readingID" />
         <YAxis />
+        <Legend />
         <Tooltip />
       </LineChart>
     </div>
