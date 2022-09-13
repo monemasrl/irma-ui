@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import React, { FC, useState } from 'react';
 import { Rilevatore } from '../../../../typings/ui';
 import Graph from './graph';
@@ -13,13 +14,23 @@ const WrapperGraph: FC<Props> = ({ dataSingoloSensore, datiLettureUI }) => {
     return item.id === dataSingoloSensore;
   });
   const [sensore, setSensore] = useState(1);
+  const [storico, setStorico] = useState(false);
+
+  const variants = {
+    open: { y: 0 },
+    close: { y: 480 },
+  };
   //VERIFICARE COME FARE PER PARAMETRIZZARE LE CHIAVI DEGLI OGGETTI CON TS...
   return (
     <div className={style.wrapperGraph}>
       <nav>
         <ul>
-          <li onClick={() => setSensore(1)}>n</li>
-          <li onClick={() => setSensore(2)}>ɣ</li>
+          <li onClick={() => setSensore(1)}>
+            n <span>Neutroni</span>
+          </li>
+          <li onClick={() => setSensore(2)}>
+            ɣ <span>Fotoni</span>
+          </li>
         </ul>
       </nav>
       <section className={style.boxGraph}>
@@ -35,7 +46,21 @@ const WrapperGraph: FC<Props> = ({ dataSingoloSensore, datiLettureUI }) => {
           />
         )}
       </section>
-      <section className={style.storicoSensore}>
+      <motion.section
+        className={style.storicoSensore}
+        variants={variants}
+        animate={storico ? 'open' : 'close'}
+        transition={{
+          x: { duration: 0.5 },
+          default: { ease: 'easeInOut' },
+        }}
+      >
+        <button
+          className={style.storicoBtn}
+          onClick={() => setStorico((prev) => !prev)}
+        >
+          Storico
+        </button>
         {sensore === 1 ? (
           <ul>
             {datiSensore[0].sensore1.map((item) => {
@@ -43,9 +68,13 @@ const WrapperGraph: FC<Props> = ({ dataSingoloSensore, datiLettureUI }) => {
             })}
           </ul>
         ) : (
-          ''
+          <ul>
+            {datiSensore[0].sensore2.map((item) => {
+              return <li key={item.readingID}>{item.publishedAt}</li>;
+            })}
+          </ul>
         )}
-      </section>
+      </motion.section>
     </div>
   );
 };
