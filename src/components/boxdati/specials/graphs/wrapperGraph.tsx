@@ -17,12 +17,13 @@ const WrapperGraph: FC<Props> = ({ dataSingoloSensore, datiLettureUI }) => {
   const [storico, setStorico] = useState(false);
 
   const variants = {
-    open: { top: 0 },
-    close: { top: 490 },
+    open: { top: 80 },
+    close: { top: 530 },
   };
   //VERIFICARE COME FARE PER PARAMETRIZZARE LE CHIAVI DEGLI OGGETTI CON TS...
   return (
     <div className={style.wrapperGraph}>
+      <h3> sensore {dataSingoloSensore}</h3>
       <nav>
         <ul>
           <li
@@ -52,6 +53,7 @@ const WrapperGraph: FC<Props> = ({ dataSingoloSensore, datiLettureUI }) => {
           />
         )}
       </section>
+
       <motion.section
         className={style.storicoSensore}
         variants={variants}
