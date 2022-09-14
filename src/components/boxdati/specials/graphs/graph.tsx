@@ -2,13 +2,15 @@ import React, { FC } from 'react';
 import { Sensore } from '../../../../typings/ui';
 import style from './graphs.module.scss';
 import {
-  LineChart,
-  Line,
-  CartesianGrid,
+  BarChart,
+  Bar,
+  AreaChart,
+  Area,
   XAxis,
   YAxis,
-  Legend,
+  CartesianGrid,
   Tooltip,
+  Legend,
 } from 'recharts';
 type Props = {
   datiSensore: Sensore[];
@@ -22,55 +24,60 @@ const Graph: FC<Props> = ({ datiSensore, sensore }) => {
     <>
       <div className={style.graphItem}>
         {' '}
-        <LineChart
+        <AreaChart
           width={500}
           height={200}
-          data={datiSensore}
+          data={datiSensore || []}
+          margin={{
+            top: 10,
+            right: 30,
+            left: 0,
+            bottom: 0,
+          }}
         >
-          <Line
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="readingID" />
+          <YAxis />
+          <Tooltip />
+          <Area
             type="monotone"
             dataKey="window1_count"
-            stroke="#004a74"
+            stackId="1"
+            stroke="#afb9c9"
+            fill="#00577c"
           />
-          <Line
+          <Area
             type="monotone"
             dataKey="window2_count"
-            stroke="#0eb1b0"
+            stackId="1"
+            stroke="#428daa"
+            fill="#428daa"
           />
-          <Line
+          <Area
             type="monotone"
             dataKey="window3_count"
-            stroke="#8884d8"
+            stackId="1"
+            stroke="#8bb0b5"
+            fill="#8fcfe8"
           />
-          <CartesianGrid
-            stroke="#ccc"
-            strokeDasharray="5 5"
-          />
-          <XAxis dataKey="readingID" />
-          <YAxis />
           <Legend />
-          <Tooltip />
-        </LineChart>
+        </AreaChart>
       </div>
       <div className={style.pericoloGraph}>
-        <LineChart
+        <BarChart
           width={500}
-          height={150}
-          data={datiSensore}
+          height={200}
+          data={datiSensore || []}
         >
-          <Line
-            type="monotone"
-            dataKey="dangerLevel"
-            stroke="#e21b35"
-          />
-          <CartesianGrid
-            stroke="#ccc"
-            strokeDasharray="5 5"
-          />
+          <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="readingID" />
           <YAxis />
+          <Bar
+            dataKey="dangerLevel"
+            fill="#ce0303"
+          />
           <Legend />
-        </LineChart>
+        </BarChart>
       </div>
     </>
   );

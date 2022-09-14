@@ -25,14 +25,10 @@ const BarraChart: FC<Props> = ({ dato }) => {
 
   return (
     <div className={style.wrapperBarra}>
-      <div className={style.containerStyles}>
-        <div className={style.fillerStyles}>
-          <span
-            className={`${style.labelStyles} ${style[colorBar(completed)]}`}
-            style={{ width: `${completed > 0 ? completed * 10 : 10}%` }}
-          >{`${completed}`}</span>
-        </div>
-      </div>
+      <span
+        className={`${style.labelStyles} ${style[colorBar(completed)]}`}
+        style={{ width: `${completed > 0 ? completed * 10 : 10}%` }}
+      >{`${completed}`}</span>
     </div>
   );
 };

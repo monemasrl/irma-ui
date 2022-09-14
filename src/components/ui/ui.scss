@@ -1,0 +1,96 @@
+@import '../../assets/scss/_variabili.scss';
+
+button {
+  margin: 1rem 10px;
+  display: inline-block;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  padding: 5px 20px;
+  height: 60px;
+  font-family: 'Open Sans Bold';
+  text-transform: uppercase;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all ease-in-out 0.3s;
+}
+
+button.alert:hover,
+button.alert-big:hover {
+  background-color: $darkred;
+  color: #fff;
+}
+
+button.alert,
+button.alert-big {
+  background-color: $darkred;
+  color: white;
+}
+
+button.alert-big {
+  padding: 10px 30px;
+}
+
+.closeIcon {
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  padding: 0;
+  line-height: 5px;
+  border-radius: 50%;
+  font-size: 12px;
+}
+
+form {
+  display: block;
+}
+
+.alert form .nota {
+  color: white;
+  margin: 1rem 0 0 0;
+}
+
+.alert .radio-btn {
+  color: white;
+  background-color: #ff5c5c;
+  padding: 10px;
+  width: 30px;
+  display: inline-block;
+  margin: 10px;
+  cursor: pointer;
+  font-family: 'Open Sans Bold';
+  transition: all ease-in-out 0.3s;
+}
+
+.alert .radio-btn:hover {
+  background-color: #cf2201;
+}
+
+.alert input[type='radio']:checked + .radio-btn {
+  background-color: #cf2201;
+}
+
+.alert input[type='radio'] {
+  display: none;
+}
+
+form span {
+  display: block;
+  font-size: 11px;
+  font-family: 'Open Sans Bold';
+  color: white;
+  line-height: 0;
+  margin-top: 3px;
+}
+
+.alert textarea,
+.alert textarea:focus-visible {
+  border: 0;
+  border-radius: 0;
+  outline: 0;
+  margin-top: 5px;
+}
+
+g.recharts-layer.recharts-cartesian-axis-tick {
+  transform: translateX(2px) !important;
+}

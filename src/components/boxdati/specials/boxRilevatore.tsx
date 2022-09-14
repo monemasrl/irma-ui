@@ -16,9 +16,6 @@ const BoxRilevatore: FC<Props> = ({
   dataSingoloSensore,
   setDataSingoloSensore,
 }) => {
-  console.log('key', keyId);
-  console.log('dataSingoloSensore', dataSingoloSensore);
-
   function alertColor(level: number) {
     if (level > 6) {
       return 'alert';
@@ -40,16 +37,8 @@ const BoxRilevatore: FC<Props> = ({
       onClick={() => setDataSingoloSensore(rilevatore.id)}
     >
       <div className={style.idRilevatore}>{rilevatore.id}</div>
-      <div className={style.wrapperSensori}>
-        <div className={style.sensore}>
-          <div className={style.idSensore}>n</div>{' '}
-          <BarraChart dato={rilevatore.sensore1} />
-        </div>
-        <div className={style.sensore}>
-          <div className={style.idSensore}>ɣ</div>
-          <BarraChart dato={rilevatore.sensore2} />
-        </div>
-      </div>
+
+      <BarraChart dato={rilevatore.sensore1} />
     </div>
   );
 };

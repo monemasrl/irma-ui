@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
-import '../../ui/ui.css';
-import style from './modali.module.css';
+import '../../ui/ui.scss';
+import style from './modali.module.scss';
 import { ShareContext } from '../../../context/context';
 import { useContext } from 'react';
 import { CloseIcon } from '../../ui/ui';

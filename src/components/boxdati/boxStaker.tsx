@@ -144,28 +144,30 @@ const BoxStaker: FC<BoxStakerProps> = ({
   const [dataSingoloSensore, setDataSingoloSensore] = useState<number>(1);
   const datiLettureUI = datiLetture(totalReadings, windowReadings);
   return (
-    <>
+    <motion.div
+      key={node.nodeID}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+      className={style.schedaSensore}
+    >
       <section className={style.layoutSensori}>
-        <motion.header
-          key={node.nodeID}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          <div className={style.title}>
-            <div className={style.titoletto}>Reach Staker</div>
-            <div className={style.codiceStaker}>{node.nodeName}</div>
-          </div>
-
-          <div className={style.wrapperStatoSensore}>
-            <StatoSensore statoSensore={node.state} />
-            {node.state === 'ok' && (
-              <BtnStartRec
-                applicationID={node.applicationID}
-                nodeID={node.nodeID}
-              />
-            )}
+        <header>
+          <div>
+            <div className={style.title}>
+              <div className={style.titoletto}>Reach Staker</div>
+              <div className={style.codiceStaker}>{node.nodeName}</div>
+            </div>
+            <div className={style.wrapperStatoSensore}>
+              <StatoSensore statoSensore={node.state} />
+              {node.state === 'ok' && (
+                <BtnStartRec
+                  applicationID={node.applicationID}
+                  nodeID={node.nodeID}
+                />
+              )}
+            </div>
           </div>
           {totalReadings.length && windowReadings.length && (
             <Nodo
@@ -185,7 +187,7 @@ const BoxStaker: FC<BoxStakerProps> = ({
           </React.Fragment>
         ))}
       </div> */}
-        </motion.header>
+        </header>
       </section>
       <section className={style.layoutGraph}>
         <button
@@ -199,7 +201,7 @@ const BoxStaker: FC<BoxStakerProps> = ({
           datiLettureUI={datiLettureUI}
         />
       </section>
-    </>
+    </motion.div>
   );
 };
 

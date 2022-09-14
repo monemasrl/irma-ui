@@ -80,6 +80,7 @@ const BoxDati: FC<Props> = ({
                   node={node}
                   totalReadings={totalReadings}
                   windowReadings={windowReadings}
+                  setStakerClicked={setStakerClicked}
                 />
               )}
               {(node?.state === 'alert-ready' ||

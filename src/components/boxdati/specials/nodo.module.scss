@@ -1,118 +1,161 @@
-@import '../../../assets/scss/_variabili';
+@import "../../../assets/scss/_variabili";
+
 .sezioneSensori {
-  margin-top: 2rem;
-  padding: 10px;
-  background-color: #eeeeee;
-  border-radius: 5px;
-  h3 {
-    text-transform: uppercase;
-    margin: 0 0 0 28px;
-    font-size: 1rem;
-  }
+    padding: 10px;
+    background-color: #eeeeee;
+    border-radius: 5px;
+
+    h3 {
+        text-transform: uppercase;
+        margin: 0 0 0 28px;
+        font-size: 1rem;
+    }
 }
+
 .wrapperRilevatore {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 340px;
-  flex-shrink: 0;
-  justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 350px;
+    flex-shrink: 0;
+    justify-content: center;
 }
 
 .boxRilevatore {
-  width: 136px;
-  background-color: white;
-  border-radius: 5px;
-  margin: 8px;
-  padding: 2px 3px;
-  display: flex;
-  align-items: center;
-  box-shadow: 0px 0px 3px #e1e1e1;
-  transition: all ease-in-out 0.5s;
-  cursor: pointer;
-  &.open {
-    box-shadow: 0px 0px 18px #c7c7c7;
-    transform: scale(1.05);
-  }
-  &.alert {
-    background-color: $darkred;
-    color: white;
-    .labelStyles {
-      color: white;
+    width: 136px;
+    background-color: white;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px 3px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    box-shadow: 0px 0px 3px #e1e1e1;
+    transition: all ease-in-out 0.5s;
+    cursor: pointer;
+
+    &.open {
+        box-shadow: 0px 0px 18px #c7c7c7;
+        transform: scale(1.05);
+
+        &::before {
+            content: '';
+            width: 100%;
+            height: 2px;
+            background-color: $gray;
+            position: absolute;
+            animation: activeButtonRilevatore .5s forwards;
+            left: 0;
+        }
     }
-    .idRilevatore {
-      background-color: $lightRed;
+
+    &.alert {
+        background-color: $darkred;
+        color: white;
+
+        .labelStyles {
+            color: white;
+        }
+
+        .idRilevatore {
+            background-color: $lightRed;
+            box-shadow: inset 0px 0px 3px #5e0000;
+        }
     }
-  }
 }
+
 .idSensore {
-  font-weight: bold;
-  margin-right: 3px;
-  padding-right: 3px;
-  border-right: 1px dotted #cfcfcf;
-  height: 23px;
-  font-size: 13px;
-  line-height: 24px;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-right: 3px;
+    padding-right: 3px;
+    border-right: 1px dotted #cfcfcf;
+    height: 23px;
+    font-size: 13px;
+    line-height: 24px;
 }
+
 .idRilevatore {
-  font-size: 1.8rem;
-  margin-right: 10px;
-  font-weight: bold;
-  background: rgba(240, 248, 255, 0.6862745098);
-  border-radius: 50%;
-  height: 30px;
-  width: 44px;
-  line-height: 20px;
-  text-align: center;
-  padding: 4px;
-  margin-left: 5px;
+    font-size: 1.5rem;
+    margin-right: 10px;
+    font-weight: bold;
+    background: #e1e1e1;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    line-height: 30px;
+    text-align: center;
+    padding: 4px;
+    margin-left: 5px;
+    box-shadow: inset 0px 0px 3px #a3a3a3;
 }
+
 .sensore {
-  display: flex;
-  flex-wrap: wrap;
-  width: 80%;
-  &:nth-child(2) {
-    margin-top: 5px;
-  }
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 75px;
+
+    &:nth-child(2) {
+        margin-top: 5px;
+    }
 }
+
 .wrapperSensori {
-  width: 100%;
-  padding: 2px;
+    width: 100%;
+    padding: 2px;
 }
 
 .wrapperBarra {
-  width: 76%;
+    width: 56%;
+    display: inline-flex;
 
-  .containerStyles {
-    width: 100%;
-    height: 100%;
-    display: inline-block;
-  }
-
-  .fillerStyles {
-    border-radius: inherit;
-    text-align: left;
-  }
-
-  .labelStyles {
-    &.green {
-      background-color: $green;
-    }
-    &.red {
-      background-color: $red;
-    }
-    &.yellow {
-      background-color: $yellow;
+    .containerStyles {
+        width: 100%;
+        height: 100%;
+        display: inline-block;
     }
 
-    color: rgb(0, 0, 0);
-    font-weight: bold;
-    font-size: 10px;
-    background-color: white;
-    width: 0;
-    transition: width 1s ease-in-out, background-color 1s ease-in-out;
-    text-align: right;
-    display: block;
-    margin-right: 5px;
-    padding: 1px 5px;
-  }
+    .fillerStyles {
+        border-radius: inherit;
+        text-align: left;
+    }
+
+    .labelStyles {
+        &.green {
+            background-color: $green;
+        }
+
+        &.red {
+            background-color: $red;
+        }
+
+        &.yellow {
+            background-color: $yellow;
+        }
+
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+        font-size: 13px;
+        background-color: white;
+        width: 0;
+        transition: width 1s ease-in-out, background-color 1s ease-in-out;
+        text-align: right;
+        display: block;
+        margin-right: 5px;
+        padding: 1px 10px;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+}
+
+@keyframes activeButtonRilevatore {
+    0% {
+        opacity: 0;
+        bottom: -15px;
+        z-index: 0;
+    }
+
+    100% {
+        opacity: 1;
+        bottom: -5px;
+    }
 }

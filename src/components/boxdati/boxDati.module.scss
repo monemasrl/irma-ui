@@ -18,19 +18,22 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
+
   &.stakerDati {
     position: absolute;
     z-index: 100;
     width: 100%;
-    height: 100%;
     margin-left: 0px;
+    padding: 0;
   }
+
   header {
     display: flex;
     flex-direction: column;
     height: 100%;
     justify-content: space-between;
   }
+
   .titoletto {
     font-family: 'Open Sans Bold';
     text-transform: uppercase;
@@ -66,9 +69,11 @@
 
   &.alert-running,
   &.alert-ready {
-    background: $red;
     transition: all ease-in-out 0.5s;
     border-left: 4px solid $darkred;
+    .layoutSensori {
+      background-color: $red;
+    }
   }
 }
 
@@ -79,15 +84,17 @@
   text-transform: uppercase;
   color: $gray;
 }
+
 .wrapperStatoSensore {
   background: #ededed;
   border-radius: 5px;
 }
+
 .stato {
   display: flex;
   padding: 15px 15px;
-
   color: $alertText;
+
   img {
     width: 30px;
     margin-top: 3px;
@@ -112,16 +119,19 @@
 
     .label {
       font-size: 70px;
+
       .running {
         font-size: 1rem;
       }
     }
   }
+
   .datoLabel {
     font-size: 18px;
     text-transform: uppercase;
     color: $alertText;
   }
+
   .buttonWrapper {
     text-align: center;
   }
@@ -190,6 +200,7 @@
   display: flex;
   justify-content: space-between;
   position: relative;
+
   .titoloInterno {
     text-transform: uppercase;
     font-family: 'Open Sans Bold';
@@ -197,11 +208,13 @@
     line-height: 1;
     font-size: 0.9rem;
   }
+
   .datoInterno {
     font-size: 36px;
     line-height: 1;
     text-align: right;
   }
+
   .datoInterno span {
     font-size: 30px;
     margin-left: -7px;
@@ -239,6 +252,7 @@
 .wrapperbutton {
   text-align: center;
   border-top: 1px dotted gray;
+
   button {
     background-color: $darkGreen;
     color: white;
@@ -266,6 +280,7 @@
   transform: rotate(-52deg);
   animation: lanciaInizio 2s alternate infinite;
 }
+
 .backToDash {
   position: relative;
   background-color: $backHeader;
@@ -273,11 +288,23 @@
   margin: 0 0 auto auto;
   height: 35px;
 }
-.layoutSensori {
+
+.schedaSensore {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 100%;
 }
+
+.layoutSensori {
+  width: 370px;
+  padding: 17px 17px;
+}
+
 .layoutGraph {
   flex: 1;
-  margin: 10px;
+  margin: 4px;
+  padding: 17px 17px;
 }
 
 @keyframes lanciaInizio {

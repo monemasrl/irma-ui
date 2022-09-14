@@ -1,6 +1,6 @@
 import React, { useState, useContext, ChangeEvent } from 'react';
 import './login.scss';
-import '../components/ui/ui.css';
+import '../components/ui/ui.scss';
 import { UserContext } from '../context/user-context';
 import { AxiosError } from 'axios';
 import { BackendError } from '../services/microservice.service';

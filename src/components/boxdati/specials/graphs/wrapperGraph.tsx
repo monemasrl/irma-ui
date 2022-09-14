@@ -18,25 +18,25 @@ const WrapperGraph: FC<Props> = ({ dataSingoloSensore, datiLettureUI }) => {
 
   const variants = {
     open: { top: 80 },
-    close: { top: 530 },
+    close: { top: 557 },
   };
   //VERIFICARE COME FARE PER PARAMETRIZZARE LE CHIAVI DEGLI OGGETTI CON TS...
   return (
     <div className={style.wrapperGraph}>
-      <h3> sensore {dataSingoloSensore}</h3>
+      <h3> Rilevatore {dataSingoloSensore}</h3>
       <nav>
         <ul>
           <li
             className={`${sensore === 1 ? style['active'] : ''}`}
             onClick={() => setSensore(1)}
           >
-            n <span>Neutroni</span>
+            <span>Sensore Alto</span>
           </li>
           <li
             className={`${sensore === 2 ? style['active'] : ''}`}
             onClick={() => setSensore(2)}
           >
-            ɣ <span>Fotoni</span>
+            <span>Sensore Basso</span>
           </li>
         </ul>
       </nav>

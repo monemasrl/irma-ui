@@ -16,7 +16,7 @@ const Nodo: FC<Props> = ({
 }) => {
   return (
     <div className={style.sezioneSensori}>
-      <h3>Sensori</h3>
+      <h3>Rilevatori</h3>
       <div className={style.wrapperRilevatore}>
         {datiLettureUI.map((item) => {
           console.log('datiletture', item);
