@@ -41,16 +41,22 @@ const WrapperGraph: FC<Props> = ({ dataSingoloSensore, datiLettureUI }) => {
         </ul>
       </nav>
       <section className={style.boxGraph}>
-        {sensore === 1 ? (
-          <Graph
-            datiSensore={datiSensore[0].sensore1}
-            sensore={sensore}
-          />
+        {datiSensore.length ? (
+          <>
+            {sensore === 1 ? (
+              <Graph
+                datiSensore={datiSensore[0].sensore1}
+                sensore={sensore}
+              />
+            ) : (
+              <Graph
+                datiSensore={datiSensore[0].sensore2}
+                sensore={sensore}
+              />
+            )}
+          </>
         ) : (
-          <Graph
-            datiSensore={datiSensore[0].sensore2}
-            sensore={sensore}
-          />
+          'VOTO'
         )}
       </section>
 
@@ -69,7 +75,7 @@ const WrapperGraph: FC<Props> = ({ dataSingoloSensore, datiLettureUI }) => {
         >
           Storico
         </button>
-        {sensore === 1 ? (
+        {/* {sensore === 1 ? (
           <ul>
             {datiSensore[0].sensore1.map((item) => {
               return <li key={item.readingID}>{item.publishedAt}</li>;
@@ -81,7 +87,7 @@ const WrapperGraph: FC<Props> = ({ dataSingoloSensore, datiLettureUI }) => {
               return <li key={item.readingID}>{item.publishedAt}</li>;
             })}
           </ul>
-        )}
+        )} */}
       </motion.section>
     </div>
   );
