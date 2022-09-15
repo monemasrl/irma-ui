@@ -134,6 +134,7 @@ const App: FC = () => {
                 </div>
 
                 <BoxDati
+                  isAlert={isAlert()}
                   stakerClicked={stakerClicked}
                   setStakerClicked={setStakerClicked}
                   totalReadings={

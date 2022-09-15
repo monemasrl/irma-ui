@@ -39,6 +39,7 @@ const StatoSensore: FC<StatoSensoreProps> = ({ statoSensore }) => {
 };
 
 type BoxAlertProps = {
+  isAlert: boolean;
   node: Node;
   setStakerClicked: Dispatch<SetStateAction<number>>;
   totalReadings: TotalReading[];
@@ -46,6 +47,7 @@ type BoxAlertProps = {
 };
 
 const BoxAlert: FC<BoxAlertProps> = ({
+  isAlert,
   node,
   totalReadings,
   windowReadings,
@@ -100,6 +102,7 @@ const BoxAlert: FC<BoxAlertProps> = ({
           </div>
           {totalReadings.length && windowReadings.length && (
             <Nodo
+              isAlert={isAlert}
               dataSingoloSensore={dataSingoloSensore}
               setDataSingoloSensore={setDataSingoloSensore}
               datiLettureUI={datiLettureUI}

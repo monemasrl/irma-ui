@@ -4,18 +4,20 @@ import BoxRilevatore from './boxRilevatore';
 import style from './nodo.module.scss';
 
 interface Props {
+  isAlert: boolean;
   datiLettureUI: Rilevatore[];
   dataSingoloSensore: number;
   setDataSingoloSensore: Dispatch<SetStateAction<number>>;
 }
 
 const Nodo: FC<Props> = ({
+  isAlert,
   datiLettureUI,
   dataSingoloSensore,
   setDataSingoloSensore,
 }) => {
   return (
-    <div className={style.sezioneSensori}>
+    <div className={`${style.sezioneSensori} ${isAlert ? style['alert'] : ''}`}>
       <h3>Rilevatori</h3>
       <div className={style.wrapperRilevatore}>
         {datiLettureUI.map((item) => {

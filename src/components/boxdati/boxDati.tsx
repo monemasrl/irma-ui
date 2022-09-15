@@ -12,6 +12,7 @@ import StakerDefaultData from '../../typings/defaultData';
 import Node from '../../typings/node';
 
 type Props = {
+  isAlert: boolean;
   totalReadings?: TotalReading[];
   windowReadings?: WindowReading[];
   datiDefault?: StakerDefaultData;
@@ -21,6 +22,7 @@ type Props = {
 };
 
 const BoxDati: FC<Props> = ({
+  isAlert,
   setStakerClicked,
   totalReadings,
   windowReadings,
@@ -53,6 +55,7 @@ const BoxDati: FC<Props> = ({
               {' '}
               {node?.state === 'ok' && (
                 <BoxStaker
+                  isAlert={isAlert}
                   node={node}
                   setStakerClicked={setStakerClicked}
                   totalReadings={totalReadings}
@@ -61,6 +64,7 @@ const BoxDati: FC<Props> = ({
               )}
               {node?.state === 'rec' && (
                 <BoxStaker
+                  isAlert={isAlert}
                   node={node}
                   totalReadings={totalReadings}
                   windowReadings={windowReadings}
@@ -69,6 +73,7 @@ const BoxDati: FC<Props> = ({
               )}
               {node?.state === 'off' && (
                 <BoxStaker
+                  isAlert={isAlert}
                   node={node}
                   totalReadings={totalReadings}
                   windowReadings={windowReadings}
@@ -78,6 +83,7 @@ const BoxDati: FC<Props> = ({
               {(node?.state === 'alert-ready' ||
                 node?.state === 'alert-running') && (
                 <BoxAlert
+                  isAlert={isAlert}
                   node={node}
                   totalReadings={totalReadings}
                   windowReadings={windowReadings}

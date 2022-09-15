@@ -71,8 +71,8 @@ function FormAlert({ alertID }: Props) {
         <textarea
           {...register('noteAlert', { required: true })}
           name="noteAlert"
-          rows={4}
-          cols={30}
+          rows={7}
+          cols={60}
           id="note-alert"
         />
 

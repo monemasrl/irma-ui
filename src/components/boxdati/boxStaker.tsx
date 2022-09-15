@@ -129,6 +129,7 @@ const BtnStartRec: FC<BtnStartRecProps> = ({ applicationID, nodeID }) => {
 /* COMPONENTE PRINCIPALE */
 
 type BoxStakerProps = {
+  isAlert: boolean;
   node: Node;
   setStakerClicked: Dispatch<SetStateAction<number>>;
   totalReadings: TotalReading[];
@@ -136,6 +137,7 @@ type BoxStakerProps = {
 };
 
 const BoxStaker: FC<BoxStakerProps> = ({
+  isAlert,
   node,
   totalReadings,
   windowReadings,
@@ -181,6 +183,7 @@ const BoxStaker: FC<BoxStakerProps> = ({
           </div>
           {totalReadings.length && windowReadings.length && (
             <Nodo
+              isAlert={isAlert}
               dataSingoloSensore={dataSingoloSensore}
               setDataSingoloSensore={setDataSingoloSensore}
               datiLettureUI={datiLettureUI}
