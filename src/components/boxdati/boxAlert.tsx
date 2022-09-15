@@ -88,13 +88,22 @@ const BoxAlert: FC<BoxAlertProps> = ({
             )}
           </div>
           <div className={style.buttonWrapper}>
-            {node.state === 'alert-ready' && (
+            {node.state === 'alert-ready' ? (
               <button
                 className="alert"
                 onClick={() => share.setConfirmState(node.state)}
               >
                 Gestisci Allerta
               </button>
+            ) : (
+              node.state === 'alert-running' && (
+                <button
+                  className="alert"
+                  onClick={() => share.setConfirmState(node.state)}
+                >
+                  Stop
+                </button>
+              )
             )}
           </div>
           {totalReadings.length && windowReadings.length && (

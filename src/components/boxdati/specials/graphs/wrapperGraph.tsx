@@ -18,9 +18,8 @@ const WrapperGraph: FC<Props> = ({ dataSingoloSensore, datiLettureUI }) => {
 
   const variants = {
     open: { top: 80 },
-    close: { top: 557 },
+    close: { top: '99.5%' },
   };
-  //VERIFICARE COME FARE PER PARAMETRIZZARE LE CHIAVI DEGLI OGGETTI CON TS...
   return (
     <div className={style.wrapperGraph}>
       <h3> Rilevatore {dataSingoloSensore}</h3>

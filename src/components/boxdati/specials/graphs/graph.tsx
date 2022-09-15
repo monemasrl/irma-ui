@@ -72,10 +72,12 @@ const Graph: FC<Props> = ({ datiSensore, sensore }) => {
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="readingID" />
           <YAxis />
+
           <Bar
             dataKey="dangerLevel"
             fill="#ce0303"
           />
+
           <Legend />
         </BarChart>
       </div>
