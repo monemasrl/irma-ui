@@ -9,7 +9,6 @@ import AlertRunning from './specials/alertRunning';
 import Node from '../../typings/node';
 import Nodo from './specials/nodo';
 import { datiLetture } from '../../utils/datiLetture';
-import { motion } from 'framer-motion';
 import WrapperGraph from './specials/graphs/wrapperGraph';
 type StatoSensoreProps = {
   statoSensore: NodeState;
@@ -27,14 +26,11 @@ const StatoSensore: FC<StatoSensoreProps> = ({ statoSensore }) => {
         />
       </div>
       <div className={`${style.datiStato} ${style[statoSensore]}`}>
-        <div className={style.label}>
-          alert
-          <div className={style.running}>
-            {statoSensore === 'alert-running' && 'Running'}
-          </div>
-        </div>
+        <div className={style.label}>alert</div>
         <div className={style.datoLabel}>
           <RiTerminalFill />
+          {statoSensore === 'alert-running' && 'Running'}
+          {statoSensore === 'alert-ready' && 'Rilevata Anomalia'}
           {share.uiStatiSensore[statoSensore]}
         </div>
       </div>
@@ -60,12 +56,8 @@ const BoxAlert: FC<BoxAlertProps> = ({
   const datiLettureUI = datiLetture(totalReadings, windowReadings);
 
   return (
-    <motion.div
+    <div
       key={node.nodeID}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.5 }}
       className={style.schedaSensore}
     >
       <section className={style.layoutSensori}>
@@ -98,7 +90,7 @@ const BoxAlert: FC<BoxAlertProps> = ({
             ) : (
               node.state === 'alert-running' && (
                 <button
-                  className="alert"
+                  className="alert-big stop"
                   onClick={() => share.setConfirmState(node.state)}
                 >
                   Stop
@@ -127,7 +119,7 @@ const BoxAlert: FC<BoxAlertProps> = ({
           datiLettureUI={datiLettureUI}
         />
       </section>
-    </motion.div>
+    </div>
   );
 };
 

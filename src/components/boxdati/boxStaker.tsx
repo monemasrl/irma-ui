@@ -155,7 +155,7 @@ const BoxStaker: FC<BoxStakerProps> = ({
       <section className={style.layoutSensori}>
         <header>
           <div>
-            <div className={style.title}>
+            <div className={style.titleNodo}>
               <div className={style.titoletto}>Reach Staker</div>
               <div className={style.codiceStaker}>{node.nodeName}</div>
             </div>
@@ -166,6 +166,16 @@ const BoxStaker: FC<BoxStakerProps> = ({
                   applicationID={node.applicationID}
                   nodeID={node.nodeID}
                 />
+              )}
+              {node.state === 'rec' && (
+                <button
+                  className="alert-big stop"
+                  onClick={() => {
+                    console.log('test stop');
+                  }}
+                >
+                  Stop Rilevamento
+                </button>
               )}
             </div>
           </div>

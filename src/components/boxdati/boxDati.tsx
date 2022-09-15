@@ -32,7 +32,7 @@ const BoxDati: FC<Props> = ({
   const variants = {
     initial: { opacity: 0, y: -200 },
     animate: { opacity: 1, y: -50 },
-    exit: { opacity: 0, y: -200 },
+    exit: { opacity: 0, y: -300 },
   };
 
   return (
@@ -43,6 +43,7 @@ const BoxDati: FC<Props> = ({
           animate="animate"
           exit="exit"
           variants={variants}
+          transition={{ duration: 0.5 }}
           className={`${style.boxDati} ${style.stakerDati} ${
             node ? style[node.state] : ''
           } ${share.confirmState ? style.modalOpen : ''}`}

@@ -79,6 +79,7 @@ const Graph: FC<Props> = ({ datiSensore, sensore }) => {
           />
 
           <Legend />
+          <Tooltip />
         </BarChart>
       </div>
     </>

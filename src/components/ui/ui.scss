@@ -27,6 +27,11 @@ button.alert-big {
   color: white;
 }
 
+button.alert-big.stop {
+  margin: 2rem auto;
+  display: block;
+}
+
 button.alert-big {
   padding: 10px 30px;
 }
@@ -93,4 +98,7 @@ form span {
 
 g.recharts-layer.recharts-cartesian-axis-tick {
   transform: translateX(2px) !important;
+}
+.recharts-tooltip-cursor {
+  display: none !important;
 }

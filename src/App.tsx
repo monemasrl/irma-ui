@@ -12,7 +12,7 @@ import Node from './typings/node';
 import StakerDefaultData from './typings/defaultData';
 import BoxDati from './components/boxdati/boxDati';
 import BoxDatiDefault from './components/boxdati/boxDatiDefault';
-
+import './components/ui/ui.scss';
 const Dashboard = lazy(() => import('./components/dashboard/dashboard'));
 
 const WEBSOCKET_URL = process.env.REACT_APP_WEBSOCKET_URL || 'http://localhost';
