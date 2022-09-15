@@ -1,57 +1,57 @@
-.boxConfirm{
-    position: absolute;
-    background: transparent;
-    top: 0;
-    width: 100%;
-    left: 0;
-    height: 100%;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align:center
+.boxConfirm {
+  position: absolute;
+  background: transparent;
+  top: 0;
+  width: 100%;
+  left: 0;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 100;
 }
-.boxConfirm.alert{
-    /* proprietà inserita ma gestita da framer motion, per bug noto della libreria */
-    /* https://rick-moore.medium.com/solution-css-styles-are-removed-too-early-on-page-transitions-with-framer-motion-55d40e6652e */
-    background: #ff3130; 
+.boxConfirm.alert {
+  /* proprietà inserita ma gestita da framer motion, per bug noto della libreria */
+  /* https://rick-moore.medium.com/solution-css-styles-are-removed-too-early-on-page-transitions-with-framer-motion-55d40e6652e */
+  background: #ff3130;
 }
 
 .boxConfirm.alert-ready .backConfirm,
-.boxConfirm.alert-running .backConfirm{
-    position: absolute;
-    right: -50px;
-    width: 240px;
-    bottom: -90px;
-    z-index: 0;
+.boxConfirm.alert-running .backConfirm {
+  position: absolute;
+  right: -95px;
+  width: 460px;
+  bottom: -90px;
+  z-index: 0;
+  top: 130px;
 }
 
-.innerWrapper{
-    z-index: 1;
+.innerWrapper {
+  z-index: 1;
 }
 .statoModaleTitolo {
-    font-family: "Open Sans Bold";
-    text-transform: uppercase;
-    letter-spacing: -1px;
-    text-align: center;
-    font-size: 30px;
-    color: white;
-    margin: 1rem 0;
-  }
+  font-family: 'Open Sans Bold';
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  text-align: center;
+  font-size: 3rem;
+  color: white;
+  margin: 1rem 0;
+}
 
-  .testoConferma{
-      color: white;
-      font-size: 20px;
-      text-align: center;
-      
-  }
-  .wrapperCloseIcon{
-      position: absolute;
-      top: 0;
-      right: 0;
-
-  }
-  .boxconfirmbtn button{
-    width: 100px;
-    height: 50px;
-  }
+.testoConferma {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+.wrapperCloseIcon {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.boxconfirmbtn button {
+  width: 100px;
+  height: 50px;
+}

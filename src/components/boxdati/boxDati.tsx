@@ -21,7 +21,7 @@ const BoxDati: FC<Props> = ({ setStakerClicked, stakerClicked, node }) => {
   const variants = {
     initial: { opacity: 0, y: -200 },
     animate: { opacity: 1, y: -50 },
-    exit: { opacity: 0, y: -200 },
+    exit: { opacity: 0, y: -300 },
   };
 
   return (
@@ -32,6 +32,7 @@ const BoxDati: FC<Props> = ({ setStakerClicked, stakerClicked, node }) => {
           animate="animate"
           exit="exit"
           variants={variants}
+          transition={{ duration: 0.5 }}
           className={`${style.boxDati} ${style.stakerDati} ${
             node ? style[node.state] : ''
           } ${share.confirmState ? style.modalOpen : ''}`}
@@ -41,18 +42,21 @@ const BoxDati: FC<Props> = ({ setStakerClicked, stakerClicked, node }) => {
               {' '}
               {node.state === 'ok' && (
                 <BoxStaker
+                  isAlert={isAlert}
                   node={node}
                   setStakerClicked={setStakerClicked}
                 />
               )}
               {node.state === 'rec' && (
                 <BoxStaker
+                  isAlert={isAlert}
                   node={node}
                   setStakerClicked={setStakerClicked}
                 />
               )}
               {node.state === 'off' && (
                 <BoxStaker
+                  isAlert={isAlert}
                   node={node}
                   setStakerClicked={setStakerClicked}
                 />
@@ -60,6 +64,7 @@ const BoxDati: FC<Props> = ({ setStakerClicked, stakerClicked, node }) => {
               {(node.state === 'alert-ready' ||
                 node.state === 'alert-running') && (
                 <BoxAlert
+                  isAlert={isAlert}
                   node={node}
                   setStakerClicked={setStakerClicked}
                 />

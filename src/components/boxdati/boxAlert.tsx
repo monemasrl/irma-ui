@@ -14,7 +14,6 @@ import AlertRunning from './specials/alertRunning';
 import Node from '../../typings/node';
 import Nodo from './specials/nodo';
 import { datiLetture } from '../../utils/datiLetture';
-import { motion } from 'framer-motion';
 import WrapperGraph from './specials/graphs/wrapperGraph';
 import { UserContext } from '../../context/user-context';
 import { Rilevatore } from '../../typings/ui';
@@ -34,14 +33,11 @@ const StatoSensore: FC<StatoSensoreProps> = ({ statoSensore }) => {
         />
       </div>
       <div className={`${style.datiStato} ${style[statoSensore]}`}>
-        <div className={style.label}>
-          alert
-          <div className={style.running}>
-            {statoSensore === 'alert-running' && 'Running'}
-          </div>
-        </div>
+        <div className={style.label}>alert</div>
         <div className={style.datoLabel}>
           <RiTerminalFill />
+          {statoSensore === 'alert-running' && 'Running'}
+          {statoSensore === 'alert-ready' && 'Rilevata Anomalia'}
           {share.uiStatiSensore[statoSensore]}
         </div>
       </div>
@@ -50,6 +46,7 @@ const StatoSensore: FC<StatoSensoreProps> = ({ statoSensore }) => {
 };
 
 type BoxAlertProps = {
+  isAlert: boolean;
   node: Node;
   setStakerClicked: Dispatch<SetStateAction<number>>;
 };
@@ -85,12 +82,8 @@ const BoxAlert: FC<BoxAlertProps> = ({ node, setStakerClicked }) => {
   }, [getData]);
 
   return (
-    <motion.div
+    <div
       key={node.nodeID}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.5 }}
       className={style.schedaSensore}
     >
       <section className={style.layoutSensori}>
@@ -123,7 +116,7 @@ const BoxAlert: FC<BoxAlertProps> = ({ node, setStakerClicked }) => {
             ) : (
               node.state === 'alert-running' && (
                 <button
-                  className="alert"
+                  className="alert-big stop"
                   onClick={() => share.setConfirmState(node.state)}
                 >
                   Stop
@@ -133,6 +126,7 @@ const BoxAlert: FC<BoxAlertProps> = ({ node, setStakerClicked }) => {
           </div>
           {datiLettureUI.length && (
             <Nodo
+              isAlert={isAlert}
               dataSingoloSensore={dataSingoloSensore}
               setDataSingoloSensore={setDataSingoloSensore}
               datiLettureUI={datiLettureUI}
@@ -153,7 +147,7 @@ const BoxAlert: FC<BoxAlertProps> = ({ node, setStakerClicked }) => {
           sessionIDList={sessionIDList}
         />
       </section>
-    </motion.div>
+    </div>
   );
 };
 

@@ -130,6 +130,7 @@ const BtnStartRec: FC<BtnStartRecProps> = ({ applicationID, nodeID }) => {
 /* COMPONENTE PRINCIPALE */
 
 type BoxStakerProps = {
+  isAlert: boolean;
   node: Node;
   setStakerClicked: Dispatch<SetStateAction<number>>;
 };
@@ -175,7 +176,7 @@ const BoxStaker: FC<BoxStakerProps> = ({ node, setStakerClicked }) => {
       <section className={style.layoutSensori}>
         <header>
           <div>
-            <div className={style.title}>
+            <div className={style.titleNodo}>
               <div className={style.titoletto}>Reach Staker</div>
               <div className={style.codiceStaker}>{node.nodeName}</div>
             </div>
@@ -187,10 +188,21 @@ const BoxStaker: FC<BoxStakerProps> = ({ node, setStakerClicked }) => {
                   nodeID={node.nodeID}
                 />
               )}
+              {node.state === 'rec' && (
+                <button
+                  className="alert-big stop"
+                  onClick={() => {
+                    console.log('test stop');
+                  }}
+                >
+                  Stop Rilevamento
+                </button>
+              )}
             </div>
           </div>
           {datiLettureUI.length && (
             <Nodo
+              isAlert={isAlert}
               dataSingoloSensore={dataSingoloSensore}
               setDataSingoloSensore={setDataSingoloSensore}
               datiLettureUI={datiLettureUI}

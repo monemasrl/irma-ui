@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import '../../ui/ui.scss';
+
 import style from './modali.module.scss';
 import { ShareContext } from '../../../context/context';
 import { useContext } from 'react';

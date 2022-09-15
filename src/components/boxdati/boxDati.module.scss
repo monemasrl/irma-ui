@@ -69,8 +69,7 @@
 
   &.alert-running,
   &.alert-ready {
-    transition: all ease-in-out 0.5s;
-    border-left: 4px solid $darkred;
+    border-left: 13px solid $darkred;
     .layoutSensori {
       background-color: $red;
     }
@@ -88,6 +87,7 @@
 .wrapperStatoSensore {
   background: #ededed;
   border-radius: 5px;
+  padding: 1px;
 }
 
 .stato {
@@ -140,6 +140,12 @@
 .rec {
   .stato {
     background-color: #ededed;
+  }
+  .recStop {
+    margin: 10px 12px 10px auto;
+    display: block;
+    background-color: $darkred;
+    color: white;
   }
 }
 
@@ -251,7 +257,6 @@
 
 .wrapperbutton {
   text-align: center;
-  border-top: 1px dotted gray;
 
   button {
     background-color: $darkGreen;
@@ -288,7 +293,9 @@
   margin: 0 0 auto auto;
   height: 35px;
 }
-
+.titleNodo {
+  margin-bottom: 1rem;
+}
 .schedaSensore {
   display: flex;
   flex-wrap: wrap;
