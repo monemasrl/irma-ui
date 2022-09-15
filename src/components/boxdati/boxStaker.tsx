@@ -10,7 +10,7 @@ import { RiTerminalFill } from 'react-icons/ri';
 import { motion } from 'framer-motion';
 import { UserContext } from '../../context/user-context';
 import { NodeState } from '../../typings/node';
-import { WindowReading, TotalReading } from '../../typings/reading';
+import Reading from '../../typings/reading';
 import Node from '../../typings/node';
 import Nodo from './specials/nodo';
 import WrapperGraph from './specials/graphs/wrapperGraph';
@@ -131,18 +131,16 @@ const BtnStartRec: FC<BtnStartRecProps> = ({ applicationID, nodeID }) => {
 type BoxStakerProps = {
   node: Node;
   setStakerClicked: Dispatch<SetStateAction<number>>;
-  totalReadings: TotalReading[];
-  windowReadings: WindowReading[];
+  readings: Reading[];
 };
 
 const BoxStaker: FC<BoxStakerProps> = ({
   node,
-  totalReadings,
-  windowReadings,
+  readings,
   setStakerClicked,
 }) => {
   const [dataSingoloSensore, setDataSingoloSensore] = useState<number>(1);
-  const datiLettureUI = datiLetture(totalReadings, windowReadings);
+  const datiLettureUI = datiLetture(readings);
   return (
     <motion.div
       key={node.nodeID}
@@ -169,7 +167,7 @@ const BoxStaker: FC<BoxStakerProps> = ({
               )}
             </div>
           </div>
-          {totalReadings.length && windowReadings.length && (
+          {readings.length && (
             <Nodo
               dataSingoloSensore={dataSingoloSensore}
               setDataSingoloSensore={setDataSingoloSensore}

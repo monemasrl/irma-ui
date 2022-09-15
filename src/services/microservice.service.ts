@@ -2,7 +2,7 @@ import axios from 'axios';
 import Application from '../typings/application';
 import CommandType from '../typings/command';
 import Organization from '../typings/organization';
-import { TotalReading, WindowReading } from '../typings/reading';
+import Reading from '../typings/reading';
 import Node from '../typings/node';
 
 const WEBSOCKET_URL = process.env.REACT_APP_WEBSOCKET_URL || 'http://localhost';
@@ -110,36 +110,13 @@ const getNodes = async (token: string, appID: string) => {
   return response.data.nodes;
 };
 
-interface TotalReadingsResponse {
-  readings: TotalReading[];
+interface ReadingsResponse {
+  readings: Reading[];
 }
 
-const getTotalReadings = async (token: string, nodeIDList: number[]) => {
-  const response = await axios.post<TotalReadingsResponse>(
-    `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/payload/total`,
-    {
-      IDs: nodeIDList,
-    },
-    {
-      headers: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json',
-        Authorization: `Bearer ${token}`,
-      },
-    }
-  );
-
-  console.log('getTotalReadings', response);
-  return response.data.readings;
-};
-
-interface WindowReadingsResponse {
-  readings: WindowReading[];
-}
-
-const getWindowReadings = async (token: string, nodeIDList: number[]) => {
-  const response = await axios.post<WindowReadingsResponse>(
-    `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/payload/windows`,
+const getReadings = async (token: string, nodeIDList: number[]) => {
+  const response = await axios.post<ReadingsResponse>(
+    `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/payload/`,
     {
       IDs: nodeIDList,
     },
@@ -212,8 +189,7 @@ const Microservice = {
   getOrganizationsList,
   getApplicationsList,
   getNodes,
-  getTotalReadings,
-  getWindowReadings,
+  getReadings,
   sendCommand,
   handleAlert,
 };

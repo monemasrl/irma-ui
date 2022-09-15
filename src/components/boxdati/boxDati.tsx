@@ -7,13 +7,12 @@ import { ShareContext } from '../../context/context';
 import { useContext } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Loader from '../loaders/loader';
-import { TotalReading, WindowReading } from '../../typings/reading';
+import Reading from '../../typings/reading';
 import StakerDefaultData from '../../typings/defaultData';
 import Node from '../../typings/node';
 
 type Props = {
-  totalReadings?: TotalReading[];
-  windowReadings?: WindowReading[];
+  readings?: Reading[];
   datiDefault?: StakerDefaultData;
   node?: Node;
   stakerClicked: number;
@@ -22,8 +21,7 @@ type Props = {
 
 const BoxDati: FC<Props> = ({
   setStakerClicked,
-  totalReadings,
-  windowReadings,
+  readings,
   stakerClicked,
   node,
 }) => {
@@ -47,30 +45,27 @@ const BoxDati: FC<Props> = ({
             node ? style[node.state] : ''
           } ${share.confirmState ? style.modalOpen : ''}`}
         >
-          {totalReadings && windowReadings ? (
+          {readings ? (
             <>
               {' '}
               {node?.state === 'ok' && (
                 <BoxStaker
                   node={node}
                   setStakerClicked={setStakerClicked}
-                  totalReadings={totalReadings}
-                  windowReadings={windowReadings}
+                  readings={readings}
                 />
               )}
               {node?.state === 'rec' && (
                 <BoxStaker
                   node={node}
-                  totalReadings={totalReadings}
-                  windowReadings={windowReadings}
+                  readings={readings}
                   setStakerClicked={setStakerClicked}
                 />
               )}
               {node?.state === 'off' && (
                 <BoxStaker
                   node={node}
-                  totalReadings={totalReadings}
-                  windowReadings={windowReadings}
+                  readings={readings}
                   setStakerClicked={setStakerClicked}
                 />
               )}
@@ -78,8 +73,7 @@ const BoxDati: FC<Props> = ({
                 node?.state === 'alert-running') && (
                 <BoxAlert
                   node={node}
-                  totalReadings={totalReadings}
-                  windowReadings={windowReadings}
+                  readings={readings}
                   setStakerClicked={setStakerClicked}
                 />
               )}

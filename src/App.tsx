@@ -7,7 +7,7 @@ import { ShareContextProvider, ShareContext } from './context/context';
 import { UserContext } from './context/user-context';
 import './App.scss';
 import io from 'socket.io-client';
-import { TotalReading, WindowReading } from './typings/reading';
+import Reading from './typings/reading';
 import Node from './typings/node';
 import StakerDefaultData from './typings/defaultData';
 import BoxDati from './components/boxdati/boxDati';
@@ -28,8 +28,7 @@ console.log(WEBSOCKET_URL, WEBSOCKET_PORT, socket);
 
 const App: FC = () => {
   const [nodes, setNodes] = useState<Node[]>([]);
-  const [totalReadings, setTotalReadings] = useState<TotalReading[]>([]);
-  const [windowReadings, setWindowReadings] = useState<WindowReading[]>([]);
+  const [readings, setReadings] = useState<Reading[]>([]);
 
   const [stakerClicked, setStakerClicked] = useState<number>(-1);
   const [isConnected, setIsConnected] = useState(socket?.connected);
@@ -61,10 +60,8 @@ const App: FC = () => {
       setNodes(nodes);
 
       const nodeIDList = nodes.map(({ nodeID }) => nodeID);
-      const totReads = await userSharedData.getTotalReadings(nodeIDList);
-      setTotalReadings(totReads);
-      const winReads = await userSharedData.getWindowReadings(nodeIDList);
-      setWindowReadings(winReads);
+      const reads = await userSharedData.getReadings(nodeIDList);
+      setReadings(reads);
     };
 
     func();
@@ -103,11 +100,8 @@ const App: FC = () => {
     return dati;
   };
 
-  const getNodeTotalReadings = (node: Node) =>
-    totalReadings.filter((r) => r.nodeID === node.nodeID);
-
-  const getNodeWindowReadings = (node: Node) =>
-    windowReadings.filter((r) => r.nodeID === node.nodeID);
+  const getNodeReadings = (node: Node) =>
+    readings.filter((r) => r.nodeID === node.nodeID);
 
   return (
     <ShareContextProvider>
@@ -136,14 +130,9 @@ const App: FC = () => {
                 <BoxDati
                   stakerClicked={stakerClicked}
                   setStakerClicked={setStakerClicked}
-                  totalReadings={
+                  readings={
                     stakerClicked !== -1
-                      ? getNodeTotalReadings(nodes[stakerClicked])
-                      : undefined
-                  }
-                  windowReadings={
-                    stakerClicked !== -1
-                      ? getNodeWindowReadings(nodes[stakerClicked])
+                      ? getNodeReadings(nodes[stakerClicked])
                       : undefined
                   }
                   node={stakerClicked !== -1 ? nodes[stakerClicked] : undefined}

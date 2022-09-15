@@ -41,21 +41,21 @@ const Graph: FC<Props> = ({ datiSensore, sensore }) => {
           <Tooltip />
           <Area
             type="monotone"
-            dataKey="window1_count"
+            dataKey="window1Count"
             stackId="1"
             stroke="#afb9c9"
             fill="#00577c"
           />
           <Area
             type="monotone"
-            dataKey="window2_count"
+            dataKey="window2Count"
             stackId="1"
             stroke="#428daa"
             fill="#428daa"
           />
           <Area
             type="monotone"
-            dataKey="window3_count"
+            dataKey="window3Count"
             stackId="1"
             stroke="#8bb0b5"
             fill="#8fcfe8"

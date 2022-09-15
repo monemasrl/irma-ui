@@ -1,19 +1,9 @@
-type Sensore = {
-  canID: string;
-  dangerLevel: number;
-  nodeID: number;
-  publishedAt: string;
-  readingID: number;
-  sensorNumber: string;
-  sessionID: number;
-  window1_count: number;
-  window2_count: number;
-  window3_count: number;
-};
+import Reading from './reading';
+
 interface Rilevatore {
   id: number;
-  sensore1: Sensore[];
-  sensore2: Sensore[];
+  sensore1: Reading[];
+  sensore2: Reading[];
 }
 
 export { Rilevatore, Sensore };

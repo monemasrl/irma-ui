@@ -4,7 +4,7 @@ import { RiTerminalFill } from 'react-icons/ri';
 import { ShareContext } from '../../context/context';
 import { useContext } from 'react';
 import { NodeState } from '../../typings/node';
-import { TotalReading, WindowReading } from '../../typings/reading';
+import Reading from '../../typings/reading';
 import AlertRunning from './specials/alertRunning';
 import Node from '../../typings/node';
 import Nodo from './specials/nodo';
@@ -45,19 +45,13 @@ const StatoSensore: FC<StatoSensoreProps> = ({ statoSensore }) => {
 type BoxAlertProps = {
   node: Node;
   setStakerClicked: Dispatch<SetStateAction<number>>;
-  totalReadings: TotalReading[];
-  windowReadings: WindowReading[];
+  readings: Reading[];
 };
 
-const BoxAlert: FC<BoxAlertProps> = ({
-  node,
-  totalReadings,
-  windowReadings,
-  setStakerClicked,
-}) => {
+const BoxAlert: FC<BoxAlertProps> = ({ node, readings, setStakerClicked }) => {
   const share = useContext(ShareContext);
   const [dataSingoloSensore, setDataSingoloSensore] = useState<number>(1);
-  const datiLettureUI = datiLetture(totalReadings, windowReadings);
+  const datiLettureUI = datiLetture(readings);
 
   return (
     <motion.div
@@ -106,7 +100,7 @@ const BoxAlert: FC<BoxAlertProps> = ({
               )
             )}
           </div>
-          {totalReadings.length && windowReadings.length && (
+          {readings.length && (
             <Nodo
               dataSingoloSensore={dataSingoloSensore}
               setDataSingoloSensore={setDataSingoloSensore}
