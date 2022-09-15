@@ -6,8 +6,6 @@ import { lazy, Suspense } from 'react';
 import { ShareContextProvider, ShareContext } from './context/context';
 import { UserContext } from './context/user-context';
 import './App.scss';
-import io from 'socket.io-client';
-import Reading from './typings/reading';
 import Node from './typings/node';
 import StakerDefaultData from './typings/defaultData';
 import BoxDati from './components/boxdati/boxDati';
@@ -15,39 +13,29 @@ import BoxDatiDefault from './components/boxdati/boxDatiDefault';
 
 const Dashboard = lazy(() => import('./components/dashboard/dashboard'));
 
-const WEBSOCKET_URL = process.env.REACT_APP_WEBSOCKET_URL || 'http://localhost';
-const WEBSOCKET_PORT = process.env.REACT_APP_WEBSOCKET_PORT || '5000';
-
-const DISABLE_SOCKETIO = process.env.REACT_APP_DISABLE_SOCKETIO || 0;
-
-const socket = !DISABLE_SOCKETIO
-  ? io(`${WEBSOCKET_URL}:${WEBSOCKET_PORT}`)
-  : undefined;
-
-console.log(WEBSOCKET_URL, WEBSOCKET_PORT, socket);
-
 const App: FC = () => {
   const [nodes, setNodes] = useState<Node[]>([]);
-  const [readings, setReadings] = useState<Reading[]>([]);
-
   const [stakerClicked, setStakerClicked] = useState<number>(-1);
-  const [isConnected, setIsConnected] = useState(socket?.connected);
+
   const userSharedData = useContext(UserContext);
+  const [isConnected, setIsConnected] = useState(
+    userSharedData.socket?.connected
+  );
 
   useEffect(() => {
-    socket?.on('connect', () => {
+    userSharedData.socket?.on('connect', () => {
       setIsConnected(true);
       console.log(isConnected);
     });
 
-    socket?.on('disconnect', () => {
+    userSharedData.socket?.on('disconnect', () => {
       setIsConnected(false);
       console.log(isConnected);
     });
 
     return () => {
-      socket?.off('connect');
-      socket?.off('disconnect');
+      userSharedData.socket?.off('connect');
+      userSharedData.socket?.off('disconnect');
     };
   }, [isConnected]);
 
@@ -58,10 +46,6 @@ const App: FC = () => {
       console.log('[INFO] fetching data');
       const nodes = await userSharedData.getNodes();
       setNodes(nodes);
-
-      const nodeIDList = nodes.map(({ nodeID }) => nodeID);
-      const reads = await userSharedData.getReadings(nodeIDList);
-      setReadings(reads);
     };
 
     func();
@@ -70,13 +54,13 @@ const App: FC = () => {
   useEffect(() => getData(), [userSharedData.selectedApp?.value, getData]);
 
   useEffect(() => {
-    socket?.on('change', () => {
+    userSharedData.socket?.on('change', () => {
       console.log('[SocketIO] Detected change');
       getData();
     });
 
     return () => {
-      socket?.off('change');
+      userSharedData.socket?.off('change');
     };
   }, [getData]);
 
@@ -99,9 +83,6 @@ const App: FC = () => {
     };
     return dati;
   };
-
-  const getNodeReadings = (node: Node) =>
-    readings.filter((r) => r.nodeID === node.nodeID);
 
   return (
     <ShareContextProvider>
@@ -130,11 +111,6 @@ const App: FC = () => {
                 <BoxDati
                   stakerClicked={stakerClicked}
                   setStakerClicked={setStakerClicked}
-                  readings={
-                    stakerClicked !== -1
-                      ? getNodeReadings(nodes[stakerClicked])
-                      : undefined
-                  }
                   node={stakerClicked !== -1 ? nodes[stakerClicked] : undefined}
                 />
 

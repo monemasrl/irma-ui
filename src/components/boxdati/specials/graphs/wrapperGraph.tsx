@@ -7,9 +7,14 @@ import style from './graphs.module.scss';
 type Props = {
   dataSingoloSensore: number;
   datiLettureUI: Rilevatore[];
+  sessionIDList: number[];
 };
 
-const WrapperGraph: FC<Props> = ({ dataSingoloSensore, datiLettureUI }) => {
+const WrapperGraph: FC<Props> = ({
+  dataSingoloSensore,
+  datiLettureUI,
+  sessionIDList,
+}) => {
   const datiSensore = datiLettureUI.filter((item) => {
     return item.id === dataSingoloSensore;
   });
@@ -74,19 +79,11 @@ const WrapperGraph: FC<Props> = ({ dataSingoloSensore, datiLettureUI }) => {
         >
           Storico
         </button>
-        {/* {sensore === 1 ? (
-          <ul>
-            {datiSensore[0].sensore1.map((item) => {
-              return <li key={item.readingID}>{item.publishedAt}</li>;
-            })}
-          </ul>
-        ) : (
-          <ul>
-            {datiSensore[0].sensore2.map((item) => {
-              return <li key={item.readingID}>{item.publishedAt}</li>;
-            })}
-          </ul>
-        )} */}
+        <ul>
+          {sessionIDList.map((item) => {
+            return <li key={item}>{item}</li>;
+          })}
+        </ul>
       </motion.section>
     </div>
   );

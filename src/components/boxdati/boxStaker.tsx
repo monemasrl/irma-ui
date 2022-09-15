@@ -4,17 +4,18 @@ import React, {
   FC,
   Dispatch,
   SetStateAction,
+  useEffect,
 } from 'react';
 import style from './boxDati.module.scss';
 import { RiTerminalFill } from 'react-icons/ri';
 import { motion } from 'framer-motion';
 import { UserContext } from '../../context/user-context';
 import { NodeState } from '../../typings/node';
-import Reading from '../../typings/reading';
 import Node from '../../typings/node';
 import Nodo from './specials/nodo';
 import WrapperGraph from './specials/graphs/wrapperGraph';
 import { datiLetture } from '../../utils/datiLetture';
+import { Rilevatore } from '../../typings/ui';
 
 type StatoSensoreProps = {
   statoSensore: NodeState;
@@ -131,16 +132,37 @@ const BtnStartRec: FC<BtnStartRecProps> = ({ applicationID, nodeID }) => {
 type BoxStakerProps = {
   node: Node;
   setStakerClicked: Dispatch<SetStateAction<number>>;
-  readings: Reading[];
 };
 
-const BoxStaker: FC<BoxStakerProps> = ({
-  node,
-  readings,
-  setStakerClicked,
-}) => {
+const BoxStaker: FC<BoxStakerProps> = ({ node, setStakerClicked }) => {
   const [dataSingoloSensore, setDataSingoloSensore] = useState<number>(1);
-  const datiLettureUI = datiLetture(readings);
+  const [datiLettureUI, setDatiLettureUI] = useState<Rilevatore[]>([]);
+  const [sessionIDList, setSessionIDList] = useState<number[]>([]);
+
+  const userSharedData = useContext(UserContext);
+
+  const getData = async () => {
+    const readings = await userSharedData.getSession(node.nodeID, -1);
+    setDatiLettureUI(datiLetture(readings));
+    const IDs = await userSharedData.getSessionIDs(node.nodeID);
+    setSessionIDList(IDs);
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  useEffect(() => {
+    userSharedData.socket?.on('change-reading', () => {
+      console.log('[SocketIO] Detected change');
+      getData();
+    });
+
+    return () => {
+      userSharedData.socket?.off('change-reading');
+    };
+  }, [getData]);
+
   return (
     <motion.div
       key={node.nodeID}
@@ -167,7 +189,7 @@ const BoxStaker: FC<BoxStakerProps> = ({
               )}
             </div>
           </div>
-          {readings.length && (
+          {datiLettureUI.length && (
             <Nodo
               dataSingoloSensore={dataSingoloSensore}
               setDataSingoloSensore={setDataSingoloSensore}
@@ -197,6 +219,7 @@ const BoxStaker: FC<BoxStakerProps> = ({
         <WrapperGraph
           dataSingoloSensore={dataSingoloSensore}
           datiLettureUI={datiLettureUI}
+          sessionIDList={sessionIDList}
         />
       </section>
     </motion.div>

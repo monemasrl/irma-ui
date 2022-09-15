@@ -7,24 +7,15 @@ import { ShareContext } from '../../context/context';
 import { useContext } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Loader from '../loaders/loader';
-import Reading from '../../typings/reading';
-import StakerDefaultData from '../../typings/defaultData';
 import Node from '../../typings/node';
 
 type Props = {
-  readings?: Reading[];
-  datiDefault?: StakerDefaultData;
   node?: Node;
   stakerClicked: number;
   setStakerClicked: Dispatch<SetStateAction<number>>;
 };
 
-const BoxDati: FC<Props> = ({
-  setStakerClicked,
-  readings,
-  stakerClicked,
-  node,
-}) => {
+const BoxDati: FC<Props> = ({ setStakerClicked, stakerClicked, node }) => {
   const share = useContext(ShareContext);
 
   const variants = {
@@ -45,41 +36,37 @@ const BoxDati: FC<Props> = ({
             node ? style[node.state] : ''
           } ${share.confirmState ? style.modalOpen : ''}`}
         >
-          {readings ? (
+          {node ? (
             <>
               {' '}
-              {node?.state === 'ok' && (
+              {node.state === 'ok' && (
                 <BoxStaker
                   node={node}
                   setStakerClicked={setStakerClicked}
-                  readings={readings}
                 />
               )}
-              {node?.state === 'rec' && (
+              {node.state === 'rec' && (
                 <BoxStaker
                   node={node}
-                  readings={readings}
                   setStakerClicked={setStakerClicked}
                 />
               )}
-              {node?.state === 'off' && (
+              {node.state === 'off' && (
                 <BoxStaker
                   node={node}
-                  readings={readings}
                   setStakerClicked={setStakerClicked}
                 />
               )}
-              {(node?.state === 'alert-ready' ||
-                node?.state === 'alert-running') && (
+              {(node.state === 'alert-ready' ||
+                node.state === 'alert-running') && (
                 <BoxAlert
                   node={node}
-                  readings={readings}
                   setStakerClicked={setStakerClicked}
                 />
               )}
-              {(node?.state === 'alert-ready' ||
-                node?.state === 'alert-running') &&
-                node?.unhandledAlertIDs.length && (
+              {(node.state === 'alert-ready' ||
+                node.state === 'alert-running') &&
+                node.unhandledAlertIDs.length && (
                   <BoxConfirm alertID={node.unhandledAlertIDs[0]} />
                 )}
             </>

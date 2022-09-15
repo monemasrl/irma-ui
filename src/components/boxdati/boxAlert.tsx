@@ -1,16 +1,23 @@
-import React, { FC, Dispatch, SetStateAction, useState } from 'react';
+import React, {
+  FC,
+  Dispatch,
+  SetStateAction,
+  useState,
+  useEffect,
+} from 'react';
 import style from './boxDati.module.scss';
 import { RiTerminalFill } from 'react-icons/ri';
 import { ShareContext } from '../../context/context';
 import { useContext } from 'react';
 import { NodeState } from '../../typings/node';
-import Reading from '../../typings/reading';
 import AlertRunning from './specials/alertRunning';
 import Node from '../../typings/node';
 import Nodo from './specials/nodo';
 import { datiLetture } from '../../utils/datiLetture';
 import { motion } from 'framer-motion';
 import WrapperGraph from './specials/graphs/wrapperGraph';
+import { UserContext } from '../../context/user-context';
+import { Rilevatore } from '../../typings/ui';
 type StatoSensoreProps = {
   statoSensore: NodeState;
 };
@@ -45,13 +52,37 @@ const StatoSensore: FC<StatoSensoreProps> = ({ statoSensore }) => {
 type BoxAlertProps = {
   node: Node;
   setStakerClicked: Dispatch<SetStateAction<number>>;
-  readings: Reading[];
 };
 
-const BoxAlert: FC<BoxAlertProps> = ({ node, readings, setStakerClicked }) => {
-  const share = useContext(ShareContext);
+const BoxAlert: FC<BoxAlertProps> = ({ node, setStakerClicked }) => {
   const [dataSingoloSensore, setDataSingoloSensore] = useState<number>(1);
-  const datiLettureUI = datiLetture(readings);
+  const [datiLettureUI, setDatiLettureUI] = useState<Rilevatore[]>([]);
+  const [sessionIDList, setSessionIDList] = useState<number[]>([]);
+
+  const share = useContext(ShareContext);
+  const userSharedData = useContext(UserContext);
+
+  const getData = async () => {
+    const readings = await userSharedData.getSession(node.nodeID, -1);
+    setDatiLettureUI(datiLetture(readings));
+    const IDs = await userSharedData.getSessionIDs(node.nodeID);
+    setSessionIDList(IDs);
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  useEffect(() => {
+    userSharedData.socket?.on('change-reading', () => {
+      console.log('[SocketIO] Detected change');
+      getData();
+    });
+
+    return () => {
+      userSharedData.socket?.off('change-reading');
+    };
+  }, [getData]);
 
   return (
     <motion.div
@@ -100,7 +131,7 @@ const BoxAlert: FC<BoxAlertProps> = ({ node, readings, setStakerClicked }) => {
               )
             )}
           </div>
-          {readings.length && (
+          {datiLettureUI.length && (
             <Nodo
               dataSingoloSensore={dataSingoloSensore}
               setDataSingoloSensore={setDataSingoloSensore}
@@ -119,6 +150,7 @@ const BoxAlert: FC<BoxAlertProps> = ({ node, readings, setStakerClicked }) => {
         <WrapperGraph
           dataSingoloSensore={dataSingoloSensore}
           datiLettureUI={datiLettureUI}
+          sessionIDList={sessionIDList}
         />
       </section>
     </motion.div>

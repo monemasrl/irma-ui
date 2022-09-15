@@ -17,6 +17,12 @@ import Application from '../typings/application';
 import Node from '../typings/node';
 import Reading from '../typings/reading';
 import { AppOption } from '../mock/mock_data';
+import { io, Socket } from 'socket.io-client';
+
+const WEBSOCKET_URL = process.env.REACT_APP_WEBSOCKET_URL || 'http://localhost';
+const WEBSOCKET_PORT = process.env.REACT_APP_WEBSOCKET_PORT || '5000';
+
+const DISABLE_SOCKETIO = process.env.REACT_APP_DISABLE_SOCKETIO || 0;
 
 const MOCK_DATA = process.env.REACT_APP_MOCK_DATA || 0;
 const MOCK_LOGIN = process.env.REACT_APP_MOCK_LOGIN || 0;
@@ -27,6 +33,7 @@ interface IEntry {
 }
 
 export interface IUserContext {
+  socket?: Socket;
   selectedOrg?: IEntry;
   setSelectedOrg: Dispatch<SetStateAction<IEntry | undefined>>;
   selectedApp?: IEntry;
@@ -36,7 +43,6 @@ export interface IUserContext {
   authenticate: (email: string, password: string) => Promise<void>;
   logout: () => void;
   getNodes: () => Promise<Node[]>;
-  getReadings: (nodeIDList: number[]) => Promise<Reading[]>;
   getSession: (nodeID: number, sessionID: number) => Promise<Reading[]>;
   getSessionIDs: (nodeID: number) => Promise<number[]>;
   sendCommand: (
@@ -65,6 +71,12 @@ function UserContextProvider({ children }: Props) {
   const [refreshToken, setRefreshToken] = useState(
     localStorage.getItem('refresh_token')
   );
+
+  const socket = !DISABLE_SOCKETIO
+    ? io(`${WEBSOCKET_URL}:${WEBSOCKET_PORT}`)
+    : undefined;
+
+  console.log(WEBSOCKET_URL, WEBSOCKET_PORT, socket);
 
   const [selectedOrg, setSelectedOrg] = useState<IEntry | undefined>(undefined);
   const [selectedApp, setSelectedApp] = useState<IEntry | undefined>(undefined);
@@ -149,31 +161,21 @@ function UserContextProvider({ children }: Props) {
     return list;
   };
 
-  const getReadings = async (nodeIDList: number[]) => {
-    if (!accessToken) return [];
-
-    if (MOCK_DATA) {
-      const MockReadings = (await import('../mock/mock_readings.json')).default;
-
-      return MockReadings as Reading[];
-    }
-
-    let readings: Reading[] = [];
-
-    try {
-      readings = await Microservice.getReadings(accessToken, nodeIDList);
-    } catch (error) {
-      refreshIfUnauthorized(error);
-    }
-
-    return readings;
-  };
-
   const getSession = async (nodeID: number, sessionID = -1) => {
     if (!accessToken) return [];
 
     if (MOCK_DATA) {
-      // TODO: implement mock
+      const MockSession = (await import('../mock/mock_readings.json')).default;
+
+      const readings = MockSession as Reading[];
+
+      if (sessionID == -1) {
+        sessionID = readings.sort((a, b) => b.sessionID - a.sessionID)[0]
+          .sessionID;
+      }
+      return readings.filter(
+        (reading) => reading.nodeID == nodeID && reading.sessionID == sessionID
+      );
     }
 
     let readings: Reading[] = [];
@@ -191,7 +193,14 @@ function UserContextProvider({ children }: Props) {
     if (!accessToken) return [];
 
     if (MOCK_DATA) {
-      // TODO: implement mock
+      const MockSession = (await import('../mock/mock_readings.json')).default;
+
+      const readings = MockSession as Reading[];
+
+      const sessionIDs = readings.map(({ sessionID }) => sessionID);
+      const uniqueSessionIDs = Array.from(new Set(sessionIDs));
+
+      return uniqueSessionIDs;
     }
 
     let IDs: number[] = [];
@@ -327,6 +336,7 @@ function UserContextProvider({ children }: Props) {
   }, [accessToken, navigate]);
 
   const userShareData: IUserContext = {
+    socket,
     selectedOrg,
     setSelectedOrg,
     selectedApp,
@@ -336,7 +346,6 @@ function UserContextProvider({ children }: Props) {
     authenticate,
     logout,
     getNodes,
-    getReadings,
     getSession,
     getSessionIDs,
     sendCommand,
