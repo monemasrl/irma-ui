@@ -37,6 +37,8 @@ export interface IUserContext {
   logout: () => void;
   getNodes: () => Promise<Node[]>;
   getReadings: (nodeIDList: number[]) => Promise<Reading[]>;
+  getSession: (nodeID: number, sessionID: number) => Promise<Reading[]>;
+  getSessionIDs: (nodeID: number) => Promise<number[]>;
   sendCommand: (
     appID: string,
     nodeID: number,
@@ -165,6 +167,42 @@ function UserContextProvider({ children }: Props) {
     }
 
     return readings;
+  };
+
+  const getSession = async (nodeID: number, sessionID = -1) => {
+    if (!accessToken) return [];
+
+    if (MOCK_DATA) {
+      // TODO: implement mock
+    }
+
+    let readings: Reading[] = [];
+
+    try {
+      readings = await Microservice.getSession(accessToken, nodeID, sessionID);
+    } catch (error) {
+      refreshIfUnauthorized(error);
+    }
+
+    return readings;
+  };
+
+  const getSessionIDs = async (nodeID: number) => {
+    if (!accessToken) return [];
+
+    if (MOCK_DATA) {
+      // TODO: implement mock
+    }
+
+    let IDs: number[] = [];
+
+    try {
+      IDs = await Microservice.getSessionIDs(accessToken, nodeID);
+    } catch (error) {
+      refreshIfUnauthorized(error);
+    }
+
+    return IDs;
   };
 
   const sendCommand = async (
@@ -299,6 +337,8 @@ function UserContextProvider({ children }: Props) {
     logout,
     getNodes,
     getReadings,
+    getSession,
+    getSessionIDs,
     sendCommand,
     handleAlert,
   };

@@ -110,6 +110,46 @@ const getNodes = async (token: string, appID: string) => {
   return response.data.nodes;
 };
 
+type SessionResponse = {
+  readings: Reading[];
+};
+
+const getSession = async (token: string, nodeID: number, sessionID: number) => {
+  const response = await axios.get<SessionResponse>(
+    `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/session/`,
+    {
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`,
+      },
+      params: { nodeID: nodeID, sessionID: sessionID },
+    }
+  );
+
+  console.log('getSession', response);
+  return response.data.readings;
+};
+
+type SessionIDsResponse = {
+  IDs: number[];
+};
+
+const getSessionIDs = async (token: string, nodeID: number) => {
+  const response = await axios.get<SessionIDsResponse>(
+    `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/session/`,
+    {
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`,
+      },
+      params: { nodeID: nodeID },
+    }
+  );
+
+  console.log('getSessionIDs', response);
+  return response.data.IDs;
+};
+
 interface ReadingsResponse {
   readings: Reading[];
 }
@@ -190,6 +230,8 @@ const Microservice = {
   getApplicationsList,
   getNodes,
   getReadings,
+  getSession,
+  getSessionIDs,
   sendCommand,
   handleAlert,
 };
