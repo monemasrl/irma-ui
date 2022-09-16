@@ -8,6 +8,7 @@ import React, {
 import style from './boxDati.module.scss';
 import { RiTerminalFill } from 'react-icons/ri';
 import { motion } from 'framer-motion';
+import { ShareContext } from '../../context/context';
 import { UserContext } from '../../context/user-context';
 import { NodeState } from '../../typings/node';
 import { WindowReading, TotalReading } from '../../typings/reading';
@@ -15,6 +16,7 @@ import Node from '../../typings/node';
 import Nodo from './specials/nodo';
 import WrapperGraph from './specials/graphs/wrapperGraph';
 import { datiLetture } from '../../utils/datiLetture';
+import AlertRunning from './specials/alertRunning';
 
 type StatoSensoreProps = {
   statoSensore: NodeState;
@@ -27,7 +29,7 @@ const StatoSensore: FC<StatoSensoreProps> = ({ statoSensore }) => {
     off: 'sensore non funzionante',
     'alert-ready': 'rilevata anomalia',
     // TODO: messaggio
-    'alert-running': 'messaggio',
+    'alert-running': 'Alert Running',
   };
 
   return (
@@ -38,7 +40,7 @@ const StatoSensore: FC<StatoSensoreProps> = ({ statoSensore }) => {
             <div className={style.lancia}></div>
             <img
               src={`images/${statoSensore}-led.svg`}
-              alt="icona ok"
+              alt="icona rec"
             />
           </div>
         ) : (
@@ -56,38 +58,6 @@ const StatoSensore: FC<StatoSensoreProps> = ({ statoSensore }) => {
         </div>
       </div>
     </div>
-  );
-};
-
-type BloccoNumericoProps = {
-  datiNumerici: {
-    titolo: string;
-    dato: number;
-  };
-  sensorID: string;
-  index: number;
-};
-
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const BloccoNumerico: FC<BloccoNumericoProps> = ({
-  datiNumerici,
-  sensorID,
-  index,
-}) => {
-  return (
-    <>
-      <motion.div
-        key={sensorID}
-        className={style.bloccoDati}
-        initial={{ opacity: 0, top: 20 }}
-        animate={{ opacity: 1, top: 0 }}
-        exit={{ opacity: 0, top: 20 }}
-        transition={{ duration: 0.5, delay: index * 0.1 }}
-      >
-        <div className={style.titoloInterno}>{datiNumerici.titolo}</div>
-        <div className={style.datoInterno}>{datiNumerici.dato} </div>
-      </motion.div>
-    </>
   );
 };
 
@@ -145,6 +115,9 @@ const BoxStaker: FC<BoxStakerProps> = ({
 }) => {
   const [dataSingoloSensore, setDataSingoloSensore] = useState<number>(1);
   const datiLettureUI = datiLetture(totalReadings, windowReadings);
+  const share = useContext(ShareContext);
+  console.log(node.state, 'nodestate');
+
   return (
     <motion.div
       key={node.nodeID}
@@ -161,7 +134,14 @@ const BoxStaker: FC<BoxStakerProps> = ({
               <div className={style.titoletto}>Reach Staker</div>
               <div className={style.codiceStaker}>{node.nodeName}</div>
             </div>
-            <div className={style.wrapperStatoSensore}>
+            <div
+              className={`${
+                (node.state === 'ok' ||
+                  node.state === 'rec' ||
+                  node.state === 'off') &&
+                style.wrapperStatoSensore
+              }`}
+            >
               <StatoSensore statoSensore={node.state} />
               {node.state === 'ok' && (
                 <BtnStartRec
@@ -181,6 +161,39 @@ const BoxStaker: FC<BoxStakerProps> = ({
               )}
             </div>
           </div>
+          {(node.state === 'alert-ready' || node.state === 'alert-running') && (
+            <>
+              <div className={style.wrapperAlert}>
+                {node.state === 'alert-ready' ? (
+                  <img
+                    src="/images/alert-back.svg"
+                    alt="back alert"
+                  />
+                ) : (
+                  <AlertRunning />
+                )}
+              </div>
+              <div className={style.buttonWrapper}>
+                {node.state === 'alert-ready' ? (
+                  <button
+                    className="alert"
+                    onClick={() => share.setConfirmState(node.state)}
+                  >
+                    Gestisci Allerta
+                  </button>
+                ) : (
+                  node.state === 'alert-running' && (
+                    <button
+                      className="alert-big stop"
+                      onClick={() => share.setConfirmState(node.state)}
+                    >
+                      Stop
+                    </button>
+                  )
+                )}
+              </div>
+            </>
+          )}
           {totalReadings.length && windowReadings.length && (
             <Nodo
               isAlert={isAlert}
@@ -189,17 +202,6 @@ const BoxStaker: FC<BoxStakerProps> = ({
               datiLettureUI={datiLettureUI}
             />
           )}
-          {/* <div className={style.datiInterni}>
-        {dati.datiInterni.map((dato, index) => (
-          <React.Fragment key={dato.titolo}>
-            <BloccoNumerico
-              datiNumerici={dato}
-              sensorID={dati.sensorID}
-              index={index}
-            />
-          </React.Fragment>
-        ))}
-      </div> */}
         </header>
       </section>
       <section className={style.layoutGraph}>

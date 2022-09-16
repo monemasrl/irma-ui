@@ -1,7 +1,6 @@
 import React, { FC, SetStateAction, Dispatch } from 'react';
 import style from './boxDati.module.scss';
 import BoxStaker from './boxStaker';
-import BoxAlert from './boxAlert';
 import BoxConfirm from './modali/boxConfirm';
 import { ShareContext } from '../../context/context';
 import { useContext } from 'react';
@@ -82,7 +81,7 @@ const BoxDati: FC<Props> = ({
               )}
               {(node?.state === 'alert-ready' ||
                 node?.state === 'alert-running') && (
-                <BoxAlert
+                <BoxStaker
                   isAlert={isAlert}
                   node={node}
                   totalReadings={totalReadings}
