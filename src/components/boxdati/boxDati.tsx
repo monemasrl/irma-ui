@@ -1,7 +1,6 @@
 import React, { FC, SetStateAction, Dispatch } from 'react';
 import style from './boxDati.module.scss';
 import BoxStaker from './boxStaker';
-import BoxAlert from './boxAlert';
 import BoxConfirm from './modali/boxConfirm';
 import { ShareContext } from '../../context/context';
 import { useContext } from 'react';
@@ -11,11 +10,17 @@ import Node from '../../typings/node';
 
 type Props = {
   node?: Node;
+  isAlert: boolean;
   stakerClicked: number;
   setStakerClicked: Dispatch<SetStateAction<number>>;
 };
 
-const BoxDati: FC<Props> = ({ setStakerClicked, stakerClicked, node }) => {
+const BoxDati: FC<Props> = ({
+  setStakerClicked,
+  stakerClicked,
+  node,
+  isAlert,
+}) => {
   const share = useContext(ShareContext);
 
   const variants = {
@@ -40,30 +45,8 @@ const BoxDati: FC<Props> = ({ setStakerClicked, stakerClicked, node }) => {
           {node ? (
             <>
               {' '}
-              {node.state === 'ok' && (
+              {node && (
                 <BoxStaker
-                  isAlert={isAlert}
-                  node={node}
-                  setStakerClicked={setStakerClicked}
-                />
-              )}
-              {node.state === 'rec' && (
-                <BoxStaker
-                  isAlert={isAlert}
-                  node={node}
-                  setStakerClicked={setStakerClicked}
-                />
-              )}
-              {node.state === 'off' && (
-                <BoxStaker
-                  isAlert={isAlert}
-                  node={node}
-                  setStakerClicked={setStakerClicked}
-                />
-              )}
-              {(node.state === 'alert-ready' ||
-                node.state === 'alert-running') && (
-                <BoxAlert
                   isAlert={isAlert}
                   node={node}
                   setStakerClicked={setStakerClicked}

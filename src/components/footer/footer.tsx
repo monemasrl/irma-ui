@@ -28,7 +28,7 @@ function Footer() {
         </li>
         <li>
           <img
-            src={`images/alert-led.svg`}
+            src={`images/alert-ready-led.svg`}
             alt="icona ok"
           />
           <span>Rilevata Anomalia</span>

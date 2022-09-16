@@ -45,7 +45,7 @@ const WrapperGraph: FC<Props> = ({
         </ul>
       </nav>
       <section className={style.boxGraph}>
-        {datiSensore.length ? (
+        {datiSensore.length && (
           <>
             {sensore === 1 ? (
               <Graph
@@ -59,8 +59,6 @@ const WrapperGraph: FC<Props> = ({
               />
             )}
           </>
-        ) : (
-          'VOTO'
         )}
       </section>
 
