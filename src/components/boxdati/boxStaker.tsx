@@ -22,6 +22,16 @@ type StatoSensoreProps = {
   statoSensore: NodeState;
 };
 
+function nomeStatoInScheda(nomeStatoSensore: string) {
+  if (
+    nomeStatoSensore === 'alert-ready' ||
+    nomeStatoSensore === 'alert-running'
+  ) {
+    return 'alert';
+  }
+  return nomeStatoSensore;
+}
+
 const StatoSensore: FC<StatoSensoreProps> = ({ statoSensore }) => {
   const uiStatiSensore = {
     ok: 'sensore funzionante',
@@ -51,7 +61,7 @@ const StatoSensore: FC<StatoSensoreProps> = ({ statoSensore }) => {
         )}
       </div>
       <div className={`${style.datiStato} ${style[statoSensore]}`}>
-        <div className={style.label}>{statoSensore}</div>
+        <div className={style.label}>{nomeStatoInScheda(statoSensore)}</div>
         <div className={style.datoLabel}>
           <RiTerminalFill />
           {uiStatiSensore[statoSensore]}

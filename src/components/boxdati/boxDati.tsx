@@ -52,35 +52,7 @@ const BoxDati: FC<Props> = ({
           {totalReadings && windowReadings ? (
             <>
               {' '}
-              {node?.state === 'ok' && (
-                <BoxStaker
-                  isAlert={isAlert}
-                  node={node}
-                  setStakerClicked={setStakerClicked}
-                  totalReadings={totalReadings}
-                  windowReadings={windowReadings}
-                />
-              )}
-              {node?.state === 'rec' && (
-                <BoxStaker
-                  isAlert={isAlert}
-                  node={node}
-                  totalReadings={totalReadings}
-                  windowReadings={windowReadings}
-                  setStakerClicked={setStakerClicked}
-                />
-              )}
-              {node?.state === 'off' && (
-                <BoxStaker
-                  isAlert={isAlert}
-                  node={node}
-                  totalReadings={totalReadings}
-                  windowReadings={windowReadings}
-                  setStakerClicked={setStakerClicked}
-                />
-              )}
-              {(node?.state === 'alert-ready' ||
-                node?.state === 'alert-running') && (
+              {node && (
                 <BoxStaker
                   isAlert={isAlert}
                   node={node}
