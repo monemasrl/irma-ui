@@ -1,6 +1,6 @@
 import axios from 'axios';
 import Application from '../typings/application';
-import CommandType from '../typings/command';
+import CommandType from '../utils/command';
 import Organization from '../typings/organization';
 import Reading from '../typings/reading';
 import Node from '../typings/node';

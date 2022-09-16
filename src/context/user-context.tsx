@@ -10,7 +10,7 @@ import React, {
 import Microservice from '../services/microservice.service';
 import { useNavigate } from 'react-router-dom';
 import { AxiosError } from 'axios';
-import CommandType from '../typings/command';
+import CommandType from '../utils/command';
 import { OrgOption } from '../mock/mock_data';
 import Organization from '../typings/organization';
 import Application from '../typings/application';

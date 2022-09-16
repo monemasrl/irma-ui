@@ -18,6 +18,7 @@ import WrapperGraph from './specials/graphs/wrapperGraph';
 import { datiLetture } from '../../utils/datiLetture';
 import { Rilevatore } from '../../typings/ui';
 import AlertRunning from './specials/alertRunning';
+import CommandType from '../../utils/command';
 
 type StatoSensoreProps = {
   statoSensore: NodeState;
@@ -72,36 +73,76 @@ const StatoSensore: FC<StatoSensoreProps> = ({ statoSensore }) => {
   );
 };
 
-type BtnStartRecProps = {
+type RecButtonProps = {
   applicationID: string;
   nodeID: number;
+  type: RecButtonType;
 };
 
-const BtnStartRec: FC<BtnStartRecProps> = ({ applicationID, nodeID }) => {
-  const [statoInvioDati, setStatoInvioDati] = useState(false);
+type RecButtonType = 'ok' | 'rec';
+
+const RecButton: FC<RecButtonProps> = ({ applicationID, nodeID, type }) => {
+  const [disabled, setDisabled] = useState(false);
   const userSharedData = useContext(UserContext);
 
-  function iniziaLettura(applicationID: string, nodeID: number) {
-    setStatoInvioDati(true);
+  const buttonClass = type === 'ok' ? '' : 'alert-big stop';
 
-    userSharedData
-      .sendCommand(applicationID, nodeID, 0)
-      .then(() => {
-        console.log('stato aggiornato');
-        setStatoInvioDati(false);
-      })
-      .catch((error) => {
-        console.error('ORRORE ED ERRORE, QUALCUNO MI AIUTI...', error);
-      });
+  const text = type === 'ok' ? 'Inizia Rilevamento' : 'Stop Rilevamento';
+  const command = type === 'ok' ? CommandType.START_REC : CommandType.END_REC;
+
+  async function sendCommand(applicationID: string, nodeID: number) {
+    setDisabled(true);
+
+    try {
+      await userSharedData.sendCommand(applicationID, nodeID, command);
+      console.log('stato aggiornato');
+      setDisabled(false);
+    } catch (error) {
+      console.error('ORRORE ED ERRORE, QUALCUNO MI AIUTI...', error);
+    }
   }
 
   return (
     <div className={style.wrapperbutton}>
       <button
-        disabled={statoInvioDati}
-        onClick={() => iniziaLettura(applicationID, nodeID)}
+        className={`${buttonClass}`}
+        disabled={disabled}
+        onClick={() => sendCommand(applicationID, nodeID)}
       >
-        Inizia Rilevamento
+        {text}
+      </button>
+    </div>
+  );
+};
+
+type HandleButtonProps = {
+  state: NodeState;
+  setConfirmState: Dispatch<SetStateAction<NodeState | undefined>>;
+};
+
+const HandleButton: FC<HandleButtonProps> = ({ state, setConfirmState }) => {
+  const [disabled, setDisabled] = useState(false);
+
+  async function handle() {
+    setDisabled(true);
+
+    try {
+      setConfirmState(state);
+      console.log('stato aggiornato');
+      setDisabled(false);
+    } catch (error) {
+      console.error('ORRORE ED ERRORE, QUALCUNO MI AIUTI...', error);
+    }
+  }
+
+  return (
+    <div className={style.wrapperbutton}>
+      <button
+        className={'alert'}
+        disabled={disabled}
+        onClick={() => handle()}
+      >
+        Gestisci Allerta
       </button>
     </div>
   );
@@ -171,57 +212,43 @@ const BoxStaker: FC<BoxStakerProps> = ({ node, setStakerClicked, isAlert }) => {
               }`}
             >
               <StatoSensore statoSensore={node.state} />
-              {node.state === 'ok' && (
-                <BtnStartRec
-                  applicationID={node.applicationID}
-                  nodeID={node.nodeID}
-                />
+
+              {/* Barra opzionale in caso di alert */}
+              {(node.state === 'alert-ready' ||
+                node.state === 'alert-running') && (
+                <div className={style.wrapperAlert}>
+                  {node.state === 'alert-ready' ? (
+                    <img
+                      src="/images/alert-back.svg"
+                      alt="back alert"
+                    />
+                  ) : (
+                    node.state === 'alert-running' && <AlertRunning />
+                  )}
+                </div>
               )}
-              {node.state === 'rec' && (
-                <button
-                  className="alert-big stop"
-                  onClick={() => {
-                    console.log('test stop');
-                  }}
-                >
-                  Stop Rilevamento
-                </button>
-              )}
+
+              {/* Sezione pulsanti */}
+              <div className={style.buttonSection}>
+                {(node.state === 'ok' ||
+                  node.state === 'rec' ||
+                  node.state === 'alert-running') && (
+                  <RecButton
+                    applicationID={node.applicationID}
+                    nodeID={node.nodeID}
+                    type={node.state === 'alert-running' ? 'rec' : node.state}
+                  />
+                )}
+                {(node.state === 'alert-ready' ||
+                  node.state === 'alert-running') && (
+                  <HandleButton
+                    state={node.state}
+                    setConfirmState={share.setConfirmState}
+                  />
+                )}
+              </div>
             </div>
           </div>
-          {(node.state === 'alert-ready' || node.state === 'alert-running') && (
-            <>
-              <div className={style.wrapperAlert}>
-                {node.state === 'alert-ready' ? (
-                  <img
-                    src="/images/alert-back.svg"
-                    alt="back alert"
-                  />
-                ) : (
-                  <AlertRunning />
-                )}
-              </div>
-              <div className={style.buttonWrapper}>
-                {node.state === 'alert-ready' ? (
-                  <button
-                    className="alert"
-                    onClick={() => share.setConfirmState(node.state)}
-                  >
-                    Gestisci Allerta
-                  </button>
-                ) : (
-                  node.state === 'alert-running' && (
-                    <button
-                      className="alert-big stop"
-                      onClick={() => share.setConfirmState(node.state)}
-                    >
-                      Stop
-                    </button>
-                  )
-                )}
-              </div>
-            </>
-          )}
           {datiLettureUI.length && (
             <Nodo
               isAlert={isAlert}

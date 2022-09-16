@@ -263,6 +263,16 @@
     color: white;
     font-size: 16px;
   }
+
+  button.alert {
+    background-color: $darkred;
+  }
+}
+
+.buttonSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .iconastatoRec {
