@@ -45,13 +45,11 @@ const BoxDati: FC<Props> = ({
           {node ? (
             <>
               {' '}
-              {node && (
-                <BoxStaker
-                  isAlert={isAlert}
-                  node={node}
-                  setStakerClicked={setStakerClicked}
-                />
-              )}
+              <BoxStaker
+                isAlert={isAlert}
+                node={node}
+                setStakerClicked={setStakerClicked}
+              />
               {(node.state === 'alert-ready' ||
                 node.state === 'alert-running') &&
                 node.unhandledAlertIDs.length && (

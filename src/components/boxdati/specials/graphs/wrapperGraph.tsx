@@ -34,20 +34,16 @@ const WrapperGraph: FC<Props> = ({ dataSingoloSensore, datiLettureUI }) => {
         </ul>
       </nav>
       <section className={style.boxGraph}>
-        {datiSensore.length && (
-          <>
-            {sensore === 1 ? (
-              <Graph
-                datiSensore={datiSensore[0].sensore1}
-                sensore={sensore}
-              />
-            ) : (
-              <Graph
-                datiSensore={datiSensore[0].sensore2}
-                sensore={sensore}
-              />
-            )}
-          </>
+        {sensore === 1 ? (
+          <Graph
+            datiSensore={datiSensore[0].sensore1}
+            sensore={sensore}
+          />
+        ) : (
+          <Graph
+            datiSensore={datiSensore[0].sensore2}
+            sensore={sensore}
+          />
         )}
       </section>
     </div>

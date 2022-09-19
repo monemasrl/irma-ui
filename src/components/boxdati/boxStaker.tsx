@@ -250,14 +250,13 @@ const BoxStaker: FC<BoxStakerProps> = ({ node, setStakerClicked, isAlert }) => {
               </div>
             </div>
           </div>
-          {datiLettureUI.length && (
-            <Nodo
-              isAlert={isAlert}
-              dataSingoloSensore={dataSingoloSensore}
-              setDataSingoloSensore={setDataSingoloSensore}
-              datiLettureUI={datiLettureUI}
-            />
-          )}
+
+          <Nodo
+            isAlert={isAlert}
+            dataSingoloSensore={dataSingoloSensore}
+            setDataSingoloSensore={setDataSingoloSensore}
+            datiLettureUI={datiLettureUI}
+          />
         </header>
       </section>
       <section className={style.layoutGraph}>
