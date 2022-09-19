@@ -5,22 +5,6 @@ import { UserContext } from '../../context/user-context';
 import UserMenu from './userMenu';
 import OptionMenu from './optionMenu';
 
-export interface IDatiUser {
-  nome: string;
-  cognome: string;
-  qualifica: string;
-  accesso: string;
-  tempoSessioneCorrente: number;
-}
-
-const datiUser: IDatiUser = {
-  nome: 'carlo',
-  cognome: 'martello',
-  qualifica: 'Re',
-  accesso: 'amministratore',
-  tempoSessioneCorrente: 360,
-};
-
 function Navbar() {
   const [openMenu, setOpenMenu] = useState(false);
   const [openSettings, setOpenSettings] = useState(false);
@@ -48,7 +32,7 @@ function Navbar() {
         logout={userSharedData.logout}
         openMenu={openMenu}
         setOpenMenu={setOpenMenu}
-        datiUser={datiUser}
+        user={userSharedData.user}
       />
       <OptionMenu
         openSettings={openSettings}

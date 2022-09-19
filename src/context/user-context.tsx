@@ -18,6 +18,7 @@ import Node from '../typings/node';
 import Reading from '../typings/reading';
 import { AppOption } from '../mock/mock_data';
 import { io, Socket } from 'socket.io-client';
+import User from '../typings/user';
 
 const WEBSOCKET_URL = process.env.REACT_APP_WEBSOCKET_URL || 'http://localhost';
 const WEBSOCKET_PORT = process.env.REACT_APP_WEBSOCKET_PORT || '5000';
@@ -33,6 +34,8 @@ interface IEntry {
 }
 
 export interface IUserContext {
+  user?: User;
+  setUser: Dispatch<SetStateAction<User | undefined>>;
   socket?: Socket;
   selectedOrg?: IEntry;
   setSelectedOrg: Dispatch<SetStateAction<IEntry | undefined>>;
@@ -45,6 +48,7 @@ export interface IUserContext {
   getNodes: () => Promise<Node[]>;
   getSession: (nodeID: number, sessionID: number) => Promise<Reading[]>;
   getSessionIDs: (nodeID: number) => Promise<number[]>;
+  getUserInfo: () => Promise<User | undefined>;
   sendCommand: (
     appID: string,
     nodeID: number,
@@ -78,6 +82,7 @@ function UserContextProvider({ children }: Props) {
 
   console.log(WEBSOCKET_URL, WEBSOCKET_PORT, socket);
 
+  const [user, setUser] = useState<User | undefined>(undefined);
   const [selectedOrg, setSelectedOrg] = useState<IEntry | undefined>(undefined);
   const [selectedApp, setSelectedApp] = useState<IEntry | undefined>(undefined);
   const [orgOptions, setOrgOptions] = useState<IEntry[]>([]);
@@ -214,6 +219,29 @@ function UserContextProvider({ children }: Props) {
     return IDs;
   };
 
+  const getUserInfo = async () => {
+    if (!accessToken) return undefined;
+
+    if (MOCK_DATA) {
+      return {
+        email: 'lezzo@gmail.com',
+        first_name: 'carlo',
+        last_name: 'martello',
+        roles: [],
+      };
+    }
+
+    let user: User | undefined = undefined;
+
+    try {
+      user = await Microservice.getUserInfo(accessToken);
+    } catch (error) {
+      refreshIfUnauthorized(error);
+    }
+
+    return user;
+  };
+
   const sendCommand = async (
     appID: string,
     nodeID: number,
@@ -326,6 +354,16 @@ function UserContextProvider({ children }: Props) {
     setSelectedApp(appOptions[0]);
   }, [JSON.stringify(appOptions)]); // eslint-disable-line react-hooks/exhaustive-deps
 
+  // Fetch userInfo on token change
+  useEffect(() => {
+    if (!accessToken) return;
+    const func = async () => {
+      setUser(await getUserInfo());
+    };
+
+    func();
+  }, [accessToken]);
+
   // Navigate the user on login and logout
   useEffect(() => {
     if (!accessToken) {
@@ -337,6 +375,8 @@ function UserContextProvider({ children }: Props) {
 
   const userShareData: IUserContext = {
     socket,
+    user,
+    setUser,
     selectedOrg,
     setSelectedOrg,
     selectedApp,
@@ -348,6 +388,7 @@ function UserContextProvider({ children }: Props) {
     getNodes,
     getSession,
     getSessionIDs,
+    getUserInfo,
     sendCommand,
     handleAlert,
   };
