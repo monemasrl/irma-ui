@@ -19,6 +19,7 @@ import { datiLetture } from '../../utils/datiLetture';
 import { Rilevatore } from '../../typings/ui';
 import AlertRunning from './specials/alertRunning';
 import CommandType from '../../utils/command';
+import StoricoSessioni from './specials/storicoSessioni';
 
 type StatoSensoreProps = {
   statoSensore: NodeState;
@@ -85,7 +86,7 @@ const RecButton: FC<RecButtonProps> = ({ applicationID, nodeID, type }) => {
   const [disabled, setDisabled] = useState(false);
   const userSharedData = useContext(UserContext);
 
-  const buttonClass = type === 'ok' ? '' : 'alert-big stop';
+  const buttonClass = type === 'ok' ? '' : 'stop-rec';
 
   const text = type === 'ok' ? 'Inizia Rilevamento' : 'Stop Rilevamento';
   const command = type === 'ok' ? CommandType.START_REC : CommandType.END_REC;
@@ -269,9 +270,9 @@ const BoxStaker: FC<BoxStakerProps> = ({ node, setStakerClicked, isAlert }) => {
         <WrapperGraph
           dataSingoloSensore={dataSingoloSensore}
           datiLettureUI={datiLettureUI}
-          sessionIDList={sessionIDList}
         />
       </section>
+      <StoricoSessioni sessionIDList={sessionIDList} />
     </motion.div>
   );
 };

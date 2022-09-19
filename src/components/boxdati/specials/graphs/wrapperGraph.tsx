@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import React, { FC, useState } from 'react';
 import { Rilevatore } from '../../../../typings/ui';
 import Graph from './graph';
@@ -7,24 +6,14 @@ import style from './graphs.module.scss';
 type Props = {
   dataSingoloSensore: number;
   datiLettureUI: Rilevatore[];
-  sessionIDList: number[];
 };
 
-const WrapperGraph: FC<Props> = ({
-  dataSingoloSensore,
-  datiLettureUI,
-  sessionIDList,
-}) => {
+const WrapperGraph: FC<Props> = ({ dataSingoloSensore, datiLettureUI }) => {
   const datiSensore = datiLettureUI.filter((item) => {
     return item.id === dataSingoloSensore;
   });
   const [sensore, setSensore] = useState(1);
-  const [storico, setStorico] = useState(false);
 
-  const variants = {
-    open: { top: 80 },
-    close: { top: '99.5%' },
-  };
   return (
     <div className={style.wrapperGraph}>
       <h3> Rilevatore {dataSingoloSensore}</h3>
@@ -61,28 +50,6 @@ const WrapperGraph: FC<Props> = ({
           </>
         )}
       </section>
-
-      <motion.section
-        className={style.storicoSensore}
-        variants={variants}
-        animate={storico ? 'open' : 'close'}
-        transition={{
-          x: { duration: 0.5 },
-          default: { ease: 'easeInOut' },
-        }}
-      >
-        <button
-          className={style.storicoBtn}
-          onClick={() => setStorico((prev) => !prev)}
-        >
-          Storico
-        </button>
-        <ul>
-          {sessionIDList.map((item) => {
-            return <li key={item}>{item}</li>;
-          })}
-        </ul>
-      </motion.section>
     </div>
   );
 };
