@@ -136,7 +136,7 @@ type SessionIDsResponse = {
 
 const getSessionIDs = async (token: string, nodeID: number) => {
   const response = await axios.get<SessionIDsResponse>(
-    `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/session/`,
+    `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/session/ids`,
     {
       headers: {
         'Content-Type': 'application/json',

@@ -1,7 +1,7 @@
 type Reading = {
   nodeID: number;
-  canID: string;
-  sensorNumber: string;
+  canID: number;
+  sensorNumber: number;
   readingID: number;
   sessionID: number;
   dangerLevel: number;
