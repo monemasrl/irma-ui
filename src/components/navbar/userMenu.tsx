@@ -2,16 +2,16 @@ import React, { Dispatch, SetStateAction } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import style from './navbar.module.scss';
 import { CloseIcon } from '../ui/ui';
-import { IDatiUser } from './navbar';
+import User from '../../typings/user';
 
 type Props = {
-  datiUser: IDatiUser;
+  user?: User;
   openMenu: boolean;
   setOpenMenu: Dispatch<SetStateAction<boolean>>;
   logout: () => void;
 };
 
-function UserMenu({ openMenu, datiUser, setOpenMenu, logout }: Props) {
+function UserMenu({ openMenu, user, setOpenMenu, logout }: Props) {
   return (
     <>
       <AnimatePresence>
@@ -36,30 +36,33 @@ function UserMenu({ openMenu, datiUser, setOpenMenu, logout }: Props) {
                   alt="avatar-carlo-martello"
                 />
               </div>
-              <ul className={style.datiutente}>
-                <li>
-                  <span>Nome:</span> {datiUser.nome}
-                </li>
-                <li>
-                  <span>Cognome:</span> {datiUser.cognome}
-                </li>
-                <li>
-                  <span>Qualifica:</span> {datiUser.qualifica}
-                </li>
-                <li>
-                  <span>User Tipo:</span> {datiUser.accesso}
-                </li>
-                <li>
-                  <span>Durata sessione:</span>{' '}
-                  {datiUser.tempoSessioneCorrente / 60} ore
-                </li>
-                <li
-                  className={style.logout}
-                  onClick={logout}
-                >
-                  Logout
-                </li>
-              </ul>
+              {user && (
+                <ul className={style.datiutente}>
+                  <li>
+                    <span>Nome:</span> {user.first_name}
+                  </li>
+                  <li>
+                    <span>Cognome:</span> {user.last_name}
+                  </li>
+                  <li>
+                    <span>Email:</span> {user.email}
+                  </li>
+                  <li>
+                    <span>Ruoli:</span>
+                    <ul>
+                      {user.roles.map((role) => {
+                        return <li key={role.name}>{role.name}</li>;
+                      })}
+                    </ul>
+                  </li>
+                  <li
+                    className={style.logout}
+                    onClick={logout}
+                  >
+                    Logout
+                  </li>
+                </ul>
+              )}
             </div>
             <div className={style.wrapperLink}>
               <ul className={style.datiLink}>

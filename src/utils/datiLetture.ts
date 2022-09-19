@@ -15,9 +15,9 @@ function datiLetture(readings: Reading[]): Rilevatore[] {
     };
 
     readings.forEach((reading) => {
-      if (reading.sensorNumber === '1') {
+      if (reading.sensorNumber === 1) {
         rilevatore.sensore1.push(reading);
-      } else if (reading.sensorNumber === '2') {
+      } else if (reading.sensorNumber === 2) {
         rilevatore.sensore2.push(reading);
       }
     });

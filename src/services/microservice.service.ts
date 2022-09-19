@@ -4,6 +4,7 @@ import CommandType from '../utils/command';
 import Organization from '../typings/organization';
 import Reading from '../typings/reading';
 import Node from '../typings/node';
+import User from '../typings/user';
 
 const WEBSOCKET_URL = process.env.REACT_APP_WEBSOCKET_URL || 'http://localhost';
 const WEBSOCKET_PORT = process.env.REACT_APP_WEBSOCKET_PORT || '5000';
@@ -136,7 +137,7 @@ type SessionIDsResponse = {
 
 const getSessionIDs = async (token: string, nodeID: number) => {
   const response = await axios.get<SessionIDsResponse>(
-    `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/session/`,
+    `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/session/ids`,
     {
       headers: {
         'Content-Type': 'application/json',
@@ -171,6 +172,20 @@ const getReadings = async (token: string, nodeIDList: number[]) => {
 
   console.log('getTotalReadings', response);
   return response.data.readings;
+};
+
+const getUserInfo = async (token: string) => {
+  const response = await axios.get<User>(
+    `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/user/info`,
+    {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    }
+  );
+
+  console.log('getUserInfo', response);
+  return response.data;
 };
 
 const sendCommand = async (
@@ -232,6 +247,7 @@ const Microservice = {
   getReadings,
   getSession,
   getSessionIDs,
+  getUserInfo,
   sendCommand,
   handleAlert,
 };

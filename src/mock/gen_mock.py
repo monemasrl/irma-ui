@@ -21,8 +21,8 @@ for k in range(4 * 2):
 
                 reading = {
                     "nodeID": p,
-                    "canID": str(x),
-                    "sensorNumber": str(y),
+                    "canID": x,
+                    "sensorNumber": y,
                     "readingID": k,
                     "sessionID": sessionID,
                     "dangerLevel": dangerLevel,

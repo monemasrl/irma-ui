@@ -16,10 +16,10 @@ import Node from '../../typings/node';
 import Nodo from './specials/nodo';
 import WrapperGraph from './specials/graphs/wrapperGraph';
 import { datiLetture } from '../../utils/datiLetture';
-import { Rilevatore } from '../../typings/ui';
 import AlertRunning from './specials/alertRunning';
 import CommandType from '../../utils/command';
 import StoricoSessioni from './specials/storicoSessioni';
+import Reading from '../../typings/reading';
 
 type StatoSensoreProps = {
   statoSensore: NodeState;
@@ -159,7 +159,7 @@ type BoxStakerProps = {
 
 const BoxStaker: FC<BoxStakerProps> = ({ node, setStakerClicked, isAlert }) => {
   const [dataSingoloSensore, setDataSingoloSensore] = useState<number>(1);
-  const [datiLettureUI, setDatiLettureUI] = useState<Rilevatore[]>([]);
+  const [readings, setReadings] = useState<Reading[]>([]);
   const [sessionIDList, setSessionIDList] = useState<number[]>([]);
 
   const userSharedData = useContext(UserContext);
@@ -168,7 +168,7 @@ const BoxStaker: FC<BoxStakerProps> = ({ node, setStakerClicked, isAlert }) => {
 
   const getData = async () => {
     const readings = await userSharedData.getSession(node.nodeID, -1);
-    setDatiLettureUI(datiLetture(readings));
+    setReadings(readings);
     const IDs = await userSharedData.getSessionIDs(node.nodeID);
     setSessionIDList(IDs);
   };
@@ -251,12 +251,14 @@ const BoxStaker: FC<BoxStakerProps> = ({ node, setStakerClicked, isAlert }) => {
             </div>
           </div>
 
-          <Nodo
-            isAlert={isAlert}
-            dataSingoloSensore={dataSingoloSensore}
-            setDataSingoloSensore={setDataSingoloSensore}
-            datiLettureUI={datiLettureUI}
-          />
+          {readings.length && (
+            <Nodo
+              isAlert={isAlert}
+              dataSingoloSensore={dataSingoloSensore}
+              setDataSingoloSensore={setDataSingoloSensore}
+              datiLettureUI={datiLetture(readings)}
+            />
+          )}
         </header>
       </section>
       <section className={style.layoutGraph}>
@@ -268,7 +270,7 @@ const BoxStaker: FC<BoxStakerProps> = ({ node, setStakerClicked, isAlert }) => {
         </button>
         <WrapperGraph
           dataSingoloSensore={dataSingoloSensore}
-          datiLettureUI={datiLettureUI}
+          datiLettureUI={datiLetture(readings)}
         />
       </section>
       <StoricoSessioni sessionIDList={sessionIDList} />
