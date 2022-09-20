@@ -19,6 +19,11 @@
 
     li {
       margin: 5px 0;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
   .storicoLayoutLeft {
@@ -32,12 +37,18 @@
     .navRilevatore {
       ul {
         display: flex;
-        li {
+        li.liRilevatore {
           padding: 10px 2rem;
           margin: 10px 1rem;
           border-radius: 5px;
           background-color: $backHeader;
+          &:hover {
+            text-decoration: none;
+          }
           cursor: pointer;
+          &.active {
+            outline: 1px solid $gray;
+          }
         }
       }
     }

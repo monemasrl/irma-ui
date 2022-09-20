@@ -166,21 +166,21 @@ const BoxStaker: FC<BoxStakerProps> = ({ node, setStakerClicked, isAlert }) => {
   const share = useContext(ShareContext);
   console.log(node.state, 'nodestate');
 
-  const getData = async () => {
-    const readings = await userSharedData.getSession(node.nodeID, -1);
+  const getData = async (id: number) => {
+    const readings = await userSharedData.getSession(node.nodeID, id);
     setReadings(readings);
     const IDs = await userSharedData.getSessionIDs(node.nodeID);
     setSessionIDList(IDs);
   };
 
   useEffect(() => {
-    getData();
+    getData(-1);
   }, []);
 
   useEffect(() => {
     userSharedData.socket?.on('change-reading', () => {
       console.log('[SocketIO] Detected change');
-      getData();
+      getData(-1);
     });
 
     return () => {
@@ -268,12 +268,17 @@ const BoxStaker: FC<BoxStakerProps> = ({ node, setStakerClicked, isAlert }) => {
         >
           back
         </button>
-        <WrapperGraph
-          dataSingoloSensore={dataSingoloSensore}
-          datiLettureUI={datiLetture(readings)}
-        />
+        {readings.length && (
+          <WrapperGraph
+            dataSingoloSensore={dataSingoloSensore}
+            datiLettureUI={datiLetture(readings)}
+          />
+        )}
       </section>
-      <StoricoSessioni sessionIDList={sessionIDList} />
+      <StoricoSessioni
+        sessionIDList={sessionIDList}
+        node={node}
+      />
     </motion.div>
   );
 };
