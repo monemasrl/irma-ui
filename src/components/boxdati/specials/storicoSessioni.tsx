@@ -39,7 +39,7 @@ const StoricoSessioni: FC<Props> = ({ sessionIDList, node }) => {
 
   const variants = {
     open: { top: 0 },
-    close: { top: '99.5%' },
+    close: { top: '104.5%' },
   };
   return (
     <motion.section

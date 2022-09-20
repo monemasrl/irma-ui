@@ -31,7 +31,7 @@
   }
   .storicoLayoutRight {
     padding: 2rem;
-    background: #ccd5dc;
+    background: #e2eef7;
     flex: 1 1;
 
     .navRilevatore {
@@ -55,6 +55,7 @@
     .navSensore {
       ul {
         display: flex;
+        margin-bottom: 1rem;
         li {
           padding: 10px 1rem;
           margin: 10px 1rem;

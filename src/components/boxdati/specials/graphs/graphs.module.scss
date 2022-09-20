@@ -38,12 +38,12 @@
     position: relative;
   }
 
-  .graphItem {
-    font-size: 12px;
-    font-weight: bold;
-  }
-
   .pericoloGraph {
     margin-top: 1rem;
   }
+}
+.graphItem {
+  font-size: 12px;
+  font-weight: bold;
+  margin: 1rem 0;
 }
