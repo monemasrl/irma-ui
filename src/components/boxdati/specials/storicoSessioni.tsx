@@ -13,7 +13,7 @@ type Props = {
 
 const StoricoSessioni: FC<Props> = ({ sessionIDList, node }) => {
   const [storico, setStorico] = useState(false);
-  const [rilevatoreId, setRilevatoreId] = useState(0);
+  const [rilevatoreId, setRilevatoreId] = useState(1);
   const [sensoreId, setSensoreId] = useState(1);
   const [sessioni, setSessioni] = useState<Rilevatore[]>([]);
 
@@ -32,9 +32,10 @@ const StoricoSessioni: FC<Props> = ({ sessionIDList, node }) => {
   useEffect(() => {
     getData(0);
   }, []);
+
   console.log(sensoreId);
   console.log(rilevatoreId);
-  console.log(sessioni[0]);
+  console.log('sessione', sessioni);
 
   const variants = {
     open: { top: 0 },
@@ -106,16 +107,18 @@ const StoricoSessioni: FC<Props> = ({ sessionIDList, node }) => {
             <li onClick={() => setSensoreId(2)}>Sensore Basso</li>
           </ul>
         </div>
-        <div className={style.graphs}>
-          <Graph
-            datiSensore={
-              sessioni[rilevatoreId - 1][
-                sensoreId === 1 ? 'sensore1' : 'sensore2'
-              ]
-            }
-            sensore={sensoreId}
-          />
-        </div>
+        {sessioni.length && (
+          <div className={style.graphs}>
+            <Graph
+              datiSensore={
+                sessioni[rilevatoreId - 1][
+                  sensoreId === 1 ? 'sensore1' : 'sensore2'
+                ]
+              }
+              sensore={sensoreId}
+            />
+          </div>
+        )}
       </div>
     </motion.section>
   );
