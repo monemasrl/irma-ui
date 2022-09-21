@@ -32,7 +32,7 @@ const Dashboard: FC<Props> = ({
 
     if (listview) {
       // Per portare in cima gli alert in modalita lista
-      console.log('test', nodes);
+
       const nodiOrdinatiAlert = nodes.sort((a, _b) => {
         if (a.state === 'alert-ready' || a.state === 'alert-running') {
           return -1;

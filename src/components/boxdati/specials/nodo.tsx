@@ -28,7 +28,6 @@ const Nodo: FC<Props> = ({
       <h3>Rilevatori</h3>
       <div className={style.wrapperRilevatore}>
         {datiLettureUI.map((item) => {
-          console.log('datiletture', item);
           return (
             <BoxRilevatore
               key={item.id}

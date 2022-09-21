@@ -16,37 +16,7 @@ type Props = {
 const BoxDatiDefault: FC<Props> = ({ datiDefault, node }) => {
   const animationControls = useAnimation();
 
-  // async function sequence() {
-  //   console.log('stakerClicked', stakerClicked);
-  //   if (stakerClicked !== -1) {
-  //     await animationControls.start({ opacity: 1 });
-  //     animationControls.start({
-  //       scale: 1,
-  //       x: -5,
-  //       transition: {
-  //         ease: 'easeInOut',
-  //         duration: 0.5,
-  //       },
-  //     });
-  //   } else {
-  //     await animationControls.start({ opacity: 1 });
-  //     animationControls.start({
-  //       scale: 0.95,
-  //       x: -20,
-  //       transition: {
-  //         ease: 'easeInOut',
-  //         duration: 0.5,
-  //       },
-  //     });
-  //   }
-  // }
-
   const share = useContext(ShareContext);
-
-  // useEffect(() => {
-  //   sequence();
-  // }, [stakerClicked]); // eslint-disable-line react-hooks/exhaustive-deps
-  // console.log('dati', dati);
 
   return (
     <AnimatePresence>

@@ -164,7 +164,6 @@ const BoxStaker: FC<BoxStakerProps> = ({ node, setStakerClicked }) => {
 
   const userSharedData = useContext(UserContext);
   const share = useContext(ShareContext);
-  console.log(node.state, 'nodestate');
 
   const getData = async (id: number) => {
     const readings = await userSharedData.getSession(node.nodeID, id);

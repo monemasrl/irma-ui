@@ -17,9 +17,7 @@ type Props = {
   sensore: number;
 };
 
-const Graph: FC<Props> = ({ datiSensore, sensore }) => {
-  console.log(datiSensore, sensore);
-
+const Graph: FC<Props> = ({ datiSensore }) => {
   return (
     <>
       <div className={style.graphItem}>

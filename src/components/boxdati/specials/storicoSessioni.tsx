@@ -19,6 +19,8 @@ const StoricoSessioni: FC<Props> = ({ sessionIDList, node }) => {
 
   const userSharedData = useContext(UserContext);
 
+  console.log('sessionIDList', sessionIDList);
+
   const getData = async (id: number) => {
     const creaSessioni = await userSharedData.getSession(node.nodeID, id);
     const datiSensore = creaSessioni.filter((item) => {
@@ -32,10 +34,6 @@ const StoricoSessioni: FC<Props> = ({ sessionIDList, node }) => {
   useEffect(() => {
     getData(0);
   }, []);
-
-  console.log(sensoreId);
-  console.log(rilevatoreId);
-  console.log('sessione', sessioni);
 
   const variants = {
     open: { top: -35 },
