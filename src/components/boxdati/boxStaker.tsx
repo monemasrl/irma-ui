@@ -153,12 +153,11 @@ const HandleButton: FC<HandleButtonProps> = ({ state, setConfirmState }) => {
 /* COMPONENTE PRINCIPALE */
 
 type BoxStakerProps = {
-  isAlert: boolean;
   node: Node;
   setStakerClicked: Dispatch<SetStateAction<number>>;
 };
 
-const BoxStaker: FC<BoxStakerProps> = ({ node, setStakerClicked, isAlert }) => {
+const BoxStaker: FC<BoxStakerProps> = ({ node, setStakerClicked }) => {
   const [dataSingoloSensore, setDataSingoloSensore] = useState<number>(1);
   const [readings, setReadings] = useState<Reading[]>([]);
   const [sessionIDList, setSessionIDList] = useState<number[]>([]);
@@ -256,7 +255,7 @@ const BoxStaker: FC<BoxStakerProps> = ({ node, setStakerClicked, isAlert }) => {
 
           {readings.length && (
             <Nodo
-              isAlert={isAlert}
+              state={node.state}
               dataSingoloSensore={dataSingoloSensore}
               setDataSingoloSensore={setDataSingoloSensore}
               datiLettureUI={datiLetture(readings)}

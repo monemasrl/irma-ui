@@ -15,12 +15,7 @@ type Props = {
   setStakerClicked: Dispatch<SetStateAction<number>>;
 };
 
-const BoxDati: FC<Props> = ({
-  setStakerClicked,
-  stakerClicked,
-  node,
-  isAlert,
-}) => {
+const BoxDati: FC<Props> = ({ setStakerClicked, stakerClicked, node }) => {
   const share = useContext(ShareContext);
 
   const variants = {
@@ -46,7 +41,6 @@ const BoxDati: FC<Props> = ({
             <>
               {' '}
               <BoxStaker
-                isAlert={isAlert}
                 node={node}
                 setStakerClicked={setStakerClicked}
               />
