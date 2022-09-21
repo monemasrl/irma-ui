@@ -78,21 +78,16 @@ type RecButtonProps = {
   applicationID: string;
   nodeID: number;
   type: RecButtonType;
-  isAlert: boolean;
 };
 
-type RecButtonType = 'ok' | 'rec';
+type RecButtonType = 'ok' | 'rec' | 'alert-rec';
 
-const RecButton: FC<RecButtonProps> = ({
-  applicationID,
-  nodeID,
-  type,
-  isAlert,
-}) => {
+const RecButton: FC<RecButtonProps> = ({ applicationID, nodeID, type }) => {
   const [disabled, setDisabled] = useState(false);
   const userSharedData = useContext(UserContext);
 
-  const buttonClass = type === 'ok' ? '' : 'stop-rec';
+  const buttonClass =
+    type === 'ok' ? '' : type === 'alert-rec' ? 'alert-rec' : 'stop-rec';
 
   const text = type === 'ok' ? 'Inizia Rilevamento' : 'Stop Rilevamento';
   const command = type === 'ok' ? CommandType.START_REC : CommandType.END_REC;
@@ -112,7 +107,7 @@ const RecButton: FC<RecButtonProps> = ({
   return (
     <div className={style.wrapperbutton}>
       <button
-        className={`${buttonClass} ${isAlert ? 'alert' : ''}`}
+        className={`${buttonClass}`}
         disabled={disabled}
         onClick={() => sendCommand(applicationID, nodeID)}
       >
@@ -243,8 +238,9 @@ const BoxStaker: FC<BoxStakerProps> = ({ node, setStakerClicked, isAlert }) => {
                   <RecButton
                     applicationID={node.applicationID}
                     nodeID={node.nodeID}
-                    type={node.state === 'alert-running' ? 'rec' : node.state}
-                    isAlert
+                    type={
+                      node.state === 'alert-running' ? 'alert-rec' : node.state
+                    }
                   />
                 )}
                 {(node.state === 'alert-ready' ||

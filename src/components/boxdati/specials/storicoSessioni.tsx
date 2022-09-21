@@ -47,7 +47,7 @@ const StoricoSessioni: FC<Props> = ({ sessionIDList, node }) => {
       variants={variants}
       animate={storico ? 'open' : 'close'}
       transition={{
-        x: { duration: 0.5 },
+        duration: 0.5,
         default: { ease: 'easeInOut' },
       }}
     >
