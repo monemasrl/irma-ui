@@ -38,7 +38,7 @@ const StoricoSessioni: FC<Props> = ({ sessionIDList, node }) => {
   console.log('sessione', sessioni);
 
   const variants = {
-    open: { top: 0 },
+    open: { top: -35 },
     close: { top: '104.5%' },
   };
   return (

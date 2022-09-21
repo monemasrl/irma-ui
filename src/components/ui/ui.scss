@@ -29,6 +29,11 @@ button.alert-big {
 button.stop-rec {
   background-color: $yellow;
 }
+
+button.stop-rec.alert {
+  background-color: #e32726;
+}
+
 button.alert-big.stop {
   margin: 2rem auto;
   display: block;
