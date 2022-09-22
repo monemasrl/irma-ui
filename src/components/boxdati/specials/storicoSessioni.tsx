@@ -21,6 +21,7 @@ const StoricoSessioni: FC<Props> = ({ sessionIDList, node, parentHeight }) => {
   const userSharedData = useContext(UserContext);
 
   console.log('sessionIDList', sessionIDList);
+  console.log(parentHeight);
 
   const getData = async (id: number) => {
     const creaSessioni = await userSharedData.getSession(node.nodeID, id);
@@ -37,8 +38,8 @@ const StoricoSessioni: FC<Props> = ({ sessionIDList, node, parentHeight }) => {
   }, []);
 
   const variants = {
-    open: { top: -35 },
-    close: { top: parentHeight && parentHeight + 25 },
+    open: { top: 0 },
+    close: { top: ' 104%' },
   };
   return (
     <motion.section

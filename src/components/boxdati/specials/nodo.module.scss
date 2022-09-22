@@ -126,7 +126,7 @@
 
 .wrapperBarra {
   width: 56%;
-  display: inline-flex;
+  display: block;
 
   .containerStyles {
     width: 100%;
@@ -140,6 +140,20 @@
   }
 
   .labelStyles {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 13px;
+    background-color: white;
+    width: 0;
+    transition: width 1s ease-in-out, background-color 1s ease-in-out;
+    text-align: right;
+    display: block;
+    margin-right: 5px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    padding-right: 7px;
+    padding-left: 5px;
+    box-sizing: content-box;
     &.green {
       background-color: $green;
     }
@@ -151,19 +165,6 @@
     &.yellow {
       background-color: $yellow;
     }
-
-    color: rgb(0, 0, 0);
-    font-weight: bold;
-    font-size: 13px;
-    background-color: white;
-    width: 0;
-    transition: width 1s ease-in-out, background-color 1s ease-in-out;
-    text-align: right;
-    display: block;
-    margin-right: 5px;
-    padding: 1px 10px;
-    border-bottom-right-radius: 10px;
-    border-top-right-radius: 10px;
   }
 }
 

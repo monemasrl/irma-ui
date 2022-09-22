@@ -1,6 +1,7 @@
 .wrapperAlertRunningImage {
   position: relative;
   height: 100px;
+  margin-bottom: 1rem;
   .imageback {
     position: absolute;
   }
@@ -48,6 +49,6 @@
   }
   100% {
     opacity: 1;
-    left: 44%;
+    left: 45%;
   }
 }
