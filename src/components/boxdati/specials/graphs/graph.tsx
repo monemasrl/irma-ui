@@ -84,4 +84,4 @@ const Graph: FC<Props> = ({ datiSensore }) => {
   );
 };
 
-export default Graph;
+export default React.memo(Graph);

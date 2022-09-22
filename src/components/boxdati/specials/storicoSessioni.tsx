@@ -9,9 +9,10 @@ import Graph from './graphs/graph';
 type Props = {
   sessionIDList: number[];
   node: Node;
+  parentHeight: number | undefined;
 };
 
-const StoricoSessioni: FC<Props> = ({ sessionIDList, node }) => {
+const StoricoSessioni: FC<Props> = ({ sessionIDList, node, parentHeight }) => {
   const [storico, setStorico] = useState(false);
   const [rilevatoreId, setRilevatoreId] = useState(1);
   const [sensoreId, setSensoreId] = useState(1);
@@ -37,7 +38,7 @@ const StoricoSessioni: FC<Props> = ({ sessionIDList, node }) => {
 
   const variants = {
     open: { top: -35 },
-    close: { top: '104.5%' },
+    close: { top: parentHeight && parentHeight + 25 },
   };
   return (
     <motion.section
@@ -122,4 +123,4 @@ const StoricoSessioni: FC<Props> = ({ sessionIDList, node }) => {
   );
 };
 
-export default StoricoSessioni;
+export default React.memo(StoricoSessioni);

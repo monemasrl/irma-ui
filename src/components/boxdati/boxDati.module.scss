@@ -13,7 +13,7 @@
   width: 370px;
   overflow: hidden;
   transition: background ease-in-out 0.5s;
-  min-height: 300px;
+  min-height: 00px;
   border-left: 5px solid #e0e0e0;
   display: flex;
   flex-wrap: wrap;
@@ -25,6 +25,7 @@
     width: 100%;
     margin-left: 0px;
     padding: 0;
+    min-height: 632px;
   }
 
   header {
@@ -311,6 +312,7 @@
   flex-wrap: wrap;
   justify-content: flex-start;
   width: 100%;
+  min-height: 632px;
 }
 
 .layoutSensori {
