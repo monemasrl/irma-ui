@@ -1,5 +1,4 @@
 import React, { FC } from 'react';
-import { Sensore } from '../../../../typings/ui';
 import style from './graphs.module.scss';
 import {
   BarChart,
@@ -12,12 +11,36 @@ import {
   Tooltip,
   Legend,
 } from 'recharts';
+import GraphData from '../../../../typings/graphData';
+import { Sensore } from '../../../../typings/ui';
+import { parseUnixTimestamp } from '../../../../utils/parseDate';
+
 type Props = {
   datiSensore: Sensore[];
   sensore: number;
 };
 
+const toGraphData = (sensor: Sensore): GraphData => {
+  const data: GraphData = (({
+    readingID,
+    window1Count,
+    window2Count,
+    window3Count,
+    dangerLevel,
+  }) => ({
+    readingID: parseUnixTimestamp(readingID),
+    window1Count,
+    window2Count,
+    window3Count,
+    dangerLevel,
+  }))(sensor);
+
+  return data;
+};
+
 const Graph: FC<Props> = ({ datiSensore }) => {
+  const datiGraph = datiSensore.map((item) => toGraphData(item));
+
   return (
     <>
       <div className={style.graphItem}>
@@ -25,7 +48,7 @@ const Graph: FC<Props> = ({ datiSensore }) => {
         <AreaChart
           width={500}
           height={200}
-          data={datiSensore || []}
+          data={datiGraph || []}
           margin={{
             top: 10,
             right: 30,
@@ -65,7 +88,7 @@ const Graph: FC<Props> = ({ datiSensore }) => {
         <BarChart
           width={500}
           height={200}
-          data={datiSensore || []}
+          data={datiGraph || []}
         >
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="readingID" />

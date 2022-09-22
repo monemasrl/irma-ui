@@ -6,6 +6,8 @@ import Node from '../../../typings/node';
 import { datiLetture } from '../../../utils/datiLetture';
 import { Rilevatore } from '../../../typings/ui';
 import Graph from './graphs/graph';
+import { parseUnixTimestamp } from '../../../utils/parseDate';
+
 type Props = {
   sessionIDList: number[];
   node: Node;
@@ -41,6 +43,7 @@ const StoricoSessioni: FC<Props> = ({ sessionIDList, node, parentHeight }) => {
     open: { top: 0 },
     close: { top: ' 104%' },
   };
+
   return (
     <motion.section
       className={style.storicoSensore}
@@ -74,7 +77,7 @@ const StoricoSessioni: FC<Props> = ({ sessionIDList, node, parentHeight }) => {
                 }}
                 key={item}
               >
-                {item}
+                {parseUnixTimestamp(item)}
               </li>
             );
           })}
