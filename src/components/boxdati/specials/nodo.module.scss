@@ -100,9 +100,9 @@
   font-weight: bold;
   background: #e1e1e1;
   border-radius: 50%;
-  height: 40px;
-  width: 40px;
-  line-height: 30px;
+  height: 30px;
+  width: 30px;
+  line-height: 22px;
   text-align: center;
   padding: 4px;
   margin-left: 5px;
@@ -127,6 +127,7 @@
 .wrapperBarra {
   width: 56%;
   display: block;
+  border-left: 2px solid #bfbfbf;
 
   .containerStyles {
     width: 100%;

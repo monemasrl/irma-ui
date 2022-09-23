@@ -5,7 +5,6 @@ import React, {
   Dispatch,
   SetStateAction,
   useEffect,
-  useRef,
 } from 'react';
 import style from './boxDati.module.scss';
 import { RiTerminalFill } from 'react-icons/ri';
@@ -159,14 +158,12 @@ type BoxStakerProps = {
 };
 
 const BoxStaker: FC<BoxStakerProps> = ({ node, setStakerClicked }) => {
-  const refWrapper = useRef<HTMLHeadingElement>(null);
   const [dataSingoloSensore, setDataSingoloSensore] = useState<number>(1);
   const [readings, setReadings] = useState<Reading[]>([]);
   const [sessionIDList, setSessionIDList] = useState<number[]>([]);
 
   const userSharedData = useContext(UserContext);
   const share = useContext(ShareContext);
-  console.log(refWrapper.current?.clientHeight);
 
   const getData = async (id: number) => {
     const readings = await userSharedData.getSession(node.nodeID, id);
@@ -198,7 +195,6 @@ const BoxStaker: FC<BoxStakerProps> = ({ node, setStakerClicked }) => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
       className={style.schedaSensore}
-      ref={refWrapper}
     >
       <section className={style.layoutSensori}>
         <header>
@@ -281,7 +277,6 @@ const BoxStaker: FC<BoxStakerProps> = ({ node, setStakerClicked }) => {
         )}
       </section>
       <StoricoSessioni
-        parentHeight={refWrapper.current?.clientHeight}
         sessionIDList={sessionIDList}
         node={node}
       />

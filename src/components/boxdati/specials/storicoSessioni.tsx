@@ -7,23 +7,22 @@ import { datiLetture } from '../../../utils/datiLetture';
 import { Rilevatore } from '../../../typings/ui';
 import Graph from './graphs/graph';
 import { parseUnixTimestamp } from '../../../utils/parseDate';
+import { AiFillCalendar, AiFillClockCircle } from 'react-icons/ai';
 
 type Props = {
   sessionIDList: number[];
   node: Node;
-  parentHeight: number | undefined;
 };
 
-const StoricoSessioni: FC<Props> = ({ sessionIDList, node, parentHeight }) => {
+const StoricoSessioni: FC<Props> = ({ sessionIDList, node }) => {
   const [storico, setStorico] = useState(false);
   const [rilevatoreId, setRilevatoreId] = useState(1);
   const [sensoreId, setSensoreId] = useState(1);
   const [sessioni, setSessioni] = useState<Rilevatore[]>([]);
-
+  const [currentSessionActive, setCurrentSessionActive] = useState(
+    sessionIDList[0]
+  );
   const userSharedData = useContext(UserContext);
-
-  console.log('sessionIDList', sessionIDList);
-  console.log(parentHeight);
 
   const getData = async (id: number) => {
     const creaSessioni = await userSharedData.getSession(node.nodeID, id);
@@ -36,19 +35,21 @@ const StoricoSessioni: FC<Props> = ({ sessionIDList, node, parentHeight }) => {
   };
 
   useEffect(() => {
-    getData(0);
-  }, []);
+    getData(sessionIDList[0]);
+    setCurrentSessionActive(sessionIDList[0]);
+  }, [sessionIDList]);
 
   const variants = {
     open: { top: 0 },
     close: { top: ' 104%' },
   };
+  console.log('sessiondata', sessioni);
 
   return (
     <motion.section
       className={style.storicoSensore}
       variants={variants}
-      animate={storico ? 'open' : 'close'}
+      animate={storico && sessionIDList.length ? 'open' : 'close'}
       transition={{
         duration: 0.5,
         default: { ease: 'easeInOut' },
@@ -69,15 +70,28 @@ const StoricoSessioni: FC<Props> = ({ sessionIDList, node, parentHeight }) => {
         </button>
         <h3>Storico sessioni</h3>
         <ul>
-          {sessionIDList.map((item) => {
+          {sessionIDList.map((item, index) => {
             return (
               <li
                 onClick={() => {
                   getData(item);
+                  setCurrentSessionActive(item);
                 }}
                 key={item}
+                className={`${
+                  currentSessionActive === sessionIDList[index]
+                    ? style['active']
+                    : ''
+                }`}
               >
-                {parseUnixTimestamp(item)}
+                <div>
+                  <AiFillCalendar />
+                  {parseUnixTimestamp(item, false, true)}
+                </div>
+                <div>
+                  <AiFillClockCircle />
+                  {parseUnixTimestamp(item, true, false)}
+                </div>
               </li>
             );
           })}
@@ -106,8 +120,18 @@ const StoricoSessioni: FC<Props> = ({ sessionIDList, node, parentHeight }) => {
         <div className={style.navSensore}>
           <h4>Sensore</h4>
           <ul>
-            <li onClick={() => setSensoreId(1)}>Sensore Alto</li>
-            <li onClick={() => setSensoreId(2)}>Sensore Basso</li>
+            <li
+              className={`${sensoreId === 1 ? style['active'] : ''}`}
+              onClick={() => setSensoreId(1)}
+            >
+              Sensore Alto
+            </li>
+            <li
+              className={`${sensoreId === 2 ? style['active'] : ''}`}
+              onClick={() => setSensoreId(2)}
+            >
+              Sensore Basso
+            </li>
           </ul>
         </div>
         {sessioni.length && (

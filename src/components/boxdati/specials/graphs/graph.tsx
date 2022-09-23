@@ -28,7 +28,7 @@ const toGraphData = (sensor: Sensore): GraphData => {
     window3Count,
     dangerLevel,
   }) => ({
-    readingID: parseUnixTimestamp(readingID),
+    readingID: parseUnixTimestamp(readingID, true, false),
     window1Count,
     window2Count,
     window3Count,
