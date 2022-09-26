@@ -252,13 +252,15 @@ const BoxStaker: FC<BoxStakerProps> = ({ node, setStakerClicked }) => {
             </div>
           </div>
 
-          {readings.length && (
+          {readings.length ? (
             <Nodo
               state={node.state}
               dataSingoloSensore={dataSingoloSensore}
               setDataSingoloSensore={setDataSingoloSensore}
               datiLettureUI={datiLetture(readings)}
             />
+          ) : (
+            'TODO PAOLO'
           )}
         </header>
       </section>
@@ -269,11 +271,13 @@ const BoxStaker: FC<BoxStakerProps> = ({ node, setStakerClicked }) => {
         >
           back
         </button>
-        {readings.length && (
+        {readings.length ? (
           <WrapperGraph
             dataSingoloSensore={dataSingoloSensore}
             datiLettureUI={datiLetture(readings)}
           />
+        ) : (
+          'TODO PAOLO'
         )}
       </section>
       <StoricoSessioni
