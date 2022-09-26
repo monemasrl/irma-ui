@@ -12,7 +12,9 @@ for s in range(2):
     # readingIDnum
     for k in range(4):
         # nodeID
-        for p in range(6):
+        for p in range(2, 6):
+            if p == 2 and k > 0:
+                continue
             # canID
             for x in [1, 2, 3, 4]:
                 dangerLevel = randint(0, 9)
