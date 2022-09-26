@@ -20,6 +20,7 @@ import AlertRunning from './specials/alertRunning';
 import CommandType from '../../utils/command';
 import StoricoSessioni from './specials/storicoSessioni';
 import Reading from '../../typings/reading';
+import Loader from '../loaders/loader';
 
 type StatoSensoreProps = {
   statoSensore: NodeState;
@@ -260,7 +261,11 @@ const BoxStaker: FC<BoxStakerProps> = ({ node, setStakerClicked }) => {
               datiLettureUI={datiLetture(readings)}
             />
           ) : (
-            'TODO PAOLO'
+            <Loader
+              immagineLoader={'/images/cont.svg'}
+              number={4}
+              text="Loading Sensor Data"
+            />
           )}
         </header>
       </section>
@@ -277,7 +282,11 @@ const BoxStaker: FC<BoxStakerProps> = ({ node, setStakerClicked }) => {
             datiLettureUI={datiLetture(readings)}
           />
         ) : (
-          'TODO PAOLO'
+          <Loader
+            immagineLoader={'/images/cont.svg'}
+            number={4}
+            text="Loading Graph Data"
+          />
         )}
       </section>
       <StoricoSessioni

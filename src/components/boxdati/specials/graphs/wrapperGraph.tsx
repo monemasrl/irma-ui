@@ -9,7 +9,7 @@ type Props = {
 };
 
 const WrapperGraph: FC<Props> = ({ dataSingoloSensore, datiLettureUI }) => {
-  const datiSensore = datiLettureUI.filter((item) => {
+  const datiSensore = datiLettureUI?.filter((item) => {
     return item.id === dataSingoloSensore;
   });
   const [sensore, setSensore] = useState(1);

@@ -4,9 +4,10 @@ import { motion } from 'framer-motion';
 type Props = {
   immagineLoader: string;
   number: number;
+  text?: string;
 };
 
-function Loader({ immagineLoader, number }: Props) {
+function Loader({ immagineLoader, number, text }: Props) {
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -54,6 +55,7 @@ function Loader({ immagineLoader, number }: Props) {
       animate="show"
       className="loader-generico"
     >
+      <h3>{text}</h3>
       {createLoaderItem(immagineLoader, number)}
     </motion.div>
   );

@@ -27,17 +27,18 @@ const Nodo: FC<Props> = ({
     >
       <h3>Rilevatori</h3>
       <div className={style.wrapperRilevatore}>
-        {datiLettureUI.map((item) => {
-          return (
-            <BoxRilevatore
-              key={item.id}
-              keyId={item.id}
-              rilevatore={item}
-              setDataSingoloSensore={setDataSingoloSensore}
-              dataSingoloSensore={dataSingoloSensore}
-            />
-          );
-        })}
+        {datiLettureUI.length &&
+          datiLettureUI.map((item) => {
+            return (
+              <BoxRilevatore
+                key={item.id}
+                keyId={item.id}
+                rilevatore={item}
+                setDataSingoloSensore={setDataSingoloSensore}
+                dataSingoloSensore={dataSingoloSensore}
+              />
+            );
+          })}
       </div>
     </div>
   );
