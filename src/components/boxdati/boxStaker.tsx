@@ -182,6 +182,7 @@ const BoxStaker: FC<BoxStakerProps> = ({ node, setStakerClicked }) => {
       console.log('[SocketIO] Detected change');
       getData(-1);
     });
+    console.log(sessionIDList);
 
     return () => {
       userSharedData.socket?.off('change-reading');
@@ -289,10 +290,12 @@ const BoxStaker: FC<BoxStakerProps> = ({ node, setStakerClicked }) => {
           />
         )}
       </section>
-      <StoricoSessioni
-        sessionIDList={sessionIDList}
-        node={node}
-      />
+      {sessionIDList.length !== 0 && (
+        <StoricoSessioni
+          sessionIDList={sessionIDList}
+          node={node}
+        />
+      )}
     </motion.div>
   );
 };

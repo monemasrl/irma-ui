@@ -8,6 +8,7 @@ import { Rilevatore } from '../../../typings/ui';
 import Graph from './graphs/graph';
 import { parseUnixTimestamp } from '../../../utils/parseDate';
 import { AiFillCalendar, AiFillClockCircle } from 'react-icons/ai';
+import Loader from '../../loaders/loader';
 
 type Props = {
   sessionIDList: number[];
@@ -134,7 +135,7 @@ const StoricoSessioni: FC<Props> = ({ sessionIDList, node }) => {
             </li>
           </ul>
         </div>
-        {sessioni.length && (
+        {sessioni.length ? (
           <div className={style.graphs}>
             <Graph
               datiSensore={
@@ -145,6 +146,12 @@ const StoricoSessioni: FC<Props> = ({ sessionIDList, node }) => {
               sensore={sensoreId}
             />
           </div>
+        ) : (
+          <Loader
+            immagineLoader={'/images/cont.svg'}
+            number={4}
+            text="Loading Session Data"
+          />
         )}
       </div>
     </motion.section>
