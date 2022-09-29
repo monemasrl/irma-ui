@@ -19,6 +19,7 @@ import Reading from '../typings/reading';
 import { AppOption } from '../mock/mock_data';
 import { io, Socket } from 'socket.io-client';
 import User from '../typings/user';
+import { AlertInfo } from '../typings/alert';
 
 const WEBSOCKET_URL = process.env.REACT_APP_WEBSOCKET_URL || 'http://localhost';
 const WEBSOCKET_PORT = process.env.REACT_APP_WEBSOCKET_PORT || '5000';
@@ -49,6 +50,7 @@ export interface IUserContext {
   getSession: (nodeID: number, sessionID: number) => Promise<Reading[]>;
   getSessionIDs: (nodeID: number) => Promise<number[]>;
   getUserInfo: () => Promise<User | undefined>;
+  getAlertInfo: (alertID: string) => Promise<AlertInfo | undefined>;
   sendCommand: (
     appID: string,
     nodeID: number,
@@ -242,6 +244,24 @@ function UserContextProvider({ children }: Props) {
     return user;
   };
 
+  const getAlertInfo = async (alertID: string) => {
+    if (!accessToken) return undefined;
+
+    if (MOCK_DATA) {
+      throw 'Not implemented yet';
+    }
+
+    let info: AlertInfo | undefined = undefined;
+
+    try {
+      info = await Microservice.getAlertInfo(accessToken, alertID);
+    } catch (error) {
+      refreshIfUnauthorized(error);
+    }
+
+    return info;
+  };
+
   const sendCommand = async (
     appID: string,
     nodeID: number,
@@ -389,6 +409,7 @@ function UserContextProvider({ children }: Props) {
     getSession,
     getSessionIDs,
     getUserInfo,
+    getAlertInfo,
     sendCommand,
     handleAlert,
   };

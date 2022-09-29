@@ -5,6 +5,7 @@ import Organization from '../typings/organization';
 import Reading from '../typings/reading';
 import Node from '../typings/node';
 import User from '../typings/user';
+import { AlertInfo } from '../typings/alert';
 
 const WEBSOCKET_URL = process.env.REACT_APP_WEBSOCKET_URL || 'http://localhost';
 const WEBSOCKET_PORT = process.env.REACT_APP_WEBSOCKET_PORT || '5000';
@@ -188,6 +189,22 @@ const getUserInfo = async (token: string) => {
   return response.data;
 };
 
+const getAlertInfo = async (token: string, alertID: string) => {
+  const response = await axios.get<AlertInfo>(
+    `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/alert/info`,
+    {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+      params: {
+        id: alertID,
+      },
+    }
+  );
+
+  return response.data;
+};
+
 const sendCommand = async (
   token: string,
   appID: string,
@@ -248,6 +265,7 @@ const Microservice = {
   getSession,
   getSessionIDs,
   getUserInfo,
+  getAlertInfo,
   sendCommand,
   handleAlert,
 };
