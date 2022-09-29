@@ -23,15 +23,15 @@ type Props = {
 const toGraphData = (sensor: Sensore): GraphData => {
   const data: GraphData = (({
     readingID,
-    window1Count,
-    window2Count,
-    window3Count,
+    window1,
+    window2,
+    window3,
     dangerLevel,
   }) => ({
     readingID: parseUnixTimestamp(readingID, true, false),
-    window1Count,
-    window2Count,
-    window3Count,
+    window1,
+    window2,
+    window3,
     dangerLevel,
   }))(sensor);
 
@@ -62,21 +62,21 @@ const Graph: FC<Props> = ({ datiSensore }) => {
           <Tooltip />
           <Area
             type="monotone"
-            dataKey="window1Count"
+            dataKey="window1"
             stackId="1"
             stroke="#afb9c9"
             fill="#00577c"
           />
           <Area
             type="monotone"
-            dataKey="window2Count"
+            dataKey="window2"
             stackId="1"
             stroke="#428daa"
             fill="#428daa"
           />
           <Area
             type="monotone"
-            dataKey="window3Count"
+            dataKey="window3"
             stackId="1"
             stroke="#8bb0b5"
             fill="#8fcfe8"

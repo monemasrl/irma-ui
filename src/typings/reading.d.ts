@@ -5,9 +5,9 @@ type Reading = {
   readingID: number;
   sessionID: number;
   dangerLevel: number;
-  window1Count: number;
-  window2Count: number;
-  window3Count: number;
+  window1: number;
+  window2: number;
+  window3: number;
   publishedAt: string;
 };
 

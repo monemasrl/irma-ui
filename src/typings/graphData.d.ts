@@ -1,8 +1,8 @@
 type GraphData = {
   readingID: string;
-  window1Count: number;
-  window2Count: number;
-  window3Count: number;
+  window1: number;
+  window2: number;
+  window3: number;
   dangerLevel: number;
 };
 

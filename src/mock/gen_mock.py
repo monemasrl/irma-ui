@@ -32,9 +32,9 @@ for s in range(2):
                         "readingID": readingID,
                         "sessionID": sessionID,
                         "dangerLevel": dangerLevel,
-                        "window1Count": randint(0, 10_000_000),
-                        "window2Count": randint(0, 10_000_000),
-                        "window3Count": randint(0, 10_000_000),
+                        "window1": randint(0, 10_000_000),
+                        "window2": randint(0, 10_000_000),
+                        "window3": randint(0, 10_000_000),
                         "publishedAt": datetime.fromtimestamp(BASE_TIMESTAMP + timedelta).isoformat()
                     }
 
