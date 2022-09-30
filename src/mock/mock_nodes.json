@@ -26,14 +26,14 @@
       "nodeName": "sensor4_a1o1",
       "applicationID": "app1-org1_value",
       "state": "alert-ready",
-      "unhandledAlertIDs": ["alertID_123"]
+      "unhandledAlertIDs": ["1234"]
     },
     {
       "nodeID": 5,
       "nodeName": "sensor4_a1o1",
       "applicationID": "app1-org1_value",
       "state": "alert-running",
-      "unhandledAlertIDs": ["alertID_123"]
+      "unhandledAlertIDs": ["5678"]
     }
   ],
   "app2-org1_value": [],

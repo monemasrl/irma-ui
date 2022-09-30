@@ -5,10 +5,10 @@
     "sensorNumber": 1,
     "readingID": 1641016800,
     "sessionID": 1641016800,
-    "dangerLevel": 2,
-    "window1": 3539901,
-    "window2": 9871052,
-    "window3": 1679704,
+    "dangerLevel": 9,
+    "window1": 6346718,
+    "window2": 8281734,
+    "window3": 6365900,
     "publishedAt": "2022-01-01T07:00:13"
   },
   {
@@ -17,10 +17,10 @@
     "sensorNumber": 2,
     "readingID": 1641016800,
     "sessionID": 1641016800,
-    "dangerLevel": 2,
-    "window1": 8991770,
-    "window2": 5927834,
-    "window3": 9908617,
+    "dangerLevel": 9,
+    "window1": 110685,
+    "window2": 5300173,
+    "window3": 5678967,
     "publishedAt": "2022-01-01T07:00:14"
   },
   {
@@ -29,10 +29,10 @@
     "sensorNumber": 1,
     "readingID": 1641016800,
     "sessionID": 1641016800,
-    "dangerLevel": 2,
-    "window1": 1915870,
-    "window2": 6442592,
-    "window3": 7777574,
+    "dangerLevel": 4,
+    "window1": 3313814,
+    "window2": 6082055,
+    "window3": 6168123,
     "publishedAt": "2022-01-01T07:00:15"
   },
   {
@@ -41,10 +41,10 @@
     "sensorNumber": 2,
     "readingID": 1641016800,
     "sessionID": 1641016800,
-    "dangerLevel": 2,
-    "window1": 4797765,
-    "window2": 4781359,
-    "window3": 8919190,
+    "dangerLevel": 4,
+    "window1": 231513,
+    "window2": 4471190,
+    "window3": 8341166,
     "publishedAt": "2022-01-01T07:00:16"
   },
   {
@@ -54,9 +54,9 @@
     "readingID": 1641016800,
     "sessionID": 1641016800,
     "dangerLevel": 7,
-    "window1": 2497459,
-    "window2": 4937013,
-    "window3": 7517538,
+    "window1": 4580519,
+    "window2": 984922,
+    "window3": 7076225,
     "publishedAt": "2022-01-01T07:00:17"
   },
   {
@@ -66,9 +66,9 @@
     "readingID": 1641016800,
     "sessionID": 1641016800,
     "dangerLevel": 7,
-    "window1": 2537213,
-    "window2": 1207712,
-    "window3": 4884149,
+    "window1": 3498060,
+    "window2": 4492434,
+    "window3": 1582089,
     "publishedAt": "2022-01-01T07:00:18"
   },
   {
@@ -77,10 +77,10 @@
     "sensorNumber": 1,
     "readingID": 1641016800,
     "sessionID": 1641016800,
-    "dangerLevel": 1,
-    "window1": 4529338,
-    "window2": 2812431,
-    "window3": 3526746,
+    "dangerLevel": 6,
+    "window1": 3908189,
+    "window2": 2250794,
+    "window3": 9524487,
     "publishedAt": "2022-01-01T07:00:19"
   },
   {
@@ -89,10 +89,10 @@
     "sensorNumber": 2,
     "readingID": 1641016800,
     "sessionID": 1641016800,
-    "dangerLevel": 1,
-    "window1": 5109898,
-    "window2": 8236174,
-    "window3": 9685177,
+    "dangerLevel": 6,
+    "window1": 9607995,
+    "window2": 2211809,
+    "window3": 7277321,
     "publishedAt": "2022-01-01T07:00:20"
   },
   {
@@ -101,10 +101,10 @@
     "sensorNumber": 1,
     "readingID": 1641016800,
     "sessionID": 1641016800,
-    "dangerLevel": 2,
-    "window1": 1837631,
-    "window2": 9953192,
-    "window3": 9287220,
+    "dangerLevel": 7,
+    "window1": 6775957,
+    "window2": 1256691,
+    "window3": 630328,
     "publishedAt": "2022-01-01T07:00:18"
   },
   {
@@ -113,10 +113,10 @@
     "sensorNumber": 2,
     "readingID": 1641016800,
     "sessionID": 1641016800,
-    "dangerLevel": 2,
-    "window1": 98798,
-    "window2": 605433,
-    "window3": 5694493,
+    "dangerLevel": 7,
+    "window1": 1528122,
+    "window2": 3812838,
+    "window3": 1108808,
     "publishedAt": "2022-01-01T07:00:19"
   },
   {
@@ -125,10 +125,10 @@
     "sensorNumber": 1,
     "readingID": 1641016800,
     "sessionID": 1641016800,
-    "dangerLevel": 0,
-    "window1": 6168370,
-    "window2": 6684205,
-    "window3": 5246306,
+    "dangerLevel": 3,
+    "window1": 4312759,
+    "window2": 7554546,
+    "window3": 7543450,
     "publishedAt": "2022-01-01T07:00:20"
   },
   {
@@ -137,10 +137,10 @@
     "sensorNumber": 2,
     "readingID": 1641016800,
     "sessionID": 1641016800,
-    "dangerLevel": 0,
-    "window1": 2785976,
-    "window2": 7704576,
-    "window3": 8775572,
+    "dangerLevel": 3,
+    "window1": 6081534,
+    "window2": 9928802,
+    "window3": 942893,
     "publishedAt": "2022-01-01T07:00:21"
   },
   {
@@ -149,10 +149,10 @@
     "sensorNumber": 1,
     "readingID": 1641016800,
     "sessionID": 1641016800,
-    "dangerLevel": 4,
-    "window1": 1892145,
-    "window2": 759769,
-    "window3": 6195709,
+    "dangerLevel": 6,
+    "window1": 2550988,
+    "window2": 9221822,
+    "window3": 1340379,
     "publishedAt": "2022-01-01T07:00:22"
   },
   {
@@ -161,10 +161,10 @@
     "sensorNumber": 2,
     "readingID": 1641016800,
     "sessionID": 1641016800,
-    "dangerLevel": 4,
-    "window1": 159421,
-    "window2": 3004366,
-    "window3": 7019503,
+    "dangerLevel": 6,
+    "window1": 9835737,
+    "window2": 7177212,
+    "window3": 2579242,
     "publishedAt": "2022-01-01T07:00:23"
   },
   {
@@ -173,10 +173,10 @@
     "sensorNumber": 1,
     "readingID": 1641016800,
     "sessionID": 1641016800,
-    "dangerLevel": 4,
-    "window1": 324572,
-    "window2": 6707012,
-    "window3": 3747180,
+    "dangerLevel": 6,
+    "window1": 4860159,
+    "window2": 2243435,
+    "window3": 4400853,
     "publishedAt": "2022-01-01T07:00:24"
   },
   {
@@ -185,10 +185,10 @@
     "sensorNumber": 2,
     "readingID": 1641016800,
     "sessionID": 1641016800,
-    "dangerLevel": 4,
-    "window1": 6584229,
-    "window2": 9787780,
-    "window3": 4107031,
+    "dangerLevel": 6,
+    "window1": 8442395,
+    "window2": 6737443,
+    "window3": 1323562,
     "publishedAt": "2022-01-01T07:00:25"
   },
   {
@@ -197,10 +197,10 @@
     "sensorNumber": 1,
     "readingID": 1641016800,
     "sessionID": 1641016800,
-    "dangerLevel": 6,
-    "window1": 5905873,
-    "window2": 310083,
-    "window3": 2613970,
+    "dangerLevel": 2,
+    "window1": 6537226,
+    "window2": 8769066,
+    "window3": 45924,
     "publishedAt": "2022-01-01T07:00:23"
   },
   {
@@ -209,10 +209,10 @@
     "sensorNumber": 2,
     "readingID": 1641016800,
     "sessionID": 1641016800,
-    "dangerLevel": 6,
-    "window1": 6481185,
-    "window2": 7515180,
-    "window3": 2068255,
+    "dangerLevel": 2,
+    "window1": 4814393,
+    "window2": 238709,
+    "window3": 8397507,
     "publishedAt": "2022-01-01T07:00:24"
   },
   {
@@ -221,10 +221,10 @@
     "sensorNumber": 1,
     "readingID": 1641016800,
     "sessionID": 1641016800,
-    "dangerLevel": 5,
-    "window1": 5698969,
-    "window2": 8884651,
-    "window3": 1868648,
+    "dangerLevel": 2,
+    "window1": 727628,
+    "window2": 9350906,
+    "window3": 4558303,
     "publishedAt": "2022-01-01T07:00:25"
   },
   {
@@ -233,10 +233,10 @@
     "sensorNumber": 2,
     "readingID": 1641016800,
     "sessionID": 1641016800,
-    "dangerLevel": 5,
-    "window1": 6465704,
-    "window2": 3863242,
-    "window3": 8387004,
+    "dangerLevel": 2,
+    "window1": 7019751,
+    "window2": 8652017,
+    "window3": 9391059,
     "publishedAt": "2022-01-01T07:00:26"
   },
   {
@@ -245,10 +245,10 @@
     "sensorNumber": 1,
     "readingID": 1641016800,
     "sessionID": 1641016800,
-    "dangerLevel": 3,
-    "window1": 4401059,
-    "window2": 2037015,
-    "window3": 760660,
+    "dangerLevel": 8,
+    "window1": 2516575,
+    "window2": 3129830,
+    "window3": 1381437,
     "publishedAt": "2022-01-01T07:00:27"
   },
   {
@@ -257,10 +257,10 @@
     "sensorNumber": 2,
     "readingID": 1641016800,
     "sessionID": 1641016800,
-    "dangerLevel": 3,
-    "window1": 3014012,
-    "window2": 8045046,
-    "window3": 5651573,
+    "dangerLevel": 8,
+    "window1": 5684609,
+    "window2": 3414079,
+    "window3": 6291880,
     "publishedAt": "2022-01-01T07:00:28"
   },
   {
@@ -269,10 +269,10 @@
     "sensorNumber": 1,
     "readingID": 1641016800,
     "sessionID": 1641016800,
-    "dangerLevel": 6,
-    "window1": 7053437,
-    "window2": 5173528,
-    "window3": 3275923,
+    "dangerLevel": 2,
+    "window1": 3106839,
+    "window2": 182736,
+    "window3": 3499345,
     "publishedAt": "2022-01-01T07:00:29"
   },
   {
@@ -281,10 +281,10 @@
     "sensorNumber": 2,
     "readingID": 1641016800,
     "sessionID": 1641016800,
-    "dangerLevel": 6,
-    "window1": 5699799,
-    "window2": 5941023,
-    "window3": 5027250,
+    "dangerLevel": 2,
+    "window1": 3458927,
+    "window2": 8312612,
+    "window3": 1074295,
     "publishedAt": "2022-01-01T07:00:30"
   },
   {
@@ -293,10 +293,10 @@
     "sensorNumber": 1,
     "readingID": 1641016800,
     "sessionID": 1641016800,
-    "dangerLevel": 8,
-    "window1": 2406832,
-    "window2": 9762410,
-    "window3": 901824,
+    "dangerLevel": 2,
+    "window1": 8050444,
+    "window2": 9565587,
+    "window3": 3319368,
     "publishedAt": "2022-01-01T07:00:28"
   },
   {
@@ -305,10 +305,10 @@
     "sensorNumber": 2,
     "readingID": 1641016800,
     "sessionID": 1641016800,
-    "dangerLevel": 8,
-    "window1": 8458338,
-    "window2": 2769968,
-    "window3": 3608856,
+    "dangerLevel": 2,
+    "window1": 5971335,
+    "window2": 1752005,
+    "window3": 5501887,
     "publishedAt": "2022-01-01T07:00:29"
   },
   {
@@ -318,9 +318,9 @@
     "readingID": 1641016800,
     "sessionID": 1641016800,
     "dangerLevel": 1,
-    "window1": 9880026,
-    "window2": 8289137,
-    "window3": 2745036,
+    "window1": 139410,
+    "window2": 7661884,
+    "window3": 2546765,
     "publishedAt": "2022-01-01T07:00:30"
   },
   {
@@ -330,9 +330,9 @@
     "readingID": 1641016800,
     "sessionID": 1641016800,
     "dangerLevel": 1,
-    "window1": 2658574,
-    "window2": 3175591,
-    "window3": 6225757,
+    "window1": 1231010,
+    "window2": 7936802,
+    "window3": 2813237,
     "publishedAt": "2022-01-01T07:00:31"
   },
   {
@@ -341,10 +341,10 @@
     "sensorNumber": 1,
     "readingID": 1641016800,
     "sessionID": 1641016800,
-    "dangerLevel": 0,
-    "window1": 9670265,
-    "window2": 3105114,
-    "window3": 8694624,
+    "dangerLevel": 4,
+    "window1": 5671438,
+    "window2": 1198950,
+    "window3": 6486165,
     "publishedAt": "2022-01-01T07:00:32"
   },
   {
@@ -353,10 +353,10 @@
     "sensorNumber": 2,
     "readingID": 1641016800,
     "sessionID": 1641016800,
-    "dangerLevel": 0,
-    "window1": 8463014,
-    "window2": 4175799,
-    "window3": 9382400,
+    "dangerLevel": 4,
+    "window1": 4273551,
+    "window2": 7968988,
+    "window3": 934514,
     "publishedAt": "2022-01-01T07:00:33"
   },
   {
@@ -365,10 +365,10 @@
     "sensorNumber": 1,
     "readingID": 1641016800,
     "sessionID": 1641016800,
-    "dangerLevel": 8,
-    "window1": 5039568,
-    "window2": 2046059,
-    "window3": 2721937,
+    "dangerLevel": 2,
+    "window1": 8095036,
+    "window2": 991418,
+    "window3": 9670904,
     "publishedAt": "2022-01-01T07:00:34"
   },
   {
@@ -377,10 +377,10 @@
     "sensorNumber": 2,
     "readingID": 1641016800,
     "sessionID": 1641016800,
-    "dangerLevel": 8,
-    "window1": 7569844,
-    "window2": 9275334,
-    "window3": 4780735,
+    "dangerLevel": 2,
+    "window1": 3557204,
+    "window2": 3001201,
+    "window3": 6669970,
     "publishedAt": "2022-01-01T07:00:35"
   },
   {
@@ -389,10 +389,10 @@
     "sensorNumber": 1,
     "readingID": 1641016830,
     "sessionID": 1641016800,
-    "dangerLevel": 5,
-    "window1": 7765611,
-    "window2": 7663494,
-    "window3": 5524472,
+    "dangerLevel": 8,
+    "window1": 2122162,
+    "window2": 8896954,
+    "window3": 4293740,
     "publishedAt": "2022-01-01T07:00:48"
   },
   {
@@ -401,10 +401,10 @@
     "sensorNumber": 2,
     "readingID": 1641016830,
     "sessionID": 1641016800,
-    "dangerLevel": 5,
-    "window1": 5681194,
-    "window2": 3886493,
-    "window3": 1106319,
+    "dangerLevel": 8,
+    "window1": 8910917,
+    "window2": 4882924,
+    "window3": 3693863,
     "publishedAt": "2022-01-01T07:00:49"
   },
   {
@@ -413,10 +413,10 @@
     "sensorNumber": 1,
     "readingID": 1641016830,
     "sessionID": 1641016800,
-    "dangerLevel": 0,
-    "window1": 8574500,
-    "window2": 5258507,
-    "window3": 6962217,
+    "dangerLevel": 1,
+    "window1": 6145574,
+    "window2": 1473846,
+    "window3": 7742216,
     "publishedAt": "2022-01-01T07:00:50"
   },
   {
@@ -425,10 +425,10 @@
     "sensorNumber": 2,
     "readingID": 1641016830,
     "sessionID": 1641016800,
-    "dangerLevel": 0,
-    "window1": 3227933,
-    "window2": 3968809,
-    "window3": 6499852,
+    "dangerLevel": 1,
+    "window1": 9247712,
+    "window2": 2955776,
+    "window3": 2861155,
     "publishedAt": "2022-01-01T07:00:51"
   },
   {
@@ -437,10 +437,10 @@
     "sensorNumber": 1,
     "readingID": 1641016830,
     "sessionID": 1641016800,
-    "dangerLevel": 3,
-    "window1": 1723798,
-    "window2": 5719308,
-    "window3": 3372257,
+    "dangerLevel": 6,
+    "window1": 275799,
+    "window2": 6911600,
+    "window3": 9590842,
     "publishedAt": "2022-01-01T07:00:52"
   },
   {
@@ -449,10 +449,10 @@
     "sensorNumber": 2,
     "readingID": 1641016830,
     "sessionID": 1641016800,
-    "dangerLevel": 3,
-    "window1": 7011102,
-    "window2": 6099431,
-    "window3": 8186800,
+    "dangerLevel": 6,
+    "window1": 1408167,
+    "window2": 6322431,
+    "window3": 1059139,
     "publishedAt": "2022-01-01T07:00:53"
   },
   {
@@ -461,10 +461,10 @@
     "sensorNumber": 1,
     "readingID": 1641016830,
     "sessionID": 1641016800,
-    "dangerLevel": 1,
-    "window1": 3599660,
-    "window2": 6672818,
-    "window3": 536893,
+    "dangerLevel": 5,
+    "window1": 4037609,
+    "window2": 6585664,
+    "window3": 610885,
     "publishedAt": "2022-01-01T07:00:54"
   },
   {
@@ -473,10 +473,10 @@
     "sensorNumber": 2,
     "readingID": 1641016830,
     "sessionID": 1641016800,
-    "dangerLevel": 1,
-    "window1": 7164704,
-    "window2": 4539376,
-    "window3": 8036528,
+    "dangerLevel": 5,
+    "window1": 2602048,
+    "window2": 3178346,
+    "window3": 4472417,
     "publishedAt": "2022-01-01T07:00:55"
   },
   {
@@ -485,10 +485,10 @@
     "sensorNumber": 1,
     "readingID": 1641016830,
     "sessionID": 1641016800,
-    "dangerLevel": 3,
-    "window1": 4105777,
-    "window2": 7272314,
-    "window3": 1046793,
+    "dangerLevel": 1,
+    "window1": 8019298,
+    "window2": 2742272,
+    "window3": 3198149,
     "publishedAt": "2022-01-01T07:00:53"
   },
   {
@@ -497,10 +497,10 @@
     "sensorNumber": 2,
     "readingID": 1641016830,
     "sessionID": 1641016800,
-    "dangerLevel": 3,
-    "window1": 612733,
-    "window2": 1882019,
-    "window3": 3870097,
+    "dangerLevel": 1,
+    "window1": 2369092,
+    "window2": 8950857,
+    "window3": 4961107,
     "publishedAt": "2022-01-01T07:00:54"
   },
   {
@@ -510,9 +510,9 @@
     "readingID": 1641016830,
     "sessionID": 1641016800,
     "dangerLevel": 8,
-    "window1": 9886738,
-    "window2": 1265908,
-    "window3": 6227955,
+    "window1": 8398394,
+    "window2": 4913230,
+    "window3": 8330994,
     "publishedAt": "2022-01-01T07:00:55"
   },
   {
@@ -522,9 +522,9 @@
     "readingID": 1641016830,
     "sessionID": 1641016800,
     "dangerLevel": 8,
-    "window1": 6221278,
-    "window2": 7738147,
-    "window3": 5543953,
+    "window1": 9398250,
+    "window2": 5281011,
+    "window3": 5397311,
     "publishedAt": "2022-01-01T07:00:56"
   },
   {
@@ -533,10 +533,10 @@
     "sensorNumber": 1,
     "readingID": 1641016830,
     "sessionID": 1641016800,
-    "dangerLevel": 3,
-    "window1": 475489,
-    "window2": 2321352,
-    "window3": 5251665,
+    "dangerLevel": 6,
+    "window1": 2861458,
+    "window2": 8123002,
+    "window3": 4906173,
     "publishedAt": "2022-01-01T07:00:57"
   },
   {
@@ -545,10 +545,10 @@
     "sensorNumber": 2,
     "readingID": 1641016830,
     "sessionID": 1641016800,
-    "dangerLevel": 3,
-    "window1": 9857577,
-    "window2": 8144840,
-    "window3": 5707537,
+    "dangerLevel": 6,
+    "window1": 8123392,
+    "window2": 9787484,
+    "window3": 1189969,
     "publishedAt": "2022-01-01T07:00:58"
   },
   {
@@ -557,10 +557,10 @@
     "sensorNumber": 1,
     "readingID": 1641016830,
     "sessionID": 1641016800,
-    "dangerLevel": 7,
-    "window1": 2670613,
-    "window2": 7563163,
-    "window3": 9653109,
+    "dangerLevel": 5,
+    "window1": 7652698,
+    "window2": 4872852,
+    "window3": 5077071,
     "publishedAt": "2022-01-01T07:00:59"
   },
   {
@@ -569,10 +569,10 @@
     "sensorNumber": 2,
     "readingID": 1641016830,
     "sessionID": 1641016800,
-    "dangerLevel": 7,
-    "window1": 5414341,
-    "window2": 544998,
-    "window3": 5547018,
+    "dangerLevel": 5,
+    "window1": 1345810,
+    "window2": 3081514,
+    "window3": 7434308,
     "publishedAt": "2022-01-01T07:01:00"
   },
   {
@@ -581,10 +581,10 @@
     "sensorNumber": 1,
     "readingID": 1641016830,
     "sessionID": 1641016800,
-    "dangerLevel": 1,
-    "window1": 1382716,
-    "window2": 2804742,
-    "window3": 547641,
+    "dangerLevel": 4,
+    "window1": 7755952,
+    "window2": 3670608,
+    "window3": 3215069,
     "publishedAt": "2022-01-01T07:00:58"
   },
   {
@@ -593,10 +593,10 @@
     "sensorNumber": 2,
     "readingID": 1641016830,
     "sessionID": 1641016800,
-    "dangerLevel": 1,
-    "window1": 1164398,
-    "window2": 8201435,
-    "window3": 5169786,
+    "dangerLevel": 4,
+    "window1": 9252127,
+    "window2": 9933446,
+    "window3": 7949359,
     "publishedAt": "2022-01-01T07:00:59"
   },
   {
@@ -605,10 +605,10 @@
     "sensorNumber": 1,
     "readingID": 1641016830,
     "sessionID": 1641016800,
-    "dangerLevel": 1,
-    "window1": 5773276,
-    "window2": 3988728,
-    "window3": 6926382,
+    "dangerLevel": 9,
+    "window1": 2107421,
+    "window2": 3428887,
+    "window3": 6350458,
     "publishedAt": "2022-01-01T07:01:00"
   },
   {
@@ -617,10 +617,10 @@
     "sensorNumber": 2,
     "readingID": 1641016830,
     "sessionID": 1641016800,
-    "dangerLevel": 1,
-    "window1": 3456453,
-    "window2": 4851837,
-    "window3": 8110371,
+    "dangerLevel": 9,
+    "window1": 8888133,
+    "window2": 34522,
+    "window3": 5923572,
     "publishedAt": "2022-01-01T07:01:01"
   },
   {
@@ -630,9 +630,9 @@
     "readingID": 1641016830,
     "sessionID": 1641016800,
     "dangerLevel": 6,
-    "window1": 9147473,
-    "window2": 3975602,
-    "window3": 6513119,
+    "window1": 1776759,
+    "window2": 1653896,
+    "window3": 6505478,
     "publishedAt": "2022-01-01T07:01:02"
   },
   {
@@ -642,9 +642,9 @@
     "readingID": 1641016830,
     "sessionID": 1641016800,
     "dangerLevel": 6,
-    "window1": 7566967,
-    "window2": 9057378,
-    "window3": 7253645,
+    "window1": 7844367,
+    "window2": 5250821,
+    "window3": 2783774,
     "publishedAt": "2022-01-01T07:01:03"
   },
   {
@@ -653,10 +653,10 @@
     "sensorNumber": 1,
     "readingID": 1641016830,
     "sessionID": 1641016800,
-    "dangerLevel": 5,
-    "window1": 1261753,
-    "window2": 3093860,
-    "window3": 7832392,
+    "dangerLevel": 4,
+    "window1": 6756099,
+    "window2": 5228298,
+    "window3": 4039846,
     "publishedAt": "2022-01-01T07:01:04"
   },
   {
@@ -665,10 +665,10 @@
     "sensorNumber": 2,
     "readingID": 1641016830,
     "sessionID": 1641016800,
-    "dangerLevel": 5,
-    "window1": 6924708,
-    "window2": 5684061,
-    "window3": 7658878,
+    "dangerLevel": 4,
+    "window1": 914688,
+    "window2": 182745,
+    "window3": 8679679,
     "publishedAt": "2022-01-01T07:01:05"
   },
   {
@@ -677,10 +677,10 @@
     "sensorNumber": 1,
     "readingID": 1641016860,
     "sessionID": 1641016800,
-    "dangerLevel": 1,
-    "window1": 7671842,
-    "window2": 4913274,
-    "window3": 4345883,
+    "dangerLevel": 5,
+    "window1": 9986053,
+    "window2": 4301701,
+    "window3": 9059419,
     "publishedAt": "2022-01-01T07:01:18"
   },
   {
@@ -689,10 +689,10 @@
     "sensorNumber": 2,
     "readingID": 1641016860,
     "sessionID": 1641016800,
-    "dangerLevel": 1,
-    "window1": 2565946,
-    "window2": 7153868,
-    "window3": 2005718,
+    "dangerLevel": 5,
+    "window1": 4522906,
+    "window2": 512583,
+    "window3": 8407716,
     "publishedAt": "2022-01-01T07:01:19"
   },
   {
@@ -701,10 +701,10 @@
     "sensorNumber": 1,
     "readingID": 1641016860,
     "sessionID": 1641016800,
-    "dangerLevel": 1,
-    "window1": 8241992,
-    "window2": 8263218,
-    "window3": 5774550,
+    "dangerLevel": 7,
+    "window1": 1942603,
+    "window2": 3426847,
+    "window3": 5442665,
     "publishedAt": "2022-01-01T07:01:20"
   },
   {
@@ -713,10 +713,10 @@
     "sensorNumber": 2,
     "readingID": 1641016860,
     "sessionID": 1641016800,
-    "dangerLevel": 1,
-    "window1": 3099743,
-    "window2": 7572315,
-    "window3": 9563113,
+    "dangerLevel": 7,
+    "window1": 9641066,
+    "window2": 4685457,
+    "window3": 3376831,
     "publishedAt": "2022-01-01T07:01:21"
   },
   {
@@ -726,9 +726,9 @@
     "readingID": 1641016860,
     "sessionID": 1641016800,
     "dangerLevel": 9,
-    "window1": 8694215,
-    "window2": 5750075,
-    "window3": 5634325,
+    "window1": 915757,
+    "window2": 4335298,
+    "window3": 6813458,
     "publishedAt": "2022-01-01T07:01:22"
   },
   {
@@ -738,9 +738,9 @@
     "readingID": 1641016860,
     "sessionID": 1641016800,
     "dangerLevel": 9,
-    "window1": 2945749,
-    "window2": 6192264,
-    "window3": 4326279,
+    "window1": 5021463,
+    "window2": 3464388,
+    "window3": 8220756,
     "publishedAt": "2022-01-01T07:01:23"
   },
   {
@@ -749,10 +749,10 @@
     "sensorNumber": 1,
     "readingID": 1641016860,
     "sessionID": 1641016800,
-    "dangerLevel": 2,
-    "window1": 2918518,
-    "window2": 7897918,
-    "window3": 307459,
+    "dangerLevel": 5,
+    "window1": 6406099,
+    "window2": 6506478,
+    "window3": 7022857,
     "publishedAt": "2022-01-01T07:01:24"
   },
   {
@@ -761,10 +761,10 @@
     "sensorNumber": 2,
     "readingID": 1641016860,
     "sessionID": 1641016800,
-    "dangerLevel": 2,
-    "window1": 853062,
-    "window2": 7414402,
-    "window3": 4359140,
+    "dangerLevel": 5,
+    "window1": 7627761,
+    "window2": 5669052,
+    "window3": 9666904,
     "publishedAt": "2022-01-01T07:01:25"
   },
   {
@@ -774,9 +774,9 @@
     "readingID": 1641016860,
     "sessionID": 1641016800,
     "dangerLevel": 5,
-    "window1": 5565915,
-    "window2": 8744069,
-    "window3": 5456166,
+    "window1": 216384,
+    "window2": 3010315,
+    "window3": 1307257,
     "publishedAt": "2022-01-01T07:01:23"
   },
   {
@@ -786,9 +786,9 @@
     "readingID": 1641016860,
     "sessionID": 1641016800,
     "dangerLevel": 5,
-    "window1": 5130190,
-    "window2": 7064938,
-    "window3": 6659960,
+    "window1": 2462836,
+    "window2": 2275985,
+    "window3": 3162007,
     "publishedAt": "2022-01-01T07:01:24"
   },
   {
@@ -797,10 +797,10 @@
     "sensorNumber": 1,
     "readingID": 1641016860,
     "sessionID": 1641016800,
-    "dangerLevel": 5,
-    "window1": 5417040,
-    "window2": 1943221,
-    "window3": 6666676,
+    "dangerLevel": 2,
+    "window1": 3653293,
+    "window2": 3397613,
+    "window3": 3788044,
     "publishedAt": "2022-01-01T07:01:25"
   },
   {
@@ -809,10 +809,10 @@
     "sensorNumber": 2,
     "readingID": 1641016860,
     "sessionID": 1641016800,
-    "dangerLevel": 5,
-    "window1": 71171,
-    "window2": 3702133,
-    "window3": 9718537,
+    "dangerLevel": 2,
+    "window1": 2888263,
+    "window2": 1210358,
+    "window3": 720995,
     "publishedAt": "2022-01-01T07:01:26"
   },
   {
@@ -821,10 +821,10 @@
     "sensorNumber": 1,
     "readingID": 1641016860,
     "sessionID": 1641016800,
-    "dangerLevel": 1,
-    "window1": 3411653,
-    "window2": 1229601,
-    "window3": 3803560,
+    "dangerLevel": 8,
+    "window1": 8006655,
+    "window2": 3310417,
+    "window3": 1032767,
     "publishedAt": "2022-01-01T07:01:27"
   },
   {
@@ -833,10 +833,10 @@
     "sensorNumber": 2,
     "readingID": 1641016860,
     "sessionID": 1641016800,
-    "dangerLevel": 1,
-    "window1": 5386674,
-    "window2": 2721283,
-    "window3": 9734677,
+    "dangerLevel": 8,
+    "window1": 6163290,
+    "window2": 8150154,
+    "window3": 2793118,
     "publishedAt": "2022-01-01T07:01:28"
   },
   {
@@ -845,10 +845,10 @@
     "sensorNumber": 1,
     "readingID": 1641016860,
     "sessionID": 1641016800,
-    "dangerLevel": 6,
-    "window1": 2416520,
-    "window2": 5805699,
-    "window3": 8833062,
+    "dangerLevel": 4,
+    "window1": 4683564,
+    "window2": 6954577,
+    "window3": 5716809,
     "publishedAt": "2022-01-01T07:01:29"
   },
   {
@@ -857,10 +857,10 @@
     "sensorNumber": 2,
     "readingID": 1641016860,
     "sessionID": 1641016800,
-    "dangerLevel": 6,
-    "window1": 2456951,
-    "window2": 3675798,
-    "window3": 6606711,
+    "dangerLevel": 4,
+    "window1": 9920833,
+    "window2": 946133,
+    "window3": 8100024,
     "publishedAt": "2022-01-01T07:01:30"
   },
   {
@@ -869,10 +869,10 @@
     "sensorNumber": 1,
     "readingID": 1641016860,
     "sessionID": 1641016800,
-    "dangerLevel": 8,
-    "window1": 2457275,
-    "window2": 6757845,
-    "window3": 2504877,
+    "dangerLevel": 2,
+    "window1": 9449727,
+    "window2": 2415757,
+    "window3": 3200319,
     "publishedAt": "2022-01-01T07:01:28"
   },
   {
@@ -881,10 +881,10 @@
     "sensorNumber": 2,
     "readingID": 1641016860,
     "sessionID": 1641016800,
-    "dangerLevel": 8,
-    "window1": 3869113,
-    "window2": 6881810,
-    "window3": 4027395,
+    "dangerLevel": 2,
+    "window1": 6972031,
+    "window2": 3460241,
+    "window3": 8694083,
     "publishedAt": "2022-01-01T07:01:29"
   },
   {
@@ -893,10 +893,10 @@
     "sensorNumber": 1,
     "readingID": 1641016860,
     "sessionID": 1641016800,
-    "dangerLevel": 7,
-    "window1": 7898109,
-    "window2": 306989,
-    "window3": 2122957,
+    "dangerLevel": 4,
+    "window1": 6718741,
+    "window2": 4220439,
+    "window3": 7337441,
     "publishedAt": "2022-01-01T07:01:30"
   },
   {
@@ -905,10 +905,10 @@
     "sensorNumber": 2,
     "readingID": 1641016860,
     "sessionID": 1641016800,
-    "dangerLevel": 7,
-    "window1": 2267923,
-    "window2": 9048123,
-    "window3": 2338109,
+    "dangerLevel": 4,
+    "window1": 1539803,
+    "window2": 1543458,
+    "window3": 7093046,
     "publishedAt": "2022-01-01T07:01:31"
   },
   {
@@ -917,10 +917,10 @@
     "sensorNumber": 1,
     "readingID": 1641016860,
     "sessionID": 1641016800,
-    "dangerLevel": 7,
-    "window1": 3321997,
-    "window2": 6786008,
-    "window3": 2019215,
+    "dangerLevel": 9,
+    "window1": 4058989,
+    "window2": 7645801,
+    "window3": 9910417,
     "publishedAt": "2022-01-01T07:01:32"
   },
   {
@@ -929,10 +929,10 @@
     "sensorNumber": 2,
     "readingID": 1641016860,
     "sessionID": 1641016800,
-    "dangerLevel": 7,
-    "window1": 7818532,
-    "window2": 8256488,
-    "window3": 3694846,
+    "dangerLevel": 9,
+    "window1": 9672778,
+    "window2": 7592186,
+    "window3": 1277913,
     "publishedAt": "2022-01-01T07:01:33"
   },
   {
@@ -941,10 +941,10 @@
     "sensorNumber": 1,
     "readingID": 1641016860,
     "sessionID": 1641016800,
-    "dangerLevel": 8,
-    "window1": 6098620,
-    "window2": 95245,
-    "window3": 3425651,
+    "dangerLevel": 1,
+    "window1": 9912637,
+    "window2": 1646602,
+    "window3": 8324362,
     "publishedAt": "2022-01-01T07:01:34"
   },
   {
@@ -953,10 +953,10 @@
     "sensorNumber": 2,
     "readingID": 1641016860,
     "sessionID": 1641016800,
-    "dangerLevel": 8,
-    "window1": 3758407,
-    "window2": 3793045,
-    "window3": 1918082,
+    "dangerLevel": 1,
+    "window1": 4551486,
+    "window2": 7694694,
+    "window3": 3207003,
     "publishedAt": "2022-01-01T07:01:35"
   },
   {
@@ -965,10 +965,10 @@
     "sensorNumber": 1,
     "readingID": 1641016890,
     "sessionID": 1641016800,
-    "dangerLevel": 2,
-    "window1": 739718,
-    "window2": 6990679,
-    "window3": 8861333,
+    "dangerLevel": 1,
+    "window1": 652294,
+    "window2": 4937069,
+    "window3": 7933324,
     "publishedAt": "2022-01-01T07:01:48"
   },
   {
@@ -977,10 +977,10 @@
     "sensorNumber": 2,
     "readingID": 1641016890,
     "sessionID": 1641016800,
-    "dangerLevel": 2,
-    "window1": 1426423,
-    "window2": 3523468,
-    "window3": 9017821,
+    "dangerLevel": 1,
+    "window1": 2780721,
+    "window2": 7121251,
+    "window3": 3237955,
     "publishedAt": "2022-01-01T07:01:49"
   },
   {
@@ -989,10 +989,10 @@
     "sensorNumber": 1,
     "readingID": 1641016890,
     "sessionID": 1641016800,
-    "dangerLevel": 8,
-    "window1": 6197618,
-    "window2": 1320640,
-    "window3": 9548367,
+    "dangerLevel": 6,
+    "window1": 1078039,
+    "window2": 9251439,
+    "window3": 6180188,
     "publishedAt": "2022-01-01T07:01:50"
   },
   {
@@ -1001,10 +1001,10 @@
     "sensorNumber": 2,
     "readingID": 1641016890,
     "sessionID": 1641016800,
-    "dangerLevel": 8,
-    "window1": 7496260,
-    "window2": 2178585,
-    "window3": 3708264,
+    "dangerLevel": 6,
+    "window1": 5287644,
+    "window2": 8961253,
+    "window3": 5712931,
     "publishedAt": "2022-01-01T07:01:51"
   },
   {
@@ -1013,10 +1013,10 @@
     "sensorNumber": 1,
     "readingID": 1641016890,
     "sessionID": 1641016800,
-    "dangerLevel": 8,
-    "window1": 127247,
-    "window2": 9897658,
-    "window3": 4491260,
+    "dangerLevel": 7,
+    "window1": 4310361,
+    "window2": 1274841,
+    "window3": 4572770,
     "publishedAt": "2022-01-01T07:01:52"
   },
   {
@@ -1025,70 +1025,70 @@
     "sensorNumber": 2,
     "readingID": 1641016890,
     "sessionID": 1641016800,
+    "dangerLevel": 7,
+    "window1": 2474781,
+    "window2": 8174822,
+    "window3": 378635,
+    "publishedAt": "2022-01-01T07:01:53"
+  },
+  {
+    "nodeID": 3,
+    "canID": 4,
+    "sensorNumber": 1,
+    "readingID": 1641016890,
+    "sessionID": 1641016800,
+    "dangerLevel": 0,
+    "window1": 6823272,
+    "window2": 5860699,
+    "window3": 594662,
+    "publishedAt": "2022-01-01T07:01:54"
+  },
+  {
+    "nodeID": 3,
+    "canID": 4,
+    "sensorNumber": 2,
+    "readingID": 1641016890,
+    "sessionID": 1641016800,
+    "dangerLevel": 0,
+    "window1": 6639622,
+    "window2": 7760882,
+    "window3": 6018103,
+    "publishedAt": "2022-01-01T07:01:55"
+  },
+  {
+    "nodeID": 4,
+    "canID": 1,
+    "sensorNumber": 1,
+    "readingID": 1641016890,
+    "sessionID": 1641016800,
+    "dangerLevel": 2,
+    "window1": 9350243,
+    "window2": 120411,
+    "window3": 7115629,
+    "publishedAt": "2022-01-01T07:01:53"
+  },
+  {
+    "nodeID": 4,
+    "canID": 1,
+    "sensorNumber": 2,
+    "readingID": 1641016890,
+    "sessionID": 1641016800,
+    "dangerLevel": 2,
+    "window1": 8139239,
+    "window2": 168095,
+    "window3": 4765188,
+    "publishedAt": "2022-01-01T07:01:54"
+  },
+  {
+    "nodeID": 4,
+    "canID": 2,
+    "sensorNumber": 1,
+    "readingID": 1641016890,
+    "sessionID": 1641016800,
     "dangerLevel": 8,
-    "window1": 9926320,
-    "window2": 518930,
-    "window3": 9230305,
-    "publishedAt": "2022-01-01T07:01:53"
-  },
-  {
-    "nodeID": 3,
-    "canID": 4,
-    "sensorNumber": 1,
-    "readingID": 1641016890,
-    "sessionID": 1641016800,
-    "dangerLevel": 2,
-    "window1": 3216964,
-    "window2": 4989755,
-    "window3": 4864179,
-    "publishedAt": "2022-01-01T07:01:54"
-  },
-  {
-    "nodeID": 3,
-    "canID": 4,
-    "sensorNumber": 2,
-    "readingID": 1641016890,
-    "sessionID": 1641016800,
-    "dangerLevel": 2,
-    "window1": 5974242,
-    "window2": 5552041,
-    "window3": 3305132,
-    "publishedAt": "2022-01-01T07:01:55"
-  },
-  {
-    "nodeID": 4,
-    "canID": 1,
-    "sensorNumber": 1,
-    "readingID": 1641016890,
-    "sessionID": 1641016800,
-    "dangerLevel": 2,
-    "window1": 1257098,
-    "window2": 5880137,
-    "window3": 8319908,
-    "publishedAt": "2022-01-01T07:01:53"
-  },
-  {
-    "nodeID": 4,
-    "canID": 1,
-    "sensorNumber": 2,
-    "readingID": 1641016890,
-    "sessionID": 1641016800,
-    "dangerLevel": 2,
-    "window1": 3541945,
-    "window2": 3968653,
-    "window3": 8067948,
-    "publishedAt": "2022-01-01T07:01:54"
-  },
-  {
-    "nodeID": 4,
-    "canID": 2,
-    "sensorNumber": 1,
-    "readingID": 1641016890,
-    "sessionID": 1641016800,
-    "dangerLevel": 3,
-    "window1": 5251992,
-    "window2": 9333935,
-    "window3": 7026230,
+    "window1": 2124613,
+    "window2": 518034,
+    "window3": 9518899,
     "publishedAt": "2022-01-01T07:01:55"
   },
   {
@@ -1097,10 +1097,10 @@
     "sensorNumber": 2,
     "readingID": 1641016890,
     "sessionID": 1641016800,
-    "dangerLevel": 3,
-    "window1": 429712,
-    "window2": 379476,
-    "window3": 4591020,
+    "dangerLevel": 8,
+    "window1": 534764,
+    "window2": 2774480,
+    "window3": 4945443,
     "publishedAt": "2022-01-01T07:01:56"
   },
   {
@@ -1109,10 +1109,10 @@
     "sensorNumber": 1,
     "readingID": 1641016890,
     "sessionID": 1641016800,
-    "dangerLevel": 8,
-    "window1": 7048964,
-    "window2": 5445044,
-    "window3": 3035450,
+    "dangerLevel": 1,
+    "window1": 4971171,
+    "window2": 3306644,
+    "window3": 5366970,
     "publishedAt": "2022-01-01T07:01:57"
   },
   {
@@ -1121,70 +1121,70 @@
     "sensorNumber": 2,
     "readingID": 1641016890,
     "sessionID": 1641016800,
+    "dangerLevel": 1,
+    "window1": 1385496,
+    "window2": 8856571,
+    "window3": 4197245,
+    "publishedAt": "2022-01-01T07:01:58"
+  },
+  {
+    "nodeID": 4,
+    "canID": 4,
+    "sensorNumber": 1,
+    "readingID": 1641016890,
+    "sessionID": 1641016800,
+    "dangerLevel": 5,
+    "window1": 8530975,
+    "window2": 8474974,
+    "window3": 4993464,
+    "publishedAt": "2022-01-01T07:01:59"
+  },
+  {
+    "nodeID": 4,
+    "canID": 4,
+    "sensorNumber": 2,
+    "readingID": 1641016890,
+    "sessionID": 1641016800,
+    "dangerLevel": 5,
+    "window1": 5252952,
+    "window2": 6959606,
+    "window3": 5539342,
+    "publishedAt": "2022-01-01T07:02:00"
+  },
+  {
+    "nodeID": 5,
+    "canID": 1,
+    "sensorNumber": 1,
+    "readingID": 1641016890,
+    "sessionID": 1641016800,
+    "dangerLevel": 5,
+    "window1": 7489411,
+    "window2": 440804,
+    "window3": 5509553,
+    "publishedAt": "2022-01-01T07:01:58"
+  },
+  {
+    "nodeID": 5,
+    "canID": 1,
+    "sensorNumber": 2,
+    "readingID": 1641016890,
+    "sessionID": 1641016800,
+    "dangerLevel": 5,
+    "window1": 8806354,
+    "window2": 5918822,
+    "window3": 2621632,
+    "publishedAt": "2022-01-01T07:01:59"
+  },
+  {
+    "nodeID": 5,
+    "canID": 2,
+    "sensorNumber": 1,
+    "readingID": 1641016890,
+    "sessionID": 1641016800,
     "dangerLevel": 8,
-    "window1": 8556159,
-    "window2": 9560695,
-    "window3": 7510793,
-    "publishedAt": "2022-01-01T07:01:58"
-  },
-  {
-    "nodeID": 4,
-    "canID": 4,
-    "sensorNumber": 1,
-    "readingID": 1641016890,
-    "sessionID": 1641016800,
-    "dangerLevel": 5,
-    "window1": 2554862,
-    "window2": 3393786,
-    "window3": 5341496,
-    "publishedAt": "2022-01-01T07:01:59"
-  },
-  {
-    "nodeID": 4,
-    "canID": 4,
-    "sensorNumber": 2,
-    "readingID": 1641016890,
-    "sessionID": 1641016800,
-    "dangerLevel": 5,
-    "window1": 7332375,
-    "window2": 6289274,
-    "window3": 6281771,
-    "publishedAt": "2022-01-01T07:02:00"
-  },
-  {
-    "nodeID": 5,
-    "canID": 1,
-    "sensorNumber": 1,
-    "readingID": 1641016890,
-    "sessionID": 1641016800,
-    "dangerLevel": 0,
-    "window1": 9077254,
-    "window2": 4518848,
-    "window3": 1707111,
-    "publishedAt": "2022-01-01T07:01:58"
-  },
-  {
-    "nodeID": 5,
-    "canID": 1,
-    "sensorNumber": 2,
-    "readingID": 1641016890,
-    "sessionID": 1641016800,
-    "dangerLevel": 0,
-    "window1": 4076519,
-    "window2": 4718641,
-    "window3": 5202243,
-    "publishedAt": "2022-01-01T07:01:59"
-  },
-  {
-    "nodeID": 5,
-    "canID": 2,
-    "sensorNumber": 1,
-    "readingID": 1641016890,
-    "sessionID": 1641016800,
-    "dangerLevel": 2,
-    "window1": 5525719,
-    "window2": 7362747,
-    "window3": 3958962,
+    "window1": 4527989,
+    "window2": 2789075,
+    "window3": 5311232,
     "publishedAt": "2022-01-01T07:02:00"
   },
   {
@@ -1193,10 +1193,10 @@
     "sensorNumber": 2,
     "readingID": 1641016890,
     "sessionID": 1641016800,
-    "dangerLevel": 2,
-    "window1": 8183663,
-    "window2": 3252734,
-    "window3": 4836014,
+    "dangerLevel": 8,
+    "window1": 496086,
+    "window2": 6953563,
+    "window3": 7340230,
     "publishedAt": "2022-01-01T07:02:01"
   },
   {
@@ -1205,10 +1205,10 @@
     "sensorNumber": 1,
     "readingID": 1641016890,
     "sessionID": 1641016800,
-    "dangerLevel": 1,
-    "window1": 6260713,
-    "window2": 7846030,
-    "window3": 7225960,
+    "dangerLevel": 2,
+    "window1": 8986868,
+    "window2": 678997,
+    "window3": 9311724,
     "publishedAt": "2022-01-01T07:02:02"
   },
   {
@@ -1217,10 +1217,10 @@
     "sensorNumber": 2,
     "readingID": 1641016890,
     "sessionID": 1641016800,
-    "dangerLevel": 1,
-    "window1": 4743838,
-    "window2": 6115708,
-    "window3": 414795,
+    "dangerLevel": 2,
+    "window1": 8259909,
+    "window2": 8849742,
+    "window3": 225749,
     "publishedAt": "2022-01-01T07:02:03"
   },
   {
@@ -1229,10 +1229,10 @@
     "sensorNumber": 1,
     "readingID": 1641016890,
     "sessionID": 1641016800,
-    "dangerLevel": 0,
-    "window1": 2704383,
-    "window2": 7805246,
-    "window3": 3575900,
+    "dangerLevel": 1,
+    "window1": 3588438,
+    "window2": 6679404,
+    "window3": 6111966,
     "publishedAt": "2022-01-01T07:02:04"
   },
   {
@@ -1241,10 +1241,10 @@
     "sensorNumber": 2,
     "readingID": 1641016890,
     "sessionID": 1641016800,
-    "dangerLevel": 0,
-    "window1": 4548117,
-    "window2": 6172704,
-    "window3": 2446911,
+    "dangerLevel": 1,
+    "window1": 8083150,
+    "window2": 618851,
+    "window3": 6622390,
     "publishedAt": "2022-01-01T07:02:05"
   },
   {
@@ -1253,10 +1253,10 @@
     "sensorNumber": 1,
     "readingID": 1641017100,
     "sessionID": 1641017100,
-    "dangerLevel": 8,
-    "window1": 2083896,
-    "window2": 4994636,
-    "window3": 3659299,
+    "dangerLevel": 6,
+    "window1": 1591588,
+    "window2": 9545845,
+    "window3": 6112744,
     "publishedAt": "2022-01-01T07:05:13"
   },
   {
@@ -1265,10 +1265,10 @@
     "sensorNumber": 2,
     "readingID": 1641017100,
     "sessionID": 1641017100,
-    "dangerLevel": 8,
-    "window1": 2543792,
-    "window2": 5853837,
-    "window3": 4612016,
+    "dangerLevel": 6,
+    "window1": 6944597,
+    "window2": 236507,
+    "window3": 7969325,
     "publishedAt": "2022-01-01T07:05:14"
   },
   {
@@ -1277,10 +1277,10 @@
     "sensorNumber": 1,
     "readingID": 1641017100,
     "sessionID": 1641017100,
-    "dangerLevel": 4,
-    "window1": 815889,
-    "window2": 6138091,
-    "window3": 5603732,
+    "dangerLevel": 1,
+    "window1": 1020776,
+    "window2": 6507387,
+    "window3": 4169024,
     "publishedAt": "2022-01-01T07:05:15"
   },
   {
@@ -1289,10 +1289,10 @@
     "sensorNumber": 2,
     "readingID": 1641017100,
     "sessionID": 1641017100,
-    "dangerLevel": 4,
-    "window1": 2306961,
-    "window2": 9265497,
-    "window3": 6634163,
+    "dangerLevel": 1,
+    "window1": 3050237,
+    "window2": 5482074,
+    "window3": 917407,
     "publishedAt": "2022-01-01T07:05:16"
   },
   {
@@ -1301,10 +1301,10 @@
     "sensorNumber": 1,
     "readingID": 1641017100,
     "sessionID": 1641017100,
-    "dangerLevel": 6,
-    "window1": 5191968,
-    "window2": 8078476,
-    "window3": 6636667,
+    "dangerLevel": 9,
+    "window1": 7466793,
+    "window2": 194250,
+    "window3": 2851897,
     "publishedAt": "2022-01-01T07:05:17"
   },
   {
@@ -1313,10 +1313,10 @@
     "sensorNumber": 2,
     "readingID": 1641017100,
     "sessionID": 1641017100,
-    "dangerLevel": 6,
-    "window1": 5117597,
-    "window2": 3228231,
-    "window3": 282497,
+    "dangerLevel": 9,
+    "window1": 8870204,
+    "window2": 9544601,
+    "window3": 6606317,
     "publishedAt": "2022-01-01T07:05:18"
   },
   {
@@ -1325,10 +1325,10 @@
     "sensorNumber": 1,
     "readingID": 1641017100,
     "sessionID": 1641017100,
-    "dangerLevel": 1,
-    "window1": 7314830,
-    "window2": 8757643,
-    "window3": 2935734,
+    "dangerLevel": 3,
+    "window1": 4620239,
+    "window2": 6121208,
+    "window3": 7739945,
     "publishedAt": "2022-01-01T07:05:19"
   },
   {
@@ -1337,10 +1337,10 @@
     "sensorNumber": 2,
     "readingID": 1641017100,
     "sessionID": 1641017100,
-    "dangerLevel": 1,
-    "window1": 2432031,
-    "window2": 7588255,
-    "window3": 1453816,
+    "dangerLevel": 3,
+    "window1": 502623,
+    "window2": 3723224,
+    "window3": 5348338,
     "publishedAt": "2022-01-01T07:05:20"
   },
   {
@@ -1350,9 +1350,9 @@
     "readingID": 1641017100,
     "sessionID": 1641017100,
     "dangerLevel": 8,
-    "window1": 8251940,
-    "window2": 1100673,
-    "window3": 6595446,
+    "window1": 4848925,
+    "window2": 2824697,
+    "window3": 604029,
     "publishedAt": "2022-01-01T07:05:18"
   },
   {
@@ -1362,9 +1362,9 @@
     "readingID": 1641017100,
     "sessionID": 1641017100,
     "dangerLevel": 8,
-    "window1": 4776505,
-    "window2": 7148150,
-    "window3": 4626051,
+    "window1": 9147290,
+    "window2": 6520504,
+    "window3": 4733282,
     "publishedAt": "2022-01-01T07:05:19"
   },
   {
@@ -1373,10 +1373,10 @@
     "sensorNumber": 1,
     "readingID": 1641017100,
     "sessionID": 1641017100,
-    "dangerLevel": 6,
-    "window1": 7048887,
-    "window2": 6142521,
-    "window3": 2951523,
+    "dangerLevel": 3,
+    "window1": 1966505,
+    "window2": 7472454,
+    "window3": 56279,
     "publishedAt": "2022-01-01T07:05:20"
   },
   {
@@ -1385,10 +1385,10 @@
     "sensorNumber": 2,
     "readingID": 1641017100,
     "sessionID": 1641017100,
-    "dangerLevel": 6,
-    "window1": 108538,
-    "window2": 7983312,
-    "window3": 6234551,
+    "dangerLevel": 3,
+    "window1": 4319560,
+    "window2": 7155299,
+    "window3": 1740712,
     "publishedAt": "2022-01-01T07:05:21"
   },
   {
@@ -1397,10 +1397,10 @@
     "sensorNumber": 1,
     "readingID": 1641017100,
     "sessionID": 1641017100,
-    "dangerLevel": 0,
-    "window1": 435135,
-    "window2": 342745,
-    "window3": 4639250,
+    "dangerLevel": 3,
+    "window1": 9867519,
+    "window2": 5052376,
+    "window3": 1333079,
     "publishedAt": "2022-01-01T07:05:22"
   },
   {
@@ -1409,10 +1409,10 @@
     "sensorNumber": 2,
     "readingID": 1641017100,
     "sessionID": 1641017100,
-    "dangerLevel": 0,
-    "window1": 4966419,
-    "window2": 2175659,
-    "window3": 8217312,
+    "dangerLevel": 3,
+    "window1": 5888322,
+    "window2": 6021596,
+    "window3": 3411598,
     "publishedAt": "2022-01-01T07:05:23"
   },
   {
@@ -1421,10 +1421,10 @@
     "sensorNumber": 1,
     "readingID": 1641017100,
     "sessionID": 1641017100,
-    "dangerLevel": 8,
-    "window1": 9029117,
-    "window2": 9634326,
-    "window3": 6640768,
+    "dangerLevel": 0,
+    "window1": 4474630,
+    "window2": 5000393,
+    "window3": 7640216,
     "publishedAt": "2022-01-01T07:05:24"
   },
   {
@@ -1433,10 +1433,10 @@
     "sensorNumber": 2,
     "readingID": 1641017100,
     "sessionID": 1641017100,
-    "dangerLevel": 8,
-    "window1": 5215342,
-    "window2": 2602720,
-    "window3": 600021,
+    "dangerLevel": 0,
+    "window1": 8271993,
+    "window2": 3381145,
+    "window3": 4581874,
     "publishedAt": "2022-01-01T07:05:25"
   },
   {
@@ -1445,10 +1445,10 @@
     "sensorNumber": 1,
     "readingID": 1641017100,
     "sessionID": 1641017100,
-    "dangerLevel": 0,
-    "window1": 9035,
-    "window2": 9293751,
-    "window3": 1519890,
+    "dangerLevel": 6,
+    "window1": 7301596,
+    "window2": 5485078,
+    "window3": 1084954,
     "publishedAt": "2022-01-01T07:05:23"
   },
   {
@@ -1457,10 +1457,10 @@
     "sensorNumber": 2,
     "readingID": 1641017100,
     "sessionID": 1641017100,
-    "dangerLevel": 0,
-    "window1": 2429311,
-    "window2": 910814,
-    "window3": 7456915,
+    "dangerLevel": 6,
+    "window1": 6467664,
+    "window2": 5610854,
+    "window3": 8407849,
     "publishedAt": "2022-01-01T07:05:24"
   },
   {
@@ -1469,10 +1469,10 @@
     "sensorNumber": 1,
     "readingID": 1641017100,
     "sessionID": 1641017100,
-    "dangerLevel": 1,
-    "window1": 8495066,
-    "window2": 6936590,
-    "window3": 7523967,
+    "dangerLevel": 0,
+    "window1": 6423644,
+    "window2": 7686796,
+    "window3": 2092182,
     "publishedAt": "2022-01-01T07:05:25"
   },
   {
@@ -1481,10 +1481,10 @@
     "sensorNumber": 2,
     "readingID": 1641017100,
     "sessionID": 1641017100,
-    "dangerLevel": 1,
-    "window1": 9940213,
-    "window2": 8056711,
-    "window3": 7509806,
+    "dangerLevel": 0,
+    "window1": 7219132,
+    "window2": 5213275,
+    "window3": 1320540,
     "publishedAt": "2022-01-01T07:05:26"
   },
   {
@@ -1493,10 +1493,10 @@
     "sensorNumber": 1,
     "readingID": 1641017100,
     "sessionID": 1641017100,
-    "dangerLevel": 2,
-    "window1": 185382,
-    "window2": 9386283,
-    "window3": 737155,
+    "dangerLevel": 9,
+    "window1": 8664749,
+    "window2": 4669741,
+    "window3": 7722404,
     "publishedAt": "2022-01-01T07:05:27"
   },
   {
@@ -1505,10 +1505,10 @@
     "sensorNumber": 2,
     "readingID": 1641017100,
     "sessionID": 1641017100,
-    "dangerLevel": 2,
-    "window1": 4530765,
-    "window2": 9357072,
-    "window3": 6124133,
+    "dangerLevel": 9,
+    "window1": 9869149,
+    "window2": 6538033,
+    "window3": 6053931,
     "publishedAt": "2022-01-01T07:05:28"
   },
   {
@@ -1517,10 +1517,10 @@
     "sensorNumber": 1,
     "readingID": 1641017100,
     "sessionID": 1641017100,
-    "dangerLevel": 8,
-    "window1": 5458994,
-    "window2": 7981282,
-    "window3": 1590334,
+    "dangerLevel": 0,
+    "window1": 9702090,
+    "window2": 3137812,
+    "window3": 9447014,
     "publishedAt": "2022-01-01T07:05:29"
   },
   {
@@ -1529,10 +1529,10 @@
     "sensorNumber": 2,
     "readingID": 1641017100,
     "sessionID": 1641017100,
-    "dangerLevel": 8,
-    "window1": 152970,
-    "window2": 7503685,
-    "window3": 7742738,
+    "dangerLevel": 0,
+    "window1": 5740835,
+    "window2": 5994725,
+    "window3": 9942741,
     "publishedAt": "2022-01-01T07:05:30"
   },
   {
@@ -1541,10 +1541,10 @@
     "sensorNumber": 1,
     "readingID": 1641017100,
     "sessionID": 1641017100,
-    "dangerLevel": 0,
-    "window1": 9042699,
-    "window2": 9083311,
-    "window3": 8260094,
+    "dangerLevel": 9,
+    "window1": 7311690,
+    "window2": 3631261,
+    "window3": 9132607,
     "publishedAt": "2022-01-01T07:05:28"
   },
   {
@@ -1553,10 +1553,10 @@
     "sensorNumber": 2,
     "readingID": 1641017100,
     "sessionID": 1641017100,
-    "dangerLevel": 0,
-    "window1": 7296330,
-    "window2": 9679287,
-    "window3": 9987663,
+    "dangerLevel": 9,
+    "window1": 9149649,
+    "window2": 1832678,
+    "window3": 9180504,
     "publishedAt": "2022-01-01T07:05:29"
   },
   {
@@ -1566,9 +1566,9 @@
     "readingID": 1641017100,
     "sessionID": 1641017100,
     "dangerLevel": 9,
-    "window1": 9709423,
-    "window2": 6323060,
-    "window3": 631701,
+    "window1": 7953243,
+    "window2": 9714226,
+    "window3": 1421477,
     "publishedAt": "2022-01-01T07:05:30"
   },
   {
@@ -1578,9 +1578,9 @@
     "readingID": 1641017100,
     "sessionID": 1641017100,
     "dangerLevel": 9,
-    "window1": 1575594,
-    "window2": 4348431,
-    "window3": 2085494,
+    "window1": 2568342,
+    "window2": 9835114,
+    "window3": 8956159,
     "publishedAt": "2022-01-01T07:05:31"
   },
   {
@@ -1589,10 +1589,10 @@
     "sensorNumber": 1,
     "readingID": 1641017100,
     "sessionID": 1641017100,
-    "dangerLevel": 2,
-    "window1": 8434778,
-    "window2": 228223,
-    "window3": 7538723,
+    "dangerLevel": 8,
+    "window1": 5660232,
+    "window2": 95373,
+    "window3": 3442313,
     "publishedAt": "2022-01-01T07:05:32"
   },
   {
@@ -1601,10 +1601,10 @@
     "sensorNumber": 2,
     "readingID": 1641017100,
     "sessionID": 1641017100,
-    "dangerLevel": 2,
-    "window1": 2012994,
-    "window2": 4609266,
-    "window3": 9832215,
+    "dangerLevel": 8,
+    "window1": 1786533,
+    "window2": 5225189,
+    "window3": 5943056,
     "publishedAt": "2022-01-01T07:05:33"
   },
   {
@@ -1613,10 +1613,10 @@
     "sensorNumber": 1,
     "readingID": 1641017100,
     "sessionID": 1641017100,
-    "dangerLevel": 9,
-    "window1": 3373039,
-    "window2": 7230271,
-    "window3": 3334525,
+    "dangerLevel": 2,
+    "window1": 2475172,
+    "window2": 5245858,
+    "window3": 6276151,
     "publishedAt": "2022-01-01T07:05:34"
   },
   {
@@ -1625,10 +1625,10 @@
     "sensorNumber": 2,
     "readingID": 1641017100,
     "sessionID": 1641017100,
-    "dangerLevel": 9,
-    "window1": 2071777,
-    "window2": 156227,
-    "window3": 2003617,
+    "dangerLevel": 2,
+    "window1": 4080235,
+    "window2": 8569619,
+    "window3": 9706170,
     "publishedAt": "2022-01-01T07:05:35"
   },
   {
@@ -1637,10 +1637,10 @@
     "sensorNumber": 1,
     "readingID": 1641017130,
     "sessionID": 1641017100,
-    "dangerLevel": 2,
-    "window1": 6782047,
-    "window2": 4785281,
-    "window3": 2934198,
+    "dangerLevel": 5,
+    "window1": 8643076,
+    "window2": 1329062,
+    "window3": 5389400,
     "publishedAt": "2022-01-01T07:05:48"
   },
   {
@@ -1649,10 +1649,10 @@
     "sensorNumber": 2,
     "readingID": 1641017130,
     "sessionID": 1641017100,
-    "dangerLevel": 2,
-    "window1": 9618993,
-    "window2": 1871759,
-    "window3": 2962397,
+    "dangerLevel": 5,
+    "window1": 9814388,
+    "window2": 2825102,
+    "window3": 6278397,
     "publishedAt": "2022-01-01T07:05:49"
   },
   {
@@ -1661,10 +1661,10 @@
     "sensorNumber": 1,
     "readingID": 1641017130,
     "sessionID": 1641017100,
-    "dangerLevel": 8,
-    "window1": 1383060,
-    "window2": 5483393,
-    "window3": 3254848,
+    "dangerLevel": 9,
+    "window1": 1992664,
+    "window2": 459402,
+    "window3": 6092694,
     "publishedAt": "2022-01-01T07:05:50"
   },
   {
@@ -1673,10 +1673,10 @@
     "sensorNumber": 2,
     "readingID": 1641017130,
     "sessionID": 1641017100,
-    "dangerLevel": 8,
-    "window1": 1922128,
-    "window2": 1523479,
-    "window3": 7248244,
+    "dangerLevel": 9,
+    "window1": 6695922,
+    "window2": 59253,
+    "window3": 6869482,
     "publishedAt": "2022-01-01T07:05:51"
   },
   {
@@ -1685,10 +1685,10 @@
     "sensorNumber": 1,
     "readingID": 1641017130,
     "sessionID": 1641017100,
-    "dangerLevel": 5,
-    "window1": 6939444,
-    "window2": 1761457,
-    "window3": 2025819,
+    "dangerLevel": 7,
+    "window1": 8106845,
+    "window2": 2803672,
+    "window3": 7697725,
     "publishedAt": "2022-01-01T07:05:52"
   },
   {
@@ -1697,10 +1697,10 @@
     "sensorNumber": 2,
     "readingID": 1641017130,
     "sessionID": 1641017100,
-    "dangerLevel": 5,
-    "window1": 7134758,
-    "window2": 211031,
-    "window3": 4546867,
+    "dangerLevel": 7,
+    "window1": 4852226,
+    "window2": 1286324,
+    "window3": 3239836,
     "publishedAt": "2022-01-01T07:05:53"
   },
   {
@@ -1709,10 +1709,10 @@
     "sensorNumber": 1,
     "readingID": 1641017130,
     "sessionID": 1641017100,
-    "dangerLevel": 9,
-    "window1": 9261416,
-    "window2": 7937379,
-    "window3": 7062793,
+    "dangerLevel": 2,
+    "window1": 3837232,
+    "window2": 4114354,
+    "window3": 8782430,
     "publishedAt": "2022-01-01T07:05:54"
   },
   {
@@ -1721,10 +1721,10 @@
     "sensorNumber": 2,
     "readingID": 1641017130,
     "sessionID": 1641017100,
-    "dangerLevel": 9,
-    "window1": 9721335,
-    "window2": 8389659,
-    "window3": 2740272,
+    "dangerLevel": 2,
+    "window1": 1702569,
+    "window2": 5468984,
+    "window3": 2639160,
     "publishedAt": "2022-01-01T07:05:55"
   },
   {
@@ -1733,10 +1733,10 @@
     "sensorNumber": 1,
     "readingID": 1641017130,
     "sessionID": 1641017100,
-    "dangerLevel": 7,
-    "window1": 4423751,
-    "window2": 585903,
-    "window3": 5571985,
+    "dangerLevel": 8,
+    "window1": 4628947,
+    "window2": 2627349,
+    "window3": 5163540,
     "publishedAt": "2022-01-01T07:05:53"
   },
   {
@@ -1745,10 +1745,10 @@
     "sensorNumber": 2,
     "readingID": 1641017130,
     "sessionID": 1641017100,
-    "dangerLevel": 7,
-    "window1": 6510434,
-    "window2": 6124495,
-    "window3": 2266847,
+    "dangerLevel": 8,
+    "window1": 7974002,
+    "window2": 9134701,
+    "window3": 3688870,
     "publishedAt": "2022-01-01T07:05:54"
   },
   {
@@ -1757,10 +1757,10 @@
     "sensorNumber": 1,
     "readingID": 1641017130,
     "sessionID": 1641017100,
-    "dangerLevel": 9,
-    "window1": 1093547,
-    "window2": 595049,
-    "window3": 5262065,
+    "dangerLevel": 7,
+    "window1": 5600353,
+    "window2": 7966571,
+    "window3": 702031,
     "publishedAt": "2022-01-01T07:05:55"
   },
   {
@@ -1769,10 +1769,10 @@
     "sensorNumber": 2,
     "readingID": 1641017130,
     "sessionID": 1641017100,
-    "dangerLevel": 9,
-    "window1": 3039686,
-    "window2": 9337694,
-    "window3": 4817326,
+    "dangerLevel": 7,
+    "window1": 8952107,
+    "window2": 2929217,
+    "window3": 7689576,
     "publishedAt": "2022-01-01T07:05:56"
   },
   {
@@ -1782,9 +1782,9 @@
     "readingID": 1641017130,
     "sessionID": 1641017100,
     "dangerLevel": 3,
-    "window1": 6165887,
-    "window2": 6913208,
-    "window3": 3293988,
+    "window1": 8932819,
+    "window2": 6463900,
+    "window3": 4998811,
     "publishedAt": "2022-01-01T07:05:57"
   },
   {
@@ -1794,9 +1794,9 @@
     "readingID": 1641017130,
     "sessionID": 1641017100,
     "dangerLevel": 3,
-    "window1": 2764577,
-    "window2": 9766361,
-    "window3": 3849377,
+    "window1": 7602054,
+    "window2": 8922964,
+    "window3": 6675236,
     "publishedAt": "2022-01-01T07:05:58"
   },
   {
@@ -1805,10 +1805,10 @@
     "sensorNumber": 1,
     "readingID": 1641017130,
     "sessionID": 1641017100,
-    "dangerLevel": 1,
-    "window1": 6107199,
-    "window2": 1712883,
-    "window3": 5078210,
+    "dangerLevel": 6,
+    "window1": 5853851,
+    "window2": 1870732,
+    "window3": 9427743,
     "publishedAt": "2022-01-01T07:05:59"
   },
   {
@@ -1817,10 +1817,10 @@
     "sensorNumber": 2,
     "readingID": 1641017130,
     "sessionID": 1641017100,
-    "dangerLevel": 1,
-    "window1": 3190884,
-    "window2": 2163130,
-    "window3": 6006126,
+    "dangerLevel": 6,
+    "window1": 5821310,
+    "window2": 5438158,
+    "window3": 9112521,
     "publishedAt": "2022-01-01T07:06:00"
   },
   {
@@ -1829,10 +1829,10 @@
     "sensorNumber": 1,
     "readingID": 1641017130,
     "sessionID": 1641017100,
-    "dangerLevel": 4,
-    "window1": 7155145,
-    "window2": 4833168,
-    "window3": 7108362,
+    "dangerLevel": 1,
+    "window1": 8819531,
+    "window2": 9003067,
+    "window3": 9658848,
     "publishedAt": "2022-01-01T07:05:58"
   },
   {
@@ -1841,10 +1841,10 @@
     "sensorNumber": 2,
     "readingID": 1641017130,
     "sessionID": 1641017100,
-    "dangerLevel": 4,
-    "window1": 3214068,
-    "window2": 3548402,
-    "window3": 5004532,
+    "dangerLevel": 1,
+    "window1": 5640235,
+    "window2": 5348305,
+    "window3": 3408841,
     "publishedAt": "2022-01-01T07:05:59"
   },
   {
@@ -1853,10 +1853,10 @@
     "sensorNumber": 1,
     "readingID": 1641017130,
     "sessionID": 1641017100,
-    "dangerLevel": 9,
-    "window1": 4934211,
-    "window2": 5824594,
-    "window3": 4735286,
+    "dangerLevel": 3,
+    "window1": 9081292,
+    "window2": 923394,
+    "window3": 4736206,
     "publishedAt": "2022-01-01T07:06:00"
   },
   {
@@ -1865,10 +1865,10 @@
     "sensorNumber": 2,
     "readingID": 1641017130,
     "sessionID": 1641017100,
-    "dangerLevel": 9,
-    "window1": 8872431,
-    "window2": 539054,
-    "window3": 1178039,
+    "dangerLevel": 3,
+    "window1": 5177855,
+    "window2": 5105941,
+    "window3": 5710684,
     "publishedAt": "2022-01-01T07:06:01"
   },
   {
@@ -1877,10 +1877,10 @@
     "sensorNumber": 1,
     "readingID": 1641017130,
     "sessionID": 1641017100,
-    "dangerLevel": 1,
-    "window1": 8234935,
-    "window2": 8451817,
-    "window3": 4307481,
+    "dangerLevel": 8,
+    "window1": 8586737,
+    "window2": 2747361,
+    "window3": 3080422,
     "publishedAt": "2022-01-01T07:06:02"
   },
   {
@@ -1889,10 +1889,10 @@
     "sensorNumber": 2,
     "readingID": 1641017130,
     "sessionID": 1641017100,
-    "dangerLevel": 1,
-    "window1": 2973411,
-    "window2": 1520179,
-    "window3": 2707954,
+    "dangerLevel": 8,
+    "window1": 5006758,
+    "window2": 4785994,
+    "window3": 1433090,
     "publishedAt": "2022-01-01T07:06:03"
   },
   {
@@ -1901,10 +1901,10 @@
     "sensorNumber": 1,
     "readingID": 1641017130,
     "sessionID": 1641017100,
-    "dangerLevel": 9,
-    "window1": 1926829,
-    "window2": 7016625,
-    "window3": 6536693,
+    "dangerLevel": 1,
+    "window1": 4565494,
+    "window2": 2286104,
+    "window3": 4228788,
     "publishedAt": "2022-01-01T07:06:04"
   },
   {
@@ -1913,10 +1913,10 @@
     "sensorNumber": 2,
     "readingID": 1641017130,
     "sessionID": 1641017100,
-    "dangerLevel": 9,
-    "window1": 9213053,
-    "window2": 3139868,
-    "window3": 2711639,
+    "dangerLevel": 1,
+    "window1": 4398932,
+    "window2": 6864895,
+    "window3": 4684156,
     "publishedAt": "2022-01-01T07:06:05"
   },
   {
@@ -1925,10 +1925,10 @@
     "sensorNumber": 1,
     "readingID": 1641017160,
     "sessionID": 1641017100,
-    "dangerLevel": 1,
-    "window1": 7142294,
-    "window2": 4710020,
-    "window3": 2866464,
+    "dangerLevel": 9,
+    "window1": 3409793,
+    "window2": 991027,
+    "window3": 6591439,
     "publishedAt": "2022-01-01T07:06:18"
   },
   {
@@ -1937,10 +1937,10 @@
     "sensorNumber": 2,
     "readingID": 1641017160,
     "sessionID": 1641017100,
-    "dangerLevel": 1,
-    "window1": 5677287,
-    "window2": 4441490,
-    "window3": 733608,
+    "dangerLevel": 9,
+    "window1": 5170944,
+    "window2": 214672,
+    "window3": 1047130,
     "publishedAt": "2022-01-01T07:06:19"
   },
   {
@@ -1949,10 +1949,10 @@
     "sensorNumber": 1,
     "readingID": 1641017160,
     "sessionID": 1641017100,
-    "dangerLevel": 5,
-    "window1": 6561966,
-    "window2": 6651207,
-    "window3": 4593080,
+    "dangerLevel": 3,
+    "window1": 3734469,
+    "window2": 4658420,
+    "window3": 1917353,
     "publishedAt": "2022-01-01T07:06:20"
   },
   {
@@ -1961,10 +1961,10 @@
     "sensorNumber": 2,
     "readingID": 1641017160,
     "sessionID": 1641017100,
-    "dangerLevel": 5,
-    "window1": 1531138,
-    "window2": 7675916,
-    "window3": 5811624,
+    "dangerLevel": 3,
+    "window1": 1004422,
+    "window2": 6071414,
+    "window3": 6517348,
     "publishedAt": "2022-01-01T07:06:21"
   },
   {
@@ -1973,10 +1973,10 @@
     "sensorNumber": 1,
     "readingID": 1641017160,
     "sessionID": 1641017100,
-    "dangerLevel": 7,
-    "window1": 3562428,
-    "window2": 4922540,
-    "window3": 4825136,
+    "dangerLevel": 3,
+    "window1": 4883892,
+    "window2": 7252325,
+    "window3": 9705032,
     "publishedAt": "2022-01-01T07:06:22"
   },
   {
@@ -1985,10 +1985,10 @@
     "sensorNumber": 2,
     "readingID": 1641017160,
     "sessionID": 1641017100,
-    "dangerLevel": 7,
-    "window1": 9548447,
-    "window2": 604218,
-    "window3": 6025314,
+    "dangerLevel": 3,
+    "window1": 921354,
+    "window2": 6204241,
+    "window3": 4001524,
     "publishedAt": "2022-01-01T07:06:23"
   },
   {
@@ -1997,10 +1997,10 @@
     "sensorNumber": 1,
     "readingID": 1641017160,
     "sessionID": 1641017100,
-    "dangerLevel": 2,
-    "window1": 4121818,
-    "window2": 6882181,
-    "window3": 4929013,
+    "dangerLevel": 3,
+    "window1": 756496,
+    "window2": 3310873,
+    "window3": 8247994,
     "publishedAt": "2022-01-01T07:06:24"
   },
   {
@@ -2009,10 +2009,10 @@
     "sensorNumber": 2,
     "readingID": 1641017160,
     "sessionID": 1641017100,
-    "dangerLevel": 2,
-    "window1": 8046875,
-    "window2": 6599126,
-    "window3": 3898590,
+    "dangerLevel": 3,
+    "window1": 8553610,
+    "window2": 4802132,
+    "window3": 936550,
     "publishedAt": "2022-01-01T07:06:25"
   },
   {
@@ -2021,10 +2021,10 @@
     "sensorNumber": 1,
     "readingID": 1641017160,
     "sessionID": 1641017100,
-    "dangerLevel": 9,
-    "window1": 2747540,
-    "window2": 9362964,
-    "window3": 8766365,
+    "dangerLevel": 4,
+    "window1": 1951515,
+    "window2": 1658310,
+    "window3": 3775903,
     "publishedAt": "2022-01-01T07:06:23"
   },
   {
@@ -2033,10 +2033,10 @@
     "sensorNumber": 2,
     "readingID": 1641017160,
     "sessionID": 1641017100,
-    "dangerLevel": 9,
-    "window1": 8223907,
-    "window2": 9996970,
-    "window3": 976678,
+    "dangerLevel": 4,
+    "window1": 1508391,
+    "window2": 1504753,
+    "window3": 2717517,
     "publishedAt": "2022-01-01T07:06:24"
   },
   {
@@ -2045,10 +2045,10 @@
     "sensorNumber": 1,
     "readingID": 1641017160,
     "sessionID": 1641017100,
-    "dangerLevel": 0,
-    "window1": 2297652,
-    "window2": 6346128,
-    "window3": 4825754,
+    "dangerLevel": 8,
+    "window1": 706833,
+    "window2": 4954875,
+    "window3": 2369893,
     "publishedAt": "2022-01-01T07:06:25"
   },
   {
@@ -2057,10 +2057,10 @@
     "sensorNumber": 2,
     "readingID": 1641017160,
     "sessionID": 1641017100,
-    "dangerLevel": 0,
-    "window1": 9123645,
-    "window2": 8207218,
-    "window3": 1950168,
+    "dangerLevel": 8,
+    "window1": 3682701,
+    "window2": 7502469,
+    "window3": 9048009,
     "publishedAt": "2022-01-01T07:06:26"
   },
   {
@@ -2070,9 +2070,9 @@
     "readingID": 1641017160,
     "sessionID": 1641017100,
     "dangerLevel": 9,
-    "window1": 6818550,
-    "window2": 6612420,
-    "window3": 6245156,
+    "window1": 8367934,
+    "window2": 4792882,
+    "window3": 6046765,
     "publishedAt": "2022-01-01T07:06:27"
   },
   {
@@ -2082,9 +2082,9 @@
     "readingID": 1641017160,
     "sessionID": 1641017100,
     "dangerLevel": 9,
-    "window1": 1274628,
-    "window2": 1279155,
-    "window3": 4355668,
+    "window1": 8367629,
+    "window2": 3882296,
+    "window3": 4097725,
     "publishedAt": "2022-01-01T07:06:28"
   },
   {
@@ -2093,10 +2093,10 @@
     "sensorNumber": 1,
     "readingID": 1641017160,
     "sessionID": 1641017100,
-    "dangerLevel": 5,
-    "window1": 6070867,
-    "window2": 479634,
-    "window3": 1848451,
+    "dangerLevel": 7,
+    "window1": 5174446,
+    "window2": 2703852,
+    "window3": 7455176,
     "publishedAt": "2022-01-01T07:06:29"
   },
   {
@@ -2105,10 +2105,10 @@
     "sensorNumber": 2,
     "readingID": 1641017160,
     "sessionID": 1641017100,
-    "dangerLevel": 5,
-    "window1": 7010603,
-    "window2": 1300174,
-    "window3": 1205525,
+    "dangerLevel": 7,
+    "window1": 496089,
+    "window2": 3784949,
+    "window3": 5791017,
     "publishedAt": "2022-01-01T07:06:30"
   },
   {
@@ -2117,10 +2117,10 @@
     "sensorNumber": 1,
     "readingID": 1641017160,
     "sessionID": 1641017100,
-    "dangerLevel": 0,
-    "window1": 9281678,
-    "window2": 2234446,
-    "window3": 7746045,
+    "dangerLevel": 4,
+    "window1": 1142383,
+    "window2": 5437522,
+    "window3": 2430969,
     "publishedAt": "2022-01-01T07:06:28"
   },
   {
@@ -2129,10 +2129,10 @@
     "sensorNumber": 2,
     "readingID": 1641017160,
     "sessionID": 1641017100,
-    "dangerLevel": 0,
-    "window1": 5766379,
-    "window2": 6040794,
-    "window3": 2786881,
+    "dangerLevel": 4,
+    "window1": 3061773,
+    "window2": 9800674,
+    "window3": 7709127,
     "publishedAt": "2022-01-01T07:06:29"
   },
   {
@@ -2141,10 +2141,10 @@
     "sensorNumber": 1,
     "readingID": 1641017160,
     "sessionID": 1641017100,
-    "dangerLevel": 2,
-    "window1": 1450864,
-    "window2": 3615891,
-    "window3": 4881409,
+    "dangerLevel": 7,
+    "window1": 8115215,
+    "window2": 3482331,
+    "window3": 1993350,
     "publishedAt": "2022-01-01T07:06:30"
   },
   {
@@ -2153,10 +2153,10 @@
     "sensorNumber": 2,
     "readingID": 1641017160,
     "sessionID": 1641017100,
-    "dangerLevel": 2,
-    "window1": 6980102,
-    "window2": 4726694,
-    "window3": 1784749,
+    "dangerLevel": 7,
+    "window1": 2101187,
+    "window2": 8474293,
+    "window3": 8985460,
     "publishedAt": "2022-01-01T07:06:31"
   },
   {
@@ -2166,9 +2166,9 @@
     "readingID": 1641017160,
     "sessionID": 1641017100,
     "dangerLevel": 8,
-    "window1": 4004199,
-    "window2": 579757,
-    "window3": 5082678,
+    "window1": 6448086,
+    "window2": 95874,
+    "window3": 73280,
     "publishedAt": "2022-01-01T07:06:32"
   },
   {
@@ -2178,9 +2178,9 @@
     "readingID": 1641017160,
     "sessionID": 1641017100,
     "dangerLevel": 8,
-    "window1": 8384630,
-    "window2": 52078,
-    "window3": 8630002,
+    "window1": 1733994,
+    "window2": 1629285,
+    "window3": 2924352,
     "publishedAt": "2022-01-01T07:06:33"
   },
   {
@@ -2189,10 +2189,10 @@
     "sensorNumber": 1,
     "readingID": 1641017160,
     "sessionID": 1641017100,
-    "dangerLevel": 3,
-    "window1": 5331205,
-    "window2": 7021942,
-    "window3": 6988480,
+    "dangerLevel": 5,
+    "window1": 5496703,
+    "window2": 8206271,
+    "window3": 5785444,
     "publishedAt": "2022-01-01T07:06:34"
   },
   {
@@ -2201,10 +2201,10 @@
     "sensorNumber": 2,
     "readingID": 1641017160,
     "sessionID": 1641017100,
-    "dangerLevel": 3,
-    "window1": 3034156,
-    "window2": 3615451,
-    "window3": 6042781,
+    "dangerLevel": 5,
+    "window1": 9562134,
+    "window2": 2317271,
+    "window3": 5723040,
     "publishedAt": "2022-01-01T07:06:35"
   },
   {
@@ -2213,10 +2213,10 @@
     "sensorNumber": 1,
     "readingID": 1641017190,
     "sessionID": 1641017100,
-    "dangerLevel": 5,
-    "window1": 6366121,
-    "window2": 9754444,
-    "window3": 5467982,
+    "dangerLevel": 0,
+    "window1": 8059644,
+    "window2": 2407859,
+    "window3": 9722433,
     "publishedAt": "2022-01-01T07:06:48"
   },
   {
@@ -2225,10 +2225,10 @@
     "sensorNumber": 2,
     "readingID": 1641017190,
     "sessionID": 1641017100,
-    "dangerLevel": 5,
-    "window1": 3087543,
-    "window2": 9659602,
-    "window3": 5745469,
+    "dangerLevel": 0,
+    "window1": 3079971,
+    "window2": 8984859,
+    "window3": 9422762,
     "publishedAt": "2022-01-01T07:06:49"
   },
   {
@@ -2237,10 +2237,10 @@
     "sensorNumber": 1,
     "readingID": 1641017190,
     "sessionID": 1641017100,
-    "dangerLevel": 0,
-    "window1": 8242450,
-    "window2": 4715109,
-    "window3": 6102362,
+    "dangerLevel": 9,
+    "window1": 35825,
+    "window2": 54389,
+    "window3": 3391684,
     "publishedAt": "2022-01-01T07:06:50"
   },
   {
@@ -2249,10 +2249,10 @@
     "sensorNumber": 2,
     "readingID": 1641017190,
     "sessionID": 1641017100,
-    "dangerLevel": 0,
-    "window1": 8430435,
-    "window2": 7502268,
-    "window3": 4569270,
+    "dangerLevel": 9,
+    "window1": 7764560,
+    "window2": 9786795,
+    "window3": 605202,
     "publishedAt": "2022-01-01T07:06:51"
   },
   {
@@ -2261,10 +2261,10 @@
     "sensorNumber": 1,
     "readingID": 1641017190,
     "sessionID": 1641017100,
-    "dangerLevel": 1,
-    "window1": 1644561,
-    "window2": 7235705,
-    "window3": 7086589,
+    "dangerLevel": 3,
+    "window1": 7807893,
+    "window2": 9464067,
+    "window3": 3868247,
     "publishedAt": "2022-01-01T07:06:52"
   },
   {
@@ -2273,10 +2273,10 @@
     "sensorNumber": 2,
     "readingID": 1641017190,
     "sessionID": 1641017100,
-    "dangerLevel": 1,
-    "window1": 5060176,
-    "window2": 4154013,
-    "window3": 8143389,
+    "dangerLevel": 3,
+    "window1": 3108676,
+    "window2": 6878892,
+    "window3": 218641,
     "publishedAt": "2022-01-01T07:06:53"
   },
   {
@@ -2285,10 +2285,10 @@
     "sensorNumber": 1,
     "readingID": 1641017190,
     "sessionID": 1641017100,
-    "dangerLevel": 3,
-    "window1": 1921417,
-    "window2": 6382328,
-    "window3": 7418434,
+    "dangerLevel": 2,
+    "window1": 2250872,
+    "window2": 2952446,
+    "window3": 4398096,
     "publishedAt": "2022-01-01T07:06:54"
   },
   {
@@ -2297,10 +2297,10 @@
     "sensorNumber": 2,
     "readingID": 1641017190,
     "sessionID": 1641017100,
-    "dangerLevel": 3,
-    "window1": 8925630,
-    "window2": 6253237,
-    "window3": 6029447,
+    "dangerLevel": 2,
+    "window1": 7243633,
+    "window2": 5257407,
+    "window3": 1690144,
     "publishedAt": "2022-01-01T07:06:55"
   },
   {
@@ -2309,10 +2309,10 @@
     "sensorNumber": 1,
     "readingID": 1641017190,
     "sessionID": 1641017100,
-    "dangerLevel": 4,
-    "window1": 4269375,
-    "window2": 8064389,
-    "window3": 191763,
+    "dangerLevel": 8,
+    "window1": 3544546,
+    "window2": 1936602,
+    "window3": 5379140,
     "publishedAt": "2022-01-01T07:06:53"
   },
   {
@@ -2321,10 +2321,10 @@
     "sensorNumber": 2,
     "readingID": 1641017190,
     "sessionID": 1641017100,
-    "dangerLevel": 4,
-    "window1": 348698,
-    "window2": 2055890,
-    "window3": 1450791,
+    "dangerLevel": 8,
+    "window1": 7761931,
+    "window2": 1486522,
+    "window3": 3566894,
     "publishedAt": "2022-01-01T07:06:54"
   },
   {
@@ -2333,10 +2333,10 @@
     "sensorNumber": 1,
     "readingID": 1641017190,
     "sessionID": 1641017100,
-    "dangerLevel": 8,
-    "window1": 5034617,
-    "window2": 6953972,
-    "window3": 4194186,
+    "dangerLevel": 6,
+    "window1": 3104191,
+    "window2": 9434629,
+    "window3": 3636890,
     "publishedAt": "2022-01-01T07:06:55"
   },
   {
@@ -2345,10 +2345,10 @@
     "sensorNumber": 2,
     "readingID": 1641017190,
     "sessionID": 1641017100,
-    "dangerLevel": 8,
-    "window1": 52947,
-    "window2": 3789320,
-    "window3": 2349327,
+    "dangerLevel": 6,
+    "window1": 4437813,
+    "window2": 284175,
+    "window3": 5924069,
     "publishedAt": "2022-01-01T07:06:56"
   },
   {
@@ -2357,10 +2357,10 @@
     "sensorNumber": 1,
     "readingID": 1641017190,
     "sessionID": 1641017100,
-    "dangerLevel": 2,
-    "window1": 4045732,
-    "window2": 3030399,
-    "window3": 9940761,
+    "dangerLevel": 4,
+    "window1": 6730254,
+    "window2": 6046605,
+    "window3": 7449073,
     "publishedAt": "2022-01-01T07:06:57"
   },
   {
@@ -2369,10 +2369,10 @@
     "sensorNumber": 2,
     "readingID": 1641017190,
     "sessionID": 1641017100,
-    "dangerLevel": 2,
-    "window1": 4147253,
-    "window2": 4022865,
-    "window3": 2269218,
+    "dangerLevel": 4,
+    "window1": 2222756,
+    "window2": 2944961,
+    "window3": 7551472,
     "publishedAt": "2022-01-01T07:06:58"
   },
   {
@@ -2381,10 +2381,10 @@
     "sensorNumber": 1,
     "readingID": 1641017190,
     "sessionID": 1641017100,
-    "dangerLevel": 7,
-    "window1": 6230425,
-    "window2": 5665107,
-    "window3": 4084725,
+    "dangerLevel": 0,
+    "window1": 9002351,
+    "window2": 137747,
+    "window3": 9184747,
     "publishedAt": "2022-01-01T07:06:59"
   },
   {
@@ -2393,10 +2393,10 @@
     "sensorNumber": 2,
     "readingID": 1641017190,
     "sessionID": 1641017100,
-    "dangerLevel": 7,
-    "window1": 2705508,
-    "window2": 2371552,
-    "window3": 3043388,
+    "dangerLevel": 0,
+    "window1": 623304,
+    "window2": 9244588,
+    "window3": 9504131,
     "publishedAt": "2022-01-01T07:07:00"
   },
   {
@@ -2406,9 +2406,9 @@
     "readingID": 1641017190,
     "sessionID": 1641017100,
     "dangerLevel": 5,
-    "window1": 7123843,
-    "window2": 9185626,
-    "window3": 5630865,
+    "window1": 817762,
+    "window2": 6834594,
+    "window3": 3663164,
     "publishedAt": "2022-01-01T07:06:58"
   },
   {
@@ -2418,9 +2418,9 @@
     "readingID": 1641017190,
     "sessionID": 1641017100,
     "dangerLevel": 5,
-    "window1": 6763742,
-    "window2": 1792879,
-    "window3": 8845384,
+    "window1": 2496261,
+    "window2": 7901270,
+    "window3": 6917869,
     "publishedAt": "2022-01-01T07:06:59"
   },
   {
@@ -2429,10 +2429,10 @@
     "sensorNumber": 1,
     "readingID": 1641017190,
     "sessionID": 1641017100,
-    "dangerLevel": 9,
-    "window1": 9271686,
-    "window2": 3703585,
-    "window3": 4913811,
+    "dangerLevel": 8,
+    "window1": 6147790,
+    "window2": 8583697,
+    "window3": 7100004,
     "publishedAt": "2022-01-01T07:07:00"
   },
   {
@@ -2441,10 +2441,10 @@
     "sensorNumber": 2,
     "readingID": 1641017190,
     "sessionID": 1641017100,
-    "dangerLevel": 9,
-    "window1": 2005063,
-    "window2": 3754372,
-    "window3": 6425204,
+    "dangerLevel": 8,
+    "window1": 1924495,
+    "window2": 7122320,
+    "window3": 8760753,
     "publishedAt": "2022-01-01T07:07:01"
   },
   {
@@ -2453,10 +2453,10 @@
     "sensorNumber": 1,
     "readingID": 1641017190,
     "sessionID": 1641017100,
-    "dangerLevel": 1,
-    "window1": 2659634,
-    "window2": 5133725,
-    "window3": 6640507,
+    "dangerLevel": 5,
+    "window1": 403592,
+    "window2": 6604592,
+    "window3": 5249279,
     "publishedAt": "2022-01-01T07:07:02"
   },
   {
@@ -2465,10 +2465,10 @@
     "sensorNumber": 2,
     "readingID": 1641017190,
     "sessionID": 1641017100,
-    "dangerLevel": 1,
-    "window1": 2812639,
-    "window2": 4876529,
-    "window3": 1812029,
+    "dangerLevel": 5,
+    "window1": 1453802,
+    "window2": 6379339,
+    "window3": 4629762,
     "publishedAt": "2022-01-01T07:07:03"
   },
   {
@@ -2477,10 +2477,10 @@
     "sensorNumber": 1,
     "readingID": 1641017190,
     "sessionID": 1641017100,
-    "dangerLevel": 3,
-    "window1": 3326267,
-    "window2": 6035657,
-    "window3": 6038229,
+    "dangerLevel": 9,
+    "window1": 2493857,
+    "window2": 2153712,
+    "window3": 5165872,
     "publishedAt": "2022-01-01T07:07:04"
   },
   {
@@ -2489,10 +2489,10 @@
     "sensorNumber": 2,
     "readingID": 1641017190,
     "sessionID": 1641017100,
-    "dangerLevel": 3,
-    "window1": 4032303,
-    "window2": 4528414,
-    "window3": 1240242,
+    "dangerLevel": 9,
+    "window1": 6719058,
+    "window2": 7945948,
+    "window3": 7602674,
     "publishedAt": "2022-01-01T07:07:05"
   }
 ]

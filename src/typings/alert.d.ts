@@ -3,7 +3,6 @@ export type AlertInfo = {
   sessionID: number;
   readingID: number;
   canID: number;
-  sensorNumber: number;
   alertID: string;
   raisedAt: number;
 };

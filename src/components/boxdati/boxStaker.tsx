@@ -21,6 +21,7 @@ import CommandType from '../../utils/command';
 import StoricoSessioni from './specials/storicoSessioni';
 import Reading from '../../typings/reading';
 import Loader from '../loaders/loader';
+import { AlertInfo } from '../../typings/alert';
 
 type StatoSensoreProps = {
   statoSensore: NodeState;
@@ -162,9 +163,18 @@ const BoxStaker: FC<BoxStakerProps> = ({ node, setStakerClicked }) => {
   const [dataSingoloSensore, setDataSingoloSensore] = useState<number>(1);
   const [readings, setReadings] = useState<Reading[]>([]);
   const [sessionIDList, setSessionIDList] = useState<number[]>([]);
+  const [alertInfo, setAlertInfo] = useState<AlertInfo | undefined>(undefined);
 
   const userSharedData = useContext(UserContext);
   const share = useContext(ShareContext);
+
+  // Fetching info alert
+  if (node.state === 'alert-ready' || node.state === 'alert-running') {
+    userSharedData
+      .getAlertInfo(node.unhandledAlertIDs[0])
+      .then((info) => setAlertInfo(info));
+  }
+  console.log(alertInfo);
 
   const getData = async (id: number) => {
     const readings = await userSharedData.getSession(node.nodeID, id);

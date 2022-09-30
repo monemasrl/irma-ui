@@ -248,7 +248,13 @@ function UserContextProvider({ children }: Props) {
     if (!accessToken) return undefined;
 
     if (MOCK_DATA) {
-      throw 'Not implemented yet';
+      const MockAlertInfo = await (
+        await import('../mock/mock_alerts.json')
+      ).default;
+
+      const infos = MockAlertInfo as AlertInfo[];
+
+      return infos.find((item) => item.alertID === alertID);
     }
 
     let info: AlertInfo | undefined = undefined;
