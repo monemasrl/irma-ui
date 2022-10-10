@@ -168,19 +168,21 @@ const BoxStaker: FC<BoxStakerProps> = ({ node, setStakerClicked }) => {
   const userSharedData = useContext(UserContext);
   const share = useContext(ShareContext);
 
-  // Fetching info alert
-  if (node.state === 'alert-ready' || node.state === 'alert-running') {
-    userSharedData
-      .getAlertInfo(node.unhandledAlertIDs[0])
-      .then((info) => setAlertInfo(info));
-  }
-  console.log(alertInfo);
+  console.log('alertInfo', alertInfo);
 
   const getData = async (id: number) => {
     const readings = await userSharedData.getSession(node.nodeID, id);
     setReadings(readings);
+
     const IDs = await userSharedData.getSessionIDs(node.nodeID);
     setSessionIDList(IDs);
+
+    if (node.state === 'alert-ready' || node.state === 'alert-running') {
+      const alertData = await userSharedData.getAlertInfo(
+        node.unhandledAlertIDs[0]
+      );
+      setAlertInfo(alertData);
+    }
   };
 
   useEffect(() => {
