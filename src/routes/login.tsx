@@ -40,7 +40,11 @@ export default function Login() {
         {errorMessage}
       </div>
       <div className="login-panel">
-        <h1 className="login-title">Login Page!</h1>
+        <img
+          src="/images/logo.svg"
+          alt="logo"
+        />
+        <h1 className="login-title">User Login</h1>
         <div className="input-div">
           <label>Email</label>
           <input onChange={handleEmailChange} />
