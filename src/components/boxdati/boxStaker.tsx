@@ -272,6 +272,7 @@ const BoxStaker: FC<BoxStakerProps> = ({ node, setStakerClicked }) => {
               dataSingoloSensore={dataSingoloSensore}
               setDataSingoloSensore={setDataSingoloSensore}
               datiLettureUI={datiLetture(readings)}
+              canId={alertInfo?.canID}
             />
           ) : (
             <Loader

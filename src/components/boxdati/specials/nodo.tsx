@@ -9,6 +9,7 @@ interface Props {
   datiLettureUI: Rilevatore[];
   dataSingoloSensore: number;
   setDataSingoloSensore: Dispatch<SetStateAction<number>>;
+  canId?: number;
 }
 
 const Nodo: FC<Props> = ({
@@ -16,7 +17,10 @@ const Nodo: FC<Props> = ({
   datiLettureUI,
   dataSingoloSensore,
   setDataSingoloSensore,
+  canId,
 }) => {
+  console.log(canId);
+
   return (
     <div
       className={`${style.sezioneSensori} ${
@@ -36,6 +40,7 @@ const Nodo: FC<Props> = ({
                 rilevatore={item}
                 setDataSingoloSensore={setDataSingoloSensore}
                 dataSingoloSensore={dataSingoloSensore}
+                canId={canId}
               />
             );
           })}

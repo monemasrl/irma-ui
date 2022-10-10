@@ -8,6 +8,7 @@ type Props = {
   rilevatore: Rilevatore;
   setDataSingoloSensore: Dispatch<SetStateAction<number>>;
   dataSingoloSensore: number;
+  canId?: number;
 };
 
 const BoxRilevatore: FC<Props> = ({
@@ -15,9 +16,12 @@ const BoxRilevatore: FC<Props> = ({
   rilevatore,
   dataSingoloSensore,
   setDataSingoloSensore,
+  canId,
 }) => {
-  function alertColor(level: number) {
-    if (level > 6) {
+  console.log(canId, keyId);
+
+  function alertColor() {
+    if (canId === keyId) {
       return 'alert';
     }
     return '';
@@ -26,13 +30,9 @@ const BoxRilevatore: FC<Props> = ({
   return (
     <div
       className={`${style.boxRilevatore} 
-      ${
-        style[
-          alertColor(
-            rilevatore.sensore1[rilevatore.sensore1.length - 1].dangerLevel
-          )
-        ]
-      } ${dataSingoloSensore === keyId ? style['open'] : ''}`}
+      ${style[alertColor()]} ${
+        dataSingoloSensore === keyId ? style['open'] : ''
+      }`}
       key={keyId}
       onClick={() => setDataSingoloSensore(rilevatore.id)}
     >
