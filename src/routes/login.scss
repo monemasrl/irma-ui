@@ -22,12 +22,13 @@
   min-height: 500px;
   min-width: 500px;
   img {
-    margin: 1rem 4rem 0 4rem;
+    margin: 1rem auto;
+    max-width: 250px;
   }
 }
 
 .login-title {
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-bottom: 0;
   margin-inline: auto;
   font-family: 'Open Sans Bold';
