@@ -1,8 +1,9 @@
 import React, { FC, useState } from 'react';
 import { Rilevatore } from '../../../../typings/ui';
+import { parseUnixTimestamp } from '../../../../utils/parseDate';
 import Graph from './graph';
 import style from './graphs.module.scss';
-
+import Timer from '../timer';
 type Props = {
   dataSingoloSensore: number;
   datiLettureUI: Rilevatore[];
@@ -16,7 +17,16 @@ const WrapperGraph: FC<Props> = ({ dataSingoloSensore, datiLettureUI }) => {
 
   return (
     <div className={style.wrapperGraph}>
-      <h3> Rilevatore {dataSingoloSensore}</h3>
+      <header>
+        <div className={style.datiNomi}>
+          <h3> Rilevatore {dataSingoloSensore}</h3>
+          <h4>
+            Sessione:{' '}
+            {parseUnixTimestamp(datiLettureUI[0].sensore1[0].sessionID)}
+          </h4>
+        </div>
+        <Timer dateTimer={datiLettureUI[0].sensore1[0].sessionID} />
+      </header>
       <nav>
         <ul>
           <li

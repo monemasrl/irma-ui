@@ -5,11 +5,21 @@
   flex: 1;
   height: 100%;
   margin-left: 1rem;
-
-  h3 {
-    margin: 0;
-    text-transform: uppercase;
-    font-weight: bold;
+  header {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    justify-content: flex-start;
+    .datiNomi {
+      h3 {
+        margin: 0;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+      h4 {
+        margin: 0.3rem 0 0 0;
+      }
+    }
   }
 
   nav {
