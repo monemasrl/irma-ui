@@ -6,18 +6,18 @@ type props = {
 };
 const Timer: FC<props> = ({ dateTimer }) => {
   const [timer, setTimer] = useState<Date>();
+  const [seconds, setSeconds] = useState<number>(0);
+  const dateNow = new Date().valueOf();
+  setInterval(() => {
+    setSeconds((prev) => prev + 1);
+  }, 1000);
 
-  useEffect(() => {
-    if (dateTimer) {
-      const dateNow = new Date().valueOf();
-      setInterval(() => {
-        const diff = new Date((Math.floor(dateNow / 1000) - dateTimer) * 1000);
-        setTimer(diff);
-      }, 4000);
-    }
-  }, []);
-  console.log(timer);
-
+  if (dateTimer) {
+    const diff = new Date((Math.floor(dateNow / 1000) - dateTimer) * 1000);
+    useEffect(() => {
+      setTimer(diff);
+    }, [seconds]);
+  }
   return (
     <div className={style.timer}>
       {timer?.getHours()}:{timer?.getMinutes()}:{timer?.getSeconds()}
