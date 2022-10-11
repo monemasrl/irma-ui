@@ -4,12 +4,18 @@ import { parseUnixTimestamp } from '../../../../utils/parseDate';
 import Graph from './graph';
 import style from './graphs.module.scss';
 import Timer from '../timer';
+import { AlertInfo } from '../../../../typings/alert';
 type Props = {
   dataSingoloSensore: number;
   datiLettureUI: Rilevatore[];
+  alertInfo?: AlertInfo;
 };
 
-const WrapperGraph: FC<Props> = ({ dataSingoloSensore, datiLettureUI }) => {
+const WrapperGraph: FC<Props> = ({
+  dataSingoloSensore,
+  datiLettureUI,
+  alertInfo,
+}) => {
   const datiSensore = datiLettureUI?.filter((item) => {
     return item.id === dataSingoloSensore;
   });
@@ -25,7 +31,9 @@ const WrapperGraph: FC<Props> = ({ dataSingoloSensore, datiLettureUI }) => {
             {parseUnixTimestamp(datiLettureUI[0].sensore1[0].sessionID)}
           </h4>
         </div>
-        <Timer dateTimer={datiLettureUI[0].sensore1[0].sessionID} />
+        {alertInfo != undefined && (
+          <Timer dateTimer={datiLettureUI[0].sensore1[0].sessionID} />
+        )}
       </header>
       <nav>
         <ul>

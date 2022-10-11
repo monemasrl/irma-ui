@@ -20,7 +20,20 @@ const Timer: FC<props> = ({ dateTimer }) => {
   }
   return (
     <div className={style.timer}>
-      {timer?.getHours()}:{timer?.getMinutes()}:{timer?.getSeconds()}
+      <span>
+        <sup>H</sup>
+        {String(timer?.getHours()).padStart(2, '0')}
+      </span>
+      :
+      <span>
+        <sup>M</sup>
+        {String(timer?.getMinutes()).padStart(2, '0')}
+      </span>
+      :
+      <span>
+        <sup>S</sup>
+        {String(timer?.getSeconds()).padStart(2, '0')}
+      </span>
     </div>
   );
 };

@@ -295,6 +295,7 @@ const BoxStaker: FC<BoxStakerProps> = ({ node, setStakerClicked }) => {
           <WrapperGraph
             dataSingoloSensore={dataSingoloSensore}
             datiLettureUI={datiLetture(readings)}
+            alertInfo={alertInfo}
           />
         ) : (
           <Loader
