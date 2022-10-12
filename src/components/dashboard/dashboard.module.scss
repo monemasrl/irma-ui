@@ -1,29 +1,36 @@
-.dashboard{
-    display: flex;
-    flex-wrap: wrap;
-    min-height: 500px;
-    width: 552px;
-    position: relative;
-    box-shadow: 0 0 3px #b4b4b4;
-    border-radius: 30px;
-    padding: 1rem;
-    background-color: #efefef;
-    background:linear-gradient(180deg,rgba(239,239,239) 10%, rgb(247, 247, 247) 100%);
-    transition: all ease-in-out .3s;
+.dashboard {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 500px;
+  width: 552px;
+  position: relative;
+  box-shadow: 0 0 3px #b4b4b4;
+  border-radius: 30px;
+  padding: 1rem;
+  background-color: #efefef;
+  background: linear-gradient(
+    180deg,
+    rgba(239, 239, 239) 10%,
+    rgb(247, 247, 247) 100%
+  );
+  transition: all ease-in-out 0.3s;
+  align-content: baseline;
+  @media screen and (max-width: 600px) {
+    width: 100%;
+  }
 }
-.dashboard.lista{
-flex-direction: column;
+.dashboard.lista {
+  flex-direction: column;
 }
 .switcherList {
-    position: absolute;
-    top: -39px;
-    left: 30px;
-    background: #f1f0f0;
-    z-index: -1;
-    padding: 10px 10px 30px 10px;
-    font-size: 19px;
-    
+  position: absolute;
+  top: -39px;
+  left: 30px;
+  background: #f1f0f0;
+  z-index: -1;
+  padding: 10px 10px 30px 10px;
+  font-size: 19px;
 }
-.switcherList span{
-    cursor: pointer;
+.switcherList span {
+  cursor: pointer;
 }

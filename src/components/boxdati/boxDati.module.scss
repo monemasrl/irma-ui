@@ -26,6 +26,11 @@
     margin-left: 0px;
     padding: 0;
     min-height: 632px;
+    @media screen and (max-width: 760px) {
+      max-width: 340px;
+      min-height: auto;
+      box-shadow: 0 0 10px rgb(150, 150, 150);
+    }
   }
 
   header {
@@ -33,6 +38,9 @@
     flex-direction: column;
     height: 100%;
     justify-content: space-between;
+    @media screen and (max-width: 760px) {
+      justify-content: flex-start;
+    }
   }
 
   .titoletto {
@@ -303,6 +311,12 @@
   display: block;
   margin: 0 0 auto auto;
   height: 35px;
+  @media screen and (max-width: 760px) {
+    background-color: $backHeader;
+    margin: 0 0 3rem 0;
+    max-width: 100px;
+    align-self: flex-end;
+  }
 }
 .titleNodo {
   margin-bottom: 1rem;
@@ -313,11 +327,17 @@
   justify-content: flex-start;
   width: 100%;
   min-height: 632px;
+  @media screen and (max-width: 760px) {
+    min-height: auto;
+  }
 }
 
 .layoutSensori {
-  width: 370px;
-  padding: 47px 17px;
+  max-width: 370px;
+  padding: 27px 17px;
+  @media screen and (max-width: 760px) {
+    max-width: 330px;
+  }
 }
 
 .layoutGraph {

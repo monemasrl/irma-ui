@@ -22,7 +22,7 @@ const App: FC = () => {
   const [isConnected, setIsConnected] = useState(
     userSharedData.socket?.connected
   );
-  const isMobile = useMediaQuery('(max-width: 440px)');
+  const isMobile = useMediaQuery('(max-width: 760px)');
   useEffect(() => {
     userSharedData.socket?.on('connect', () => {
       setIsConnected(true);

@@ -167,7 +167,7 @@ const BoxStaker: FC<BoxStakerProps> = ({ node, setStakerClicked }) => {
 
   const userSharedData = useContext(UserContext);
   const share = useContext(ShareContext);
-  const isMobile = useMediaQuery('(max-width: 440px)');
+  const isMobile = useMediaQuery('(max-width: 760px)');
 
   console.log('alertInfo', alertInfo);
   //const sessioneCorrente = alertInfo?.alertID;
@@ -214,6 +214,14 @@ const BoxStaker: FC<BoxStakerProps> = ({ node, setStakerClicked }) => {
     >
       <section className={style.layoutSensori}>
         <header>
+          {isMobile && (
+            <button
+              className={style.backToDash}
+              onClick={() => setStakerClicked(-1)}
+            >
+              back
+            </button>
+          )}
           <div>
             <div className={style.titleNodo}>
               <div className={style.titoletto}>Reach Staker</div>
@@ -287,29 +295,29 @@ const BoxStaker: FC<BoxStakerProps> = ({ node, setStakerClicked }) => {
           )}
         </header>
       </section>
-      <section className={style.layoutGraph}>
-        <button
-          className={style.backToDash}
-          onClick={() => setStakerClicked(-1)}
-        >
-          back
-        </button>
-        {readings.length && !isMobile ? (
-          <WrapperGraph
-            dataSingoloSensore={dataSingoloSensore}
-            datiLettureUI={datiLetture(readings)}
-            alertInfo={alertInfo}
-          />
-        ) : !isMobile ? (
-          <Loader
-            immagineLoader={'/images/cont.svg'}
-            number={4}
-            text="Loading Graph Data"
-          />
-        ) : (
-          ''
-        )}
-      </section>
+      {!isMobile && (
+        <section className={style.layoutGraph}>
+          <button
+            className={style.backToDash}
+            onClick={() => setStakerClicked(-1)}
+          >
+            back
+          </button>
+          {readings.length ? (
+            <WrapperGraph
+              dataSingoloSensore={dataSingoloSensore}
+              datiLettureUI={datiLetture(readings)}
+              alertInfo={alertInfo}
+            />
+          ) : (
+            <Loader
+              immagineLoader={'/images/cont.svg'}
+              number={4}
+              text="Loading Graph Data"
+            />
+          )}
+        </section>
+      )}
       {sessionIDList.length !== 0 && !isMobile && (
         <StoricoSessioni
           sessionIDList={sessionIDList}

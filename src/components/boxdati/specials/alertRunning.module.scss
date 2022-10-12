@@ -12,6 +12,9 @@
     left: 49%;
     top: 15px;
     animation: opacity 1s forwards;
+    @media screen and (max-width: 760px) {
+      transform: translate(18px, 0px);
+    }
   }
   .aim1 {
     top: 0;
