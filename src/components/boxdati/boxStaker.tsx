@@ -22,6 +22,7 @@ import StoricoSessioni from './specials/storicoSessioni';
 import Reading from '../../typings/reading';
 import Loader from '../loaders/loader';
 import { AlertInfo } from '../../typings/alert';
+import useMediaQuery from '../../hooks/useMediaQuery';
 
 type StatoSensoreProps = {
   statoSensore: NodeState;
@@ -46,7 +47,6 @@ const StatoSensore: FC<StatoSensoreProps> = ({ statoSensore }) => {
     // TODO: messaggio
     'alert-running': 'Alert Running',
   };
-
   return (
     <div className={`${style.stato}`}>
       <div className={style.iconastato}>
@@ -167,6 +167,7 @@ const BoxStaker: FC<BoxStakerProps> = ({ node, setStakerClicked }) => {
 
   const userSharedData = useContext(UserContext);
   const share = useContext(ShareContext);
+  const isMobile = useMediaQuery('(max-width: 440px)');
 
   console.log('alertInfo', alertInfo);
   //const sessioneCorrente = alertInfo?.alertID;
@@ -267,7 +268,7 @@ const BoxStaker: FC<BoxStakerProps> = ({ node, setStakerClicked }) => {
             </div>
           </div>
 
-          {readings.length ? (
+          {readings.length && !isMobile ? (
             <Nodo
               state={node.state}
               dataSingoloSensore={dataSingoloSensore}
@@ -276,11 +277,13 @@ const BoxStaker: FC<BoxStakerProps> = ({ node, setStakerClicked }) => {
               canId={alertInfo?.canID}
             />
           ) : (
-            <Loader
-              immagineLoader={'/images/cont.svg'}
-              number={4}
-              text="Loading Sensor Data"
-            />
+            !isMobile && (
+              <Loader
+                immagineLoader={'/images/cont.svg'}
+                number={4}
+                text="Loading Sensor Data"
+              />
+            )
           )}
         </header>
       </section>
@@ -291,21 +294,23 @@ const BoxStaker: FC<BoxStakerProps> = ({ node, setStakerClicked }) => {
         >
           back
         </button>
-        {readings.length ? (
+        {readings.length && !isMobile ? (
           <WrapperGraph
             dataSingoloSensore={dataSingoloSensore}
             datiLettureUI={datiLetture(readings)}
             alertInfo={alertInfo}
           />
-        ) : (
+        ) : !isMobile ? (
           <Loader
             immagineLoader={'/images/cont.svg'}
             number={4}
             text="Loading Graph Data"
           />
+        ) : (
+          ''
         )}
       </section>
-      {sessionIDList.length !== 0 && (
+      {sessionIDList.length !== 0 && !isMobile && (
         <StoricoSessioni
           sessionIDList={sessionIDList}
           node={node}

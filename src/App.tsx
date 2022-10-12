@@ -10,6 +10,7 @@ import Node from './typings/node';
 import StakerDefaultData from './typings/defaultData';
 import BoxDati from './components/boxdati/boxDati';
 import BoxDatiDefault from './components/boxdati/boxDatiDefault';
+import useMediaQuery from './hooks/useMediaQuery';
 import './components/ui/ui.scss';
 const Dashboard = lazy(() => import('./components/dashboard/dashboard'));
 
@@ -21,7 +22,7 @@ const App: FC = () => {
   const [isConnected, setIsConnected] = useState(
     userSharedData.socket?.connected
   );
-
+  const isMobile = useMediaQuery('(max-width: 440px)');
   useEffect(() => {
     userSharedData.socket?.on('connect', () => {
       setIsConnected(true);
@@ -107,15 +108,13 @@ const App: FC = () => {
                   </Suspense>
                   <Footer />
                 </div>
-
                 <BoxDati
                   isAlert={isAlert()}
                   stakerClicked={stakerClicked}
                   setStakerClicked={setStakerClicked}
                   node={stakerClicked !== -1 ? nodes[stakerClicked] : undefined}
                 />
-
-                <BoxDatiDefault datiDefault={datiDefault()} />
+                {!isMobile && <BoxDatiDefault datiDefault={datiDefault()} />}{' '}
               </div>
             </main>
           )}
