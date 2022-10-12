@@ -58,6 +58,9 @@ main {
   align-items: center;
   z-index: 0;
   position: relative;
+  @media screen and (max-width: 760px) {
+    margin: 4rem auto 0 auto;
+  }
 }
 
 .back-alert {
