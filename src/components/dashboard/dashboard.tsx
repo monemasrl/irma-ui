@@ -1,9 +1,16 @@
-import React, { Dispatch, FC, SetStateAction, useState } from 'react';
+import React, {
+  Dispatch,
+  FC,
+  SetStateAction,
+  useState,
+  useEffect,
+} from 'react';
 import style from './dashboard.module.scss';
 import BtnStaker from '../btn/btnStaker';
 import { IoApps, IoListOutline } from 'react-icons/io5';
 import Loader from '../loaders/loader';
 import Node from '../../typings/node';
+import useMediaQuery from '../../hooks/useMediaQuery';
 
 type Props = {
   isAlert: boolean;
@@ -19,9 +26,11 @@ const Dashboard: FC<Props> = ({
   setStakerClicked,
 }) => {
   const [listview, setListView] = useState(false);
-
+  const isMobile = useMediaQuery('(max-width: 760px)');
   const immagineLoader = '/images/cont.svg';
-
+  useEffect(() => {
+    isMobile ? setListView(true) : setListView(false);
+  }, [isMobile]);
   function switchVisualizzaLista(switchList: boolean) {
     setListView(switchList);
     setStakerClicked(-1);

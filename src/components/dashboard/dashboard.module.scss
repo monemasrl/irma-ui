@@ -16,7 +16,8 @@
   transition: all ease-in-out 0.3s;
   align-content: baseline;
   @media screen and (max-width: 600px) {
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
   }
 }
 .dashboard.lista {
