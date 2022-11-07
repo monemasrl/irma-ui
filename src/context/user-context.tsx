@@ -18,7 +18,7 @@ import Node from '../typings/node';
 import Reading from '../typings/reading';
 import { AppOption } from '../mock/mock_data';
 import { io, Socket } from 'socket.io-client';
-import User from '../typings/user';
+import User, { Role } from '../typings/user';
 import { AlertInfo } from '../typings/alert';
 
 const WEBSOCKET_URL = process.env.REACT_APP_WEBSOCKET_URL || 'http://localhost';
@@ -49,7 +49,7 @@ export interface IUserContext {
   getNodes: () => Promise<Node[]>;
   getSession: (nodeID: number, sessionID: number) => Promise<Reading[]>;
   getSessionIDs: (nodeID: number) => Promise<number[]>;
-  getUserInfo: () => Promise<User | undefined>;
+  getOwnUserInfo: () => Promise<User | undefined>;
   getAlertInfo: (alertID: string) => Promise<AlertInfo | undefined>;
   sendCommand: (
     appID: string,
@@ -61,6 +61,17 @@ export interface IUserContext {
     isConfirmed: boolean,
     handleNote: string
   ) => Promise<void>;
+  getUserList: () => Promise<User[]>;
+  getUserInfo: (userID: string) => Promise<User | undefined>;
+  createUser: (email: string, password: string, role: Role) => Promise<void>;
+  updateUser: (
+    id: string,
+    email: string,
+    oldPassword: string,
+    newPassword: string,
+    role: Role
+  ) => Promise<void>;
+  deleteUser: (userID: string) => Promise<void>;
 }
 
 const UserContext = createContext<IUserContext>({} as IUserContext);
@@ -221,22 +232,23 @@ function UserContextProvider({ children }: Props) {
     return IDs;
   };
 
-  const getUserInfo = async () => {
+  const getOwnUserInfo = async () => {
     if (!accessToken) return undefined;
 
     if (MOCK_DATA) {
       return {
+        id: '12345',
         email: 'lezzo@gmail.com',
         first_name: 'carlo',
         last_name: 'martello',
-        roles: [],
+        role: 'admin' as Role,
       };
     }
 
     let user: User | undefined = undefined;
 
     try {
-      user = await Microservice.getUserInfo(accessToken);
+      user = await Microservice.getOwnUserInfo(accessToken);
     } catch (error) {
       refreshIfUnauthorized(error);
     }
@@ -248,9 +260,7 @@ function UserContextProvider({ children }: Props) {
     if (!accessToken) return undefined;
 
     if (MOCK_DATA) {
-      const MockAlertInfo = await (
-        await import('../mock/mock_alerts.json')
-      ).default;
+      const MockAlertInfo = (await import('../mock/mock_alerts.json')).default;
 
       const infos = MockAlertInfo as AlertInfo[];
 
@@ -291,6 +301,75 @@ function UserContextProvider({ children }: Props) {
 
     try {
       Microservice.handleAlert(accessToken, alertID, isConfirmed, handleNote);
+    } catch (error) {
+      refreshIfUnauthorized(error);
+    }
+  };
+
+  const getUserList = async () => {
+    if (!accessToken) return [];
+
+    let list: User[] = [];
+    try {
+      list = await Microservice.getUserList(accessToken);
+    } catch (error) {
+      refreshIfUnauthorized(error);
+    }
+
+    return list;
+  };
+
+  const getUserInfo = async (userID: string) => {
+    if (!accessToken) return;
+
+    let user: User | undefined = undefined;
+    try {
+      user = await Microservice.getUserInfo(accessToken, userID);
+    } catch (error) {
+      refreshIfUnauthorized(error);
+    }
+
+    return user;
+  };
+
+  const createUser = async (email: string, password: string, role: Role) => {
+    if (!accessToken) return;
+
+    try {
+      await Microservice.createUser(accessToken, email, password, role);
+    } catch (error) {
+      refreshIfUnauthorized(error);
+    }
+  };
+
+  const updateUser = async (
+    userID: string,
+    email: string,
+    oldPassword: string,
+    newPassword: string,
+    role: Role
+  ) => {
+    if (!accessToken) return;
+
+    try {
+      await Microservice.updateUser(
+        accessToken,
+        userID,
+        email,
+        oldPassword,
+        newPassword,
+        role
+      );
+    } catch (error) {
+      refreshIfUnauthorized(error);
+    }
+  };
+
+  const deleteUser = async (userID: string) => {
+    if (!accessToken) return;
+
+    try {
+      await Microservice.deleteUser(accessToken, userID);
     } catch (error) {
       refreshIfUnauthorized(error);
     }
@@ -384,7 +463,7 @@ function UserContextProvider({ children }: Props) {
   useEffect(() => {
     if (!accessToken) return;
     const func = async () => {
-      setUser(await getUserInfo());
+      setUser(await getOwnUserInfo());
     };
 
     func();
@@ -414,10 +493,15 @@ function UserContextProvider({ children }: Props) {
     getNodes,
     getSession,
     getSessionIDs,
-    getUserInfo,
+    getOwnUserInfo,
     getAlertInfo,
     sendCommand,
     handleAlert,
+    getUserList,
+    getUserInfo,
+    createUser,
+    updateUser,
+    deleteUser,
   };
 
   return (

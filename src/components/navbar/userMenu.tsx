@@ -48,12 +48,7 @@ function UserMenu({ openMenu, user, setOpenMenu, logout }: Props) {
                     <span>Email:</span> {user.email}
                   </li>
                   <li>
-                    <span>Ruoli:</span>
-                    <ul>
-                      {user.roles.map((role) => {
-                        return <li key={role.name}>{role.name}</li>;
-                      })}
-                    </ul>
+                    <span>Ruolo:</span> {user.role}
                   </li>
                   <li
                     className={style.logout}

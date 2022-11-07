@@ -4,7 +4,7 @@ import CommandType from '../utils/command';
 import Organization from '../typings/organization';
 import Reading from '../typings/reading';
 import Node from '../typings/node';
-import User from '../typings/user';
+import User, { Role } from '../typings/user';
 import { AlertInfo } from '../typings/alert';
 
 const WEBSOCKET_URL = process.env.REACT_APP_WEBSOCKET_URL || 'http://localhost';
@@ -175,7 +175,7 @@ const getReadings = async (token: string, nodeIDList: number[]) => {
   return response.data.readings;
 };
 
-const getUserInfo = async (token: string) => {
+const getOwnUserInfo = async (token: string) => {
   const response = await axios.get<User>(
     `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/user/info`,
     {
@@ -255,6 +255,101 @@ const handleAlert = async (
   return response;
 };
 
+interface IGetUserListResponse {
+  users: User[];
+}
+
+const getUserList = async (token: string) => {
+  const response = await axios.get<IGetUserListResponse>(
+    `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/user/list`,
+    {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    }
+  );
+
+  console.log('getUserList', response);
+  return response.data.users;
+};
+
+const getUserInfo = async (token: string, userID: string) => {
+  const response = await axios.get<User>(
+    `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/user/${userID}`,
+    {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    }
+  );
+
+  return response.data;
+};
+
+const createUser = async (
+  token: string,
+  email: string,
+  password: string,
+  role: Role
+) => {
+  const response = await axios.post(
+    `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/user/create`,
+    {
+      email: email,
+      password: password,
+      role: role,
+    },
+    {
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`,
+      },
+    }
+  );
+
+  return response;
+};
+
+const updateUser = async (
+  token: string,
+  userID: string,
+  email: string,
+  oldPassword: string,
+  newPassword: string,
+  role: Role
+) => {
+  const response = await axios.put(
+    `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/user/${userID}`,
+    {
+      email: email,
+      oldPassword: oldPassword,
+      newPassword: newPassword,
+      role: role,
+    },
+    {
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`,
+      },
+    }
+  );
+
+  return response;
+};
+
+const deleteUser = async (token: string, userID: string) => {
+  const response = await axios.delete(
+    `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/user/${userID}`,
+    {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    }
+  );
+
+  return response;
+};
+
 const Microservice = {
   authenticate,
   refresh,
@@ -264,10 +359,15 @@ const Microservice = {
   getReadings,
   getSession,
   getSessionIDs,
-  getUserInfo,
+  getOwnUserInfo,
   getAlertInfo,
   sendCommand,
   handleAlert,
+  getUserInfo,
+  getUserList,
+  createUser,
+  updateUser,
+  deleteUser,
 };
 
 export default Microservice;
