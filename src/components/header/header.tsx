@@ -1,11 +1,21 @@
-import React, { useContext, FC } from 'react';
+import React, { useContext, FC, useEffect, useState } from 'react';
 import style from './header.module.scss';
 import Navbar from '../navbar/navbar';
 import { IUserContext, UserContext } from '../../context/user-context';
+import User from '../../typings/user';
 
 const Header: FC = () => {
   const userSharedData = useContext<IUserContext>(UserContext);
+  const [userList, setUserList] = useState<User[]>();
+  const [userData, setUserData] = useState<User>();
+  console.log('userlist', userList);
+  console.log('userlist', userData);
 
+  //Accesso alla lista utenti
+  useEffect(() => {
+    userSharedData.getUserList().then((item) => setUserList(item));
+    setUserData(userSharedData.user);
+  }, [userSharedData]); // eslint-disable-line react-hooks/exhaustive-deps
   return (
     <header className={style.header}>
       <div className={style.wrapperInnerHader}>
@@ -25,7 +35,10 @@ const Header: FC = () => {
           </div>
         </div>
       </div>
-      <Navbar />
+      <Navbar
+        userList={userList}
+        userData={userData}
+      />
     </header>
   );
 };

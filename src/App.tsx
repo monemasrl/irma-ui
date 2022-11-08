@@ -12,6 +12,7 @@ import BoxDati from './components/boxdati/boxDati';
 import BoxDatiDefault from './components/boxdati/boxDatiDefault';
 import useMediaQuery from './hooks/useMediaQuery';
 import './components/ui/ui.scss';
+
 const Dashboard = lazy(() => import('./components/dashboard/dashboard'));
 
 const App: FC = () => {
@@ -22,7 +23,9 @@ const App: FC = () => {
   const [isConnected, setIsConnected] = useState(
     userSharedData.socket?.connected
   );
+
   const isMobile = useMediaQuery('(max-width: 760px)');
+
   useEffect(() => {
     userSharedData.socket?.on('connect', () => {
       setIsConnected(true);
