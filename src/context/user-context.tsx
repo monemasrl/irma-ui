@@ -309,6 +309,25 @@ function UserContextProvider({ children }: Props) {
   const getUserList = async () => {
     if (!accessToken) return [];
 
+    if (MOCK_DATA) {
+      return [
+        {
+          id: '12345',
+          email: 'lezzo@gmail.com',
+          first_name: 'carlo',
+          last_name: 'martello',
+          role: 'admin' as Role,
+        },
+        {
+          id: '67890',
+          email: 'pippo@pluto.com',
+          first_name: 'mario',
+          last_name: 'rossi',
+          role: 'standard' as Role,
+        },
+      ];
+    }
+
     let list: User[] = [];
     try {
       list = await Microservice.getUserList(accessToken);
@@ -322,6 +341,27 @@ function UserContextProvider({ children }: Props) {
   const getUserInfo = async (userID: string) => {
     if (!accessToken) return;
 
+    if (MOCK_DATA) {
+      if (userID === '12345') {
+        return {
+          id: '12345',
+          email: 'lezzo@gmail.com',
+          first_name: 'carlo',
+          last_name: 'martello',
+          role: 'admin' as Role,
+        };
+      } else if (userID === '567890') {
+        return {
+          id: '67890',
+          email: 'pippo@pluto.com',
+          first_name: 'mario',
+          last_name: 'rossi',
+          role: 'standard' as Role,
+        };
+      }
+      return undefined;
+    }
+
     let user: User | undefined = undefined;
     try {
       user = await Microservice.getUserInfo(accessToken, userID);
@@ -334,6 +374,10 @@ function UserContextProvider({ children }: Props) {
 
   const createUser = async (email: string, password: string, role: Role) => {
     if (!accessToken) return;
+
+    if (MOCK_DATA) {
+      return;
+    }
 
     try {
       await Microservice.createUser(accessToken, email, password, role);
@@ -351,6 +395,10 @@ function UserContextProvider({ children }: Props) {
   ) => {
     if (!accessToken) return;
 
+    if (MOCK_DATA) {
+      return;
+    }
+
     try {
       await Microservice.updateUser(
         accessToken,
@@ -367,6 +415,10 @@ function UserContextProvider({ children }: Props) {
 
   const deleteUser = async (userID: string) => {
     if (!accessToken) return;
+
+    if (MOCK_DATA) {
+      return;
+    }
 
     try {
       await Microservice.deleteUser(accessToken, userID);
