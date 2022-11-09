@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { FC } from 'react';
 /* import { ShareContext } from '../../context/context';
 import { UserContext } from '../../context/user-context';
 import { useContext } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
  */
 import { useForm } from 'react-hook-form';
+import User from '../../typings/user';
 
 /* type Props = {
   alertID: string;
@@ -18,8 +19,10 @@ type FormValues = {
   Email: string;
   Mobile_number: string;
 };
-
-function UserForm() {
+type Props = {
+  datiUtentePerForm?: User;
+};
+const UserRegistrationForm: FC<Props> = ({ datiUtentePerForm }) => {
   const {
     register,
 
@@ -35,29 +38,36 @@ function UserForm() {
     userSharedData.handleAlert(alertID, !!+data.alertConfirm, data.noteAlert);
   };
  */
+
+  function inputPlacehoder(label: string, id: string | undefined) {
+    if (id) {
+      return id;
+    }
+    return label;
+  }
   return (
-    <form>
+    <form id="userForm">
       <input
         type="text"
-        placeholder="First name"
+        placeholder={inputPlacehoder('Nome', datiUtentePerForm?.first_name)}
         {...register('First_name', { required: true, maxLength: 80 })}
       />
       {errors.alertConfirm && <span> (Campo Obbligatorio)</span>}
       <input
         type="text"
-        placeholder="Last name"
+        placeholder={inputPlacehoder('Cognome', datiUtentePerForm?.last_name)}
         {...register('Last_name', { required: true, maxLength: 100 })}
       />
       {errors.alertConfirm && <span> (Campo Obbligatorio)</span>}
       <input
         type="text"
-        placeholder="Email"
+        placeholder={inputPlacehoder('Email', datiUtentePerForm?.email)}
         {...register('Email', { required: true, pattern: /^\S+@\S+$/i })}
       />
       {errors.alertConfirm && <span> (Campo Obbligatorio)</span>}
       <input
         type="tel"
-        placeholder="Mobile number"
+        placeholder="Telefono"
         {...register('Mobile_number', {
           required: true,
           minLength: 6,
@@ -65,9 +75,14 @@ function UserForm() {
         })}
       />
       {errors.alertConfirm && <span> (Campo Obbligatorio)</span>}
-      <input type="submit" />
+      <button
+        className="user-form"
+        type="submit"
+      >
+        Invia
+      </button>
     </form>
   );
-}
+};
 
-export { UserForm };
+export { UserRegistrationForm };

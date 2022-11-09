@@ -49,7 +49,11 @@ button.alert-big.stop {
 button.alert-big {
   padding: 10px 30px;
 }
-
+button.user-form {
+  height: auto;
+  font-size: 1rem;
+  padding: 1rem;
+}
 .closeIcon {
   height: 20px;
   width: 20px;
@@ -63,7 +67,19 @@ button.alert-big {
 form {
   display: block;
 }
-
+#userForm {
+  input {
+    display: block;
+    margin-bottom: 1rem;
+    border: none;
+    padding: 1rem;
+    border-radius: 10px;
+    outline: none;
+    background-color: white !important;
+    width: 100%;
+    max-width: 400px;
+  }
+}
 .alert form .nota {
   color: white;
   margin: 1rem 0 0 0;

@@ -18,6 +18,7 @@ const UserList: FC<Props> = ({
   userData,
 }) => {
   const [formUser, setFormUser] = useState(false);
+  const [idUtente, setIdUtente] = useState('');
 
   return (
     <>
@@ -39,7 +40,10 @@ const UserList: FC<Props> = ({
             </div>
             <button
               className="addUser"
-              onClick={() => setFormUser(true)}
+              onClick={() => {
+                setFormUser(true);
+                setIdUtente('');
+              }}
             >
               Aggiungi utente
             </button>
@@ -48,7 +52,12 @@ const UserList: FC<Props> = ({
               {userList?.map((item) => {
                 return (
                   <li key={item.id}>
-                    <span>
+                    <span
+                      onClick={() => {
+                        setIdUtente(item.id);
+                        setFormUser(true);
+                      }}
+                    >
                       <FiEdit />
                     </span>
                     {item.first_name} {item.last_name}{' '}
@@ -60,6 +69,7 @@ const UserList: FC<Props> = ({
         )}
       </AnimatePresence>
       <UserForm
+        idUtente={idUtente}
         userList={userList}
         userData={userData}
         formUser={formUser}

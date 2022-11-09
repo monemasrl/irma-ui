@@ -21,7 +21,7 @@
 }
 
 .drawer {
-  background-color: $navbarText;
+  background-color: #e9e9e9;
   color: black;
   position: absolute;
   top: 0%;
@@ -68,7 +68,7 @@
   font-size: 15px;
   text-transform: capitalize;
   margin: 5px 0;
-  color: $navbarText;
+  color: #363636;
 }
 
 .datiutente li span {
@@ -78,7 +78,7 @@
 .wrapperDatiUser {
   display: flex;
   margin-top: 1rem;
-  background: #333333;
+  background: #b3b3b3;
   padding: 25px 18px 0px 28px;
 }
 
@@ -135,6 +135,7 @@ li.logout {
         width: 33px;
         display: inline-block;
         text-align: center;
+        cursor: pointer;
       }
     }
   }
