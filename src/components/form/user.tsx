@@ -17,6 +17,7 @@ type FormValues = {
   First_name: string;
   Last_name: string;
   Email: string;
+  role: 'admin' | 'standard';
   Mobile_number: string;
 };
 type Props = {
@@ -25,7 +26,6 @@ type Props = {
 const UserRegistrationForm: FC<Props> = ({ datiUtentePerForm }) => {
   const {
     register,
-
     formState: { errors },
   } = useForm<FormValues>();
   /*
@@ -39,9 +39,9 @@ const UserRegistrationForm: FC<Props> = ({ datiUtentePerForm }) => {
   };
  */
 
-  function inputPlacehoder(label: string, id: string | undefined) {
-    if (id) {
-      return id;
+  function inputPlacehoder(label: string, data: string | undefined) {
+    if (data) {
+      return data;
     }
     return label;
   }
@@ -74,6 +74,32 @@ const UserRegistrationForm: FC<Props> = ({ datiUtentePerForm }) => {
           maxLength: 12,
         })}
       />
+      {errors.alertConfirm && <span> (Campo Obbligatorio)</span>}
+      <select
+        className="user-select"
+        {...register('role', { required: true })}
+      >
+        <option
+          value=""
+          disabled
+          selected={datiUtentePerForm ? false : true}
+          hidden
+        >
+          Ruolo
+        </option>
+        <option
+          value="admin"
+          selected={datiUtentePerForm?.role === 'admin' ? true : false}
+        >
+          Admin
+        </option>
+        <option
+          value="standard"
+          selected={datiUtentePerForm?.role === 'standard' ? true : false}
+        >
+          Standard
+        </option>
+      </select>
       {errors.alertConfirm && <span> (Campo Obbligatorio)</span>}
       <button
         className="user-form"

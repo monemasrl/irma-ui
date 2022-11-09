@@ -67,6 +67,17 @@ button.user-form {
 form {
   display: block;
 }
+.user-select {
+  display: block;
+  margin-bottom: 1rem;
+  border: none;
+  padding: 1rem;
+  border-radius: 10px;
+  outline: none;
+  background-color: white !important;
+  width: 100%;
+  max-width: 400px;
+}
 #userForm {
   input {
     display: block;
