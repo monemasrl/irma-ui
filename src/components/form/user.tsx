@@ -105,7 +105,7 @@ const UserRegistrationForm: FC<Props> = ({ datiUtentePerForm }) => {
         className="user-form"
         type="submit"
       >
-        Invia
+        Salva
       </button>
     </form>
   );
