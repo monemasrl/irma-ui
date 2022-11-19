@@ -1,7 +1,5 @@
 type Organization = {
-  _id: {
-    $oid: string;
-  };
+  id: string;
   organizationName: string;
 };
 

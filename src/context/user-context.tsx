@@ -63,10 +63,18 @@ export interface IUserContext {
   ) => Promise<void>;
   getUserList: () => Promise<User[]>;
   getUserInfo: (userID: string) => Promise<User | undefined>;
-  createUser: (email: string, password: string, role: Role) => Promise<void>;
+  createUser: (
+    email: string,
+    first_name: string,
+    last_name: string,
+    password: string,
+    role: Role
+  ) => Promise<void>;
   updateUser: (
     id: string,
     email: string,
+    first_name: string,
+    last_name: string,
     oldPassword: string,
     newPassword: string,
     role: Role
@@ -85,10 +93,6 @@ function UserContextProvider({ children }: Props) {
     localStorage.getItem('access_token')
   );
 
-  const [refreshToken, setRefreshToken] = useState(
-    localStorage.getItem('refresh_token')
-  );
-
   const socket = !DISABLE_SOCKETIO
     ? io(`${WEBSOCKET_URL}:${WEBSOCKET_PORT}`)
     : undefined;
@@ -102,61 +106,35 @@ function UserContextProvider({ children }: Props) {
   const [appOptions, setAppOptions] = useState<IEntry[]>([]);
   const navigate = useNavigate();
 
-  const authenticate = async (username: string, password: string) => {
+  const authenticate = async (email: string, password: string) => {
     if (MOCK_LOGIN) {
       setAccessToken('1234');
-      setRefreshToken('1234');
       return;
     }
 
-    const [aToken, rToken] = await Microservice.authenticate(
-      username,
-      password
-    );
+    const aToken = await Microservice.authenticate(email, password);
 
     setAccessToken(aToken);
-    setRefreshToken(rToken);
 
     localStorage.setItem('access_token', aToken);
-    localStorage.setItem('refresh_token', rToken);
   };
 
   const logout = () => {
     setAccessToken(null);
-    setRefreshToken(null);
 
     localStorage.removeItem('access_token');
-    localStorage.removeItem('refresh_token');
   };
 
-  const refreshIfUnauthorized = useCallback(
-    async (error: unknown) => {
-      if (!(error instanceof AxiosError)) {
-        console.log(error);
-        return;
-      }
+  const logoutIfExpired = useCallback(async (error: unknown) => {
+    if (!(error instanceof AxiosError)) {
+      console.log(error);
+      return;
+    }
 
-      if (error.response?.status !== 401) return;
+    if (error.response?.status !== 401) return;
 
-      try {
-        if (!refreshToken) {
-          logout();
-          return;
-        }
-
-        const aToken = await Microservice.refresh(refreshToken);
-        setAccessToken(aToken);
-        localStorage.setItem('access_token', aToken);
-      } catch (error) {
-        if (error instanceof AxiosError) {
-          logout();
-          return;
-        }
-        console.log(error);
-      }
-    },
-    [refreshToken]
-  );
+    console.log('expired!');
+  }, []);
 
   const getNodes = async () => {
     if (!selectedApp || !accessToken) return [];
@@ -173,13 +151,16 @@ function UserContextProvider({ children }: Props) {
     try {
       list = await Microservice.getNodes(accessToken, selectedApp.value);
     } catch (error) {
-      refreshIfUnauthorized(error);
+      logoutIfExpired(error);
     }
 
     return list;
   };
 
-  const getSession = async (nodeID: number, sessionID = -1) => {
+  const getSession = async (
+    nodeID: number,
+    sessionID: number | undefined = undefined
+  ) => {
     if (!accessToken) return [];
 
     if (MOCK_DATA) {
@@ -187,7 +168,7 @@ function UserContextProvider({ children }: Props) {
 
       const readings = MockSession as Reading[];
 
-      if (sessionID == -1) {
+      if (sessionID === undefined) {
         sessionID = readings.sort((a, b) => b.sessionID - a.sessionID)[0]
           .sessionID;
       }
@@ -201,7 +182,7 @@ function UserContextProvider({ children }: Props) {
     try {
       readings = await Microservice.getSession(accessToken, nodeID, sessionID);
     } catch (error) {
-      refreshIfUnauthorized(error);
+      logoutIfExpired(error);
     }
 
     return readings;
@@ -226,7 +207,7 @@ function UserContextProvider({ children }: Props) {
     try {
       IDs = await Microservice.getSessionIDs(accessToken, nodeID);
     } catch (error) {
-      refreshIfUnauthorized(error);
+      logoutIfExpired(error);
     }
 
     return IDs;
@@ -250,7 +231,7 @@ function UserContextProvider({ children }: Props) {
     try {
       user = await Microservice.getOwnUserInfo(accessToken);
     } catch (error) {
-      refreshIfUnauthorized(error);
+      logoutIfExpired(error);
     }
 
     return user;
@@ -264,7 +245,7 @@ function UserContextProvider({ children }: Props) {
 
       const infos = MockAlertInfo as AlertInfo[];
 
-      return infos.find((item) => item.alertID === alertID);
+      return infos.find((item) => item.id === alertID);
     }
 
     let info: AlertInfo | undefined = undefined;
@@ -272,7 +253,7 @@ function UserContextProvider({ children }: Props) {
     try {
       info = await Microservice.getAlertInfo(accessToken, alertID);
     } catch (error) {
-      refreshIfUnauthorized(error);
+      logoutIfExpired(error);
     }
 
     return info;
@@ -288,7 +269,7 @@ function UserContextProvider({ children }: Props) {
     try {
       Microservice.sendCommand(accessToken, appID, nodeID, commandType);
     } catch (error) {
-      refreshIfUnauthorized(error);
+      logoutIfExpired(error);
     }
   };
 
@@ -302,7 +283,7 @@ function UserContextProvider({ children }: Props) {
     try {
       Microservice.handleAlert(accessToken, alertID, isConfirmed, handleNote);
     } catch (error) {
-      refreshIfUnauthorized(error);
+      logoutIfExpired(error);
     }
   };
 
@@ -332,7 +313,7 @@ function UserContextProvider({ children }: Props) {
     try {
       list = await Microservice.getUserList(accessToken);
     } catch (error) {
-      refreshIfUnauthorized(error);
+      logoutIfExpired(error);
     }
 
     return list;
@@ -366,13 +347,19 @@ function UserContextProvider({ children }: Props) {
     try {
       user = await Microservice.getUserInfo(accessToken, userID);
     } catch (error) {
-      refreshIfUnauthorized(error);
+      logoutIfExpired(error);
     }
 
     return user;
   };
 
-  const createUser = async (email: string, password: string, role: Role) => {
+  const createUser = async (
+    email: string,
+    first_name: string,
+    last_name: string,
+    password: string,
+    role: Role
+  ) => {
     if (!accessToken) return;
 
     if (MOCK_DATA) {
@@ -380,15 +367,24 @@ function UserContextProvider({ children }: Props) {
     }
 
     try {
-      await Microservice.createUser(accessToken, email, password, role);
+      await Microservice.createUser(
+        accessToken,
+        email,
+        first_name,
+        last_name,
+        password,
+        role
+      );
     } catch (error) {
-      refreshIfUnauthorized(error);
+      logoutIfExpired(error);
     }
   };
 
   const updateUser = async (
     userID: string,
     email: string,
+    first_name: string,
+    last_name: string,
     oldPassword: string,
     newPassword: string,
     role: Role
@@ -404,12 +400,14 @@ function UserContextProvider({ children }: Props) {
         accessToken,
         userID,
         email,
+        first_name,
+        last_name,
         oldPassword,
         newPassword,
         role
       );
     } catch (error) {
-      refreshIfUnauthorized(error);
+      logoutIfExpired(error);
     }
   };
 
@@ -423,7 +421,7 @@ function UserContextProvider({ children }: Props) {
     try {
       await Microservice.deleteUser(accessToken, userID);
     } catch (error) {
-      refreshIfUnauthorized(error);
+      logoutIfExpired(error);
     }
   };
 
@@ -443,13 +441,13 @@ function UserContextProvider({ children }: Props) {
       try {
         list = await Microservice.getOrganizationsList(accessToken);
       } catch (error) {
-        refreshIfUnauthorized(error);
+        logoutIfExpired(error);
       }
 
       console.log('organizations', list);
 
-      const options: IEntry[] = list.map(({ _id, organizationName }) => ({
-        value: _id['$oid'],
+      const options: IEntry[] = list.map(({ id, organizationName }) => ({
+        value: id,
         label: organizationName,
       }));
 
@@ -457,7 +455,7 @@ function UserContextProvider({ children }: Props) {
     };
 
     func();
-  }, [accessToken, refreshIfUnauthorized]);
+  }, [accessToken, logoutIfExpired]);
 
   // Change default organization on organizations change
   useEffect(() => {
@@ -484,13 +482,13 @@ function UserContextProvider({ children }: Props) {
           selectedOrg.value
         );
       } catch (error) {
-        refreshIfUnauthorized(error);
+        logoutIfExpired(error);
       }
 
       console.log('applications', list);
 
-      const options: IEntry[] = list.map(({ _id, applicationName }) => ({
-        value: _id['$oid'],
+      const options: IEntry[] = list.map(({ id, applicationName }) => ({
+        value: id,
         label: applicationName,
       }));
 
@@ -502,7 +500,7 @@ function UserContextProvider({ children }: Props) {
     selectedOrg?.value,
     JSON.stringify(orgOptions),
     accessToken,
-    refreshIfUnauthorized,
+    logoutIfExpired,
   ]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Change default application on applications change

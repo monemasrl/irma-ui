@@ -4,7 +4,7 @@
     "sessionID": 1641017100,
     "readingID": 1641017160,
     "canID": 3,
-    "alertID": "1234",
+    "id": "1234",
     "raisedAt": 1641017170
   },
   {
@@ -12,7 +12,7 @@
     "sessionID": 1641017100,
     "readingID": 1641017190,
     "canID": 4,
-    "alertID": "5678",
+    "id": "5678",
     "raisedAt": 1641017200
   }
 ]

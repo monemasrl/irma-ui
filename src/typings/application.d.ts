@@ -1,11 +1,7 @@
 type Application = {
-  _id: {
-    $oid: string;
-  };
+  id: string;
   applicationName: string;
-  organization: {
-    $oid: string;
-  };
+  organization: string;
 };
 
 export default Application;

@@ -258,7 +258,7 @@ const BoxStaker: FC<BoxStakerProps> = ({ node, setStakerClicked }) => {
                   node.state === 'rec' ||
                   node.state === 'alert-running') && (
                   <RecButton
-                    applicationID={node.applicationID}
+                    applicationID={node.application}
                     nodeID={node.nodeID}
                     type={
                       node.state === 'alert-running' ? 'alert-rec' : node.state
