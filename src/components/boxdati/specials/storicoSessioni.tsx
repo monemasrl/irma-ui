@@ -41,7 +41,7 @@ const StoricoSessioni: FC<Props> = ({ sessionIDList, node }) => {
 
   const variants = {
     open: { top: 0 },
-    close: { top: ' 104%' },
+    close: { top: '104%' },
   };
   console.log('sessiondata', sessioni);
 
@@ -61,78 +61,82 @@ const StoricoSessioni: FC<Props> = ({ sessionIDList, node }) => {
       >
         Storico
       </button>
-      <div className={style.storicoLayoutLeft}>
-        <button
-          className={style.storicoBtnBack}
-          onClick={() => setStorico((prev) => !prev)}
-        >
-          Back
-        </button>
-        <h3>Storico sessioni</h3>
-        <ul>
-          {sessionIDList.map((item, index) => {
-            return (
-              <li
-                onClick={() => {
-                  getData(item);
-                  setCurrentSessionActive(item);
-                }}
-                key={item}
-                className={`${
-                  currentSessionActive === sessionIDList[index]
-                    ? style['active']
-                    : ''
-                }`}
-              >
-                <div>
-                  <AiFillCalendar />
-                  {parseUnixTimestamp(item, false, true)}
-                </div>
-                <div>
-                  <AiFillClockCircle />
-                  {parseUnixTimestamp(item, true, false)}
-                </div>
-              </li>
-            );
-          })}
-        </ul>
-      </div>
-      <div className={style.storicoLayoutRight}>
-        <div className={style.navRilevatore}>
-          <h4>Rilevatore</h4>
-          <ul>
-            {sessioni.map((item) => {
-              return (
-                <li
-                  key={item.id}
-                  className={`${
-                    sessioni[rilevatoreId - 1] === item && style.active
-                  }
-                  } ${style.liRilevatore}`}
-                  onClick={() => setRilevatoreId(item.id)}
-                >
-                  {item.id}
-                </li>
-              );
-            })}
-          </ul>
-        </div>
-
-        {sessioni.length ? (
-          <div className={style.graphs}>
-            <h4>Sensore Alto</h4>
-            <Graph datiSensore={sessioni[rilevatoreId - 1]['sensore1']} />
-            <h4>Sensore Basso</h4>
-            <Graph datiSensore={sessioni[rilevatoreId - 1]['sensore2']} />
+      {storico && (
+        <>
+          <div className={style.storicoLayoutLeft}>
+            <button
+              className={style.storicoBtnBack}
+              onClick={() => setStorico((prev) => !prev)}
+            >
+              Back
+            </button>
+            <h3>Storico sessioni</h3>
+            <ul>
+              {sessionIDList.map((item, index) => {
+                return (
+                  <li
+                    onClick={() => {
+                      getData(item);
+                      setCurrentSessionActive(item);
+                    }}
+                    key={item}
+                    className={`${
+                      currentSessionActive === sessionIDList[index]
+                        ? style['active']
+                        : ''
+                    }`}
+                  >
+                    <div>
+                      <AiFillCalendar />
+                      {parseUnixTimestamp(item, false, true)}
+                    </div>
+                    <div>
+                      <AiFillClockCircle />
+                      {parseUnixTimestamp(item, true, false)}
+                    </div>
+                  </li>
+                );
+              })}
+            </ul>
           </div>
-        ) : (
-          <Loader
-            immagineLoader={'/images/cont.svg'}
-            number={4}
-            text="Loading Session Data"
-          />
-        )}
-      </div>
+          <div className={style.storicoLayoutRight}>
+            <div className={style.navRilevatore}>
+              <h4>Rilevatore</h4>
+              <ul>
+                {sessioni.map((item) => {
+                  return (
+                    <li
+                      key={item.id}
+                      className={`${
+                        sessioni[rilevatoreId - 1] === item && style.active
+                      }
+                  } ${style.liRilevatore}`}
+                      onClick={() => setRilevatoreId(item.id)}
+                    >
+                      {item.id}
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+
+            {sessioni.length ? (
+              <div className={style.graphs}>
+                <h4>Sensore Alto</h4>
+                <Graph datiSensore={sessioni[rilevatoreId - 1]['sensore1']} />
+                <h4>Sensore Basso</h4>
+                <Graph datiSensore={sessioni[rilevatoreId - 1]['sensore2']} />
+              </div>
+            ) : (
+              <Loader
+                immagineLoader={'/images/cont.svg'}
+                number={4}
+                text="Loading Session Data"
+              />
+            )}
+          </div>{' '}
+        </>
+      )}
     </motion.section>
   );
 };

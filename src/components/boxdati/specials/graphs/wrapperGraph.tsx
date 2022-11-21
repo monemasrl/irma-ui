@@ -37,6 +37,8 @@ const WrapperGraph: FC<Props> = ({
       <section className={style.boxGraph}>
         <h4>Sensore Alto</h4>
         <Graph datiSensore={datiSensore[0].sensore1} />
+      </section>
+      <section className={style.boxGraph}>
         <h4>Sensore Basso</h4>
         <Graph datiSensore={datiSensore[0].sensore2} />
       </section>
