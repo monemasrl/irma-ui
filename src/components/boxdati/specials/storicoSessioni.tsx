@@ -18,7 +18,6 @@ type Props = {
 const StoricoSessioni: FC<Props> = ({ sessionIDList, node }) => {
   const [storico, setStorico] = useState(false);
   const [rilevatoreId, setRilevatoreId] = useState(1);
-  const [sensoreId, setSensoreId] = useState(1);
   const [sessioni, setSessioni] = useState<Rilevatore[]>([]);
   const [currentSessionActive, setCurrentSessionActive] = useState(
     sessionIDList[0]
@@ -118,33 +117,13 @@ const StoricoSessioni: FC<Props> = ({ sessionIDList, node }) => {
             })}
           </ul>
         </div>
-        <div className={style.navSensore}>
-          <h4>Sensore</h4>
-          <ul>
-            <li
-              className={`${sensoreId === 1 ? style['active'] : ''}`}
-              onClick={() => setSensoreId(1)}
-            >
-              Sensore Alto
-            </li>
-            <li
-              className={`${sensoreId === 2 ? style['active'] : ''}`}
-              onClick={() => setSensoreId(2)}
-            >
-              Sensore Basso
-            </li>
-          </ul>
-        </div>
+
         {sessioni.length ? (
           <div className={style.graphs}>
-            <Graph
-              datiSensore={
-                sessioni[rilevatoreId - 1][
-                  sensoreId === 1 ? 'sensore1' : 'sensore2'
-                ]
-              }
-              sensore={sensoreId}
-            />
+            <h4>Sensore Alto</h4>
+            <Graph datiSensore={sessioni[rilevatoreId - 1]['sensore1']} />
+            <h4>Sensore Basso</h4>
+            <Graph datiSensore={sessioni[rilevatoreId - 1]['sensore2']} />
           </div>
         ) : (
           <Loader
