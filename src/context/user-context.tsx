@@ -94,7 +94,7 @@ function UserContextProvider({ children }: Props) {
   );
 
   const socket = !DISABLE_SOCKETIO
-    ? io(`${WEBSOCKET_URL}:${WEBSOCKET_PORT}`)
+    ? io(`${WEBSOCKET_URL}:${WEBSOCKET_PORT}`, { path: '/ws/socket.io' })
     : undefined;
 
   console.log(WEBSOCKET_URL, WEBSOCKET_PORT, socket);
