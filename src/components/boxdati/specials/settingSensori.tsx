@@ -10,22 +10,83 @@ const SettingSensori: FC = () => {
     close: { top: '104%' },
   };
   return (
-    <motion.section
-      className={style.settingSensore}
-      variants={variants}
-      animate={open ? 'open' : 'close'}
-      transition={{
-        duration: 0.5,
-        default: { ease: 'easeInOut' },
-      }}
-    >
+    <>
       <button
         className={style.settingSensoriBtn}
-        onClick={(prev) => setOpen(!prev)}
+        onClick={() => setOpen((prev) => !prev)}
       >
         <FiSettings />
       </button>
-    </motion.section>
+      <motion.section
+        className={style.settingSensore}
+        variants={variants}
+        animate={open ? 'open' : 'close'}
+        transition={{
+          duration: 0.5,
+          default: { ease: 'easeInOut' },
+        }}
+      >
+        <div className={style.wrapperSetting}>
+          {' '}
+          <button
+            className={style.settingSensoriBtnBack}
+            onClick={() => setOpen((prev) => !prev)}
+          >
+            Back
+          </button>
+          <h3>Setting sensori</h3>
+          <form action="">
+            <fieldset className={style.wrapperHv}>
+              <label htmlFor="hv">HV</label>
+              <input
+                type="number"
+                id="hv"
+                className={style.hv}
+              />
+            </fieldset>
+            <div className={style.wrapperSetSensor}>
+              <h3>1</h3>
+              <fieldset>
+                <label htmlFor="low">Low</label>
+                <input
+                  type="number"
+                  id="low"
+                />
+                <label htmlFor="high">High</label>
+                <input
+                  type="number"
+                  id="high"
+                />
+              </fieldset>
+              <fieldset>
+                <label htmlFor="low">Low</label>
+                <input
+                  type="number"
+                  id="low"
+                />
+                <label htmlFor="high">High</label>
+                <input
+                  type="number"
+                  id="high"
+                />
+              </fieldset>
+              <fieldset>
+                <label htmlFor="low">Low</label>
+                <input
+                  type="number"
+                  id="low"
+                />
+                <label htmlFor="high">High</label>
+                <input
+                  type="number"
+                  id="high"
+                />
+              </fieldset>
+            </div>
+          </form>
+        </div>
+      </motion.section>
+    </>
   );
 };
 

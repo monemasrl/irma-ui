@@ -23,7 +23,7 @@ import Reading from '../../typings/reading';
 import Loader from '../loaders/loader';
 import { AlertInfo } from '../../typings/alert';
 import useMediaQuery from '../../hooks/useMediaQuery';
-//import SettingSensori from './specials/settingSensori';
+import SettingSensori from './specials/settingSensori';
 
 type StatoSensoreProps = {
   statoSensore: NodeState;
@@ -325,6 +325,7 @@ const BoxStaker: FC<BoxStakerProps> = ({ node, setStakerClicked }) => {
           node={node}
         />
       )}
+      <SettingSensori />
     </motion.div>
   );
 };

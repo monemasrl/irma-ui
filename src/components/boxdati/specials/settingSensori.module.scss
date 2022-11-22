@@ -1,0 +1,88 @@
+@import '../../../assets/scss/_variabili';
+
+section.settingSensore {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 10px 20px;
+  background-color: $navbarButtons;
+  width: 100%;
+  min-height: 100%;
+  z-index: 100;
+}
+.settingSensoriBtn {
+  font-size: 0.9rem;
+  position: absolute;
+  bottom: -30px;
+  line-height: 1;
+  height: auto;
+  padding: 10px 10px 25px 10px;
+  right: 4rem;
+  background-color: $navbarButtons;
+}
+.settingSensoriBtnBack {
+  font-size: 0.9rem;
+  line-height: 1;
+  height: auto;
+  padding: 10px;
+  right: 1rem;
+  display: block;
+}
+input {
+  display: block;
+  margin-bottom: 1rem;
+  border: none;
+  padding: 1rem;
+  border-radius: 10px;
+  outline: none;
+  background-color: white !important;
+  width: 100%;
+  max-width: 400px;
+}
+.wrapperSetting {
+  h3 {
+    text-transform: uppercase;
+  }
+  input.hv {
+    max-width: 100px;
+  }
+  .wrapperSetSensor {
+    position: relative;
+    display: flex;
+    align-items: center;
+    h3 {
+      font-size: 1.5rem;
+      width: 30px;
+      height: 30px;
+      background-color: $backHeader;
+      margin-right: 5px;
+      text-align: center;
+      border-radius: 50%;
+      line-height: 1.8rem;
+    }
+  }
+  fieldset {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 15px;
+    &.wrapperHv {
+      max-width: 200px;
+      margin-left: 2rem;
+      margin-bottom: 1rem;
+    }
+    label {
+      margin-left: 1rem;
+      margin-right: 0.3rem;
+      font-size: 13px;
+      position: relative;
+      top: -10px;
+      font-weight: bold;
+    }
+    input {
+      margin: 0;
+      max-width: 100px;
+    }
+  }
+}
