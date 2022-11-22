@@ -1,15 +1,6 @@
 import React, { FC } from 'react';
-/* import { ShareContext } from '../../context/context';
-import { UserContext } from '../../context/user-context';
-import { useContext } from 'react';
-import { SubmitHandler, useForm } from 'react-hook-form';
- */
 import { useForm } from 'react-hook-form';
 import User from '../../typings/user';
-
-/* type Props = {
-  alertID: string;
-}; */
 
 // TODO: rivedere tipo alertConfirm
 type FormValues = {
@@ -28,16 +19,6 @@ const UserRegistrationForm: FC<Props> = ({ datiUtentePerForm }) => {
     register,
     formState: { errors },
   } = useForm<FormValues>();
-  /*
-  const share = useContext(ShareContext);
-  const userSharedData = useContext(UserContext);
-
-   const formSubmit: SubmitHandler<FormValues> = (data) => {
-    share.setConfirmState(undefined);
-
-    userSharedData.handleAlert(alertID, !!+data.alertConfirm, data.noteAlert);
-  };
- */
 
   function inputPlacehoder(label: string, data: string | undefined) {
     if (data) {

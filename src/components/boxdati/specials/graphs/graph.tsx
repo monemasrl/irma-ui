@@ -1,8 +1,6 @@
 import React, { FC } from 'react';
 import style from './graphs.module.scss';
 import {
-  BarChart,
-  Bar,
   AreaChart,
   Area,
   XAxis,
@@ -17,7 +15,6 @@ import { parseUnixTimestamp } from '../../../../utils/parseDate';
 
 type Props = {
   datiSensore: Sensore[];
-  sensore: number;
 };
 
 const toGraphData = (sensor: Sensore): GraphData => {
@@ -83,25 +80,6 @@ const Graph: FC<Props> = ({ datiSensore }) => {
           />
           <Legend />
         </AreaChart>
-      </div>
-      <div className={style.pericoloGraph}>
-        <BarChart
-          width={500}
-          height={200}
-          data={datiGraph || []}
-        >
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="readingID" />
-          <YAxis />
-
-          <Bar
-            dataKey="dangerLevel"
-            fill="#ce0303"
-          />
-
-          <Legend />
-          <Tooltip />
-        </BarChart>
       </div>
     </>
   );

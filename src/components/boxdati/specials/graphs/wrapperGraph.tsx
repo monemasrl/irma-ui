@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import React, { FC } from 'react';
 import { Rilevatore } from '../../../../typings/ui';
 import { parseUnixTimestamp } from '../../../../utils/parseDate';
 import Graph from './graph';
@@ -19,7 +19,6 @@ const WrapperGraph: FC<Props> = ({
   const datiSensore = datiLettureUI?.filter((item) => {
     return item.id === dataSingoloSensore;
   });
-  const [sensore, setSensore] = useState(1);
 
   return (
     <div className={style.wrapperGraph}>
@@ -35,34 +34,13 @@ const WrapperGraph: FC<Props> = ({
           <Timer dateTimer={datiLettureUI[0].sensore1[0].sessionID} />
         )}
       </header>
-      <nav>
-        <ul>
-          <li
-            className={`${sensore === 1 ? style['active'] : ''}`}
-            onClick={() => setSensore(1)}
-          >
-            <span>Sensore Alto</span>
-          </li>
-          <li
-            className={`${sensore === 2 ? style['active'] : ''}`}
-            onClick={() => setSensore(2)}
-          >
-            <span>Sensore Basso</span>
-          </li>
-        </ul>
-      </nav>
       <section className={style.boxGraph}>
-        {sensore === 1 ? (
-          <Graph
-            datiSensore={datiSensore[0].sensore1}
-            sensore={sensore}
-          />
-        ) : (
-          <Graph
-            datiSensore={datiSensore[0].sensore2}
-            sensore={sensore}
-          />
-        )}
+        <h4>Sensore Alto</h4>
+        <Graph datiSensore={datiSensore[0].sensore1} />
+      </section>
+      <section className={style.boxGraph}>
+        <h4>Sensore Basso</h4>
+        <Graph datiSensore={datiSensore[0].sensore2} />
       </section>
     </div>
   );

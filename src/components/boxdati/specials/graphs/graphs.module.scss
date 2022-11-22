@@ -46,7 +46,9 @@
   }
 
   .boxGraph {
-    position: relative;
+    h4 {
+      margin: 1rem 0 0 0;
+    }
   }
 
   .pericoloGraph {
@@ -56,5 +58,6 @@
 .graphItem {
   font-size: 12px;
   font-weight: bold;
-  margin: 1rem 0;
+  margin: 0 0 1rem 0;
+  height: 220px;
 }
