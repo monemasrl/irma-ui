@@ -34,6 +34,7 @@ const BoxDatiDefault: FC<Props> = ({ datiDefault, node }) => {
           <Loader
             immagineLoader={'/images/cont.svg'}
             number={4}
+            text="loading data"
           />
         )}
       </motion.div>

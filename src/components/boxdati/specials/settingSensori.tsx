@@ -36,52 +36,100 @@ const SettingSensori: FC = () => {
           </button>
           <h3>Setting sensori</h3>
           <form action="">
-            <fieldset className={style.wrapperHv}>
-              <label htmlFor="hv">HV</label>
-              <input
-                type="number"
-                id="hv"
-                className={style.hv}
-              />
-            </fieldset>
-            <div className={style.wrapperSetSensor}>
+            <div className={style.singleSensor}>
               <h3>1</h3>
-              <fieldset>
-                <label htmlFor="low">Low</label>
-                <input
-                  type="number"
-                  id="low"
-                />
-                <label htmlFor="high">High</label>
-                <input
-                  type="number"
-                  id="high"
-                />
-              </fieldset>
-              <fieldset>
-                <label htmlFor="low">Low</label>
-                <input
-                  type="number"
-                  id="low"
-                />
-                <label htmlFor="high">High</label>
-                <input
-                  type="number"
-                  id="high"
-                />
-              </fieldset>
-              <fieldset>
-                <label htmlFor="low">Low</label>
-                <input
-                  type="number"
-                  id="low"
-                />
-                <label htmlFor="high">High</label>
-                <input
-                  type="number"
-                  id="high"
-                />
-              </fieldset>
+              <div className={style.wrapperSetSensor}>
+                <fieldset className={style.fieldHv}>
+                  <label htmlFor="hv">HV</label>
+                  <input
+                    type="number"
+                    id="hv"
+                    className={style.hv}
+                  />
+                </fieldset>
+                <fieldset>
+                  <label htmlFor="low">Low</label>
+                  <input
+                    type="number"
+                    id="low"
+                  />
+                  <label htmlFor="high">High</label>
+                  <input
+                    type="number"
+                    id="high"
+                  />
+                </fieldset>
+                <fieldset>
+                  <label htmlFor="low">Low</label>
+                  <input
+                    type="number"
+                    id="low"
+                  />
+                  <label htmlFor="high">High</label>
+                  <input
+                    type="number"
+                    id="high"
+                  />
+                </fieldset>
+                <fieldset>
+                  <label htmlFor="low">Low</label>
+                  <input
+                    type="number"
+                    id="low"
+                  />
+                  <label htmlFor="high">High</label>
+                  <input
+                    type="number"
+                    id="high"
+                  />
+                </fieldset>
+              </div>
+              <div className={style.wrapperSetSensor}>
+                <fieldset className={style.fieldHv}>
+                  <label htmlFor="hv">HV</label>
+                  <input
+                    type="number"
+                    id="hv"
+                    className={style.hv}
+                  />
+                </fieldset>
+                <fieldset>
+                  <label htmlFor="low">Low</label>
+                  <input
+                    type="number"
+                    id="low"
+                  />
+                  <label htmlFor="high">High</label>
+                  <input
+                    type="number"
+                    id="high"
+                  />
+                </fieldset>
+                <fieldset>
+                  <label htmlFor="low">Low</label>
+                  <input
+                    type="number"
+                    id="low"
+                  />
+                  <label htmlFor="high">High</label>
+                  <input
+                    type="number"
+                    id="high"
+                  />
+                </fieldset>
+                <fieldset>
+                  <label htmlFor="low">Low</label>
+                  <input
+                    type="number"
+                    id="low"
+                  />
+                  <label htmlFor="high">High</label>
+                  <input
+                    type="number"
+                    id="high"
+                  />
+                </fieldset>
+              </div>
             </div>
           </form>
         </div>

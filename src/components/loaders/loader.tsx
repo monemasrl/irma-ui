@@ -49,15 +49,17 @@ function Loader({ immagineLoader, number, text }: Props) {
   }
 
   return (
-    <motion.div
-      variants={container}
-      initial="hidden"
-      animate="show"
-      className="loader-generico"
-    >
-      <h3>{text}</h3>
-      {createLoaderItem(immagineLoader, number)}
-    </motion.div>
+    <div className="wrapper-loader">
+      <motion.div
+        variants={container}
+        initial="hidden"
+        animate="show"
+        className="loader-generico"
+      >
+        <h3>{text}</h3>
+        {createLoaderItem(immagineLoader, number)}
+      </motion.div>
+    </div>
   );
 }
 

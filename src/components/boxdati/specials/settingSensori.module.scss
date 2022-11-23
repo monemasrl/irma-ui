@@ -14,7 +14,7 @@ section.settingSensore {
 .settingSensoriBtn {
   font-size: 0.9rem;
   position: absolute;
-  bottom: -30px;
+  bottom: -31px;
   line-height: 1;
   height: auto;
   padding: 10px 10px 25px 10px;
@@ -33,12 +33,32 @@ input {
   display: block;
   margin-bottom: 1rem;
   border: none;
-  padding: 1rem;
+  padding: 0.5rem;
   border-radius: 10px;
   outline: none;
   background-color: white !important;
   width: 100%;
   max-width: 400px;
+}
+.singleSensor {
+  position: relative;
+  &:first-child {
+    margin-top: 2rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+    width: 30px;
+    height: 30px;
+    background-color: $backHeader;
+    margin: 0 0 10px 0;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 1.8rem;
+    position: absolute;
+    left: -9px;
+    top: -14px;
+    z-index: 100;
+  }
 }
 .wrapperSetting {
   h3 {
@@ -51,22 +71,24 @@ input {
     position: relative;
     display: flex;
     align-items: center;
-    h3 {
-      font-size: 1.5rem;
-      width: 30px;
-      height: 30px;
-      background-color: $backHeader;
-      margin-right: 5px;
-      text-align: center;
-      border-radius: 50%;
-      line-height: 1.8rem;
+    margin-bottom: 10px;
+    &:nth-child(3) {
+      margin: 0 0 1rem 0;
     }
   }
   fieldset {
     display: flex;
     align-items: center;
-    padding: 10px;
-    border-radius: 15px;
+    padding: 11px 6px;
+    border-radius: 10px;
+    background-color: #aebdc7;
+    border: 0;
+    &.fieldHv {
+      background-color: #8498a6;
+      label {
+        color: white;
+      }
+    }
     &.wrapperHv {
       max-width: 200px;
       margin-left: 2rem;
@@ -75,9 +97,10 @@ input {
     label {
       margin-left: 1rem;
       margin-right: 0.3rem;
-      font-size: 13px;
+      font-size: 11px;
       position: relative;
-      top: -10px;
+      top: -15px;
+      left: 2px;
       font-weight: bold;
     }
     input {

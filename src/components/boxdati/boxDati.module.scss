@@ -91,6 +91,9 @@
   line-height: 1;
   text-transform: uppercase;
   color: $gray;
+  @media screen and (max-width: 996px) {
+    font-size: 20px;
+  }
 }
 
 .wrapperStatoSensore {
@@ -128,7 +131,9 @@
 
     .label {
       font-size: 70px;
-
+      @media screen and (max-width: 1024px) {
+        width: 100%;
+      }
       .running {
         font-size: 1rem;
       }
@@ -242,6 +247,9 @@
   height: 113px;
   position: relative;
   animation: alertbox 1s forwards;
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+  }
 }
 
 .buttonStop {
@@ -337,6 +345,7 @@
   padding: 27px 17px;
   box-shadow: -1px 0 6px #c7c7c7;
   background: #f7f7f7;
+  flex: 1;
   @media screen and (max-width: 760px) {
     max-width: 330px;
     box-shadow: 0px 0 0px #c7c7c7;

@@ -95,6 +95,7 @@ const Dashboard: FC<Props> = ({
         <Loader
           immagineLoader={immagineLoader}
           number={4}
+          text="loading data"
         />
       )}
     </div>
