@@ -195,7 +195,7 @@ const BoxStaker: FC<BoxStakerProps> = ({ node, setStakerClicked }) => {
   useEffect(() => {
     userSharedData.socket?.on('change-reading', () => {
       console.log('[SocketIO] Detected change');
-      getData(-1);
+      getData('latest');
     });
     console.log(sessionIDList);
 
