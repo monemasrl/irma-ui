@@ -134,9 +134,11 @@ function UserContextProvider({ children }: Props) {
       return;
     }
 
-    if (error.response?.status !== 401) return;
-
-    console.log('expired!');
+    if (
+      error.response?.status === 401 &&
+      error.response?.data['detail'] === 'JWT Expired'
+    )
+      logout();
   }, []);
 
   const getNodes = async () => {
