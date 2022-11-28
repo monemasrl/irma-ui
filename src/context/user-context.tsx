@@ -47,7 +47,10 @@ export interface IUserContext {
   authenticate: (email: string, password: string) => Promise<void>;
   logout: () => void;
   getNodes: () => Promise<Node[]>;
-  getSession: (nodeID: number, sessionID: number) => Promise<Reading[]>;
+  getSession: (
+    nodeID: number,
+    sessionID: number | 'latest'
+  ) => Promise<Reading[]>;
   getSessionIDs: (nodeID: number) => Promise<number[]>;
   getOwnUserInfo: () => Promise<User | undefined>;
   getAlertInfo: (alertID: string) => Promise<AlertInfo | undefined>;
@@ -157,10 +160,7 @@ function UserContextProvider({ children }: Props) {
     return list;
   };
 
-  const getSession = async (
-    nodeID: number,
-    sessionID: number | undefined = undefined
-  ) => {
+  const getSession = async (nodeID: number, sessionID: number | 'latest') => {
     if (!accessToken) return [];
 
     if (MOCK_DATA) {

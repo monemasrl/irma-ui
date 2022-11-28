@@ -98,11 +98,11 @@ type SessionResponse = {
 const getSession = async (
   token: string,
   nodeID: number,
-  sessionID: number | undefined = undefined
+  sessionID: number | 'latest'
 ) => {
   let url = `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/session`;
 
-  if (sessionID) {
+  if (sessionID !== 'latest') {
     url += '/' + sessionID;
   }
 

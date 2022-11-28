@@ -173,7 +173,7 @@ const BoxStaker: FC<BoxStakerProps> = ({ node, setStakerClicked }) => {
   console.log('alertInfo', alertInfo);
   //const sessioneCorrente = alertInfo?.alertID;
 
-  const getData = async (id: number) => {
+  const getData = async (id: number | 'latest') => {
     const readings = await userSharedData.getSession(node.nodeID, id);
     setReadings(readings);
 
@@ -189,7 +189,7 @@ const BoxStaker: FC<BoxStakerProps> = ({ node, setStakerClicked }) => {
   };
 
   useEffect(() => {
-    getData(-1);
+    getData('latest');
   }, []);
 
   useEffect(() => {
