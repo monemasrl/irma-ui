@@ -4,18 +4,12 @@ import { FiUser, FiSettings, FiList } from 'react-icons/fi';
 import { UserContext } from '../../context/user-context';
 import UserMenu from './userMenu';
 import OptionMenu from './optionMenu';
-import User from '../../typings/user';
 import UserList from './userList';
-type Props = {
-  userList?: User[];
-  userData?: User;
-};
-const Navbar: FC<Props> = ({ userList, userData }) => {
+
+const Navbar: FC = () => {
   const [openMenu, setOpenMenu] = useState(false);
   const [openSettings, setOpenSettings] = useState(false);
   const [openLista, setOpenLista] = useState(false);
-
-  console.log(userList, userData);
 
   const userSharedData = useContext(UserContext);
 
@@ -28,7 +22,7 @@ const Navbar: FC<Props> = ({ userList, userData }) => {
         >
           <FiUser />
         </div>
-        {userData?.role === 'admin' && (
+        {userSharedData.user?.role === 'admin' && (
           <div
             className={style.svg}
             onClick={() => setOpenLista(true)}
@@ -56,8 +50,6 @@ const Navbar: FC<Props> = ({ userList, userData }) => {
         userSharedData={userSharedData}
       />
       <UserList
-        userList={userList}
-        userData={userData}
         openLista={openLista}
         setOpenLista={setOpenLista}
       />
