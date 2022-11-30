@@ -11,6 +11,9 @@ section.settingSensore {
   min-height: 100%;
   z-index: 100;
 }
+.title {
+  margin: 0;
+}
 .settingSensoriBtn {
   font-size: 0.9rem;
   position: absolute;
@@ -20,6 +23,15 @@ section.settingSensore {
   padding: 10px 10px 25px 10px;
   right: 4rem;
   background-color: $navbarButtons;
+}
+.sensoriSetBtn {
+  padding: 10px 20px;
+  height: auto;
+  display: block;
+  margin: 0 10px 0 auto;
+  font-size: 1rem;
+  vertical-align: middle;
+  line-height: 1;
 }
 .settingSensoriBtnBack {
   font-size: 0.9rem;
@@ -34,7 +46,7 @@ input {
   margin-bottom: 1rem;
   border: none;
   padding: 0.5rem;
-  border-radius: 10px;
+  border-radius: 6px;
   outline: none;
   background-color: white !important;
   width: 100%;
@@ -42,8 +54,12 @@ input {
 }
 .singleSensor {
   position: relative;
+  margin-bottom: 23px;
   &:first-child {
     margin-top: 2rem;
+  }
+  &:last-of-type {
+    margin-bottom: 0rem;
   }
   h3 {
     font-size: 1.5rem;
@@ -61,6 +77,18 @@ input {
   }
 }
 .wrapperSetting {
+  header {
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    .demoBtn {
+      height: auto;
+      padding: 10px;
+      font-size: 0.8rem;
+      background-color: #8498a6;
+      color: white;
+    }
+  }
   h3 {
     text-transform: uppercase;
   }
@@ -79,7 +107,7 @@ input {
   fieldset {
     display: flex;
     align-items: center;
-    padding: 11px 6px;
+    padding: 7px 6px;
     border-radius: 10px;
     background-color: #aebdc7;
     border: 0;
