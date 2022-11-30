@@ -171,7 +171,6 @@ const BoxStaker: FC<BoxStakerProps> = ({ node, setStakerClicked }) => {
   const isMobile = useMediaQuery('(max-width: 760px)');
 
   console.log('alertInfo', alertInfo);
-  //const sessioneCorrente = alertInfo?.alertID;
 
   const getData = async (id: number | 'latest') => {
     const readings = await userSharedData.getSession(node.nodeID, id);
@@ -180,11 +179,16 @@ const BoxStaker: FC<BoxStakerProps> = ({ node, setStakerClicked }) => {
     const IDs = await userSharedData.getSessionIDs(node.nodeID);
     setSessionIDList(IDs);
 
-    if (node.state === 'alert-ready' || node.state === 'alert-running') {
+    if (
+      (node.state === 'alert-ready' || node.state === 'alert-running') &&
+      node.unhandledAlertIDs.length
+    ) {
       const alertData = await userSharedData.getAlertInfo(
         node.unhandledAlertIDs[0]
       );
       setAlertInfo(alertData);
+    } else {
+      setAlertInfo(undefined);
     }
   };
 
