@@ -21,9 +21,9 @@ type Props = {
 
 const UserList: FC<Props> = ({ openLista, setOpenLista }) => {
   const userSharedData = useContext<IUserContext>(UserContext);
-  const [userList, setUserList] = useState<User[]>();
-  const [formUser, setFormUser] = useState(false);
-  const [idUtente, setIdUtente] = useState('');
+  const [userList, setUserList] = useState<User[]>([]);
+  const [userFormOpen, setUserFormOpen] = useState(false);
+  const [selectedUser, setSelectedUser] = useState<User | undefined>(undefined);
 
   useEffect(() => {
     userSharedData.getUserList().then((item) => setUserList(item));
@@ -50,8 +50,8 @@ const UserList: FC<Props> = ({ openLista, setOpenLista }) => {
             <button
               className="addUser"
               onClick={() => {
-                setFormUser(true);
-                setIdUtente('');
+                setSelectedUser(undefined);
+                setUserFormOpen(true);
               }}
             >
               Aggiungi utente
@@ -63,8 +63,8 @@ const UserList: FC<Props> = ({ openLista, setOpenLista }) => {
                   <li key={item.id}>
                     <span
                       onClick={() => {
-                        setIdUtente(item.id);
-                        setFormUser(true);
+                        setSelectedUser(item);
+                        setUserFormOpen(true);
                       }}
                     >
                       <FiEdit />
@@ -78,11 +78,9 @@ const UserList: FC<Props> = ({ openLista, setOpenLista }) => {
         )}
       </AnimatePresence>
       <UserForm
-        idUtente={idUtente}
-        userList={userList}
-        userData={userSharedData.user}
-        formUser={formUser}
-        setFormUser={setFormUser}
+        selectedUser={selectedUser}
+        userFormOpen={userFormOpen}
+        setUserFormOpen={setUserFormOpen}
       />
     </>
   );

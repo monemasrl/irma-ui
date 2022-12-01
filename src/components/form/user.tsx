@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { useForm } from 'react-hook-form';
+import { SubmitHandler, useForm } from 'react-hook-form';
 import User from '../../typings/user';
 
 // TODO: rivedere tipo alertConfirm
@@ -11,12 +11,15 @@ type FormValues = {
   role: 'admin' | 'standard';
   Mobile_number: string;
 };
+
 type Props = {
-  datiUtentePerForm?: User;
+  selectedUser?: User;
 };
-const UserRegistrationForm: FC<Props> = ({ datiUtentePerForm }) => {
+
+const UserRegistrationForm: FC<Props> = ({ selectedUser }) => {
   const {
     register,
+    handleSubmit,
     formState: { errors },
   } = useForm<FormValues>();
 
@@ -26,23 +29,31 @@ const UserRegistrationForm: FC<Props> = ({ datiUtentePerForm }) => {
     }
     return label;
   }
+
+  const onSubmit: SubmitHandler<FormValues> = (data) => {
+    console.log(data);
+  };
+
   return (
-    <form id="userForm">
+    <form
+      id="userForm"
+      onSubmit={handleSubmit(onSubmit)}
+    >
       <input
         type="text"
-        placeholder={inputPlacehoder('Nome', datiUtentePerForm?.first_name)}
+        placeholder={inputPlacehoder('Nome', selectedUser?.first_name)}
         {...register('First_name', { required: true, maxLength: 80 })}
       />
       {errors.alertConfirm && <span> (Campo Obbligatorio)</span>}
       <input
         type="text"
-        placeholder={inputPlacehoder('Cognome', datiUtentePerForm?.last_name)}
+        placeholder={inputPlacehoder('Cognome', selectedUser?.last_name)}
         {...register('Last_name', { required: true, maxLength: 100 })}
       />
       {errors.alertConfirm && <span> (Campo Obbligatorio)</span>}
       <input
         type="text"
-        placeholder={inputPlacehoder('Email', datiUtentePerForm?.email)}
+        placeholder={inputPlacehoder('Email', selectedUser?.email)}
         {...register('Email', { required: true, pattern: /^\S+@\S+$/i })}
       />
       {errors.alertConfirm && <span> (Campo Obbligatorio)</span>}
@@ -63,20 +74,20 @@ const UserRegistrationForm: FC<Props> = ({ datiUtentePerForm }) => {
         <option
           value=""
           disabled
-          selected={datiUtentePerForm ? false : true}
+          selected={selectedUser ? false : true}
           hidden
         >
           Ruolo
         </option>
         <option
           value="admin"
-          selected={datiUtentePerForm?.role === 'admin' ? true : false}
+          selected={selectedUser?.role === 'admin' ? true : false}
         >
           Admin
         </option>
         <option
           value="standard"
-          selected={datiUtentePerForm?.role === 'standard' ? true : false}
+          selected={selectedUser?.role === 'standard' ? true : false}
         >
           Standard
         </option>
