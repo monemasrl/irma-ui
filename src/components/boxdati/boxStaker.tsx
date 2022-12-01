@@ -329,7 +329,9 @@ const BoxStaker: FC<BoxStakerProps> = ({ node, setStakerClicked }) => {
           node={node}
         />
       )}
-      {sessionIDList.length !== 0 && !isMobile && <SettingSensori />}
+      {sessionIDList.length !== 0 && !isMobile && (
+        <SettingSensori node={node} />
+      )}
     </motion.div>
   );
 };

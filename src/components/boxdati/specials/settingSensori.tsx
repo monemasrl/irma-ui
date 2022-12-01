@@ -1,9 +1,46 @@
 import { motion } from 'framer-motion';
-import React, { FC, useState } from 'react';
+import React, { FC, useState, useContext } from 'react';
 import { FiSettings, FiSave } from 'react-icons/fi';
+import Node from '../../../typings/node';
 import style from './settingSensori.module.scss';
+import { UserContext } from '../../../context/user-context';
+import CommandType from '../../../utils/command';
 
-const SettingSensori: FC = () => {
+type DemoButtonProps = {
+  demoNumber: 1 | 2;
+  applicationID: string;
+  nodeID: number;
+};
+
+const DemoButton: FC<DemoButtonProps> = ({
+  demoNumber,
+  applicationID,
+  nodeID,
+}) => {
+  const userSharedData = useContext(UserContext);
+
+  const sendDemoCommand = () => {
+    if (demoNumber === 1) {
+      userSharedData.sendCommand(applicationID, nodeID, CommandType.SET_DEMO_1);
+      return;
+    }
+
+    userSharedData.sendCommand(applicationID, nodeID, CommandType.SET_DEMO_2);
+  };
+
+  return (
+    <button
+      onClick={sendDemoCommand}
+      className={style.demoBtn}
+    >{`Demo${demoNumber}`}</button>
+  );
+};
+
+type Props = {
+  node: Node;
+};
+
+const SettingSensori: FC<Props> = ({ node }) => {
   const [open, setOpen] = useState(false);
   const variants = {
     open: { top: 0 },
@@ -44,8 +81,16 @@ const SettingSensori: FC = () => {
               <h3 className={style.title}>Setting sensori</h3>
             </div>
             <div className={style.demo}>
-              <button className={style.demoBtn}>Demo1</button>
-              <button className={style.demoBtn}>Demo2</button>
+              <DemoButton
+                demoNumber={1}
+                nodeID={node.nodeID}
+                applicationID={node.application}
+              />
+              <DemoButton
+                demoNumber={2}
+                nodeID={node.nodeID}
+                applicationID={node.application}
+              />
             </div>
           </header>
           <form action="">
