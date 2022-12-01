@@ -171,31 +171,35 @@ const BoxStaker: FC<BoxStakerProps> = ({ node, setStakerClicked }) => {
   const isMobile = useMediaQuery('(max-width: 760px)');
 
   console.log('alertInfo', alertInfo);
-  //const sessioneCorrente = alertInfo?.alertID;
 
-  const getData = async (id: number) => {
+  const getData = async (id: number | 'latest') => {
     const readings = await userSharedData.getSession(node.nodeID, id);
     setReadings(readings);
 
     const IDs = await userSharedData.getSessionIDs(node.nodeID);
     setSessionIDList(IDs);
 
-    if (node.state === 'alert-ready' || node.state === 'alert-running') {
+    if (
+      (node.state === 'alert-ready' || node.state === 'alert-running') &&
+      node.unhandledAlertIDs.length
+    ) {
       const alertData = await userSharedData.getAlertInfo(
         node.unhandledAlertIDs[0]
       );
       setAlertInfo(alertData);
+    } else {
+      setAlertInfo(undefined);
     }
   };
 
   useEffect(() => {
-    getData(-1);
+    getData('latest');
   }, []);
 
   useEffect(() => {
     userSharedData.socket?.on('change-reading', () => {
       console.log('[SocketIO] Detected change');
-      getData(-1);
+      getData('latest');
     });
     console.log(sessionIDList);
 
@@ -259,7 +263,7 @@ const BoxStaker: FC<BoxStakerProps> = ({ node, setStakerClicked }) => {
                   node.state === 'rec' ||
                   node.state === 'alert-running') && (
                   <RecButton
-                    applicationID={node.applicationID}
+                    applicationID={node.application}
                     nodeID={node.nodeID}
                     type={
                       node.state === 'alert-running' ? 'alert-rec' : node.state

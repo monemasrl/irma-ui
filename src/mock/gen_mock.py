@@ -27,7 +27,7 @@ for nSession in range(2):
                             "sessionID": sessionID,
                             "readingID": readingID,
                             "canID": canID,
-                            "alertID": "1234" if len(alerts) == 0 else "5678",
+                            "id": "1234" if len(alerts) == 0 else "5678",
                             "raisedAt": readingID + 10,
                         }
                     )

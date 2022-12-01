@@ -16,39 +16,18 @@ export interface BackendError {
 
 interface AuthResponse {
   access_token: string;
-  refresh_token: string;
 }
 
-const authenticate = async (username: string, password: string) => {
+const authenticate = async (email: string, password: string) => {
   const response = await axios.post<AuthResponse>(
-    `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/jwt/authenticate`,
+    `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/jwt/`,
     {
-      username: username,
+      email: email,
       password: password,
     }
   );
 
   console.log('login', response);
-
-  return [response.data.access_token, response.data.refresh_token];
-};
-
-interface RefreshResponse {
-  access_token: string;
-}
-
-const refresh = async (refreshToken: string) => {
-  const response = await axios.post<RefreshResponse>(
-    `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/jwt/refresh`,
-    {},
-    {
-      headers: {
-        Authorization: `Bearer ${refreshToken}`,
-      },
-    }
-  );
-
-  console.log('refresh', response);
 
   return response.data.access_token;
 };
@@ -59,7 +38,7 @@ interface OrgsListResponse {
 
 const getOrganizationsList = async (token: string) => {
   const response = await axios.get<OrgsListResponse>(
-    `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/organizations/`,
+    `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/organizations`,
     {
       headers: {
         'Content-Type': 'application/json',
@@ -78,7 +57,7 @@ interface AppsListResponse {
 
 const getApplicationsList = async (token: string, orgID: string) => {
   const response = await axios.get<AppsListResponse>(
-    `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/applications/`,
+    `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/applications`,
     {
       headers: {
         'Content-Type': 'application/json',
@@ -116,17 +95,24 @@ type SessionResponse = {
   readings: Reading[];
 };
 
-const getSession = async (token: string, nodeID: number, sessionID: number) => {
-  const response = await axios.get<SessionResponse>(
-    `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/session/`,
-    {
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${token}`,
-      },
-      params: { nodeID: nodeID, sessionID: sessionID },
-    }
-  );
+const getSession = async (
+  token: string,
+  nodeID: number,
+  sessionID: number | 'latest'
+) => {
+  let url = `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/session`;
+
+  if (sessionID !== 'latest') {
+    url += '/' + sessionID;
+  }
+
+  const response = await axios.get<SessionResponse>(url, {
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${token}`,
+    },
+    params: { nodeID: nodeID, sessionID: sessionID },
+  });
 
   console.log('getSession', response);
   return response.data.readings;
@@ -138,7 +124,7 @@ type SessionIDsResponse = {
 
 const getSessionIDs = async (token: string, nodeID: number) => {
   const response = await axios.get<SessionIDsResponse>(
-    `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/session/ids`,
+    `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/sessions`,
     {
       headers: {
         'Content-Type': 'application/json',
@@ -152,32 +138,9 @@ const getSessionIDs = async (token: string, nodeID: number) => {
   return response.data.IDs;
 };
 
-interface ReadingsResponse {
-  readings: Reading[];
-}
-
-const getReadings = async (token: string, nodeIDList: number[]) => {
-  const response = await axios.post<ReadingsResponse>(
-    `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/payload/`,
-    {
-      IDs: nodeIDList,
-    },
-    {
-      headers: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json',
-        Authorization: `Bearer ${token}`,
-      },
-    }
-  );
-
-  console.log('getTotalReadings', response);
-  return response.data.readings;
-};
-
 const getOwnUserInfo = async (token: string) => {
   const response = await axios.get<User>(
-    `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/user/info`,
+    `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/user`,
     {
       headers: {
         Authorization: `Bearer ${token}`,
@@ -191,13 +154,10 @@ const getOwnUserInfo = async (token: string) => {
 
 const getAlertInfo = async (token: string, alertID: string) => {
   const response = await axios.get<AlertInfo>(
-    `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/alert/info`,
+    `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/alert/${alertID}`,
     {
       headers: {
         Authorization: `Bearer ${token}`,
-      },
-      params: {
-        id: alertID,
       },
     }
   );
@@ -212,9 +172,8 @@ const sendCommand = async (
   commandType: CommandType
 ) => {
   const response = await axios.post(
-    `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/payload/command`,
+    `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/command/${commandType}`,
     {
-      command: commandType,
       applicationID: appID,
       nodeID: nodeID,
     },
@@ -237,9 +196,8 @@ const handleAlert = async (
   handleNote: string
 ) => {
   const response = await axios.post(
-    `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/alert/handle`,
+    `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/alert/${alertID}`,
     {
-      alertID: alertID,
       handleNote: handleNote,
       isConfirmed: isConfirmed,
     },
@@ -261,7 +219,7 @@ interface IGetUserListResponse {
 
 const getUserList = async (token: string) => {
   const response = await axios.get<IGetUserListResponse>(
-    `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/user/list`,
+    `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/users`,
     {
       headers: {
         Authorization: `Bearer ${token}`,
@@ -289,14 +247,18 @@ const getUserInfo = async (token: string, userID: string) => {
 const createUser = async (
   token: string,
   email: string,
+  first_name: string,
+  last_name: string,
   password: string,
   role: Role
 ) => {
   const response = await axios.post(
-    `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/user/create`,
+    `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/user`,
     {
       email: email,
       password: password,
+      first_name: first_name,
+      last_name: last_name,
       role: role,
     },
     {
@@ -314,6 +276,8 @@ const updateUser = async (
   token: string,
   userID: string,
   email: string,
+  first_name: string,
+  last_name: string,
   oldPassword: string,
   newPassword: string,
   role: Role
@@ -322,6 +286,8 @@ const updateUser = async (
     `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/user/${userID}`,
     {
       email: email,
+      first_name: first_name,
+      last_name: last_name,
       oldPassword: oldPassword,
       newPassword: newPassword,
       role: role,
@@ -352,11 +318,9 @@ const deleteUser = async (token: string, userID: string) => {
 
 const Microservice = {
   authenticate,
-  refresh,
   getOrganizationsList,
   getApplicationsList,
   getNodes,
-  getReadings,
   getSession,
   getSessionIDs,
   getOwnUserInfo,

@@ -1,24 +1,33 @@
-import React, { FC, Dispatch, SetStateAction, useState } from 'react';
+import React, {
+  FC,
+  Dispatch,
+  SetStateAction,
+  useState,
+  useEffect,
+  useContext,
+} from 'react';
 import User from '../../typings/user';
 import style from './navbar.module.scss';
 import { FiEdit } from 'react-icons/fi';
 import { AnimatePresence, motion } from 'framer-motion';
 import { CloseIcon } from '../ui/ui';
 import UserForm from './userForm';
+import { IUserContext, UserContext } from '../../context/user-context';
+
 type Props = {
-  userList?: User[];
-  userData?: User;
   setOpenLista: Dispatch<SetStateAction<boolean>>;
   openLista: boolean;
 };
-const UserList: FC<Props> = ({
-  userList,
-  openLista,
-  setOpenLista,
-  userData,
-}) => {
+
+const UserList: FC<Props> = ({ openLista, setOpenLista }) => {
+  const userSharedData = useContext<IUserContext>(UserContext);
+  const [userList, setUserList] = useState<User[]>();
   const [formUser, setFormUser] = useState(false);
   const [idUtente, setIdUtente] = useState('');
+
+  useEffect(() => {
+    userSharedData.getUserList().then((item) => setUserList(item));
+  }, [userSharedData]);
 
   return (
     <>
@@ -71,7 +80,7 @@ const UserList: FC<Props> = ({
       <UserForm
         idUtente={idUtente}
         userList={userList}
-        userData={userData}
+        userData={userSharedData.user}
         formUser={formUser}
         setFormUser={setFormUser}
       />
