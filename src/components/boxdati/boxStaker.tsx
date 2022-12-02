@@ -323,15 +323,13 @@ const BoxStaker: FC<BoxStakerProps> = ({ node, setStakerClicked }) => {
           )}
         </section>
       )}
-      {sessionIDList.length !== 0 && !isMobile && (
+      {!isMobile && (
         <StoricoSessioni
           sessionIDList={sessionIDList}
           node={node}
         />
       )}
-      {sessionIDList.length !== 0 && !isMobile && (
-        <SettingSensori node={node} />
-      )}
+      {!isMobile && <SettingSensori node={node} />}
     </motion.div>
   );
 };
