@@ -19,9 +19,9 @@ const BoxDati: FC<Props> = ({ setStakerClicked, stakerClicked, node }) => {
   const share = useContext(ShareContext);
 
   const variants = {
-    initial: { opacity: 0, y: -200 },
+    initial: { opacity: 0, y: 100 },
     animate: { opacity: 1, y: -50 },
-    exit: { opacity: 0, y: -300 },
+    exit: { opacity: 0, y: 100 },
   };
 
   return (

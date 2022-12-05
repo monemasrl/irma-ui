@@ -43,8 +43,8 @@ type Props = {
 const SettingSensori: FC<Props> = ({ node }) => {
   const [open, setOpen] = useState(false);
   const variants = {
-    open: { top: 0 },
-    close: { top: '104%' },
+    open: { x: 0 },
+    close: { x: '104%' },
   };
 
   function handleSubmit(e: React.MouseEvent<HTMLButtonElement>) {

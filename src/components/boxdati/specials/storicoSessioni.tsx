@@ -40,8 +40,8 @@ const StoricoSessioni: FC<Props> = ({ sessionIDList, node }) => {
   }, [sessionIDList]);
 
   const variants = {
-    open: { opacity: 1, y: 0 },
-    close: { opacity: 0, y: 1000 },
+    open: { opacity: 1, x: 0 },
+    close: { opacity: 0, x: '100%' },
   };
   console.log('sessiondata', sessioni);
 
