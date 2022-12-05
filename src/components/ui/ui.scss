@@ -138,10 +138,41 @@ form span {
     width: 300px;
   }
 }
-
-g.recharts-layer.recharts-cartesian-axis-tick {
-  transform: translateX(2px) !important;
-}
-.recharts-tooltip-cursor {
-  display: none !important;
+.custom-tooltip {
+  background-color: #ffffff7c;
+  padding: 10px;
+  border-radius: 5px;
+  .label3 {
+    &::before {
+      content: '';
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin-right: 3px;
+      display: inline-block;
+      background-color: #8fcfe8;
+    }
+  }
+  .label2 {
+    &::before {
+      content: '';
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin-right: 3px;
+      display: inline-block;
+      background-color: #428daa;
+    }
+  }
+  .label1 {
+    &::before {
+      content: '';
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin-right: 3px;
+      display: inline-block;
+      background-color: #00577c;
+    }
+  }
 }

@@ -7,7 +7,6 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
-  Legend,
 } from 'recharts';
 import GraphData from '../../../../typings/graphData';
 import { Sensore } from '../../../../typings/ui';
@@ -15,6 +14,20 @@ import { parseUnixTimestamp } from '../../../../utils/parseDate';
 
 type Props = {
   datiSensore: Sensore[];
+};
+
+const CustomTooltip = ({ active, payload }: any) => {
+  if (active && payload && payload.length) {
+    return (
+      <div className="custom-tooltip">
+        <p className="label3">{`Window3 : ${payload[2].value}`}</p>
+        <p className="label2">{`Window2 : ${payload[1].value}`}</p>
+        <p className="label1">{`Window1 : ${payload[0].value}`}</p>
+      </div>
+    );
+  }
+
+  return null;
 };
 
 const toGraphData = (sensor: Sensore): GraphData => {
@@ -40,12 +53,14 @@ const Graph: FC<Props> = ({ datiSensore }) => {
 
   return (
     <>
-      <div className={style.graphItem}>
-        {' '}
+      <div
+        className={style.graphItem}
+        style={{ height: 200, width: '100%' }}
+      >
         <AreaChart
+          data={datiGraph || []}
           width={500}
           height={200}
-          data={datiGraph || []}
           margin={{
             top: 10,
             right: 30,
@@ -56,7 +71,7 @@ const Graph: FC<Props> = ({ datiSensore }) => {
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="readingID" />
           <YAxis />
-          <Tooltip />
+          <Tooltip content={<CustomTooltip />} />
           <Area
             type="monotone"
             dataKey="window1"
@@ -78,7 +93,6 @@ const Graph: FC<Props> = ({ datiSensore }) => {
             stroke="#8bb0b5"
             fill="#8fcfe8"
           />
-          <Legend />
         </AreaChart>
       </div>
     </>

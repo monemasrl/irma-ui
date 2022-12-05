@@ -1,5 +1,5 @@
 import React, { FC, useState, useContext, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import style from './storicoSessioni.module.scss';
 import { UserContext } from '../../../context/user-context';
 import Node from '../../../typings/node';
@@ -54,92 +54,93 @@ const StoricoSessioni: FC<Props> = ({ sessionIDList, node }) => {
       >
         Storico
       </button>
-      <motion.section
-        className={style.storicoSensore}
-        variants={variants}
-        animate={storico && sessionIDList.length ? 'open' : 'close'}
-        transition={{
-          duration: 0.5,
-          default: { ease: 'easeInOut' },
-        }}
-      >
-        {storico && (
-          <>
-            <div className={style.storicoLayoutLeft}>
-              <button
-                className={style.storicoBtnBack}
-                onClick={() => setStorico((prev) => !prev)}
-              >
-                Back
-              </button>
-              <h3>Storico sessioni</h3>
+      <AnimatePresence>
+        <motion.section
+          className={style.storicoSensore}
+          variants={variants}
+          animate={storico && sessionIDList.length ? 'open' : 'close'}
+          transition={{
+            duration: 0.5,
+            default: { ease: 'easeInOut' },
+          }}
+        >
+          <div className={style.storicoLayoutLeft}>
+            <button
+              className={style.storicoBtnBack}
+              onClick={() => setStorico((prev) => !prev)}
+            >
+              Back
+            </button>
+            <h3>Storico sessioni</h3>
+            <ul>
+              {sessionIDList.map((item, index) => {
+                return (
+                  <li
+                    onClick={() => {
+                      getData(item);
+                      setCurrentSessionActive(item);
+                    }}
+                    key={item}
+                    className={`${
+                      currentSessionActive === sessionIDList[index]
+                        ? style['active']
+                        : ''
+                    }`}
+                  >
+                    <div>
+                      <AiFillCalendar />
+                      {parseUnixTimestamp(item, false, true)}
+                    </div>
+                    <div>
+                      <AiFillClockCircle />
+                      {parseUnixTimestamp(item, true, false)}
+                    </div>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+          <div className={style.storicoLayoutRight}>
+            <div className={style.navRilevatore}>
+              <h4>Rilevatore</h4>
               <ul>
-                {sessionIDList.map((item, index) => {
+                {sessioni.map((item) => {
                   return (
                     <li
-                      onClick={() => {
-                        getData(item);
-                        setCurrentSessionActive(item);
-                      }}
-                      key={item}
+                      key={item.id}
                       className={`${
-                        currentSessionActive === sessionIDList[index]
-                          ? style['active']
-                          : ''
-                      }`}
+                        sessioni[rilevatoreId - 1] === item && style.active
+                      }
+                    } ${style.liRilevatore}`}
+                      onClick={() => setRilevatoreId(item.id)}
                     >
-                      <div>
-                        <AiFillCalendar />
-                        {parseUnixTimestamp(item, false, true)}
-                      </div>
-                      <div>
-                        <AiFillClockCircle />
-                        {parseUnixTimestamp(item, true, false)}
-                      </div>
+                      {item.id}
                     </li>
                   );
                 })}
               </ul>
             </div>
-            <div className={style.storicoLayoutRight}>
-              <div className={style.navRilevatore}>
-                <h4>Rilevatore</h4>
-                <ul>
-                  {sessioni.map((item) => {
-                    return (
-                      <li
-                        key={item.id}
-                        className={`${
-                          sessioni[rilevatoreId - 1] === item && style.active
-                        }
-                  } ${style.liRilevatore}`}
-                        onClick={() => setRilevatoreId(item.id)}
-                      >
-                        {item.id}
-                      </li>
-                    );
-                  })}
-                </ul>
-              </div>
-
-              {sessioni.length ? (
-                <div className={style.graphs}>
+            {sessioni.length ? (
+              <div className={style.graphs}>
+                <div className={style.boxGraphChart}>
                   <h4>Sensore Alto</h4>
                   <Graph datiSensore={sessioni[rilevatoreId - 1]['sensore1']} />
+                </div>
+                <div className={style.boxGraphChart}>
                   <h4>Sensore Basso</h4>
                   <Graph datiSensore={sessioni[rilevatoreId - 1]['sensore2']} />
                 </div>
-              ) : (
-                <Loader
-                  immagineLoader={'/images/cont.svg'}
-                  number={4}
-                  text="Loading Session Data"
-                />
-              )}
-            </div>{' '}
-          </>
-        )}
-      </motion.section>
+              </div>
+            ) : (
+              <Loader
+                immagineLoader={'/images/cont.svg'}
+                number={4}
+                text="Loading Session Data"
+              />
+            )}
+          </div>{' '}
+        </motion.section>
+      </AnimatePresence>
     </>
   );
 };

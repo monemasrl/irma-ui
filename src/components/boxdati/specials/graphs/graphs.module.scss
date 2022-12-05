@@ -5,7 +5,7 @@
   flex: 1;
   height: 100%;
   margin-left: 1rem;
-  margin-top: 1rem;
+
   header {
     display: flex;
     flex-direction: row;
@@ -46,6 +46,8 @@
   }
 
   .boxGraph {
+    overflow: hidden;
+
     h4 {
       margin: 1rem 0 0 0;
     }
@@ -58,6 +60,4 @@
 .graphItem {
   font-size: 12px;
   font-weight: bold;
-  margin: 0 0 1rem 0;
-  height: 220px;
 }
