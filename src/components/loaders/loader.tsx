@@ -5,19 +5,11 @@ type Props = {
   immagineLoader: string;
   number: number;
   text?: string;
+  absolute?: boolean;
 };
 
-function Loader({ immagineLoader, number, text }: Props) {
-  const container = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
+function createLoaderItem(immagine: string, number: number) {
+  const itemNumber = new Array(number).fill(undefined);
   const animation = {
     hidden: { opacity: 0 },
     show: {
@@ -31,25 +23,34 @@ function Loader({ immagineLoader, number, text }: Props) {
     },
   };
 
-  function createLoaderItem(immagine: string, number: number) {
-    const itemNumber = new Array(number).fill(undefined);
-    const y = itemNumber.map((item, index) => {
-      return (
-        <motion.img
-          variants={animation}
-          key={index}
-          src={immagine}
-          alt="cont loader"
-          width={50}
-          height={50}
-        />
-      );
-    });
-    return y;
-  }
+  const y = itemNumber.map((item, index) => {
+    return (
+      <motion.img
+        variants={animation}
+        key={index}
+        src={immagine}
+        alt="cont loader"
+        width={50}
+        height={50}
+      />
+    );
+  });
+  return y;
+}
+
+function Loader({ immagineLoader, number, text, absolute }: Props) {
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
 
   return (
-    <div className="wrapper-loader">
+    <div className={`wrapper-loader ${absolute && 'absolute-position'}`}>
       <motion.div
         variants={container}
         initial="hidden"

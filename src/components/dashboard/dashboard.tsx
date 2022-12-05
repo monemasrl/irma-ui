@@ -77,27 +77,30 @@ const Dashboard: FC<Props> = ({
           </span>
         )}
       </div>
-      {nodes.length ? (
-        nodiOrdinati(nodes, listview).map((item, index) => {
-          return (
-            <BtnStaker
-              key={item.nodeID}
-              state={item.state}
-              code={item.nodeName}
-              index={index}
-              setStakerClicked={setStakerClicked}
-              stakerClicked={stakerClicked}
-              listview={listview}
-            />
-          );
-        })
-      ) : (
-        <Loader
-          immagineLoader={immagineLoader}
-          number={4}
-          text="loading data"
-        />
-      )}
+      <div className={style.nodiStaker}>
+        {nodes.length ? (
+          nodiOrdinati(nodes, listview).map((item, index) => {
+            return (
+              <BtnStaker
+                key={item.nodeID}
+                state={item.state}
+                code={item.nodeName}
+                index={index}
+                setStakerClicked={setStakerClicked}
+                stakerClicked={stakerClicked}
+                listview={listview}
+              />
+            );
+          })
+        ) : (
+          <Loader
+            immagineLoader={immagineLoader}
+            number={4}
+            text="loading data"
+            absolute={true}
+          />
+        )}
+      </div>
     </div>
   );
 };

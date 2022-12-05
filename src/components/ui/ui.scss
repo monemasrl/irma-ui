@@ -79,6 +79,7 @@ form {
   max-width: 400px;
 }
 #userForm {
+  max-width: 400px;
   input {
     display: block;
     margin-bottom: 1rem;
@@ -88,7 +89,12 @@ form {
     outline: none;
     background-color: white !important;
     width: 100%;
-    max-width: 400px;
+  }
+  span {
+    margin-bottom: 1rem;
+    color: $red;
+    text-align: center;
+    line-height: 1;
   }
 }
 .alert form .nota {

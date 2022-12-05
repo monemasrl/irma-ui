@@ -44,19 +44,19 @@ const UserRegistrationForm: FC<Props> = ({ selectedUser }) => {
         placeholder={inputPlacehoder('Nome', selectedUser?.first_name)}
         {...register('First_name', { required: true, maxLength: 80 })}
       />
-      {errors.alertConfirm && <span> (Campo Obbligatorio)</span>}
+      {errors.First_name && <span> (Campo Obbligatorio)</span>}
       <input
         type="text"
         placeholder={inputPlacehoder('Cognome', selectedUser?.last_name)}
         {...register('Last_name', { required: true, maxLength: 100 })}
       />
-      {errors.alertConfirm && <span> (Campo Obbligatorio)</span>}
+      {errors.Last_name && <span> (Campo Obbligatorio)</span>}
       <input
         type="text"
         placeholder={inputPlacehoder('Email', selectedUser?.email)}
         {...register('Email', { required: true, pattern: /^\S+@\S+$/i })}
       />
-      {errors.alertConfirm && <span> (Campo Obbligatorio)</span>}
+      {errors.Email && <span> (Campo Obbligatorio)</span>}
       <input
         type="tel"
         placeholder="Telefono"
@@ -66,7 +66,7 @@ const UserRegistrationForm: FC<Props> = ({ selectedUser }) => {
           maxLength: 12,
         })}
       />
-      {errors.alertConfirm && <span> (Campo Obbligatorio)</span>}
+      {errors.Mobile_number && <span> (Campo Obbligatorio)</span>}
       <select
         className="user-select"
         {...register('role', { required: true })}
@@ -92,7 +92,7 @@ const UserRegistrationForm: FC<Props> = ({ selectedUser }) => {
           Standard
         </option>
       </select>
-      {errors.alertConfirm && <span> (Campo Obbligatorio)</span>}
+      {errors.role && <span> (Campo Obbligatorio)</span>}
       <button
         className="user-form"
         type="submit"

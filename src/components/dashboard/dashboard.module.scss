@@ -2,6 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   min-height: 500px;
+  height: 100%;
   width: 552px;
   position: relative;
   box-shadow: 0 0 3px #b4b4b4;
@@ -21,7 +22,8 @@
   }
 }
 .dashboard.lista {
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 .switcherList {
   position: absolute;
@@ -34,4 +36,21 @@
 }
 .switcherList span {
   cursor: pointer;
+}
+.nodiStaker {
+  display: flex;
+  flex-wrap: wrap;
+  max-height: 700px;
+  overflow: auto;
+  width: 100%;
+}
+
+.nodiStaker::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.nodiStaker {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
