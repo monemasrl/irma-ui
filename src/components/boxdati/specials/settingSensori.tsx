@@ -43,6 +43,7 @@ type Props = {
 const SettingSensori: FC<Props> = ({ node }) => {
   const [open, setOpen] = useState(false);
   const variants = {
+    initial: { x: '104%' },
     open: { x: 0 },
     close: { x: '104%' },
   };
@@ -62,6 +63,7 @@ const SettingSensori: FC<Props> = ({ node }) => {
       <motion.section
         className={style.settingSensore}
         variants={variants}
+        initial={'initial'}
         animate={open ? 'open' : 'close'}
         transition={{
           duration: 0.5,
