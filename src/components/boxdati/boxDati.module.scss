@@ -29,7 +29,7 @@
 
     @media screen and (max-width: 760px) {
       max-width: 340px;
-      min-height: 380px;
+      height: auto;
       box-shadow: 0 0 10px rgb(150, 150, 150);
     }
   }
@@ -191,6 +191,9 @@
   letter-spacing: -3px;
   margin-left: 5px;
   position: relative;
+  @media screen and (max-width: 996px) {
+    font-size: 30px;
+  }
 }
 
 .datoLabel svg {
@@ -358,7 +361,11 @@
   margin: 4px;
   padding: 17px 17px;
 }
-
+.iconastato {
+  @media screen and(max-width:996px) {
+    display: none;
+  }
+}
 @keyframes lanciaInizio {
   0% {
     transform: rotate(-52deg);
