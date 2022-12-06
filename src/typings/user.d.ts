@@ -4,6 +4,7 @@ type User = {
   first_name: string;
   last_name: string;
   role: Role;
+  phoneNumber?: number;
 };
 
 export type Role = 'standard' | 'admin';

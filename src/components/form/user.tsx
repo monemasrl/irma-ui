@@ -8,8 +8,8 @@ type FormValues = {
   First_name: string;
   Last_name: string;
   Email: string;
-  role: 'admin' | 'standard';
-  Mobile_number: string;
+  Role: 'admin' | 'standard';
+  Phone_number: string;
 };
 
 type Props = {
@@ -42,6 +42,7 @@ const UserRegistrationForm: FC<Props> = ({ selectedUser }) => {
       <input
         type="text"
         placeholder={inputPlacehoder('Nome', selectedUser?.first_name)}
+        value={selectedUser?.first_name ?? ''}
         {...register('First_name', { required: true, maxLength: 80 })}
       />
       {errors.First_name && <span> (Campo Obbligatorio)</span>}
@@ -49,27 +50,30 @@ const UserRegistrationForm: FC<Props> = ({ selectedUser }) => {
         type="text"
         placeholder={inputPlacehoder('Cognome', selectedUser?.last_name)}
         {...register('Last_name', { required: true, maxLength: 100 })}
+        value={selectedUser?.last_name ?? ''}
       />
       {errors.Last_name && <span> (Campo Obbligatorio)</span>}
       <input
         type="text"
         placeholder={inputPlacehoder('Email', selectedUser?.email)}
         {...register('Email', { required: true, pattern: /^\S+@\S+$/i })}
+        value={selectedUser?.email ?? ''}
       />
       {errors.Email && <span> (Campo Obbligatorio)</span>}
       <input
         type="tel"
         placeholder="Telefono"
-        {...register('Mobile_number', {
+        {...register('Phone_number', {
           required: true,
           minLength: 6,
           maxLength: 12,
         })}
+        value={selectedUser?.phoneNumber ?? ''}
       />
-      {errors.Mobile_number && <span> (Campo Obbligatorio)</span>}
+      {errors.Phone_number && <span> (Campo Obbligatorio)</span>}
       <select
         className="user-select"
-        {...register('role', { required: true })}
+        {...register('Role', { required: true })}
       >
         <option
           value=""
@@ -92,7 +96,7 @@ const UserRegistrationForm: FC<Props> = ({ selectedUser }) => {
           Standard
         </option>
       </select>
-      {errors.role && <span> (Campo Obbligatorio)</span>}
+      {errors.Role && <span> (Campo Obbligatorio)</span>}
       <button
         className="user-form"
         type="submit"
