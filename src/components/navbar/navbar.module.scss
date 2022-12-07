@@ -33,7 +33,8 @@
   padding: 0px 0px 25px 25px;
   box-shadow: 1px 0px 7px #707070;
   @media screen and (max-width: 760px) {
-    width: auto;
+    width: 100%;
+    padding: 10px;
   }
   &.options {
     .wrapperInnerOptions {
