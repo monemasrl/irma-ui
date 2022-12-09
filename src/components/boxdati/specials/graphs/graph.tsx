@@ -7,6 +7,7 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
+  TooltipProps,
 } from 'recharts';
 import GraphData from '../../../../typings/graphData';
 import { Sensore } from '../../../../typings/ui';
@@ -16,7 +17,7 @@ type Props = {
   datiSensore: Sensore[];
 };
 
-const CustomTooltip = ({ active, payload }: any) => {
+const CustomTooltip = ({ active, payload }: TooltipProps<number, string>) => {
   if (active && payload && payload.length) {
     return (
       <div className="custom-tooltip">
