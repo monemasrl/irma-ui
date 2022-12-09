@@ -323,7 +323,7 @@ const BoxStaker: FC<BoxStakerProps> = ({ node, setStakerClicked }) => {
           )}
         </section>
       )}
-      {!isMobile && (
+      {sessionIDList.length !== 0 && !isMobile && (
         <StoricoSessioni
           sessionIDList={sessionIDList}
           node={node}
