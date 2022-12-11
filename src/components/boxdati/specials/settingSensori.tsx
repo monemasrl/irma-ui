@@ -82,6 +82,70 @@ const formValuesToNodeSettings = (values: FormValues): NodeSettings => {
   return settings;
 };
 
+const nodeSettingsToFormValues = (settings: NodeSettings): FormValues => {
+  return {
+    d1s1hv: '' + settings['d1']?.['s1']?.['hv'],
+    d1s1w1_low: '' + settings['d1']?.['s1']?.['w1_low'],
+    d1s1w1_high: '' + settings['d1']?.['s1']?.['w1_high'],
+    d1s1w2_low: '' + settings['d1']?.['s1']?.['w2_low'],
+    d1s1w2_high: '' + settings['d1']?.['s1']?.['w2_high'],
+    d1s1w3_low: '' + settings['d1']?.['s1']?.['w3_low'],
+    d1s1w3_high: '' + settings['d1']?.['s1']?.['w3_high'],
+    d1s2hv: '' + settings['d1']?.['s2']?.['hv'],
+    d1s2w1_low: '' + settings['d1']?.['s2']?.['w1_low'],
+    d1s2w1_high: '' + settings['d1']?.['s2']?.['w1_high'],
+    d1s2w2_low: '' + settings['d1']?.['s2']?.['w2_low'],
+    d1s2w2_high: '' + settings['d1']?.['s2']?.['w2_high'],
+    d1s2w3_low: '' + settings['d1']?.['s2']?.['w3_low'],
+    d1s2w3_high: '' + settings['d1']?.['s2']?.['w3_high'],
+
+    d2s1hv: '' + settings['d2']?.['s1']?.['hv'],
+    d2s1w1_low: '' + settings['d2']?.['s1']?.['w1_low'],
+    d2s1w1_high: '' + settings['d2']?.['s1']?.['w1_high'],
+    d2s1w2_low: '' + settings['d2']?.['s1']?.['w2_low'],
+    d2s1w2_high: '' + settings['d2']?.['s1']?.['w2_high'],
+    d2s1w3_low: '' + settings['d2']?.['s1']?.['w3_low'],
+    d2s1w3_high: '' + settings['d2']?.['s1']?.['w3_high'],
+    d2s2hv: '' + settings['d2']?.['s2']?.['hv'],
+    d2s2w1_low: '' + settings['d2']?.['s2']?.['w1_low'],
+    d2s2w1_high: '' + settings['d2']?.['s2']?.['w1_high'],
+    d2s2w2_low: '' + settings['d2']?.['s2']?.['w2_low'],
+    d2s2w2_high: '' + settings['d2']?.['s2']?.['w2_high'],
+    d2s2w3_low: '' + settings['d2']?.['s2']?.['w3_low'],
+    d2s2w3_high: '' + settings['d2']?.['s2']?.['w3_high'],
+
+    d3s1hv: '' + settings['d3']?.['s1']?.['hv'],
+    d3s1w1_low: '' + settings['d3']?.['s1']?.['w1_low'],
+    d3s1w1_high: '' + settings['d3']?.['s1']?.['w1_high'],
+    d3s1w2_low: '' + settings['d3']?.['s1']?.['w2_low'],
+    d3s1w2_high: '' + settings['d3']?.['s1']?.['w2_high'],
+    d3s1w3_low: '' + settings['d3']?.['s1']?.['w3_low'],
+    d3s1w3_high: '' + settings['d3']?.['s1']?.['w3_high'],
+    d3s2hv: '' + settings['d3']?.['s2']?.['hv'],
+    d3s2w1_low: '' + settings['d3']?.['s2']?.['w1_low'],
+    d3s2w1_high: '' + settings['d3']?.['s2']?.['w1_high'],
+    d3s2w2_low: '' + settings['d3']?.['s2']?.['w2_low'],
+    d3s2w2_high: '' + settings['d3']?.['s2']?.['w2_high'],
+    d3s2w3_low: '' + settings['d3']?.['s2']?.['w3_low'],
+    d3s2w3_high: '' + settings['d3']?.['s2']?.['w3_high'],
+
+    d4s1hv: '' + settings['d4']?.['s1']?.['hv'],
+    d4s1w1_low: '' + settings['d4']?.['s1']?.['w1_low'],
+    d4s1w1_high: '' + settings['d4']?.['s1']?.['w1_high'],
+    d4s1w2_low: '' + settings['d4']?.['s1']?.['w2_low'],
+    d4s1w2_high: '' + settings['d4']?.['s1']?.['w2_high'],
+    d4s1w3_low: '' + settings['d4']?.['s1']?.['w3_low'],
+    d4s1w3_high: '' + settings['d4']?.['s1']?.['w3_high'],
+    d4s2hv: '' + settings['d4']?.['s2']?.['hv'],
+    d4s2w1_low: '' + settings['d4']?.['s2']?.['w1_low'],
+    d4s2w1_high: '' + settings['d4']?.['s2']?.['w1_high'],
+    d4s2w2_low: '' + settings['d4']?.['s2']?.['w2_low'],
+    d4s2w2_high: '' + settings['d4']?.['s2']?.['w2_high'],
+    d4s2w3_low: '' + settings['d4']?.['s2']?.['w3_low'],
+    d4s2w3_high: '' + settings['d4']?.['s2']?.['w3_high'],
+  };
+};
+
 export type FormValues = {
   d1s1hv?: string;
   d1s1w1_low?: string;
@@ -156,7 +220,8 @@ const SettingsPanel: FC<Props> = ({ node }) => {
     open: { x: 0 },
     close: { x: '104%' },
   };
-  const { register, handleSubmit } = useForm<FormValues>();
+  console.log(defaultValues);
+  console.log(nodeSettingsToFormValues(defaultValues));
   const userSharedData = useContext(UserContext);
 
   useEffect(() => {
@@ -175,6 +240,8 @@ const SettingsPanel: FC<Props> = ({ node }) => {
       userSharedData.socket?.off('settings-update');
     };
   }, []);
+
+  const { register, handleSubmit } = useForm<FormValues>();
 
   const detectors = [1, 2, 3, 4] as const;
   const sensors = [1, 2] as const;
@@ -225,6 +292,7 @@ const SettingsPanel: FC<Props> = ({ node }) => {
           <form
             onSubmit={handleSubmit((data) => {
               const settings = formValuesToNodeSettings(data);
+              console.log(settings);
               userSharedData.updateNodeSettings(node.nodeID, settings);
             })}
           >
