@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import React, { FC, useState, useContext } from 'react';
+import React, { FC, useState, useContext, useEffect } from 'react';
 import { FiSettings, FiSave } from 'react-icons/fi';
 import Node from '../../../typings/node';
 import style from './settingSensori.module.scss';
@@ -150,12 +150,31 @@ type Props = {
 
 const SettingsPanel: FC<Props> = ({ node }) => {
   const [open, setOpen] = useState(false);
+  const [defaultValues, setDefaultValues] = useState<NodeSettings>({});
   const variants = {
     initial: { x: '104%' },
     open: { x: 0 },
     close: { x: '104%' },
   };
   const { register, handleSubmit } = useForm<FormValues>();
+  const userSharedData = useContext(UserContext);
+
+  useEffect(() => {
+    userSharedData.getNodeSettings(node.nodeID).then((settings) => {
+      setDefaultValues(settings);
+    });
+
+    userSharedData.socket?.on('settings-update', () => {
+      console.log('[SocketIO] Detected settings update');
+      userSharedData.getNodeSettings(node.nodeID).then((settings) => {
+        setDefaultValues(settings);
+      });
+    });
+
+    return () => {
+      userSharedData.socket?.off('settings-update');
+    };
+  }, []);
 
   const detectors = [1, 2, 3, 4] as const;
   const sensors = [1, 2] as const;
@@ -204,9 +223,10 @@ const SettingsPanel: FC<Props> = ({ node }) => {
             </div>
           </header>
           <form
-            onSubmit={handleSubmit((data) =>
-              console.log(formValuesToNodeSettings(data))
-            )}
+            onSubmit={handleSubmit((data) => {
+              const settings = formValuesToNodeSettings(data);
+              userSharedData.updateNodeSettings(node.nodeID, settings);
+            })}
           >
             {/* Create 4 detectors */}
             {detectors.map((detector) => {
@@ -229,6 +249,9 @@ const SettingsPanel: FC<Props> = ({ node }) => {
                           <input
                             type="number"
                             className={style.hv}
+                            defaultValue={
+                              defaultValues[`d${detector}`]?.[`s${sensor}`]?.hv
+                            }
                             {...register(`d${detector}s${sensor}hv`)}
                           />
                         </fieldset>
@@ -244,6 +267,11 @@ const SettingsPanel: FC<Props> = ({ node }) => {
                                   {...register(
                                     `d${detector}s${sensor}w${window}_low`
                                   )}
+                                  defaultValue={
+                                    defaultValues[`d${detector}`]?.[
+                                      `s${sensor}`
+                                    ]?.[`w${window}_low`]
+                                  }
                                 />
                               </fieldset>
                               <fieldset>
@@ -253,6 +281,11 @@ const SettingsPanel: FC<Props> = ({ node }) => {
                                   {...register(
                                     `d${detector}s${sensor}w${window}_high`
                                   )}
+                                  defaultValue={
+                                    defaultValues[`d${detector}`]?.[
+                                      `s${sensor}`
+                                    ]?.[`w${window}_low`]
+                                  }
                                 />
                               </fieldset>
                             </React.Fragment>

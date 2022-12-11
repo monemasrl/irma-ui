@@ -20,6 +20,7 @@ import { AppOption } from '../mock/mock_data';
 import { io, Socket } from 'socket.io-client';
 import User, { Role } from '../typings/user';
 import { AlertInfo } from '../typings/alert';
+import { NodeSettings } from '../typings/nodeSettings';
 
 const WEBSOCKET_URL = process.env.REACT_APP_WEBSOCKET_URL || 'http://localhost';
 const WEBSOCKET_PORT = process.env.REACT_APP_WEBSOCKET_PORT || '5000';
@@ -83,6 +84,8 @@ export interface IUserContext {
     role: Role
   ) => Promise<void>;
   deleteUser: (userID: string) => Promise<void>;
+  getNodeSettings: (nodeID: number) => Promise<NodeSettings>;
+  updateNodeSettings: (nodeID: number, settings: NodeSettings) => Promise<void>;
 }
 
 const UserContext = createContext<IUserContext>({} as IUserContext);
@@ -427,6 +430,45 @@ function UserContextProvider({ children }: Props) {
     }
   };
 
+  const getNodeSettings = async (nodeID: number) => {
+    if (!accessToken) return {};
+
+    if (MOCK_DATA) {
+      const MockNodeSettings = (await import('../mock/mock_settings.json'))
+        .default;
+
+      type Indexes = '1' | '2' | '3' | '4' | '5';
+
+      const settings: NodeSettings = MockNodeSettings[('' + nodeID) as Indexes];
+
+      return settings;
+    }
+
+    let settings: NodeSettings = {};
+
+    try {
+      settings = await Microservice.getNodeSettings(accessToken, nodeID);
+    } catch (error) {
+      logoutIfExpired(error);
+    }
+
+    return settings;
+  };
+
+  const updateNodeSettings = async (nodeID: number, settings: NodeSettings) => {
+    if (!accessToken) return;
+
+    if (MOCK_DATA) {
+      return;
+    }
+
+    try {
+      await Microservice.updateNodeSettings(accessToken, nodeID, settings);
+    } catch (error) {
+      logoutIfExpired(error);
+    }
+  };
+
   // Fetch organizations
   useEffect(() => {
     if (!accessToken) return;
@@ -554,6 +596,8 @@ function UserContextProvider({ children }: Props) {
     createUser,
     updateUser,
     deleteUser,
+    getNodeSettings,
+    updateNodeSettings,
   };
 
   return (

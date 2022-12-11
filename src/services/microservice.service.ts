@@ -6,6 +6,7 @@ import Reading from '../typings/reading';
 import Node from '../typings/node';
 import User, { Role } from '../typings/user';
 import { AlertInfo } from '../typings/alert';
+import { NodeSettings } from '../typings/nodeSettings';
 
 const WEBSOCKET_URL = process.env.REACT_APP_WEBSOCKET_URL || 'http://localhost';
 const WEBSOCKET_PORT = process.env.REACT_APP_WEBSOCKET_PORT || '5000';
@@ -316,6 +317,37 @@ const deleteUser = async (token: string, userID: string) => {
   return response;
 };
 
+const getNodeSettings = async (token: string, nodeID: number) => {
+  const response = await axios.get<NodeSettings>(
+    `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/node/${nodeID}/settings`,
+    {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    }
+  );
+
+  return response.data;
+};
+
+const updateNodeSettings = async (
+  token: string,
+  nodeID: number,
+  settings: NodeSettings
+) => {
+  const response = await axios.put(
+    `${WEBSOCKET_URL}:${WEBSOCKET_PORT}/api/node/${nodeID}/settings`,
+    settings,
+    {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    }
+  );
+
+  return response;
+};
+
 const Microservice = {
   authenticate,
   getOrganizationsList,
@@ -332,6 +364,8 @@ const Microservice = {
   createUser,
   updateUser,
   deleteUser,
+  getNodeSettings,
+  updateNodeSettings,
 };
 
 export default Microservice;
