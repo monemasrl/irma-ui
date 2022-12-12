@@ -224,15 +224,19 @@ const SettingsPanel: FC<Props> = ({ node }) => {
   console.log(nodeSettingsToFormValues(defaultValues));
   const userSharedData = useContext(UserContext);
 
+  const { register, handleSubmit, reset } = useForm<FormValues>();
+
   useEffect(() => {
     userSharedData.getNodeSettings(node.nodeID).then((settings) => {
       setDefaultValues(settings);
+      reset();
     });
 
     userSharedData.socket?.on('settings-update', () => {
       console.log('[SocketIO] Detected settings update');
       userSharedData.getNodeSettings(node.nodeID).then((settings) => {
         setDefaultValues(settings);
+        reset();
       });
     });
 
@@ -240,8 +244,6 @@ const SettingsPanel: FC<Props> = ({ node }) => {
       userSharedData.socket?.off('settings-update');
     };
   }, []);
-
-  const { register, handleSubmit } = useForm<FormValues>();
 
   const detectors = [1, 2, 3, 4] as const;
   const sensors = [1, 2] as const;
