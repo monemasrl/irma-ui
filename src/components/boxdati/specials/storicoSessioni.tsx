@@ -40,6 +40,7 @@ const StoricoSessioni: FC<Props> = ({ sessionIDList, node }) => {
   }, [sessionIDList]);
 
   const variants = {
+    initial: { opacity: 0, x: '1000px' },
     open: { opacity: 1, x: 0 },
     close: { opacity: 0, x: '100%' },
   };
@@ -58,6 +59,7 @@ const StoricoSessioni: FC<Props> = ({ sessionIDList, node }) => {
         <motion.section
           className={style.storicoSensore}
           variants={variants}
+          initial={'initial'}
           animate={storico && sessionIDList.length ? 'open' : 'close'}
           transition={{
             duration: 0.5,

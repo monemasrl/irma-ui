@@ -216,7 +216,7 @@ const SettingsPanel: FC<Props> = ({ node }) => {
   const [open, setOpen] = useState(false);
   const [defaultValues, setDefaultValues] = useState<NodeSettings>({});
   const variants = {
-    initial: { x: '104%' },
+    initial: { x: '1000px' },
     open: { x: 0 },
     close: { x: '104%' },
   };
@@ -326,6 +326,10 @@ const SettingsPanel: FC<Props> = ({ node }) => {
 
                         {/* Create 3 windows */}
                         {windows.map((window) => {
+                          console.log(
+                            'detector',
+                            register(`d${detector}s${sensor}w${window}_low`)
+                          );
                           return (
                             <React.Fragment key={window}>
                               <fieldset>
