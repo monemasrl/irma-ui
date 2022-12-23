@@ -82,3 +82,9 @@ Le opzioni disponibili sono:
 - REACT_APP_DISABLE_SOCKETIO, default `0`.
 - REACT_APP_MOCK_LOGIN, default `0`.
 - REACT_APP_MOCK_DATA, default `0`.
+
+
+Staging
+
+- REACT_APP_WEBSOCKET_URL="https://irma.monema.dev"
+- REACT_APP_WEBSOCKET_PORT="443"
