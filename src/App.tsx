@@ -58,13 +58,13 @@ const App: FC = () => {
   useEffect(() => getData(), [userSharedData.selectedApp?.value, getData]);
 
   useEffect(() => {
-    userSharedData.socket?.on('change', () => {
+    userSharedData.socket?.on('change-node', () => {
       console.log('[SocketIO] Detected change');
       getData();
     });
 
     return () => {
-      userSharedData.socket?.off('change');
+      userSharedData.socket?.off('change-node');
     };
   }, [getData]);
 

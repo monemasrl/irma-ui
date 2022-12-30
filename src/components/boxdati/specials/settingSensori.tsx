@@ -232,7 +232,7 @@ const SettingsPanel: FC<Props> = ({ node }) => {
       reset();
     });
 
-    userSharedData.socket?.on('settings-update', () => {
+    userSharedData.socket?.on('change-settings', () => {
       console.log('[SocketIO] Detected settings update');
       userSharedData.getNodeSettings(node.nodeID).then((settings) => {
         setDefaultValues(settings);
@@ -241,7 +241,7 @@ const SettingsPanel: FC<Props> = ({ node }) => {
     });
 
     return () => {
-      userSharedData.socket?.off('settings-update');
+      userSharedData.socket?.off('change-settings');
     };
   }, []);
 
