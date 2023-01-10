@@ -52,7 +52,7 @@
     flex: 1 1;
 
     .navRilevatore {
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
       ul {
         display: flex;
         li.liRilevatore {
@@ -107,4 +107,35 @@
 }
 .boxGraphChart {
   overflow: hidden;
+}
+.wrapperDanger {
+  text-align: right;
+  margin-top: 7px;
+  margin-bottom: 12px;
+  margin-right: 4rem;
+}
+.dangerLevel {
+  font-size: 1rem;
+  color: #ce0303;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  outline: 0px solid #ce0303;
+  padding: 10px;
+
+  border-radius: 25px;
+  .numero {
+    font-size: 1.2rem;
+    width: 35px;
+    height: 35px;
+    background: aliceblue;
+    color: white;
+    border-radius: 50%;
+    line-height: 35px;
+    text-align: center;
+    background-color: $darkred;
+    outline: 8px solid #c6cfd5;
+  }
 }

@@ -101,6 +101,8 @@ input {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
+    justify-content: space-between;
+
     &:nth-child(3) {
       margin: 0 0 1rem 0;
     }
@@ -112,6 +114,7 @@ input {
     border-radius: 5px;
     background-color: #aebdc7;
     border: 0;
+    flex-basis: 113px;
     &.fieldHv {
       background-color: #8498a6;
       label {

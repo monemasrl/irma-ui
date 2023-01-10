@@ -122,6 +122,12 @@ const StoricoSessioni: FC<Props> = ({ sessionIDList, node }) => {
                 })}
               </ul>
             </div>
+            <div className={style.wrapperDanger}>
+              <div className={style.dangerLevel}>
+                <div>DangerLevel:</div>
+                <div className={style.numero}>9</div>
+              </div>
+            </div>
             {sessioni.length ? (
               <div className={style.graphs}>
                 <div className={style.boxGraphChart}>
