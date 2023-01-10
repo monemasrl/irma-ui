@@ -208,6 +208,8 @@ const BoxStaker: FC<BoxStakerProps> = ({ node, setStakerClicked }) => {
     };
   }, [getData]);
 
+  console.log('letture', readings);
+
   return (
     <motion.div
       key={node.nodeID}
