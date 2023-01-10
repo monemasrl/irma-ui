@@ -173,7 +173,7 @@ function UserContextProvider({ children }: Props) {
 
       const readings = MockSession as Reading[];
 
-      if (sessionID === undefined) {
+      if (sessionID === 'latest') {
         sessionID = readings.sort((a, b) => b.sessionID - a.sessionID)[0]
           .sessionID;
       }
