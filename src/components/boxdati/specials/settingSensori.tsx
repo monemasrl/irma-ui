@@ -309,6 +309,8 @@ const SettingsPanel: FC<Props> = ({ node }) => {
 
                   {/* Create 2 sensors */}
                   {sensors.map((sensor) => {
+                    console.log('sensor', sensor);
+
                     return (
                       <div
                         className={style.wrapperSetSensor}
@@ -332,8 +334,18 @@ const SettingsPanel: FC<Props> = ({ node }) => {
                             'detector',
                             register(`d${detector}s${sensor}w${window}_low`)
                           );
+                          console.log('window', window);
+
                           return (
-                            <React.Fragment key={window}>
+                            <div
+                              className={style.windowSensori}
+                              key={window}
+                            >
+                              {sensor === 1 && (
+                                <div className={style.labelWindow}>
+                                  window {window}
+                                </div>
+                              )}
                               <fieldset>
                                 <label htmlFor={'low'}>Low</label>
                                 <input
@@ -362,7 +374,7 @@ const SettingsPanel: FC<Props> = ({ node }) => {
                                   }
                                 />
                               </fieldset>
-                            </React.Fragment>
+                            </div>
                           );
                         })}
                       </div>
