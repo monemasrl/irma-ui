@@ -115,13 +115,12 @@
 }
 .dangerLevel {
   font-size: 1rem;
-  color: #ce0303;
+  color: gray;
   font-weight: bold;
   display: inline-flex;
   align-items: center;
   justify-content: flex-end;
   gap: 10px;
-  outline: 0px solid #ce0303;
   padding: 10px;
 
   border-radius: 25px;
@@ -134,7 +133,15 @@
     border-radius: 50%;
     line-height: 35px;
     text-align: center;
-    background-color: $darkred;
-    outline: 8px solid #c6cfd5;
+    outline: 7px solid #c6cfd5;
+    &.yellow {
+      background-color: $yellow;
+    }
+    &.green {
+      background-color: $green;
+    }
+    &.red {
+      background-color: $darkred;
+    }
   }
 }

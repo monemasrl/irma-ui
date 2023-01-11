@@ -44,7 +44,17 @@ const StoricoSessioni: FC<Props> = ({ sessionIDList, node }) => {
     open: { opacity: 1, x: 0 },
     close: { opacity: 0, x: '100%' },
   };
-  console.log('sessiondata', sessioni);
+  const dangerLevel = sessioni[rilevatoreId - 1].sensore1[0].dangerLevel;
+
+  function colorBar(level: number) {
+    if (level <= 3) {
+      return 'green';
+    } else if (level <= 6 && level > 3) {
+      return 'yellow';
+    } else {
+      return 'red';
+    }
+  }
 
   return (
     <>
@@ -125,7 +135,11 @@ const StoricoSessioni: FC<Props> = ({ sessionIDList, node }) => {
             <div className={style.wrapperDanger}>
               <div className={style.dangerLevel}>
                 <div>DangerLevel:</div>
-                <div className={style.numero}>9</div>
+                <div
+                  className={`${style.numero}  ${style[colorBar(dangerLevel)]}`}
+                >
+                  {dangerLevel}
+                </div>
               </div>
             </div>
             {sessioni.length ? (
