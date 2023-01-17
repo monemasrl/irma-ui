@@ -46,7 +46,7 @@ const StoricoSessioni: FC<Props> = ({ sessionIDList, node }) => {
   };
   const dangerLevel = sessioni[rilevatoreId - 1]?.sensore1[0]?.dangerLevel || 0;
 
-  console.log('sessioni', sessionIDList);
+  console.log('sessioni', sessioni);
 
   function colorBar(level: number) {
     if (level <= 3) {

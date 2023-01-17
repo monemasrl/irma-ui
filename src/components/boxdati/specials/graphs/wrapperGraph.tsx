@@ -19,6 +19,7 @@ const WrapperGraph: FC<Props> = ({
   const datiSensore = datiLettureUI?.filter((item) => {
     return item.id === dataSingoloSensore;
   });
+  console.log('alertInfo', alertInfo);
 
   return (
     <div className={style.wrapperGraph}>
@@ -30,7 +31,7 @@ const WrapperGraph: FC<Props> = ({
             {parseUnixTimestamp(datiLettureUI[0].sensore1[0].sessionID)}
           </h4>
         </div>
-        {alertInfo != undefined && (
+        {alertInfo !== undefined && (
           <Timer dateTimer={datiLettureUI[0].sensore1[0].sessionID} />
         )}
       </header>
