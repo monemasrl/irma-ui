@@ -35,8 +35,8 @@ const StoricoSessioni: FC<Props> = ({ sessionIDList, node }) => {
   };
 
   useEffect(() => {
-    getData(sessionIDList[0]);
-    setCurrentSessionActive(sessionIDList[0]);
+    getData(sessionIDList[sessionIDList.length - 1]);
+    setCurrentSessionActive(sessionIDList[sessionIDList.length - 1]);
   }, [sessionIDList]);
 
   const variants = {
@@ -45,6 +45,8 @@ const StoricoSessioni: FC<Props> = ({ sessionIDList, node }) => {
     close: { opacity: 0, x: '100%' },
   };
   const dangerLevel = sessioni[rilevatoreId - 1]?.sensore1[0]?.dangerLevel || 0;
+
+  console.log('sessioni', sessionIDList);
 
   function colorBar(level: number) {
     if (level <= 3) {
