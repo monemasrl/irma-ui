@@ -201,10 +201,15 @@ const BoxStaker: FC<BoxStakerProps> = ({ node, setStakerClicked }) => {
       console.log('[SocketIO] Detected change');
       getData('latest');
     });
+    userSharedData.socket?.on('change-node', () => {
+      console.log('[SocketIO] Detected change');
+      getData('latest');
+    });
     console.log(sessionIDList);
 
     return () => {
       userSharedData.socket?.off('change-reading');
+      userSharedData.socket?.off('change-node');
     };
   }, [getData]);
 
