@@ -22,17 +22,17 @@ const Timer: FC<props> = ({ dateTimer }) => {
     <div className={style.timer}>
       <span>
         <sup>H</sup>
-        {String(timer?.getHours()).padStart(2, '0')}
+        {String(timer?.getUTCHours()).padStart(2, '0')}
       </span>
       :
       <span>
         <sup>M</sup>
-        {String(timer?.getMinutes()).padStart(2, '0')}
+        {String(timer?.getUTCMinutes()).padStart(2, '0')}
       </span>
       :
       <span>
         <sup>S</sup>
-        {String(timer?.getSeconds()).padStart(2, '0')}
+        {String(timer?.getUTCSeconds()).padStart(2, '0')}
       </span>
     </div>
   );
