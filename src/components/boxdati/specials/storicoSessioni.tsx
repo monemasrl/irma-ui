@@ -47,8 +47,10 @@ const StoricoSessioni: FC<Props> = ({ sessionIDList, node }) => {
 
   const dangerLevel =
     sessioni
-      .find((sessione) => sessione.id == currentSessionActive)
+      .find((sessione) => sessione.id === currentSessionActive)
       ?.sensore1.at(-1)?.dangerLevel || 0;
+
+  console.log(sessioni.find((s) => s.id === currentSessionActive));
 
   console.log('sessioni', sessionIDList);
 
