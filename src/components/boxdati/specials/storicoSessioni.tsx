@@ -19,9 +19,11 @@ const StoricoSessioni: FC<Props> = ({ sessionIDList, node }) => {
   const [storico, setStorico] = useState(false);
   const [rilevatoreId, setRilevatoreId] = useState(1);
   const [sessioni, setSessioni] = useState<Rilevatore[]>([]);
-  const [currentSessionActive, setCurrentSessionActive] = useState(
-    sessionIDList[0]
-  );
+  const [currentSessionActive, setCurrentSessionActive] = useState<
+    number | undefined
+  >(sessionIDList[0]);
+  const [dangerLevel, setDangerLevel] = useState(0);
+
   const userSharedData = useContext(UserContext);
 
   const getData = async (id: number) => {
@@ -44,7 +46,14 @@ const StoricoSessioni: FC<Props> = ({ sessionIDList, node }) => {
     open: { opacity: 1, x: 0 },
     close: { opacity: 0, x: '100%' },
   };
-  const dangerLevel = sessioni[rilevatoreId - 1]?.sensore1[0]?.dangerLevel || 0;
+
+  useEffect(() => {
+    const d = sessioni
+      .find((s) => s.id === rilevatoreId)
+      ?.sensore1.at(-1)?.dangerLevel;
+
+    setDangerLevel(d || 0);
+  }, [rilevatoreId, sessioni]);
 
   console.log('sessioni', sessioni);
 
