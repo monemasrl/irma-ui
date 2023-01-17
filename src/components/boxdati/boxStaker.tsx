@@ -170,7 +170,7 @@ const BoxStaker: FC<BoxStakerProps> = ({ node, setStakerClicked }) => {
   const share = useContext(ShareContext);
   const isMobile = useMediaQuery('(max-width: 760px)');
 
-  console.log('alertInfo', alertInfo);
+  console.log('alertInfo', { alertInfo, node });
 
   const getData = async (id: number | 'latest') => {
     const readings = await userSharedData.getSession(node.nodeID, id);
@@ -194,7 +194,7 @@ const BoxStaker: FC<BoxStakerProps> = ({ node, setStakerClicked }) => {
 
   useEffect(() => {
     getData('latest');
-  }, []);
+  }, [node.unhandledAlertIDs]);
 
   useEffect(() => {
     userSharedData.socket?.on('change-reading', () => {
