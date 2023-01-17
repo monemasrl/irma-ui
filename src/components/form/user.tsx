@@ -1,15 +1,15 @@
 import React, { FC } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
-import User from '../../typings/user';
+import User, { Role } from '../../typings/user';
 
 // TODO: rivedere tipo alertConfirm
 type FormValues = {
   alertConfirm: string;
-  First_name: string;
-  Last_name: string;
-  Email: string;
-  Role: 'admin' | 'standard';
-  Phone_number: string;
+  firstName: string;
+  lastName: string;
+  email: string;
+  role: Role;
+  phoneNumber: string;
 };
 
 type Props = {
@@ -23,13 +23,6 @@ const UserRegistrationForm: FC<Props> = ({ selectedUser }) => {
     formState: { errors },
   } = useForm<FormValues>();
 
-  function inputPlacehoder(label: string, data: string | undefined) {
-    if (data) {
-      return data;
-    }
-    return label;
-  }
-
   const onSubmit: SubmitHandler<FormValues> = (data) => {
     console.log(data);
   };
@@ -41,39 +34,39 @@ const UserRegistrationForm: FC<Props> = ({ selectedUser }) => {
     >
       <input
         type="text"
-        placeholder={inputPlacehoder('Nome', selectedUser?.first_name)}
-        value={selectedUser?.first_name ?? ''}
-        {...register('First_name', { required: true, maxLength: 80 })}
+        placeholder={'Nome'}
+        defaultValue={selectedUser?.first_name}
+        {...register('firstName', { required: true, maxLength: 80 })}
       />
-      {errors.First_name && <span> (Campo Obbligatorio)</span>}
+      {errors.firstName && <span> (Campo Obbligatorio)</span>}
       <input
         type="text"
-        placeholder={inputPlacehoder('Cognome', selectedUser?.last_name)}
-        {...register('Last_name', { required: true, maxLength: 100 })}
-        value={selectedUser?.last_name ?? ''}
+        placeholder={'Cognome'}
+        {...register('lastName', { required: true, maxLength: 100 })}
+        defaultValue={selectedUser?.last_name}
       />
-      {errors.Last_name && <span> (Campo Obbligatorio)</span>}
+      {errors.lastName && <span> (Campo Obbligatorio)</span>}
       <input
         type="text"
-        placeholder={inputPlacehoder('Email', selectedUser?.email)}
-        {...register('Email', { required: true, pattern: /^\S+@\S+$/i })}
-        value={selectedUser?.email ?? ''}
+        placeholder={'Email'}
+        {...register('email', { required: true, pattern: /^\S+@\S+$/i })}
+        defaultValue={selectedUser?.email}
       />
-      {errors.Email && <span> (Campo Obbligatorio)</span>}
+      {errors.email && <span> (Campo Obbligatorio)</span>}
       <input
         type="tel"
         placeholder="Telefono"
-        {...register('Phone_number', {
+        {...register('phoneNumber', {
           required: true,
           minLength: 6,
           maxLength: 12,
         })}
-        value={selectedUser?.phoneNumber ?? ''}
+        defaultValue={selectedUser?.phoneNumber}
       />
-      {errors.Phone_number && <span> (Campo Obbligatorio)</span>}
+      {errors.phoneNumber && <span> (Campo Obbligatorio)</span>}
       <select
         className="user-select"
-        {...register('Role', { required: true })}
+        {...register('role', { required: true })}
       >
         <option
           value=""
@@ -96,7 +89,7 @@ const UserRegistrationForm: FC<Props> = ({ selectedUser }) => {
           Standard
         </option>
       </select>
-      {errors.Role && <span> (Campo Obbligatorio)</span>}
+      {errors.role && <span> (Campo Obbligatorio)</span>}
       <button
         className="user-form"
         type="submit"

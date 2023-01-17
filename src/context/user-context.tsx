@@ -173,7 +173,7 @@ function UserContextProvider({ children }: Props) {
 
       const readings = MockSession as Reading[];
 
-      if (sessionID === undefined) {
+      if (sessionID === 'latest') {
         sessionID = readings.sort((a, b) => b.sessionID - a.sessionID)[0]
           .sessionID;
       }
@@ -224,7 +224,7 @@ function UserContextProvider({ children }: Props) {
     if (MOCK_DATA) {
       return {
         id: '12345',
-        email: 'lezzo@gmail.com',
+        email: 'carlo@gmail.com',
         first_name: 'carlo',
         last_name: 'martello',
         role: 'admin' as Role,
@@ -299,7 +299,7 @@ function UserContextProvider({ children }: Props) {
       return [
         {
           id: '12345',
-          email: 'lezzo@gmail.com',
+          email: 'carlo@gmail.com',
           first_name: 'carlo',
           last_name: 'martello',
           role: 'admin' as Role,

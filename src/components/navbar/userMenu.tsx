@@ -32,8 +32,8 @@ function UserMenu({ openMenu, user, setOpenMenu, logout }: Props) {
             <div className={style.wrapperDatiUser}>
               <div className={style.avatar}>
                 <img
-                  src="/images/fake_1.jpeg"
-                  alt="avatar-carlo-martello"
+                  src="/images/empty_propic.png"
+                  alt="profile-picture"
                 />
               </div>
               {user && (

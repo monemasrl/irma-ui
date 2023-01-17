@@ -24,7 +24,6 @@ function datiLetture(readings: Reading[]): Rilevatore[] {
 
     arrayDati.push(rilevatore);
   }
-  console.log('letture', arrayDati);
   return arrayDati;
 }
 
