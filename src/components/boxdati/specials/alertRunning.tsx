@@ -13,7 +13,7 @@ const AlertRunning: FC = () => {
         <img
           className={style.aim1}
           src={`images/alert-running1.svg`}
-          alt="icona alert"
+          alt="icona alert "
         />
         <img
           className={style.aim2}
